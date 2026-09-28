@@ -1,0 +1,94 @@
+# One-slice weight prefetch for the two owning projection kernels.
+#
+# A block's two weight words are loaded in the slice that uses them, so they issue behind that
+# slice's fragment loads and the operand expansion waits on the whole outstanding queue.
+# Fetching them one slice ahead lets the expansion wait on two words instead.
+#
+# Measured in research/ffn/batched/tile-ownership: worth 1.87 -> 1.30 ms on the down projection
+# at 256 rows in that directory's own kernel. On these two kernels the compiler already schedules
+# most of it: across runs at 256 rows, layer 0, arith-iu4-a4 moved 3.285 -> 3.185 ms and
+# arith-iu8-a8 4.433 -> 4.365 ms, while cs-scaled-f16-a8 did not move (4.014 -> 4.006 ms) against
+# 0.6-1.0% run-to-run drift on unchanged candidates. Output hashes are unchanged.
+#
+# Apply from the repository root:  git apply research/ffn/batched/tile-ownership/one-slice-prefetch.patch
+#
+# The two paired-FP16 branches of arith_maps.hip take the same change and are not included.
+
+diff --git a/research/ffn/batched/arithmetic/candidates/arith_maps.hip b/research/ffn/batched/arithmetic/candidates/arith_maps.hip
+index 7fc048c..da01319 100644
+--- a/research/ffn/batched/arithmetic/candidates/arith_maps.hip
++++ b/research/ffn/batched/arithmetic/candidates/arith_maps.hip
+@@ -254,10 +254,21 @@ __global__ __launch_bounds__(NW * 32) void k_proj(
+                 int8v aa[TT], ab[TT];
+ #pragma unroll
+                 for (int t = 0; t < TT; ++t) { aa[t] = int8v{}; ab[t] = int8v{}; }
++                // The two weight words of a slice are fetched one slice ahead. Loaded in the slice
++                // that uses them they issue behind that slice's fragment loads, and the expansion
++                // then waits on the whole outstanding queue instead of on two words. The last
++                // iteration re-reads slice 0, which is cached and never used.
++                const uint8_t *ap = abase + size_t(blk) * WB + col * 4;
++                const uint8_t *bp = bbase + size_t(blk) * WB + col * 4;
++                unsigned pa = *(const unsigned *) ap, pb = *(const unsigned *) bp;
+ #pragma unroll 1
+                 for (int s = 0; s < SLICES; ++s) {
+-                    int4v wa = expand_i8(*(const unsigned *) (abase + size_t(blk) * WB + s * 64 + col * 4));
+-                    int4v wb = expand_i8(*(const unsigned *) (bbase + size_t(blk) * WB + s * 64 + col * 4));
++                    const unsigned codes_a = pa, codes_b = pb;
++                    const int sn = (s + 1) & (SLICES - 1);
++                    pa = *(const unsigned *) (ap + sn * 64);
++                    pb = *(const unsigned *) (bp + sn * 64);
++                    int4v wa = expand_i8(codes_a);
++                    int4v wb = expand_i8(codes_b);
+ #pragma unroll
+                     for (int t = 0; t < TT; ++t) {
+                         int4v bf = ((const int4v *) B)[size_t(blk * SLICES + s) * Npad + tg + t * 16 + col];
+@@ -278,10 +289,18 @@ __global__ __launch_bounds__(NW * 32) void k_proj(
+                 int8v aa[TT], ab[TT];
+ #pragma unroll
+                 for (int t = 0; t < TT; ++t) { aa[t] = int8v{}; ab[t] = int8v{}; }
++                // One slice ahead, as in the IU8 branch above.
++                const uint8_t *ap = abase + size_t(blk) * WB + col * 4;
++                const uint8_t *bp = bbase + size_t(blk) * WB + col * 4;
++                unsigned pa = *(const unsigned *) ap, pb = *(const unsigned *) bp;
+ #pragma unroll 1
+                 for (int s = 0; s < SLICES; ++s) {
+-                    int2v wa = expand_i4(*(const unsigned *) (abase + size_t(blk) * WB + s * 64 + col * 4));
+-                    int2v wb = expand_i4(*(const unsigned *) (bbase + size_t(blk) * WB + s * 64 + col * 4));
++                    const unsigned codes_a = pa, codes_b = pb;
++                    const int sn = (s + 1) & (SLICES - 1);
++                    pa = *(const unsigned *) (ap + sn * 64);
++                    pb = *(const unsigned *) (bp + sn * 64);
++                    int2v wa = expand_i4(codes_a);
++                    int2v wb = expand_i4(codes_b);
+ #pragma unroll
+                     for (int t = 0; t < TT; ++t) {
+                         int2v bf = ((const int2v *) B)[size_t(blk * SLICES + s) * Npad + tg + t * 16 + col];
+diff --git a/research/ffn/batched/compact-scaled/candidates/cs_maps.hip b/research/ffn/batched/compact-scaled/candidates/cs_maps.hip
+index 94baf50..ab47577 100644
+--- a/research/ffn/batched/compact-scaled/candidates/cs_maps.hip
++++ b/research/ffn/batched/compact-scaled/candidates/cs_maps.hip
+@@ -183,10 +183,22 @@ __global__ __launch_bounds__(NW * 32) void k_proj(
+             unsigned atlo, athi, btlo, bthi;
+             scale_tables(sa[(size_t(tile) * nb + blk) * 16 + col], atlo, athi);
+             scale_tables(sb[(size_t(tile) * nb + blk) * 16 + col], btlo, bthi);
++            // The two weight words of a slice are fetched one slice ahead. Loaded in the slice
++            // that uses them they issue behind that slice's sixteen fragment loads, and the
++            // operand expansion then waits on the whole outstanding queue - s_waitcnt vmcnt(0)
++            // instead of vmcnt(6), once per slice, with the load latency exposed. The last
++            // iteration re-reads slice 0, which is cached and never used.
++            const uint8_t *ap = abase + size_t(blk) * BLOCK_BYTES + col * 4;
++            const uint8_t *bp = bbase + size_t(blk) * BLOCK_BYTES + col * 4;
++            unsigned pa = *(const unsigned *) ap, pb = *(const unsigned *) bp;
+ #pragma unroll 1
+             for (int s = 0; s < SLICES; ++s) {
+-                const half16 wa = weight_operand(abase, blk, s, col, atlo, athi);
+-                const half16 wb = weight_operand(bbase, blk, s, col, btlo, bthi);
++                const unsigned codes_a = pa, codes_b = pb;
++                const int sn = (s + 1) & (SLICES - 1);
++                pa = *(const unsigned *) (ap + sn * 64);
++                pb = *(const unsigned *) (bp + sn * 64);
++                const half16 wa = expand_scaled(codes_a, atlo, athi);
++                const half16 wb = expand_scaled(codes_b, btlo, bthi);
+ #pragma unroll
+                 for (int t = 0; t < TT; ++t) {
+                     const half16 bf = ((const half16 *) B)[size_t(blk * SLICES + s) * Npad + tg + t * 16 + col];

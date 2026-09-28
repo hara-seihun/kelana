@@ -1,0 +1,20 @@
+# A second paid gain across the layer-0 attention and MLP boundary
+
+The down-scale gain of two repaired the damaged layer-0 MLP on gold loss, but its narrow V/O producer was still fitted to a different endpoint objective. I held the down gain, all factor codes and the complete quantized prefix fixed. I then multiplied the existing FP16 output scales of both shared narrow O consumers by one common gain. The left codes, right value basis, cache width and output-row scale slots are unchanged. Only the contents of paid scale slots differ. This is a coupled attention-to-MLP intervention in the actual quantized continuation, not a refit of isolated O or a second stored scalar.
+
+Six 256-token train windows select 1.75 from the frozen grid 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2 and 2.25. Mean train NLL is 8.18568 against 8.59578 with the same down gain and unmodified narrow O. The curve turns upward to 8.27948 at 2 and 8.35774 at 2.25. All losses use 255 next-token labels per window.
+
+| Fixed down gain 2, O output gain 1 → 1.75 | Baseline NLL | New NLL | Improved windows |
+| --- | ---: | ---: | ---: |
+| Train 0–5, used for selection | 8.59578 | 8.18568 | 4/6 |
+| Test 32–43, not used for this gain or the preceding down-gain selection | 9.58521 | **8.75417** | 12/12 |
+| Test 44–61, used previously for the down-gain assessment | 9.54966 | **8.87548** | 14/18 |
+| Validation 16–23, separate from the prior down-gain validation | 9.55534 | **9.03012** | 6/8 |
+
+Test window 58, which worsened by 1.926 nats under the down-only gain relative to the earlier scale image, falls from 11.75968 to 8.73466 here. Test windows 50, 54, 57 and 60 worsen modestly against the down-only image. This is an actual held complete-prefix loss gain, but still a severely damaged language model. The pilot uses WikiText alone; test windows 32–43 were inspected for other prefix substitutions before this experiment. Do not use this panel to claim task quality or a general 1.75 gain on other producers.
+
+The frozen continuation has binary body and norms in layers 0–13, shared rank-28 narrow V/O at layer 0, original tied endpoints and original layers 14–27. The evaluator expands the factor image to BF16 for a model-quality forward. It is not a native latency measurement. The V/O payload remains 208,640 bytes and the MLP three-projection payload remains 614,436 bytes. The changed down NPZ alone is 204,812 payload bytes; both materialized images retain their original shapes, dtypes and payload bytes. No factor terms, additional scale reads or logical V-cache elements are added. This says nothing about full-model quality with quantized tied endpoints and remaining layers.
+
+`joint_gain_fit.py fit --count 6` and `evaluate --split test --start 32 --count 12`, `--split test --start 44 --count 18`, `--split validation --start 16 --count 8` ran inside Bonsai's GPU reservation wrapper. `materialize_joint_gain.py` writes the two packed replacements. `/path/to/workspace/data/kelana-subbit/full-model/mlp-vo-joint-{fit-train-0-6,evaluate-test-32-12,evaluate-test-44-18,evaluate-validation-16-8}.json` keep every paired loss, token hash and source/model/image hash. `mlp-vo-joint-gain.json` binds the train choice to its receipt; `mlp-vo-joint-image.json` binds the selected images. V/O NPZ SHA-256 is `f0a77dd0ab2f4b06b30b18d49eb5f76565596695199242c5044287e0a9160926`, and the unchanged gain-2 down NPZ SHA-256 is `84970b446f23f73dc608e0dd9d6360c63d5af3ca3f75d7a8ee562169a7562776`. Every GPU panel restored the active Bonsai service; its executable and default numerical map did not move.
+
+The next useful fit should jointly vary the narrow right/value coordinates and MLP gate/up/down codes or scales against teacher/gold continuation. A shared output multiplier rescued a bad tail cheaply, but it cannot repair per-head attention errors or the remaining damaged layers. Preserve separate calibration, selection and test text, and compare at identical total payload and native consumer work before adopting a layout.

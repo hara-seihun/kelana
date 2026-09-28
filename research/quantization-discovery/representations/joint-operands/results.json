@@ -1,0 +1,258 @@
+{
+  "source_sha256": "4ada25b3364a4b72d5fa75b23d44e1cb7395ec65e6a9217578b8a61bb24f28e5",
+  "provenance": {
+    "gguf": "ac0e2c1189e055faa36eff361580e79c5bd6f8e76bffb4ce547f167d53e31a61",
+    "inventory": "dd71329a767b41042e1c130e6da40dd088828854e64be26483e1527b694841b5",
+    "decoder_library": "cd8001f3ed55e4b2a3255c9ae9391096020eb87a7247f187fccc4ff18b8a7a29"
+  },
+  "expert": 151,
+  "coordinate": "d_j = 2**clip(round(alpha*(log2(max_r |W_rj| / max_train |x_j|)-median)/2),-3,3); W is stacked gate/up",
+  "weight_source": "decoded GGUF Q4_K gate/up, Q5_K down; gate/up jointly recoded signed symmetric group32 Q4 with FP16 max scales",
+  "input_source": "actual selected layer0 route input; signed symmetric group32 Q4 or Q8, FP16 max scale; shared gate/up code",
+  "observer": "FP32 BLAS gate/up + SiLU*up + unchanged decoded down; delta weighted by actual route score / captured full native routed sum norm",
+  "selected_alpha": 1.0,
+  "bytes_and_operations": {
+    "weight_code_bytes": 1048576,
+    "weight_fp16_scale_bytes": 131072,
+    "common_diagonal_fp16_bytes": 4096,
+    "q4_activation_code_bytes_per_token": 1152,
+    "q8_activation_code_bytes_per_token": 2176,
+    "original_gate_up_gguf_bytes_per_expert": 1179648,
+    "unchanged_down_gguf_bytes_per_expert": 720896,
+    "input_multiply_per_token": 2048,
+    "input_quantization_groups_per_token": 64,
+    "gate_up_integer_products_per_token": 2097152,
+    "down_float_products_per_token": 1048576
+  },
+  "results": {
+    "train": {
+      "tokens": 24,
+      "token_indices": [
+        6,
+        10,
+        13,
+        19,
+        21,
+        25,
+        34,
+        38,
+        41,
+        45,
+        46,
+        49,
+        57,
+        64,
+        68,
+        76,
+        78,
+        82,
+        93,
+        97,
+        102,
+        103,
+        107,
+        110
+      ],
+      "arms": {
+        "gguf-weight-q4-input": {
+          "routed_delta_rms": 0.053222416865195535,
+          "expert_output_rms": 0.15655769407749176,
+          "online_input_encode_ms_per_token": 0.015154875048513835,
+          "decoded_consumer_ms_per_token": 0.04547466717970868
+        },
+        "gguf-weight-q8-input": {
+          "routed_delta_rms": 0.0028084328131756098,
+          "expert_output_rms": 0.008548404090106487,
+          "online_input_encode_ms_per_token": 0.007348916672829849,
+          "decoded_consumer_ms_per_token": 0.045754208258586004
+        },
+        "0.0": {
+          "offline_weight_encode_ms": 10.006538999732584,
+          "online_input_encode_ms_per_token": 0.010367541714610221,
+          "decoded_consumer_ms_per_token": 0.035240875149611384,
+          "routed_delta_rms": 0.061913973738635,
+          "expert_output_rms": 0.18383833765983582,
+          "activation_relative_rms": 0.1553216278553009,
+          "weight_relative_rms": 0.0972580537199974,
+          "nonzero_exponents": 0,
+          "min_exponent": 0,
+          "max_exponent": 0
+        },
+        "0.5": {
+          "offline_weight_encode_ms": 7.740229004411958,
+          "online_input_encode_ms_per_token": 0.010499208049926287,
+          "decoded_consumer_ms_per_token": 0.03731620866650095,
+          "routed_delta_rms": 0.048049181439423674,
+          "expert_output_rms": 0.13855420053005219,
+          "activation_relative_rms": 0.10619654506444931,
+          "weight_relative_rms": 0.09726732224225998,
+          "nonzero_exponents": 16,
+          "min_exponent": -1,
+          "max_exponent": 0
+        },
+        "1.0": {
+          "offline_weight_encode_ms": 6.864929004223086,
+          "online_input_encode_ms_per_token": 0.00989295828427809,
+          "decoded_consumer_ms_per_token": 0.034181749773172974,
+          "routed_delta_rms": 0.04178503537610202,
+          "expert_output_rms": 0.11816193163394928,
+          "activation_relative_rms": 0.08685319125652313,
+          "weight_relative_rms": 0.10585412383079529,
+          "nonzero_exponents": 89,
+          "min_exponent": -2,
+          "max_exponent": 1
+        },
+        "1.5": {
+          "offline_weight_encode_ms": 7.0854619989404455,
+          "online_input_encode_ms_per_token": 0.010282125003868714,
+          "decoded_consumer_ms_per_token": 0.03611287502280902,
+          "routed_delta_rms": 0.04322506431583935,
+          "expert_output_rms": 0.1241220086812973,
+          "activation_relative_rms": 0.09010244905948639,
+          "weight_relative_rms": 0.12732155621051788,
+          "nonzero_exponents": 263,
+          "min_exponent": -3,
+          "max_exponent": 1
+        },
+        "2.0": {
+          "offline_weight_encode_ms": 7.01355398632586,
+          "online_input_encode_ms_per_token": 0.010665458830771968,
+          "decoded_consumer_ms_per_token": 0.036003291218852006,
+          "routed_delta_rms": 0.051612413470798,
+          "expert_output_rms": 0.14617463946342468,
+          "activation_relative_rms": 0.1014946848154068,
+          "weight_relative_rms": 0.15718109905719757,
+          "nonzero_exponents": 461,
+          "min_exponent": -3,
+          "max_exponent": 1
+        },
+        "q8-input-q4-weight": {
+          "offline_weight_encode_ms": 6.866998999612406,
+          "online_input_encode_ms_per_token": 0.006967249646550044,
+          "decoded_consumer_ms_per_token": 0.03566291707102209,
+          "routed_delta_rms": 0.032804507468068095,
+          "expert_output_rms": 0.09835797548294067
+        }
+      },
+      "native_sum_norm": 1.0510871410369873,
+      "expert_reference_norm": 1.805419683456421
+    },
+    "held": {
+      "tokens": 29,
+      "token_indices": [
+        1,
+        3,
+        5,
+        8,
+        11,
+        16,
+        19,
+        22,
+        24,
+        31,
+        35,
+        46,
+        48,
+        53,
+        57,
+        62,
+        63,
+        68,
+        71,
+        75,
+        79,
+        83,
+        85,
+        90,
+        94,
+        98,
+        105,
+        108,
+        110
+      ],
+      "arms": {
+        "gguf-weight-q4-input": {
+          "routed_delta_rms": 0.03985813223720883,
+          "expert_output_rms": 0.17910459637641907,
+          "online_input_encode_ms_per_token": 0.008751069203597205,
+          "decoded_consumer_ms_per_token": 0.033923965710183156
+        },
+        "gguf-weight-q8-input": {
+          "routed_delta_rms": 0.0021525822232280937,
+          "expert_output_rms": 0.009766611270606518,
+          "online_input_encode_ms_per_token": 0.005357379418926249,
+          "decoded_consumer_ms_per_token": 0.03343331025399525
+        },
+        "0.0": {
+          "offline_weight_encode_ms": 8.281308997538872,
+          "online_input_encode_ms_per_token": 0.010025517408864508,
+          "decoded_consumer_ms_per_token": 0.04064441399632728,
+          "routed_delta_rms": 0.04643045787389049,
+          "expert_output_rms": 0.21173688769340515,
+          "activation_relative_rms": 0.15294720232486725,
+          "weight_relative_rms": 0.0972580537199974,
+          "nonzero_exponents": 0,
+          "min_exponent": 0,
+          "max_exponent": 0
+        },
+        "0.5": {
+          "offline_weight_encode_ms": 7.06838199403137,
+          "online_input_encode_ms_per_token": 0.0100630688770064,
+          "decoded_consumer_ms_per_token": 0.04667148309165676,
+          "routed_delta_rms": 0.035346303308283915,
+          "expert_output_rms": 0.16028890013694763,
+          "activation_relative_rms": 0.10526479780673981,
+          "weight_relative_rms": 0.09726732224225998,
+          "nonzero_exponents": 16,
+          "min_exponent": -1,
+          "max_exponent": 0
+        },
+        "1.0": {
+          "offline_weight_encode_ms": 7.926541002234444,
+          "online_input_encode_ms_per_token": 0.009924482457853597,
+          "decoded_consumer_ms_per_token": 0.03852382761924046,
+          "routed_delta_rms": 0.032013951349945426,
+          "expert_output_rms": 0.1460912674665451,
+          "activation_relative_rms": 0.09189334511756897,
+          "weight_relative_rms": 0.10585412383079529,
+          "nonzero_exponents": 89,
+          "min_exponent": -2,
+          "max_exponent": 1
+        },
+        "1.5": {
+          "offline_weight_encode_ms": 6.831940001575276,
+          "online_input_encode_ms_per_token": 0.009696896525164103,
+          "decoded_consumer_ms_per_token": 0.04721627618860582,
+          "routed_delta_rms": 0.03529593049450085,
+          "expert_output_rms": 0.16172438859939575,
+          "activation_relative_rms": 0.10481654852628708,
+          "weight_relative_rms": 0.12732155621051788,
+          "nonzero_exponents": 263,
+          "min_exponent": -3,
+          "max_exponent": 1
+        },
+        "2.0": {
+          "offline_weight_encode_ms": 7.9490310017718,
+          "online_input_encode_ms_per_token": 0.009775172280757848,
+          "decoded_consumer_ms_per_token": 0.038179345147941135,
+          "routed_delta_rms": 0.04095557141196001,
+          "expert_output_rms": 0.19055721163749695,
+          "activation_relative_rms": 0.12253223359584808,
+          "weight_relative_rms": 0.15718109905719757,
+          "nonzero_exponents": 461,
+          "min_exponent": -3,
+          "max_exponent": 1
+        },
+        "q8-input-q4-weight": {
+          "offline_weight_encode_ms": 6.373936994350515,
+          "online_input_encode_ms_per_token": 0.0068194138544515285,
+          "decoded_consumer_ms_per_token": 0.038027620858288015,
+          "routed_delta_rms": 0.0235449925472444,
+          "expert_output_rms": 0.10887214541435242
+        }
+      },
+      "native_sum_norm": 1.2808445692062378,
+      "expert_reference_norm": 1.697627305984497
+    }
+  }
+}

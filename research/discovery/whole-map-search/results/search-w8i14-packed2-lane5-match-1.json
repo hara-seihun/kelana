@@ -1,0 +1,135 @@
+{
+ "job": "w8i14-packed2-lane5-match-1",
+ "network": "w8i14",
+ "contract": "packed2",
+ "projection": "lane5",
+ "mode": "match",
+ "valu": 1,
+ "library": "full",
+ "n_consts": 3,
+ "timeout_ms": 40000,
+ "library_components": [
+  "v_add_nc_u32",
+  "v_sub_nc_u32",
+  "v_mul_lo_u32",
+  "v_and_b32",
+  "v_or_b32",
+  "v_xor_b32",
+  "v_lshlrev_b32",
+  "v_lshrrev_b32",
+  "v_ashrrev_i32",
+  "v_bfe_u32",
+  "v_perm_b32",
+  "v_lshl_or_b32",
+  "v_dot4_i32_i8",
+  "v_dot8_i32_i4",
+  "v_dot4_u32_u8",
+  "v_lshl_add_u32",
+  "v_add3_u32",
+  "v_and_or_b32",
+  "v_alignbit_b32",
+  "v_med3_i32",
+  "v_sad_u8",
+  "v_mad_u32_u24"
+ ],
+ "done": {
+  "[\"v_add_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.175
+  },
+  "[\"v_sub_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.816
+  },
+  "[\"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.547
+  },
+  "[\"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.716
+  },
+  "[\"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.171
+  },
+  "[\"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.613
+  },
+  "[\"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.445
+  },
+  "[\"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.803
+  },
+  "[\"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.043
+  },
+  "[\"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.707
+  },
+  "[\"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.556
+  },
+  "[\"v_mul_lo_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 8.078
+  },
+  "[\"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.607
+  },
+  "[\"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 8.418
+  },
+  "[\"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 4.893
+  },
+  "[\"v_dot4_u32_u8\"]": {
+   "outcome": "unsat",
+   "seconds": 12.904
+  },
+  "[\"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 13.293
+  },
+  "[\"v_dot8_i32_i4\"]": {
+   "outcome": "unsat",
+   "seconds": 19.128
+  },
+  "[\"v_sad_u8\"]": {
+   "outcome": "unsat",
+   "seconds": 21.529
+  },
+  "[\"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 23.704
+  },
+  "[\"v_dot4_i32_i8\"]": {
+   "outcome": "unsat",
+   "seconds": 24.866
+  },
+  "[\"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 26.385
+  }
+ },
+ "solutions": [],
+ "per_query_timeout_ms": 20000,
+ "counts": {
+  "sat": 0,
+  "unsat": 22,
+  "timeout": 0
+ },
+ "queue_total": 22,
+ "queue_done": 22,
+ "timeout_multisets": []
+}

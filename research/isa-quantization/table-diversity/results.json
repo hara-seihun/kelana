@@ -1,0 +1,229 @@
+{
+  "format": "table-diversity/1",
+  "model_path": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+  "model_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "capture_path": "/path/to/workspace/data/kelana-subbit/full-model/mlp-quantized-producer-capture.npz",
+  "capture_sha256": "aa1e671af9283656efd7a95f2732a27662ce8c658766af5ee88f5e7d27b9e69c",
+  "tables": 1024,
+  "table_schema": "per anchor,input coordinate,output row: 8 or 32 aligned 8-byte rows of 3 FP16 polynomial coefficients",
+  "anchors": [
+    [
+      "train",
+      320
+    ],
+    [
+      "train",
+      384
+    ],
+    [
+      "validation",
+      576
+    ],
+    [
+      "validation",
+      640
+    ]
+  ],
+  "coordinate_indices": [
+    7,
+    277,
+    29,
+    2,
+    9,
+    12,
+    23,
+    3,
+    496,
+    0,
+    33,
+    147,
+    142,
+    107,
+    143,
+    183
+  ],
+  "grid": {
+    "x_code": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "x_deviation": "2*input-train-standard-deviations * (x-15.5)/15.5",
+    "t": [
+      -1.5,
+      -0.5,
+      0.5,
+      1.5
+    ],
+    "t_deviation": ".5*input-train-standard-deviations*t"
+  },
+  "static_table_bytes": {
+    "square": 65536,
+    "direct": 262144,
+    "literal_xy": 262144,
+    "poly8": 16384,
+    "poly15": 30720
+  },
+  "panel": {
+    "square": {
+      "median": 0.2077131395770853,
+      "p90": 0.2662316174426766,
+      "aggregate": 0.20928060075333435,
+      "wins_vs_square": 0
+    },
+    "affine": {
+      "median": 0.1109187672069891,
+      "p90": 0.1212750410744907,
+      "aggregate": 0.11020813614795978,
+      "wins_vs_square": 990
+    },
+    "uniform": {
+      "median": 0.1120289091417602,
+      "p90": 0.12231287122538347,
+      "aggregate": 0.11099364737774095,
+      "wins_vs_square": 982
+    },
+    "direct": {
+      "median": 0.0023076801215416044,
+      "p90": 0.008944806335083294,
+      "aggregate": 0.0020455213201037137,
+      "wins_vs_square": 1024
+    },
+    "poly8": {
+      "median": 0.0032433404496164135,
+      "p90": 0.012703685220781549,
+      "aggregate": 0.003738392277802862,
+      "wins_vs_square": 1024
+    },
+    "poly15": {
+      "median": 0.0019665242821175987,
+      "p90": 0.010422668718274398,
+      "aggregate": 0.002411495898657277,
+      "wins_vs_square": 1024
+    },
+    "literal_xy": {
+      "median": 0.0023433347465034483,
+      "p90": 0.009132744028474577,
+      "aggregate": 0.002058198585790711,
+      "wins_vs_square": 1024
+    }
+  },
+  "diversity": {
+    "exact_fp16_unique": 1024,
+    "affine_unique_programs": 20,
+    "affine_top_programs": [
+      {
+        "program": [
+          1,
+          0,
+          2
+        ],
+        "tables": 475
+      },
+      {
+        "program": [
+          31,
+          0,
+          7
+        ],
+        "tables": 233
+      },
+      {
+        "program": [
+          31,
+          59,
+          7
+        ],
+        "tables": 198
+      },
+      {
+        "program": [
+          31,
+          55,
+          7
+        ],
+        "tables": 24
+      },
+      {
+        "program": [
+          29,
+          65,
+          7
+        ],
+        "tables": 20
+      },
+      {
+        "program": [
+          31,
+          4,
+          7
+        ],
+        "tables": 18
+      }
+    ],
+    "affine_nonzero_bias_tables": 314,
+    "held_best_train_affine_shape_cosine_median": 0.9991591966465732,
+    "held_best_train_affine_shape_cosine_p10": 0.9942928362786891,
+    "dictionary_8": {
+      "template_bytes": 512,
+      "per_tile_bytes": 5,
+      "model_bytes_for_all_tables": 5632,
+      "held_median_relative_rms": 0.4127757031699407,
+      "held_aggregate_relative_rms": 0.4114723466821627,
+      "held_wins_vs_individual_square": 0
+    },
+    "dictionary_32": {
+      "template_bytes": 2048,
+      "per_tile_bytes": 5,
+      "model_bytes_for_all_tables": 7168,
+      "held_median_relative_rms": 0.2745640828168209,
+      "held_aggregate_relative_rms": 0.2755764238719143,
+      "held_wins_vs_individual_square": 0
+    },
+    "dictionary_128": {
+      "template_bytes": 8192,
+      "per_tile_bytes": 5,
+      "model_bytes_for_all_tables": 13312,
+      "held_median_relative_rms": 0.22698280033329732,
+      "held_aggregate_relative_rms": 0.22801176956330593,
+      "held_wins_vs_individual_square": 0
+    },
+    "dictionary_512": {
+      "template_bytes": 32768,
+      "per_tile_bytes": 6,
+      "model_bytes_for_all_tables": 38912,
+      "held_median_relative_rms": 0.21513126651096487,
+      "held_aggregate_relative_rms": 0.21752713588437583,
+      "held_wins_vs_individual_square": 0
+    }
+  }
+}

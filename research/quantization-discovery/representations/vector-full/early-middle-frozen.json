@@ -1,0 +1,64 @@
+{
+  "name": "early-middle-frozen",
+  "selection": "Layers 0 and 14 selected from local full-MLP response before whole-model validation/test. All arms and bytes frozen together.",
+  "arms": {
+    "polar8": [
+      {
+        "layer": 0,
+        "image": "/path/to/workspace/data/kelana-subbit/vector-full/images/layer00-polar-8bit.npz",
+        "sha256": "347d40a2cad43f46946a96c61e2d1091b78e16e122ffbf785149720d79245147",
+        "payload_bytes": 3146766
+      },
+      {
+        "layer": 14,
+        "image": "/path/to/workspace/data/kelana-subbit/vector-full/images/layer14-polar-8bit.npz",
+        "sha256": "52dc29ed9f99e1e84e9304191e3dee0594a0db3ea8f5abd13d9b21db06d5e560",
+        "payload_bytes": 3146766
+      }
+    ],
+    "learned_pair8": [
+      {
+        "layer": 0,
+        "image": "/path/to/workspace/data/kelana-subbit/vector-full/images/layer00-learned_pair-8bit.npz",
+        "sha256": "5e5a8cf71a8402092c49ff7c98fe94b36c3d2fc94f460fb82c4b9417d8125f92",
+        "payload_bytes": 3146766
+      },
+      {
+        "layer": 14,
+        "image": "/path/to/workspace/data/kelana-subbit/vector-full/images/layer14-learned_pair-8bit.npz",
+        "sha256": "58fbdb0d5fff0ee97395b9e8216f2f3f9493133d29f802ba3054599bda388404",
+        "payload_bytes": 3146766
+      }
+    ],
+    "scalar_scale8": [
+      {
+        "layer": 0,
+        "image": "/path/to/workspace/data/kelana-subbit/vector-full/images/layer00-scalar_scale-8bit.npz",
+        "sha256": "a04f1a840601bd31c574d19bc1b630c3f06a1709919388746a08dc488695b4d6",
+        "payload_bytes": 3145774
+      },
+      {
+        "layer": 14,
+        "image": "/path/to/workspace/data/kelana-subbit/vector-full/images/layer14-scalar_scale-8bit.npz",
+        "sha256": "7c53c4e67e03b44bf22fd1ab5d67d700a8d20ac28c9485255a071d2963978de4",
+        "payload_bytes": 3145774
+      }
+    ],
+    "independent_scalar4_g128": [
+      {
+        "format": "scalar4-g128",
+        "layer": 0,
+        "accounting": "/path/to/workspace/data/kelana-subbit/full-scalar/accounting.json",
+        "accounting_sha256": "bf26e15d08c0960c50eb19f61ee3d2f104664c9a80255f106f97b60a2f5f3363",
+        "payload_bytes": 3244064
+      },
+      {
+        "format": "scalar4-g128",
+        "layer": 14,
+        "accounting": "/path/to/workspace/data/kelana-subbit/full-scalar/accounting.json",
+        "accounting_sha256": "bf26e15d08c0960c50eb19f61ee3d2f104664c9a80255f106f97b60a2f5f3363",
+        "payload_bytes": 3244064
+      }
+    ]
+  }
+}

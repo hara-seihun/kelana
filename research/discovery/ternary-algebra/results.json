@@ -1,0 +1,537 @@
+{
+  "format": "kelana-ternary-algebra/1",
+  "arithmetic": "exact rationals, fractions.Fraction",
+  "ring": "Q[x_1..x_n]/(x_i**3 - x_i), per-variable exponents 0, 1, 2",
+  "mac_2x2": {
+    "map": "D = A*B + C on twelve trits, entries of D in [-3,3]",
+    "entry_profiles": {
+      "d00": {
+        "monomials": 3,
+        "support_size": 5,
+        "interaction_degree": 2,
+        "total_degree": 2
+      },
+      "d01": {
+        "monomials": 3,
+        "support_size": 5,
+        "interaction_degree": 2,
+        "total_degree": 2
+      },
+      "d10": {
+        "monomials": 3,
+        "support_size": 5,
+        "interaction_degree": 2,
+        "total_degree": 2
+      },
+      "d11": {
+        "monomials": 3,
+        "support_size": 5,
+        "interaction_degree": 2,
+        "total_degree": 2
+      }
+    },
+    "column_variables": [
+      "a00",
+      "a01",
+      "a10",
+      "a11",
+      "b00",
+      "b10",
+      "c00",
+      "c10"
+    ],
+    "packed_byte_profile": {
+      "monomials": 7,
+      "support_size": 8,
+      "interaction_degree": 2,
+      "total_degree": 2
+    },
+    "packed_routes_agree": true,
+    "packed_difference_witness": null,
+    "column_states": 49,
+    "packed_states": 49,
+    "note": "The packed byte is one canonical polynomial in the eight column inputs. Building it through D or straight from the truth table gives the same element, so the elementwise boundary is not part of the function."
+  },
+  "gated_contraction": {
+    "inputs": 3,
+    "domain_states": 27,
+    "basis_dimension": 27,
+    "rows": [
+      {
+        "hidden_width": 1,
+        "hidden_channel_monomials": 10,
+        "hidden_channel_max_interaction": 3,
+        "distinct_hidden_states": 5,
+        "contracted": {
+          "monomials": 10,
+          "support_size": 3,
+          "interaction_degree": 3,
+          "total_degree": 5
+        },
+        "distinct_output_states": 5,
+        "matches_network_pointwise": true
+      },
+      {
+        "hidden_width": 4,
+        "hidden_channel_monomials": 44,
+        "hidden_channel_max_interaction": 3,
+        "distinct_hidden_states": 15,
+        "contracted": {
+          "monomials": 13,
+          "support_size": 3,
+          "interaction_degree": 3,
+          "total_degree": 5
+        },
+        "distinct_output_states": 11,
+        "matches_network_pointwise": true
+      },
+      {
+        "hidden_width": 16,
+        "hidden_channel_monomials": 144,
+        "hidden_channel_max_interaction": 3,
+        "distinct_hidden_states": 27,
+        "contracted": {
+          "monomials": 18,
+          "support_size": 3,
+          "interaction_degree": 3,
+          "total_degree": 5
+        },
+        "distinct_output_states": 12,
+        "matches_network_pointwise": true
+      },
+      {
+        "hidden_width": 64,
+        "hidden_channel_monomials": 511,
+        "hidden_channel_max_interaction": 3,
+        "distinct_hidden_states": 27,
+        "contracted": {
+          "monomials": 17,
+          "support_size": 3,
+          "interaction_degree": 3,
+          "total_degree": 5
+        },
+        "distinct_output_states": 16,
+        "matches_network_pointwise": true
+      },
+      {
+        "hidden_width": 256,
+        "hidden_channel_monomials": 2128,
+        "hidden_channel_max_interaction": 3,
+        "distinct_hidden_states": 27,
+        "contracted": {
+          "monomials": 17,
+          "support_size": 3,
+          "interaction_degree": 3,
+          "total_degree": 5
+        },
+        "distinct_output_states": 19,
+        "matches_network_pointwise": true
+      }
+    ],
+    "note": "Hidden width does not appear in the contracted profile. Monomial counts are algebraic size, not instruction counts."
+  },
+  "composed_stack": {
+    "stages": "gate/up -> trit quantizer -> quadratic layer in h -> linear down",
+    "inputs": 3,
+    "hidden_trits": 3,
+    "hidden_channel_profiles": [
+      {
+        "monomials": 15,
+        "support_size": 3,
+        "interaction_degree": 3,
+        "total_degree": 6
+      },
+      {
+        "monomials": 22,
+        "support_size": 3,
+        "interaction_degree": 3,
+        "total_degree": 6
+      },
+      {
+        "monomials": 22,
+        "support_size": 3,
+        "interaction_degree": 3,
+        "total_degree": 6
+      }
+    ],
+    "layer_profile_in_h": {
+      "monomials": 9,
+      "support_size": 3,
+      "interaction_degree": 2,
+      "total_degree": 2
+    },
+    "contracted_in_x": {
+      "monomials": 16,
+      "support_size": 3,
+      "interaction_degree": 3,
+      "total_degree": 6
+    },
+    "substitution_matches_interpolation": true,
+    "difference_witness": null,
+    "hidden_states_used": 7,
+    "output_states": 2,
+    "note": "Substitution is exact here because the quantizer makes the intermediate trit-valued; the tool refuses it otherwise."
+  },
+  "reflection_capacity": [
+    {
+      "inputs": 2,
+      "basis_dimension": 9,
+      "quadratic_dimension": 3,
+      "odd_dimension": 4,
+      "allowed_dimension_bound": 7,
+      "observed_rank": 7,
+      "attains_bound": true,
+      "observed_rank_by_width": {
+        "1": 7,
+        "4": 7,
+        "16": 7
+      },
+      "samples_by_width": {
+        "1": 83,
+        "4": 62,
+        "16": 55
+      },
+      "networks_sampled": 200,
+      "even_high_degree_violations": [],
+      "note": "The bound follows from the reflection identity alone. The observed rank is what exact ReLU samples reached; equality here is evidence of spanning, not a proof of it."
+    },
+    {
+      "inputs": 3,
+      "basis_dimension": 27,
+      "quadratic_dimension": 6,
+      "odd_dimension": 13,
+      "allowed_dimension_bound": 19,
+      "observed_rank": 19,
+      "attains_bound": true,
+      "observed_rank_by_width": {
+        "4": 19,
+        "16": 19,
+        "64": 19
+      },
+      "samples_by_width": {
+        "4": 71,
+        "16": 67,
+        "64": 62
+      },
+      "networks_sampled": 200,
+      "even_high_degree_violations": [],
+      "note": "The bound follows from the reflection identity alone. The observed rank is what exact ReLU samples reached; equality here is evidence of spanning, not a proof of it."
+    },
+    {
+      "inputs": 4,
+      "basis_dimension": 81,
+      "quadratic_dimension": 10,
+      "odd_dimension": 40,
+      "allowed_dimension_bound": 50,
+      "observed_rank": 50,
+      "attains_bound": true,
+      "observed_rank_by_width": {
+        "8": 50,
+        "32": 49,
+        "128": 50
+      },
+      "samples_by_width": {
+        "8": 50,
+        "32": 49,
+        "128": 51
+      },
+      "networks_sampled": 150,
+      "even_high_degree_violations": [],
+      "note": "The bound follows from the reflection identity alone. The observed rank is what exact ReLU samples reached; equality here is evidence of spanning, not a proof of it."
+    }
+  ],
+  "substitution_boundary": {
+    "outer_expression": "y**3 - y",
+    "outer_normal_form": "0",
+    "inner": "x + 1",
+    "inner_is_trit_valued": false,
+    "substitution_into_normal_form": "0",
+    "unreduced_expression_values": {
+      "-1": 0,
+      "0": 0,
+      "1": 6
+    },
+    "composition_refused_with": "substituted map for 'y' fails cubic closure p**3 = p, so it leaves {-1,0,1}; the outer normal form says nothing there. Interpolate the composed map, or use substitute_representative for algebraic rewriting only",
+    "note": "Normal forms describe maps only on ternary arguments. compose() checks cubic closure; substitute_representative() rewrites the representative and claims nothing about composition."
+  },
+  "observer_equivalence": {
+    "two_inputs": {
+      "inputs": 2,
+      "hidden_widths": [
+        2,
+        4,
+        8
+      ],
+      "networks_sampled": 400,
+      "distinct_contracted_maps": 283,
+      "basis_dimension": 9,
+      "family_rank_over_Q": 7,
+      "example": {
+        "width_a": 2,
+        "weights_a": [
+          [
+            0,
+            -1,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "consumers_a": [
+          -1,
+          0
+        ],
+        "width_b": 2,
+        "weights_b": [
+          [
+            -1,
+            0,
+            0,
+            -1
+          ],
+          [
+            0,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        "consumers_b": [
+          0,
+          1
+        ],
+        "hidden_differs_at": {
+          "point": {
+            "x0": -1,
+            "x1": -1
+          },
+          "hidden_a": [
+            "-2",
+            "0"
+          ],
+          "hidden_b": [
+            "1",
+            "2"
+          ]
+        },
+        "contracted": "1/2*x0*x1 + -1/2*x0*x1^2 + -1/2*x1 + 1/2*x1^2",
+        "contracted_profile": {
+          "monomials": 4,
+          "support_size": 2,
+          "interaction_degree": 2,
+          "total_degree": 3
+        },
+        "canonical_forms_equal": true,
+        "reachable_states_equal": true,
+        "distinct_hidden_states_a": 3,
+        "distinct_hidden_states_b": 4
+      },
+      "example_across_widths": {
+        "width_a": 2,
+        "weights_a": [
+          [
+            1,
+            1,
+            0,
+            -1
+          ],
+          [
+            0,
+            -1,
+            0,
+            -1
+          ]
+        ],
+        "consumers_a": [
+          1,
+          0
+        ],
+        "width_b": 4,
+        "weights_b": [
+          [
+            0,
+            1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          [
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "consumers_b": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "hidden_differs_at": {
+          "point": {
+            "x0": -1,
+            "x1": -1
+          },
+          "hidden_a": [
+            "0",
+            "1"
+          ],
+          "hidden_b": [
+            "0",
+            "2",
+            "0",
+            "0"
+          ]
+        },
+        "contracted": "-1/2*x0*x1 + -1/2*x0*x1^2 + -1/2*x1 + -1/2*x1^2",
+        "contracted_profile": {
+          "monomials": 4,
+          "support_size": 2,
+          "interaction_degree": 2,
+          "total_degree": 3
+        },
+        "canonical_forms_equal": true,
+        "reachable_states_equal": true,
+        "distinct_hidden_states_a": 4,
+        "distinct_hidden_states_b": 5
+      },
+      "note": "A collision means different hidden activations with one canonical output map. The contracted form is an observer quotient; it does not say the hidden vectors carry no information."
+    },
+    "three_inputs": {
+      "inputs": 3,
+      "hidden_widths": [
+        4,
+        16
+      ],
+      "networks_sampled": 400,
+      "distinct_contracted_maps": 394,
+      "basis_dimension": 27,
+      "family_rank_over_Q": 19,
+      "example": null,
+      "example_across_widths": null,
+      "note": "A collision means different hidden activations with one canonical output map. The contracted form is an observer quotient; it does not say the hidden vectors carry no information."
+    }
+  },
+  "difference_witness": {
+    "weights_a": [
+      [
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        1
+      ],
+      [
+        -1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "consumers_a": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "weights_b": [
+      [
+        -1,
+        -1,
+        1,
+        0,
+        -1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        0
+      ],
+      [
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "consumers_b": [
+      -1,
+      0,
+      1,
+      1
+    ],
+    "witness": {
+      "x0": -1,
+      "x1": -1,
+      "x2": -1
+    },
+    "value_a": "0",
+    "value_b": "1",
+    "difference_profile": {
+      "monomials": 10,
+      "support_size": 3,
+      "interaction_degree": 3,
+      "total_degree": 5
+    }
+  },
+  "coefficient_ring": {
+    "indicator_of_plus_one": "1/2*x + 1/2*x^2",
+    "denominator": 2,
+    "evaluation_matrix_determinant": 2,
+    "tensor_determinant": "2 ** (n * 3 ** (n - 1)) for n variables",
+    "maps_to_Z4_representable": "32 of 64",
+    "sampled_maps_to_Z256_representable": "32768 of 32768 sampled",
+    "note": "Interpolation inverts a Vandermonde with determinant 2, so it needs 2 to be a unit. Over Z/2**k it is not: exactly the maps with f(1)+f(-1)-2f(0) even lie in this basis. BitVec arithmetic is Z/2**k, so a BitVec map need not have a representative here. ContractedFFN.compile sidesteps this by representing 4F."
+  },
+  "scope": "Exact algebra on {-1,0,1}^n. No instruction count, cycle count or hardware speedup is claimed or measured here."
+}

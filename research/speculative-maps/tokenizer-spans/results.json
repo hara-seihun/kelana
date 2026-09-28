@@ -1,0 +1,210 @@
+{
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "vocab_tokens": 151643,
+  "vocab_decoded_bytes": 975969,
+  "vocab_index_seconds": 1.7605,
+  "languages": {
+    "json": {
+      "strings": 16,
+      "grammar_bytes": 424,
+      "byte_states": 104,
+      "terminal_states": 16,
+      "product_visits": 301,
+      "token_edges": 175,
+      "all_legal_token_paths": "296960",
+      "support_histogram_nonterminal": {
+        "1": 36,
+        "2": 30,
+        "3": 13,
+        "4": 5,
+        "5": 4
+      },
+      "singleton_states": 36,
+      "singleton_chain_starts": 36,
+      "singleton_chain_length_by_start": {
+        "1": 28,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2
+      },
+      "root_allowed_tokens": 2,
+      "root_singleton_run": 0,
+      "boundary_crossing_edges": 0,
+      "boundary_crossing_examples": [],
+      "preparation_seconds": 0.0017,
+      "canonical_tokens": 200,
+      "canonical_ambiguous_steps": 152,
+      "canonical_singleton_runs": {
+        "1": 16,
+        "4": 8
+      },
+      "counterexample": {
+        "text": "{\"kind\":\"ok\",\"value\":0}",
+        "prefix": "",
+        "canonical_token": {
+          "id": 4913,
+          "bytes": "{\""
+        },
+        "other_legal_token": {
+          "id": 90,
+          "bytes": "{"
+        },
+        "allowed_count": 2
+      },
+      "canonical_policy_root_allowed_tokens": 1,
+      "canonical_policy_singleton_steps": 144,
+      "canonical_policy_total_steps": 200,
+      "canonical_policy_singleton_runs": {
+        "1": 24,
+        "2": 16,
+        "3": 8,
+        "8": 8
+      },
+      "reachable_macro_states": 68,
+      "reachable_macro_edges": 139,
+      "macro_prepared_singleton_tokens_on_edges": 58,
+      "uniform_token_path_mean_tokens": 19.4828,
+      "uniform_token_path_mean_singletons": 5.0517
+    },
+    "code": {
+      "strings": 8,
+      "grammar_bytes": 176,
+      "byte_states": 85,
+      "terminal_states": 8,
+      "product_visits": 327,
+      "token_edges": 218,
+      "all_legal_token_paths": "874640",
+      "support_histogram_nonterminal": {
+        "1": 22,
+        "2": 29,
+        "3": 9,
+        "4": 7,
+        "5": 5,
+        "8": 3,
+        "17": 2
+      },
+      "singleton_states": 22,
+      "singleton_chain_starts": 22,
+      "singleton_chain_length_by_start": {
+        "1": 22
+      },
+      "root_allowed_tokens": 8,
+      "root_singleton_run": 0,
+      "boundary_crossing_edges": 24,
+      "boundary_crossing_examples": [
+        {
+          "from": "return {\"ok\"",
+          "boundary": "return {\"ok\":",
+          "token_id": 18251,
+          "token_bytes": ":true"
+        },
+        {
+          "from": "return {\"ok\"",
+          "boundary": "return {\"ok\":",
+          "token_id": 22110,
+          "token_bytes": ":false"
+        },
+        {
+          "from": "return {\"ok\"",
+          "boundary": "return {\"ok\":",
+          "token_id": 55477,
+          "token_bytes": ":f"
+        },
+        {
+          "from": "return {\"ok\"",
+          "boundary": "return {\"ok\":",
+          "token_id": 60777,
+          "token_bytes": ":t"
+        }
+      ],
+      "preparation_seconds": 0.001,
+      "canonical_tokens": 52,
+      "canonical_ambiguous_steps": 52,
+      "canonical_singleton_runs": {},
+      "counterexample": {
+        "text": "return {\"ok\":true}\n",
+        "prefix": "",
+        "canonical_token": {
+          "id": 689,
+          "bytes": "return"
+        },
+        "other_legal_token": {
+          "id": 81,
+          "bytes": "r"
+        },
+        "allowed_count": 8
+      },
+      "canonical_policy_root_allowed_tokens": 2,
+      "canonical_policy_singleton_steps": 36,
+      "canonical_policy_total_steps": 52,
+      "canonical_policy_singleton_runs": {
+        "1": 8,
+        "3": 4,
+        "4": 4
+      },
+      "reachable_macro_states": 63,
+      "reachable_macro_edges": 196,
+      "macro_prepared_singleton_tokens_on_edges": 48,
+      "uniform_token_path_mean_tokens": 15.4573,
+      "uniform_token_path_mean_singletons": 2.4793
+    },
+    "repeated": {
+      "strings": 4,
+      "grammar_bytes": 60,
+      "byte_states": 27,
+      "terminal_states": 4,
+      "product_visits": 72,
+      "token_edges": 44,
+      "all_legal_token_paths": "1024",
+      "support_histogram_nonterminal": {
+        "1": 9,
+        "2": 10,
+        "3": 2,
+        "4": 1,
+        "5": 1
+      },
+      "singleton_states": 9,
+      "singleton_chain_starts": 9,
+      "singleton_chain_length_by_start": {
+        "1": 9
+      },
+      "root_allowed_tokens": 2,
+      "root_singleton_run": 0,
+      "boundary_crossing_edges": 0,
+      "boundary_crossing_examples": [],
+      "preparation_seconds": 0.0003,
+      "canonical_tokens": 28,
+      "canonical_ambiguous_steps": 24,
+      "canonical_singleton_runs": {
+        "1": 4
+      },
+      "counterexample": {
+        "text": "{\"items\":[0,0]}",
+        "prefix": "",
+        "canonical_token": {
+          "id": 4913,
+          "bytes": "{\""
+        },
+        "other_legal_token": {
+          "id": 90,
+          "bytes": "{"
+        },
+        "allowed_count": 2
+      },
+      "canonical_policy_root_allowed_tokens": 1,
+      "canonical_policy_singleton_steps": 20,
+      "canonical_policy_total_steps": 28,
+      "canonical_policy_singleton_runs": {
+        "1": 8,
+        "3": 4
+      },
+      "reachable_macro_states": 18,
+      "reachable_macro_edges": 35,
+      "macro_prepared_singleton_tokens_on_edges": 13,
+      "uniform_token_path_mean_tokens": 11.0,
+      "uniform_token_path_mean_singletons": 3.0
+    }
+  }
+}

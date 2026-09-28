@@ -1,0 +1,214 @@
+{
+  "affine-rtn-shared-head-test-0-32": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/affine-rtn-shared-head-test-0-32.json",
+    "sha256": "647771175c381376e0dd11d60ed82cf76ea5c489c9ec33230da87bda1ec2b496",
+    "manifest_sha256": "0d890d6a97e59196011f18d70faffe1b225392e108d106ec194697ce3e35a62f",
+    "split": "test",
+    "windows": 32,
+    "arms": {
+      "complete": {
+        "nll": 3.9806012621112896,
+        "perplexity": 53.54922166805529,
+        "bpw": 4.251313071227322,
+        "payload_bytes": 316749352,
+        "quantized_matrices": 197
+      }
+    }
+  },
+  "affine-rtn-shared-head-validation-0-8": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/affine-rtn-shared-head-validation-0-8.json",
+    "sha256": "a26017925585aa301abb87cbdd47add9d482c0f876ce0f75351f02921470510e",
+    "manifest_sha256": "0d890d6a97e59196011f18d70faffe1b225392e108d106ec194697ce3e35a62f",
+    "split": "validation",
+    "windows": 8,
+    "arms": {
+      "complete": {
+        "nll": 4.046507652133119,
+        "perplexity": 57.19735477551572,
+        "bpw": 4.251313071227322,
+        "payload_bytes": 316749352,
+        "quantized_matrices": 197
+      }
+    }
+  },
+  "affine-rtn-test-test-0-32": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/affine-rtn-test-test-0-32.json",
+    "sha256": "efac389275deb0628f91780ddf7e5380dbb618bd3fd0c30f2c0c07427d4bb8af",
+    "manifest_sha256": "9a9973d7acb35bf2ba9cd1c5e0011662e338777addf77bf69d5503507695f702",
+    "split": "test",
+    "windows": 32,
+    "arms": {
+      "body": {
+        "nll": 3.9513105654249006,
+        "perplexity": 52.00347615204421,
+        "bpw": 7.3183278071742714,
+        "payload_bytes": 545261088,
+        "quantized_matrices": 196
+      },
+      "complete": {
+        "nll": 3.9811117359236174,
+        "perplexity": 53.57656412159687,
+        "bpw": 4.251313071227322,
+        "payload_bytes": 316749352,
+        "quantized_matrices": 197
+      }
+    }
+  },
+  "affine-rtn-validation-validation-0-8": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/affine-rtn-validation-validation-0-8.json",
+    "sha256": "57fd01754f66cf5e0c85383c797e4d5fd46dc7b178b093022321a022d6d69e18",
+    "manifest_sha256": "9a9973d7acb35bf2ba9cd1c5e0011662e338777addf77bf69d5503507695f702",
+    "split": "validation",
+    "windows": 8,
+    "arms": {
+      "body": {
+        "nll": 4.021237990435432,
+        "perplexity": 55.77010596499513,
+        "bpw": 7.3183278071742714,
+        "payload_bytes": 545261088,
+        "quantized_matrices": 196
+      },
+      "complete": {
+        "nll": 4.045799315209482,
+        "perplexity": 57.15685412294109,
+        "bpw": 4.251313071227322,
+        "payload_bytes": 316749352,
+        "quantized_matrices": 197
+      }
+    }
+  },
+  "calibrated-test-test-0-32": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/calibrated-test-test-0-32.json",
+    "sha256": "779d562297ee2be8fb3f8e7800836a3b9aac7855f41f980651347626b83f1a1e",
+    "manifest_sha256": "953fab2aad52230e7cb899f9e53decdf8eb63ee61bf7affd8a209c2b2968ff9f",
+    "split": "test",
+    "windows": 32,
+    "arms": {
+      "body": {
+        "nll": 3.767451402252796,
+        "perplexity": 43.26964726509017,
+        "bpw": 7.3183278071742714,
+        "payload_bytes": 545261088,
+        "quantized_matrices": 196
+      },
+      "complete": {
+        "nll": 3.79579527611826,
+        "perplexity": 44.51362295389772,
+        "bpw": 4.251313071227322,
+        "payload_bytes": 316749352,
+        "quantized_matrices": 197
+      }
+    }
+  },
+  "calibrated-validation-validation-0-8": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/calibrated-validation-validation-0-8.json",
+    "sha256": "70b30ed1fa0192a00e9d82ae91a23fa97b6cca7eb9252deac778be1450f39c60",
+    "manifest_sha256": "953fab2aad52230e7cb899f9e53decdf8eb63ee61bf7affd8a209c2b2968ff9f",
+    "split": "validation",
+    "windows": 8,
+    "arms": {
+      "reference": {
+        "nll": 3.6688145955403644,
+        "perplexity": 39.20540404322447,
+        "bpw": 16.0,
+        "payload_bytes": 1192099840,
+        "quantized_matrices": 0
+      },
+      "tied": {
+        "nll": 3.703977367924709,
+        "perplexity": 40.60849852281608,
+        "bpw": 12.932985264053052,
+        "payload_bytes": 963588104,
+        "quantized_matrices": 1
+      },
+      "body": {
+        "nll": 3.8105509140912224,
+        "perplexity": 45.17531973229559,
+        "bpw": 7.3183278071742714,
+        "payload_bytes": 545261088,
+        "quantized_matrices": 196
+      },
+      "complete": {
+        "nll": 3.851345914952895,
+        "perplexity": 47.05635448083011,
+        "bpw": 4.251313071227322,
+        "payload_bytes": 316749352,
+        "quantized_matrices": 197
+      }
+    }
+  },
+  "rtn-ablation-test-0-32": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/rtn-ablation-test-0-32.json",
+    "sha256": "efbacfaf32def23d66fb7084df04d66219921b6f7074373f7de6d29c45d24a82",
+    "manifest_sha256": "bf26e15d08c0960c50eb19f61ee3d2f104664c9a80255f106f97b60a2f5f3363",
+    "split": "test",
+    "windows": 32,
+    "arms": {
+      "reference": {
+        "nll": 3.6392180648504517,
+        "perplexity": 38.06206302142243,
+        "bpw": 16.0,
+        "payload_bytes": 1192099840,
+        "quantized_matrices": 0
+      },
+      "tied": {
+        "nll": 3.6809996436623966,
+        "perplexity": 39.6860461548185,
+        "bpw": 12.900357553944476,
+        "payload_bytes": 961157136,
+        "quantized_matrices": 1
+      },
+      "complete": {
+        "nll": 4.451341157801011,
+        "perplexity": 85.74186028933828,
+        "bpw": 4.126347967633315,
+        "payload_bytes": 307438672,
+        "quantized_matrices": 197
+      },
+      "body": {
+        "nll": 4.4061654633166745,
+        "perplexity": 81.95460228772092,
+        "bpw": 7.22599041368884,
+        "payload_bytes": 538381376,
+        "quantized_matrices": 196
+      }
+    }
+  },
+  "rtn-ablation-validation-0-8": {
+    "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/rtn-ablation-validation-0-8.json",
+    "sha256": "b9aace3f220fae97ff89a1c3bb0c10348d23770a8fd9d83338be99dfd324bf2a",
+    "manifest_sha256": "bf26e15d08c0960c50eb19f61ee3d2f104664c9a80255f106f97b60a2f5f3363",
+    "split": "validation",
+    "windows": 8,
+    "arms": {
+      "reference": {
+        "nll": 3.6688145955403644,
+        "perplexity": 39.20540404322447,
+        "bpw": 16.0,
+        "payload_bytes": 1192099840,
+        "quantized_matrices": 0
+      },
+      "tied": {
+        "nll": 3.70654395608341,
+        "perplexity": 40.71285768046878,
+        "bpw": 12.900357553944476,
+        "payload_bytes": 961157136,
+        "quantized_matrices": 1
+      },
+      "complete": {
+        "nll": 4.650165872012868,
+        "perplexity": 104.60233473801793,
+        "bpw": 4.126347967633315,
+        "payload_bytes": 307438672,
+        "quantized_matrices": 197
+      },
+      "body": {
+        "nll": 4.601931313907399,
+        "perplexity": 99.67663674072818,
+        "bpw": 7.22599041368884,
+        "payload_bytes": 538381376,
+        "quantized_matrices": 196
+      }
+    }
+  }
+}

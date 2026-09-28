@@ -1,0 +1,71 @@
+{
+  "panel": "train",
+  "window": 3,
+  "source_rows": [
+    768,
+    1024
+  ],
+  "images_sha256": {
+    "qtip-full-row-3inst/qtip-hyb-full-row.bin": "d06984e4407020db073d9eed087f570315a04fb119c36d96489335f0c5cfd222",
+    "qtip-full-row-3inst/qtip-3inst-full-row.bin": "ee55370b26fb39baf0eab0fc4a43ff90ec247d494dfd48dd6e390887aa75f565"
+  },
+  "capture_model_q_exact": true,
+  "modes": {
+    "hyb": {
+      "attention_kl": 0.02534293755888939,
+      "post_o_rel_sq": 0.02372743934392929,
+      "centered_score_rel_sq": 0.007152142934501171,
+      "raw_q_rel_sq": 0.023688407614827156,
+      "normalized_q_rel_sq": 0.045586977154016495,
+      "teacher_score_variance_mean": 0.05082544647875726,
+      "score_oscillation_mean": 1.9536786628887057,
+      "score_oscillation_max": 4.705873250961304,
+      "certified_kl_lower_mean": 0.01408085304626627,
+      "certified_kl_upper_mean": 0.07066016842590461,
+      "gqa_pair_mean_attention_kl": 0.012671468779444695,
+      "gqa_pair_post_o_rel_sq": 0.0019695123191922903,
+      "counts": {
+        "query_tokens": 256,
+        "visible_causal_pairs": 32896,
+        "head0_post_o_sse": 1.092358946800232,
+        "head0_post_o_ref_sq": 46.03779220581055,
+        "gqa_pair_post_o_sse": 1.092358946800232,
+        "gqa_pair_post_o_ref_sq": 554.6342163085938,
+        "raw_q_sse": 46.76456832885742,
+        "raw_q_ref_sq": 1974.1541748046875,
+        "normalized_q_sse": 4458.966796875,
+        "normalized_q_ref_sq": 97812.296875,
+        "centered_score_sse": 4048.310546875,
+        "centered_score_ref_sq": 566027.625
+      }
+    },
+    "3inst": {
+      "attention_kl": 0.02678605727851391,
+      "post_o_rel_sq": 0.019422108307480812,
+      "centered_score_rel_sq": 0.0078090340830385685,
+      "raw_q_rel_sq": 0.02609865926206112,
+      "normalized_q_rel_sq": 0.05002761632204056,
+      "teacher_score_variance_mean": 0.05228924432163874,
+      "score_oscillation_mean": 1.9993171577807516,
+      "score_oscillation_max": 5.301783561706543,
+      "certified_kl_lower_mean": 0.014088663565987132,
+      "certified_kl_upper_mean": 0.0786345506105985,
+      "gqa_pair_mean_attention_kl": 0.013393028639256954,
+      "gqa_pair_post_o_rel_sq": 0.0016121454536914825,
+      "counts": {
+        "query_tokens": 256,
+        "visible_causal_pairs": 32896,
+        "head0_post_o_sse": 0.894150972366333,
+        "head0_post_o_ref_sq": 46.03779220581055,
+        "gqa_pair_post_o_sse": 0.8941510319709778,
+        "gqa_pair_post_o_ref_sq": 554.6342163085938,
+        "raw_q_sse": 51.52277755737305,
+        "raw_q_ref_sq": 1974.1541748046875,
+        "normalized_q_sse": 4893.31591796875,
+        "normalized_q_ref_sq": 97812.296875,
+        "centered_score_sse": 4420.12890625,
+        "centered_score_ref_sq": 566027.625
+      }
+    }
+  }
+}

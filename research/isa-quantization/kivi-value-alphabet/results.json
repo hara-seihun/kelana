@@ -1,0 +1,282 @@
+{
+  "scope": "one frozen shared four-level FP32 V table per layer, original K2 and full O",
+  "layers": {
+    "0": {
+      "alphabet_f32": [
+        0.4481026530265808,
+        1.2061293125152588,
+        1.8829025030136108,
+        2.637010335922241
+      ],
+      "table_sha256": "7da01919dfce7e1d85c1a7478a7d7810db4e82d2e36c5d0b1e54854b6be0ec20",
+      "fit_sha256": "7be58b32a0ea923d901c4c08c35544f499f0e872526ec92566fe8486dcbe3aeb",
+      "fit_source_count": 1835008,
+      "fit_unique_count": 394232,
+      "weighted_surrogate_dp": 6335.59234674253,
+      "weighted_surrogate_integer_ideal": 10182.018006083388,
+      "actual_train_source_diagonal": {
+        "candidate_actual": 6335.5923448868725,
+        "original_actual": 10182.035554805649,
+        "candidate_zero_step": 0.0,
+        "original_zero_step": 0.0
+      },
+      "panels": {
+        "held": {
+          "queries": 8,
+          "teacher_sq": 271.317982571888,
+          "pooled_sse": {
+            "candidate": 0.753385295825538,
+            "original_K2V2": 0.832657928323152,
+            "feedback": 0.580496474461753,
+            "independent_code_moment": 0.6087546855513642,
+            "delay2": 0.806759082270374,
+            "K2V4": 0.19358501501701192
+          },
+          "relative_sq": {
+            "candidate": 0.002776761380443783,
+            "original_K2V2": 0.0030689374896208073,
+            "feedback": 0.002139542941308527,
+            "independent_code_moment": 0.0022436945748336807,
+            "delay2": 0.0029734817966096893,
+            "K2V4": 0.0007134986526951633
+          },
+          "candidate_query_wins": {
+            "vs_original": 6,
+            "vs_feedback": 3,
+            "vs_independent_code_moment": 2,
+            "vs_delay2": 6,
+            "vs_K2V4": 1
+          },
+          "rows": [
+            {
+              "window": 0,
+              "moment_receipt_sha256": "125dd764f7b12779e1502a29fada002ab9fa835d8f5f6026aa05dba6ef5b8d52",
+              "reader_result_sha256": "faeda3d6482b11b7a2b0980609978c41285b74863800fe1fbd946ccec8dd6009",
+              "sse": 0.05663025691977763,
+              "teacher_sq": 83.63992147871437,
+              "changed_v_digits_vs_original": 42011
+            },
+            {
+              "window": 1,
+              "moment_receipt_sha256": "c8620b0271ce567806bc0ed7b3217a05079874f3d4f9b1b1f10ac3533ed416cb",
+              "reader_result_sha256": "cbe585c8d83fdc0bef144139879781a8115c681a8e99ad74de0f65cd84643236",
+              "sse": 0.24809665240570308,
+              "teacher_sq": 66.67484238849056,
+              "changed_v_digits_vs_original": 42126
+            },
+            {
+              "window": 2,
+              "moment_receipt_sha256": "854c8c9acaf64eb26dc70cf91556e9d993b61e6c3708d694bbeb013170b843dd",
+              "reader_result_sha256": "135d0312d46b82a08366078ce9b166522deb0e4ace77f3d39d373d646dc850a4",
+              "sse": 0.12701320300051744,
+              "teacher_sq": 65.51909113828945,
+              "changed_v_digits_vs_original": 41788
+            },
+            {
+              "window": 3,
+              "moment_receipt_sha256": "7ff07d4b589a9388d0f7c9f9852868f89dd62d7404cfa5c42be6bd3c7681fd2b",
+              "reader_result_sha256": "49398531740e25d743cd92b33233aff39e28e9db9f7048077f2e6d54c71ecd9b",
+              "sse": 0.3216451834995399,
+              "teacher_sq": 55.48412756639362,
+              "changed_v_digits_vs_original": 41870
+            }
+          ]
+        }
+      },
+      "resident_bytes": {
+        "dynamic_peak": 304768,
+        "dynamic_final": 249856,
+        "shared_static_table_per_layer": 16,
+        "original_dynamic_peak": 304768,
+        "original_dynamic_final": 249856,
+        "original_static_table": 0
+      }
+    },
+    "1": {
+      "alphabet_f32": [
+        0.4191853702068329,
+        1.1788407564163208,
+        1.8314480781555176,
+        2.5796358585357666
+      ],
+      "table_sha256": "194d109939d75456f48719d7d8017f96fbe6c48e283b29755359269b58260202",
+      "fit_sha256": "c7328c03ac2a59c82e5454aec6866481e7cb45df8d2509d1ec3d571f36a8a8d9",
+      "fit_source_count": 1835008,
+      "fit_unique_count": 635960,
+      "weighted_surrogate_dp": 3318.2310924702388,
+      "weighted_surrogate_integer_ideal": 5177.119761299788,
+      "actual_train_source_diagonal": {
+        "candidate_actual": 3318.2310947963097,
+        "original_actual": 5177.131708391706,
+        "candidate_zero_step": 0.0,
+        "original_zero_step": 0.0
+      },
+      "panels": {
+        "train": {
+          "queries": 2048,
+          "teacher_sq": 13465.22462372139,
+          "pooled_sse": {
+            "candidate": 181.8358222056584,
+            "original_K2V2": 209.0166981624798,
+            "feedback": 239.73925907411055,
+            "independent_code_moment": 204.11558053066608,
+            "delay2": 206.2903972035061,
+            "K2V4": 158.17972713376523
+          },
+          "relative_sq": {
+            "candidate": 0.013504106116827954,
+            "original_K2V2": 0.015522704151125685,
+            "feedback": 0.017804326758260474,
+            "independent_code_moment": 0.015158720796315582,
+            "delay2": 0.0153202343791643,
+            "K2V4": 0.011747277268223472
+          },
+          "candidate_query_wins": {
+            "vs_original": 1522,
+            "vs_feedback": 1703,
+            "vs_independent_code_moment": 1404,
+            "vs_delay2": 1449,
+            "vs_K2V4": 380
+          },
+          "rows": [
+            {
+              "window": 0,
+              "moment_receipt_sha256": "e23e17076408768c554a733a8b83fdb917f6cb788da063c241da765d37941639",
+              "reader_result_sha256": "d95243d48e7a0b15528f54b08fc940bc799639a2d43dbd6aa25a586232988dde",
+              "sse": 24.761526620310775,
+              "teacher_sq": 1595.1157403415398,
+              "changed_v_digits_vs_original": 38426
+            },
+            {
+              "window": 1,
+              "moment_receipt_sha256": "4309f143aa444020fdfe8aba6dbd7130c0e7dffa3c453575e7606c4dd4b56ac9",
+              "reader_result_sha256": "22bdaa74fdc30e75ecd36bb23cca34a4f99391ece60a7a85a7f652b2b0c157be",
+              "sse": 21.168671987105487,
+              "teacher_sq": 1623.7559462698382,
+              "changed_v_digits_vs_original": 38535
+            },
+            {
+              "window": 2,
+              "moment_receipt_sha256": "58990e7a91730bb7f550a66330729afe620d76519a09d405243ef24ea01484f7",
+              "reader_result_sha256": "ef0001e97a945aab75235b565d0b2fdc9a032084d06bf32ec7dd08e0b3d20c53",
+              "sse": 21.51390311050419,
+              "teacher_sq": 1614.11698757594,
+              "changed_v_digits_vs_original": 38612
+            },
+            {
+              "window": 3,
+              "moment_receipt_sha256": "8b3af5c0423bd0606b8c467272cb7144f86be068f11793226947e5f79b00029d",
+              "reader_result_sha256": "594e852fa139663d700434a72cf25322865a1704005be4fc03293162c0602b3f",
+              "sse": 21.816186445684437,
+              "teacher_sq": 1657.047568419394,
+              "changed_v_digits_vs_original": 38579
+            },
+            {
+              "window": 4,
+              "moment_receipt_sha256": "b4dda3cfd7eb5045d6a75d4b192034ac1c397fc12ba41b70dc04d895c0bb5e0a",
+              "reader_result_sha256": "8a31d207449daca97b05e86125d76ae879c9be252c7338f86b1a4b2d6a18eb20",
+              "sse": 25.057829772803903,
+              "teacher_sq": 1854.577868590294,
+              "changed_v_digits_vs_original": 38988
+            },
+            {
+              "window": 5,
+              "moment_receipt_sha256": "19dc8eb3c18e5780b092592487433d1503217707d753ee470cb3ae25cd754f19",
+              "reader_result_sha256": "2824eb5c75ccb5232e947d48c7608dcf38f9c0070203e858f048e95db5600cbe",
+              "sse": 21.842279021160863,
+              "teacher_sq": 1789.1691107708862,
+              "changed_v_digits_vs_original": 38360
+            },
+            {
+              "window": 6,
+              "moment_receipt_sha256": "d3c129c5b7e6245aa1866cecad3dd2cc9aecb489acce6a647c8cfca1671b58a5",
+              "reader_result_sha256": "ec91dbc581ebed8bda43b925ad5adec5670479fdca22a049f7813d37f011d6f2",
+              "sse": 23.15411359489235,
+              "teacher_sq": 1611.9537456637986,
+              "changed_v_digits_vs_original": 38259
+            },
+            {
+              "window": 7,
+              "moment_receipt_sha256": "7eda48900b85a819f93a096967525b022744c6ca96951026996fe4f522b2d486",
+              "reader_result_sha256": "bc9de7e0d32599311935a17f86e549fd13105634a7e4769603260f804d2d167d",
+              "sse": 22.521311653196374,
+              "teacher_sq": 1719.4876560896985,
+              "changed_v_digits_vs_original": 38806
+            }
+          ]
+        },
+        "validation": {
+          "queries": 1024,
+          "teacher_sq": 6793.961378496447,
+          "pooled_sse": {
+            "candidate": 92.40760566867716,
+            "original_K2V2": 107.92358364653872,
+            "feedback": 120.41746630525847,
+            "independent_code_moment": 104.97783061880266,
+            "delay2": 106.48785265294272,
+            "K2V4": 77.84016915562127
+          },
+          "relative_sq": {
+            "candidate": 0.013601432289732509,
+            "original_K2V2": 0.015885221836574967,
+            "feedback": 0.017724190585832817,
+            "independent_code_moment": 0.015451637825182194,
+            "delay2": 0.01567389726264668,
+            "K2V4": 0.011457258117773973
+          },
+          "candidate_query_wins": {
+            "vs_original": 785,
+            "vs_feedback": 849,
+            "vs_independent_code_moment": 733,
+            "vs_delay2": 758,
+            "vs_K2V4": 198
+          },
+          "rows": [
+            {
+              "window": 0,
+              "moment_receipt_sha256": "4f4e2c8f3ab9ac5c0e006914cc2b7cbf608a48bd03dbb80789c311b0ba890ffb",
+              "reader_result_sha256": "1bcd687a6431e20c8414bda3ea1d9c5fd8ec282d7580ad369bc70f582ce745d8",
+              "sse": 22.211317418589637,
+              "teacher_sq": 1745.3204918897522,
+              "changed_v_digits_vs_original": 38715
+            },
+            {
+              "window": 1,
+              "moment_receipt_sha256": "25dc16540490e17d64f918da95955bdb91502d00a60819d124ab2842d97667bd",
+              "reader_result_sha256": "8e722a484e0bc9fb8eb85a0980b3d32e5576ad0ad163c48a1ff11667c3640c55",
+              "sse": 24.305346556794646,
+              "teacher_sq": 1765.9615199861248,
+              "changed_v_digits_vs_original": 39191
+            },
+            {
+              "window": 2,
+              "moment_receipt_sha256": "712b8728652b20f4d1c65085d02f70658adaa2acb94232618911ee2ba21da0bb",
+              "reader_result_sha256": "8c8639dab328117e223b1293e7ff0865b4e79d6da0d6766fdcddeaf84c58a6b4",
+              "sse": 25.981854025329234,
+              "teacher_sq": 1694.774756162232,
+              "changed_v_digits_vs_original": 38684
+            },
+            {
+              "window": 3,
+              "moment_receipt_sha256": "35ace69bbf421357afdf716cce4d6bf97202617a04fce8ab853502c0105c78c4",
+              "reader_result_sha256": "dab528658165699f78fefffb75164fe8710cf7c9c9786a481b0e86ac16c59d8d",
+              "sse": 19.90908766796364,
+              "teacher_sq": 1587.9046104583376,
+              "changed_v_digits_vs_original": 38459
+            }
+          ]
+        }
+      },
+      "resident_bytes": {
+        "dynamic_peak": 304768,
+        "dynamic_final": 249856,
+        "shared_static_table_per_layer": 16,
+        "original_dynamic_peak": 304768,
+        "original_dynamic_final": 249856,
+        "original_static_table": 0
+      }
+    }
+  },
+  "feedback_control_sha256": "24042c36a944e202613be83fffaeb658811cd5ae10b940bc6b2fa8639f04829c",
+  "source_cost_provenance_result_sha256": "0f0c50ff16ccc3eb51a2a949c64f1442b6c0c7c080aaac1414358198f32bfc62"
+}

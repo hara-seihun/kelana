@@ -1,0 +1,130 @@
+{
+  "panel": "held",
+  "window": 1,
+  "source_rows": [
+    256,
+    512
+  ],
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "images_sha256": {
+    "e8-root-program/quip-root-standalone.bin": "d39500d3a5fbfd3260f4139d064ab00654582e15e4fc461fc923502d841f907a",
+    "quip-root-matched-scalar/refit-group-q2q3-50320.bin": "e41d273bd2d5ea7ef497e6c2749bf6ac5b1529124f8e24d2ea2448132dfdfd15",
+    "quip-completed-metric/completed-rvq3-root-50322.bin": "1375c3809f12a7484fba1a49d5573b529c6f0946e73408a2f0232a8dd61ae2b0",
+    "quip-completed-metric/completed-group-q2q3-50320.bin": "bbf25784aba49c5687c3af203471dc4f91d6beb14dc4eaddb4f7e3377bb323f5"
+  },
+  "capture_model_q_exact": true,
+  "modes": {
+    "root_H": {
+      "attention_kl": 0.02945239469408989,
+      "post_o_rel_sq": 0.02896258234977722,
+      "centered_score_rel_sq": 0.004930092021822929,
+      "raw_q_rel_sq": 0.013656181283295155,
+      "normalized_q_rel_sq": 0.02363572083413601,
+      "teacher_score_variance_mean": 0.06061394080330927,
+      "score_oscillation_mean": 1.263183451112127,
+      "score_oscillation_max": 3.8079270124435425,
+      "certified_kl_lower_mean": 0.016526648996045674,
+      "certified_kl_upper_mean": 0.07949624311861167,
+      "gqa_pair_mean_attention_kl": 0.014726197347044945,
+      "gqa_pair_post_o_rel_sq": 0.0028289477340877056,
+      "counts": {
+        "query_tokens": 256,
+        "visible_causal_pairs": 32896,
+        "head0_post_o_sse": 1.6656368970870972,
+        "head0_post_o_ref_sq": 57.50995635986328,
+        "gqa_pair_post_o_sse": 1.6656368970870972,
+        "gqa_pair_post_o_ref_sq": 588.783203125,
+        "raw_q_sse": 28.769460678100586,
+        "raw_q_ref_sq": 2106.69873046875,
+        "normalized_q_sse": 2254.88671875,
+        "normalized_q_ref_sq": 95401.6484375,
+        "centered_score_sse": 2641.908203125,
+        "centered_score_ref_sq": 535874.0
+      }
+    },
+    "scalar_H": {
+      "attention_kl": 0.021470628678798676,
+      "post_o_rel_sq": 0.023927822709083557,
+      "centered_score_rel_sq": 0.004179775714874268,
+      "raw_q_rel_sq": 0.014949792064726353,
+      "normalized_q_rel_sq": 0.018444322049617767,
+      "teacher_score_variance_mean": 0.04275000041854643,
+      "score_oscillation_mean": 1.338302167772781,
+      "score_oscillation_max": 3.0391101837158203,
+      "certified_kl_lower_mean": 0.012706999115010609,
+      "certified_kl_upper_mean": 0.045840263456835104,
+      "gqa_pair_mean_attention_kl": 0.010735314339399338,
+      "gqa_pair_post_o_rel_sq": 0.002337172394618392,
+      "counts": {
+        "query_tokens": 256,
+        "visible_causal_pairs": 32896,
+        "head0_post_o_sse": 1.37608802318573,
+        "head0_post_o_ref_sq": 57.50995635986328,
+        "gqa_pair_post_o_sse": 1.3760879039764404,
+        "gqa_pair_post_o_ref_sq": 588.783203125,
+        "raw_q_sse": 31.494707107543945,
+        "raw_q_ref_sq": 2106.69873046875,
+        "normalized_q_sse": 1759.61865234375,
+        "normalized_q_ref_sq": 95401.6484375,
+        "centered_score_sse": 2239.833251953125,
+        "centered_score_ref_sq": 535874.0
+      }
+    },
+    "root_M": {
+      "attention_kl": 0.024330614134669304,
+      "post_o_rel_sq": 0.02119969017803669,
+      "centered_score_rel_sq": 0.004916418343782425,
+      "raw_q_rel_sq": 0.013001276180148125,
+      "normalized_q_rel_sq": 0.02184189483523369,
+      "teacher_score_variance_mean": 0.04831443834270268,
+      "score_oscillation_mean": 1.2885814989567734,
+      "score_oscillation_max": 3.617323637008667,
+      "certified_kl_lower_mean": 0.013618737992283539,
+      "certified_kl_upper_mean": 0.05886529534258062,
+      "gqa_pair_mean_attention_kl": 0.012165307067334652,
+      "gqa_pair_post_o_rel_sq": 0.002070699818432331,
+      "counts": {
+        "query_tokens": 256,
+        "visible_causal_pairs": 32896,
+        "head0_post_o_sse": 1.2191932201385498,
+        "head0_post_o_ref_sq": 57.50995635986328,
+        "gqa_pair_post_o_sse": 1.2191932201385498,
+        "gqa_pair_post_o_ref_sq": 588.783203125,
+        "raw_q_sse": 27.389772415161133,
+        "raw_q_ref_sq": 2106.69873046875,
+        "normalized_q_sse": 2083.752685546875,
+        "normalized_q_ref_sq": 95401.6484375,
+        "centered_score_sse": 2634.580810546875,
+        "centered_score_ref_sq": 535874.0
+      }
+    },
+    "scalar_M": {
+      "attention_kl": 0.02296018972992897,
+      "post_o_rel_sq": 0.026050440967082977,
+      "centered_score_rel_sq": 0.004530953709036112,
+      "raw_q_rel_sq": 0.014422901906073093,
+      "normalized_q_rel_sq": 0.019206127151846886,
+      "teacher_score_variance_mean": 0.04623411126318936,
+      "score_oscillation_mean": 1.3898979853256606,
+      "score_oscillation_max": 3.2000410556793213,
+      "certified_kl_lower_mean": 0.01394750776704997,
+      "certified_kl_upper_mean": 0.048329964996758554,
+      "gqa_pair_mean_attention_kl": 0.011480094864964485,
+      "gqa_pair_post_o_rel_sq": 0.0025445015635341406,
+      "counts": {
+        "query_tokens": 256,
+        "visible_causal_pairs": 32896,
+        "head0_post_o_sse": 1.4981597661972046,
+        "head0_post_o_ref_sq": 57.50995635986328,
+        "gqa_pair_post_o_sse": 1.4981597661972046,
+        "gqa_pair_post_o_ref_sq": 588.783203125,
+        "raw_q_sse": 30.384708404541016,
+        "raw_q_ref_sq": 2106.69873046875,
+        "normalized_q_sse": 1832.296142578125,
+        "normalized_q_ref_sq": 95401.6484375,
+        "centered_score_sse": 2428.020263671875,
+        "centered_score_ref_sq": 535874.0
+      }
+    }
+  }
+}

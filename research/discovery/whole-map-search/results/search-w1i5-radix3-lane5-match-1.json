@@ -1,0 +1,142 @@
+{
+ "job": "w1i5-radix3-lane5-match-1",
+ "network": "w1i5",
+ "contract": "radix3",
+ "projection": "lane5",
+ "mode": "match",
+ "valu": 1,
+ "library": "full",
+ "n_consts": 3,
+ "timeout_ms": 40000,
+ "library_components": [
+  "v_add_nc_u32",
+  "v_sub_nc_u32",
+  "v_mul_lo_u32",
+  "v_and_b32",
+  "v_or_b32",
+  "v_xor_b32",
+  "v_lshlrev_b32",
+  "v_lshrrev_b32",
+  "v_ashrrev_i32",
+  "v_bfe_u32",
+  "v_perm_b32",
+  "v_lshl_or_b32",
+  "v_dot4_i32_i8",
+  "v_dot8_i32_i4",
+  "v_dot4_u32_u8",
+  "v_lshl_add_u32",
+  "v_add3_u32",
+  "v_and_or_b32",
+  "v_alignbit_b32",
+  "v_med3_i32",
+  "v_sad_u8",
+  "v_mad_u32_u24"
+ ],
+ "done": {
+  "[\"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.42
+  },
+  "[\"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.64
+  },
+  "[\"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.803
+  },
+  "[\"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.984
+  },
+  "[\"v_add_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.132
+  },
+  "[\"v_sub_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.193
+  },
+  "[\"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.336
+  },
+  "[\"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.6
+  },
+  "[\"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.754
+  },
+  "[\"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.051
+  },
+  "[\"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.497
+  },
+  "[\"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.673
+  },
+  "[\"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 4.103
+  },
+  "[\"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 5.087
+  },
+  "[\"v_mul_lo_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 6.013
+  },
+  "[\"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 16.039
+  },
+  "[\"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 19.229
+  },
+  "[\"v_dot4_i32_i8\"]": {
+   "outcome": "unsat",
+   "seconds": 22.396
+  },
+  "[\"v_sad_u8\"]": {
+   "outcome": "unsat",
+   "seconds": 28.79
+  },
+  "[\"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 33.574
+  },
+  "[\"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 40.045
+  },
+  "[\"v_dot4_u32_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 40.081
+  }
+ },
+ "solutions": [],
+ "per_query_timeout_ms": 20000,
+ "counts": {
+  "sat": 0,
+  "unsat": 20,
+  "timeout": 2
+ },
+ "queue_total": 22,
+ "queue_done": 22,
+ "timeout_multisets": [
+  [
+   "v_dot8_i32_i4"
+  ],
+  [
+   "v_dot4_u32_u8"
+  ]
+ ]
+}

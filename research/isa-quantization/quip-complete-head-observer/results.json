@@ -1,0 +1,630 @@
+{
+  "train": {
+    "root_H": {
+      "attention_kl": 0.005774506076704711,
+      "gqa_pair_mean_attention_kl": 0.0028872530383523554,
+      "post_o_rel_sq": 0.006039904264982659,
+      "gqa_pair_post_o_rel_sq": 0.0005385418454314315,
+      "raw_q_rel_sq_bf16": 0.0038463189343212923,
+      "normalized_q_rel_sq": 0.006507200193656569,
+      "centered_score_rel_sq": 0.0010298327973559597,
+      "teacher_score_variance_mean": 0.011549671924720737,
+      "score_oscillation_mean": 0.6435612605100687,
+      "score_oscillation_max": 2.2184475660324097,
+      "certified_kl_lower_mean": 0.004188934071371548,
+      "certified_kl_upper_mean": 0.008681397298361405,
+      "counts": {
+        "query_tokens": 2048,
+        "visible_causal_pairs": 263168,
+        "head0_post_o_sse": 2.3293672651052475,
+        "head0_post_o_ref_sq": 385.6629447937012,
+        "gqa_pair_post_o_sse": 2.3293672651052475,
+        "gqa_pair_post_o_ref_sq": 4325.322692871094,
+        "raw_q_sse": 61.8192572593689,
+        "raw_q_ref_sq": 16072.317016601562,
+        "normalized_q_sse": 5053.309875488281,
+        "normalized_q_ref_sq": 776572.0625,
+        "centered_score_sse": 4859.310852050781,
+        "centered_score_ref_sq": 4718543.5
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.006083248648792505,
+          "post_o_rel_sq": 0.008189009502530098,
+          "gqa_pair_post_o_rel_sq": 0.000825032708235085,
+          "raw_q_rel_sq": 0.003679425222799182,
+          "normalized_q_rel_sq": 0.006749168504029512,
+          "teacher_score_variance_mean": 0.01206764600155829
+        },
+        {
+          "attention_kl": 0.0066642481833696365,
+          "post_o_rel_sq": 0.007039895746856928,
+          "gqa_pair_post_o_rel_sq": 0.0005978586268611252,
+          "raw_q_rel_sq": 0.0042845718562603,
+          "normalized_q_rel_sq": 0.0070239775814116,
+          "teacher_score_variance_mean": 0.013307073125453563
+        },
+        {
+          "attention_kl": 0.0048751127906143665,
+          "post_o_rel_sq": 0.004704962484538555,
+          "gqa_pair_post_o_rel_sq": 0.0003876811533700675,
+          "raw_q_rel_sq": 0.0035327370278537273,
+          "normalized_q_rel_sq": 0.0063154730014503,
+          "teacher_score_variance_mean": 0.009628757859552878
+        },
+        {
+          "attention_kl": 0.006141873076558113,
+          "post_o_rel_sq": 0.00583384046331048,
+          "gqa_pair_post_o_rel_sq": 0.00048424190026707947,
+          "raw_q_rel_sq": 0.0041529107838869095,
+          "normalized_q_rel_sq": 0.006879993714392185,
+          "teacher_score_variance_mean": 0.01220343177173457
+        },
+        {
+          "attention_kl": 0.003970724530518055,
+          "post_o_rel_sq": 0.0038469028659164906,
+          "gqa_pair_post_o_rel_sq": 0.0003853015077766031,
+          "raw_q_rel_sq": 0.003068518126383424,
+          "normalized_q_rel_sq": 0.005131047684699297,
+          "teacher_score_variance_mean": 0.007960505652818087
+        },
+        {
+          "attention_kl": 0.006799817085266113,
+          "post_o_rel_sq": 0.006743881851434708,
+          "gqa_pair_post_o_rel_sq": 0.0006156834424473345,
+          "raw_q_rel_sq": 0.004209023900330067,
+          "normalized_q_rel_sq": 0.0071388655342161655,
+          "teacher_score_variance_mean": 0.013721612536983093
+        },
+        {
+          "attention_kl": 0.005770707502961159,
+          "post_o_rel_sq": 0.0058899251744151115,
+          "gqa_pair_post_o_rel_sq": 0.0005395567277446389,
+          "raw_q_rel_sq": 0.003799490397796035,
+          "normalized_q_rel_sq": 0.006297009997069836,
+          "teacher_score_variance_mean": 0.011503113522247331
+        },
+        {
+          "attention_kl": 0.005890316795557737,
+          "post_o_rel_sq": 0.0059058452025055885,
+          "gqa_pair_post_o_rel_sq": 0.0004776443529408425,
+          "raw_q_rel_sq": 0.004063096363097429,
+          "normalized_q_rel_sq": 0.006559942848980427,
+          "teacher_score_variance_mean": 0.012005234927418087
+        }
+      ]
+    },
+    "scalar_H": {
+      "attention_kl": 0.01320982351899147,
+      "gqa_pair_mean_attention_kl": 0.006604911759495735,
+      "post_o_rel_sq": 0.01510679299011851,
+      "gqa_pair_post_o_rel_sq": 0.0013469816024932703,
+      "raw_q_rel_sq_bf16": 0.012349373957866719,
+      "normalized_q_rel_sq": 0.015106955888692075,
+      "centered_score_rel_sq": 0.0025153256168654057,
+      "teacher_score_variance_mean": 0.026572927397324145,
+      "score_oscillation_mean": 1.1121731058010482,
+      "score_oscillation_max": 3.5672245025634766,
+      "certified_kl_lower_mean": 0.008553950110564024,
+      "certified_kl_upper_mean": 0.02453532409868505,
+      "counts": {
+        "query_tokens": 2048,
+        "visible_causal_pairs": 263168,
+        "head0_post_o_sse": 5.826130270957947,
+        "head0_post_o_ref_sq": 385.6629447937012,
+        "gqa_pair_post_o_sse": 5.8261300921440125,
+        "gqa_pair_post_o_ref_sq": 4325.322692871094,
+        "raw_q_sse": 198.48305320739746,
+        "raw_q_ref_sq": 16072.317016601562,
+        "normalized_q_sse": 11731.639892578125,
+        "normalized_q_ref_sq": 776572.0625,
+        "centered_score_sse": 11868.67333984375,
+        "centered_score_ref_sq": 4718543.5
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.014828229323029518,
+          "post_o_rel_sq": 0.02191009372472763,
+          "gqa_pair_post_o_rel_sq": 0.0022074151784181595,
+          "raw_q_rel_sq": 0.01187045406550169,
+          "normalized_q_rel_sq": 0.01554564293473959,
+          "teacher_score_variance_mean": 0.030270584677979488
+        },
+        {
+          "attention_kl": 0.01371142640709877,
+          "post_o_rel_sq": 0.015527099370956421,
+          "gqa_pair_post_o_rel_sq": 0.001318628783337772,
+          "raw_q_rel_sq": 0.01286335475742817,
+          "normalized_q_rel_sq": 0.016075564548373222,
+          "teacher_score_variance_mean": 0.027900552715479175
+        },
+        {
+          "attention_kl": 0.011655782349407673,
+          "post_o_rel_sq": 0.01579793356359005,
+          "gqa_pair_post_o_rel_sq": 0.0013017235323786736,
+          "raw_q_rel_sq": 0.011765184812247753,
+          "normalized_q_rel_sq": 0.014447210356593132,
+          "teacher_score_variance_mean": 0.023461598690412283
+        },
+        {
+          "attention_kl": 0.013034485280513763,
+          "post_o_rel_sq": 0.012019079178571701,
+          "gqa_pair_post_o_rel_sq": 0.0009976518340408802,
+          "raw_q_rel_sq": 0.013218821957707405,
+          "normalized_q_rel_sq": 0.01605466939508915,
+          "teacher_score_variance_mean": 0.0257973783921234
+        },
+        {
+          "attention_kl": 0.011289313435554504,
+          "post_o_rel_sq": 0.010939438827335835,
+          "gqa_pair_post_o_rel_sq": 0.0010956821497529745,
+          "raw_q_rel_sq": 0.011205227114260197,
+          "normalized_q_rel_sq": 0.013430164195597172,
+          "teacher_score_variance_mean": 0.022716272779478432
+        },
+        {
+          "attention_kl": 0.014322021044790745,
+          "post_o_rel_sq": 0.01748513989150524,
+          "gqa_pair_post_o_rel_sq": 0.0015963077312335372,
+          "raw_q_rel_sq": 0.013086419552564621,
+          "normalized_q_rel_sq": 0.015711767598986626,
+          "teacher_score_variance_mean": 0.028594363602607465
+        },
+        {
+          "attention_kl": 0.014374545775353909,
+          "post_o_rel_sq": 0.014784459955990314,
+          "gqa_pair_post_o_rel_sq": 0.0013543557142838836,
+          "raw_q_rel_sq": 0.012288184836506844,
+          "normalized_q_rel_sq": 0.014513426460325718,
+          "teacher_score_variance_mean": 0.028725310678577108
+        },
+        {
+          "attention_kl": 0.01246278453618288,
+          "post_o_rel_sq": 0.011922934092581272,
+          "gqa_pair_post_o_rel_sq": 0.0009642856894060969,
+          "raw_q_rel_sq": 0.012547207064926624,
+          "normalized_q_rel_sq": 0.015124921686947346,
+          "teacher_score_variance_mean": 0.025117357641935817
+        }
+      ]
+    },
+    "root_M": {
+      "attention_kl": 0.007346177764702588,
+      "gqa_pair_mean_attention_kl": 0.003673088882351294,
+      "post_o_rel_sq": 0.007382189889604695,
+      "gqa_pair_post_o_rel_sq": 0.0006582253612068439,
+      "raw_q_rel_sq_bf16": 0.005045941461569941,
+      "normalized_q_rel_sq": 0.008563071900653859,
+      "centered_score_rel_sq": 0.0013755918878638742,
+      "teacher_score_variance_mean": 0.014756070855257607,
+      "score_oscillation_mean": 0.7714625900880492,
+      "score_oscillation_max": 2.5016231536865234,
+      "certified_kl_lower_mean": 0.005221256703959603,
+      "certified_kl_upper_mean": 0.011579206152293724,
+      "counts": {
+        "query_tokens": 2048,
+        "visible_causal_pairs": 263168,
+        "head0_post_o_sse": 2.8470370918512344,
+        "head0_post_o_ref_sq": 385.6629447937012,
+        "gqa_pair_post_o_sse": 2.8470370918512344,
+        "gqa_pair_post_o_ref_sq": 4325.322692871094,
+        "raw_q_sse": 81.09997081756592,
+        "raw_q_ref_sq": 16072.317016601562,
+        "normalized_q_sse": 6649.8424072265625,
+        "normalized_q_ref_sq": 776572.0625,
+        "centered_score_sse": 6490.7901611328125,
+        "centered_score_ref_sq": 4718543.5
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.007750947028398514,
+          "post_o_rel_sq": 0.009760009124875069,
+          "gqa_pair_post_o_rel_sq": 0.0009833090007305145,
+          "raw_q_rel_sq": 0.004863626789301634,
+          "normalized_q_rel_sq": 0.009114010259509087,
+          "teacher_score_variance_mean": 0.015509011342370434
+        },
+        {
+          "attention_kl": 0.008661077357828617,
+          "post_o_rel_sq": 0.010168943554162979,
+          "gqa_pair_post_o_rel_sq": 0.0008635909180156887,
+          "raw_q_rel_sq": 0.005511798895895481,
+          "normalized_q_rel_sq": 0.009256461635231972,
+          "teacher_score_variance_mean": 0.017660114111315735
+        },
+        {
+          "attention_kl": 0.006625664420425892,
+          "post_o_rel_sq": 0.007024365942925215,
+          "gqa_pair_post_o_rel_sq": 0.0005787961417809129,
+          "raw_q_rel_sq": 0.004741243086755276,
+          "normalized_q_rel_sq": 0.008382058702409267,
+          "teacher_score_variance_mean": 0.013263810241720644
+        },
+        {
+          "attention_kl": 0.007720681838691235,
+          "post_o_rel_sq": 0.00735511863604188,
+          "gqa_pair_post_o_rel_sq": 0.0006105166394263506,
+          "raw_q_rel_sq": 0.005449958611279726,
+          "normalized_q_rel_sq": 0.009150505997240543,
+          "teacher_score_variance_mean": 0.015546110563047416
+        },
+        {
+          "attention_kl": 0.005356501787900925,
+          "post_o_rel_sq": 0.0043735625222325325,
+          "gqa_pair_post_o_rel_sq": 0.00043805118184536695,
+          "raw_q_rel_sq": 0.003972712438553572,
+          "normalized_q_rel_sq": 0.006832966580986977,
+          "teacher_score_variance_mean": 0.010585260689619158
+        },
+        {
+          "attention_kl": 0.008333129808306694,
+          "post_o_rel_sq": 0.007790652569383383,
+          "gqa_pair_post_o_rel_sq": 0.0007112485473044217,
+          "raw_q_rel_sq": 0.005529019981622696,
+          "normalized_q_rel_sq": 0.008845374919474125,
+          "teacher_score_variance_mean": 0.01663007149884771
+        },
+        {
+          "attention_kl": 0.006979775615036488,
+          "post_o_rel_sq": 0.005910712759941816,
+          "gqa_pair_post_o_rel_sq": 0.0005414609331637621,
+          "raw_q_rel_sq": 0.004971600137650967,
+          "normalized_q_rel_sq": 0.008184016682207584,
+          "teacher_score_variance_mean": 0.014060116147323273
+        },
+        {
+          "attention_kl": 0.007341644261032343,
+          "post_o_rel_sq": 0.00653203297406435,
+          "gqa_pair_post_o_rel_sq": 0.0005282882484607399,
+          "raw_q_rel_sq": 0.005353404674679041,
+          "normalized_q_rel_sq": 0.008822984993457794,
+          "teacher_score_variance_mean": 0.014794072247816483
+        }
+      ]
+    },
+    "scalar_M": {
+      "attention_kl": 0.013942246325314045,
+      "gqa_pair_mean_attention_kl": 0.0069711231626570225,
+      "post_o_rel_sq": 0.015670090756480265,
+      "gqa_pair_post_o_rel_sq": 0.001397207536792246,
+      "raw_q_rel_sq_bf16": 0.013038363003358363,
+      "normalized_q_rel_sq": 0.01640287224355507,
+      "centered_score_rel_sq": 0.0027150657319824963,
+      "teacher_score_variance_mean": 0.02798623112655419,
+      "score_oscillation_mean": 1.17894460968364,
+      "score_oscillation_max": 3.6423490047454834,
+      "certified_kl_lower_mean": 0.009031518631579449,
+      "certified_kl_upper_mean": 0.025755200794141408,
+      "counts": {
+        "query_tokens": 2048,
+        "visible_causal_pairs": 263168,
+        "head0_post_o_sse": 6.043373346328735,
+        "head0_post_o_ref_sq": 385.6629447937012,
+        "gqa_pair_post_o_sse": 6.043373465538025,
+        "gqa_pair_post_o_ref_sq": 4325.322692871094,
+        "raw_q_sse": 209.55670356750488,
+        "raw_q_ref_sq": 16072.317016601562,
+        "normalized_q_sse": 12738.012329101562,
+        "normalized_q_ref_sq": 776572.0625,
+        "centered_score_sse": 12811.15576171875,
+        "centered_score_ref_sq": 4718543.5
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.015478050336241722,
+          "post_o_rel_sq": 0.02389838919043541,
+          "gqa_pair_post_o_rel_sq": 0.00240773381665349,
+          "raw_q_rel_sq": 0.012871414422988892,
+          "normalized_q_rel_sq": 0.01731644757091999,
+          "teacher_score_variance_mean": 0.03129134299935648
+        },
+        {
+          "attention_kl": 0.014619981870055199,
+          "post_o_rel_sq": 0.01580098457634449,
+          "gqa_pair_post_o_rel_sq": 0.0013418883318081498,
+          "raw_q_rel_sq": 0.013479656539857388,
+          "normalized_q_rel_sq": 0.017080528661608696,
+          "teacher_score_variance_mean": 0.029694623414022757
+        },
+        {
+          "attention_kl": 0.012036638334393501,
+          "post_o_rel_sq": 0.013630693778395653,
+          "gqa_pair_post_o_rel_sq": 0.0011231467360630631,
+          "raw_q_rel_sq": 0.01246698573231697,
+          "normalized_q_rel_sq": 0.016061285510659218,
+          "teacher_score_variance_mean": 0.02393173051409945
+        },
+        {
+          "attention_kl": 0.014525283128023148,
+          "post_o_rel_sq": 0.015126725658774376,
+          "gqa_pair_post_o_rel_sq": 0.0012556042056530714,
+          "raw_q_rel_sq": 0.014095221646130085,
+          "normalized_q_rel_sq": 0.01721438392996788,
+          "teacher_score_variance_mean": 0.0290001296488005
+        },
+        {
+          "attention_kl": 0.011016110889613628,
+          "post_o_rel_sq": 0.009293494746088982,
+          "gqa_pair_post_o_rel_sq": 0.0009308261214755476,
+          "raw_q_rel_sq": 0.01219193171709776,
+          "normalized_q_rel_sq": 0.01491253450512886,
+          "teacher_score_variance_mean": 0.022143541213846672
+        },
+        {
+          "attention_kl": 0.014611523598432541,
+          "post_o_rel_sq": 0.014349059201776981,
+          "gqa_pair_post_o_rel_sq": 0.0013099989155307412,
+          "raw_q_rel_sq": 0.013552026823163033,
+          "normalized_q_rel_sq": 0.016709433868527412,
+          "teacher_score_variance_mean": 0.029441315756211624
+        },
+        {
+          "attention_kl": 0.014610819518566132,
+          "post_o_rel_sq": 0.015284564346075058,
+          "gqa_pair_post_o_rel_sq": 0.0014001688687130809,
+          "raw_q_rel_sq": 0.012836478650569916,
+          "normalized_q_rel_sq": 0.016153572127223015,
+          "teacher_score_variance_mean": 0.029129375925998884
+        },
+        {
+          "attention_kl": 0.014639562927186489,
+          "post_o_rel_sq": 0.01788625679910183,
+          "gqa_pair_post_o_rel_sq": 0.0014465785352513194,
+          "raw_q_rel_sq": 0.01287453155964613,
+          "normalized_q_rel_sq": 0.015842169523239136,
+          "teacher_score_variance_mean": 0.029257789540097154
+        }
+      ]
+    }
+  },
+  "held": {
+    "root_H": {
+      "attention_kl": 0.02416825434193015,
+      "gqa_pair_mean_attention_kl": 0.012084127170965075,
+      "post_o_rel_sq": 0.02784224686733464,
+      "gqa_pair_post_o_rel_sq": 0.0028593034769591637,
+      "raw_q_rel_sq_bf16": 0.013109470163553067,
+      "normalized_q_rel_sq": 0.021416833832508364,
+      "centered_score_rel_sq": 0.003681575723001983,
+      "teacher_score_variance_mean": 0.04885047568030866,
+      "score_oscillation_mean": 1.1334154070536897,
+      "score_oscillation_max": 4.034620523452759,
+      "certified_kl_lower_mean": 0.013418165371249374,
+      "certified_kl_upper_mean": 0.06207269582474414,
+      "counts": {
+        "query_tokens": 1024,
+        "visible_causal_pairs": 131584,
+        "head0_post_o_sse": 6.511017084121704,
+        "head0_post_o_ref_sq": 233.85386657714844,
+        "gqa_pair_post_o_sse": 6.511017084121704,
+        "gqa_pair_post_o_ref_sq": 2277.1339721679688,
+        "raw_q_sse": 103.92095756530762,
+        "raw_q_ref_sq": 7927.1668701171875,
+        "normalized_q_sse": 8185.8687744140625,
+        "normalized_q_ref_sq": 382216.5703125,
+        "centered_score_sse": 8694.556030273438,
+        "centered_score_ref_sq": 2361639.875
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.023175202310085297,
+          "post_o_rel_sq": 0.039194460958242416,
+          "gqa_pair_post_o_rel_sq": 0.003782646032050252,
+          "raw_q_rel_sq": 0.012320943176746368,
+          "normalized_q_rel_sq": 0.020259113982319832,
+          "teacher_score_variance_mean": 0.04658191482038607
+        },
+        {
+          "attention_kl": 0.02945239469408989,
+          "post_o_rel_sq": 0.02896258234977722,
+          "gqa_pair_post_o_rel_sq": 0.0028289477340877056,
+          "raw_q_rel_sq": 0.013656181283295155,
+          "normalized_q_rel_sq": 0.02363572083413601,
+          "teacher_score_variance_mean": 0.06061394080330927
+        },
+        {
+          "attention_kl": 0.02459868974983692,
+          "post_o_rel_sq": 0.026549916714429855,
+          "gqa_pair_post_o_rel_sq": 0.00299117062240839,
+          "raw_q_rel_sq": 0.012818186543881893,
+          "normalized_q_rel_sq": 0.019530411809682846,
+          "teacher_score_variance_mean": 0.049442837563098425
+        },
+        {
+          "attention_kl": 0.019446730613708496,
+          "post_o_rel_sq": 0.016501059755682945,
+          "gqa_pair_post_o_rel_sq": 0.0017333502182736993,
+          "raw_q_rel_sq": 0.013624274171888828,
+          "normalized_q_rel_sq": 0.022318869829177856,
+          "teacher_score_variance_mean": 0.038763209534440866
+        }
+      ]
+    },
+    "scalar_H": {
+      "attention_kl": 0.018212235998362303,
+      "gqa_pair_mean_attention_kl": 0.009106117999181151,
+      "post_o_rel_sq": 0.021851952691016033,
+      "gqa_pair_post_o_rel_sq": 0.0022441207376943197,
+      "raw_q_rel_sq_bf16": 0.014629699448336033,
+      "normalized_q_rel_sq": 0.018126193707751707,
+      "centered_score_rel_sq": 0.0031871093662956076,
+      "teacher_score_variance_mean": 0.03631440630590335,
+      "score_oscillation_mean": 1.24306938882728,
+      "score_oscillation_max": 4.332546830177307,
+      "certified_kl_lower_mean": 0.010983448642907734,
+      "certified_kl_upper_mean": 0.039054041963093436,
+      "counts": {
+        "query_tokens": 1024,
+        "visible_causal_pairs": 131584,
+        "head0_post_o_sse": 5.110163629055023,
+        "head0_post_o_ref_sq": 233.85386657714844,
+        "gqa_pair_post_o_sse": 5.110163569450378,
+        "gqa_pair_post_o_ref_sq": 2277.1339721679688,
+        "raw_q_sse": 115.9720687866211,
+        "raw_q_ref_sq": 7927.1668701171875,
+        "normalized_q_sse": 6928.131591796875,
+        "normalized_q_ref_sq": 382216.5703125,
+        "centered_score_sse": 7526.8045654296875,
+        "centered_score_ref_sq": 2361639.875
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.020136594772338867,
+          "post_o_rel_sq": 0.030572639778256416,
+          "gqa_pair_post_o_rel_sq": 0.0029505565762519836,
+          "raw_q_rel_sq": 0.01421658881008625,
+          "normalized_q_rel_sq": 0.017930062487721443,
+          "teacher_score_variance_mean": 0.039164909918758865
+        },
+        {
+          "attention_kl": 0.021470628678798676,
+          "post_o_rel_sq": 0.023927822709083557,
+          "gqa_pair_post_o_rel_sq": 0.002337172394618392,
+          "raw_q_rel_sq": 0.014949792064726353,
+          "normalized_q_rel_sq": 0.018444322049617767,
+          "teacher_score_variance_mean": 0.04275000041854643
+        },
+        {
+          "attention_kl": 0.014954835176467896,
+          "post_o_rel_sq": 0.015239332802593708,
+          "gqa_pair_post_o_rel_sq": 0.0017168959602713585,
+          "raw_q_rel_sq": 0.014280841685831547,
+          "normalized_q_rel_sq": 0.01691477559506893,
+          "teacher_score_variance_mean": 0.030435472164658653
+        },
+        {
+          "attention_kl": 0.016286885365843773,
+          "post_o_rel_sq": 0.017951153218746185,
+          "gqa_pair_post_o_rel_sq": 0.0018856751266866922,
+          "raw_q_rel_sq": 0.015058503486216068,
+          "normalized_q_rel_sq": 0.019278256222605705,
+          "teacher_score_variance_mean": 0.032907242721649445
+        }
+      ]
+    },
+    "root_M": {
+      "attention_kl": 0.023126221261918545,
+      "gqa_pair_mean_attention_kl": 0.011563110630959272,
+      "post_o_rel_sq": 0.026031026111476906,
+      "gqa_pair_post_o_rel_sq": 0.0026732973033395846,
+      "raw_q_rel_sq_bf16": 0.012618531318167932,
+      "normalized_q_rel_sq": 0.020979047413421395,
+      "centered_score_rel_sq": 0.0037745776608867493,
+      "teacher_score_variance_mean": 0.04703565257578078,
+      "score_oscillation_mean": 1.1832203175290488,
+      "score_oscillation_max": 4.695011854171753,
+      "certified_kl_lower_mean": 0.013292774017273863,
+      "certified_kl_upper_mean": 0.05756490103040683,
+      "counts": {
+        "query_tokens": 1024,
+        "visible_causal_pairs": 131584,
+        "head0_post_o_sse": 6.087456107139587,
+        "head0_post_o_ref_sq": 233.85386657714844,
+        "gqa_pair_post_o_sse": 6.087456107139587,
+        "gqa_pair_post_o_ref_sq": 2277.1339721679688,
+        "raw_q_sse": 100.02920341491699,
+        "raw_q_ref_sq": 7927.1668701171875,
+        "normalized_q_sse": 8018.53955078125,
+        "normalized_q_ref_sq": 382216.5703125,
+        "centered_score_sse": 8914.193115234375,
+        "centered_score_ref_sq": 2361639.875
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.024186769500374794,
+          "post_o_rel_sq": 0.03752705082297325,
+          "gqa_pair_post_o_rel_sq": 0.0036217246670275927,
+          "raw_q_rel_sq": 0.012017063796520233,
+          "normalized_q_rel_sq": 0.02035371959209442,
+          "teacher_score_variance_mean": 0.050058051198395626
+        },
+        {
+          "attention_kl": 0.024330614134669304,
+          "post_o_rel_sq": 0.02119969017803669,
+          "gqa_pair_post_o_rel_sq": 0.002070699818432331,
+          "raw_q_rel_sq": 0.013001276180148125,
+          "normalized_q_rel_sq": 0.02184189483523369,
+          "teacher_score_variance_mean": 0.04831443834270268
+        },
+        {
+          "attention_kl": 0.024571342393755913,
+          "post_o_rel_sq": 0.0278765931725502,
+          "gqa_pair_post_o_rel_sq": 0.003140636719763279,
+          "raw_q_rel_sq": 0.012224758043885231,
+          "normalized_q_rel_sq": 0.019286613911390305,
+          "teacher_score_variance_mean": 0.049757431263043904
+        },
+        {
+          "attention_kl": 0.01941615901887417,
+          "post_o_rel_sq": 0.0171809159219265,
+          "gqa_pair_post_o_rel_sq": 0.0018047656631097198,
+          "raw_q_rel_sq": 0.013220610097050667,
+          "normalized_q_rel_sq": 0.022519849240779877,
+          "teacher_score_variance_mean": 0.0400126894989809
+        }
+      ]
+    },
+    "scalar_M": {
+      "attention_kl": 0.019233500119298697,
+      "gqa_pair_mean_attention_kl": 0.009616750059649348,
+      "post_o_rel_sq": 0.023195588920795047,
+      "gqa_pair_post_o_rel_sq": 0.002382107554387045,
+      "raw_q_rel_sq_bf16": 0.014686921830724795,
+      "normalized_q_rel_sq": 0.019080789434434066,
+      "centered_score_rel_sq": 0.0034735568670364856,
+      "teacher_score_variance_mean": 0.03884636835294692,
+      "score_oscillation_mean": 1.3062526033172617,
+      "score_oscillation_max": 3.5987257957458496,
+      "certified_kl_lower_mean": 0.011880577083559465,
+      "certified_kl_upper_mean": 0.039253039864004524,
+      "counts": {
+        "query_tokens": 1024,
+        "visible_causal_pairs": 131584,
+        "head0_post_o_sse": 5.424378156661987,
+        "head0_post_o_ref_sq": 233.85386657714844,
+        "gqa_pair_post_o_sse": 5.424378037452698,
+        "gqa_pair_post_o_ref_sq": 2277.1339721679688,
+        "raw_q_sse": 116.42568016052246,
+        "raw_q_ref_sq": 7927.1668701171875,
+        "normalized_q_sse": 7292.993896484375,
+        "normalized_q_ref_sq": 382216.5703125,
+        "centered_score_sse": 8203.290405273438,
+        "centered_score_ref_sq": 2361639.875
+      },
+      "per_window": [
+        {
+          "attention_kl": 0.019386732950806618,
+          "post_o_rel_sq": 0.029274988919496536,
+          "gqa_pair_post_o_rel_sq": 0.0028253206983208656,
+          "raw_q_rel_sq": 0.014243257232010365,
+          "normalized_q_rel_sq": 0.0184391550719738,
+          "teacher_score_variance_mean": 0.03887434160610925
+        },
+        {
+          "attention_kl": 0.02296018972992897,
+          "post_o_rel_sq": 0.026050440967082977,
+          "gqa_pair_post_o_rel_sq": 0.0025445015635341406,
+          "raw_q_rel_sq": 0.014422901906073093,
+          "normalized_q_rel_sq": 0.019206127151846886,
+          "teacher_score_variance_mean": 0.04623411126318936
+        },
+        {
+          "attention_kl": 0.01732967607676983,
+          "post_o_rel_sq": 0.020329607650637627,
+          "gqa_pair_post_o_rel_sq": 0.002290376927703619,
+          "raw_q_rel_sq": 0.014616060070693493,
+          "normalized_q_rel_sq": 0.017977872863411903,
+          "teacher_score_variance_mean": 0.035041572945933165
+        },
+        {
+          "attention_kl": 0.01725740171968937,
+          "post_o_rel_sq": 0.017181087285280228,
+          "gqa_pair_post_o_rel_sq": 0.001804783591069281,
+          "raw_q_rel_sq": 0.015514271333813667,
+          "normalized_q_rel_sq": 0.020771875977516174,
+          "teacher_score_variance_mean": 0.0352354475965559
+        }
+      ]
+    }
+  }
+}

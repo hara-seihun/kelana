@@ -1,0 +1,965 @@
+{
+  "method": "pinned NanoQuant ADMM-only, matched Qwen fixtures; not published full NanoQuant",
+  "reports": [
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-mlp_down_proj.npz",
+      "key": "model.layers.0.mlp.down_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-mlp_down_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-mlp_down_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            1024,
+            3072
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 6.856256510989624,
+          "upstream_float_weight_relative_squared_error": 0.5963433384895325,
+          "exported_binary_weight_relative_squared_error": 0.5963746905326843,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.46096017956733704,
+            "relative_rms_error": 0.67894047498703
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_mlp_down_proj_weight_0.55.npz",
+          "artifact_sha256": "be5fdf1b475efbb48094e52fa8c6affa6617e9376b0bc921a5bf8613f63b3908"
+        }
+      ],
+      "report_sha256": "38b2bdb81b522c8a8cfa65d09cb70b7d11a2759fccfdebaa0570be832fabb85f",
+      "fixture_sha256": "12ef1a3693c1649ac549e52e4c09941aba662ceb82569b63266013986931807e"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-mlp_up_proj.npz",
+      "key": "model.layers.0.mlp.up_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-mlp_up_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-mlp_up_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            3072,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 6.492747897005756,
+          "upstream_float_weight_relative_squared_error": 0.5968197584152222,
+          "exported_binary_weight_relative_squared_error": 0.5968541502952576,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.4502134919166565,
+            "relative_rms_error": 0.6709794998168945
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_mlp_up_proj_weight_0.55.npz",
+          "artifact_sha256": "d32eea343ddc3536197d6238d4cb30d6e0214e584bd9f94e9f109415338c2354"
+        }
+      ],
+      "report_sha256": "79282357a473498299eb4be42cb6ceaaef9d24ac5c475661c58b8af1e4937d43",
+      "fixture_sha256": "d6bb08ceb2e060db6d83bdfcf0465f9120d0de0f19f8ed2c5f758218b69ab26b"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_o_proj.npz",
+      "key": "model.layers.0.self_attn.o_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_o_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_o_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            1024,
+            2048
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.530757227999857,
+          "upstream_float_weight_relative_squared_error": 0.6117351651191711,
+          "exported_binary_weight_relative_squared_error": 0.611779510974884,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.2909165024757385,
+            "relative_rms_error": 0.5393667817115784
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_self_attn_o_proj_weight_0.55.npz",
+          "artifact_sha256": "a45ab60d2dfd311e1cb7cc9025632b006dead4afaf8d206b12a6779afbdc77e6"
+        }
+      ],
+      "report_sha256": "db96c8a2848f710c3be04dd96a9486ee0de8244e5c17fad0811880fb6866a2ee",
+      "fixture_sha256": "44d33628ad9014c37f5ddb7bbd6f94dd38bf1b5060c731a20dd066e43bf320c8"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_q_proj.npz",
+      "key": "model.layers.0.self_attn.q_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_q_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_q_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.601289091995568,
+          "upstream_float_weight_relative_squared_error": 0.4975096881389618,
+          "exported_binary_weight_relative_squared_error": 0.4976605474948883,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.09666184335947037,
+            "relative_rms_error": 0.3109048902988434
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_self_attn_q_proj_weight_0.55.npz",
+          "artifact_sha256": "1a8bf5e2071a1cff6133bfffbd610deb0eb5b814d5f77c8e7464b48df1f56d55"
+        },
+        {
+          "target_matrix_bpw": 0.8,
+          "rank": 512,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 7.874511898000492,
+          "upstream_float_weight_relative_squared_error": 0.37644869089126587,
+          "exported_binary_weight_relative_squared_error": 0.376611590385437,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.07367756217718124,
+            "relative_rms_error": 0.2714361250400543
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.7734375,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 8192,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 204008,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_self_attn_q_proj_weight_0.8.npz",
+          "artifact_sha256": "28a560a9b9dbe066fee7e31637f6b94b00918490899c771b47461e049791b6a0"
+        },
+        {
+          "target_matrix_bpw": 1.0,
+          "rank": 640,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 9.164920816998347,
+          "upstream_float_weight_relative_squared_error": 0.30154117941856384,
+          "exported_binary_weight_relative_squared_error": 0.301724910736084,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.06025194376707077,
+            "relative_rms_error": 0.24546271562576294
+          },
+          "factor_bytes": 245760,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.9609375,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1966080,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 245760,
+            "minimum_bf16_vector_io_bytes": 8704,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 253160,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_self_attn_q_proj_weight_1.npz",
+          "artifact_sha256": "8ca478543e22540ee61199df3dc88d1b2572a2412ad16f058c13ef51f10ef88b"
+        }
+      ],
+      "report_sha256": "e03bcaca34f79a43325e7ce0e52bddf50588b95fc43791727f509f130634fc92",
+      "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-mlp_down_proj.npz",
+      "key": "model.layers.14.mlp.down_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-mlp_down_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-mlp_down_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            1024,
+            3072
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 6.954291121990536,
+          "upstream_float_weight_relative_squared_error": 0.525183379650116,
+          "exported_binary_weight_relative_squared_error": 0.5252472162246704,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.44382771849632263,
+            "relative_rms_error": 0.6662039756774902
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_14_mlp_down_proj_weight_0.55.npz",
+          "artifact_sha256": "ee3d2bec4738238fcb550c4a9c23e26eaf9c212639b0c33d074fef527acb2c3b"
+        },
+        {
+          "target_matrix_bpw": 0.8,
+          "rank": 576,
+          "dimensions": [
+            1024,
+            3072
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 10.917839656991418,
+          "upstream_float_weight_relative_squared_error": 0.3844275176525116,
+          "exported_binary_weight_relative_squared_error": 0.38453468680381775,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.3171176016330719,
+            "relative_rms_error": 0.5631319284439087
+          },
+          "factor_bytes": 294912,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.7708333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 2359296,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 294912,
+            "minimum_bf16_vector_io_bytes": 10496,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 304360,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_14_mlp_down_proj_weight_0.8.npz",
+          "artifact_sha256": "40805342bc82cfd927df1778a323bf76eefc0ff0fbd574742848c4cdb317b2e5"
+        },
+        {
+          "target_matrix_bpw": 1.0,
+          "rank": 736,
+          "dimensions": [
+            1024,
+            3072
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 15.199836909989244,
+          "upstream_float_weight_relative_squared_error": 0.2964271903038025,
+          "exported_binary_weight_relative_squared_error": 0.2965830862522125,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.2413560301065445,
+            "relative_rms_error": 0.4912799894809723
+          },
+          "factor_bytes": 376832,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.9791666666666666,
+          "decode_work_per_vector": {
+            "signed_accumulations": 3014656,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 376832,
+            "minimum_bf16_vector_io_bytes": 11136,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 386280,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_14_mlp_down_proj_weight_1.npz",
+          "artifact_sha256": "0d2a0cb90525e4ca6b524dc71990e19a4b0c8a9e26e5c6f4304411e9bb29ff16"
+        }
+      ],
+      "report_sha256": "ba20ce33c3096300a38f539309dcb2967ec4d6ad9d45f622d971afe27771d6b0",
+      "fixture_sha256": "cccfef9684a303bc20803f149d0a6a723da6a229efc749126783e46988038d17"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-mlp_up_proj.npz",
+      "key": "model.layers.14.mlp.up_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-mlp_up_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-mlp_up_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            3072,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 7.176199421999627,
+          "upstream_float_weight_relative_squared_error": 0.5511922240257263,
+          "exported_binary_weight_relative_squared_error": 0.5512523651123047,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.33836570382118225,
+            "relative_rms_error": 0.581692099571228
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_14_mlp_up_proj_weight_0.55.npz",
+          "artifact_sha256": "039b1d7775b307773094007f6bb606432342bf6823dfdc3488a81a240e26034c"
+        }
+      ],
+      "report_sha256": "f17120162dace687b7484eb4774ae279ab7689522e42f0d65420ed0db4b9e457",
+      "fixture_sha256": "317707bad1c4872f3e4a36a21ba4fdf716eab4a420028a619d06d590f8a1eccb"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-self_attn_o_proj.npz",
+      "key": "model.layers.14.self_attn.o_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-self_attn_o_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-self_attn_o_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            1024,
+            2048
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.561195271991892,
+          "upstream_float_weight_relative_squared_error": 0.5085667371749878,
+          "exported_binary_weight_relative_squared_error": 0.5086533427238464,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.2913241684436798,
+            "relative_rms_error": 0.5397445559501648
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_14_self_attn_o_proj_weight_0.55.npz",
+          "artifact_sha256": "4211cb9d5eeb54a10c1982cd317e23f68c0d97f63501092ea29df0510390ac8e"
+        }
+      ],
+      "report_sha256": "06981ae641d46cc1d934c67d7a37657590f5484187f6ec2c93533e6b6c5f5122",
+      "fixture_sha256": "c85f913c9e32812fb57a8406c53674de48a0b498fb3c190700fba9638b3a7681"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-self_attn_q_proj.npz",
+      "key": "model.layers.14.self_attn.q_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-self_attn_q_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-self_attn_q_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.6238564049999695,
+          "upstream_float_weight_relative_squared_error": 0.4060177206993103,
+          "exported_binary_weight_relative_squared_error": 0.40623778104782104,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.09668422490358353,
+            "relative_rms_error": 0.31094086170196533
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_14_self_attn_q_proj_weight_0.55.npz",
+          "artifact_sha256": "9fa9f26edbed2831d02e3e58dcedf83f29cebf1d67382aa6fa52266ceb9df820"
+        }
+      ],
+      "report_sha256": "29327b353c795c2f27a0214942d4aa5800030ebbbebe9f9ec4f0225804ba047e",
+      "fixture_sha256": "336cacf3c24c4e51f463d52366e616c08e43f9bb11ac01626e6ae9fa83a8b583"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-mlp_down_proj.npz",
+      "key": "model.layers.27.mlp.down_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-mlp_down_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-mlp_down_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            1024,
+            3072
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 6.978234031004831,
+          "upstream_float_weight_relative_squared_error": 0.5795640349388123,
+          "exported_binary_weight_relative_squared_error": 0.5796142816543579,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.03419684246182442,
+            "relative_rms_error": 0.18492388725280762
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_27_mlp_down_proj_weight_0.55.npz",
+          "artifact_sha256": "2f1a540d9a5a66be991b06ca8c73e90192ca24b8eaaf6500469a8cb734d6939d"
+        }
+      ],
+      "report_sha256": "b848c2be4489c58c81a6960adb372ed41f622d5a90e5189fc1b132fc0a293f1b",
+      "fixture_sha256": "16798798f82fcb1b7efefd708a747db66935a8e673a3af2d448be650a7ace434"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-mlp_up_proj.npz",
+      "key": "model.layers.27.mlp.up_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-mlp_up_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-mlp_up_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            3072,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 7.278491500997916,
+          "upstream_float_weight_relative_squared_error": 0.5359528660774231,
+          "exported_binary_weight_relative_squared_error": 0.5360788702964783,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.152728870511055,
+            "relative_rms_error": 0.3908053934574127
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_27_mlp_up_proj_weight_0.55.npz",
+          "artifact_sha256": "5a1201e0cd56fa7221a9c4283c47d1b9c33ef85bfc40534561b049d117ba5020"
+        }
+      ],
+      "report_sha256": "cf54605433c97ee86f142b477e66ef9fdbd5a1fcebf61ec6476e30b2aeb63fc6",
+      "fixture_sha256": "caa325b69d5d85d5f02637dab37d6aa4c74c872c5a3a558af759ef49159ae394"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-self_attn_o_proj.npz",
+      "key": "model.layers.27.self_attn.o_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-self_attn_o_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-self_attn_o_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            1024,
+            2048
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.550803767007892,
+          "upstream_float_weight_relative_squared_error": 0.5750632882118225,
+          "exported_binary_weight_relative_squared_error": 0.5751067996025085,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.4809797406196594,
+            "relative_rms_error": 0.6935270428657532
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_27_self_attn_o_proj_weight_0.55.npz",
+          "artifact_sha256": "60a8a8de48474523d8b268b58ef8f4e86b0853a1d07b5be4b7d9e7fe461881e8"
+        }
+      ],
+      "report_sha256": "c112a6127333f99a11594feee778cb380767087cf0f300d88b66cd5dfb93258e",
+      "fixture_sha256": "f94033282ba0625412537b979b79eb5600c39b37441c58892f0dd1610df5f5a6"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-self_attn_q_proj.npz",
+      "key": "model.layers.27.self_attn.q_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-self_attn_q_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-self_attn_q_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.6468533139996,
+          "upstream_float_weight_relative_squared_error": 0.4971519112586975,
+          "exported_binary_weight_relative_squared_error": 0.49727320671081543,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.11579222977161407,
+            "relative_rms_error": 0.3402825593948364
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_27_self_attn_q_proj_weight_0.55.npz",
+          "artifact_sha256": "fb433a67f7daf2cb9e407b743fc379ac4592638f4d78d6c40764a70602d4c39c"
+        },
+        {
+          "target_matrix_bpw": 0.8,
+          "rank": 512,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 7.4469901629927335,
+          "upstream_float_weight_relative_squared_error": 0.3758493959903717,
+          "exported_binary_weight_relative_squared_error": 0.3760108947753906,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.08859337121248245,
+            "relative_rms_error": 0.2976463735103607
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.7734375,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 8192,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 204008,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_27_self_attn_q_proj_weight_0.8.npz",
+          "artifact_sha256": "5841b78afbeeff39760d6a0335ba4cbe0c90214abd67278e7244d4ccb2e2b7b7"
+        },
+        {
+          "target_matrix_bpw": 1.0,
+          "rank": 640,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 8.910274636000395,
+          "upstream_float_weight_relative_squared_error": 0.30067911744117737,
+          "exported_binary_weight_relative_squared_error": 0.30087578296661377,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.07103777676820755,
+            "relative_rms_error": 0.2665291130542755
+          },
+          "factor_bytes": 245760,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.9609375,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1966080,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 245760,
+            "minimum_bf16_vector_io_bytes": 8704,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 253160,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_27_self_attn_q_proj_weight_1.npz",
+          "artifact_sha256": "ca2e06a3ee7f6f595b8cb4a016bc524c560e91b62436c4acaf9bec3cf00fce40"
+        }
+      ],
+      "report_sha256": "7620149e74e0389b28161af95e991aea99ec4ca6bc69ccac6263e2e1d05e6784",
+      "fixture_sha256": "330b61bdd93a57a109c84e41103c8e059b3c2c53ee221f547d71b97d0ea9bb0c"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-mlp_down_proj.npz",
+      "key": "model.layers.7.mlp.down_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-mlp_down_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-mlp_down_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            1024,
+            3072
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 7.051763322990155,
+          "upstream_float_weight_relative_squared_error": 0.551946222782135,
+          "exported_binary_weight_relative_squared_error": 0.5519980788230896,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.4409487545490265,
+            "relative_rms_error": 0.6640397310256958
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_7_mlp_down_proj_weight_0.55.npz",
+          "artifact_sha256": "7b3f7c09f4b6c24a022f43c0723725fae9e4add9016ed964223da2d2c835bab7"
+        }
+      ],
+      "report_sha256": "a0f3d5c563b4ec43dc827e083a3d8c61180f807948afd325fd03ce95dda589b4",
+      "fixture_sha256": "f99606c2bab5959a43ee530b2955ad05f6dee3a6e2569c27cb5288bbe25ba6f3"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-mlp_up_proj.npz",
+      "key": "model.layers.7.mlp.up_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-mlp_up_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-mlp_up_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 384,
+          "dimensions": [
+            3072,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 7.236408598997514,
+          "upstream_float_weight_relative_squared_error": 0.5716829299926758,
+          "exported_binary_weight_relative_squared_error": 0.5717190504074097,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.4196525812149048,
+            "relative_rms_error": 0.6478059887886047
+          },
+          "factor_bytes": 196608,
+          "scale_bytes": 8192,
+          "matrix_payload_bpw": 0.5208333333333334,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1572864,
+            "pre_post_scale_multiplications": 4096,
+            "minimum_packed_factor_reads_bytes": 196608,
+            "minimum_bf16_vector_io_bytes": 9728,
+            "scale_reads_bytes": 8192
+          },
+          "serialized_file_bytes": 206056,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_7_mlp_up_proj_weight_0.55.npz",
+          "artifact_sha256": "32dc8e310acb3711f130b06b40738ce3db3d955914346e1c3e84bc5a7b6b70c6"
+        }
+      ],
+      "report_sha256": "ac6621d61ef5f3a78c2f4ec614041dfb3615f31485411bfca670e0352d654371",
+      "fixture_sha256": "83683dc11f135ed126e63a04b0eac8b3ab4ebec3d5b3bd730a0055aa96caef2f"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-self_attn_o_proj.npz",
+      "key": "model.layers.7.self_attn.o_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-self_attn_o_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-self_attn_o_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            1024,
+            2048
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.485574983002152,
+          "upstream_float_weight_relative_squared_error": 0.5200589895248413,
+          "exported_binary_weight_relative_squared_error": 0.520139217376709,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.47362807393074036,
+            "relative_rms_error": 0.6882064342498779
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_7_self_attn_o_proj_weight_0.55.npz",
+          "artifact_sha256": "59491f82741d518ebb64f847f17851fd2406f7458aea23c6e7cdf499a0b9fd5e"
+        }
+      ],
+      "report_sha256": "1f36b2b69451e1ea60b8775fe31e2dad849be9a63ce9688d4a3b870025b5009f",
+      "fixture_sha256": "ae312f32de9fad0dce95b5f24d86f772e08ef909d3287adf12fa840bf906fc63"
+    },
+    {
+      "method": "NanoQuant upstream ADMM initialization, binary sign and two-scales; no block/model tuning",
+      "weight": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+      "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-self_attn_q_proj.npz",
+      "key": "model.layers.7.self_attn.q_proj.weight",
+      "upstream": "/path/to/workspace/work/clones/nanoquant-study/research/quantization-discovery/subbit/binary-factors/nanoquant_admm.py",
+      "input_norm": "0.4-shrunk forward-activation squared mean",
+      "output_norm": "uniform ones, not upstream loss gradients",
+      "train_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-self_attn_q_proj.npz",
+      "heldout_activations": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer07-self_attn_q_proj.npz",
+      "threads": 8,
+      "entries": [
+        {
+          "target_matrix_bpw": 0.55,
+          "rank": 352,
+          "dimensions": [
+            2048,
+            1024
+          ],
+          "seed": 0,
+          "outer_iters": 400,
+          "inner_iters": 5,
+          "seconds_cpu": 4.673546356993029,
+          "upstream_float_weight_relative_squared_error": 0.46129748225212097,
+          "exported_binary_weight_relative_squared_error": 0.46142956614494324,
+          "heldout_response": {
+            "samples": 1024,
+            "relative_squared_error": 0.1251121312379837,
+            "relative_rms_error": 0.35371193289756775
+          },
+          "factor_bytes": 135168,
+          "scale_bytes": 6144,
+          "matrix_payload_bpw": 0.5390625,
+          "decode_work_per_vector": {
+            "signed_accumulations": 1081344,
+            "pre_post_scale_multiplications": 3072,
+            "minimum_packed_factor_reads_bytes": 135168,
+            "minimum_bf16_vector_io_bytes": 7552,
+            "scale_reads_bytes": 6144
+          },
+          "serialized_file_bytes": 142568,
+          "artifact": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_7_self_attn_q_proj_weight_0.55.npz",
+          "artifact_sha256": "ed6435129eb7f8d1c18fadaa7af551e8dbc926e04a0aa65a0b6b89f4d9b99d71"
+        }
+      ],
+      "report_sha256": "c7a1f801bee9478e50ad34a1029eee1ad6dd9496bb2bad3eb7269baf5dd21276",
+      "fixture_sha256": "9af7bff9fa905d3f2043bf55424da3a35f66baca8edd3b683829e35a15169a0c"
+    }
+  ]
+}

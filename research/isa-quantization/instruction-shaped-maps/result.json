@@ -1,0 +1,110 @@
+[
+  {
+    "name": "near_rank_one",
+    "teacher": [
+      [
+        1.0,
+        3.0,
+        9.0,
+        27.0
+      ],
+      [
+        0.75,
+        2.265625,
+        6.734375,
+        20.28125
+      ]
+    ],
+    "one_dot_codes": [
+      1.0,
+      3.0,
+      9.0,
+      27.0
+    ],
+    "one_dot_fp16_decoder": [
+      1.0,
+      0.75
+    ],
+    "one_dot_loss": 0.001953125,
+    "scalar_q4_ideal_real_scales": [
+      {
+        "codes": [
+          0,
+          -1,
+          -3,
+          -8
+        ],
+        "ideal_scale": "-483/145",
+        "loss_exact": "644/435",
+        "loss": 1.4804597701149425
+      },
+      {
+        "codes": [
+          0,
+          -1,
+          -3,
+          -8
+        ],
+        "ideal_scale": "-23209/9280",
+        "loss_exact": "381269/445440",
+        "loss": 0.8559379489942529
+      }
+    ],
+    "any_rank_one_input_mse_lower_bound": 0.00033669286072030735,
+    "scalar_q4_loss": 2.336397719109195
+  },
+  {
+    "name": "noncollinear_control",
+    "teacher": [
+      [
+        1.0,
+        3.0,
+        9.0,
+        27.0
+      ],
+      [
+        7.0,
+        -4.0,
+        13.0,
+        -2.0
+      ]
+    ],
+    "one_dot_codes": [
+      1.0,
+      3.0,
+      9.0,
+      27.0
+    ],
+    "one_dot_fp16_decoder": [
+      1.0,
+      0.75
+    ],
+    "one_dot_loss": 664.1666666666666,
+    "scalar_q4_ideal_real_scales": [
+      {
+        "codes": [
+          0,
+          -1,
+          -3,
+          -8
+        ],
+        "ideal_scale": "-483/145",
+        "loss_exact": "644/435",
+        "loss": 1.4804597701149425
+      },
+      {
+        "codes": [
+          -4,
+          2,
+          -7,
+          1
+        ],
+        "ideal_scale": "-297/166",
+        "loss_exact": "103/249",
+        "loss": 0.41365461847389556
+      }
+    ],
+    "any_rank_one_input_mse_lower_bound": 173.06851439571116,
+    "scalar_q4_loss": 1.894114388588838
+  }
+]

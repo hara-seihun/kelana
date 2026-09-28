@@ -1,0 +1,59 @@
+{
+  "factor": "/path/to/workspace/data/kelana-subbit/spectral-quant/layer00-self_attn_q_proj-b0.539062-l4r4-g128-s0.5-f1.npz",
+  "factor_sha256": "4ed54c00e27951d86c1f62696214346527c67e74adcfa7691e0396ae2a10b35a",
+  "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_q_proj.npz",
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "inputs": {
+    "left_codes": {
+      "bytes": 90112,
+      "sha256": "5f6885a0524094783ac01a6dea9160c9b8d074d8cb31a925d16403f821f14e73"
+    },
+    "left_scales": {
+      "bytes": 4096,
+      "sha256": "3bcf85e92d358756bf4b70694237ed269bc399ad39499949903880ced3d94546"
+    },
+    "right_codes": {
+      "bytes": 45056,
+      "sha256": "7e07b229bce321762fc7d11ff0b2e482c93eccd12cb87ac55898669f16479140"
+    },
+    "right_scales": {
+      "bytes": 1408,
+      "sha256": "86a113a2c0252e7c4a9bad2e51fdd10979db897185579a48825bd4b5a42cd672"
+    },
+    "x": {
+      "bytes": 32768,
+      "sha256": "393b91a45dedb2627ff5174d0e95816259fe26f50893b99ec9a42077034eb884"
+    },
+    "left_f16": {
+      "bytes": 360448,
+      "sha256": "325d89d51db950922572f552155dda36da9ac569d9c21efa6676fa0d97debf5e"
+    },
+    "right_f16": {
+      "bytes": 180224,
+      "sha256": "daed9287cc1439fefd7e0a9c29c420598b2ce55bdfdaaf0e934b877034020d3a"
+    },
+    "expanded_f16": {
+      "bytes": 4194304,
+      "sha256": "f108319774f48139ef9b85d453d097a9bd721d967a5d700706a934b3496f2874"
+    },
+    "int4_codes": {
+      "bytes": 1048576,
+      "sha256": "835a20736390dadc71619de0672fe5a95fab79726dd7caf34a8d7c61b7ce4b58"
+    },
+    "int4_scales": {
+      "bytes": 32768,
+      "sha256": "ae3eb20819b640af6f1c07b2e47831ab238d0e276274010e009418b2817b91bf"
+    }
+  },
+  "rows": [
+    1,
+    16
+  ],
+  "reference_map": "float32 factor decode, float32 right then left numpy matmul; validation first 16 rounded to fp16",
+  "expanded_f16_vs_factor_output_relative_squared_error": 5.663756574847412e-09,
+  "int4_vs_factor_output_relative_squared_error": 0.0011732936836779118,
+  "factor_vs_original_output_relative_squared_error": 0.04249296709895134,
+  "payload_factor_bytes": 140704,
+  "payload_expanded_f16_bytes": 4194304,
+  "payload_int4_bytes": 1081344
+}

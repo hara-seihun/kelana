@@ -1,0 +1,88 @@
+{
+  "target": "gfx1151",
+  "compiler": "HIP version: 7.2.53211-9999",
+  "source_sha256": {
+    "state.hip": "38387475104bd91655deec94aae6ec01c69a6237c1e263500f0c47d7df85927d",
+    "step_bits.hpp": "f1002c9d6d63bc0c2885d80cd196d5b723bc78a56339fdd64641e448f14204b9",
+    "native.hip": "6c829b9bb0f3578000d95de58d42cdf82133e925de12b78e9a978bd9b871d0a8",
+    "../kivi-grouped-value-query/consumer.hip": "6c2d9aa93ed8b6c012ea38d68942ba795ff616452c7addf25ac4805ff8f6b3de",
+    "../kivi-two-bit-dot-query/consumer.hip": "3421c092a8a3ba07d0899582683d0e84ae8cfe4f9614a1aa275220af600b189f"
+  },
+  "device_kernels": [
+    {
+      "symbol": "_ZN8resident17append_dictionaryEPhS0_PKhiPi",
+      "body_bytes": 6060,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 3,
+      "sgpr": 28
+    },
+    {
+      "symbol": "_ZN8resident14append_controlEPhS0_PKhiPi",
+      "body_bytes": 7336,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 4,
+      "sgpr": 22
+    },
+    {
+      "symbol": "_ZN8resident13flush_controlEPhS0_iPi",
+      "body_bytes": 23260,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 51,
+      "sgpr": 105
+    },
+    {
+      "symbol": "_ZN8resident16flush_dictionaryEPhS0_Pi",
+      "body_bytes": 33128,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 48,
+      "sgpr": 105
+    },
+    {
+      "symbol": "_Z8finish_oPKfPf",
+      "body_bytes": 372,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 12,
+      "sgpr": 4
+    },
+    {
+      "symbol": "_Z21conventional_finish_oPKfPf",
+      "body_bytes": 372,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 12,
+      "sgpr": 4
+    },
+    {
+      "symbol": "_Z11query_groupILi1EEvPKhPKfPKtPf",
+      "body_bytes": 15852,
+      "descriptor_bytes": 64,
+      "lds": 7688,
+      "private_scratch": 0,
+      "vgpr": 27,
+      "sgpr": 48
+    },
+    {
+      "symbol": "_Z24conventional_query_groupILi0EEvPKPKhPKfPKtPfiiii",
+      "body_bytes": 12824,
+      "descriptor_bytes": 64,
+      "lds": 5632,
+      "private_scratch": 0,
+      "vgpr": 23,
+      "sgpr": 44
+    }
+  ],
+  "hip_version": "HIP version: 7.2.53211-9999\nnixpkgs-AMD clang version 22.0.0 (https://github.com/ROCm/llvm-project/tree/rocm-7.2.3 rocm-7.2.3)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /nix/store/ly700gf82nzmd5y8cyz14107d0ql3fib-rocm-toolchain/bin\nConfiguration file: /nix/store/ly700gf82nzmd5y8cyz14107d0ql3fib-rocm-toolchain/bin/x86_64-unknown-linux-gnu.cfg\n",
+  "assembly_sha256": "191a5667ee0f9963b773e05794e1846af2e0d513bf41087abc1114d3e224d4e0",
+  "binary_sha256": "be99fd3a11b49051770413c6b0915634d2fe019871809aef652cbfe581bbeec9"
+}

@@ -1,0 +1,175 @@
+{
+  "states": [
+    [
+      1,
+      -1
+    ],
+    [
+      -1,
+      -1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "probabilities": [
+    0.899,
+    0.1,
+    0.001
+  ],
+  "teacher_weights": [
+    1.49,
+    -0.6
+  ],
+  "teacher_outputs": [
+    1.5899999999999999,
+    0.0,
+    39.0
+  ],
+  "candidates": [
+    {
+      "code": [
+        1,
+        0
+      ],
+      "squared_errors": [
+        1.1880999999999997,
+        0.0,
+        121.0
+      ],
+      "exact_risk": 1.1891018999999998
+    },
+    {
+      "code": [
+        1,
+        -1
+      ],
+      "squared_errors": [
+        0.008099999999999975,
+        0.0,
+        1521.0
+      ],
+      "exact_risk": 1.5282819
+    },
+    {
+      "code": [
+        0,
+        1
+      ],
+      "squared_errors": [
+        2.5280999999999993,
+        0.0,
+        121.0
+      ],
+      "exact_risk": 2.3937618999999994
+    },
+    {
+      "code": [
+        0,
+        -1
+      ],
+      "squared_errors": [
+        1.1880999999999997,
+        0.25,
+        1521.0
+      ],
+      "exact_risk": 2.6141019
+    },
+    {
+      "code": [
+        -1,
+        1
+      ],
+      "squared_errors": [
+        2.5280999999999993,
+        0.0,
+        1521.0
+      ],
+      "exact_risk": 3.7937619
+    },
+    {
+      "code": [
+        0,
+        0
+      ],
+      "squared_errors": [
+        2.5280999999999993,
+        0.0,
+        1521.0
+      ],
+      "exact_risk": 3.7937619
+    },
+    {
+      "code": [
+        -1,
+        0
+      ],
+      "squared_errors": [
+        2.5280999999999993,
+        0.25,
+        1521.0
+      ],
+      "exact_risk": 3.8187618999999997
+    },
+    {
+      "code": [
+        -1,
+        -1
+      ],
+      "squared_errors": [
+        2.5280999999999993,
+        2.25,
+        1521.0
+      ],
+      "exact_risk": 4.018761899999999
+    },
+    {
+      "code": [
+        1,
+        1
+      ],
+      "squared_errors": [
+        2.5280999999999993,
+        0.0,
+        12321.0
+      ],
+      "exact_risk": 14.593761899999999
+    }
+  ],
+  "nearest_weight_code": [
+    1,
+    -1
+  ],
+  "weighted_cover_queries": 3,
+  "cover_chosen_code": [
+    1,
+    0
+  ],
+  "iid": [
+    {
+      "sample_size": 100,
+      "failure_probability": 0.9047921471137091,
+      "expected_selected_risk": 1.495989300458028,
+      "no_rare_probability": 0.9047921471137089
+    },
+    {
+      "sample_size": 1000,
+      "failure_probability": 0.3676954247709639,
+      "expected_selected_risk": 1.3138168341738155,
+      "no_rare_probability": 0.36769542477096373
+    },
+    {
+      "sample_size": 10000,
+      "failure_probability": 0.22008546542527585,
+      "expected_selected_risk": 1.2637504881629449,
+      "no_rare_probability": 4.517334597704824e-05
+    },
+    {
+      "sample_size": 100000,
+      "failure_probability": 0.005462557417052309,
+      "expected_selected_risk": 1.1909546902247157,
+      "no_rare_probability": 3.5385276883431275e-44
+    }
+  ]
+}

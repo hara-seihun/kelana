@@ -1,0 +1,177 @@
+{
+  "scope": "First output rows of gate/up in layer0. Error from grouped weight-scale approximation only, on fixed grouped-A4 inputs. Float64 CPU model. No GPU candidate or quality acceptance.",
+  "outputs_per_matrix": 512,
+  "tokens_per_document": 256,
+  "activation_group": 1024,
+  "activation_clip": 0.8,
+  "stored_scale_dtype": "fp16",
+  "calibration_directory": "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/calib/layer00",
+  "test_directory": "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer00",
+  "manifest_sha256": {
+    "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/calib/layer00": "cb83724c71efba45cea25660f37e50b282edef063638a583d4d5cc51ffadb1d9",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer00": "8c208c14e175643348a3c1c77104b1d3515ee19c1c8049c42370e3fa0e858263"
+  },
+  "seconds": 0.7799934949725866,
+  "results": [
+    {
+      "matrix": "gate",
+      "fit": "relative_scale_fit",
+      "calibration": {
+        "relative_rms": 0.02911242500138624,
+        "bias": -1.5053691550217027e-05,
+        "max_abs": 0.019702926038382824
+      },
+      "test": {
+        "relative_rms": 0.029847844033963466,
+        "bias": -6.337742905434853e-06,
+        "max_abs": 0.018988037807406162
+      },
+      "relative_scale_rms": 0.03691212330194521,
+      "changed_multiplier_fraction": 0.0
+    },
+    {
+      "matrix": "gate",
+      "fit": "consumer_metric_shrink_0.0",
+      "calibration": {
+        "relative_rms": 0.0276959811263106,
+        "bias": 7.130061658995185e-08,
+        "max_abs": 0.018078722841105243
+      },
+      "test": {
+        "relative_rms": 0.029212539081580228,
+        "bias": 2.07724242380087e-05,
+        "max_abs": 0.017669861753650075
+      },
+      "relative_scale_rms": 0.03735683349381813,
+      "changed_multiplier_fraction": 0.029443359375
+    },
+    {
+      "matrix": "gate",
+      "fit": "consumer_metric_shrink_0.1",
+      "calibration": {
+        "relative_rms": 0.027689846800364796,
+        "bias": 1.247510442537234e-05,
+        "max_abs": 0.018078722841105243
+      },
+      "test": {
+        "relative_rms": 0.029167889595817186,
+        "bias": 3.1048338069269016e-05,
+        "max_abs": 0.017687862782569553
+      },
+      "relative_scale_rms": 0.037203293889084575,
+      "changed_multiplier_fraction": 0.027490234375
+    },
+    {
+      "matrix": "gate",
+      "fit": "consumer_metric_shrink_1.0",
+      "calibration": {
+        "relative_rms": 0.028431964900910694,
+        "bias": 1.2438999492650359e-05,
+        "max_abs": 0.02231078646360056
+      },
+      "test": {
+        "relative_rms": 0.029284464074630975,
+        "bias": 1.3611152123747636e-05,
+        "max_abs": 0.02191228403236096
+      },
+      "relative_scale_rms": 0.03650029096344094,
+      "changed_multiplier_fraction": 0.014013671875
+    },
+    {
+      "matrix": "gate",
+      "fit": "joint_consumer_metric_ridge_0.1",
+      "calibration": {
+        "relative_rms": 0.026112913778822754,
+        "bias": 1.0121795647500149e-06,
+        "max_abs": 0.018042457366819975
+      },
+      "test": {
+        "relative_rms": 0.029520529927095317,
+        "bias": 1.2226478504973503e-06,
+        "max_abs": 0.01885770121505464
+      },
+      "relative_scale_rms": 0.03886380663296846,
+      "changed_multiplier_fraction": 0.026416015625
+    },
+    {
+      "matrix": "up",
+      "fit": "relative_scale_fit",
+      "calibration": {
+        "relative_rms": 0.030831741455354333,
+        "bias": 3.155011228863189e-05,
+        "max_abs": 0.01778110813675722
+      },
+      "test": {
+        "relative_rms": 0.030849118776114504,
+        "bias": 2.0103008057740466e-05,
+        "max_abs": 0.019157078714055545
+      },
+      "relative_scale_rms": 0.036907849703379444,
+      "changed_multiplier_fraction": 0.0
+    },
+    {
+      "matrix": "up",
+      "fit": "consumer_metric_shrink_0.0",
+      "calibration": {
+        "relative_rms": 0.02956066467384926,
+        "bias": 1.907307135805433e-05,
+        "max_abs": 0.019238195513174978
+      },
+      "test": {
+        "relative_rms": 0.030354487528673476,
+        "bias": -2.257634459181502e-06,
+        "max_abs": 0.019238195513174978
+      },
+      "relative_scale_rms": 0.03731759337240432,
+      "changed_multiplier_fraction": 0.0296875
+    },
+    {
+      "matrix": "up",
+      "fit": "consumer_metric_shrink_0.1",
+      "calibration": {
+        "relative_rms": 0.029548288880850267,
+        "bias": 1.787934669319909e-05,
+        "max_abs": 0.019181430898066548
+      },
+      "test": {
+        "relative_rms": 0.030218598358112473,
+        "bias": -1.2485580865466653e-06,
+        "max_abs": 0.019181430898066548
+      },
+      "relative_scale_rms": 0.03718976197953366,
+      "changed_multiplier_fraction": 0.027490234375
+    },
+    {
+      "matrix": "up",
+      "fit": "consumer_metric_shrink_1.0",
+      "calibration": {
+        "relative_rms": 0.0300175646831303,
+        "bias": 2.2070429654328212e-05,
+        "max_abs": 0.017452975869400818
+      },
+      "test": {
+        "relative_rms": 0.030211027044076588,
+        "bias": 1.366943771157633e-07,
+        "max_abs": 0.017452975869400818
+      },
+      "relative_scale_rms": 0.03647340321924628,
+      "changed_multiplier_fraction": 0.014306640625
+    },
+    {
+      "matrix": "up",
+      "fit": "joint_consumer_metric_ridge_0.1",
+      "calibration": {
+        "relative_rms": 0.02763958441191914,
+        "bias": 7.267675631769567e-06,
+        "max_abs": 0.015617249573721625
+      },
+      "test": {
+        "relative_rms": 0.030353151001461753,
+        "bias": -1.4274204454781695e-05,
+        "max_abs": 0.016178713036374286
+      },
+      "relative_scale_rms": 0.03888395519336051,
+      "changed_multiplier_fraction": 0.02587890625
+    }
+  ]
+}

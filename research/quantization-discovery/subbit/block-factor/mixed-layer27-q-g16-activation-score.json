@@ -1,0 +1,46 @@
+{
+  "fixture": "layer27-self_attn_q_proj.npz",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "rank": 360,
+  "compressed_groups": 16,
+  "uncompressed_groups": 112,
+  "group_score": "activation",
+  "same_rank_admm_response_and_weight_error": [
+    0.1147179901599884,
+    0.4907503128051758
+  ],
+  "after_group_coding_response_and_weight_error": [
+    0.12154707312583923,
+    0.5298881530761719
+  ],
+  "after_weight_refit_response_and_weight_error": [
+    0.14802998304367065,
+    0.5067020058631897
+  ],
+  "activation_output_sweeps": 4,
+  "fit_heldout_response_error": 0.10949766635894775,
+  "fit_weight_error": 0.6630501747131348,
+  "seconds_cpu": 5.549120747993584,
+  "payload_bytes": {
+    "output_signs": 92160,
+    "full_input_signs": 40320,
+    "compressed_labels": 2880,
+    "dictionaries": 256,
+    "pre_post_scales": 6144,
+    "group_mask": 16
+  },
+  "payload_bpw": 0.54083251953125,
+  "online": {
+    "input_label_lookups": 46080,
+    "input_table_additions_upper": 30608,
+    "output_table_additions": 11475,
+    "output_table_reads": 92160,
+    "input_table_bf16_bytes": 57856,
+    "output_table_bf16_bytes": 23040
+  },
+  "image": "/path/to/workspace/data/kelana-subbit/block-factor/mixed-layer27-q-g16-activation-score.npz",
+  "serialized_zip_bytes": 143780
+}

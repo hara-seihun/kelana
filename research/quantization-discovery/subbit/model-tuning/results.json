@@ -1,0 +1,64 @@
+{
+  "format": "qwen-full-model-existing-scale-calibration/1",
+  "source_sha256": {
+    "fit.py": "5a8d17970113f44acb7e65015a0b51e9f0a92adce3cf4ccf365e27f5416383b9",
+    "publish.py": "5a67d3d01d2a224284598469d1511df98108107f611a3597c8ab1f8c2c20c762",
+    "record.py": "1464e6c4ea50a1ae64e1460c14628c0f7fd7a566c0969c1d050ca95a0993721a"
+  },
+  "runner_python_sha256": "d778d0b551287fb5f06c4464f78b616c086f8d42e94d8cfc209b12324cf937a1",
+  "gpu_wrapper_sha256": "ec719da9582d645b05ae919b2d90de9a32d949c559eb7b8eef00aaff20879686",
+  "teacher_image_sha256": "3db2c355ec9d86d3e8a3eed67457445e08c01c5e93e2e292ad7b90c93e3b1863",
+  "seed_manifest_sha256": "17e6075c04913a20663087224d047bb993b6305daad2a36bca5e2db3a8b58d0b",
+  "learned_checkpoints_sha256": [
+    "90de5ac3b41b549bb18c7f33ace7fa659d7311147affbd4e9595f03da3133ad0",
+    "9a5b914d13b6de471a50ec0646a928180772fae297c61755ad5657f83021cf93",
+    "fa4f18235d1ed81044904822be7bcc80d34094e35b2e7f5e981d8f8924ca0d21"
+  ],
+  "candidate_manifest_sha256": "c1622b20f49a5bef14e512e97b94af82833e5b9ae5f4b7c48a3c75f5baf7b730",
+  "full_evaluator_source_sha256": {
+    "evaluate.py": "c60fb70f5ce71a609349cc141c50f8000c67bfe08cb6612bf0c0fd5b8f62692a",
+    "image.py": "e74617ba43c4d8fcd366d41e5412553c890d4c3cb2a6209eeb059a751fdf47c2"
+  },
+  "candidate_payload_bytes": 46532412,
+  "unique_parameters": 596049920,
+  "candidate_bpw": 0.6245438234435129,
+  "input_scale_and_factor_signs_unchanged": true,
+  "fp16_output_scale_elements": 344064,
+  "changed_fp16_output_scale_elements": 339060,
+  "held": {
+    "body": {
+      "validation": {
+        "seed_nll": 9.219186102175245,
+        "calibrated_nll": 8.844142779181984,
+        "seed_teacher_kl": 6.0275498334099264,
+        "calibrated_teacher_kl": 5.5919656192555145
+      },
+      "test": {
+        "seed_nll": 9.445953010110294,
+        "calibrated_nll": 8.804323682598039,
+        "seed_teacher_kl": 6.7630351945465685,
+        "calibrated_teacher_kl": 6.045117546530331
+      }
+    },
+    "complete": {
+      "validation": {
+        "seed_nll": 9.310674211090687,
+        "calibrated_nll": 9.09895450367647,
+        "seed_teacher_kl": 6.182379629097733,
+        "calibrated_teacher_kl": 5.8544336655560665
+      },
+      "test": {
+        "seed_nll": 9.656030034083946,
+        "calibrated_nll": 9.11738209443934,
+        "seed_teacher_kl": 6.981490310968137,
+        "calibrated_teacher_kl": 6.3810094496783085
+      }
+    }
+  },
+  "original": {
+    "validation": 3.905221378102022,
+    "test": 3.310759839824602
+  },
+  "training": "Eight distinct WikiText raw train windows; original BF16 teacher final-hidden reconstruction; one Adam update/window in three foreground jobs. Adam moments reset at job boundaries. No held data used in fitting.",
+  "held_contract": "Four separate validation and four test windows, 1020 predictions each at context 256. Expanded BF16 quality reforward; mixed tied head and embedding in complete arm. No compressed runtime timing."
+}

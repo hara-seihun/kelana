@@ -1,0 +1,741 @@
+{
+  "format": "qwen-frozen-value-observer-single-layer-panel/1",
+  "panels": [
+    {
+      "data_receipt": "/path/to/workspace/data/kelana-subbit/value-observer/full-model-layer00.json",
+      "data_receipt_sha256": "662ddba71f58164a2050c04412c237918c74592814f79b34de1e03027e3d1602",
+      "result": {
+        "format": "qwen-single-layer-joint-value-model-quality/1",
+        "layer": 0,
+        "model": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b",
+        "model_source_sha256": "294ef4c5b3725f451fc02c692cb229ebe30fe6f9681994c1a54668aa96e72278",
+        "model_weights_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+        "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "tokens": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/tokens.npz",
+        "tokens_sha256": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+        "window_token_sha256": {
+          "validation": [
+            "0804adb665fe74b8b4ecabfe327364fef138bea7019e5c45306e38f8dfc419b3",
+            "d412595cc7ca57447971e03453da8a086194bd722b0f9cd3e7de8fdd6f605b38",
+            "625698bf4325975efdcd6d799c5eb4e3d302d79560e0dbda42ff47957a1a1007",
+            "4b8637a48e3e0aeeb228155906eb24f00ced48e27f7543ebebede5b386b86640"
+          ],
+          "test": [
+            "36447ab163e02ceb0e13263e0a490d7d8bc37defe4daaeaa787894f029d6a753",
+            "56138233fb754150dc9992e5f3b2986a16cf89c5976773cb6e56043a6ff03d52",
+            "fe91eb2edab2a48b174b886f248271108674384d06e0ac3bb66cd00153a197fb",
+            "e2a8d193eac691ab02d9914e94e8b732e7692d6af162268ccda52c34c339df33"
+          ]
+        },
+        "source_sha256": {
+          "evaluate_model.py": "bae76fc893f1c1533e88b6fd90ac1a7e24473713c8eb9aff387b5d14d4564e10",
+          "spectral_quant.py": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a"
+        },
+        "control_manifest_sha256": "17e6075c04913a20663087224d047bb993b6305daad2a36bca5e2db3a8b58d0b",
+        "images": {
+          "joint": {
+            "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer00-joint-r28.npz",
+            "sha256": "93b969a9dbde2c28a23862f5199c1db7e7a12080a836aafb8eed94f8170f420c",
+            "payload_bytes": 208640
+          },
+          "v": {
+            "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer00-self_attn_v_proj.npz",
+            "sha256": "f1122becdeb9d065335a6212c10eb09ee61f12b661b283cbbe3ee910aa45392e",
+            "payload_bytes": 69644
+          },
+          "o": {
+            "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer00-self_attn_o_proj.npz",
+            "sha256": "4f53bf082f64ba5f21943786dc8439ff89aee251ba426191469cb79cf5a51b6f",
+            "payload_bytes": 141324
+          }
+        },
+        "unique_parameters": 596049920,
+        "original_v_o_elements": 3145728,
+        "method": "only one layer changes per panel; Q/K and all other layers original; joint 28 coordinates occupy first 28 of each 128-wide HF GQA V/O block, other entries exact zero; weights expanded and rounded BF16 for model quality, not native timing",
+        "torch": "2.14.0+rocm7.2",
+        "hip": "7.2.53211",
+        "device": "AMD Radeon 8060S Graphics",
+        "splits": {
+          "validation": {
+            "reference": {
+              "payload_bytes": 1192099840,
+              "all_unique_parameter_bpw": 16.0,
+              "predictions": 1020,
+              "nll": 3.9071583467371322,
+              "perplexity": 49.757357729872055,
+              "teacher_kl": 0.0,
+              "argmax_agreement": 1.0,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 1005.8018798828125,
+                  "nll": 3.944321393966675,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 1055.36376953125,
+                  "nll": 4.138681888580322,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 929.54931640625,
+                  "nll": 3.645291566848755,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 994.5865478515625,
+                  "nll": 3.9003396034240723,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                }
+              ]
+            },
+            "independent_binary": {
+              "payload_bytes": 1186019352,
+              "all_unique_parameter_bpw": 15.91838954696949,
+              "predictions": 1020,
+              "nll": 8.890766218596815,
+              "perplexity": 7264.583310384246,
+              "teacher_kl": 5.409872017654718,
+              "argmax_agreement": 0.18137254901960784,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 2273.16552734375,
+                  "nll": 8.914375305175781,
+                  "teacher_kl_sum": 1355.1513671875,
+                  "teacher_kl": 5.314319610595703,
+                  "argmax_agreements": 46,
+                  "argmax_agreement": 0.18039216101169586
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 2589.5791015625,
+                  "nll": 10.15521240234375,
+                  "teacher_kl_sum": 1706.38720703125,
+                  "teacher_kl": 6.691714763641357,
+                  "argmax_agreements": 24,
+                  "argmax_agreement": 0.0941176563501358
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 2151.89404296875,
+                  "nll": 8.438800811767578,
+                  "teacher_kl_sum": 1335.234130859375,
+                  "teacher_kl": 5.236212730407715,
+                  "argmax_agreements": 59,
+                  "argmax_agreement": 0.23137256503105164
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 2053.94287109375,
+                  "nll": 8.054677963256836,
+                  "teacher_kl_sum": 1121.2967529296875,
+                  "teacher_kl": 4.397242546081543,
+                  "argmax_agreements": 56,
+                  "argmax_agreement": 0.2196078598499298
+                }
+              ]
+            },
+            "joint_rank28": {
+              "payload_bytes": 1186017024,
+              "all_unique_parameter_bpw": 15.918358301264432,
+              "predictions": 1020,
+              "nll": 5.295126881318934,
+              "perplexity": 199.36291979208963,
+              "teacher_kl": 1.6453677607517616,
+              "argmax_agreement": 0.4627450980392157,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 1330.181884765625,
+                  "nll": 5.216399669647217,
+                  "teacher_kl_sum": 406.4437255859375,
+                  "teacher_kl": 1.5938971042633057,
+                  "argmax_agreements": 124,
+                  "argmax_agreement": 0.4862745404243469
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 1423.85693359375,
+                  "nll": 5.5837531089782715,
+                  "teacher_kl_sum": 418.3565673828125,
+                  "teacher_kl": 1.6406140327453613,
+                  "argmax_agreements": 121,
+                  "argmax_agreement": 0.4745098352432251
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 1295.7310791015625,
+                  "nll": 5.081298828125,
+                  "teacher_kl_sum": 421.7453308105469,
+                  "teacher_kl": 1.6539033651351929,
+                  "argmax_agreements": 128,
+                  "argmax_agreement": 0.501960813999176
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 1351.259521484375,
+                  "nll": 5.299057483673096,
+                  "teacher_kl_sum": 431.7294921875,
+                  "teacher_kl": 1.6930569410324097,
+                  "argmax_agreements": 99,
+                  "argmax_agreement": 0.38823533058166504
+                }
+              ]
+            }
+          },
+          "test": {
+            "reference": {
+              "payload_bytes": 1192099840,
+              "all_unique_parameter_bpw": 16.0,
+              "predictions": 1020,
+              "nll": 3.306601311178768,
+              "perplexity": 27.29220993702827,
+              "teacher_kl": 0.0,
+              "argmax_agreement": 1.0,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 956.6746826171875,
+                  "nll": 3.7516655921936035,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 766.2010498046875,
+                  "nll": 3.0047101974487305,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 864.0947265625,
+                  "nll": 3.3886070251464844,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 785.7628784179688,
+                  "nll": 3.081423282623291,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                }
+              ]
+            },
+            "independent_binary": {
+              "payload_bytes": 1186019352,
+              "all_unique_parameter_bpw": 15.91838954696949,
+              "predictions": 1020,
+              "nll": 8.731876866957721,
+              "perplexity": 6197.348801736704,
+              "teacher_kl": 5.855641922296262,
+              "argmax_agreement": 0.21372549019607842,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 2412.996337890625,
+                  "nll": 9.46273136138916,
+                  "teacher_kl_sum": 1448.901123046875,
+                  "teacher_kl": 5.681965351104736,
+                  "argmax_agreements": 61,
+                  "argmax_agreement": 0.2392157018184662
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 2023.26708984375,
+                  "nll": 7.934381008148193,
+                  "teacher_kl_sum": 1386.90673828125,
+                  "teacher_kl": 5.438850402832031,
+                  "argmax_agreements": 67,
+                  "argmax_agreement": 0.26274511218070984
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 2494.222412109375,
+                  "nll": 9.781265258789062,
+                  "teacher_kl_sum": 1715.80126953125,
+                  "teacher_kl": 6.728632926940918,
+                  "argmax_agreements": 37,
+                  "argmax_agreement": 0.14509804546833038
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 1976.028564453125,
+                  "nll": 7.74913215637207,
+                  "teacher_kl_sum": 1421.1456298828125,
+                  "teacher_kl": 5.573120594024658,
+                  "argmax_agreements": 53,
+                  "argmax_agreement": 0.20784315466880798
+                }
+              ]
+            },
+            "joint_rank28": {
+              "payload_bytes": 1186017024,
+              "all_unique_parameter_bpw": 15.918358301264432,
+              "predictions": 1020,
+              "nll": 4.905114267386642,
+              "perplexity": 134.978332746972,
+              "teacher_kl": 1.9338492000804228,
+              "argmax_agreement": 0.45098039215686275,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 1471.30859375,
+                  "nll": 5.769837856292725,
+                  "teacher_kl_sum": 553.3963012695312,
+                  "teacher_kl": 2.1701817512512207,
+                  "argmax_agreements": 116,
+                  "argmax_agreement": 0.4549019932746887
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 1075.48388671875,
+                  "nll": 4.217584133148193,
+                  "teacher_kl_sum": 379.48046875,
+                  "teacher_kl": 1.4881588220596313,
+                  "argmax_agreements": 123,
+                  "argmax_agreement": 0.48235297203063965
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 1246.068359375,
+                  "nll": 4.886542797088623,
+                  "teacher_kl_sum": 426.901123046875,
+                  "teacher_kl": 1.6741220951080322,
+                  "argmax_agreements": 120,
+                  "argmax_agreement": 0.4705882668495178
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 1210.355712890625,
+                  "nll": 4.746493339538574,
+                  "teacher_kl_sum": 612.748291015625,
+                  "teacher_kl": 2.4029345512390137,
+                  "argmax_agreements": 101,
+                  "argmax_agreement": 0.3960784673690796
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "data_receipt": "/path/to/workspace/data/kelana-subbit/value-observer/full-model-layer14.json",
+      "data_receipt_sha256": "1de4bbde448887dda5adac885323a16495cb40fc001b9f0a98c0e481ec452024",
+      "result": {
+        "format": "qwen-single-layer-joint-value-model-quality/1",
+        "layer": 14,
+        "model": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b",
+        "model_source_sha256": "294ef4c5b3725f451fc02c692cb229ebe30fe6f9681994c1a54668aa96e72278",
+        "model_weights_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+        "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "tokens": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/tokens.npz",
+        "tokens_sha256": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+        "window_token_sha256": {
+          "validation": [
+            "0804adb665fe74b8b4ecabfe327364fef138bea7019e5c45306e38f8dfc419b3",
+            "d412595cc7ca57447971e03453da8a086194bd722b0f9cd3e7de8fdd6f605b38",
+            "625698bf4325975efdcd6d799c5eb4e3d302d79560e0dbda42ff47957a1a1007",
+            "4b8637a48e3e0aeeb228155906eb24f00ced48e27f7543ebebede5b386b86640"
+          ],
+          "test": [
+            "36447ab163e02ceb0e13263e0a490d7d8bc37defe4daaeaa787894f029d6a753",
+            "56138233fb754150dc9992e5f3b2986a16cf89c5976773cb6e56043a6ff03d52",
+            "fe91eb2edab2a48b174b886f248271108674384d06e0ac3bb66cd00153a197fb",
+            "e2a8d193eac691ab02d9914e94e8b732e7692d6af162268ccda52c34c339df33"
+          ]
+        },
+        "source_sha256": {
+          "evaluate_model.py": "bae76fc893f1c1533e88b6fd90ac1a7e24473713c8eb9aff387b5d14d4564e10",
+          "spectral_quant.py": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a"
+        },
+        "control_manifest_sha256": "17e6075c04913a20663087224d047bb993b6305daad2a36bca5e2db3a8b58d0b",
+        "images": {
+          "joint": {
+            "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer14-joint-r28.npz",
+            "sha256": "6673197d16a29148f64b997a2007a004161bfe7d8277d77e7dcf4e6af273e4e4",
+            "payload_bytes": 208640
+          },
+          "v": {
+            "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer14-self_attn_v_proj.npz",
+            "sha256": "f42c73fd9f9a97fc5b545c2f66c78c16f34c14c7fc2bbe9b48e683c92ec8ded3",
+            "payload_bytes": 69644
+          },
+          "o": {
+            "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer14-self_attn_o_proj.npz",
+            "sha256": "d340539b9ceda931b5f63cd302ceb074831e2ad71f4688e075b540d2f147e1f3",
+            "payload_bytes": 141324
+          }
+        },
+        "unique_parameters": 596049920,
+        "original_v_o_elements": 3145728,
+        "method": "only one layer changes per panel; Q/K and all other layers original; joint 28 coordinates occupy first 28 of each 128-wide HF GQA V/O block, other entries exact zero; weights expanded and rounded BF16 for model quality, not native timing",
+        "torch": "2.14.0+rocm7.2",
+        "hip": "7.2.53211",
+        "device": "AMD Radeon 8060S Graphics",
+        "splits": {
+          "validation": {
+            "reference": {
+              "payload_bytes": 1192099840,
+              "all_unique_parameter_bpw": 16.0,
+              "predictions": 1020,
+              "nll": 3.9071583467371322,
+              "perplexity": 49.757357729872055,
+              "teacher_kl": 0.0,
+              "argmax_agreement": 1.0,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 1005.8018798828125,
+                  "nll": 3.944321393966675,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 1055.36376953125,
+                  "nll": 4.138681888580322,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 929.54931640625,
+                  "nll": 3.645291566848755,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 994.5865478515625,
+                  "nll": 3.9003396034240723,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                }
+              ]
+            },
+            "independent_binary": {
+              "payload_bytes": 1186019352,
+              "all_unique_parameter_bpw": 15.91838954696949,
+              "predictions": 1020,
+              "nll": 3.917943079331342,
+              "perplexity": 50.29688160861779,
+              "teacher_kl": 0.025824854888168037,
+              "argmax_agreement": 0.9049019607843137,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 1000.9086303710938,
+                  "nll": 3.9251320362091064,
+                  "teacher_kl_sum": 5.562317371368408,
+                  "teacher_kl": 0.021813010796904564,
+                  "argmax_agreements": 237,
+                  "argmax_agreement": 0.9294118285179138
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 1070.005615234375,
+                  "nll": 4.19610071182251,
+                  "teacher_kl_sum": 7.862554550170898,
+                  "teacher_kl": 0.030833549797534943,
+                  "argmax_agreements": 230,
+                  "argmax_agreement": 0.9019608497619629
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 922.1529541015625,
+                  "nll": 3.616286277770996,
+                  "teacher_kl_sum": 6.17893123626709,
+                  "teacher_kl": 0.02423110418021679,
+                  "argmax_agreements": 234,
+                  "argmax_agreement": 0.917647123336792
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 1003.2347412109375,
+                  "nll": 3.9342541694641113,
+                  "teacher_kl_sum": 6.737548828125,
+                  "teacher_kl": 0.026421761140227318,
+                  "argmax_agreements": 222,
+                  "argmax_agreement": 0.8705883026123047
+                }
+              ]
+            },
+            "joint_rank28": {
+              "payload_bytes": 1186017024,
+              "all_unique_parameter_bpw": 15.918358301264432,
+              "predictions": 1020,
+              "nll": 3.9353060254863665,
+              "perplexity": 51.177809274434374,
+              "teacher_kl": 0.022818577990812414,
+              "argmax_agreement": 0.9029411764705882,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 1011.632568359375,
+                  "nll": 3.967186689376831,
+                  "teacher_kl_sum": 4.844834804534912,
+                  "teacher_kl": 0.018999353051185608,
+                  "argmax_agreements": 235,
+                  "argmax_agreement": 0.9215686917304993
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 1067.8865966796875,
+                  "nll": 4.187790870666504,
+                  "teacher_kl_sum": 7.830746650695801,
+                  "teacher_kl": 0.030708812177181244,
+                  "argmax_agreements": 230,
+                  "argmax_agreement": 0.9019608497619629
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 924.7761840820312,
+                  "nll": 3.6265735626220703,
+                  "teacher_kl_sum": 4.144733428955078,
+                  "teacher_kl": 0.01625385694205761,
+                  "argmax_agreements": 236,
+                  "argmax_agreement": 0.9254902601242065
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 1009.716796875,
+                  "nll": 3.9596738815307617,
+                  "teacher_kl_sum": 6.454634666442871,
+                  "teacher_kl": 0.02531229518353939,
+                  "argmax_agreements": 220,
+                  "argmax_agreement": 0.8627451658248901
+                }
+              ]
+            }
+          },
+          "test": {
+            "reference": {
+              "payload_bytes": 1192099840,
+              "all_unique_parameter_bpw": 16.0,
+              "predictions": 1020,
+              "nll": 3.306601311178768,
+              "perplexity": 27.29220993702827,
+              "teacher_kl": 0.0,
+              "argmax_agreement": 1.0,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 956.6746826171875,
+                  "nll": 3.7516655921936035,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 766.2010498046875,
+                  "nll": 3.0047101974487305,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 864.0947265625,
+                  "nll": 3.3886070251464844,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 785.7628784179688,
+                  "nll": 3.081423282623291,
+                  "teacher_kl_sum": 0.0,
+                  "teacher_kl": 0.0,
+                  "argmax_agreements": 255,
+                  "argmax_agreement": 1.0
+                }
+              ]
+            },
+            "independent_binary": {
+              "payload_bytes": 1186019352,
+              "all_unique_parameter_bpw": 15.91838954696949,
+              "predictions": 1020,
+              "nll": 3.305401850681679,
+              "perplexity": 27.25949363420939,
+              "teacher_kl": 0.022226404676250384,
+              "argmax_agreement": 0.9254901960784314,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 961.9025268554688,
+                  "nll": 3.7721669673919678,
+                  "teacher_kl_sum": 6.032906532287598,
+                  "teacher_kl": 0.02365845814347267,
+                  "argmax_agreements": 238,
+                  "argmax_agreement": 0.9333333969116211
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 766.802734375,
+                  "nll": 3.0070698261260986,
+                  "teacher_kl_sum": 6.038468360900879,
+                  "teacher_kl": 0.023680269718170166,
+                  "argmax_agreements": 233,
+                  "argmax_agreement": 0.9137255549430847
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 860.2005004882812,
+                  "nll": 3.373335599899292,
+                  "teacher_kl_sum": 5.798613548278809,
+                  "teacher_kl": 0.02273966185748577,
+                  "argmax_agreements": 234,
+                  "argmax_agreement": 0.917647123336792
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 782.6041259765625,
+                  "nll": 3.0690360069274902,
+                  "teacher_kl_sum": 4.8009443283081055,
+                  "teacher_kl": 0.018827233463525772,
+                  "argmax_agreements": 239,
+                  "argmax_agreement": 0.9372549653053284
+                }
+              ]
+            },
+            "joint_rank28": {
+              "payload_bytes": 1186017024,
+              "all_unique_parameter_bpw": 15.918358301264432,
+              "predictions": 1020,
+              "nll": 3.309905886182598,
+              "perplexity": 27.38254827448187,
+              "teacher_kl": 0.020238890367395738,
+              "argmax_agreement": 0.9372549019607843,
+              "windows": [
+                {
+                  "window": 0,
+                  "predictions": 255,
+                  "nll_sum": 966.1826171875,
+                  "nll": 3.7889516353607178,
+                  "teacher_kl_sum": 4.956956386566162,
+                  "teacher_kl": 0.01943904533982277,
+                  "argmax_agreements": 237,
+                  "argmax_agreement": 0.9294118285179138
+                },
+                {
+                  "window": 1,
+                  "predictions": 255,
+                  "nll_sum": 766.4406127929688,
+                  "nll": 3.0056495666503906,
+                  "teacher_kl_sum": 5.003401756286621,
+                  "teacher_kl": 0.01962118409574032,
+                  "argmax_agreements": 242,
+                  "argmax_agreement": 0.9490196704864502
+                },
+                {
+                  "window": 2,
+                  "predictions": 255,
+                  "nll_sum": 863.3863525390625,
+                  "nll": 3.385828971862793,
+                  "teacher_kl_sum": 5.285297393798828,
+                  "teacher_kl": 0.020726658403873444,
+                  "argmax_agreements": 238,
+                  "argmax_agreement": 0.9333333969116211
+                },
+                {
+                  "window": 3,
+                  "predictions": 255,
+                  "nll_sum": 780.0944213867188,
+                  "nll": 3.0591940879821777,
+                  "teacher_kl_sum": 5.398012638092041,
+                  "teacher_kl": 0.021168678998947144,
+                  "argmax_agreements": 239,
+                  "argmax_agreement": 0.9372549653053284
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

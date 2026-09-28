@@ -1,0 +1,41 @@
+{
+  "model_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "capture_sha256": "aa1e671af9283656efd7a95f2732a27662ce8c658766af5ee88f5e7d27b9e69c",
+  "epsilon": 1e-06,
+  "state_bytes_per_token": 1026,
+  "bf16_state_bytes_per_token": 2048,
+  "next_gamma_nonzero": true,
+  "next_qkv_rows": 4096,
+  "splits": {
+    "train": {
+      "positions": 2048,
+      "max": {
+        "state_relative_rms": 0.026156995209528414,
+        "next_full_norm_relative_rms": 0.03203922481605113,
+        "next_all_qkv_relative_rms": 0.024148176404977423,
+        "scale_underflow_count": 0
+      },
+      "least_squares": {
+        "state_relative_rms": 0.026134145985906673,
+        "next_full_norm_relative_rms": 0.03203922436338641,
+        "next_all_qkv_relative_rms": 0.02414817643456346,
+        "scale_underflow_count": 0
+      }
+    },
+    "validation": {
+      "positions": 1024,
+      "max": {
+        "state_relative_rms": 0.026055090928162446,
+        "next_full_norm_relative_rms": 0.03255466537261385,
+        "next_all_qkv_relative_rms": 0.02432271774200297,
+        "scale_underflow_count": 0
+      },
+      "least_squares": {
+        "state_relative_rms": 0.026032417162335657,
+        "next_full_norm_relative_rms": 0.03255466478688625,
+        "next_all_qkv_relative_rms": 0.02432271788991655,
+        "scale_underflow_count": 0
+      }
+    }
+  }
+}

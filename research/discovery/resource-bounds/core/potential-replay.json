@@ -1,0 +1,42 @@
+{
+  "accepted": true,
+  "results": [
+    {
+      "name": "xor-count-cut",
+      "checks": {
+        "semantic_source": {
+          "valid": true,
+          "kind": "finite_potential_to_count_cut",
+          "budget_is_family_restriction": true,
+          "native_runtime_claim": false
+        },
+        "relaxation": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "2",
+          "relaxed_feasible_time": "2",
+          "proves_program_optimality": false
+        }
+      }
+    },
+    {
+      "name": "relu-count-cut",
+      "checks": {
+        "semantic_source": {
+          "valid": true,
+          "kind": "finite_potential_to_count_cut",
+          "budget_is_family_restriction": true,
+          "native_runtime_claim": false
+        },
+        "relaxation": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "2",
+          "relaxed_feasible_time": "2",
+          "proves_program_optimality": false
+        }
+      }
+    }
+  ],
+  "proposal_solver_used": false
+}

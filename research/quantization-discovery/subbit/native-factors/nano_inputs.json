@@ -1,0 +1,35 @@
+{
+  "nano_fixture": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_self_attn_q_proj_weight_0.55.npz",
+  "nano_fixture_sha256": "1a8bf5e2071a1cff6133bfffbd610deb0eb5b814d5f77c8e7464b48df1f56d55",
+  "spectral_input_sha256": "393b91a45dedb2627ff5174d0e95816259fe26f50893b99ec9a42077034eb884",
+  "dimensions": [
+    2048,
+    1024,
+    352
+  ],
+  "images": {
+    "U": {
+      "bytes": 90112,
+      "sha256": "c6750192f8e53d5e88b008fedc0fed57a434f7e581c0a5f5bdf77e375f8b1af0"
+    },
+    "V": {
+      "bytes": 45056,
+      "sha256": "becd3b96c0461e94ddc4bc220bcd8ea55f7d6b8960918320055fd6eb576b5bb4"
+    },
+    "scale_pre": {
+      "bytes": 2048,
+      "sha256": "a9a4d931c6368a6e27b50e261284ffb9bf27e0eb3bfb9b4e6df5ff9381281f46"
+    },
+    "scale_post": {
+      "bytes": 4096,
+      "sha256": "c3f9dbe40beb31f3dccf8307d20fca1a05fa4c070832d0c0168496aac9440af2"
+    }
+  },
+  "reference": {
+    "bytes": 131072,
+    "sha256": "51d74d5d5552e1e05286b5d3e0f36f9f1125858ae163dbcf3355ae7a90610b38"
+  },
+  "reference_arithmetic": "float32 x and fp16 pre-scale, float32 signed V GEMM, float32 signed U GEMM and fp16 post-scale",
+  "nano_response_vs_spectral_response_relative_squared_error": 0.08076602965593338,
+  "nano_payload_bytes_including_dimensions": 141324
+}

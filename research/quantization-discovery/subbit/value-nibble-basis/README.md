@@ -1,0 +1,20 @@
+# A paid output decoder for the half-byte value cache
+
+The frozen rank-28 shared V/O image was fitted before its signed-nibble value cache existed. Repeatedly fitting cache steps left a layer-14 held post-O gap of .01944 against a one-byte E4M3 cache. I kept the same right factor and fitted the *already paid two-bit O codes and FP16 output scales* on the complete cached-value response. This recovers more than half that gap, without adding a weight byte or online factor term.
+
+Eight 256-token Qwen3-0.6B train windows supply original-producer hidden states, original Q/K causal probabilities and the original V/O post-O target. The first four select a ridge penalty on the next four; all eight fit the selected real output decoder. Its direct two-bit rounding is poor, so two coordinate/code-and-scale sweeps fit the full response starting from the rounded decoder. Four previously inspected validation windows score the frozen packed images. Both arms receive the same output fit: one has the preceding per-coordinate signed-nibble steps and lower endpoints, the other the preceding group-scaled E4M3 cache. Each uses the same paid rank-28 right factor.
+
+| Layer, cache | Parent held relative squared post-O error | Real train-ridge decoder held | Direct two-bit rounding held | Two paid-code sweeps held |
+| --- | ---: | ---: | ---: | ---: |
+| 0, signed nibble | .386194 | .341645 | .423431 | **.385148** |
+| 0, E4M3 | .379186 | .334672 | .417253 | **.377798** |
+| 14, signed nibble | .345965 | .291610 | .380582 | **.334500** |
+| 14, E4M3 | .326527 | .284703 | .374588 | **.325434** |
+
+Every layer-14 inspected held window improves with the paid nibble output fit. The matched E4M3 gap falls from .019438 to .009066, but E4M3 still wins. Layer 0 moves only .001046; its E4M3 control also improves, leaving .007350. The direct rounded ridge decoder loses on both layers. Fitting signs and scales after rounding is essential, and the real-decoder result is not a paid-image result. A separate held-label real decoder scores .08405/.05704 for nibble at layers 0/14; it is an optimistic diagnostic with access to held targets, not a feasible fit or a lower bound on fresh model loss.
+
+Each stored V/O factor image remains 208,640 bytes, .53060 BPW over V+O. The signed-nibble cache uses 112 logical/128 padded bytes per token per layer versus E4M3's 224/256. Its 448-byte FP16 step table and 28-byte endpoint mask are unchanged. Both arms keep the same factor terms and shared-coordinate attention map. The O codes and scales change offline. A direct integer-mass consumer can still use the packed nibble codes, but these measurements use floating causal probabilities; integer-mass rounding, quantized upstream, complete-model gold loss and native timing are separate observations. The present full-model .6245-BPW image has poor language quality, so this local gain does not select a serving route.
+
+This result changes the next fit. More cache-step passes cannot exploit the available output-coordinate freedom, yet a rounded real decoder cannot realize it without a discrete response fit. Learn the rank-28 right basis, signed-nibble producer and two-bit O codes together on quantized-producer complete-model train text. Compare fresh model loss at both cache rates before implementing the integer consumer. A larger cache alone does not explain the entire post-O error, and this fixed-basis fit has not made the half-byte image win.
+
+[`measure.py`](measure.py) reproduces both layers from a Kelana checkout with `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=8 /path/to/workspace/data/fish-s2-pro/venv/bin/python research/quantization-discovery/subbit/value-nibble-basis/measure.py --layer 14` (or `--layer 0`). `/path/to/workspace/data/kelana-subbit/value-nibble-basis/layer{00,14}-8x4.json` keeps per-window paid, ridge and refined-code errors, train penalty choices, source/model/capture/parent hashes and packed image hashes. The adjacent `layerXX-{nibble,fp8}-left.npz` files are the actual refitted factor images; the replay reopens them and checks the decoded output coefficients. The CPU experiment did not touch Bonsai or its service.

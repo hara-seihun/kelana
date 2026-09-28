@@ -1,0 +1,27 @@
+device gfx1151  D=5120 FF=256  (gate+up = 2.6 M ternary weights)
+problem: synthetic: random trits, synthetic scales, iid Gaussian activations
+  gate nonzero fraction 0.6656, first block scales 0.00386047 0.00350952
+weight images gate+up: two-bit 0.62 MB, nibble 1.25 MB, seven-i4 2.19 MB, seven-i8 4.38 MB
+
+map                rel RMS vs f32   vs own codes
+eight-i4p/A4             11.7642%     1.177e-07
+eight-i4n/A3             27.4971%     1.170e-07
+eight-i4o/A3             27.4971%     1.170e-07
+seven-i4/A3              27.4971%     1.170e-07
+seven-i4c/A3             27.4971%     1.170e-07
+seven-i4c/A3.w2          27.4971%     1.170e-07
+seven-i4c/A3.w4          27.4971%     1.170e-07
+eight-i4o/A3.w2          27.4971%     1.170e-07
+eight-i4o/A3.w4t4        27.4971%     1.170e-07
+eight-i8/A8               0.6537%     1.184e-07
+seven-i8/A7               1.3095%     1.190e-07
+eight-i8/A7               1.3095%     1.190e-07
+seven-i4/A3        vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i4c/A3       vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i4c/A3.w2    vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i4c/A3.w4    vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+eight-i4o/A3       vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+eight-i4o/A3.w2    vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+eight-i4o/A3.w4t4  vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i8/A7        vs eight-i8/A7         differing outputs 0 of 65536, worst |diff| 0.000e+00
+check passed

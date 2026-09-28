@@ -1,0 +1,18 @@
+# Paid scale-page rate after fresh complete-model recovery
+
+The September 24 `fresh-scale8` Qwen3-0.6B image improves *new disjoint* held loss from **4.576138 to 4.561169 NLL** on 4,080 predictions after eight gold-loss steps on unused training text. Both it and its `scale-extrapolate-1.5` source have 197 matrices and a raw 128,678,649-byte / 1.727086-BPW payload. The [training and held-loss receipt](fresh-recovery/README.md) fixes the text split, complete-model observation and unchanged trits/signs/norms. This result pays for an actual lossless random-addressable scale image for **both** complete models rather than assuming that recovery's scales compress at the predecessor's rate.
+
+| FP16 scale page rows | Predecessor paid bytes | Recovered paid bytes | Recovered BPW |
+| ---: | ---: | ---: | ---: |
+| raw scale words | 128,678,649 | 128,678,649 | 1.72708553 |
+| 32 | — | 126,452,653 | 1.69720889 |
+| 64 | 126,102,765 | 126,103,317 | 1.69252021 |
+| 128 | — | 125,964,229 | 1.69065341 |
+| **256** | **125,953,437** | **125,953,437** | **1.69050857** |
+| 512 | — | 125,987,221 | 1.69096201 |
+
+The 256-row coordinate saves **2,725,212 bytes** from each raw image, including its offset table and page headers, and is **128,976 bytes smaller** than the earlier predecessor's 64-row page image. All **4,656,128 FP16 scale words** in *each* 256-row image were independently decoded by their page offset and checked as integer bit patterns; codes, signs, shapes, rotation metadata and BF16 norms are copied byte-for-byte. Every one of 197 encoded matrix files differs between the models; eight file sizes differ but the paid complete totals and page-width histograms coincide. The same BF16 expansion of identical unpacked tensors therefore retains the measured matched complete-model loss difference **at exactly equal physical image rate**. This establishes a stricter quality/rate comparison than the prior raw-rate comparison, not a new inference timing or BF16-quality claim.
+
+The construction's 256-row page stores its minimum FP16 bit pattern, 8-bit delta width and LSB-packed unsigned differences, with a 32-bit offset per page plus the end offset per matrix. The selected 18,192 pages' 6,587,044 scale bytes include these indices and headers. A random scale read is a dependent offset/header/at-most-three-byte delta lookup; a 256-row consumer can amortize that cost but a sparse reader might lose. The five tested page widths are a **finite layout sweep**, not a rate optimum over arbitrary formats. No native reader, GPU work, runtime or service changed. The next quality question is longer whole-model recovery on new train/selection/held text; the next inference question, only after quality justifies it, is the paid native reader and full-model speed against contiguous FP16 scales.
+
+Reproduce from Kelana root with `OPENBLAS_NUM_THREADS=1 /path/to/workspace/data/fish-s2-pro/venv/bin/python research/ternary/exact-rate/measure.py --image fresh-scale8 --output fresh-page-256 --page-rows 256` and the same command with `--image scale-extrapolate-1.5 --output scale-extrapolate-page-256`. [Both complete image receipts](/path/to/workspace/data/kelana-subbit/ternary/fresh-page-256/receipt.json) and [the predecessor receipt](/path/to/workspace/data/kelana-subbit/ternary/scale-extrapolate-page-256/receipt.json) hold source-manifest, script, source-matrix and output-file hashes. The other width images and receipts reside in `/path/to/workspace/data/kelana-subbit/ternary/fresh-page-{32,128,512}/`, with the 64-row arm at `fresh-page-rate/`. The [held-loss summary](/path/to/workspace/data/kelana-subbit/ternary/fresh-recovery/summary.json) is separate from the image-reconstruction evidence.

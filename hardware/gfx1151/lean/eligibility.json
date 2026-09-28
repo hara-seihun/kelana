@@ -1,0 +1,175 @@
+{
+  "target": "gfx1151",
+  "assembler": "AOMP-18.0-12 (http://github.com/ROCm/aomp): Source ID:18.0-12-ce1873ac686bb90ddec72bb99889a4e80e2de382",
+  "command": "hardware/gfx1151/lean/probe-eligibility.sh",
+  "probes": [
+    {
+      "instruction": "V_ADD_NC_U32",
+      "form": "v_add_nc_u32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x4a]"
+    },
+    {
+      "instruction": "V_ADD_NC_U32",
+      "form": "v_add_nc_u32_e64 v0, v1, v2 clamp",
+      "accepted": true,
+      "detail": "[0x00,0x80,0x25,0xd5,0x01,0x05,0x02,0x00]"
+    },
+    {
+      "instruction": "V_SUB_NC_U32",
+      "form": "v_sub_nc_u32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x4c]"
+    },
+    {
+      "instruction": "V_SUB_NC_U32",
+      "form": "v_sub_nc_u32_e64 v0, v1, v2 clamp",
+      "accepted": true,
+      "detail": "[0x00,0x80,0x26,0xd5,0x01,0x05,0x02,0x00]"
+    },
+    {
+      "instruction": "V_MUL_LO_U32",
+      "form": "v_mul_lo_u32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x00,0x00,0x2c,0xd7,0x01,0x05,0x02,0x00]"
+    },
+    {
+      "instruction": "V_MUL_LO_U32",
+      "form": "v_mul_lo_u32 v0, v1, v2 clamp",
+      "accepted": false,
+      "detail": "invalid operand for instruction"
+    },
+    {
+      "instruction": "V_LSHLREV_B32",
+      "form": "v_lshlrev_b32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x30]"
+    },
+    {
+      "instruction": "V_LSHRREV_B32",
+      "form": "v_lshrrev_b32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x32]"
+    },
+    {
+      "instruction": "V_ASHRREV_I32",
+      "form": "v_ashrrev_i32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x34]"
+    },
+    {
+      "instruction": "V_AND_B32",
+      "form": "v_and_b32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x36]"
+    },
+    {
+      "instruction": "V_AND_B32",
+      "form": "v_and_b32_e64 v0, v1, v2 clamp",
+      "accepted": false,
+      "detail": "invalid operand for instruction"
+    },
+    {
+      "instruction": "V_OR_B32",
+      "form": "v_or_b32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x38]"
+    },
+    {
+      "instruction": "V_XOR_B32",
+      "form": "v_xor_b32 v0, v1, v2",
+      "accepted": true,
+      "detail": "[0x01,0x05,0x00,0x3a]"
+    },
+    {
+      "instruction": "V_LSHL_OR_B32",
+      "form": "v_lshl_or_b32 v0, v1, v2, v3",
+      "accepted": true,
+      "detail": "[0x00,0x00,0x56,0xd6,0x01,0x05,0x0e,0x04]"
+    },
+    {
+      "instruction": "V_BFE_U32",
+      "form": "v_bfe_u32 v0, v1, v2, v3",
+      "accepted": true,
+      "detail": "[0x00,0x00,0x10,0xd6,0x01,0x05,0x0e,0x04]"
+    },
+    {
+      "instruction": "V_PERM_B32",
+      "form": "v_perm_b32 v0, v1, v2, v3",
+      "accepted": true,
+      "detail": "[0x00,0x00,0x44,0xd6,0x01,0x05,0x0e,0x04]"
+    },
+    {
+      "instruction": "V_DOT4_I32_IU8",
+      "form": "v_dot4_i32_iu8 v0, v1, v2, v3",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x16,0xcc,0x01,0x05,0x0e,0x1c]"
+    },
+    {
+      "instruction": "V_DOT4_I32_IU8",
+      "form": "v_dot4_i32_iu8 v0, v1, v2, v3 neg_lo:[1,1,0]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x16,0xcc,0x01,0x05,0x0e,0x7c]"
+    },
+    {
+      "instruction": "V_DOT4_I32_IU8",
+      "form": "v_dot4_i32_iu8 v0, v1, v2, v3 clamp",
+      "accepted": true,
+      "detail": "[0x00,0xc0,0x16,0xcc,0x01,0x05,0x0e,0x1c]"
+    },
+    {
+      "instruction": "V_DOT8_I32_IU4",
+      "form": "v_dot8_i32_iu4 v0, v1, v2, v3",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x18,0xcc,0x01,0x05,0x0e,0x1c]"
+    },
+    {
+      "instruction": "V_DOT8_I32_IU4",
+      "form": "v_dot8_i32_iu4 v0, v1, v2, v3 neg_lo:[1,1,0]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x18,0xcc,0x01,0x05,0x0e,0x7c]"
+    },
+    {
+      "instruction": "V_DOT8_I32_IU4",
+      "form": "v_dot8_i32_iu4 v0, v1, v2, v3 clamp",
+      "accepted": true,
+      "detail": "[0x00,0xc0,0x18,0xcc,0x01,0x05,0x0e,0x1c]"
+    },
+    {
+      "instruction": "V_WMMA_F32_16X16X16_F16",
+      "form": "v_wmma_f32_16x16x16_f16 v[0:7], v[8:15], v[16:23], v[24:31]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x40,0xcc,0x08,0x21,0x62,0x1c]"
+    },
+    {
+      "instruction": "V_WMMA_I32_16X16X16_IU8",
+      "form": "v_wmma_i32_16x16x16_iu8 v[0:7], v[8:11], v[12:15], v[16:23]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x44,0xcc,0x08,0x19,0x42,0x1c]"
+    },
+    {
+      "instruction": "V_WMMA_I32_16X16X16_IU4",
+      "form": "v_wmma_i32_16x16x16_iu4 v[0:7], v[8:9], v[10:11], v[12:19]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x45,0xcc,0x08,0x15,0x32,0x1c]"
+    },
+    {
+      "instruction": "V_WMMA_F16_16X16X16_F16",
+      "form": "v_wmma_f16_16x16x16_f16 v[0:7], v[8:15], v[16:23], v[24:31]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x42,0xcc,0x08,0x21,0x62,0x1c]"
+    },
+    {
+      "instruction": "V_WMMA_BF16_16X16X16_BF16",
+      "form": "v_wmma_bf16_16x16x16_bf16 v[0:7], v[8:15], v[16:23], v[24:31]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x43,0xcc,0x08,0x21,0x62,0x1c]"
+    },
+    {
+      "instruction": "V_WMMA_F32_16X16X16_BF16",
+      "form": "v_wmma_f32_16x16x16_bf16 v[0:7], v[8:15], v[16:23], v[24:31]",
+      "accepted": true,
+      "detail": "[0x00,0x40,0x41,0xcc,0x08,0x21,0x62,0x1c]"
+    }
+  ]
+}

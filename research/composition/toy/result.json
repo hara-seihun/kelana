@@ -1,0 +1,828 @@
+{
+  "toy": "two-lane accumulator, nibble packing, seven-stage chain",
+  "scope": "Architecture test of representation-change composition. The cost model is synthetic, not a measured ISA, and nothing here claims a real FFN speedup or native optimality.",
+  "model": {
+    "digits": [
+      0,
+      1,
+      2
+    ],
+    "lanes": 2,
+    "initial_state": "unknown input bits x0, y0 in {0,1}",
+    "initial_states": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "encoding": "x + 16*y in one byte",
+    "lane_bound_after_n_stages": "1 + 2n",
+    "lane_max": 15,
+    "byte_max": 255,
+    "stage": "both accumulators add one digit each"
+  },
+  "cost_model": {
+    "ordinary_stage": 2,
+    "packed_stage": 1,
+    "enter": 3,
+    "exit": 3,
+    "fold_constant_entry": false,
+    "units": "synthetic gateway charges, not instruction counts",
+    "inputs": "Dynamic digits and their packed form a + 16*b are common inputs; producing them is outside the toy and is not claimed free in a real FFN.",
+    "entry": "The entry state is unknown input bits, so the 3-unit enter charge is not a foldable constant pack."
+  },
+  "results": {
+    "first_winning_length": 7,
+    "tie_length": 6,
+    "max_valid_packed_run_from_entry": 7,
+    "saving_by_length": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "greedy_entry_horizon": 7,
+    "eight_stage_valid_plan": "enter@0 -> packedx7@0 -> exit@7 -> ordinary@7",
+    "eight_stage_plan_ignoring_validity": "enter@0 -> packedx8@0 -> exit@8",
+    "breaking_inputs_at_8": {
+      "breaking": 262340,
+      "total": 172186884
+    },
+    "overflowing_lane_inputs_at_8": {
+      "overflowing": 10,
+      "total": 13122
+    }
+  },
+  "cost_table": [
+    {
+      "stages": 1,
+      "ordinary": 2,
+      "best_valid": 2,
+      "best_valid_plan": "ordinary@0",
+      "packed_stages": 0,
+      "saving": 0,
+      "greedy": 2,
+      "ignoring_validity": 2,
+      "ignoring_validity_plan": "ordinary@0"
+    },
+    {
+      "stages": 2,
+      "ordinary": 4,
+      "best_valid": 4,
+      "best_valid_plan": "ordinaryx2@0",
+      "packed_stages": 0,
+      "saving": 0,
+      "greedy": 4,
+      "ignoring_validity": 4,
+      "ignoring_validity_plan": "ordinaryx2@0"
+    },
+    {
+      "stages": 3,
+      "ordinary": 6,
+      "best_valid": 6,
+      "best_valid_plan": "ordinaryx3@0",
+      "packed_stages": 0,
+      "saving": 0,
+      "greedy": 6,
+      "ignoring_validity": 6,
+      "ignoring_validity_plan": "ordinaryx3@0"
+    },
+    {
+      "stages": 4,
+      "ordinary": 8,
+      "best_valid": 8,
+      "best_valid_plan": "ordinaryx4@0",
+      "packed_stages": 0,
+      "saving": 0,
+      "greedy": 8,
+      "ignoring_validity": 8,
+      "ignoring_validity_plan": "ordinaryx4@0"
+    },
+    {
+      "stages": 5,
+      "ordinary": 10,
+      "best_valid": 10,
+      "best_valid_plan": "ordinaryx5@0",
+      "packed_stages": 0,
+      "saving": 0,
+      "greedy": 10,
+      "ignoring_validity": 10,
+      "ignoring_validity_plan": "ordinaryx5@0"
+    },
+    {
+      "stages": 6,
+      "ordinary": 12,
+      "best_valid": 12,
+      "best_valid_plan": "ordinaryx6@0",
+      "packed_stages": 0,
+      "saving": 0,
+      "greedy": 12,
+      "ignoring_validity": 12,
+      "ignoring_validity_plan": "ordinaryx6@0"
+    },
+    {
+      "stages": 7,
+      "ordinary": 14,
+      "best_valid": 13,
+      "best_valid_plan": "enter@0 -> packedx7@0 -> exit@7",
+      "packed_stages": 7,
+      "saving": 1,
+      "greedy": 14,
+      "ignoring_validity": 13,
+      "ignoring_validity_plan": "enter@0 -> packedx7@0 -> exit@7"
+    },
+    {
+      "stages": 8,
+      "ordinary": 16,
+      "best_valid": 15,
+      "best_valid_plan": "enter@0 -> packedx7@0 -> exit@7 -> ordinary@7",
+      "packed_stages": 7,
+      "saving": 1,
+      "greedy": 16,
+      "ignoring_validity": 14,
+      "ignoring_validity_plan": "enter@0 -> packedx8@0 -> exit@8"
+    },
+    {
+      "stages": 9,
+      "ordinary": 18,
+      "best_valid": 17,
+      "best_valid_plan": "enter@0 -> packedx7@0 -> exit@7 -> ordinaryx2@7",
+      "packed_stages": 7,
+      "saving": 1,
+      "greedy": 18,
+      "ignoring_validity": 15,
+      "ignoring_validity_plan": "enter@0 -> packedx9@0 -> exit@9"
+    },
+    {
+      "stages": 10,
+      "ordinary": 20,
+      "best_valid": 19,
+      "best_valid_plan": "enter@0 -> packedx7@0 -> exit@7 -> ordinaryx3@7",
+      "packed_stages": 7,
+      "saving": 1,
+      "greedy": 20,
+      "ignoring_validity": 16,
+      "ignoring_validity_plan": "enter@0 -> packedx10@0 -> exit@10"
+    },
+    {
+      "stages": 11,
+      "ordinary": 22,
+      "best_valid": 21,
+      "best_valid_plan": "enter@0 -> packedx7@0 -> exit@7 -> ordinaryx4@7",
+      "packed_stages": 7,
+      "saving": 1,
+      "greedy": 22,
+      "ignoring_validity": 17,
+      "ignoring_validity_plan": "enter@0 -> packedx11@0 -> exit@11"
+    },
+    {
+      "stages": 12,
+      "ordinary": 24,
+      "best_valid": 23,
+      "best_valid_plan": "enter@0 -> packedx7@0 -> exit@7 -> ordinaryx5@7",
+      "packed_stages": 7,
+      "saving": 1,
+      "greedy": 24,
+      "ignoring_validity": 18,
+      "ignoring_validity_plan": "enter@0 -> packedx12@0 -> exit@12"
+    }
+  ],
+  "boundary": {
+    "edges": [
+      {
+        "stage": 0,
+        "to_stage": 1,
+        "valid": true,
+        "max_reachable_lane": 1,
+        "reason": "",
+        "counterexample_input": null
+      },
+      {
+        "stage": 1,
+        "to_stage": 2,
+        "valid": true,
+        "max_reachable_lane": 3,
+        "reason": "",
+        "counterexample_input": null
+      },
+      {
+        "stage": 2,
+        "to_stage": 3,
+        "valid": true,
+        "max_reachable_lane": 5,
+        "reason": "",
+        "counterexample_input": null
+      },
+      {
+        "stage": 3,
+        "to_stage": 4,
+        "valid": true,
+        "max_reachable_lane": 7,
+        "reason": "",
+        "counterexample_input": null
+      },
+      {
+        "stage": 4,
+        "to_stage": 5,
+        "valid": true,
+        "max_reachable_lane": 9,
+        "reason": "",
+        "counterexample_input": null
+      },
+      {
+        "stage": 5,
+        "to_stage": 6,
+        "valid": true,
+        "max_reachable_lane": 11,
+        "reason": "",
+        "counterexample_input": null
+      },
+      {
+        "stage": 6,
+        "to_stage": 7,
+        "valid": true,
+        "max_reachable_lane": 13,
+        "reason": "",
+        "counterexample_input": null
+      },
+      {
+        "stage": 7,
+        "to_stage": 8,
+        "valid": false,
+        "max_reachable_lane": 15,
+        "reason": "high lane leaves the byte",
+        "counterexample_input": {
+          "initial_state": [
+            0,
+            0
+          ],
+          "digits": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "stage": 8,
+        "to_stage": 9,
+        "valid": false,
+        "max_reachable_lane": 17,
+        "reason": "high lane leaves the byte",
+        "counterexample_input": {
+          "initial_state": [
+            0,
+            0
+          ],
+          "digits": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "stage": 9,
+        "to_stage": 10,
+        "valid": false,
+        "max_reachable_lane": 19,
+        "reason": "high lane leaves the byte",
+        "counterexample_input": {
+          "initial_state": [
+            0,
+            0
+          ],
+          "digits": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "stage": 10,
+        "to_stage": 11,
+        "valid": false,
+        "max_reachable_lane": 21,
+        "reason": "high lane leaves the byte",
+        "counterexample_input": {
+          "initial_state": [
+            0,
+            0
+          ],
+          "digits": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        }
+      },
+      {
+        "stage": 11,
+        "to_stage": 12,
+        "valid": false,
+        "max_reachable_lane": 23,
+        "reason": "high lane leaves the byte",
+        "counterexample_input": {
+          "initial_state": [
+            0,
+            0
+          ],
+          "digits": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        }
+      }
+    ],
+    "last_valid_stage_index": 6
+  },
+  "reentry_headroom": [
+    {
+      "entry_stage": 0,
+      "max_reachable_lane": 1,
+      "max_valid_packed_run": 7,
+      "run_saving": 1
+    },
+    {
+      "entry_stage": 1,
+      "max_reachable_lane": 3,
+      "max_valid_packed_run": 6,
+      "run_saving": 0
+    },
+    {
+      "entry_stage": 2,
+      "max_reachable_lane": 5,
+      "max_valid_packed_run": 5,
+      "run_saving": -1
+    },
+    {
+      "entry_stage": 3,
+      "max_reachable_lane": 7,
+      "max_valid_packed_run": 4,
+      "run_saving": -2
+    },
+    {
+      "entry_stage": 4,
+      "max_reachable_lane": 9,
+      "max_valid_packed_run": 3,
+      "run_saving": -3
+    },
+    {
+      "entry_stage": 5,
+      "max_reachable_lane": 11,
+      "max_valid_packed_run": 2,
+      "run_saving": -4
+    },
+    {
+      "entry_stage": 6,
+      "max_reachable_lane": 13,
+      "max_valid_packed_run": 1,
+      "run_saving": -5
+    },
+    {
+      "entry_stage": 7,
+      "max_reachable_lane": 15,
+      "max_valid_packed_run": 0,
+      "run_saving": -6
+    },
+    {
+      "entry_stage": 8,
+      "max_reachable_lane": 17,
+      "max_valid_packed_run": 0,
+      "run_saving": -6
+    },
+    {
+      "entry_stage": 9,
+      "max_reachable_lane": 19,
+      "max_valid_packed_run": 0,
+      "run_saving": -6
+    },
+    {
+      "entry_stage": 10,
+      "max_reachable_lane": 21,
+      "max_valid_packed_run": 0,
+      "run_saving": -6
+    },
+    {
+      "entry_stage": 11,
+      "max_reachable_lane": 23,
+      "max_valid_packed_run": 0,
+      "run_saving": -6
+    }
+  ],
+  "counterexamples": {
+    "low_lane_carry": {
+      "stages": 8,
+      "input": {
+        "initial_state": [
+          1,
+          0
+        ],
+        "digits": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "true_state": [
+        17,
+        0
+      ],
+      "packed_byte": 17,
+      "unbounded_encoding": 17,
+      "byte_max": 255,
+      "decoded_state": [
+        1,
+        1
+      ],
+      "failure": "low lane reaches 17 and carries into the high lane"
+    },
+    "high_lane_byte_overflow": {
+      "stages": 8,
+      "input": {
+        "initial_state": [
+          0,
+          1
+        ],
+        "digits": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "true_state": [
+        0,
+        17
+      ],
+      "packed_byte": 16,
+      "unbounded_encoding": 272,
+      "byte_max": 255,
+      "decoded_state": [
+        0,
+        1
+      ],
+      "failure": "high lane reaches 17 and leaves the byte"
+    }
+  },
+  "constant_folding_variant": {
+    "note": "A separate model in which the initial state is the known constant (0,0). A lowering may then fold the entry to 0, and the first win moves to 4 stages. The main model does not admit this, because its entry state is input.",
+    "initial_states": [
+      [
+        0,
+        0
+      ]
+    ],
+    "enter_cost": 0,
+    "first_winning_length": 4,
+    "max_valid_packed_run": 7,
+    "eight_stage_plan": "enter@0 -> packedx7@0 -> exit@7 -> ordinary@7"
+  },
+  "checks": [
+    {
+      "name": "the entry state is unknown, so entering is a real pack of two input bits",
+      "passed": true,
+      "detail": "initial states [(0, 0), (0, 1), (1, 0), (1, 1)]"
+    },
+    {
+      "name": "a lane holds at most 1 + 2n after n stages",
+      "passed": true,
+      "detail": "max lane by stage [1, 3, 5, 7, 9, 11, 13, 15, 17]"
+    },
+    {
+      "name": "packed stages 0..6 are exact for every reachable state and digit pair",
+      "passed": true,
+      "detail": "5040 state/digit pairs checked; first invalid stage 7"
+    },
+    {
+      "name": "the packed run from the entry state is capped at 7 stages",
+      "passed": true,
+      "detail": "max_packed_run(0) = 7"
+    },
+    {
+      "name": "one initial bit and eight twos in the low lane misdecodes",
+      "passed": true,
+      "detail": "decoded [1, 1] instead of [17, 0]"
+    },
+    {
+      "name": "one initial bit and eight twos in the high lane leaves the byte",
+      "passed": true,
+      "detail": "unbounded encoding 272 wraps to byte 16"
+    },
+    {
+      "name": "a packed interval first beats ordinary lowering at 7 stages",
+      "passed": true,
+      "detail": "first winning length 7"
+    },
+    {
+      "name": "at 6 stages packing only ties, so it is not selected",
+      "passed": true,
+      "detail": "best 12 vs ordinary 12; fully packed would cost 12"
+    },
+    {
+      "name": "greedy lowering never enters the representation",
+      "passed": true,
+      "detail": "greedy cost at 7 stages 14, global 13"
+    },
+    {
+      "name": "local lowering needs a 7-stage lookahead to find the win",
+      "passed": true,
+      "detail": "entry horizon 7"
+    },
+    {
+      "name": "at 8 stages the packed prefix of 7 is kept and the last stage is ordinary",
+      "passed": true,
+      "detail": "enter@0 -> packedx7@0 -> exit@7 -> ordinary@7 at cost 15"
+    },
+    {
+      "name": "dropping the validity precondition selects the invalid fully packed 8-stage plan",
+      "passed": true,
+      "detail": "enter@0 -> packedx8@0 -> exit@8 at cost 14, cheaper than the valid 15"
+    },
+    {
+      "name": "headroom pins the total saving at one unit for every length from 7 on",
+      "passed": true,
+      "detail": "savings {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}"
+    },
+    {
+      "name": "no packed stage remains universally valid after stage 7",
+      "passed": true,
+      "detail": "every later entry state can already hold 15 in a lane"
+    },
+    {
+      "name": "the 8-stage break set is the 10 lane inputs that pass 15, and nothing else",
+      "passed": true,
+      "detail": "10 of 13122 lane inputs overflow, so 262340 of 172186884 input pairs break"
+    },
+    {
+      "name": "folding applies only to a known entry state, and moves the boundary to 4 stages",
+      "passed": true,
+      "detail": "known-zero first win 4, unknown entry first win 7"
+    }
+  ],
+  "all_checks_passed": true
+}

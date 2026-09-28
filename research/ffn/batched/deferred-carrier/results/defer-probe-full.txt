@@ -1,0 +1,29 @@
+===== layer00 (all 17408 gate/up rows)
+dataset /path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer00
+rows 17408 tokens 256
+G     cols        checked       wrap   max|low|  max|high|         max|p|     max|dev|
+1     128       178257920          0        158        168         343985     0.017578   mismatch 0
+2     256        89128960          0        247        237         485377     0.031250   mismatch 0
+4     512        44564480          0        444        376         769472     0.062500   mismatch 0
+8     1024       22282240          0        839        668        1366801     0.062500   mismatch 0
+20    2560        8912896         79       1527       1415        2895447     0.125000   mismatch 79
+40    5120        4456448        447       2904       2664        5451142     0.125000   mismatch 447
+===== layer10 (all 17408 gate/up rows)
+dataset /path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer10
+rows 17408 tokens 256
+G     cols        checked       wrap   max|low|  max|high|         max|p|     max|dev|
+1     128       178257920          0        158        157         321449     0.015625   mismatch 0
+2     256        89128960          0        213        211         432009     0.031250   mismatch 0
+4     512        44564480          0        298        327         669635     0.031250   mismatch 0
+8     1024       22282240          0        544        557        1140643     0.032227   mismatch 0
+20    2560        8912896          0        905        917        1877965     0.062500   mismatch 0
+40    5120        4456448         32       1593       1422        2909729     0.125000   mismatch 32
+dataset /path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer00
+rows 17408 tokens 256 clip 0.800
+G     cols        checked       wrap   max|low|  max|high|         max|p|     max|dev|
+1     128       178257920          0        195        209         427870     0.031250   mismatch 0
+2     256        89128960          0        302        284         581636     0.031250   mismatch 0
+4     512        44564480          0        540        466         953656     0.062500   mismatch 0
+8     1024       22282240          1       1045        814        1666473     0.062500   mismatch 1
+20    2560        8912896        222       1914       1749        3578896     0.062500   mismatch 222
+40    5120        4456448       1041       3656       3326        6805738     0.125000   mismatch 1041

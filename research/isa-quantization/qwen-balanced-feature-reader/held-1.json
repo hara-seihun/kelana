@@ -1,0 +1,59 @@
+{
+  "panel": "held",
+  "window": 1,
+  "table_sha256": "c79b3d345a0bfc6a1b2e4a6e8f04246e5b7750e885ae17f3eb36ad66d53d86f5",
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "capture_model_q_exact": true,
+  "rows": [
+    256,
+    512
+  ],
+  "shared_log_feature_min_max": [
+    -138.81402587890625,
+    -3.7144317626953125
+  ],
+  "final_per_feature_log_scale_min_max": [
+    -27.729015350341797,
+    -3.7144317626953125
+  ],
+  "heads": {
+    "head0": {
+      "attention_kl": 7.468387126922607,
+      "post_o_rel_sq": 1.2733891010284424,
+      "value_prefix_vs_dense_max_abs": 4.76837158203125e-07,
+      "log_feature_min_max": [
+        -60.31165313720703,
+        2.7656078338623047
+      ],
+      "denominator_min_max": [
+        1.0144407749176025,
+        13.678117752075195
+      ],
+      "output_sse": 73.23255157470703,
+      "output_ref_sq": 57.50995635986328
+    },
+    "head1": {
+      "attention_kl": 12.374783515930176,
+      "post_o_rel_sq": 1.1484016180038452,
+      "value_prefix_vs_dense_max_abs": 7.748603820800781e-07,
+      "log_feature_min_max": [
+        -85.45021057128906,
+        -0.9242992401123047
+      ],
+      "denominator_min_max": [
+        1.0125337839126587,
+        11.207220077514648
+      ],
+      "output_sse": 589.3089599609375,
+      "output_ref_sq": 513.1558227539062
+    }
+  },
+  "gqa_pair": {
+    "post_o_rel_sq": 1.1606640815734863,
+    "output_sse": 683.3795166015625,
+    "output_ref_sq": 588.783203125
+  },
+  "balanced_gamma_image_sha256": "c8173158c88975e808804bb89a9e59b4cfa485a60f8d854fc4963ad89c830865",
+  "balanced_center_image_sha256": "3e9fa69a8942b762f0cd041e6a70bfa0c7833957f0d960a6032b0775058cd6a2",
+  "fixed_primary_reader_sha256": "a9e5ee5de5666759964bc93a619a1c78038eff072f18c81c0f55636c3b953c86"
+}

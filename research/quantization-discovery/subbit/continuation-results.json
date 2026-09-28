@@ -1,0 +1,355 @@
+{
+  "module": "model.layers.0.self_attn.q_proj",
+  "model_source_sha256": "294ef4c5b3725f451fc02c692cb229ebe30fe6f9681994c1a54668aa96e72278",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "token_file_sha256": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+  "torch": "2.14.0+rocm7.2",
+  "hip": "7.2.53211",
+  "device": "AMD Radeon 8060S Graphics",
+  "sources": {
+    "continuation.py": "4eb2d88c3791f37d70d82116ca24a3d84ee8482de93f5fd683ae4d75ea1c3a1b",
+    "pilot.py": "de592e5bac8c267e993e29c8f3ef992c82cb45b2644c5dccff50f3664f82c7d3",
+    "spectral_quant.py": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a"
+  },
+  "execution": "one projection replaced, all other weights original; factors expanded in FP32 then rounded to dense BF16 for quality only",
+  "unique_parameters": 596049920,
+  "projection_parameters": 2097152,
+  "arms": [
+    {
+      "label": "reference",
+      "payload_bytes": 4194304,
+      "matrix_bpw": 16.0,
+      "all_unique_parameter_bpw": 16.0,
+      "image": null,
+      "image_sha256": null,
+      "splits": {
+        "validation": {
+          "nll": 3.905221378102022,
+          "perplexity": 49.66107256935525,
+          "reference_kl": 0.0,
+          "argmax_agreement": 1.0,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 1005.0753784179688,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 1055.178955078125,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 929.38134765625,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 993.6901245117188,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            }
+          ]
+        },
+        "test": {
+          "nll": 3.310759839824602,
+          "perplexity": 27.405941688332078,
+          "reference_kl": 0.0,
+          "argmax_agreement": 1.0,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 958.3352661132812,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 768.7220458984375,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 864.10498046875,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 785.812744140625,
+              "reference_kl_sum": 0.0,
+              "argmax_agreements": 255
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "spectral",
+      "payload_bytes": 140704,
+      "matrix_bpw": 0.5367431640625,
+      "all_unique_parameter_bpw": 15.945593818719077,
+      "image": "/path/to/workspace/data/kelana-subbit/spectral-quant/layer00-self_attn_q_proj-b0.539062-l4r4-g128-s0.5-f1.npz",
+      "image_sha256": "4ed54c00e27951d86c1f62696214346527c67e74adcfa7691e0396ae2a10b35a",
+      "splits": {
+        "validation": {
+          "nll": 3.952649643841912,
+          "perplexity": 52.073159529910015,
+          "reference_kl": 0.1101606284870821,
+          "argmax_agreement": 0.8578431372549019,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 1003.13232421875,
+              "reference_kl_sum": 12.485432624816895,
+              "argmax_agreements": 228
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 1094.071533203125,
+              "reference_kl_sum": 64.06051635742188,
+              "argmax_agreements": 202
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 948.9231567382812,
+              "reference_kl_sum": 20.320926666259766,
+              "argmax_agreements": 225
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 985.5756225585938,
+              "reference_kl_sum": 15.496965408325195,
+              "argmax_agreements": 220
+            }
+          ]
+        },
+        "test": {
+          "nll": 3.3496528775084253,
+          "perplexity": 28.492841420854027,
+          "reference_kl": 0.06641863561144062,
+          "argmax_agreement": 0.9088235294117647,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 971.4286499023438,
+              "reference_kl_sum": 14.99527359008789,
+              "argmax_agreements": 233
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 781.78857421875,
+              "reference_kl_sum": 25.25701904296875,
+              "argmax_agreements": 230
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 883.740234375,
+              "reference_kl_sum": 17.152402877807617,
+              "argmax_agreements": 227
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 779.6884765625,
+              "reference_kl_sum": 10.342312812805176,
+              "argmax_agreements": 237
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "nanoquant-admm",
+      "payload_bytes": 141324,
+      "matrix_bpw": 0.5391082763671875,
+      "all_unique_parameter_bpw": 15.945602140169736,
+      "image": "/path/to/workspace/data/kelana-subbit/binary-factors/fixtures/model_layers_0_self_attn_q_proj_weight_0.55.npz",
+      "image_sha256": "1a8bf5e2071a1cff6133bfffbd610deb0eb5b814d5f77c8e7464b48df1f56d55",
+      "splits": {
+        "validation": {
+          "nll": 3.954060812557445,
+          "perplexity": 52.14669541712608,
+          "reference_kl": 0.06415478762458353,
+          "argmax_agreement": 0.8921568627450981,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 1024.8564453125,
+              "reference_kl_sum": 18.237689971923828,
+              "argmax_agreements": 223
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 1072.4573974609375,
+              "reference_kl_sum": 27.240657806396484,
+              "argmax_agreements": 223
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 951.105712890625,
+              "reference_kl_sum": 12.590363502502441,
+              "argmax_agreements": 235
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 984.7224731445312,
+              "reference_kl_sum": 7.369172096252441,
+              "argmax_agreements": 229
+            }
+          ]
+        },
+        "test": {
+          "nll": 3.3556649600758273,
+          "perplexity": 28.664658708386032,
+          "reference_kl": 0.05835715275184781,
+          "argmax_agreement": 0.9205882352941176,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 979.5443725585938,
+              "reference_kl_sum": 10.713356018066406,
+              "argmax_agreements": 235
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 788.1720581054688,
+              "reference_kl_sum": 32.758056640625,
+              "argmax_agreements": 227
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 868.1246948242188,
+              "reference_kl_sum": 9.08174991607666,
+              "argmax_agreements": 238
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 786.9371337890625,
+              "reference_kl_sum": 6.971133232116699,
+              "argmax_agreements": 239
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "scalar4-ls",
+      "payload_bytes": 1081360,
+      "matrix_bpw": 4.12506103515625,
+      "all_unique_parameter_bpw": 15.95821901628642,
+      "image": "/path/to/workspace/data/kelana-subbit/continuation/model_layers_0_self_attn_q_proj-scalar4.npz",
+      "image_sha256": "ad9703835df7c8a5ee46b39da38e1e155669938332f1fb2d8062e927369c6060",
+      "splits": {
+        "validation": {
+          "nll": 3.9053218467562805,
+          "perplexity": 49.666062201131915,
+          "reference_kl": 0.0024664335683280345,
+          "argmax_agreement": 0.9647058823529412,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 1005.5823974609375,
+              "reference_kl_sum": 0.6760677695274353,
+              "argmax_agreements": 247
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 1054.658203125,
+              "reference_kl_sum": 0.6308984160423279,
+              "argmax_agreements": 246
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 930.8453979492188,
+              "reference_kl_sum": 0.4525221884250641,
+              "argmax_agreements": 248
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 992.34228515625,
+              "reference_kl_sum": 0.7562738656997681,
+              "argmax_agreements": 243
+            }
+          ]
+        },
+        "test": {
+          "nll": 3.3079988965801164,
+          "perplexity": 27.33037979781397,
+          "reference_kl": 0.0022540180122151096,
+          "argmax_agreement": 0.9823529411764705,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "predictions": 255,
+              "nll_sum": 957.2730102539062,
+              "reference_kl_sum": 0.7960602641105652,
+              "argmax_agreements": 252
+            },
+            {
+              "window": 1,
+              "predictions": 255,
+              "nll_sum": 768.712158203125,
+              "reference_kl_sum": 0.6518383622169495,
+              "argmax_agreements": 245
+            },
+            {
+              "window": 2,
+              "predictions": 255,
+              "nll_sum": 863.5697021484375,
+              "reference_kl_sum": 0.5250453948974609,
+              "argmax_agreements": 254
+            },
+            {
+              "window": 3,
+              "predictions": 255,
+              "nll_sum": 784.60400390625,
+              "reference_kl_sum": 0.32615435123443604,
+              "argmax_agreements": 251
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

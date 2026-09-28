@@ -1,0 +1,162 @@
+{
+  "source": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_q_proj.npz",
+  "sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "rows": [
+    0,
+    128
+  ],
+  "columns": [
+    0,
+    128
+  ],
+  "train_rows": 2048,
+  "held_rows": 1024,
+  "train_rank": 128,
+  "modular_rank_certificate": {
+    "prime": 65521,
+    "denominator_power": 28,
+    "weight": 128,
+    "train": 128
+  },
+  "train_singular_ratio": 0.02744338303390859,
+  "q4": {
+    "bytes": 8704,
+    "image": "isa-quantization/producer-screen/affine-q4.bin",
+    "sha256": "8c4b03a9696bee7f0bd80c344f2996a4d6247651ca11f671d07e0c27a86f82c6",
+    "train_relerr": 0.00517361437725947,
+    "held_relerr": 0.005173614986353243
+  },
+  "rank_families": [
+    {
+      "rank": 4,
+      "optimistic_bytes": 1096,
+      "train_floor": 0.13649355979624778,
+      "held_relerr_of_rank_projection": 0.13897970503310147,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 8,
+      "optimistic_bytes": 2192,
+      "train_floor": 0.09687476565898025,
+      "held_relerr_of_rank_projection": 0.0985948948290484,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 12,
+      "optimistic_bytes": 3288,
+      "train_floor": 0.07472107946513683,
+      "held_relerr_of_rank_projection": 0.07566953575921889,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 13,
+      "optimistic_bytes": 3562,
+      "train_floor": 0.07052781916228171,
+      "held_relerr_of_rank_projection": 0.0715420032844904,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 16,
+      "optimistic_bytes": 4384,
+      "train_floor": 0.060859806154394236,
+      "held_relerr_of_rank_projection": 0.06252295699789587,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 24,
+      "optimistic_bytes": 6576,
+      "train_floor": 0.042344486743915354,
+      "held_relerr_of_rank_projection": 0.04533998035752536,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 30,
+      "optimistic_bytes": 8220,
+      "train_floor": 0.0323302973836592,
+      "held_relerr_of_rank_projection": 0.034865891353293904,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 31,
+      "optimistic_bytes": 8494,
+      "train_floor": 0.030936966790239117,
+      "held_relerr_of_rank_projection": 0.03362220439963834,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 32,
+      "optimistic_bytes": 8768,
+      "train_floor": 0.029590983720629533,
+      "held_relerr_of_rank_projection": 0.0323250758043455,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 48,
+      "optimistic_bytes": 13152,
+      "train_floor": 0.014180826508528945,
+      "held_relerr_of_rank_projection": 0.016459084327280993,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 64,
+      "optimistic_bytes": 17536,
+      "train_floor": 0.006091748017424685,
+      "held_relerr_of_rank_projection": 0.007359807722398617,
+      "rejected_by_q4_train": true
+    },
+    {
+      "rank": 67,
+      "optimistic_bytes": 18358,
+      "train_floor": 0.005111753608965501,
+      "held_relerr_of_rank_projection": 0.0062554694853146076,
+      "rejected_by_q4_train": false
+    },
+    {
+      "rank": 106,
+      "optimistic_bytes": 29044,
+      "train_floor": 0.00013915598451341092,
+      "held_relerr_of_rank_projection": 0.0001828189480522142,
+      "rejected_by_q4_train": false
+    }
+  ],
+  "lowbit_readout": [
+    {
+      "rank": 67,
+      "bytes": 5750,
+      "train_error_with_q4_readout_and_free_input": 0.010459430185022918
+    },
+    {
+      "rank": 80,
+      "bytes": 6816,
+      "train_error_with_q4_readout_and_free_input": 0.005523489672686653
+    },
+    {
+      "rank": 96,
+      "bytes": 8128,
+      "train_error_with_q4_readout_and_free_input": 0.0035041715896563987
+    },
+    {
+      "rank": 103,
+      "bytes": 8702,
+      "train_error_with_q4_readout_and_free_input": 0.002686728373436696
+    }
+  ],
+  "description_contrast": {
+    "first_rank_whose_real_response_floor_does_not_exceed_q4": 67,
+    "fp16_readout_bytes_at_that_rank": 18358,
+    "four_bit_readout_bytes_at_that_rank": 5750,
+    "max_four_bit_readout_rank_at_q4_bytes": 103,
+    "four_bit_readout_explanation": "signed input plane 16r bytes, packed signed 4-bit output plane 64r bytes, FP16 input gain 2r bytes, FP16 scale for each of 128 output rows 256 bytes"
+  },
+  "zero_coefficient_count": 0,
+  "producer_sign_distinct_train": 896,
+  "producer_sign_distinct_held": 472,
+  "producer_exact_binary_train": false,
+  "producer_exact_binary_held": false,
+  "train_and_held_extrema": [
+    -3.578125,
+    3.84375,
+    -3.578125,
+    3.015625
+  ]
+}

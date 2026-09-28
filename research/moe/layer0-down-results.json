@@ -1,0 +1,179 @@
+{
+  "source": "/path/to/workspace/data/qwen-moe/experts/layer-0-0-16/down_proj.bf16",
+  "shape": [
+    16,
+    2048,
+    512
+  ],
+  "fit_experts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "held_experts": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "fit_objective": "minimum isotropic-hidden squared output error, shared orthonormal output basis",
+  "numerical_contract": "BF16 source weights decoded to float32; real-valued rank-r approximation and float32 CPU evaluation; factor/basis quantization not evaluated",
+  "rank_panels": [
+    {
+      "rank": 128,
+      "routed_down_mac_per_token": 8388608,
+      "composed_down_mac_per_token": 786432,
+      "mac_ratio": 0.09375,
+      "direct_layer_weights_bytes": 150994944,
+      "shared_basis_and_expert_factors_bytes": 9584640,
+      "storage_ratio": 0.0634765625,
+      "direct_selected_expert_weight_bytes_per_token": 4718592,
+      "composed_selected_expert_plus_common_bytes_per_token": 442368,
+      "rank_scatter_bytes_if_materialized": 4096,
+      "extra_common_input_quant_bytes_if_materialized": 4096,
+      "extra_common_output_bytes_if_materialized": 8192,
+      "router_weight_products": 1024,
+      "excluded_unchanged_router_logits": 256,
+      "excluded_unchanged_gate_up_and_shared_expert_mac": 19922944,
+      "fit_weight_relative_rms": 0.8690698199581717,
+      "held_weight_relative_rms": 0.9474391378308654,
+      "fit_routing": {
+        "routed_relative_rms_mean": 0.8755875304341316,
+        "routed_relative_rms_max": 0.9027845859527588,
+        "trials": 8,
+        "expert_pool": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "held_routing": {
+        "routed_relative_rms_mean": 0.9511102735996246,
+        "routed_relative_rms_max": 0.958556056022644,
+        "trials": 8,
+        "expert_pool": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "rank": 256,
+      "routed_down_mac_per_token": 8388608,
+      "composed_down_mac_per_token": 1572864,
+      "mac_ratio": 0.1875,
+      "direct_layer_weights_bytes": 150994944,
+      "shared_basis_and_expert_factors_bytes": 19169280,
+      "storage_ratio": 0.126953125,
+      "direct_selected_expert_weight_bytes_per_token": 4718592,
+      "composed_selected_expert_plus_common_bytes_per_token": 884736,
+      "rank_scatter_bytes_if_materialized": 8192,
+      "extra_common_input_quant_bytes_if_materialized": 4096,
+      "extra_common_output_bytes_if_materialized": 8192,
+      "router_weight_products": 2048,
+      "excluded_unchanged_router_logits": 256,
+      "excluded_unchanged_gate_up_and_shared_expert_mac": 19922944,
+      "fit_weight_relative_rms": 0.7714916611718939,
+      "held_weight_relative_rms": 0.9091613513626691,
+      "fit_routing": {
+        "routed_relative_rms_mean": 0.7764511033892632,
+        "routed_relative_rms_max": 0.803785502910614,
+        "trials": 8,
+        "expert_pool": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "held_routing": {
+        "routed_relative_rms_mean": 0.9080475121736526,
+        "routed_relative_rms_max": 0.9167582392692566,
+        "trials": 8,
+        "expert_pool": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "rank": 512,
+      "routed_down_mac_per_token": 8388608,
+      "composed_down_mac_per_token": 3145728,
+      "mac_ratio": 0.375,
+      "direct_layer_weights_bytes": 150994944,
+      "shared_basis_and_expert_factors_bytes": 38338560,
+      "storage_ratio": 0.25390625,
+      "direct_selected_expert_weight_bytes_per_token": 4718592,
+      "composed_selected_expert_plus_common_bytes_per_token": 1769472,
+      "rank_scatter_bytes_if_materialized": 16384,
+      "extra_common_input_quant_bytes_if_materialized": 4096,
+      "extra_common_output_bytes_if_materialized": 8192,
+      "router_weight_products": 4096,
+      "excluded_unchanged_router_logits": 256,
+      "excluded_unchanged_gate_up_and_shared_expert_mac": 19922944,
+      "fit_weight_relative_rms": 0.605589793606758,
+      "held_weight_relative_rms": 0.8345570794694364,
+      "fit_routing": {
+        "routed_relative_rms_mean": 0.6083356812596321,
+        "routed_relative_rms_max": 0.6333930492401123,
+        "trials": 8,
+        "expert_pool": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "held_routing": {
+        "routed_relative_rms_mean": 0.8316984996199608,
+        "routed_relative_rms_max": 0.8425456285476685,
+        "trials": 8,
+        "expert_pool": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    }
+  ]
+}

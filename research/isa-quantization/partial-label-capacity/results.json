@@ -1,0 +1,585 @@
+{
+  "separated_repeated_laws": {
+    "teacher_laws": [
+      [
+        "1/4",
+        "3/4"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "3/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "3/4"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "3/4",
+        "1/4"
+      ]
+    ],
+    "occupancy": [
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6"
+    ],
+    "allowed_labels": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "label_count": 4,
+    "global_capacity": {
+      "distinct_laws": 3,
+      "mass": "1",
+      "labels": 4
+    },
+    "global_KL_interval": [
+      "0",
+      "0"
+    ],
+    "disjoint_witnesses": [
+      {
+        "sources": [
+          0,
+          1,
+          2
+        ],
+        "labels": [
+          0,
+          1
+        ],
+        "deficiency": 1,
+        "capacity": {
+          "distinct_laws": 3,
+          "mass": "1/2",
+          "labels": 2,
+          "selected_power": 61,
+          "coherence_certificate": {
+            "maximum_fidelity_upper": "18683722739735196843924661/19342813113834066795298816",
+            "off_diagonal_row_factor": "51580834970224178120796843/77371252455336267181195264",
+            "top_C_occupancy": "2/3",
+            "coherence_threshold": "19342813113834066795298816/154742504910672534362390529",
+            "Gershgorin_overlap_upper": "14861901934955788398173425672548070880358716323039067/17958932119522135058886879224417685745532099088089088",
+            "Gershgorin_KL_lower_interval": [
+              "120043769185155603631447/38685626227668133590597632",
+              "960350153481244829051577/309485009821345068724781056"
+            ]
+          },
+          "uniform_collision_hyperedges": 1,
+          "uniform_share": "1",
+          "normalized_collision_interval": [
+            "6978283593018709804282327/309485009821345068724781056",
+            "6978283593018709804282331/309485009821345068724781056"
+          ],
+          "winner": "collision_packing"
+        },
+        "KL_interval": [
+          "3489141796509354902141163/309485009821345068724781056",
+          "1744570898254677451070583/154742504910672534362390528"
+        ]
+      },
+      {
+        "sources": [
+          3,
+          4,
+          5
+        ],
+        "labels": [
+          2,
+          3
+        ],
+        "deficiency": 1,
+        "capacity": {
+          "distinct_laws": 3,
+          "mass": "1/2",
+          "labels": 2,
+          "selected_power": 61,
+          "coherence_certificate": {
+            "maximum_fidelity_upper": "18683722739735196843924661/19342813113834066795298816",
+            "off_diagonal_row_factor": "51580834970224178120796843/77371252455336267181195264",
+            "top_C_occupancy": "2/3",
+            "coherence_threshold": "19342813113834066795298816/154742504910672534362390529",
+            "Gershgorin_overlap_upper": "14861901934955788398173425672548070880358716323039067/17958932119522135058886879224417685745532099088089088",
+            "Gershgorin_KL_lower_interval": [
+              "120043769185155603631447/38685626227668133590597632",
+              "960350153481244829051577/309485009821345068724781056"
+            ]
+          },
+          "uniform_collision_hyperedges": 1,
+          "uniform_share": "1",
+          "normalized_collision_interval": [
+            "6978283593018709804282327/309485009821345068724781056",
+            "6978283593018709804282331/309485009821345068724781056"
+          ],
+          "winner": "collision_packing"
+        },
+        "KL_interval": [
+          "3489141796509354902141163/309485009821345068724781056",
+          "1744570898254677451070583/154742504910672534362390528"
+        ]
+      }
+    ],
+    "combined_KL_interval": [
+      "3489141796509354902141163/154742504910672534362390528",
+      "1744570898254677451070583/77371252455336267181195264"
+    ],
+    "combined_KL_decimal": [
+      0.022548050379070154,
+      0.022548050379070154
+    ],
+    "error_budget": "1/1000",
+    "rejected_before_label_completion": true,
+    "candidate_completions_scored_by_bound": 0,
+    "bound_seconds": 0.005051267999078846,
+    "oracle_seconds": 0.006929600998773822,
+    "post_bound_oracle_completions": 64,
+    "exact_free_readout_KL_interval": [
+      "1744570898254677451070581/77371252455336267181195264",
+      "1744570898254677451070583/77371252455336267181195264"
+    ],
+    "exact_free_readout_KL_decimal": [
+      0.022548050379070154,
+      0.022548050379070154
+    ]
+  },
+  "shared_access_control": {
+    "teacher_laws": [
+      [
+        "1/4",
+        "3/4"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "3/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "3/4"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "3/4",
+        "1/4"
+      ]
+    ],
+    "occupancy": [
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6"
+    ],
+    "allowed_labels": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "label_count": 4,
+    "global_capacity": {
+      "distinct_laws": 3,
+      "mass": "1",
+      "labels": 4
+    },
+    "global_KL_interval": [
+      "0",
+      "0"
+    ],
+    "disjoint_witnesses": [
+      {
+        "sources": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "labels": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "deficiency": 2,
+        "capacity": {
+          "distinct_laws": 3,
+          "mass": "1",
+          "labels": 4
+        },
+        "KL_interval": [
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "combined_KL_interval": [
+      "0",
+      "0"
+    ],
+    "combined_KL_decimal": [
+      0.0,
+      0.0
+    ],
+    "error_budget": "1/1000",
+    "rejected_before_label_completion": false,
+    "candidate_completions_scored_by_bound": 0,
+    "bound_seconds": 0.0002193020009144675,
+    "oracle_seconds": 0.0464760920003755,
+    "post_bound_oracle_completions": 4096,
+    "exact_free_readout_KL_interval": [
+      "0",
+      "0"
+    ],
+    "exact_free_readout_KL_decimal": [
+      0.0,
+      0.0
+    ]
+  },
+  "distinct_hall_defect": {
+    "teacher_laws": [
+      [
+        "9/16",
+        "1/16",
+        "1/4",
+        "1/8"
+      ],
+      [
+        "1/8",
+        "7/16",
+        "1/16",
+        "3/8"
+      ],
+      [
+        "3/16",
+        "1/8",
+        "9/16",
+        "1/8"
+      ],
+      [
+        "1/16",
+        "3/16",
+        "1/8",
+        "5/8"
+      ],
+      [
+        "5/16",
+        "5/16",
+        "3/16",
+        "3/16"
+      ],
+      [
+        "1/4",
+        "1/8",
+        "1/4",
+        "3/8"
+      ]
+    ],
+    "occupancy": [
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6"
+    ],
+    "allowed_labels": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "label_count": 6,
+    "global_capacity": {
+      "distinct_laws": 6,
+      "mass": "1",
+      "labels": 6
+    },
+    "global_KL_interval": [
+      "0",
+      "0"
+    ],
+    "disjoint_witnesses": [
+      {
+        "sources": [
+          0,
+          1,
+          2
+        ],
+        "labels": [
+          0,
+          1
+        ],
+        "deficiency": 1,
+        "capacity": {
+          "distinct_laws": 3,
+          "mass": "1/2",
+          "labels": 2,
+          "selected_power": 24,
+          "coherence_certificate": {
+            "maximum_fidelity_upper": "282605578774115325535466875/309485009821345068724781056",
+            "off_diagonal_row_factor": "51580834970224178120796843/77371252455336267181195264",
+            "top_C_occupancy": "2/3",
+            "coherence_threshold": "19342813113834066795298816/154742504910672534362390529",
+            "Gershgorin_overlap_upper": "29355724591622630965696733512233637631901228743496049/35917864239044270117773758448835371491064198176178176",
+            "Gershgorin_KL_lower_interval": [
+              "650393096144794352574503/77371252455336267181195264",
+              "2601572384579177410298013/309485009821345068724781056"
+            ]
+          },
+          "uniform_collision_hyperedges": 1,
+          "uniform_share": "1",
+          "normalized_collision_interval": [
+            "137334668687562901143215/2417851639229258349412352",
+            "8789418796004025673165767/154742504910672534362390528"
+          ],
+          "winner": "collision_packing"
+        },
+        "KL_interval": [
+          "137334668687562901143215/4835703278458516698824704",
+          "8789418796004025673165767/309485009821345068724781056"
+        ]
+      },
+      {
+        "matching": {
+          "3": 2,
+          "4": 3,
+          "5": 4
+        }
+      }
+    ],
+    "combined_KL_interval": [
+      "137334668687562901143215/4835703278458516698824704",
+      "8789418796004025673165767/309485009821345068724781056"
+    ],
+    "combined_KL_decimal": [
+      0.02840014384243635,
+      0.02840014384243635
+    ],
+    "error_budget": "1/1000",
+    "rejected_before_label_completion": true,
+    "candidate_completions_scored_by_bound": 0,
+    "bound_seconds": 0.005164894999325043,
+    "oracle_seconds": 0.022976694999670144,
+    "post_bound_oracle_completions": 64,
+    "exact_free_readout_KL_interval": [
+      "137334668687562901143215/4835703278458516698824704",
+      "4394709398002012836582885/154742504910672534362390528"
+    ],
+    "exact_free_readout_KL_decimal": [
+      0.02840014384243635,
+      0.02840014384243635
+    ]
+  },
+  "distinct_matching_control": {
+    "teacher_laws": [
+      [
+        "9/16",
+        "1/16",
+        "1/4",
+        "1/8"
+      ],
+      [
+        "1/8",
+        "7/16",
+        "1/16",
+        "3/8"
+      ],
+      [
+        "3/16",
+        "1/8",
+        "9/16",
+        "1/8"
+      ],
+      [
+        "1/16",
+        "3/16",
+        "1/8",
+        "5/8"
+      ],
+      [
+        "5/16",
+        "5/16",
+        "3/16",
+        "3/16"
+      ],
+      [
+        "1/4",
+        "1/8",
+        "1/4",
+        "3/8"
+      ]
+    ],
+    "occupancy": [
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6",
+      "1/6"
+    ],
+    "allowed_labels": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "label_count": 6,
+    "global_capacity": {
+      "distinct_laws": 6,
+      "mass": "1",
+      "labels": 6
+    },
+    "global_KL_interval": [
+      "0",
+      "0"
+    ],
+    "disjoint_witnesses": [
+      {
+        "matching": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5
+        }
+      }
+    ],
+    "combined_KL_interval": [
+      "0",
+      "0"
+    ],
+    "combined_KL_decimal": [
+      0.0,
+      0.0
+    ],
+    "error_budget": "1/1000",
+    "rejected_before_label_completion": false,
+    "candidate_completions_scored_by_bound": 0,
+    "bound_seconds": 0.00015932399946905207,
+    "oracle_seconds": 0.00901361599972006,
+    "post_bound_oracle_completions": 64,
+    "exact_free_readout_KL_interval": [
+      "0",
+      "0"
+    ],
+    "exact_free_readout_KL_decimal": [
+      0.0,
+      0.0
+    ]
+  }
+}

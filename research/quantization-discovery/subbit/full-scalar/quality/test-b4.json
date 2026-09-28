@@ -1,0 +1,50 @@
+{
+  "bits": 4,
+  "split": "test",
+  "matrix_count": 197,
+  "token_fixture_sha256": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "accounting_sha256": "bf26e15d08c0960c50eb19f61ee3d2f104664c9a80255f106f97b60a2f5f3363",
+  "elapsed_seconds": 12.965162951993989,
+  "predictions": 1020,
+  "reference_nll": 3.310759839824602,
+  "scalar_nll": 4.057404342352175,
+  "scalar_ppl": 57.82402474534415,
+  "teacher_kl": 0.796697489420573,
+  "argmax_agreement": 0.6127450980392157,
+  "per_window": [
+    {
+      "index": 0,
+      "predictions": 255,
+      "reference_nll_sum": 958.3352661132812,
+      "scalar_nll_sum": 1181.428466796875,
+      "teacher_kl_sum": 207.53463745117188,
+      "argmax_agreements": 152
+    },
+    {
+      "index": 1,
+      "predictions": 255,
+      "reference_nll_sum": 768.7220458984375,
+      "scalar_nll_sum": 938.9637451171875,
+      "teacher_kl_sum": 221.530517578125,
+      "argmax_agreements": 154
+    },
+    {
+      "index": 2,
+      "predictions": 255,
+      "reference_nll_sum": 864.10498046875,
+      "scalar_nll_sum": 1118.1558837890625,
+      "teacher_kl_sum": 226.36331176757812,
+      "argmax_agreements": 145
+    },
+    {
+      "index": 3,
+      "predictions": 255,
+      "reference_nll_sum": 785.812744140625,
+      "scalar_nll_sum": 900.0043334960938,
+      "teacher_kl_sum": 157.20297241210938,
+      "argmax_agreements": 174
+    }
+  ],
+  "execution": "all 196 body matrices and shared embedding/head decoded then rounded to BF16; norm parameters original BF16"
+}

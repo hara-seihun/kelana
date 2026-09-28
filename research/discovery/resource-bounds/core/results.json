@@ -1,0 +1,1350 @@
+{
+  "format": "kelana-resource-certificates/1",
+  "cases": [
+    {
+      "name": "separate-toggle optimum and strict domination",
+      "model": {
+        "unit": "abstract ticks",
+        "resources": {
+          "valu": 1
+        },
+        "register_capacity": 2,
+        "value_count": 4,
+        "operations": {
+          "xor1": {
+            "arity": 1,
+            "table": [
+              1,
+              0,
+              3,
+              2
+            ],
+            "demand": {
+              "valu": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "valu",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          },
+          "xor2": {
+            "arity": 1,
+            "table": [
+              2,
+              3,
+              0,
+              1
+            ],
+            "demand": {
+              "valu": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "valu",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          },
+          "xor3": {
+            "arity": 1,
+            "table": [
+              3,
+              2,
+              1,
+              0
+            ],
+            "demand": {
+              "valu": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "valu",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          }
+        },
+        "assumptions": [
+          "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+          "Operands read at issue; inputs already in registers; output ready after latency."
+        ]
+      },
+      "problem": {
+        "id": "toggle-both-bits",
+        "inputs": [
+          "x"
+        ],
+        "cases": [
+          {
+            "inputs": [
+              0
+            ],
+            "outputs": [
+              3
+            ]
+          },
+          {
+            "inputs": [
+              1
+            ],
+            "outputs": [
+              2
+            ]
+          },
+          {
+            "inputs": [
+              2
+            ],
+            "outputs": [
+              1
+            ]
+          },
+          {
+            "inputs": [
+              3
+            ],
+            "outputs": [
+              0
+            ]
+          }
+        ],
+        "input_contract": "all two-bit input words, no preprocessing"
+      },
+      "family": {
+        "id": "separate-bit-toggles",
+        "allowed_operations": [
+          "xor1",
+          "xor2"
+        ],
+        "obligations": [
+          {
+            "id": "low",
+            "coefficients": {
+              "xor1": 1
+            },
+            "minimum": 1,
+            "premise": "Only xor1 changes bit zero in this grammar; the required output changes it.",
+            "role": "necessary_for_target"
+          },
+          {
+            "id": "high",
+            "coefficients": {
+              "xor2": 1
+            },
+            "minimum": 1,
+            "premise": "Only xor2 changes bit one in this grammar; the required output changes it.",
+            "role": "necessary_for_target"
+          }
+        ]
+      },
+      "proposal": {
+        "status": "checked",
+        "dual": {
+          "binding": {
+            "model": "dfc811f22aa61eead7c3ef5a4c60fe995a49b62feac2a09be2f4a7efb7c29344",
+            "problem": "ba08ccc268fb8ad814cc1820cae39f1cee4af297a110e89a64a07a8d11a8b18b",
+            "family": "2bcc1adcb46e9461e951874c489d39ed8750aedf918891b9a02214ab98501b52"
+          },
+          "lambda": {
+            "low": "1",
+            "high": "1"
+          },
+          "mu": {
+            "valu": "1"
+          }
+        },
+        "primal": {
+          "binding": {
+            "model": "dfc811f22aa61eead7c3ef5a4c60fe995a49b62feac2a09be2f4a7efb7c29344",
+            "problem": "ba08ccc268fb8ad814cc1820cae39f1cee4af297a110e89a64a07a8d11a8b18b",
+            "family": "2bcc1adcb46e9461e951874c489d39ed8750aedf918891b9a02214ab98501b52"
+          },
+          "counts": {
+            "xor1": "1",
+            "xor2": "1"
+          },
+          "time": "2"
+        },
+        "verification": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "2",
+          "relaxed_feasible_time": "2",
+          "proves_program_optimality": false
+        },
+        "search": {
+          "dual": {
+            "bases_examined": 10,
+            "total_bases": 10,
+            "enumeration_complete": true,
+            "limits": {
+              "max_bases": 20000,
+              "max_seconds": 3
+            }
+          },
+          "primal": {
+            "bases_examined": 20,
+            "total_bases": 20,
+            "enumeration_complete": true,
+            "limits": {
+              "max_bases": 20000,
+              "max_seconds": 3
+            }
+          }
+        }
+      },
+      "attaining_schedule": {
+        "binding": {
+          "model": "dfc811f22aa61eead7c3ef5a4c60fe995a49b62feac2a09be2f4a7efb7c29344",
+          "problem": "ba08ccc268fb8ad814cc1820cae39f1cee4af297a110e89a64a07a8d11a8b18b"
+        },
+        "nodes": [
+          {
+            "id": "a",
+            "op": "xor1",
+            "args": [
+              "x"
+            ],
+            "start": 0
+          },
+          {
+            "id": "b",
+            "op": "xor2",
+            "args": [
+              "a"
+            ],
+            "start": 1
+          }
+        ],
+        "outputs": [
+          "b"
+        ]
+      },
+      "competitor_schedule": {
+        "binding": {
+          "model": "dfc811f22aa61eead7c3ef5a4c60fe995a49b62feac2a09be2f4a7efb7c29344",
+          "problem": "ba08ccc268fb8ad814cc1820cae39f1cee4af297a110e89a64a07a8d11a8b18b"
+        },
+        "nodes": [
+          {
+            "id": "b",
+            "op": "xor3",
+            "args": [
+              "x"
+            ],
+            "start": 0
+          }
+        ],
+        "outputs": [
+          "b"
+        ]
+      },
+      "attainment": {
+        "valid": true,
+        "status": "family_optimum_under_premises",
+        "lower_bound": "2",
+        "upper_bound": "2",
+        "membership": {
+          "allowed_operations_only": true,
+          "outside_operations": [],
+          "satisfies_count_obligations": true,
+          "failed_obligations": [],
+          "failed_class_restrictions": [],
+          "failed_necessary_cuts": []
+        },
+        "lower": {
+          "valid": true,
+          "kind": "conditional_resource_lower_bound",
+          "lower_bound": "2",
+          "unit": "abstract ticks",
+          "operation_slack": {
+            "xor1": "0",
+            "xor2": "0"
+          },
+          "premises": [
+            "Only xor1 changes bit zero in this grammar; the required output changes it.",
+            "Only xor2 changes bit one in this grammar; the required output changes it."
+          ],
+          "machine_assumptions": [
+            "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+            "Operands read at issue; inputs already in registers; output ready after latency."
+          ],
+          "semantic_cuts_proved_by_this_checker": false
+        },
+        "upper": {
+          "valid": true,
+          "kind": "model_feasible_schedule",
+          "upper_bound": "2",
+          "unit": "abstract ticks",
+          "counts": {
+            "xor1": 1,
+            "xor2": 1
+          },
+          "resource_peaks": {
+            "valu": "1"
+          },
+          "register_peak": 1,
+          "register_assignment": {
+            "x": 0,
+            "a": 0,
+            "b": 0
+          },
+          "correctness_replayed": true,
+          "reachable_inputs_replayed": 4,
+          "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+          "machine_assumptions": [
+            "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+            "Operands read at issue; inputs already in registers; output ready after latency."
+          ]
+        },
+        "native_runtime_claim": false
+      },
+      "dominance": {
+        "valid": true,
+        "status": "family_strictly_dominated_under_premises",
+        "lower_bound": "2",
+        "upper_bound": "1",
+        "membership": {
+          "allowed_operations_only": false,
+          "outside_operations": [
+            "xor3"
+          ],
+          "satisfies_count_obligations": false,
+          "failed_obligations": [
+            "low",
+            "high"
+          ],
+          "failed_class_restrictions": [],
+          "failed_necessary_cuts": [
+            "low",
+            "high"
+          ]
+        },
+        "lower": {
+          "valid": true,
+          "kind": "conditional_resource_lower_bound",
+          "lower_bound": "2",
+          "unit": "abstract ticks",
+          "operation_slack": {
+            "xor1": "0",
+            "xor2": "0"
+          },
+          "premises": [
+            "Only xor1 changes bit zero in this grammar; the required output changes it.",
+            "Only xor2 changes bit one in this grammar; the required output changes it."
+          ],
+          "machine_assumptions": [
+            "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+            "Operands read at issue; inputs already in registers; output ready after latency."
+          ],
+          "semantic_cuts_proved_by_this_checker": false
+        },
+        "upper": {
+          "valid": true,
+          "kind": "model_feasible_schedule",
+          "upper_bound": "1",
+          "unit": "abstract ticks",
+          "counts": {
+            "xor3": 1
+          },
+          "resource_peaks": {
+            "valu": "1"
+          },
+          "register_peak": 1,
+          "register_assignment": {
+            "x": 0,
+            "b": 0
+          },
+          "correctness_replayed": true,
+          "reachable_inputs_replayed": 4,
+          "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+          "machine_assumptions": [
+            "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+            "Operands read at issue; inputs already in registers; output ready after latency."
+          ]
+        },
+        "native_runtime_claim": false
+      }
+    },
+    {
+      "name": "independent ports, latency 1",
+      "model": {
+        "unit": "abstract ticks",
+        "resources": {
+          "left": 1,
+          "right": 1
+        },
+        "register_capacity": 2,
+        "value_count": 4,
+        "operations": {
+          "xor1": {
+            "arity": 1,
+            "table": [
+              1,
+              0,
+              3,
+              2
+            ],
+            "demand": {
+              "left": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "left",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          },
+          "xor2": {
+            "arity": 1,
+            "table": [
+              2,
+              3,
+              0,
+              1
+            ],
+            "demand": {
+              "right": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "right",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          }
+        },
+        "assumptions": [
+          "Two independent issue resources, each one operation per tick.",
+          "These are declared abstract ports, not inferred GPU ports.",
+          "Operands read at issue; homogeneous register reuse is allowed after the last read."
+        ]
+      },
+      "problem": {
+        "id": "two-independent-outputs",
+        "inputs": [
+          "x",
+          "y"
+        ],
+        "cases": [
+          {
+            "inputs": [
+              0,
+              0
+            ],
+            "outputs": [
+              1,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              0,
+              1
+            ],
+            "outputs": [
+              1,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              0,
+              2
+            ],
+            "outputs": [
+              1,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              0,
+              3
+            ],
+            "outputs": [
+              1,
+              1
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              0
+            ],
+            "outputs": [
+              0,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              1
+            ],
+            "outputs": [
+              0,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              2
+            ],
+            "outputs": [
+              0,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              3
+            ],
+            "outputs": [
+              0,
+              1
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              0
+            ],
+            "outputs": [
+              3,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              1
+            ],
+            "outputs": [
+              3,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              2
+            ],
+            "outputs": [
+              3,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              3
+            ],
+            "outputs": [
+              3,
+              1
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              0
+            ],
+            "outputs": [
+              2,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              1
+            ],
+            "outputs": [
+              2,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              2
+            ],
+            "outputs": [
+              2,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              3
+            ],
+            "outputs": [
+              2,
+              1
+            ]
+          }
+        ],
+        "input_contract": "all pairs of two-bit words, supplied in registers"
+      },
+      "family": {
+        "id": "independent-observers",
+        "allowed_operations": [
+          "xor1",
+          "xor2"
+        ],
+        "obligations": [
+          {
+            "id": "low",
+            "coefficients": {
+              "xor1": 1
+            },
+            "minimum": 1,
+            "premise": "Required low-bit change needs xor1.",
+            "role": "necessary_for_target"
+          },
+          {
+            "id": "high",
+            "coefficients": {
+              "xor2": 1
+            },
+            "minimum": 1,
+            "premise": "Required high-bit change needs xor2.",
+            "role": "necessary_for_target"
+          }
+        ]
+      },
+      "proposal": {
+        "status": "checked",
+        "dual": {
+          "binding": {
+            "model": "e0796523bad901198082926e087b7d6623f2b0af58cfe825aaebbfc339b780bc",
+            "problem": "99705cbaad8b26bdad10eff6ac257f5110a40b92a3a08c21d19a10c52ca9484d",
+            "family": "a38fa78e7b06cd5b7fbe1ce61994f7f67f5523398480cb66d761a5c735acc2f6"
+          },
+          "lambda": {
+            "low": "0",
+            "high": "1"
+          },
+          "mu": {
+            "left": "0",
+            "right": "1"
+          }
+        },
+        "primal": {
+          "binding": {
+            "model": "e0796523bad901198082926e087b7d6623f2b0af58cfe825aaebbfc339b780bc",
+            "problem": "99705cbaad8b26bdad10eff6ac257f5110a40b92a3a08c21d19a10c52ca9484d",
+            "family": "a38fa78e7b06cd5b7fbe1ce61994f7f67f5523398480cb66d761a5c735acc2f6"
+          },
+          "counts": {
+            "xor1": "1",
+            "xor2": "1"
+          },
+          "time": "1"
+        },
+        "verification": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "1",
+          "relaxed_feasible_time": "1",
+          "proves_program_optimality": false
+        },
+        "search": {
+          "dual": {
+            "bases_examined": 20,
+            "total_bases": 20,
+            "enumeration_complete": true,
+            "limits": {
+              "max_bases": 20000,
+              "max_seconds": 3
+            }
+          },
+          "primal": {
+            "bases_examined": 35,
+            "total_bases": 35,
+            "enumeration_complete": true,
+            "limits": {
+              "max_bases": 20000,
+              "max_seconds": 3
+            }
+          }
+        }
+      },
+      "schedule": {
+        "binding": {
+          "model": "e0796523bad901198082926e087b7d6623f2b0af58cfe825aaebbfc339b780bc",
+          "problem": "99705cbaad8b26bdad10eff6ac257f5110a40b92a3a08c21d19a10c52ca9484d"
+        },
+        "nodes": [
+          {
+            "id": "a",
+            "op": "xor1",
+            "args": [
+              "x"
+            ],
+            "start": 0
+          },
+          {
+            "id": "b",
+            "op": "xor2",
+            "args": [
+              "y"
+            ],
+            "start": 0
+          }
+        ],
+        "outputs": [
+          "a",
+          "b"
+        ]
+      },
+      "comparison": {
+        "valid": true,
+        "status": "family_optimum_under_premises",
+        "lower_bound": "1",
+        "upper_bound": "1",
+        "membership": {
+          "allowed_operations_only": true,
+          "outside_operations": [],
+          "satisfies_count_obligations": true,
+          "failed_obligations": [],
+          "failed_class_restrictions": [],
+          "failed_necessary_cuts": []
+        },
+        "lower": {
+          "valid": true,
+          "kind": "conditional_resource_lower_bound",
+          "lower_bound": "1",
+          "unit": "abstract ticks",
+          "operation_slack": {
+            "xor1": "0",
+            "xor2": "0"
+          },
+          "premises": [
+            "Required low-bit change needs xor1.",
+            "Required high-bit change needs xor2."
+          ],
+          "machine_assumptions": [
+            "Two independent issue resources, each one operation per tick.",
+            "These are declared abstract ports, not inferred GPU ports.",
+            "Operands read at issue; homogeneous register reuse is allowed after the last read."
+          ],
+          "semantic_cuts_proved_by_this_checker": false
+        },
+        "upper": {
+          "valid": true,
+          "kind": "model_feasible_schedule",
+          "upper_bound": "1",
+          "unit": "abstract ticks",
+          "counts": {
+            "xor1": 1,
+            "xor2": 1
+          },
+          "resource_peaks": {
+            "left": "1",
+            "right": "1"
+          },
+          "register_peak": 2,
+          "register_assignment": {
+            "x": 0,
+            "y": 1,
+            "a": 0,
+            "b": 1
+          },
+          "correctness_replayed": true,
+          "reachable_inputs_replayed": 16,
+          "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+          "machine_assumptions": [
+            "Two independent issue resources, each one operation per tick.",
+            "These are declared abstract ports, not inferred GPU ports.",
+            "Operands read at issue; homogeneous register reuse is allowed after the last read."
+          ]
+        },
+        "native_runtime_claim": false
+      }
+    },
+    {
+      "name": "independent ports, latency 4",
+      "model": {
+        "unit": "abstract ticks",
+        "resources": {
+          "left": 1,
+          "right": 1
+        },
+        "register_capacity": 2,
+        "value_count": 4,
+        "operations": {
+          "xor1": {
+            "arity": 1,
+            "table": [
+              1,
+              0,
+              3,
+              2
+            ],
+            "demand": {
+              "left": 1
+            },
+            "latency": 4,
+            "reservations": [
+              {
+                "resource": "left",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          },
+          "xor2": {
+            "arity": 1,
+            "table": [
+              2,
+              3,
+              0,
+              1
+            ],
+            "demand": {
+              "right": 1
+            },
+            "latency": 4,
+            "reservations": [
+              {
+                "resource": "right",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          }
+        },
+        "assumptions": [
+          "Two independent issue resources, each one operation per tick.",
+          "These are declared abstract ports, not inferred GPU ports.",
+          "Operands read at issue; homogeneous register reuse is allowed after the last read."
+        ]
+      },
+      "problem": {
+        "id": "two-independent-outputs",
+        "inputs": [
+          "x",
+          "y"
+        ],
+        "cases": [
+          {
+            "inputs": [
+              0,
+              0
+            ],
+            "outputs": [
+              1,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              0,
+              1
+            ],
+            "outputs": [
+              1,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              0,
+              2
+            ],
+            "outputs": [
+              1,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              0,
+              3
+            ],
+            "outputs": [
+              1,
+              1
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              0
+            ],
+            "outputs": [
+              0,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              1
+            ],
+            "outputs": [
+              0,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              2
+            ],
+            "outputs": [
+              0,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              1,
+              3
+            ],
+            "outputs": [
+              0,
+              1
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              0
+            ],
+            "outputs": [
+              3,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              1
+            ],
+            "outputs": [
+              3,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              2
+            ],
+            "outputs": [
+              3,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              2,
+              3
+            ],
+            "outputs": [
+              3,
+              1
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              0
+            ],
+            "outputs": [
+              2,
+              2
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              1
+            ],
+            "outputs": [
+              2,
+              3
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              2
+            ],
+            "outputs": [
+              2,
+              0
+            ]
+          },
+          {
+            "inputs": [
+              3,
+              3
+            ],
+            "outputs": [
+              2,
+              1
+            ]
+          }
+        ],
+        "input_contract": "all pairs of two-bit words, supplied in registers"
+      },
+      "family": {
+        "id": "independent-observers",
+        "allowed_operations": [
+          "xor1",
+          "xor2"
+        ],
+        "obligations": [
+          {
+            "id": "low",
+            "coefficients": {
+              "xor1": 1
+            },
+            "minimum": 1,
+            "premise": "Required low-bit change needs xor1.",
+            "role": "necessary_for_target"
+          },
+          {
+            "id": "high",
+            "coefficients": {
+              "xor2": 1
+            },
+            "minimum": 1,
+            "premise": "Required high-bit change needs xor2.",
+            "role": "necessary_for_target"
+          }
+        ]
+      },
+      "proposal": {
+        "status": "checked",
+        "dual": {
+          "binding": {
+            "model": "3a5c103f4583e8db8c33e3b51dbcbf440a1acf1c63a4636cc07d7fbcb097077a",
+            "problem": "99705cbaad8b26bdad10eff6ac257f5110a40b92a3a08c21d19a10c52ca9484d",
+            "family": "a38fa78e7b06cd5b7fbe1ce61994f7f67f5523398480cb66d761a5c735acc2f6"
+          },
+          "lambda": {
+            "low": "0",
+            "high": "1"
+          },
+          "mu": {
+            "left": "0",
+            "right": "1"
+          }
+        },
+        "primal": {
+          "binding": {
+            "model": "3a5c103f4583e8db8c33e3b51dbcbf440a1acf1c63a4636cc07d7fbcb097077a",
+            "problem": "99705cbaad8b26bdad10eff6ac257f5110a40b92a3a08c21d19a10c52ca9484d",
+            "family": "a38fa78e7b06cd5b7fbe1ce61994f7f67f5523398480cb66d761a5c735acc2f6"
+          },
+          "counts": {
+            "xor1": "1",
+            "xor2": "1"
+          },
+          "time": "1"
+        },
+        "verification": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "1",
+          "relaxed_feasible_time": "1",
+          "proves_program_optimality": false
+        },
+        "search": {
+          "dual": {
+            "bases_examined": 20,
+            "total_bases": 20,
+            "enumeration_complete": true,
+            "limits": {
+              "max_bases": 20000,
+              "max_seconds": 3
+            }
+          },
+          "primal": {
+            "bases_examined": 35,
+            "total_bases": 35,
+            "enumeration_complete": true,
+            "limits": {
+              "max_bases": 20000,
+              "max_seconds": 3
+            }
+          }
+        }
+      },
+      "schedule": {
+        "binding": {
+          "model": "3a5c103f4583e8db8c33e3b51dbcbf440a1acf1c63a4636cc07d7fbcb097077a",
+          "problem": "99705cbaad8b26bdad10eff6ac257f5110a40b92a3a08c21d19a10c52ca9484d"
+        },
+        "nodes": [
+          {
+            "id": "a",
+            "op": "xor1",
+            "args": [
+              "x"
+            ],
+            "start": 0
+          },
+          {
+            "id": "b",
+            "op": "xor2",
+            "args": [
+              "y"
+            ],
+            "start": 0
+          }
+        ],
+        "outputs": [
+          "a",
+          "b"
+        ]
+      },
+      "comparison": {
+        "valid": true,
+        "status": "bounds_leave_gap",
+        "lower_bound": "1",
+        "upper_bound": "4",
+        "membership": {
+          "allowed_operations_only": true,
+          "outside_operations": [],
+          "satisfies_count_obligations": true,
+          "failed_obligations": [],
+          "failed_class_restrictions": [],
+          "failed_necessary_cuts": []
+        },
+        "lower": {
+          "valid": true,
+          "kind": "conditional_resource_lower_bound",
+          "lower_bound": "1",
+          "unit": "abstract ticks",
+          "operation_slack": {
+            "xor1": "0",
+            "xor2": "0"
+          },
+          "premises": [
+            "Required low-bit change needs xor1.",
+            "Required high-bit change needs xor2."
+          ],
+          "machine_assumptions": [
+            "Two independent issue resources, each one operation per tick.",
+            "These are declared abstract ports, not inferred GPU ports.",
+            "Operands read at issue; homogeneous register reuse is allowed after the last read."
+          ],
+          "semantic_cuts_proved_by_this_checker": false
+        },
+        "upper": {
+          "valid": true,
+          "kind": "model_feasible_schedule",
+          "upper_bound": "4",
+          "unit": "abstract ticks",
+          "counts": {
+            "xor1": 1,
+            "xor2": 1
+          },
+          "resource_peaks": {
+            "left": "1",
+            "right": "1"
+          },
+          "register_peak": 2,
+          "register_assignment": {
+            "x": 0,
+            "y": 1,
+            "a": 0,
+            "b": 1
+          },
+          "correctness_replayed": true,
+          "reachable_inputs_replayed": 16,
+          "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+          "machine_assumptions": [
+            "Two independent issue resources, each one operation per tick.",
+            "These are declared abstract ports, not inferred GPU ports.",
+            "Operands read at issue; homogeneous register reuse is allowed after the last read."
+          ]
+        },
+        "native_runtime_claim": false
+      }
+    },
+    {
+      "name": "high bit cannot change",
+      "model": {
+        "unit": "abstract ticks",
+        "resources": {
+          "valu": 1
+        },
+        "register_capacity": 2,
+        "value_count": 4,
+        "operations": {
+          "xor1": {
+            "arity": 1,
+            "table": [
+              1,
+              0,
+              3,
+              2
+            ],
+            "demand": {
+              "valu": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "valu",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          },
+          "xor2": {
+            "arity": 1,
+            "table": [
+              2,
+              3,
+              0,
+              1
+            ],
+            "demand": {
+              "valu": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "valu",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          },
+          "xor3": {
+            "arity": 1,
+            "table": [
+              3,
+              2,
+              1,
+              0
+            ],
+            "demand": {
+              "valu": 1
+            },
+            "latency": 1,
+            "reservations": [
+              {
+                "resource": "valu",
+                "offset": 0,
+                "duration": 1,
+                "amount": 1
+              }
+            ]
+          }
+        },
+        "assumptions": [
+          "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+          "Operands read at issue; inputs already in registers; output ready after latency."
+        ]
+      },
+      "problem": {
+        "id": "toggle-both-bits",
+        "inputs": [
+          "x"
+        ],
+        "cases": [
+          {
+            "inputs": [
+              0
+            ],
+            "outputs": [
+              3
+            ]
+          },
+          {
+            "inputs": [
+              1
+            ],
+            "outputs": [
+              2
+            ]
+          },
+          {
+            "inputs": [
+              2
+            ],
+            "outputs": [
+              1
+            ]
+          },
+          {
+            "inputs": [
+              3
+            ],
+            "outputs": [
+              0
+            ]
+          }
+        ],
+        "input_contract": "all two-bit input words, no preprocessing"
+      },
+      "family": {
+        "id": "separate-bit-toggles",
+        "allowed_operations": [
+          "xor1"
+        ],
+        "obligations": [
+          {
+            "id": "high",
+            "coefficients": {},
+            "minimum": 1,
+            "premise": "xor1 preserves bit one; the target does not.",
+            "role": "necessary_for_target"
+          }
+        ]
+      },
+      "certificate": {
+        "binding": {
+          "model": "dfc811f22aa61eead7c3ef5a4c60fe995a49b62feac2a09be2f4a7efb7c29344",
+          "problem": "ba08ccc268fb8ad814cc1820cae39f1cee4af297a110e89a64a07a8d11a8b18b",
+          "family": "2c5e112ebfdf9fe26d1b2635d4aec9b984bdbba6d13ccc883496e95856031269"
+        },
+        "lambda": {
+          "high": 1
+        }
+      },
+      "verification": {
+        "valid": true,
+        "kind": "conditional_family_impossibility",
+        "contradiction": "1",
+        "premises": [
+          "xor1 preserves bit one; the target does not."
+        ],
+        "semantic_cuts_proved_by_this_checker": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "source_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "q4_payload_bytes": 4866096,
+  "q4_images": {
+    "gate": {
+      "sha256": "783fae43fe8dcde98b251207925dcf958a5f8b999949912c7c9a80635415521a",
+      "payload_bytes": 1622032
+    },
+    "up": {
+      "sha256": "ba094ad632d88ca5befda13d1f24d023e8036dc244119c2fa75986d3d2cc703a",
+      "payload_bytes": 1622032
+    },
+    "down": {
+      "sha256": "003a3e761af89ff25a10f00e5907a7a73a0d93b5c31ebe0899a11847a3eb4921",
+      "payload_bytes": 1622032
+    }
+  },
+  "program": {
+    "input": 1024,
+    "hidden": 3072,
+    "output": 1024,
+    "quadratic_bilinear_feature_bytes": 6144,
+    "maximum_features_at_q4_payload": 792,
+    "dense_fp16_symmetric_tensor_bytes": 1074790400,
+    "optimistic_quadratic_tensor_rank_floor_at_budget": 0.06361658859604302,
+    "spectrum_trace": 253.1015325812623
+  },
+  "source_pair_control": {
+    "gate_min_cosine_quantiles": [
+      -0.37750154733657837,
+      -0.11797122284770012,
+      -0.08782611973583698
+    ],
+    "median_absolute_up_cosine_at_nearest_gate": 0.02593875490128994,
+    "median_absolute_down_cosine_at_nearest_gate": 0.029100585728883743,
+    "gate_pairs_with_cosine_below_minus_point_nine": 0
+  },
+  "panels": {
+    "train": {
+      "preactivation_sha256": "8e73299857cd3f2119a9d5238ed8ca7f5d67480532fffb9ac4a4cbe155148d03",
+      "states": 1024,
+      "source_replay_relative_rms": 1.0163581171496052e-06,
+      "q4_saved_relative_rms": 0.16516215114333083,
+      "even_only_actual_relative_rms": 1.4583474308915478,
+      "even_to_target_norm_ratio": 2.004738551711606,
+      "odd_to_target_norm_ratio": 1.4583474308915478,
+      "even_odd_cosine": -0.8800356653686221,
+      "symmetric_even_optimal_relative_rms": 0.588265553468736,
+      "symmetric_q4_relative_rms": 0.19662316875105706,
+      "q4_replay_relative_rms": 9.64148751219622e-07
+    },
+    "held": {
+      "preactivation_sha256": "32b109fc68cb57e77ca6b403c77db2ab089b189421ea8f14b544e82b1c4e87ba",
+      "states": 1024,
+      "source_replay_relative_rms": 1.0105270695494471e-06,
+      "q4_saved_relative_rms": 0.16252627003526118,
+      "even_only_actual_relative_rms": 1.4686813079843648,
+      "even_to_target_norm_ratio": 2.016298152391301,
+      "odd_to_target_norm_ratio": 1.4686813079843648,
+      "even_odd_cosine": -0.8817890921069859,
+      "symmetric_even_optimal_relative_rms": 0.5887700466367946,
+      "symmetric_q4_relative_rms": 0.19235986722056483,
+      "q4_replay_relative_rms": 9.683550791803288e-07
+    }
+  }
+}

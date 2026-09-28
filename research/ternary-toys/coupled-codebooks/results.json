@@ -1,0 +1,767 @@
+{
+  "seed": 230923,
+  "train_columns": 64,
+  "held_columns": 1024,
+  "consumer": [
+    [
+      1.0,
+      0.75
+    ],
+    [
+      0.2,
+      -0.85
+    ]
+  ],
+  "input_transform": [
+    [
+      1.7,
+      0.3,
+      0.0,
+      0.0
+    ],
+    [
+      0.2,
+      0.55,
+      0.15,
+      0.0
+    ],
+    [
+      0.0,
+      0.3,
+      1.1,
+      0.0
+    ],
+    [
+      0.3,
+      0.0,
+      -0.1,
+      0.75
+    ]
+  ],
+  "cases": {
+    "paired_motif": [
+      {
+        "source_ratio": [
+          1,
+          2
+        ],
+        "source_assignment": [
+          2,
+          3,
+          1,
+          0
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 0.422607421875,
+            "label": [
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              -1,
+              -1,
+              1
+            ],
+            "train_mse": 0.05466818498439663,
+            "held_mse": 0.07216079031103964,
+            "raw_weight_mse": 0.018002210243618717,
+            "nonzero_terms": 8
+          },
+          "paired": {
+            "scale": 0.28076171875,
+            "label": [
+              1,
+              2,
+              [
+                2,
+                3,
+                1,
+                0
+              ]
+            ],
+            "train_mse": 0.0019613898991655,
+            "held_mse": 0.0021794234809783394,
+            "raw_weight_mse": 0.00035743993262729254,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "source_ratio": [
+          1,
+          3
+        ],
+        "source_assignment": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 1.2294921875,
+            "label": [
+              1,
+              0,
+              -1,
+              0,
+              0,
+              -1,
+              0,
+              1
+            ],
+            "train_mse": 0.3566700491154524,
+            "held_mse": 0.4467355506863626,
+            "raw_weight_mse": 0.07664240078084417,
+            "nonzero_terms": 4
+          },
+          "paired": {
+            "scale": 0.333251953125,
+            "label": [
+              1,
+              3,
+              [
+                2,
+                1,
+                3,
+                0
+              ]
+            ],
+            "train_mse": 0.0034095320662768103,
+            "held_mse": 0.0031326140837737615,
+            "raw_weight_mse": 0.00042754263669094546,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "source_ratio": [
+          2,
+          3
+        ],
+        "source_assignment": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 1.001953125,
+            "label": [
+              -1,
+              1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            "train_mse": 0.16385462973323683,
+            "held_mse": 0.196686872437504,
+            "raw_weight_mse": 0.05597088583233132,
+            "nonzero_terms": 8
+          },
+          "paired": {
+            "scale": 0.40283203125,
+            "label": [
+              2,
+              3,
+              [
+                3,
+                0,
+                2,
+                1
+              ]
+            ],
+            "train_mse": 0.021357612569481432,
+            "held_mse": 0.021100296229223492,
+            "raw_weight_mse": 0.0031644311584987555,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "source_ratio": [
+          1,
+          2
+        ],
+        "source_assignment": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 0.69140625,
+            "label": [
+              1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              -1,
+              -1
+            ],
+            "train_mse": 0.15213598834346165,
+            "held_mse": 0.20762282730355036,
+            "raw_weight_mse": 0.05871365619450971,
+            "nonzero_terms": 8
+          },
+          "paired": {
+            "scale": 0.456298828125,
+            "label": [
+              1,
+              2,
+              [
+                0,
+                2,
+                3,
+                1
+              ]
+            ],
+            "train_mse": 0.009387702767302386,
+            "held_mse": 0.009243421070487493,
+            "raw_weight_mse": 0.0023292815949129673,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "source_ratio": [
+          1,
+          3
+        ],
+        "source_assignment": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 1.779296875,
+            "label": [
+              1,
+              0,
+              0,
+              -1,
+              0,
+              -1,
+              1,
+              0
+            ],
+            "train_mse": 0.7559216433686231,
+            "held_mse": 0.9372360551245826,
+            "raw_weight_mse": 0.14603877196968296,
+            "nonzero_terms": 4
+          },
+          "paired": {
+            "scale": 0.52197265625,
+            "label": [
+              1,
+              3,
+              [
+                2,
+                1,
+                0,
+                3
+              ]
+            ],
+            "train_mse": 0.008342619825151942,
+            "held_mse": 0.00919897044159707,
+            "raw_weight_mse": 0.001968088270170626,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "source_ratio": [
+          2,
+          3
+        ],
+        "source_assignment": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 1.474609375,
+            "label": [
+              -1,
+              1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            "train_mse": 0.3964257594356795,
+            "held_mse": 0.4808818795801245,
+            "raw_weight_mse": 0.1209382900976938,
+            "nonzero_terms": 8
+          },
+          "paired": {
+            "scale": 0.59326171875,
+            "label": [
+              2,
+              3,
+              [
+                3,
+                0,
+                2,
+                1
+              ]
+            ],
+            "train_mse": 0.016105783048196542,
+            "held_mse": 0.020454065363948153,
+            "raw_weight_mse": 0.0061678665892786295,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "source_ratio": [
+          1,
+          2
+        ],
+        "source_assignment": [
+          3,
+          0,
+          2,
+          1
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 0.98095703125,
+            "label": [
+              -1,
+              1,
+              1,
+              -1,
+              -1,
+              1,
+              1,
+              -1
+            ],
+            "train_mse": 0.6107131336949898,
+            "held_mse": 0.7566842415288044,
+            "raw_weight_mse": 0.1451369749589438,
+            "nonzero_terms": 8
+          },
+          "paired": {
+            "scale": 0.662109375,
+            "label": [
+              1,
+              2,
+              [
+                3,
+                0,
+                2,
+                1
+              ]
+            ],
+            "train_mse": 0.04314907253569089,
+            "held_mse": 0.04337293154075694,
+            "raw_weight_mse": 0.005754401081012063,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "source_ratio": [
+          1,
+          3
+        ],
+        "source_assignment": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "arms": {
+          "scalar": {
+            "scale": 2.408203125,
+            "label": [
+              1,
+              0,
+              0,
+              -1,
+              0,
+              -1,
+              1,
+              0
+            ],
+            "train_mse": 1.3537282153111327,
+            "held_mse": 1.7545887355249934,
+            "raw_weight_mse": 0.2766550279944019,
+            "nonzero_terms": 4
+          },
+          "paired": {
+            "scale": 0.705078125,
+            "label": [
+              1,
+              3,
+              [
+                2,
+                1,
+                0,
+                3
+              ]
+            ],
+            "train_mse": 0.018623406028471123,
+            "held_mse": 0.019322795348706706,
+            "raw_weight_mse": 0.002744667883275427,
+            "nonzero_terms": 8
+          }
+        }
+      }
+    ],
+    "unstructured": [
+      {
+        "arms": {
+          "scalar": {
+            "scale": 0.76025390625,
+            "label": [
+              1,
+              0,
+              -1,
+              1,
+              1,
+              1,
+              -1,
+              -1
+            ],
+            "train_mse": 0.21179242563100065,
+            "held_mse": 0.21416544003891325,
+            "raw_weight_mse": 0.08812390036197702,
+            "nonzero_terms": 7
+          },
+          "paired": {
+            "scale": 0.39892578125,
+            "label": [
+              1,
+              2,
+              [
+                2,
+                0,
+                3,
+                2
+              ]
+            ],
+            "train_mse": 0.8867465152386309,
+            "held_mse": 0.9536838382826548,
+            "raw_weight_mse": 0.27087166872528856,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "arms": {
+          "scalar": {
+            "scale": 0.42626953125,
+            "label": [
+              1,
+              -1,
+              0,
+              -1,
+              -1,
+              -1,
+              1,
+              1
+            ],
+            "train_mse": 0.15401147052406783,
+            "held_mse": 0.20658662050136484,
+            "raw_weight_mse": 0.059645907331850594,
+            "nonzero_terms": 7
+          },
+          "paired": {
+            "scale": 0.10992431640625,
+            "label": [
+              0,
+              3,
+              [
+                1,
+                1,
+                0,
+                0
+              ]
+            ],
+            "train_mse": 0.3486862330005338,
+            "held_mse": 0.4792627136252701,
+            "raw_weight_mse": 0.15918970053796969,
+            "nonzero_terms": 4
+          }
+        }
+      },
+      {
+        "arms": {
+          "scalar": {
+            "scale": 0.490966796875,
+            "label": [
+              1,
+              0,
+              -1,
+              0,
+              1,
+              1,
+              -1,
+              -1
+            ],
+            "train_mse": 0.132694840928,
+            "held_mse": 0.16610868655603636,
+            "raw_weight_mse": 0.03626426643974403,
+            "nonzero_terms": 6
+          },
+          "paired": {
+            "scale": 0.2822265625,
+            "label": [
+              1,
+              2,
+              [
+                0,
+                0,
+                1,
+                1
+              ]
+            ],
+            "train_mse": 0.429074558137863,
+            "held_mse": 0.396644491038639,
+            "raw_weight_mse": 0.07390693290168637,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "arms": {
+          "scalar": {
+            "scale": 1.009765625,
+            "label": [
+              -1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "train_mse": 0.395364488376333,
+            "held_mse": 0.5686671066381392,
+            "raw_weight_mse": 0.1931796921439765,
+            "nonzero_terms": 4
+          },
+          "paired": {
+            "scale": 0.2998046875,
+            "label": [
+              0,
+              3,
+              [
+                3,
+                0,
+                0,
+                0
+              ]
+            ],
+            "train_mse": 1.1533425391867151,
+            "held_mse": 1.5029164293004769,
+            "raw_weight_mse": 0.2477610987586045,
+            "nonzero_terms": 4
+          }
+        }
+      },
+      {
+        "arms": {
+          "scalar": {
+            "scale": 1.2138671875,
+            "label": [
+              -1,
+              -1,
+              0,
+              1,
+              0,
+              1,
+              -1,
+              0
+            ],
+            "train_mse": 0.2045971217697744,
+            "held_mse": 0.2617192839936848,
+            "raw_weight_mse": 0.03698306430929692,
+            "nonzero_terms": 5
+          },
+          "paired": {
+            "scale": 1.4716796875,
+            "label": [
+              0,
+              1,
+              [
+                3,
+                0,
+                1,
+                2
+              ]
+            ],
+            "train_mse": 0.7912099132067247,
+            "held_mse": 0.6854855082444188,
+            "raw_weight_mse": 0.16238626046277865,
+            "nonzero_terms": 4
+          }
+        }
+      },
+      {
+        "arms": {
+          "scalar": {
+            "scale": 0.4267578125,
+            "label": [
+              1,
+              -1,
+              1,
+              -1,
+              -1,
+              -1,
+              -1,
+              -1
+            ],
+            "train_mse": 0.19920362587508933,
+            "held_mse": 0.22128134693640208,
+            "raw_weight_mse": 0.03814689473799737,
+            "nonzero_terms": 8
+          },
+          "paired": {
+            "scale": 0.1658935546875,
+            "label": [
+              0,
+              3,
+              [
+                1,
+                2,
+                1,
+                3
+              ]
+            ],
+            "train_mse": 0.4627646682584392,
+            "held_mse": 0.7009058709476278,
+            "raw_weight_mse": 0.20278582052633856,
+            "nonzero_terms": 4
+          }
+        }
+      },
+      {
+        "arms": {
+          "scalar": {
+            "scale": 0.546875,
+            "label": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0
+            ],
+            "train_mse": 0.22239880999868422,
+            "held_mse": 0.2933399482737759,
+            "raw_weight_mse": 0.08804997979960891,
+            "nonzero_terms": 5
+          },
+          "paired": {
+            "scale": 0.177490234375,
+            "label": [
+              1,
+              3,
+              [
+                0,
+                2,
+                2,
+                2
+              ]
+            ],
+            "train_mse": 0.4132111983492459,
+            "held_mse": 0.5355599217495612,
+            "raw_weight_mse": 0.07130731057424294,
+            "nonzero_terms": 8
+          }
+        }
+      },
+      {
+        "arms": {
+          "scalar": {
+            "scale": 0.76025390625,
+            "label": [
+              1,
+              1,
+              -1,
+              0,
+              -1,
+              1,
+              0,
+              -1
+            ],
+            "train_mse": 0.4310800045216734,
+            "held_mse": 0.3813233832122116,
+            "raw_weight_mse": 0.11800783570806334,
+            "nonzero_terms": 6
+          },
+          "paired": {
+            "scale": 0.728515625,
+            "label": [
+              0,
+              1,
+              [
+                2,
+                2,
+                3,
+                1
+              ]
+            ],
+            "train_mse": 1.061109802866226,
+            "held_mse": 1.2637380261432456,
+            "raw_weight_mse": 0.1837672118456703,
+            "nonzero_terms": 4
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "paired_motif": {
+      "total_held_mse": {
+        "scalar": 4.852596952496961,
+        "paired": 0.12800451755947195
+      },
+      "paired_wins": 8,
+      "nonzero_terms": {
+        "scalar": 52,
+        "paired": 64
+      }
+    },
+    "unstructured": {
+      "total_held_mse": {
+        "scalar": 2.3131918161505283,
+        "paired": 6.5181967993318946
+      },
+      "paired_wins": 0,
+      "nonzero_terms": {
+        "scalar": 48,
+        "paired": 44
+      }
+    }
+  },
+  "candidate_counts": {
+    "scalar": 6561,
+    "paired": 4096
+  },
+  "bytes": {
+    "scalar_per_group": 4,
+    "paired_per_group": 4
+  }
+}

@@ -1,0 +1,41 @@
+HIP version: 7.2.53211-9999
+nixpkgs-AMD clang version 22.0.0 (https://github.com/ROCm/llvm-project/tree/rocm-7.2.3 rocm-7.2.3)
+Target: x86_64-unknown-linux-gnu
+
+Device symbols (complete per-kernel body/helper/descriptor):
+0000000000000c80 0000000000000040 R _Z4quipILi0EEvPKfPfPKhPKj.kd
+0000000000000cc0 0000000000000040 R _Z4quipILi1EEvPKfPfPKhPKj.kd
+0000000000000d00 0000000000000040 R _Z4quipILi2EEvPKfPfPKhPKj.kd
+0000000000006900 0000000000000bdc T _Z4quipILi2EEvPKfPfPKhPKj
+0000000000004a00 0000000000000bf0 T _Z4quipILi0EEvPKfPfPKhPKj
+0000000000005600 000000000000125c T _Z4quipILi1EEvPKfPfPKhPKj
+0000000000001e00 0000000000002a78 t _Z13transform1024Pfi
+
+Host symbols (preparation, transfer/allocation and launch wrappers):
+00000000000003d0 0000000000000005 T release_device_magnitudes
+0000000000000360 0000000000000063 T prepare_device_magnitudes
+00000000000004c0 00000000000000d5 T launch_direct
+00000000000003e0 00000000000000d5 T launch_original
+00000000000005a0 00000000000000d9 T launch_prepared
+0000000000000000 000000000000035a T prepare_magnitudes
+
+Device resources in corresponding kernel order original/direct/prepared:
+		.amdhsa_group_segment_fixed_size 4608
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_kernarg_size 32
+		.amdhsa_next_free_vgpr 44
+		.amdhsa_next_free_sgpr 33
+		.amdhsa_group_segment_fixed_size 4608
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_kernarg_size 32
+		.amdhsa_next_free_vgpr 44
+		.amdhsa_next_free_sgpr 33
+		.amdhsa_group_segment_fixed_size 4608
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_kernarg_size 32
+		.amdhsa_next_free_vgpr 44
+		.amdhsa_next_free_sgpr 33
+
+Assembly SHA256:
+6f50d33022aaf24d59bc2394ff080e664960f2bb37c7ba227ce33f4641927889  assembly-gfx1151.s
+31c442e42bbf0d3af2672c1f6cd11d1969a3eaf6ccf565fac7ba5b0b3adfbcb3  assembly-host.s

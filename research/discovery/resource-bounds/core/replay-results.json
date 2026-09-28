@@ -1,0 +1,310 @@
+{
+  "accepted": true,
+  "results": [
+    {
+      "name": "separate-toggle optimum and strict domination",
+      "checks": {
+        "relaxation": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "2",
+          "relaxed_feasible_time": "2",
+          "proves_program_optimality": false
+        },
+        "attaining_schedule": {
+          "valid": true,
+          "status": "family_optimum_under_premises",
+          "lower_bound": "2",
+          "upper_bound": "2",
+          "membership": {
+            "allowed_operations_only": true,
+            "outside_operations": [],
+            "satisfies_count_obligations": true,
+            "failed_obligations": [],
+            "failed_class_restrictions": [],
+            "failed_necessary_cuts": []
+          },
+          "lower": {
+            "valid": true,
+            "kind": "conditional_resource_lower_bound",
+            "lower_bound": "2",
+            "unit": "abstract ticks",
+            "operation_slack": {
+              "xor1": "0",
+              "xor2": "0"
+            },
+            "premises": [
+              "Only xor1 changes bit zero in this grammar; the required output changes it.",
+              "Only xor2 changes bit one in this grammar; the required output changes it."
+            ],
+            "machine_assumptions": [
+              "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+              "Operands read at issue; inputs already in registers; output ready after latency."
+            ],
+            "semantic_cuts_proved_by_this_checker": false
+          },
+          "upper": {
+            "valid": true,
+            "kind": "model_feasible_schedule",
+            "upper_bound": "2",
+            "unit": "abstract ticks",
+            "counts": {
+              "xor1": 1,
+              "xor2": 1
+            },
+            "resource_peaks": {
+              "valu": "1"
+            },
+            "register_peak": 1,
+            "register_assignment": {
+              "x": 0,
+              "a": 0,
+              "b": 0
+            },
+            "correctness_replayed": true,
+            "reachable_inputs_replayed": 4,
+            "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+            "machine_assumptions": [
+              "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+              "Operands read at issue; inputs already in registers; output ready after latency."
+            ]
+          },
+          "native_runtime_claim": false
+        },
+        "competitor_schedule": {
+          "valid": true,
+          "status": "family_strictly_dominated_under_premises",
+          "lower_bound": "2",
+          "upper_bound": "1",
+          "membership": {
+            "allowed_operations_only": false,
+            "outside_operations": [
+              "xor3"
+            ],
+            "satisfies_count_obligations": false,
+            "failed_obligations": [
+              "low",
+              "high"
+            ],
+            "failed_class_restrictions": [],
+            "failed_necessary_cuts": [
+              "low",
+              "high"
+            ]
+          },
+          "lower": {
+            "valid": true,
+            "kind": "conditional_resource_lower_bound",
+            "lower_bound": "2",
+            "unit": "abstract ticks",
+            "operation_slack": {
+              "xor1": "0",
+              "xor2": "0"
+            },
+            "premises": [
+              "Only xor1 changes bit zero in this grammar; the required output changes it.",
+              "Only xor2 changes bit one in this grammar; the required output changes it."
+            ],
+            "machine_assumptions": [
+              "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+              "Operands read at issue; inputs already in registers; output ready after latency."
+            ],
+            "semantic_cuts_proved_by_this_checker": false
+          },
+          "upper": {
+            "valid": true,
+            "kind": "model_feasible_schedule",
+            "upper_bound": "1",
+            "unit": "abstract ticks",
+            "counts": {
+              "xor3": 1
+            },
+            "resource_peaks": {
+              "valu": "1"
+            },
+            "register_peak": 1,
+            "register_assignment": {
+              "x": 0,
+              "b": 0
+            },
+            "correctness_replayed": true,
+            "reachable_inputs_replayed": 4,
+            "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+            "machine_assumptions": [
+              "Declared one-slot unary XOR machine, not a gfx1151 cycle model.",
+              "Operands read at issue; inputs already in registers; output ready after latency."
+            ]
+          },
+          "native_runtime_claim": false
+        }
+      }
+    },
+    {
+      "name": "independent ports, latency 1",
+      "checks": {
+        "relaxation": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "1",
+          "relaxed_feasible_time": "1",
+          "proves_program_optimality": false
+        },
+        "schedule": {
+          "valid": true,
+          "status": "family_optimum_under_premises",
+          "lower_bound": "1",
+          "upper_bound": "1",
+          "membership": {
+            "allowed_operations_only": true,
+            "outside_operations": [],
+            "satisfies_count_obligations": true,
+            "failed_obligations": [],
+            "failed_class_restrictions": [],
+            "failed_necessary_cuts": []
+          },
+          "lower": {
+            "valid": true,
+            "kind": "conditional_resource_lower_bound",
+            "lower_bound": "1",
+            "unit": "abstract ticks",
+            "operation_slack": {
+              "xor1": "0",
+              "xor2": "0"
+            },
+            "premises": [
+              "Required low-bit change needs xor1.",
+              "Required high-bit change needs xor2."
+            ],
+            "machine_assumptions": [
+              "Two independent issue resources, each one operation per tick.",
+              "These are declared abstract ports, not inferred GPU ports.",
+              "Operands read at issue; homogeneous register reuse is allowed after the last read."
+            ],
+            "semantic_cuts_proved_by_this_checker": false
+          },
+          "upper": {
+            "valid": true,
+            "kind": "model_feasible_schedule",
+            "upper_bound": "1",
+            "unit": "abstract ticks",
+            "counts": {
+              "xor1": 1,
+              "xor2": 1
+            },
+            "resource_peaks": {
+              "left": "1",
+              "right": "1"
+            },
+            "register_peak": 2,
+            "register_assignment": {
+              "x": 0,
+              "y": 1,
+              "a": 0,
+              "b": 1
+            },
+            "correctness_replayed": true,
+            "reachable_inputs_replayed": 16,
+            "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+            "machine_assumptions": [
+              "Two independent issue resources, each one operation per tick.",
+              "These are declared abstract ports, not inferred GPU ports.",
+              "Operands read at issue; homogeneous register reuse is allowed after the last read."
+            ]
+          },
+          "native_runtime_claim": false
+        }
+      }
+    },
+    {
+      "name": "independent ports, latency 4",
+      "checks": {
+        "relaxation": {
+          "valid": true,
+          "relaxation_optimal": true,
+          "lower_bound": "1",
+          "relaxed_feasible_time": "1",
+          "proves_program_optimality": false
+        },
+        "schedule": {
+          "valid": true,
+          "status": "bounds_leave_gap",
+          "lower_bound": "1",
+          "upper_bound": "4",
+          "membership": {
+            "allowed_operations_only": true,
+            "outside_operations": [],
+            "satisfies_count_obligations": true,
+            "failed_obligations": [],
+            "failed_class_restrictions": [],
+            "failed_necessary_cuts": []
+          },
+          "lower": {
+            "valid": true,
+            "kind": "conditional_resource_lower_bound",
+            "lower_bound": "1",
+            "unit": "abstract ticks",
+            "operation_slack": {
+              "xor1": "0",
+              "xor2": "0"
+            },
+            "premises": [
+              "Required low-bit change needs xor1.",
+              "Required high-bit change needs xor2."
+            ],
+            "machine_assumptions": [
+              "Two independent issue resources, each one operation per tick.",
+              "These are declared abstract ports, not inferred GPU ports.",
+              "Operands read at issue; homogeneous register reuse is allowed after the last read."
+            ],
+            "semantic_cuts_proved_by_this_checker": false
+          },
+          "upper": {
+            "valid": true,
+            "kind": "model_feasible_schedule",
+            "upper_bound": "4",
+            "unit": "abstract ticks",
+            "counts": {
+              "xor1": 1,
+              "xor2": 1
+            },
+            "resource_peaks": {
+              "left": "1",
+              "right": "1"
+            },
+            "register_peak": 2,
+            "register_assignment": {
+              "x": 0,
+              "y": 1,
+              "a": 0,
+              "b": 1
+            },
+            "correctness_replayed": true,
+            "reachable_inputs_replayed": 16,
+            "state_contract": "SSA values; read at start, result after latency; homogeneous registers; half-open reservations",
+            "machine_assumptions": [
+              "Two independent issue resources, each one operation per tick.",
+              "These are declared abstract ports, not inferred GPU ports.",
+              "Operands read at issue; homogeneous register reuse is allowed after the last read."
+            ]
+          },
+          "native_runtime_claim": false
+        }
+      }
+    },
+    {
+      "name": "high bit cannot change",
+      "checks": {
+        "impossibility": {
+          "valid": true,
+          "kind": "conditional_family_impossibility",
+          "contradiction": "1",
+          "premises": [
+            "xor1 preserves bit one; the target does not."
+          ],
+          "semantic_cuts_proved_by_this_checker": false
+        }
+      }
+    }
+  ],
+  "proposal_solver_used": false
+}

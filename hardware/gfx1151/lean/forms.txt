@@ -1,0 +1,32 @@
+# Assembly forms fed to the gfx1151 assembler by probe-eligibility.sh.
+# Format: INSTRUCTION_NAME<TAB>assembly form.
+# Both accepted and rejected forms belong here: a rejection is the evidence that a modifier
+# has no gfx1151 form, which is why the Lean model declines to give it a meaning.
+V_ADD_NC_U32	v_add_nc_u32 v0, v1, v2
+V_ADD_NC_U32	v_add_nc_u32_e64 v0, v1, v2 clamp
+V_SUB_NC_U32	v_sub_nc_u32 v0, v1, v2
+V_SUB_NC_U32	v_sub_nc_u32_e64 v0, v1, v2 clamp
+V_MUL_LO_U32	v_mul_lo_u32 v0, v1, v2
+V_MUL_LO_U32	v_mul_lo_u32 v0, v1, v2 clamp
+V_LSHLREV_B32	v_lshlrev_b32 v0, v1, v2
+V_LSHRREV_B32	v_lshrrev_b32 v0, v1, v2
+V_ASHRREV_I32	v_ashrrev_i32 v0, v1, v2
+V_AND_B32	v_and_b32 v0, v1, v2
+V_AND_B32	v_and_b32_e64 v0, v1, v2 clamp
+V_OR_B32	v_or_b32 v0, v1, v2
+V_XOR_B32	v_xor_b32 v0, v1, v2
+V_LSHL_OR_B32	v_lshl_or_b32 v0, v1, v2, v3
+V_BFE_U32	v_bfe_u32 v0, v1, v2, v3
+V_PERM_B32	v_perm_b32 v0, v1, v2, v3
+V_DOT4_I32_IU8	v_dot4_i32_iu8 v0, v1, v2, v3
+V_DOT4_I32_IU8	v_dot4_i32_iu8 v0, v1, v2, v3 neg_lo:[1,1,0]
+V_DOT4_I32_IU8	v_dot4_i32_iu8 v0, v1, v2, v3 clamp
+V_DOT8_I32_IU4	v_dot8_i32_iu4 v0, v1, v2, v3
+V_DOT8_I32_IU4	v_dot8_i32_iu4 v0, v1, v2, v3 neg_lo:[1,1,0]
+V_DOT8_I32_IU4	v_dot8_i32_iu4 v0, v1, v2, v3 clamp
+V_WMMA_F32_16X16X16_F16	v_wmma_f32_16x16x16_f16 v[0:7], v[8:15], v[16:23], v[24:31]
+V_WMMA_I32_16X16X16_IU8	v_wmma_i32_16x16x16_iu8 v[0:7], v[8:11], v[12:15], v[16:23]
+V_WMMA_I32_16X16X16_IU4	v_wmma_i32_16x16x16_iu4 v[0:7], v[8:9], v[10:11], v[12:19]
+V_WMMA_F16_16X16X16_F16	v_wmma_f16_16x16x16_f16 v[0:7], v[8:15], v[16:23], v[24:31]
+V_WMMA_BF16_16X16X16_BF16	v_wmma_bf16_16x16x16_bf16 v[0:7], v[8:15], v[16:23], v[24:31]
+V_WMMA_F32_16X16X16_BF16	v_wmma_f32_16x16x16_bf16 v[0:7], v[8:15], v[16:23], v[24:31]

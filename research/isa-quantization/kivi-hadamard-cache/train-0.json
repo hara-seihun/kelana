@@ -1,0 +1,62 @@
+{
+  "panel": "train",
+  "window": 0,
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "method": "fixed Sylvester H128 Q/K post-RoPE gauge, frozen KIVI V and 4bit G32 R32",
+  "preflush_peak_bytes": 52400,
+  "postflush_final_bytes": 46592,
+  "final_image_sha256": "fc7eaa3340eac414717c37408fa57943015053f551eb578a68d81b3bfa03a490",
+  "flush_log_sha256": "e0e8a01e8682182e1fdc18367077909a33687ccbeadc190805bc34c795cf1092",
+  "frozen_original_kivi_final_sha256": "2f70b7260466b2f6917698d593cbeab4ba1ca21a5a50e20eb081326b28b2b364",
+  "source_unrounded_rotation_score_max_abs": 4.1472498934719723e-05,
+  "uncompressed_online_vs_teacher_max_score_abs": 1.33514404296875e-05,
+  "key_coordinate_prefix_weighted_rel_sq": 0.00044751865152199683,
+  "unquantized_transform_controls": [
+    {
+      "fp32_orthogonal": {
+        "attention_kl": -1.342525757230817e-09,
+        "post_o_sse": 1.7972315302650088e-10,
+        "max_causal_score_abs": 2.849102020263672e-05
+      },
+      "bf16_recent_orthogonal": {
+        "attention_kl": 0.0008877905202098191,
+        "post_o_sse": 0.02690057083964348,
+        "max_causal_score_abs": 0.37437987327575684
+      }
+    },
+    {
+      "fp32_orthogonal": {
+        "attention_kl": 4.171129219798786e-09,
+        "post_o_sse": 6.143524577950643e-10,
+        "max_causal_score_abs": 4.6640634536743164e-05
+      },
+      "bf16_recent_orthogonal": {
+        "attention_kl": 0.0008851861348375678,
+        "post_o_sse": 0.0826219767332077,
+        "max_causal_score_abs": 0.4121849536895752
+      }
+    }
+  ],
+  "gqa_pair": {
+    "post_o_sse": 1.4111928939819336,
+    "post_o_ref_sq": 513.1756591796875,
+    "control_post_o_sse": 0.07473926991224289,
+    "control_post_o_ref_sq": 513.1756591796875,
+    "post_o_rel_sq": 0.0027499217251218205,
+    "control_post_o_rel_sq": 0.00014564071497801315
+  },
+  "heads": {
+    "head0": {
+      "attention_kl": 0.08620672672986984,
+      "post_o_sse": 0.9656428694725037,
+      "post_o_ref_sq": 51.701820373535156,
+      "control_attention_kl": 0.0037097299937158823
+    },
+    "head1": {
+      "attention_kl": 0.03508932143449783,
+      "post_o_sse": 0.41961005330085754,
+      "post_o_ref_sq": 441.2837829589844,
+      "control_attention_kl": 0.0011879631783813238
+    }
+  }
+}

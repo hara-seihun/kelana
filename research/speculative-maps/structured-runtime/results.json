@@ -1,0 +1,33 @@
+{
+  "contract": "All ordinary Qwen tokenizer tokenizations of a 2\u20134 item bounded ASCII JSON batch, fixed field order. Acceptance stops outside ordinary vocabulary; no canonical-token restriction.",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "vocabulary_index_s": 1.797743,
+  "grammar_build_s": 0.008033,
+  "nfa_states": 5989,
+  "ordinary_vocab_size": 151643,
+  "root_allowed_tokens": 2,
+  "rows": [
+    {
+      "records": 2,
+      "bytes": 213,
+      "canonical_tokens": 63,
+      "canonical_singleton_steps_under_byte_contract": 0,
+      "canonical_branch_steps_under_byte_contract": 63,
+      "largest_allowed_set": 89933,
+      "trace_cpu_support_s": 2.91463,
+      "cached_states": 64,
+      "example_json": "[{\"action\":\"call\",\"name\":\"search\",\"id\":1000,\"message\":\"Look up \\\"docs\\\" and report the key result\",\"value\":-3},{\"action\":\"notify\",\"name\":\"fetch\",\"id\":1011,\"message\":\"Fetch /notes and list the changes\",\"value\":-2}]"
+    },
+    {
+      "records": 4,
+      "bytes": 414,
+      "canonical_tokens": 121,
+      "canonical_singleton_steps_under_byte_contract": 0,
+      "canonical_branch_steps_under_byte_contract": 121,
+      "largest_allowed_set": 89933,
+      "trace_cpu_support_s": 2.332987,
+      "cached_states": 122,
+      "example_json": "[{\"action\":\"call\",\"name\":\"search\",\"id\":1000,\"message\":\"Look up \\\"docs\\\" and report the key result\",\"value\":-3},{\"action\":\"notify\",\"name\":\"fetch\",\"id\":1011,\"message\":\"Fetch /notes and list the changes\",\"value\":-2},{\"action\":\"cancel\",\"name\":\"notify\",\"id\":1022,\"message\":\"Send a brief summary to the team\",\"value\":-1},{\"action\":\"call\",\"name\":\"summarize\",\"id\":1033,\"message\":\"Check the latest build status\",\"value\":0}]"
+    }
+  ]
+}

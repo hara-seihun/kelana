@@ -1,0 +1,18 @@
+{
+  "grammar": "three fixed-shape sparse matrices; one byte row, one byte column, one byte generic rational code per nonzero, one count byte per matrix",
+  "generic_nonzero_rational_dictionary": [
+    "-4/5",
+    "3/5",
+    "4/5",
+    "1"
+  ],
+  "source_nonzeros": 14,
+  "transformed_nonzeros": 8,
+  "source_bytes": 45,
+  "transformed_bytes": 27,
+  "saved_bytes": 18,
+  "runtime_rotation_bytes": 0,
+  "exact_inputs_replayed": 97,
+  "normalizer": "x/(1+sum x_i^2), rational isotropic analogue of RMSNorm",
+  "branch": "two nonlinear square units with shared input and one output projection"
+}

@@ -1,0 +1,51 @@
+# bench (gfx1151, Radeon 8060S), 2026-09-19T18:20:49-07:00
+
+--- 1 wave(s)/SIMD  (40 CU, 80 SIMD, grid 20 x 128 thr = 80 waves) ---
+raw WMMA   f16 :    0.787 ms   12.299 ns/instr/wave  (81.3 instr/SIMD/us)
+raw WMMA   iu8 :    0.767 ms   11.980 ns/instr/wave  (83.5 instr/SIMD/us)  iu8 speedup 1.027x
+core 32x128x8  baseline 16xIU8 :    0.460 ms   230.07 ns/tile/wave   22.79 TOPS
+core 32x128x8  candidate 8xF16 :    0.300 ms   149.81 ns/tile/wave   35.00 TOPS   candidate/baseline 1.536x
+core 32x128x8  deferred  8xF16 :    0.256 ms   128.10 ns/tile/wave   40.93 TOPS   deferred/baseline  1.796x
+digit prep (one 128x8 activation block, loads+digits+L1 edge+fp16 stores) : 1701.50 ns/block/wave
+    = 1328.3% of one K128 candidate tile, 10.38% amortized over a 4096-row matrix (128 row tiles)
+
+--- 2 wave(s)/SIMD  (40 CU, 80 SIMD, grid 40 x 128 thr = 160 waves) ---
+raw WMMA   f16 :    1.547 ms   24.179 ns/instr/wave  (82.7 instr/SIMD/us)
+raw WMMA   iu8 :    1.529 ms   23.885 ns/instr/wave  (83.7 instr/SIMD/us)  iu8 speedup 1.012x
+core 32x128x8  baseline 16xIU8 :    0.914 ms   457.18 ns/tile/wave   22.94 TOPS
+core 32x128x8  candidate 8xF16 :    0.572 ms   286.19 ns/tile/wave   36.64 TOPS   candidate/baseline 1.597x
+core 32x128x8  deferred  8xF16 :    0.500 ms   250.09 ns/tile/wave   41.93 TOPS   deferred/baseline  1.828x
+digit prep (one 128x8 activation block, loads+digits+L1 edge+fp16 stores) : 1809.26 ns/block/wave
+    = 723.4% of one K128 candidate tile, 5.65% amortized over a 4096-row matrix (128 row tiles)
+
+--- 4 wave(s)/SIMD  (40 CU, 80 SIMD, grid 80 x 128 thr = 320 waves) ---
+raw WMMA   f16 :    3.066 ms   47.910 ns/instr/wave  (83.5 instr/SIMD/us)
+raw WMMA   iu8 :    3.042 ms   47.536 ns/instr/wave  (84.1 instr/SIMD/us)  iu8 speedup 1.008x
+core 32x128x8  baseline 16xIU8 :    1.803 ms   901.27 ns/tile/wave   23.27 TOPS
+core 32x128x8  candidate 8xF16 :    1.118 ms   559.24 ns/tile/wave   37.50 TOPS   candidate/baseline 1.612x
+core 32x128x8  deferred  8xF16 :    0.992 ms   495.94 ns/tile/wave   42.29 TOPS   deferred/baseline  1.817x
+digit prep (one 128x8 activation block, loads+digits+L1 edge+fp16 stores) : 2506.17 ns/block/wave
+    = 505.3% of one K128 candidate tile, 3.95% amortized over a 4096-row matrix (128 row tiles)
+
+# check
+  random W, random X                           candidate ok  baseline ok   fL=1 fH=1 L1lo=506 L1hi=482 max|u,v|=123 max|p|=251751
+  random W, X=127                              candidate ok  baseline ok   fL=1 fH=8 L1lo=128 L1hi=1024 max|u,v|=25 max|p|=49129
+  random W, X=-128                             candidate ok  baseline ok   fL=1 fH=8 L1lo=0 L1hi=1024 max|u,v|=21 max|p|=42995
+  random W, X=8 (low L1=1024)                  candidate ok  baseline ok   fL=8 fH=1 L1lo=1024 L1hi=128 max|u,v|=26 max|p|=40933
+  random W, X=0                                candidate ok  baseline ok   fL=1 fH=1 L1lo=0 L1hi=0 max|u,v|=0 max|p|=0
+  random W, X alternating 127/-128             candidate ok  baseline ok   fL=1 fH=8 L1lo=64 L1hi=1024 max|u,v|=25 max|p|=34806
+  W=1, low plane L1=1023                       candidate ok  baseline ok   fL=1 fH=1 L1lo=1023 L1hi=127 max|u,v|=1009 max|p|=2066432
+  W=1, high plane L1=1024 (X in [120,127])     candidate ok  baseline ok   fL=1 fH=8 L1lo=595 L1hi=1024 max|u,v|=602 max|p|=1232896
+  W=1, high plane L1=1023                      candidate ok  baseline ok   fL=1 fH=1 L1lo=585 L1hi=1023 max|u,v|=1023 max|p|=2095104
+  W=1, X=127 (max |u|,|v|)                     candidate ok  baseline ok   fL=1 fH=8 L1lo=128 L1hi=1024 max|u,v|=128 max|p|=262144
+  W=-1, X=-128                                 candidate ok  baseline ok   fL=1 fH=8 L1lo=0 L1hi=1024 max|u,v|=128 max|p|=262144
+  random W, X=-121 (high L1=1024 negative)     candidate ok  baseline ok   fL=1 fH=8 L1lo=896 L1hi=1024 max|u,v|=133 max|p|=272300
+  random2 W, random2 X                         candidate ok  baseline ok   fL=1 fH=1 L1lo=508 L1hi=494 max|u,v|=135 max|p|=276302
+check: 0 mismatches over 13 cases, max |p| seen 2095104 (bound 2095104)
+
+# decoder scan
+decoder scan: 4190209 values in [-2095104,2095104], mismatches 0 (first magnitude 0)
+
+# exactness campaign
+tiles 3000: accumulators 768000, non-exact 194004 (25.26%), worst err +0.0429688 at p=32732 (margin to 1/2: 0.4570), max|p| 802528
+rounded decode failures 0, end-to-end mismatches 0

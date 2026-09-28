@@ -1,0 +1,81 @@
+{
+  "histories": "3 current labels \u00d7 4 prior labels, every [y,x] reachable; current V=0",
+  "teacher_probability_rows": [
+    [
+      "1/80",
+      "1/20",
+      "3/40",
+      "1/10"
+    ],
+    [
+      "1/20",
+      "1/5",
+      "3/10",
+      "2/5"
+    ],
+    [
+      "1/10",
+      "2/5",
+      "3/5",
+      "4/5"
+    ]
+  ],
+  "teacher_prior_values": [
+    "1",
+    "1",
+    "1",
+    "1"
+  ],
+  "rank_zero_candidate_query_probabilities": [
+    "1/10",
+    "2/5",
+    "4/5"
+  ],
+  "candidate_prior_values": [
+    "1/8",
+    "1/2",
+    "3/4",
+    "1"
+  ],
+  "live_output_equality": "teacher p_xy * 1 = candidate q_x * candidate prior value c_y, all 12 cells",
+  "all_value_gaps_positive": true,
+  "teacher_centered_logodds_3x3_minor_interval": {
+    "rational_outer": [
+      "-9179749/500000000",
+      "-18214321/1000000000"
+    ],
+    "decimal_outer": [
+      -0.018359498,
+      -0.018214321
+    ]
+  },
+  "teacher_centered_logodds_rank": 3,
+  "candidate_centered_logodds_rank": 0,
+  "mean_attention_KL_interval": {
+    "rational_outer": [
+      "1127129/6250000",
+      "180340641/1000000000"
+    ],
+    "decimal_outer": [
+      0.18034064,
+      0.180340641
+    ]
+  },
+  "mean_post_value_output_squared_error": "0",
+  "paid_images": {
+    "full_probability_direct": {
+      "payload_bytes": 24,
+      "sha256": "f87038917ec400b9fcf878c9cbfe10ee4d26e4f877b95fe1c559cb1fcc2a2cce"
+    },
+    "rank_zero_value_transfer": {
+      "payload_bytes": 14,
+      "sha256": "174cdb5f16829e68c8c21f9ce7d16bcf1da3090753f5752442fcfe6648ef1a0e"
+    },
+    "strong_direct_output_factorization": {
+      "payload_bytes": 14,
+      "sha256": "174cdb5f16829e68c8c21f9ce7d16bcf1da3090753f5752442fcfe6648ef1a0e"
+    }
+  },
+  "reader_contract": "two-byte numerator/denominator per rational; fixed shape and dispatch common program; candidate and direct-output factorization do one multiplication per history, direct table one indexed probability read; no native timing claim",
+  "arithmetic": "64-term exact rational atanh logarithms with geometric tails; interval determinant and KL; integer byte decoding"
+}

@@ -1,0 +1,146 @@
+{
+  "contract": {
+    "teacher_cycle": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "emission_probability_one": [
+      "1/2",
+      "1/2",
+      "3/4"
+    ],
+    "initial_teacher_candidate_state": [
+      0,
+      0
+    ],
+    "horizon": 3,
+    "candidate_states": 2,
+    "candidate_transition": "any deterministic token-conditioned two-state table",
+    "candidate_emissions": "arbitrary stationary probabilities for the state budget; paid grid {1/4,1/2,3/4} for cost examples"
+  },
+  "source_only": {
+    "teacher_occupancy": [
+      1,
+      1,
+      1
+    ],
+    "one_label_centroid_probability_one": "7/12",
+    "one_label_KL_interval": [
+      0.0889502922358782,
+      0.0889502922358782
+    ],
+    "two_label_KL_interval": [
+      0,
+      0
+    ]
+  },
+  "causal_collision": {
+    "repeated_token": 0,
+    "first_repeat_probability": "1/2",
+    "second_repeat_probability": "1/4",
+    "forced_center_probability_one_if_second_candidate_state_reused": "7/12",
+    "universal_sequence_KL_lower_interval": [
+      0.02223757305896955,
+      0.02223757305896955
+    ]
+  },
+  "paid_grammar": {
+    "transition_default": "self-loop one bit, else four-bit table plus one-bit header",
+    "emission_default": "both probabilities 1/2 one bit, else two two-bit codes plus one-bit header",
+    "total_bits": [
+      2,
+      6,
+      10
+    ],
+    "grid_constant_KL_intervals": {
+      "1/4": [
+        0.8369882167858357,
+        0.8369882167858358
+      ],
+      "1/2": [
+        0.13081203594113697,
+        0.13081203594113697
+      ],
+      "3/4": [
+        0.2876820724517809,
+        0.2876820724517809
+      ]
+    },
+    "below_ten_bits_exact_best_KL_interval": [
+      0.13081203594113697,
+      0.13081203594113697
+    ],
+    "ten_bits_necessary_for_any_improvement_over_default": true,
+    "example_lower_at_lambda_1_over_100": {
+      "budget_6": [
+        0.15081203594113696,
+        0.15081203594113696
+      ],
+      "budget_10_two_class_relaxation": [
+        0.12223757305896955,
+        0.12223757305896955
+      ]
+    }
+  },
+  "generic_three_distinct_emissions": {
+    "two_labels": {
+      "minimum_interval": [
+        0.06764415113721046,
+        0.06764415113721046
+      ],
+      "sorted_weight_probability": [
+        [
+          "1",
+          "1/4"
+        ],
+        [
+          "1",
+          "1/2"
+        ],
+        [
+          "1",
+          "3/4"
+        ]
+      ],
+      "optimal_intervals_half_open": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "one_label": {
+      "minimum_interval": [
+        0.26162407188227393,
+        0.26162407188227393
+      ],
+      "sorted_weight_probability": [
+        [
+          "1",
+          "1/4"
+        ],
+        [
+          "1",
+          "1/2"
+        ],
+        [
+          "1",
+          "3/4"
+        ]
+      ],
+      "optimal_intervals_half_open": [
+        [
+          0,
+          3
+        ]
+      ]
+    }
+  },
+  "certificate": "All displayed log intervals are rational 24-term atanh-series sums with geometric tail; interval comparisons are asserted before float conversion."
+}

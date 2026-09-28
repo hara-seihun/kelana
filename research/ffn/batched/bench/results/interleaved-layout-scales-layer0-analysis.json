@@ -1,0 +1,2760 @@
+{
+  "format": "kelana-paired-analysis/1",
+  "seed": 7319,
+  "scope": "All samples retained. Bootstrap resamples rounds as independent units; thermal autocorrelation and outside GPU clients can still confound it. No automatic performance acceptance.",
+  "comparisons": [
+    {
+      "rows": 256,
+      "baseline": "gs-control-iu4-a4",
+      "candidate": "gs-absorb1024-iu4-a4-clip800",
+      "rounds": 20,
+      "geomean_round_speedup": 1.0778521629659992,
+      "round_bootstrap_95pct_interval": [
+        1.0684962304703733,
+        1.0876795157285393
+      ],
+      "total_mean_speedup": 1.0777710325563732,
+      "baseline_slower_rounds": 20,
+      "round_details": [
+        {
+          "round": 0,
+          "baseline": {
+            "mean_ms": 3.262542963027954,
+            "median_ms": 3.261109471321106,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1518000000,
+                "max": 1540000000,
+                "mean": 1529000000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60333.333333333336
+              },
+              "power_uw": {
+                "min": 86050000,
+                "max": 87077000,
+                "mean": 86713666.66666667
+              },
+              "busy_percent": {
+                "min": 42,
+                "max": 44,
+                "mean": 43.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.0438317954540253,
+            "median_ms": 3.0209975242614746,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1331000000,
+                "max": 1351000000,
+                "mean": 1340750000.0
+              },
+              "temperature_mc": {
+                "min": 53000,
+                "max": 56000,
+                "mean": 54500.0
+              },
+              "power_uw": {
+                "min": 75091000,
+                "max": 77000000,
+                "mean": 76044500.0
+              },
+              "busy_percent": {
+                "min": 31,
+                "max": 32,
+                "mean": 31.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0718538941279787
+        },
+        {
+          "round": 1,
+          "baseline": {
+            "mean_ms": 3.282458573579788,
+            "median_ms": 3.3024474382400513,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1546000000,
+                "max": 1565000000,
+                "mean": 1554500000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 61000,
+                "mean": 61000.0
+              },
+              "power_uw": {
+                "min": 88007000,
+                "max": 89018000,
+                "mean": 88282250.0
+              },
+              "busy_percent": {
+                "min": 44,
+                "max": 45,
+                "mean": 44.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.089380770921707,
+            "median_ms": 3.075536012649536,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1607000000,
+                "max": 1621000000,
+                "mean": 1614666666.6666667
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 62000,
+                "mean": 61000.0
+              },
+              "power_uw": {
+                "min": 91066000,
+                "max": 92046000,
+                "mean": 91709666.66666667
+              },
+              "busy_percent": {
+                "min": 48,
+                "max": 49,
+                "mean": 48.666666666666664
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.062497250088236
+        },
+        {
+          "round": 2,
+          "baseline": {
+            "mean_ms": 3.3301321268081665,
+            "median_ms": 3.3231875896453857,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1682000000,
+                "max": 1702000000,
+                "mean": 1691600000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61200.0
+              },
+              "power_uw": {
+                "min": 95079000,
+                "max": 97005000,
+                "mean": 96040400.0
+              },
+              "busy_percent": {
+                "min": 52,
+                "max": 54,
+                "mean": 53.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.0406267642974854,
+            "median_ms": 3.0347570180892944,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1658000000,
+                "max": 1674000000,
+                "mean": 1665750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 94049000,
+                "max": 95031000,
+                "mean": 94540000.0
+              },
+              "busy_percent": {
+                "min": 51,
+                "max": 52,
+                "mean": 51.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0952123969669685
+        },
+        {
+          "round": 3,
+          "baseline": {
+            "mean_ms": 3.3415666222572327,
+            "median_ms": 3.339787006378174,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1756000000,
+                "max": 1768000000,
+                "mean": 1762500000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 100005000,
+                "max": 100084000,
+                "mean": 100046000.0
+              },
+              "busy_percent": {
+                "min": 57,
+                "max": 58,
+                "mean": 57.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.035567134618759,
+            "median_ms": 3.0282775163650513,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1733000000,
+                "max": 1747000000,
+                "mean": 1739750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 98075000,
+                "max": 99049000,
+                "mean": 98787250.0
+              },
+              "busy_percent": {
+                "min": 56,
+                "max": 56,
+                "mean": 56.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.1008047175596083
+        },
+        {
+          "round": 4,
+          "baseline": {
+            "mean_ms": 3.305767983198166,
+            "median_ms": 3.295788526535034,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1818000000,
+                "max": 1829000000,
+                "mean": 1823000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 103087000,
+                "max": 104052000,
+                "mean": 103717333.33333333
+              },
+              "busy_percent": {
+                "min": 61,
+                "max": 62,
+                "mean": 61.333333333333336
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.0574462711811066,
+            "median_ms": 3.057096004486084,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1796000000,
+                "max": 1810000000,
+                "mean": 1803500000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61500.0
+              },
+              "power_uw": {
+                "min": 102064000,
+                "max": 103040000,
+                "mean": 102552750.0
+              },
+              "busy_percent": {
+                "min": 60,
+                "max": 61,
+                "mean": 60.25
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.08121866747347
+        },
+        {
+          "round": 5,
+          "baseline": {
+            "mean_ms": 3.300317704677582,
+            "median_ms": 3.2844884395599365,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1885000000,
+                "max": 1885000000,
+                "mean": 1885000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 107077000,
+                "max": 107077000,
+                "mean": 107077000.0
+              },
+              "busy_percent": {
+                "min": 65,
+                "max": 65,
+                "mean": 65.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.0394818782806396,
+            "median_ms": 3.0158179998397827,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1835000000,
+                "max": 1849000000,
+                "mean": 1841500000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 104082000,
+                "max": 105059000,
+                "mean": 104791750.0
+              },
+              "busy_percent": {
+                "min": 62,
+                "max": 63,
+                "mean": 62.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.085815884694299
+        },
+        {
+          "round": 6,
+          "baseline": {
+            "mean_ms": 3.3053828179836273,
+            "median_ms": 3.301367402076721,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1891000000,
+                "max": 1901000000,
+                "mean": 1896000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62333.333333333336
+              },
+              "power_uw": {
+                "min": 108009000,
+                "max": 108076000,
+                "mean": 108043333.33333333
+              },
+              "busy_percent": {
+                "min": 66,
+                "max": 66,
+                "mean": 66.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.182162255048752,
+            "median_ms": 3.176432490348816,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1925000000,
+                "max": 1933000000,
+                "mean": 1929000000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60500.0
+              },
+              "power_uw": {
+                "min": 110030000,
+                "max": 110086000,
+                "mean": 110058000.0
+              },
+              "busy_percent": {
+                "min": 68,
+                "max": 69,
+                "mean": 68.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0387222753143326
+        },
+        {
+          "round": 7,
+          "baseline": {
+            "mean_ms": 3.3498261868953705,
+            "median_ms": 3.33428692817688,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1965000000,
+                "max": 1976000000,
+                "mean": 1971250000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 112089000,
+                "max": 113062000,
+                "mean": 112805750.0
+              },
+              "busy_percent": {
+                "min": 71,
+                "max": 72,
+                "mean": 71.25
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.113909274339676,
+            "median_ms": 3.1245540380477905,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1951000000,
+                "max": 1960000000,
+                "mean": 1955333333.3333333
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61333.333333333336
+              },
+              "power_uw": {
+                "min": 112009000,
+                "max": 112059000,
+                "mean": 112034333.33333333
+              },
+              "busy_percent": {
+                "min": 70,
+                "max": 70,
+                "mean": 70.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.075762294842621
+        },
+        {
+          "round": 8,
+          "baseline": {
+            "mean_ms": 3.335541754961014,
+            "median_ms": 3.3175270557403564,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2009000000,
+                "max": 2017000000,
+                "mean": 2013000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 63000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 115053000,
+                "max": 115097000,
+                "mean": 115073750.0
+              },
+              "busy_percent": {
+                "min": 74,
+                "max": 74,
+                "mean": 74.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.076880246400833,
+            "median_ms": 3.074194550514221,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1980000000,
+                "max": 1989000000,
+                "mean": 1984500000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 113083000,
+                "max": 114028000,
+                "mean": 113556500.0
+              },
+              "busy_percent": {
+                "min": 72,
+                "max": 72,
+                "mean": 72.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0840661604762645
+        },
+        {
+          "round": 9,
+          "baseline": {
+            "mean_ms": 3.2919431030750275,
+            "median_ms": 3.2823684215545654,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2046000000,
+                "max": 2054000000,
+                "mean": 2050250000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62750.0
+              },
+              "power_uw": {
+                "min": 117077000,
+                "max": 118016000,
+                "mean": 117547250.0
+              },
+              "busy_percent": {
+                "min": 76,
+                "max": 76,
+                "mean": 76.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.108709156513214,
+            "median_ms": 3.1109745502471924,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2035000000,
+                "max": 2042000000,
+                "mean": 2038333333.3333333
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61666.666666666664
+              },
+              "power_uw": {
+                "min": 117013000,
+                "max": 117051000,
+                "mean": 117032333.33333333
+              },
+              "busy_percent": {
+                "min": 75,
+                "max": 76,
+                "mean": 75.66666666666667
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0589421323567407
+        },
+        {
+          "round": 10,
+          "baseline": {
+            "mean_ms": 3.412853866815567,
+            "median_ms": 3.4386425018310547,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2082000000,
+                "max": 2088000000,
+                "mean": 2084750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 119091000,
+                "max": 120027000,
+                "mean": 119783000.0
+              },
+              "busy_percent": {
+                "min": 78,
+                "max": 79,
+                "mean": 78.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.0095385015010834,
+            "median_ms": 3.0067780017852783,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2067000000,
+                "max": 2075000000,
+                "mean": 2071333333.3333333
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62333.333333333336
+              },
+              "power_uw": {
+                "min": 119005000,
+                "max": 119039000,
+                "mean": 119024333.33333333
+              },
+              "busy_percent": {
+                "min": 77,
+                "max": 78,
+                "mean": 77.66666666666667
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.1340123627304717
+        },
+        {
+          "round": 11,
+          "baseline": {
+            "mean_ms": 3.404504716396332,
+            "median_ms": 3.4017449617385864,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2107000000,
+                "max": 2117000000,
+                "mean": 2113000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 63000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 121041000,
+                "max": 122011000,
+                "mean": 121444800.0
+              },
+              "busy_percent": {
+                "min": 80,
+                "max": 81,
+                "mean": 80.4
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.1259340047836304,
+            "median_ms": 3.1323740482330322,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2101000000,
+                "max": 2107000000,
+                "mean": 2104333333.3333333
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 121007000,
+                "max": 121041000,
+                "mean": 121025000.0
+              },
+              "busy_percent": {
+                "min": 80,
+                "max": 80,
+                "mean": 80.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0891159925917833
+        },
+        {
+          "round": 12,
+          "baseline": {
+            "mean_ms": 3.4232838451862335,
+            "median_ms": 3.4294835329055786,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2119000000,
+                "max": 2123000000,
+                "mean": 2120750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61500.0
+              },
+              "power_uw": {
+                "min": 122037000,
+                "max": 122067000,
+                "mean": 122051750.0
+              },
+              "busy_percent": {
+                "min": 81,
+                "max": 81,
+                "mean": 81.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.145393341779709,
+            "median_ms": 3.1430130004882812,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2133000000,
+                "max": 2137000000,
+                "mean": 2135000000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60666.666666666664
+              },
+              "power_uw": {
+                "min": 123046000,
+                "max": 123069000,
+                "mean": 123057000.0
+              },
+              "busy_percent": {
+                "min": 82,
+                "max": 82,
+                "mean": 82.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0883484109015409
+        },
+        {
+          "round": 13,
+          "baseline": {
+            "mean_ms": 3.4044294357299805,
+            "median_ms": 3.400385022163391,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2157000000,
+                "max": 2161000000,
+                "mean": 2159000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61400.0
+              },
+              "power_uw": {
+                "min": 125006000,
+                "max": 125042000,
+                "mean": 125022400.0
+              },
+              "busy_percent": {
+                "min": 84,
+                "max": 84,
+                "mean": 84.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.1065797209739685,
+            "median_ms": 3.108613967895508,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2140000000,
+                "max": 2147000000,
+                "mean": 2143666666.6666667
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61333.333333333336
+              },
+              "power_uw": {
+                "min": 123098000,
+                "max": 124034000,
+                "mean": 123716666.66666667
+              },
+              "busy_percent": {
+                "min": 83,
+                "max": 83,
+                "mean": 83.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.095877054995592
+        },
+        {
+          "round": 14,
+          "baseline": {
+            "mean_ms": 3.403504252433777,
+            "median_ms": 3.411304473876953,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2173000000,
+                "max": 2179000000,
+                "mean": 2176600000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61600.0
+              },
+              "power_uw": {
+                "min": 126032000,
+                "max": 126077000,
+                "mean": 126058000.0
+              },
+              "busy_percent": {
+                "min": 85,
+                "max": 86,
+                "mean": 85.6
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.184657007455826,
+            "median_ms": 3.1694124937057495,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2168000000,
+                "max": 2173000000,
+                "mean": 2170600000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 62000,
+                "mean": 61200.0
+              },
+              "power_uw": {
+                "min": 126004000,
+                "max": 126032000,
+                "mean": 126017000.0
+              },
+              "busy_percent": {
+                "min": 85,
+                "max": 85,
+                "mean": 85.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0687192512303814
+        },
+        {
+          "round": 15,
+          "baseline": {
+            "mean_ms": 3.3499111235141754,
+            "median_ms": 3.350425958633423,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2187000000,
+                "max": 2191000000,
+                "mean": 2188750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 127035000,
+                "max": 127054000,
+                "mean": 127045750.0
+              },
+              "busy_percent": {
+                "min": 86,
+                "max": 87,
+                "mean": 86.25
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.200391322374344,
+            "median_ms": 3.21053147315979,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2181000000,
+                "max": 2184000000,
+                "mean": 2182500000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60750.0
+              },
+              "power_uw": {
+                "min": 126093000,
+                "max": 127015000,
+                "mean": 126553000.0
+              },
+              "busy_percent": {
+                "min": 86,
+                "max": 86,
+                "mean": 86.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0467192246443489
+        },
+        {
+          "round": 16,
+          "baseline": {
+            "mean_ms": 3.3217224776744843,
+            "median_ms": 3.31522798538208,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2200000000,
+                "max": 2205000000,
+                "mean": 2202200000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61800.0
+              },
+              "power_uw": {
+                "min": 128013000,
+                "max": 128040000,
+                "mean": 128027600.0
+              },
+              "busy_percent": {
+                "min": 87,
+                "max": 87,
+                "mean": 87.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.176892101764679,
+            "median_ms": 3.1849719285964966,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2214000000,
+                "max": 2224000000,
+                "mean": 2217250000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 64000,
+                "mean": 62250.0
+              },
+              "power_uw": {
+                "min": 128092000,
+                "max": 129038000,
+                "mean": 128557750.0
+              },
+              "busy_percent": {
+                "min": 88,
+                "max": 89,
+                "mean": 88.25
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0455886984104232
+        },
+        {
+          "round": 17,
+          "baseline": {
+            "mean_ms": 3.334211766719818,
+            "median_ms": 3.3273069858551025,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2234000000,
+                "max": 2238000000,
+                "mean": 2236000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62800.0
+              },
+              "power_uw": {
+                "min": 129093000,
+                "max": 130018000,
+                "mean": 129826400.0
+              },
+              "busy_percent": {
+                "min": 89,
+                "max": 89,
+                "mean": 89.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.032352089881897,
+            "median_ms": 3.0401965379714966,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2224000000,
+                "max": 2225000000,
+                "mean": 2224500000.0
+              },
+              "temperature_mc": {
+                "min": 63000,
+                "max": 64000,
+                "mean": 63500.0
+              },
+              "power_uw": {
+                "min": 129038000,
+                "max": 129040000,
+                "mean": 129039000.0
+              },
+              "busy_percent": {
+                "min": 89,
+                "max": 89,
+                "mean": 89.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0995463811228061
+        },
+        {
+          "round": 18,
+          "baseline": {
+            "mean_ms": 3.3120229244232178,
+            "median_ms": 3.3101274967193604,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2239000000,
+                "max": 2243000000,
+                "mean": 2240750000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62750.0
+              },
+              "power_uw": {
+                "min": 130031000,
+                "max": 130048000,
+                "mean": 130038500.0
+              },
+              "busy_percent": {
+                "min": 90,
+                "max": 90,
+                "mean": 90.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.0817554891109467,
+            "median_ms": 3.088315010070801,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2243000000,
+                "max": 2249000000,
+                "mean": 2246750000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62750.0
+              },
+              "power_uw": {
+                "min": 130048000,
+                "max": 130077000,
+                "mean": 130065000.0
+              },
+              "busy_percent": {
+                "min": 90,
+                "max": 90,
+                "mean": 90.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0747195668591802
+        },
+        {
+          "round": 19,
+          "baseline": {
+            "mean_ms": 3.3434264957904816,
+            "median_ms": 3.3337069749832153,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2255000000,
+                "max": 2258000000,
+                "mean": 2256333333.3333335
+              },
+              "temperature_mc": {
+                "min": 63000,
+                "max": 63000,
+                "mean": 63000.0
+              },
+              "power_uw": {
+                "min": 131015000,
+                "max": 131033000,
+                "mean": 131021666.66666667
+              },
+              "busy_percent": {
+                "min": 90,
+                "max": 91,
+                "mean": 90.33333333333333
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.1425232589244843,
+            "median_ms": 3.139153003692627,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2264000000,
+                "max": 2266000000,
+                "mean": 2265000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62500.0
+              },
+              "power_uw": {
+                "min": 131075000,
+                "max": 131084000,
+                "mean": 131079500.0
+              },
+              "busy_percent": {
+                "min": 91,
+                "max": 91,
+                "mean": 91.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0639305488974347
+        }
+      ]
+    },
+    {
+      "rows": 256,
+      "baseline": "gs-control-iu4-a4",
+      "candidate": "gs-control-iu4-a4-rowscales",
+      "rounds": 20,
+      "geomean_round_speedup": 0.9729086842384057,
+      "round_bootstrap_95pct_interval": [
+        0.9661315386593885,
+        0.9800247886445599
+      ],
+      "total_mean_speedup": 0.9729029374825906,
+      "baseline_slower_rounds": 1,
+      "round_details": [
+        {
+          "round": 0,
+          "baseline": {
+            "mean_ms": 3.262542963027954,
+            "median_ms": 3.261109471321106,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1518000000,
+                "max": 1540000000,
+                "mean": 1529000000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60333.333333333336
+              },
+              "power_uw": {
+                "min": 86050000,
+                "max": 87077000,
+                "mean": 86713666.66666667
+              },
+              "busy_percent": {
+                "min": 42,
+                "max": 44,
+                "mean": 43.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.411425143480301,
+            "median_ms": 3.4074440002441406,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1427000000,
+                "max": 1451000000,
+                "mean": 1438000000.0
+              },
+              "temperature_mc": {
+                "min": 58000,
+                "max": 59000,
+                "mean": 58500.0
+              },
+              "power_uw": {
+                "min": 81033000,
+                "max": 82076000,
+                "mean": 81549500.0
+              },
+              "busy_percent": {
+                "min": 37,
+                "max": 38,
+                "mean": 37.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9563577759468411
+        },
+        {
+          "round": 1,
+          "baseline": {
+            "mean_ms": 3.282458573579788,
+            "median_ms": 3.3024474382400513,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1546000000,
+                "max": 1565000000,
+                "mean": 1554500000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 61000,
+                "mean": 61000.0
+              },
+              "power_uw": {
+                "min": 88007000,
+                "max": 89018000,
+                "mean": 88282250.0
+              },
+              "busy_percent": {
+                "min": 44,
+                "max": 45,
+                "mean": 44.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.4030699729919434,
+            "median_ms": 3.4041450023651123,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1576000000,
+                "max": 1597000000,
+                "mean": 1586333333.3333333
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60333.333333333336
+              },
+              "power_uw": {
+                "min": 89086000,
+                "max": 91005000,
+                "mean": 90044000.0
+              },
+              "busy_percent": {
+                "min": 46,
+                "max": 47,
+                "mean": 46.666666666666664
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.964558060701257
+        },
+        {
+          "round": 2,
+          "baseline": {
+            "mean_ms": 3.3301321268081665,
+            "median_ms": 3.3231875896453857,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1682000000,
+                "max": 1702000000,
+                "mean": 1691600000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61200.0
+              },
+              "power_uw": {
+                "min": 95079000,
+                "max": 97005000,
+                "mean": 96040400.0
+              },
+              "busy_percent": {
+                "min": 52,
+                "max": 54,
+                "mean": 53.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.3558711111545563,
+            "median_ms": 3.348065972328186,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1627000000,
+                "max": 1648000000,
+                "mean": 1637200000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60800.0
+              },
+              "power_uw": {
+                "min": 92085000,
+                "max": 93095000,
+                "mean": 92858200.0
+              },
+              "busy_percent": {
+                "min": 49,
+                "max": 50,
+                "mean": 49.8
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9923301630206129
+        },
+        {
+          "round": 3,
+          "baseline": {
+            "mean_ms": 3.3415666222572327,
+            "median_ms": 3.339787006378174,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1756000000,
+                "max": 1768000000,
+                "mean": 1762500000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 100005000,
+                "max": 100084000,
+                "mean": 100046000.0
+              },
+              "busy_percent": {
+                "min": 57,
+                "max": 58,
+                "mean": 57.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.3825652599334717,
+            "median_ms": 3.3840450048446655,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1702000000,
+                "max": 1724000000,
+                "mean": 1714750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 97005000,
+                "max": 98031000,
+                "mean": 97529000.0
+              },
+              "busy_percent": {
+                "min": 54,
+                "max": 55,
+                "mean": 54.75
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9878794244823985
+        },
+        {
+          "round": 4,
+          "baseline": {
+            "mean_ms": 3.305767983198166,
+            "median_ms": 3.295788526535034,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1818000000,
+                "max": 1829000000,
+                "mean": 1823000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 103087000,
+                "max": 104052000,
+                "mean": 103717333.33333333
+              },
+              "busy_percent": {
+                "min": 61,
+                "max": 62,
+                "mean": 61.333333333333336
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.4930913150310516,
+            "median_ms": 3.499281406402588,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1775000000,
+                "max": 1786000000,
+                "mean": 1780500000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60250.0
+              },
+              "power_uw": {
+                "min": 101033000,
+                "max": 102002000,
+                "mean": 101292250.0
+              },
+              "busy_percent": {
+                "min": 58,
+                "max": 59,
+                "mean": 58.75
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9463731935587202
+        },
+        {
+          "round": 5,
+          "baseline": {
+            "mean_ms": 3.300317704677582,
+            "median_ms": 3.2844884395599365,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1885000000,
+                "max": 1885000000,
+                "mean": 1885000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 107077000,
+                "max": 107077000,
+                "mean": 107077000.0
+              },
+              "busy_percent": {
+                "min": 65,
+                "max": 65,
+                "mean": 65.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.4048945009708405,
+            "median_ms": 3.403404474258423,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1857000000,
+                "max": 1868000000,
+                "mean": 1862500000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 106008000,
+                "max": 106075000,
+                "mean": 106041500.0
+              },
+              "busy_percent": {
+                "min": 63,
+                "max": 64,
+                "mean": 63.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9692863328765574
+        },
+        {
+          "round": 6,
+          "baseline": {
+            "mean_ms": 3.3053828179836273,
+            "median_ms": 3.301367402076721,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1891000000,
+                "max": 1901000000,
+                "mean": 1896000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62333.333333333336
+              },
+              "power_uw": {
+                "min": 108009000,
+                "max": 108076000,
+                "mean": 108043333.33333333
+              },
+              "busy_percent": {
+                "min": 66,
+                "max": 66,
+                "mean": 66.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.4814817309379578,
+            "median_ms": 3.484481453895569,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1901000000,
+                "max": 1918000000,
+                "mean": 1911400000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61600.0
+              },
+              "power_uw": {
+                "min": 108076000,
+                "max": 109090000,
+                "mean": 108864000.0
+              },
+              "busy_percent": {
+                "min": 66,
+                "max": 68,
+                "mean": 67.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9494184009671977
+        },
+        {
+          "round": 7,
+          "baseline": {
+            "mean_ms": 3.3498261868953705,
+            "median_ms": 3.33428692817688,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1965000000,
+                "max": 1976000000,
+                "mean": 1971250000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 112089000,
+                "max": 113062000,
+                "mean": 112805750.0
+              },
+              "busy_percent": {
+                "min": 71,
+                "max": 72,
+                "mean": 71.25
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.508416026830673,
+            "median_ms": 3.5065414905548096,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1938000000,
+                "max": 1945000000,
+                "mean": 1941250000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60500.0
+              },
+              "power_uw": {
+                "min": 111022000,
+                "max": 111074000,
+                "mean": 111048000.0
+              },
+              "busy_percent": {
+                "min": 69,
+                "max": 70,
+                "mean": 69.25
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9547973106032797
+        },
+        {
+          "round": 8,
+          "baseline": {
+            "mean_ms": 3.335541754961014,
+            "median_ms": 3.3175270557403564,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2009000000,
+                "max": 2017000000,
+                "mean": 2013000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 63000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 115053000,
+                "max": 115097000,
+                "mean": 115073750.0
+              },
+              "busy_percent": {
+                "min": 74,
+                "max": 74,
+                "mean": 74.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.3839251101017,
+            "median_ms": 3.3656654357910156,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 1995000000,
+                "max": 2009000000,
+                "mean": 2001000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61333.333333333336
+              },
+              "power_uw": {
+                "min": 114067000,
+                "max": 115053000,
+                "mean": 114404000.0
+              },
+              "busy_percent": {
+                "min": 73,
+                "max": 74,
+                "mean": 73.33333333333333
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9857020017977786
+        },
+        {
+          "round": 9,
+          "baseline": {
+            "mean_ms": 3.2919431030750275,
+            "median_ms": 3.2823684215545654,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2046000000,
+                "max": 2054000000,
+                "mean": 2050250000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62750.0
+              },
+              "power_uw": {
+                "min": 117077000,
+                "max": 118016000,
+                "mean": 117547250.0
+              },
+              "busy_percent": {
+                "min": 76,
+                "max": 76,
+                "mean": 76.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.434233397245407,
+            "median_ms": 3.416163921356201,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2022000000,
+                "max": 2027000000,
+                "mean": 2024333333.3333333
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61666.666666666664
+              },
+              "power_uw": {
+                "min": 116039000,
+                "max": 116064000,
+                "mean": 116051666.66666667
+              },
+              "busy_percent": {
+                "min": 75,
+                "max": 75,
+                "mean": 75.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.958567086825109
+        },
+        {
+          "round": 10,
+          "baseline": {
+            "mean_ms": 3.412853866815567,
+            "median_ms": 3.4386425018310547,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2082000000,
+                "max": 2088000000,
+                "mean": 2084750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 119091000,
+                "max": 120027000,
+                "mean": 119783000.0
+              },
+              "busy_percent": {
+                "min": 78,
+                "max": 79,
+                "mean": 78.5
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.434304267168045,
+            "median_ms": 3.4362635612487793,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2057000000,
+                "max": 2065000000,
+                "mean": 2061000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61400.0
+              },
+              "power_uw": {
+                "min": 118049000,
+                "max": 118096000,
+                "mean": 118071200.0
+              },
+              "busy_percent": {
+                "min": 77,
+                "max": 77,
+                "mean": 77.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9937540769006568
+        },
+        {
+          "round": 11,
+          "baseline": {
+            "mean_ms": 3.404504716396332,
+            "median_ms": 3.4017449617385864,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2107000000,
+                "max": 2117000000,
+                "mean": 2113000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 63000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 121041000,
+                "max": 122011000,
+                "mean": 121444800.0
+              },
+              "busy_percent": {
+                "min": 80,
+                "max": 81,
+                "mean": 80.4
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.3692455291748047,
+            "median_ms": 3.378665566444397,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2091000000,
+                "max": 2098000000,
+                "mean": 2094000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62333.333333333336
+              },
+              "power_uw": {
+                "min": 120052000,
+                "max": 120090000,
+                "mean": 120068333.33333333
+              },
+              "busy_percent": {
+                "min": 79,
+                "max": 79,
+                "mean": 79.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 1.0104650097228631
+        },
+        {
+          "round": 12,
+          "baseline": {
+            "mean_ms": 3.4232838451862335,
+            "median_ms": 3.4294835329055786,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2119000000,
+                "max": 2123000000,
+                "mean": 2120750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61500.0
+              },
+              "power_uw": {
+                "min": 122037000,
+                "max": 122067000,
+                "mean": 122051750.0
+              },
+              "busy_percent": {
+                "min": 81,
+                "max": 81,
+                "mean": 81.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.4912614822387695,
+            "median_ms": 3.486221432685852,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2125000000,
+                "max": 2131000000,
+                "mean": 2128000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61200.0
+              },
+              "power_uw": {
+                "min": 122087000,
+                "max": 123030000,
+                "mean": 122648200.0
+              },
+              "busy_percent": {
+                "min": 82,
+                "max": 82,
+                "mean": 82.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9805292048738368
+        },
+        {
+          "round": 13,
+          "baseline": {
+            "mean_ms": 3.4044294357299805,
+            "median_ms": 3.400385022163391,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2157000000,
+                "max": 2161000000,
+                "mean": 2159000000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61400.0
+              },
+              "power_uw": {
+                "min": 125006000,
+                "max": 125042000,
+                "mean": 125022400.0
+              },
+              "busy_percent": {
+                "min": 84,
+                "max": 84,
+                "mean": 84.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.473081886768341,
+            "median_ms": 3.4735419750213623,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2149000000,
+                "max": 2154000000,
+                "mean": 2151600000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61200.0
+              },
+              "power_uw": {
+                "min": 124047000,
+                "max": 124083000,
+                "mean": 124066800.0
+              },
+              "busy_percent": {
+                "min": 83,
+                "max": 84,
+                "mean": 83.4
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9802329880847581
+        },
+        {
+          "round": 14,
+          "baseline": {
+            "mean_ms": 3.403504252433777,
+            "median_ms": 3.411304473876953,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2173000000,
+                "max": 2179000000,
+                "mean": 2176600000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61600.0
+              },
+              "power_uw": {
+                "min": 126032000,
+                "max": 126077000,
+                "mean": 126058000.0
+              },
+              "busy_percent": {
+                "min": 85,
+                "max": 86,
+                "mean": 85.6
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.521770626306534,
+            "median_ms": 3.5167810916900635,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2163000000,
+                "max": 2166000000,
+                "mean": 2164500000.0
+              },
+              "temperature_mc": {
+                "min": 60000,
+                "max": 61000,
+                "mean": 60500.0
+              },
+              "power_uw": {
+                "min": 125057000,
+                "max": 125084000,
+                "mean": 125071000.0
+              },
+              "busy_percent": {
+                "min": 84,
+                "max": 85,
+                "mean": 84.75
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9664184904634777
+        },
+        {
+          "round": 15,
+          "baseline": {
+            "mean_ms": 3.3499111235141754,
+            "median_ms": 3.350425958633423,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2187000000,
+                "max": 2191000000,
+                "mean": 2188750000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61750.0
+              },
+              "power_uw": {
+                "min": 127035000,
+                "max": 127054000,
+                "mean": 127045750.0
+              },
+              "busy_percent": {
+                "min": 86,
+                "max": 87,
+                "mean": 86.25
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.4296787083148956,
+            "median_ms": 3.4135639667510986,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2192000000,
+                "max": 2198000000,
+                "mean": 2195750000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 127065000,
+                "max": 128002000,
+                "mean": 127311250.0
+              },
+              "busy_percent": {
+                "min": 87,
+                "max": 87,
+                "mean": 87.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9767419657685916
+        },
+        {
+          "round": 16,
+          "baseline": {
+            "mean_ms": 3.3217224776744843,
+            "median_ms": 3.31522798538208,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2200000000,
+                "max": 2205000000,
+                "mean": 2202200000.0
+              },
+              "temperature_mc": {
+                "min": 61000,
+                "max": 62000,
+                "mean": 61800.0
+              },
+              "power_uw": {
+                "min": 128013000,
+                "max": 128040000,
+                "mean": 128027600.0
+              },
+              "busy_percent": {
+                "min": 87,
+                "max": 87,
+                "mean": 87.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.3722507059574127,
+            "median_ms": 3.36586594581604,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2208000000,
+                "max": 2213000000,
+                "mean": 2210500000.0
+              },
+              "temperature_mc": {
+                "min": 63000,
+                "max": 64000,
+                "mean": 63250.0
+              },
+              "power_uw": {
+                "min": 128055000,
+                "max": 128078000,
+                "mean": 128066000.0
+              },
+              "busy_percent": {
+                "min": 88,
+                "max": 88,
+                "mean": 88.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9850164674311832
+        },
+        {
+          "round": 17,
+          "baseline": {
+            "mean_ms": 3.334211766719818,
+            "median_ms": 3.3273069858551025,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2234000000,
+                "max": 2238000000,
+                "mean": 2236000000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62800.0
+              },
+              "power_uw": {
+                "min": 129093000,
+                "max": 130018000,
+                "mean": 129826400.0
+              },
+              "busy_percent": {
+                "min": 89,
+                "max": 89,
+                "mean": 89.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.427988499403,
+            "median_ms": 3.424743413925171,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2229000000,
+                "max": 2232000000,
+                "mean": 2230500000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62500.0
+              },
+              "power_uw": {
+                "min": 129062000,
+                "max": 129083000,
+                "mean": 129072500.0
+              },
+              "busy_percent": {
+                "min": 89,
+                "max": 89,
+                "mean": 89.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9726438018390338
+        },
+        {
+          "round": 18,
+          "baseline": {
+            "mean_ms": 3.3120229244232178,
+            "median_ms": 3.3101274967193604,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2239000000,
+                "max": 2243000000,
+                "mean": 2240750000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 63000,
+                "mean": 62750.0
+              },
+              "power_uw": {
+                "min": 130031000,
+                "max": 130048000,
+                "mean": 130038500.0
+              },
+              "busy_percent": {
+                "min": 90,
+                "max": 90,
+                "mean": 90.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.428678572177887,
+            "median_ms": 3.419663906097412,
+            "order": 2,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2251000000,
+                "max": 2255000000,
+                "mean": 2252750000.0
+              },
+              "temperature_mc": {
+                "min": 63000,
+                "max": 63000,
+                "mean": 63000.0
+              },
+              "power_uw": {
+                "min": 130088000,
+                "max": 131015000,
+                "mean": 130549500.0
+              },
+              "busy_percent": {
+                "min": 90,
+                "max": 90,
+                "mean": 90.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9659764993133871
+        },
+        {
+          "round": 19,
+          "baseline": {
+            "mean_ms": 3.3434264957904816,
+            "median_ms": 3.3337069749832153,
+            "order": 0,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2255000000,
+                "max": 2258000000,
+                "mean": 2256333333.3333335
+              },
+              "temperature_mc": {
+                "min": 63000,
+                "max": 63000,
+                "mean": 63000.0
+              },
+              "power_uw": {
+                "min": 131015000,
+                "max": 131033000,
+                "mean": 131021666.66666667
+              },
+              "busy_percent": {
+                "min": 90,
+                "max": 91,
+                "mean": 90.33333333333333
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "candidate": {
+            "mean_ms": 3.4690422415733337,
+            "median_ms": 3.452162981033325,
+            "order": 1,
+            "telemetry": {
+              "gfx_hz": {
+                "min": 2260000000,
+                "max": 2262000000,
+                "mean": 2260800000.0
+              },
+              "temperature_mc": {
+                "min": 62000,
+                "max": 62000,
+                "mean": 62000.0
+              },
+              "power_uw": {
+                "min": 131048000,
+                "max": 131063000,
+                "mean": 131054600.0
+              },
+              "busy_percent": {
+                "min": 91,
+                "max": 91,
+                "mean": 91.0
+              },
+              "host_load1": {
+                "min": 9.95,
+                "max": 9.95,
+                "mean": 9.95
+              }
+            }
+          },
+          "speedup": 0.9637895023942168
+        }
+      ]
+    }
+  ],
+  "source": "results/interleaved-layout-scales-layer0.json",
+  "source_sha256": "cb1df0207bad451099a6093b96cce003862daff46a59ffa62f2cd278c0157c1d",
+  "analysis_sha256": "f2cbef55a8137691da114a1fce92cffc9d98c84b29b2ee0884a877ded8907652"
+}

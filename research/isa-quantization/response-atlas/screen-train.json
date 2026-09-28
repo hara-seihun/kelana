@@ -1,0 +1,33 @@
+{
+  "format": "response-atlas/1",
+  "split": "train",
+  "n": 1024,
+  "complete_outputs": 1024,
+  "route_train_counts": [
+    512,
+    512
+  ],
+  "route_panel_counts": [
+    512,
+    512
+  ],
+  "route_vector_fp16_sha256": "925fd44d141a9ac592f207aa479c846c1171a0597691cf90e4ba253f3f59d717",
+  "route_threshold_fp16": -4.46875,
+  "route_pc1_train_fraction_of_centered_input_energy": 0.0671374548919816,
+  "global_source_jacobian_fp64_relative_rms": 0.9306915699530518,
+  "routed_source_jacobian_fp64_relative_rms": 0.8663020897072509,
+  "global_source_average_jacobian_fp64_relative_rms": 0.8567293853697314,
+  "routed_source_average_jacobian_fp64_relative_rms": 0.7941134820388261,
+  "packed_scalar_q4_relative_rms": 0.1651621511427195,
+  "global_residual_energy": 15349.97169778627,
+  "routed_residual_energy": 13299.482512877323,
+  "routed_average_residual_energy": 11175.35060960549,
+  "centered_target_energy": 15726.277128300153,
+  "output_target_energy": 17721.317995684713,
+  "physical_budget": {
+    "q4_all_three": 4866096,
+    "global_fp16_jacobian_bias": 2099232,
+    "routed_two_fp16_jacobians_biases_router": 4200482
+  },
+  "source_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+}

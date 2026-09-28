@@ -1,0 +1,760 @@
+{
+ "job": "w1i5-radix3-byte-exact-2",
+ "network": "w1i5",
+ "contract": "radix3",
+ "projection": "byte",
+ "mode": "exact",
+ "valu": 2,
+ "library": "full",
+ "n_consts": 6,
+ "timeout_ms": 20000,
+ "library_components": [
+  "v_add_nc_u32",
+  "v_sub_nc_u32",
+  "v_mul_lo_u32",
+  "v_and_b32",
+  "v_or_b32",
+  "v_xor_b32",
+  "v_lshlrev_b32",
+  "v_lshrrev_b32",
+  "v_ashrrev_i32",
+  "v_bfe_u32",
+  "v_perm_b32",
+  "v_lshl_or_b32",
+  "v_dot4_i32_i8",
+  "v_dot8_i32_i4",
+  "v_dot4_u32_u8",
+  "v_lshl_add_u32",
+  "v_add3_u32",
+  "v_and_or_b32",
+  "v_alignbit_b32",
+  "v_med3_i32",
+  "v_sad_u8",
+  "v_mad_u32_u24"
+ ],
+ "done": {
+  "[\"v_add_nc_u32\", \"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.176
+  },
+  "[\"v_add_nc_u32\", \"v_add_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.377
+  },
+  "[\"v_add_nc_u32\", \"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.405
+  },
+  "[\"v_sub_nc_u32\", \"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.46
+  },
+  "[\"v_add_nc_u32\", \"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.515
+  },
+  "[\"v_add_nc_u32\", \"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.651
+  },
+  "[\"v_sub_nc_u32\", \"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.648
+  },
+  "[\"v_add_nc_u32\", \"v_sub_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.695
+  },
+  "[\"v_add_nc_u32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.707
+  },
+  "[\"v_sub_nc_u32\", \"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.822
+  },
+  "[\"v_sub_nc_u32\", \"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.899
+  },
+  "[\"v_add_nc_u32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.905
+  },
+  "[\"v_sub_nc_u32\", \"v_sub_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.065
+  },
+  "[\"v_add_nc_u32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.388
+  },
+  "[\"v_sub_nc_u32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.811
+  },
+  "[\"v_sub_nc_u32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.181
+  },
+  "[\"v_add_nc_u32\", \"v_mul_lo_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.681
+  },
+  "[\"v_add_nc_u32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.764
+  },
+  "[\"v_sub_nc_u32\", \"v_mul_lo_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.465
+  },
+  "[\"v_sub_nc_u32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.82
+  },
+  "[\"v_mul_lo_u32\", \"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.301
+  },
+  "[\"v_mul_lo_u32\", \"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.38
+  },
+  "[\"v_sub_nc_u32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.668
+  },
+  "[\"v_mul_lo_u32\", \"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.851
+  },
+  "[\"v_mul_lo_u32\", \"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.912
+  },
+  "[\"v_add_nc_u32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 5.013
+  },
+  "[\"v_add_nc_u32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 5.505
+  },
+  "[\"v_sub_nc_u32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 6.9
+  },
+  "[\"v_add_nc_u32\", \"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 8.182
+  },
+  "[\"v_mul_lo_u32\", \"v_mul_lo_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 7.097
+  },
+  "[\"v_mul_lo_u32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 4.682
+  },
+  "[\"v_add_nc_u32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 9.468
+  },
+  "[\"v_mul_lo_u32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.959
+  },
+  "[\"v_sub_nc_u32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 10.758
+  },
+  "[\"v_mul_lo_u32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 6.008
+  },
+  "[\"v_and_b32\", \"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.539
+  },
+  "[\"v_and_b32\", \"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.548
+  },
+  "[\"v_and_b32\", \"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.763
+  },
+  "[\"v_sub_nc_u32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 12.247
+  },
+  "[\"v_and_b32\", \"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.765
+  },
+  "[\"v_add_nc_u32\", \"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 14.376
+  },
+  "[\"v_and_b32\", \"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.941
+  },
+  "[\"v_and_b32\", \"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.606
+  },
+  "[\"v_sub_nc_u32\", \"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 14.933
+  },
+  "[\"v_add_nc_u32\", \"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 15.208
+  },
+  "[\"v_add_nc_u32\", \"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 15.305
+  },
+  "[\"v_and_b32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.452
+  },
+  "[\"v_and_b32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.576
+  },
+  "[\"v_and_b32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.254
+  },
+  "[\"v_and_b32\", \"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 4.01
+  },
+  "[\"v_and_b32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.77
+  },
+  "[\"v_and_b32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.613
+  },
+  "[\"v_mul_lo_u32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 7.63
+  },
+  "[\"v_mul_lo_u32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 9.884
+  },
+  "[\"v_add_nc_u32\", \"v_sad_u8\"]": {
+   "outcome": "unsat",
+   "seconds": 19.283
+  },
+  "[\"v_and_b32\", \"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.912
+  },
+  "[\"v_or_b32\", \"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.376
+  },
+  "[\"v_or_b32\", \"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.618
+  },
+  "[\"v_sub_nc_u32\", \"v_ashrrev_i32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.017
+  },
+  "[\"v_or_b32\", \"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.619
+  },
+  "[\"v_add_nc_u32\", \"v_dot4_u32_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.08
+  },
+  "[\"v_add_nc_u32\", \"v_dot4_i32_i8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.189
+  },
+  "[\"v_sub_nc_u32\", \"v_bfe_u32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.022
+  },
+  "[\"v_add_nc_u32\", \"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 20.239
+  },
+  "[\"v_mul_lo_u32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 12.306
+  },
+  "[\"v_sub_nc_u32\", \"v_dot4_i32_i8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.192
+  },
+  "[\"v_sub_nc_u32\", \"v_dot4_u32_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.076
+  },
+  "[\"v_sub_nc_u32\", \"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 20.237
+  },
+  "[\"v_or_b32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.761
+  },
+  "[\"v_sub_nc_u32\", \"v_alignbit_b32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.021
+  },
+  "[\"v_and_b32\", \"v_dot4_i32_i8\"]": {
+   "outcome": "unsat",
+   "seconds": 6.045
+  },
+  "[\"v_sub_nc_u32\", \"v_sad_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.062
+  },
+  "[\"v_or_b32\", \"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.484
+  },
+  "[\"v_or_b32\", \"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.635
+  },
+  "[\"v_and_b32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 3.041
+  },
+  "[\"v_or_b32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.119
+  },
+  "[\"v_and_b32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.982
+  },
+  "[\"v_or_b32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.898
+  },
+  "[\"v_xor_b32\", \"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.668
+  },
+  "[\"v_xor_b32\", \"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.859
+  },
+  "[\"v_or_b32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.592
+  },
+  "[\"v_or_b32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.929
+  },
+  "[\"v_or_b32\", \"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.744
+  },
+  "[\"v_xor_b32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.186
+  },
+  "[\"v_xor_b32\", \"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.734
+  },
+  "[\"v_or_b32\", \"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.353
+  },
+  "[\"v_xor_b32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.932
+  },
+  "[\"v_mul_lo_u32\", \"v_lshrrev_b32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.096
+  },
+  "[\"v_xor_b32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.427
+  },
+  "[\"v_mul_lo_u32\", \"v_ashrrev_i32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.093
+  },
+  "[\"v_xor_b32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.734
+  },
+  "[\"v_xor_b32\", \"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.796
+  },
+  "[\"v_lshlrev_b32\", \"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.4
+  },
+  "[\"v_mul_lo_u32\", \"v_bfe_u32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.1
+  },
+  "[\"v_mul_lo_u32\", \"v_perm_b32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.1
+  },
+  "[\"v_mul_lo_u32\", \"v_dot4_i32_i8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.255
+  },
+  "[\"v_mul_lo_u32\", \"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 20.321
+  },
+  "[\"v_lshlrev_b32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.873
+  },
+  "[\"v_mul_lo_u32\", \"v_dot4_u32_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.116
+  },
+  "[\"v_xor_b32\", \"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.912
+  },
+  "[\"v_xor_b32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.605
+  },
+  "[\"v_or_b32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 4.869
+  },
+  "[\"v_lshlrev_b32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.902
+  },
+  "[\"v_lshlrev_b32\", \"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.42
+  },
+  "[\"v_xor_b32\", \"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.435
+  },
+  "[\"v_lshlrev_b32\", \"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.648
+  },
+  "[\"v_lshlrev_b32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.267
+  },
+  "[\"v_or_b32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 5.505
+  },
+  "[\"v_lshlrev_b32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.786
+  },
+  "[\"v_lshlrev_b32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.982
+  },
+  "[\"v_xor_b32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 3.889
+  },
+  "[\"v_lshlrev_b32\", \"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.519
+  },
+  "[\"v_or_b32\", \"v_dot4_u32_u8\"]": {
+   "outcome": "unsat",
+   "seconds": 7.497
+  },
+  "[\"v_lshrrev_b32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.76
+  },
+  "[\"v_mul_lo_u32\", \"v_alignbit_b32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.101
+  },
+  "[\"v_lshlrev_b32\", \"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.604
+  },
+  "[\"v_lshlrev_b32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.665
+  },
+  "[\"v_mul_lo_u32\", \"v_sad_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.136
+  },
+  "[\"v_lshrrev_b32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.963
+  },
+  "[\"v_or_b32\", \"v_sad_u8\"]": {
+   "outcome": "unsat",
+   "seconds": 10.042
+  },
+  "[\"v_lshrrev_b32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.792
+  },
+  "[\"v_lshrrev_b32\", \"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 5.75
+  },
+  "[\"v_lshrrev_b32\", \"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 6.359
+  },
+  "[\"v_lshrrev_b32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 6.906
+  },
+  "[\"v_lshlrev_b32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 7.237
+  },
+  "[\"v_xor_b32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 10.804
+  },
+  "[\"v_ashrrev_i32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.095
+  },
+  "[\"v_lshrrev_b32\", \"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 5.667
+  },
+  "[\"v_lshrrev_b32\", \"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 8.284
+  },
+  "[\"v_and_b32\", \"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 20.241
+  },
+  "[\"v_ashrrev_i32\", \"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 4.884
+  },
+  "[\"v_and_b32\", \"v_dot4_u32_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.07
+  },
+  "[\"v_ashrrev_i32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.36
+  },
+  "[\"v_lshrrev_b32\", \"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 9.476
+  },
+  "[\"v_ashrrev_i32\", \"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.627
+  },
+  "[\"v_and_b32\", \"v_sad_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.057
+  },
+  "[\"v_xor_b32\", \"v_sad_u8\"]": {
+   "outcome": "unsat",
+   "seconds": 16.221
+  },
+  "[\"v_bfe_u32\", \"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.539
+  },
+  "[\"v_or_b32\", \"v_dot4_i32_i8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.186
+  },
+  "[\"v_ashrrev_i32\", \"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 9.31
+  },
+  "[\"v_or_b32\", \"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 20.243
+  },
+  "[\"v_ashrrev_i32\", \"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 6.026
+  },
+  "[\"v_ashrrev_i32\", \"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 9.982
+  },
+  "[\"v_xor_b32\", \"v_dot4_i32_i8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.188
+  },
+  "[\"v_xor_b32\", \"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 20.234
+  },
+  "[\"v_xor_b32\", \"v_dot4_u32_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.075
+  },
+  "[\"v_lshrrev_b32\", \"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 13.35
+  },
+  "[\"v_bfe_u32\", \"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.788
+  },
+  "[\"v_lshrrev_b32\", \"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 12.668
+  },
+  "[\"v_lshlrev_b32\", \"v_dot4_i32_i8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.21
+  }
+ },
+ "solutions": [],
+ "per_query_timeout_ms": 20000,
+ "counts": {
+  "sat": 0,
+  "unsat": 122,
+  "timeout": 28
+ },
+ "queue_total": 253,
+ "queue_done": 150,
+ "timeout_multisets": [
+  [
+   "v_sub_nc_u32",
+   "v_ashrrev_i32"
+  ],
+  [
+   "v_add_nc_u32",
+   "v_dot4_u32_u8"
+  ],
+  [
+   "v_add_nc_u32",
+   "v_dot4_i32_i8"
+  ],
+  [
+   "v_sub_nc_u32",
+   "v_bfe_u32"
+  ],
+  [
+   "v_add_nc_u32",
+   "v_dot8_i32_i4"
+  ],
+  [
+   "v_sub_nc_u32",
+   "v_dot4_i32_i8"
+  ],
+  [
+   "v_sub_nc_u32",
+   "v_dot4_u32_u8"
+  ],
+  [
+   "v_sub_nc_u32",
+   "v_dot8_i32_i4"
+  ],
+  [
+   "v_sub_nc_u32",
+   "v_alignbit_b32"
+  ],
+  [
+   "v_sub_nc_u32",
+   "v_sad_u8"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_lshrrev_b32"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_ashrrev_i32"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_bfe_u32"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_perm_b32"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_dot4_i32_i8"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_dot8_i32_i4"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_dot4_u32_u8"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_alignbit_b32"
+  ],
+  [
+   "v_mul_lo_u32",
+   "v_sad_u8"
+  ],
+  [
+   "v_and_b32",
+   "v_dot8_i32_i4"
+  ],
+  [
+   "v_and_b32",
+   "v_dot4_u32_u8"
+  ],
+  [
+   "v_and_b32",
+   "v_sad_u8"
+  ],
+  [
+   "v_or_b32",
+   "v_dot4_i32_i8"
+  ],
+  [
+   "v_or_b32",
+   "v_dot8_i32_i4"
+  ],
+  [
+   "v_xor_b32",
+   "v_dot4_i32_i8"
+  ],
+  [
+   "v_xor_b32",
+   "v_dot8_i32_i4"
+  ],
+  [
+   "v_xor_b32",
+   "v_dot4_u32_u8"
+  ],
+  [
+   "v_lshlrev_b32",
+   "v_dot4_i32_i8"
+  ]
+ ]
+}

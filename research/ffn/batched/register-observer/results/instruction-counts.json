@@ -1,0 +1,88 @@
+{
+  "source": "build/rate_bench.s",
+  "scope": "Vector and memory instructions in each kernel's innermost loop, counted from the emitted assembly. Scalar instructions, loop control and dual-issue packing are not represented.",
+  "kernels": {
+    "_Z10k_perm_rawPKjPji": {
+      "vector_instructions": 32,
+      "by_opcode": {
+        "v_perm_b32": 32
+      }
+    },
+    "_Z7k_checkPKjS0_Piii": {
+      "vector_instructions": 9,
+      "by_opcode": {
+        "v_perm_b32": 5,
+        "v_sub_nc_u32": 2,
+        "v_readfirstlane_b32": 2
+      }
+    },
+    "_Z5k_iu4ILi1EEvPKDv2_iS2_Pii": {
+      "vector_instructions": 8,
+      "by_opcode": {
+        "v_wmma_i32_16x16x16_iu4": 8
+      }
+    },
+    "_Z5k_iu4ILi2EEvPKDv2_iS2_Pii": {
+      "vector_instructions": 16,
+      "by_opcode": {
+        "v_wmma_i32_16x16x16_iu4": 16
+      }
+    },
+    "_Z5k_iu4ILi4EEvPKDv2_iS2_Pii": {
+      "vector_instructions": 32,
+      "by_opcode": {
+        "v_wmma_i32_16x16x16_iu4": 32
+      }
+    },
+    "_Z5k_iu4ILi8EEvPKDv2_iS2_Pii": {
+      "vector_instructions": 64,
+      "by_opcode": {
+        "v_wmma_i32_16x16x16_iu4": 64
+      }
+    },
+    "_Z6k_coreILi8ELi4EEvPKjPji": {
+      "vector_instructions": 96,
+      "by_opcode": {
+        "v_perm_b32": 64,
+        "v_add3_u32": 32
+      }
+    },
+    "_Z6k_coreILi16ELi4EEvPKjPji": {
+      "vector_instructions": 192,
+      "by_opcode": {
+        "v_perm_b32": 128,
+        "v_add3_u32": 64
+      }
+    },
+    "_Z7k_drainILi8ELi4EEvPKjPji": {
+      "vector_instructions": 512,
+      "by_opcode": {
+        "v_perm_b32": 320,
+        "v_add3_u32": 128,
+        "v_add_nc_u32": 64
+      }
+    },
+    "_Z6k_fullILi8ELi4EEvPKjPji": {
+      "vector_instructions": 704,
+      "by_opcode": {
+        "v_perm_b32": 304,
+        "v_add3_u32": 128,
+        "v_add_nc_u32": 112,
+        "v_and_b32": 64,
+        "v_lshrrev_b32": 48,
+        "v_sub_nc_u32": 48
+      }
+    },
+    "_Z6k_fullILi16ELi2EEvPKjPji": {
+      "vector_instructions": 624,
+      "by_opcode": {
+        "v_perm_b32": 280,
+        "v_add3_u32": 128,
+        "v_add_nc_u32": 88,
+        "v_and_b32": 64,
+        "v_lshrrev_b32": 40,
+        "v_sub_nc_u32": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "window": "held-1",
+  "phase": "accept",
+  "source_hash": "05dd0c15d93707443c157b5b15e4493559bf1b6433710a951cf3c47bd0dda6d9",
+  "binary_sha256": "6c407aab0a792eaf7e5b14156efa0b66cc9f308ba378af106f864b8f08344c28",
+  "trace_sha256": "5834154eb14fa5ea169cc1aed2c57f67f37eb26c98a5484e0bf3e771782d149d",
+  "attempt_sha256": "be038f60ef82f7b7b1999451a06bfe87e38c16f0a15bf3587080ba3343e63c09",
+  "shared_setup": {
+    "kind": "shared_setup",
+    "wall_us": 65267.614,
+    "original_o_h2d_bytes": 4194304,
+    "allocated_bytes": 4243456
+  },
+  "lifecycle": [
+    {
+      "kind": "lifecycle",
+      "pass": "accept",
+      "mode": 0,
+      "window": "held-1",
+      "round": 0,
+      "order": 0,
+      "arm_allocation_us": 38.179,
+      "replay_256_wall_us": 56949.533,
+      "arm_teardown_us": 396.176,
+      "arm_total_wall_us": 57383.918,
+      "arm_allocated_bytes": 305156,
+      "arrival_h2d_bytes": 1048576,
+      "query_h2d_bytes": 16384
+    },
+    {
+      "kind": "lifecycle",
+      "pass": "accept",
+      "mode": 1,
+      "window": "held-1",
+      "round": 0,
+      "order": 1,
+      "arm_allocation_us": 67.707,
+      "replay_256_wall_us": 54606.767,
+      "arm_teardown_us": 317.659,
+      "arm_total_wall_us": 54992.163,
+      "arm_allocated_bytes": 305172,
+      "arrival_h2d_bytes": 1048576,
+      "query_h2d_bytes": 16384
+    }
+  ],
+  "shared_teardown": {
+    "kind": "shared_teardown",
+    "wall_us": 197.293
+  },
+  "rows": [
+    {
+      "kind": "step",
+      "pass": "accept",
+      "mode": 0,
+      "window": "held-1",
+      "round": 0,
+      "order": 0,
+      "t": 128,
+      "max_abs": 7.15255737e-07,
+      "relative_l2": 5.40240116e-07,
+      "step_event_us": 179.013,
+      "input_span_us": 19.8190002,
+      "compute_span_us": 159.194,
+      "step_wall_us": 402.935
+    },
+    {
+      "kind": "step",
+      "pass": "accept",
+      "mode": 0,
+      "window": "held-1",
+      "round": 0,
+      "order": 0,
+      "t": 256,
+      "max_abs": 4.76837158e-07,
+      "relative_l2": 5.0039419e-07,
+      "step_event_us": 197.201996,
+      "input_span_us": 19.1389999,
+      "compute_span_us": 178.063004,
+      "step_wall_us": 404.995
+    },
+    {
+      "kind": "step",
+      "pass": "accept",
+      "mode": 1,
+      "window": "held-1",
+      "round": 0,
+      "order": 1,
+      "t": 128,
+      "max_abs": 1.43051147e-06,
+      "relative_l2": 6.0626131e-07,
+      "step_event_us": 185.843002,
+      "input_span_us": 20.0489998,
+      "compute_span_us": 165.794006,
+      "step_wall_us": 369.497
+    },
+    {
+      "kind": "step",
+      "pass": "accept",
+      "mode": 1,
+      "window": "held-1",
+      "round": 0,
+      "order": 1,
+      "t": 256,
+      "max_abs": 4.76837158e-07,
+      "relative_l2": 5.253173e-07,
+      "step_event_us": 210.811996,
+      "input_span_us": 19.809,
+      "compute_span_us": 191.002991,
+      "step_wall_us": 392.526
+    }
+  ],
+  "audit": {
+    "tag": "held-1",
+    "frames": 1024,
+    "ordered_records": 1089536,
+    "candidate_codes": 229376,
+    "snapshot_bytes": 312487936,
+    "snapshot_sha256": "71c7d4d8002e625ac1b55f32c14d902689e41c60013398bc02f7433faa3d302a",
+    "compressed_sha256": "6968b1c6602420ce1b41a3a97ebd358eaa0060bdf090e15b68fd7cc3cc3c059e",
+    "compressed_bytes": 3744516
+  },
+  "full_outputs": [
+    {
+      "t": 128,
+      "mode": 0,
+      "actual_sha256": "a419f8aa79b2f69c79c41b428b3f33e8a1cbadf6dc74ecd6ec4602c1f4c6e083",
+      "reference_sha256": "7b4bb00d041892fb1999870cbf8cd0d00a23604dd3c84f398fdc89b674187ba0",
+      "max_abs": 7.152557373046875e-07,
+      "relative_l2": 5.402401351995992e-07,
+      "teacher_sse": 0.21906011561430738
+    },
+    {
+      "t": 128,
+      "mode": 1,
+      "actual_sha256": "245ddc29b243ca39aff49730361c1a907cb19082d855b4a2d1bd6caf1494ff94",
+      "reference_sha256": "388791d69bcafd9871185eed792c2d0f1ce386da934019162c938d217929eaab",
+      "max_abs": 1.430511474609375e-06,
+      "relative_l2": 6.062612681997519e-07,
+      "teacher_sse": 0.22295572464852426
+    },
+    {
+      "t": 256,
+      "mode": 0,
+      "actual_sha256": "00a318b7dacbed5e5004be50b19a0add1ef4938aaccc33d7ec770b6abf8c028d",
+      "reference_sha256": "d64818398da6be79700131a79587156bffae969a751b03fea2268a9ff5f0ab90",
+      "max_abs": 4.76837158203125e-07,
+      "relative_l2": 5.003941933142573e-07,
+      "teacher_sse": 0.0356632196209413
+    },
+    {
+      "t": 256,
+      "mode": 1,
+      "actual_sha256": "29145618641f5e9caf09cfdb287af16b760d6f72c5d397d1de2cb389e09c3be8",
+      "reference_sha256": "346919f864a43bcee47c1f84ecb7e422ffa4e812ba0b5af2d5f0fb75c3198e23",
+      "max_abs": 4.76837158203125e-07,
+      "relative_l2": 5.253172768450681e-07,
+      "teacher_sse": 0.02514172809566973
+    }
+  ]
+}

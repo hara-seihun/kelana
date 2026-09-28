@@ -1,0 +1,16 @@
+{"device":"gfx1151","hip_multiprocessor_count":20,"wgps":20,"cus":40,"simd32_count":80,
+"wide":{"box":"g[-400,400] u[-2048,2048]","cases":3281697,"in_predicted_region":315641,
+ "fail_in_predicted_region":{"fused_mul_lo":0,"fused_mul_i24":178010,"fused_relu":89005,"decode":0,"decode_relu":0},
+ "correct_outside_predicted_region":{"fused_mul_lo":0,"fused_mul_i24":0},
+ "gate_sign_bit_failures":0,
+ "mul_i24_vs_24bit_operand":{"cases_with_p_in_24_bits":133790,"fail_with_p_in_24_bits":0,"correct_with_p_over_24_bits":3841},
+ "producer_sequences":{"pack_then_fused_fail_in_predicted_region":178010,"separate_multiply_fail_in_predicted_region":0,"pack_then_fused_fail_in_claimed_domain":0,"separate_multiply_fail_in_claimed_domain":0},
+ "claimed_domain_127":{"cases":65025,"fail_fused_mul_lo":0,"fail_fused_mul_i24":0,"fail_fused_relu":0}},
+"narrow":{"box":"g,u[-64,64]","in_predicted_region":3531,"gu_eq_256_cases":10,
+ "fail_in_predicted_region":{"fused":0,"decode":0,"fused_f32":0,"decode_f32":0},
+ "guard_failures_including_gu_256":8,
+ "float_paths_over_claimed_domain_16":{"cases":1089,"fused_f32_guarded":0,"decode_f32":0,"fused_f32_unguarded":2},
+ "claimed_domain_16":{"cases":1089,"fail_fused":2,"fail_guarded":0,"p_not_exact_in_f32":0,"gu_256_cases":2,"guard_fail_on_gu_256":0}},
+"poly":{"cases":105,"fail_fused":0,"fail_decode":0,"low_part_out_of_range":0,"high_part_out_of_range":0},
+"bilinear":{"trials":1048576,"fanin":128,"channel_bound":7,"failures_in_bounds":0,"out_of_bounds_trials":0}
+}

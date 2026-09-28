@@ -1,0 +1,98 @@
+{
+  "mse_reversal": {
+    "common_shift": {
+      "p": [
+        0.99,
+        0.01
+      ],
+      "delta": [
+        0.8,
+        0.8
+      ],
+      "coordinate_mse": 0.6400000000000001,
+      "teacher_variance": 0.0,
+      "half_fisher": 0.0,
+      "teacher_kl_exact": 0.0,
+      "teacher_kl_lower": 0.0,
+      "teacher_kl_upper": 0.0,
+      "gold_nll_increase": 0.0
+    },
+    "rare_logit": {
+      "p": [
+        0.99,
+        0.01
+      ],
+      "delta": [
+        0,
+        1
+      ],
+      "coordinate_mse": 0.5,
+      "teacher_variance": 0.0099,
+      "half_fisher": 0.00495,
+      "teacher_kl_exact": 0.007036863236176591,
+      "teacher_kl_lower": 0.0036420064675972796,
+      "teacher_kl_upper": 0.007110990101744546,
+      "gold_nll_increase": 0.01703686323617659
+    }
+  },
+  "rare_gold": {
+    "p": [
+      0.9999999979388463,
+      2.0611536181902033e-09
+    ],
+    "delta": [
+      0,
+      -10
+    ],
+    "coordinate_mse": 50.0,
+    "teacher_variance": 2.0611536139418494e-07,
+    "half_fisher": 1.0305768069709247e-07,
+    "teacher_kl_exact": 1.8550476079411275e-08,
+    "teacher_kl_lower": 1.8550476101705946e-08,
+    "teacher_kl_upper": 4.537725688557904e-05,
+    "gold_nll_increase": 9.99999999793894
+  },
+  "rare_positive_spike": {
+    "p": [
+      0.9999999979388463,
+      2.0611536181902033e-09
+    ],
+    "delta": [
+      0,
+      10
+    ],
+    "coordinate_mse": 50.0,
+    "teacher_variance": 2.0611536139418494e-07,
+    "half_fisher": 1.0305768069709247e-07,
+    "teacher_kl_exact": 4.5376226526745814e-05,
+    "teacher_kl_lower": 1.8550476101705946e-08,
+    "teacher_kl_upper": 4.537725688557904e-05,
+    "gold_nll_increase": -9.999954603161937
+  },
+  "two_step_state": {
+    "teacher_first_state": 0,
+    "candidate_first_state": 1e-06,
+    "first_step_logits_both": [
+      0,
+      0
+    ],
+    "second_step_gain": 10000000.0,
+    "second_step": {
+      "p": [
+        0.5,
+        0.5
+      ],
+      "delta": [
+        10,
+        0
+      ],
+      "coordinate_mse": 50.0,
+      "teacher_variance": 25.0,
+      "half_fisher": 12.5,
+      "teacher_kl_exact": 4.306898218339272,
+      "teacher_kl_lower": 2.2500113499824406,
+      "teacher_kl_upper": 12.5,
+      "gold_nll_increase": 9.306898218339272
+    }
+  }
+}

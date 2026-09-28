@@ -1,0 +1,41 @@
+FP16 exact-integer limit for an operand value: 2048
+Ternary activations, K = 16 products per WMMA, digit bound B = 16 * n for n instructions accumulated before separation.
+
+== How many ternary channels fit one FP16 operand ==
+c   n        minimal radices              operand   verdict   
+1   1        [1]                          1         fits
+2   1        [1, 33]                      34        fits
+3   1        [1, 33, 1089]                1123      fits
+4   1        -                            0         does not fit FP16
+5   1        -                            0         does not fit FP16
+Three channels is the ceiling: a fourth needs an operand of 37060.
+
+== How many WMMAs may accumulate before the channels must be separated ==
+c   max n  minimal radices at max n       operand  
+1   4096   [1]                            1        
+2   63     [1, 2017]                      2018     
+3   1      [1, 33, 1089]                  1123     
+A pair amortises one separation over 63 instructions (K = 1008). A triple must
+separate after every single instruction: that is the cost this experiment measures.
+
+== Margin-optimal radices, and the accumulator error each tolerates ==
+ladder             ch   operand  margin   separation  all-integer  shape
+                                 in P     tolerance   tolerance    
+[1, 33, 1089]      3    1123     0.50     0.4990      0.4990       lead's minimal triple
+[1, 60, 1987]      3    2048     14.00    13.9980     0.4990       margin-optimal triple
+[1, 32, 1024]      3    1057     1.00     0.9995      0.4995       power-of-two triple (needs <=15 nonzero activations per K16)
+[1, 33]            2    34       0.50     0.4999      0.4999       minimal pair, n = 1
+[1, 257]           2    258      0.50     0.4980      0.4980       pair at n = 8 (one K128 block)
+[1, 2047]          2    2048     895.50   895.4766    0.4921       margin-optimal pair at n = 8
+[1, 2047]          2    2048     134.50   134.4062    0.4374       deployed paired map, n = 8, four-bit activations
+
+The all-integer column is pinned just under 0.5 for every ladder, because the bottom
+channel is recovered by rounding. The separation column is the one a kernel needs, and
+it is where the radix choice matters: the minimal triple [1, 33, 1089] leaves 0.5 of
+room in an accumulator that reaches 17968, while [1, 60, 1987] leaves 14 at the cost of
+filling the FP16 operand exactly to 2048.
+
+== Instruction budget ==
+One triple-packed FP16 WMMA produces the same 48 logical rows x 16 tokens as three
+native IU4 WMMAs. With f16 at t_f16 and iu4 at t_iu4 per instruction, the decode of
+8 accumulator elements per lane must fit in 3*t_iu4 - t_f16 to break even.

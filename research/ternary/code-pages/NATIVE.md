@@ -1,0 +1,16 @@
+# Native cold consumer of the complete 0.6B code-page image
+
+The complete independently decoded Qwen3-0.6B image costs **122,975,884 bytes / 1.650544760 BPW**, saving 2,977,841 bytes from the raw-code/paid-scale image (125,953,725 bytes / 1.690512432 BPW). Both decode to the *same* trits, scales, signs and norms, so both retain **4.498337 held complete-model NLL** on the frozen 2,040-prediction panel. This experiment asks whether the prior Python/zlib cold-consumer loss was interpreter overhead rather than a real decoding boundary.
+
+`native_panel.py` builds optimized C++ against the NixOS zlib paths, loads all 197 raw and compressed matrices into host RAM outside timing, checks every one of the 7,360 independently compressed 16-KiB code pages byte-for-byte, and executes eight alternating paired passes. Both arms compute the same incremental zlib CRC32 over either all **119,196,989** radix-243 code bytes in matrix/page order, or the first byte of each page in a fixed shuffled order. Only decompression and CRC are timed; disk reads, matrix arithmetic, radix-243 expansion, scales, device copies and model inference are excluded.
+
+| Native C++ panel, eight paired repetitions | Raw median | Paged median | Median paired excess | Equal CRC32 |
+| --- | ---: | ---: | ---: | --- |
+| Whole code stream once | **15.457 ms** | **303.819 ms** | **288.415 ms** | `631c8788` |
+| One cold code from each shuffled page | **0.285 ms** | **293.488 ms** | **293.229 ms** | `54674b88` |
+
+The entire-page native decoder remains ~19.7× the raw complete-stream CRC, and the scattered one-code-per-page query inflates ~119 MB for 7,360 observed bytes. Its ~304-ms full-stream cost agrees with the earlier ~315-ms Python/zlib result: Python iteration is not the leading boundary here. In a *serial host transport + full observation* cost model, the 2,977,841 saved physical bytes only offset 288.415 ms of extra native consumption if the transport of those bytes runs below **10.32 MB/s**. This threshold is an algebraic break-even for this specific CPU operator, not a bound on GPU memory traffic, device zlib implementations or overlapped I/O. Even the upper-bound assumption of zero page-directory cost cannot erase measured inflation.
+
+This is a decisive negative for **cold host zlib-page consumption of this complete exact image**, not against the paid storage improvement. Keep raw radix-243 codes hot after one loading conversion; a new online image needs a genuinely direct compressed-label consumer and whole-model cost/quality at a paid rate. The independent quality problem remains coupled trit/scale recovery on fresh text, not more storage-only compression. Qwen3.6 MoE requires its own broad real routed producers, complete image and held language-quality panel. No GPU lock, selected Qwen executable or resident service changed.
+
+[Raw CSV, source/binary/image/manifest hashes, compiler, host and summarized receipt](/path/to/workspace/data/kelana-subbit/ternary/fresh-duration32-code-page-16384/native-receipt.json) are retained with `native-samples.csv`, `native-manifest.tsv` and the executable. Reproduce from Kelana's root with `python3 research/ternary/code-pages/native_panel.py`. The runner enforces a complete 197-matrix/7,360-page precheck; its eight pairs and equality of both observations are checked before writing the receipt.

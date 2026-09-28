@@ -1,0 +1,183 @@
+{
+  "format": "response-codebooks/1",
+  "fixture_sha256": "70c7180bd822f2a05e2a76e74df657f575caead2da7d526728fbc92831c4bdee",
+  "script_sha256": "abd3905f267dccedd4be161318acd6ab330be3cf32dc353050f4607ae10423d9",
+  "seed": 27091,
+  "weights": "Bonsai layer0 down block0, 5120 rows x 128 trits",
+  "dictionary_train_rows": [
+    0,
+    4096
+  ],
+  "acceptance_rows": [
+    4096,
+    5120
+  ],
+  "calibration_query_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "held_query_indices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "synthetic_queries": 64,
+  "synthetic_range": [
+    -127,
+    127
+  ],
+  "coefficient_unit": "1/64; shared int8 codeword coefficients",
+  "metric": "isotropic; calibration-weighted assignments tested separately in short.py",
+  "methods": {
+    "full16": {
+      "label_bits_per_segment": 4,
+      "label_bytes": 20480,
+      "codebook_bytes": 256,
+      "retained_fp16_scale_bytes": 10240,
+      "total_bits_per_original_weight": 0.378125,
+      "response_table_bytes_int32": 512,
+      "online_table_integer_products": 2048,
+      "online_row_table_lookups": 8,
+      "training_segment_mse": [
+        16718.93359375,
+        12208.607421875,
+        13775.490234375,
+        9734.623046875,
+        16538.98046875,
+        17928.18359375,
+        15056.84765625,
+        19088.7734375
+      ],
+      "train_query_train_row": {
+        "relative_rms": 0.8641200115699794,
+        "relative_max": 22.47095571825734
+      },
+      "held_query_held_row": {
+        "relative_rms": 0.9017490838293206,
+        "relative_max": 3.530271014912132
+      },
+      "synthetic_query_held_row": {
+        "relative_rms": 0.8882947206816517,
+        "relative_max": 3.7999687789630787
+      }
+    },
+    "full64": {
+      "label_bits_per_segment": 6,
+      "label_bytes": 30720,
+      "codebook_bytes": 1024,
+      "retained_fp16_scale_bytes": 10240,
+      "total_bits_per_original_weight": 0.5125,
+      "response_table_bytes_int32": 2048,
+      "online_table_integer_products": 8192,
+      "online_row_table_lookups": 8,
+      "training_segment_mse": [
+        13813.7041015625,
+        10514.146484375,
+        11592.46875,
+        8555.7939453125,
+        14328.515625,
+        14789.25,
+        12950.5166015625,
+        16124.4755859375
+      ],
+      "train_query_train_row": {
+        "relative_rms": 0.8228606819489659,
+        "relative_max": 24.52499368914059
+      },
+      "held_query_held_row": {
+        "relative_rms": 0.8132171430240946,
+        "relative_max": 2.776097275731363
+      },
+      "synthetic_query_held_row": {
+        "relative_rms": 0.8202731312407486,
+        "relative_max": 3.4230373084352554
+      }
+    },
+    "full256": {
+      "label_bits_per_segment": 8,
+      "label_bytes": 40960,
+      "codebook_bytes": 4096,
+      "retained_fp16_scale_bytes": 10240,
+      "total_bits_per_original_weight": 0.675,
+      "response_table_bytes_int32": 8192,
+      "online_table_integer_products": 32768,
+      "online_row_table_lookups": 8,
+      "training_segment_mse": [
+        11272.505859375,
+        8591.5634765625,
+        9325.59375,
+        6891.82373046875,
+        11473.552734375,
+        11985.5615234375,
+        10473.130859375,
+        13028.318359375
+      ],
+      "train_query_train_row": {
+        "relative_rms": 0.7097684698324374,
+        "relative_max": 20.82904344078339
+      },
+      "held_query_held_row": {
+        "relative_rms": 0.7470364596822167,
+        "relative_max": 2.975785327078202
+      },
+      "synthetic_query_held_row": {
+        "relative_rms": 0.7492558864998213,
+        "relative_max": 3.2125736488254457
+      }
+    },
+    "additive16x16": {
+      "label_bits_per_segment": 8,
+      "label_bytes": 40960,
+      "codebook_bytes": 512,
+      "retained_fp16_scale_bytes": 10240,
+      "total_bits_per_original_weight": 0.63125,
+      "response_table_bytes_int32": 1024,
+      "online_table_integer_products": 4096,
+      "online_row_table_lookups": 16,
+      "training_segment_mse": [
+        12468.15218527615,
+        9424.53246833384,
+        10587.219296321273,
+        7333.997036024928,
+        12599.894249632955,
+        13284.460368871689,
+        11426.703026786447,
+        14456.909148141742
+      ],
+      "train_query_train_row": {
+        "relative_rms": 0.7328194246055634,
+        "relative_max": 14.352782544351488
+      },
+      "held_query_held_row": {
+        "relative_rms": 0.7574374599069212,
+        "relative_max": 3.1531963210663716
+      },
+      "synthetic_query_held_row": {
+        "relative_rms": 0.776992949552131,
+        "relative_max": 3.5748064102558783
+      }
+    },
+    "variable48": {
+      "segment_plan": [
+        "full256",
+        "full16",
+        "full16",
+        "full16",
+        "full256",
+        "full256",
+        "full16",
+        "full256"
+      ],
+      "label_bytes": 30720,
+      "codebook_bytes": 4352,
+      "held_query_held_row": {
+        "relative_rms": 0.8161879384469177,
+        "relative_max": 3.3655707714014116
+      }
+    }
+  },
+  "elapsed_seconds": 0.7034374840004602
+}

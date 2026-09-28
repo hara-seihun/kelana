@@ -1,0 +1,96 @@
+{
+ "A-balanced4": {
+  "contract_in": "one VGPR holding 4*(13 + x0 + 3*x1 + 9*x2)",
+  "contract_out": "exact int32 value of the network",
+  "instructions": 1,
+  "pipe": [
+   "lds"
+  ],
+  "input": "balanced4",
+  "table": "balanced",
+  "program": [
+   {
+    "dst": "out",
+    "op": "ds_bpermute_b32",
+    "args": [
+     "b4"
+    ],
+    "offset0": 0
+   }
+  ],
+  "networks_checked": 206,
+  "states_per_network": 27,
+  "cases": 5562,
+  "mismatches": [],
+  "exact": true
+ },
+ "B-bytes": {
+  "contract_in": "one VGPR holding one signed byte per trit in lanes 0,1,2",
+  "contract_out": "exact int32 value of the network",
+  "instructions": 2,
+  "pipe": [
+   "valu",
+   "lds"
+  ],
+  "input": "bytes",
+  "table": "balanced",
+  "program": [
+   {
+    "dst": "r0",
+    "op": "v_dot4_i32_i8",
+    "args": [
+     "xb",
+     "const0=0x00240c04",
+     "const1=0x00000034"
+    ]
+   },
+   {
+    "dst": "out",
+    "op": "ds_bpermute_b32",
+    "args": [
+     "r0"
+    ],
+    "offset0": 0
+   }
+  ],
+  "networks_checked": 206,
+  "states_per_network": 27,
+  "cases": 5562,
+  "mismatches": [],
+  "exact": true
+ },
+ "C-radix3": {
+  "contract_in": "one VGPR holding the dense radix-3 word q in 0..26",
+  "contract_out": "exact int32 value of the network",
+  "instructions": 2,
+  "pipe": [
+   "valu",
+   "lds"
+  ],
+  "input": "radix3",
+  "table": "radix3",
+  "program": [
+   {
+    "dst": "r0",
+    "op": "v_lshlrev_b32",
+    "args": [
+     "const0=0x00000002",
+     "q"
+    ]
+   },
+   {
+    "dst": "out",
+    "op": "ds_bpermute_b32",
+    "args": [
+     "r0"
+    ],
+    "offset0": 0
+   }
+  ],
+  "networks_checked": 206,
+  "states_per_network": 27,
+  "cases": 5562,
+  "mismatches": [],
+  "exact": true
+ }
+}

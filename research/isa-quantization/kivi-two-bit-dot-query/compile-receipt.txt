@@ -1,0 +1,27 @@
+HIP version: 7.2.53211-9999
+nixpkgs-AMD clang version 22.0.0 (https://github.com/ROCm/llvm-project/tree/rocm-7.2.3 rocm-7.2.3)
+Target: x86_64-unknown-linux-gnu
+Complete query/finish device symbols and sizes:
+0000000000001040 0000000000000040 R _Z11query_groupILi0EEvPKPKhPKfPKtPfiiii.kd
+0000000000001080 0000000000000040 R _Z11query_groupILi1EEvPKPKhPKfPKtPfiiii.kd
+0000000000001000 0000000000000040 R _Z8finish_oPKfPf.kd
+0000000000002100 0000000000000174 T _Z8finish_oPKfPf
+0000000000002400 0000000000003218 T _Z11query_groupILi0EEvPKPKhPKfPKtPfiiii
+0000000000005700 0000000000003960 T _Z11query_groupILi1EEvPKPKhPKfPKtPfiiii
+Kernel resource descriptors:
+		.amdhsa_group_segment_fixed_size 0
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_kernarg_size 272
+		.amdhsa_next_free_vgpr 12
+		.amdhsa_next_free_sgpr 4
+		.amdhsa_group_segment_fixed_size 5632
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_kernarg_size 48
+		.amdhsa_next_free_vgpr 23
+		.amdhsa_next_free_sgpr 44
+		.amdhsa_group_segment_fixed_size 8512
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_kernarg_size 48
+		.amdhsa_next_free_vgpr 98
+		.amdhsa_next_free_sgpr 56
+843700fcdc2355227eca1ef7cb1f92c5246ed641d8c69e7e7126b83f48b501ea  assembly-gfx1151.s

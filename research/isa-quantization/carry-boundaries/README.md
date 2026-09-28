@@ -1,0 +1,28 @@
+# Spend one unit of error to avoid a byte-table correction
+
+A four-sign half-orbit lookup has an awkward boundary at 127. This finite example makes the target one unit too large at exactly one address. Rounding that *response cell*, rather than changing a coefficient, removes a runtime addition. The gain is conditional: an exact biased byte table costs only one extra addition, and an exact split table uses fewer stored bytes.
+
+Take a fixed four-coefficient block `q=(32,32,32,32)` and dynamic signs `s_i∈{-1,1}`. The target is `F(s)=Σq_i s_i`. Factoring out `s_0`, the eight half-orbit responses `q_0+t_1q_1+t_2q_2+t_3q_3` in lexicographic order are `(-64,0,0,64,0,64,64,128)`. The usual half-orbit reader indexes a table using three relative signs, widens the result, then applies `s_0`. The last entry requires int16. Instead, put `127` there and leave the other seven entries unchanged. The signed-byte table is eight bytes and the final error is at most one. Under uniform independent signs the squared error is exactly `1/8`. This is a fixed stored block with dynamic signs, not a claim that a runtime activation-dependent table is free to prepare.
+
+There is a small optimality statement. Among all direct eight-entry signed-byte tables, with this address and an unchanged sign consumer, entrywise clamping uniquely minimizes uniform squared error: each table address has independent positive probability and the closest legal integer is optimal. Any change to integer coefficients that makes the entire half table signed-byte-safe has mean squared error **at least one**, eight times the clipped table's error. Orthogonality of the four sign characters gives `E[(F_q-F_q')²]=Σ_i(q_i-q'_i)²`; since `F_q(+,+,+,+)=128`, at least one integer coefficient must move. Changing `q_0` from 32 to 31 attains one. This is a narrow result about integer coefficient edits. Learned floating scales, output relabeling, and other decompositions are not excluded.
+
+## Pay for the exact alternatives
+
+Use a deliberately simple per-query grammar. One table selection, integer add or subtract, comparison, and post-widen sign each cost one operation. Relative-sign extraction is common and excluded in every arm. Each stored table entry costs its actual width; a table is prepared once for this fixed coefficient block. No runtime branch or exceptional path is hidden inside the lossy arm.
+
+| Reader | Stored table bytes | Query operations | Uniform squared error | How it works |
+| --- | ---: | ---: | ---: | --- |
+| Direct clipped byte | 8 | 2 | 1/8 | One select, one sign |
+| Exact biased byte | 8 | 3 | 0 | Store `F_half-1`, select, add 1, sign |
+| Exact split byte | 6 | 4 | 0 | Two selects, add, sign; tables `(0,64)` and `(-64,0,0,64)` |
+| Exact byte plus correction | 8 | 4 | 0 | Select, compare address with all-plus, add 1, sign |
+| Exact int16 | 16 | 2 | 0 | One int16 select, one sign |
+| Coefficient edit to byte table | 8 | 2 | 1 | Best integer coefficient perturbation |
+
+The operation counts define an abstract lookup grammar, not gfx1151 opcode counts. The int16 arm is given the optimistic assumption that selecting an int16 entry costs the same as selecting an int8 entry. A physical byte lookup may require extra index and cross-register work. Code bytes for these generic reader routines are not included in table bytes; if routines are generated per block, those bytes must be charged as well. The exact correction's address is fixed by this declared family, rather than stored in a free per-block exception list.
+
+With cost `α` per stored byte, `β` per query operation and `λ` per unit uniform squared error, the clipped reader wins over *all* four exact controls only if `α<β` and `λ<min(8β,16(β-α),64α)`. Equalities tie. For example `(α,β,λ)=(1/4,1,2)` gives clipped cost `4.25`; biased byte costs `5`, split byte `5.5`, corrected byte `6`, and int16 `6`. The coefficient edit costs `6`. These are normalized accounting units, not elapsed native time. If a following consumer accepts the `-1` biased label or absorbs the subtraction into its own arithmetic, exact biased byte costs the same as clipped byte and wins. If the input signs never reach the all-plus address, the exact direct table needs no approximation. Either change destroys this particular advantage.
+
+[`check.py`](check.py) prints the full witness, checks both sign orientations, checks the exact split and biased readers, verifies clipping against every signed-byte candidate at every address, and enumerates the 81 nearest integer coefficient edits. Its orthogonality argument covers every integer edit, not just that local enumeration. Run `python3 research/isa-quantization/carry-boundaries/check.py` from the Kelana root.
+
+This extends the existing [four-sign A7 admission result](../../quantization-discovery/subbit/binary-a7-byte-admission/README.md) in a different direction. That result tests exact byte eligibility for *runtime-produced* activation codes and has held-panel evidence that static byte-safe positions fail. Here the stored target is one fixed block and a response-cell edit crosses the byte threshold. It also differs from [shortening attention count mass](../../quantization-discovery/subbit/value-mass-frontier/README.md): no probability denominator or sparse-overflow count changes. Moving this idea into a real factor reader would require selecting a fixed approximate image against its composed output loss and pricing table preparation, second-stage quantization, and native selection against the exact biased and split controls. A direct per-activation saturation during table generation could cost more than the correction it removes.

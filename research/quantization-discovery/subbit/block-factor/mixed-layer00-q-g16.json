@@ -1,0 +1,45 @@
+{
+  "fixture": "layer00-self_attn_q_proj.npz",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "rank": 360,
+  "compressed_groups": 16,
+  "uncompressed_groups": 112,
+  "same_rank_admm_response_and_weight_error": [
+    0.09529630094766617,
+    0.4911004602909088
+  ],
+  "after_group_coding_response_and_weight_error": [
+    0.10360100865364075,
+    0.5242960453033447
+  ],
+  "after_weight_refit_response_and_weight_error": [
+    0.1113208681344986,
+    0.504973292350769
+  ],
+  "activation_output_sweeps": 4,
+  "fit_heldout_response_error": 0.07245028764009476,
+  "fit_weight_error": 0.6547035574913025,
+  "seconds_cpu": 5.767998466006247,
+  "payload_bytes": {
+    "output_signs": 92160,
+    "full_input_signs": 40320,
+    "compressed_labels": 2880,
+    "dictionaries": 256,
+    "pre_post_scales": 6144,
+    "group_mask": 16
+  },
+  "payload_bpw": 0.54083251953125,
+  "online": {
+    "input_label_lookups": 46080,
+    "input_table_additions_upper": 30608,
+    "output_table_additions": 11475,
+    "output_table_reads": 92160,
+    "input_table_bf16_bytes": 57856,
+    "output_table_bf16_bytes": 23040
+  },
+  "image": "/path/to/workspace/data/kelana-subbit/block-factor/mixed-layer00-q-g16.npz",
+  "serialized_zip_bytes": 143780
+}

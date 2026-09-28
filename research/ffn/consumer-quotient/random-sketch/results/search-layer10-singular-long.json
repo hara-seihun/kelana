@@ -1,0 +1,2337 @@
+{
+  "format": "kelana-random-sketch-search/1",
+  "layer": "layer10",
+  "tokens": 8,
+  "clip": 1.0,
+  "seed": 84123,
+  "changes": 64,
+  "weights_sha256": "734b5c1e77681fa72e94395537123eee1f7c5c9cb472024cfd362b614d822ce5",
+  "source_sha256": "9f92ded56f8aa9c17110282ce679d541b6d271ba0e13aa3c3e094187a0aa8694",
+  "common_sha256": "392c25adccd566e8895a3f582eb02d82026df71d1dc808c3096ceb8d7e40640d",
+  "scope": "Selection and acceptance use only weight-prepared sketches. The full down projection is used to score candidates and to record the trace, never to choose or accept a change.",
+  "elapsed_seconds": 13.210309504996985,
+  "results": [
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 1800,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 47,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6096211075782776,
+        "worst_row_relative_rms": 0.6291610598564148,
+        "bias": -0.0003430554352235049,
+        "max_abs": 0.3133678436279297
+      },
+      "surrogate": {
+        "selection_before": 147.018310546875,
+        "selection_after": 134.76394653320312,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 1.8419800996780396,
+        "acceptance_before": 147.018310546875,
+        "acceptance_after": 134.76394653320312,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.4060305058956146,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 1.8419800996780396
+      },
+      "online_sketch_products": 79,
+      "online_MAC_fraction": 1.975,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6191961765289307,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6145038604736328,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6130162477493286,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6116002202033997,
+          "online_MAC_fraction": 0.35
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.611075758934021,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.6103981733322144,
+          "online_MAC_fraction": 0.575
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.6088263988494873,
+          "online_MAC_fraction": 0.7
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.6102054715156555,
+          "online_MAC_fraction": 0.825
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.6093858480453491,
+          "online_MAC_fraction": 0.95
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.6089460849761963,
+          "online_MAC_fraction": 1.075
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.6085244417190552,
+          "online_MAC_fraction": 1.225
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.6086951494216919,
+          "online_MAC_fraction": 1.375
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.6088036894798279,
+          "online_MAC_fraction": 1.525
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.609649121761322,
+          "online_MAC_fraction": 1.675
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.6088680028915405,
+          "online_MAC_fraction": 1.825
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.6096211075782776,
+          "online_MAC_fraction": 1.975
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 1858,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 47,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2142404466867447,
+        "worst_row_relative_rms": 0.22644616663455963,
+        "bias": -3.358642425155267e-05,
+        "max_abs": 0.12546928226947784
+      },
+      "surrogate": {
+        "selection_before": 17.710453033447266,
+        "selection_after": 16.47827911376953,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.22095118463039398,
+        "acceptance_before": 17.710453033447266,
+        "acceptance_after": 16.47827911376953,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.4060305058956146,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.22095118463039398
+      },
+      "online_sketch_products": 79,
+      "online_MAC_fraction": 1.975,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.21738170087337494,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.21594910323619843,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.21570593118667603,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.21545077860355377,
+          "online_MAC_fraction": 0.325
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.21507416665554047,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.21486657857894897,
+          "online_MAC_fraction": 0.575
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.215035542845726,
+          "online_MAC_fraction": 0.7
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.21490083634853363,
+          "online_MAC_fraction": 0.825
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.2146911919116974,
+          "online_MAC_fraction": 0.95
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.21446780860424042,
+          "online_MAC_fraction": 1.1
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.2145891636610031,
+          "online_MAC_fraction": 1.225
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.21443383395671844,
+          "online_MAC_fraction": 1.375
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.2143581509590149,
+          "online_MAC_fraction": 1.525
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.21416886150836945,
+          "online_MAC_fraction": 1.675
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.21417149901390076,
+          "online_MAC_fraction": 1.825
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.2142404466867447,
+          "online_MAC_fraction": 1.975
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 1854,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 47,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.0913514643907547,
+        "worst_row_relative_rms": 0.09665247797966003,
+        "bias": 2.5113122319453396e-05,
+        "max_abs": 0.047332312911748886
+      },
+      "surrogate": {
+        "selection_before": 3.257458209991455,
+        "selection_after": 3.0308876037597656,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.040608569979667664,
+        "acceptance_before": 3.257458209991455,
+        "acceptance_after": 3.0308876037597656,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.4060305058956146,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.040608569979667664
+      },
+      "online_sketch_products": 79,
+      "online_MAC_fraction": 1.975,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09247635304927826,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09191044420003891,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09173603355884552,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09170180559158325,
+          "online_MAC_fraction": 0.35
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.09170673042535782,
+          "online_MAC_fraction": 0.475
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.09170034527778625,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.09163151681423187,
+          "online_MAC_fraction": 0.725
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.09166648983955383,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.09152255207300186,
+          "online_MAC_fraction": 0.975
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.0915226936340332,
+          "online_MAC_fraction": 1.1
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.09151433408260345,
+          "online_MAC_fraction": 1.225
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.09146906435489655,
+          "online_MAC_fraction": 1.375
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.09147736430168152,
+          "online_MAC_fraction": 1.525
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.09140881896018982,
+          "online_MAC_fraction": 1.675
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.09140188246965408,
+          "online_MAC_fraction": 1.825
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.0913514643907547,
+          "online_MAC_fraction": 1.975
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2858,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 16,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.5940002202987671,
+        "worst_row_relative_rms": 0.6138054132461548,
+        "bias": -0.0006817647372372448,
+        "max_abs": 0.27152058482170105
+      },
+      "surrogate": {
+        "selection_before": 147.018310546875,
+        "selection_after": 140.14105224609375,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 1.908981204032898,
+        "acceptance_before": 147.018310546875,
+        "acceptance_after": 140.14105224609375,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.4060305058956146,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 1.908981204032898
+      },
+      "online_sketch_products": 48,
+      "online_MAC_fraction": 1.2,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6191961765289307,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6116621494293213,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.607231616973877,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6058387756347656,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.6028836965560913,
+          "online_MAC_fraction": 0.375
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.6003241539001465,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.5980424284934998,
+          "online_MAC_fraction": 0.525
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.5970559120178223,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.597259521484375,
+          "online_MAC_fraction": 0.675
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.5979949235916138,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.5968100428581238,
+          "online_MAC_fraction": 0.825
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.5957877039909363,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.5960713028907776,
+          "online_MAC_fraction": 0.975
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.5946410894393921,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.5941295623779297,
+          "online_MAC_fraction": 1.125
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.5940002202987671,
+          "online_MAC_fraction": 1.2
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 3042,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 16,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.20763427019119263,
+        "worst_row_relative_rms": 0.2177603840827942,
+        "bias": -0.00010903222573688254,
+        "max_abs": 0.11233247071504593
+      },
+      "surrogate": {
+        "selection_before": 17.710453033447266,
+        "selection_after": 17.110652923583984,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.23044051229953766,
+        "acceptance_before": 17.710453033447266,
+        "acceptance_after": 17.110652923583984,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.4060305058956146,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.23044051229953766
+      },
+      "online_sketch_products": 48,
+      "online_MAC_fraction": 1.2,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.21738170087337494,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.21427372097969055,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.2132233828306198,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.21190987527370453,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.21105486154556274,
+          "online_MAC_fraction": 0.375
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.21005769073963165,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.20940235257148743,
+          "online_MAC_fraction": 0.525
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.20890633761882782,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.20839758217334747,
+          "online_MAC_fraction": 0.675
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.2078700065612793,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.20750145614147186,
+          "online_MAC_fraction": 0.825
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.20800364017486572,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.20753946900367737,
+          "online_MAC_fraction": 0.975
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.20779885351657867,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.20746572315692902,
+          "online_MAC_fraction": 1.125
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.20763427019119263,
+          "online_MAC_fraction": 1.2
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 3016,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 16,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.08856786787509918,
+        "worst_row_relative_rms": 0.09523390233516693,
+        "bias": 5.728368819291063e-07,
+        "max_abs": 0.043037816882133484
+      },
+      "surrogate": {
+        "selection_before": 3.257458209991455,
+        "selection_after": 3.1433463096618652,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.04200045019388199,
+        "acceptance_before": 3.257458209991455,
+        "acceptance_after": 3.1433463096618652,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.4060305058956146,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.04200045019388199
+      },
+      "online_sketch_products": 48,
+      "online_MAC_fraction": 1.2,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09247635304927826,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09158824384212494,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09084854274988174,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09026677161455154,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.08993124216794968,
+          "online_MAC_fraction": 0.375
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.08946334570646286,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.08949082344770432,
+          "online_MAC_fraction": 0.525
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.08917544782161713,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.0889015719294548,
+          "online_MAC_fraction": 0.675
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.08873239904642105,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.08873506635427475,
+          "online_MAC_fraction": 0.825
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.08867565542459488,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.0885603204369545,
+          "online_MAC_fraction": 0.975
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.08853337913751602,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.08855665475130081,
+          "online_MAC_fraction": 1.125
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.08856786787509918,
+          "online_MAC_fraction": 1.2
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2269,
+      "accepted_row_updates": 126,
+      "acceptance_backtracks": 64,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.5920402407646179,
+        "worst_row_relative_rms": 0.6118103861808777,
+        "bias": -0.0003965789801441133,
+        "max_abs": 0.292563259601593
+      },
+      "surrogate": {
+        "selection_before": 147.018310546875,
+        "selection_after": 138.64486694335938,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 1.8959859609603882,
+        "acceptance_before": 147.11920166015625,
+        "acceptance_after": 138.24795532226562,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.40755224227905273,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 1.8881202936172485
+      },
+      "online_sketch_products": 115,
+      "online_MAC_fraction": 2.875,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6191961765289307,
+          "online_MAC_fraction": 0.1
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6116621494293213,
+          "online_MAC_fraction": 0.2
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6075144410133362,
+          "online_MAC_fraction": 0.325
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6057954430580139,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.6042492389678955,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.6027088165283203,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.6003003716468811,
+          "online_MAC_fraction": 0.925
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.5986276865005493,
+          "online_MAC_fraction": 1.075
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.5972922444343567,
+          "online_MAC_fraction": 1.3
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.597217321395874,
+          "online_MAC_fraction": 1.55
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.5958454608917236,
+          "online_MAC_fraction": 1.775
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.5957078337669373,
+          "online_MAC_fraction": 1.95
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.5951026082038879,
+          "online_MAC_fraction": 2.175
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.5928194522857666,
+          "online_MAC_fraction": 2.425
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.5922843813896179,
+          "online_MAC_fraction": 2.625
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.5920402407646179,
+          "online_MAC_fraction": 2.875
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2255,
+      "accepted_row_updates": 121,
+      "acceptance_backtracks": 73,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.20786502957344055,
+        "worst_row_relative_rms": 0.2206309586763382,
+        "bias": -0.00014759789337404072,
+        "max_abs": 0.09251511096954346
+      },
+      "surrogate": {
+        "selection_before": 17.710453033447266,
+        "selection_after": 16.926067352294922,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.23020510375499725,
+        "acceptance_before": 17.729331970214844,
+        "acceptance_after": 16.908679962158203,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.40755224227905273,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.22815541923046112
+      },
+      "online_sketch_products": 128,
+      "online_MAC_fraction": 3.2,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.21738170087337494,
+          "online_MAC_fraction": 0.1
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.21427372097969055,
+          "online_MAC_fraction": 0.2
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.21317154169082642,
+          "online_MAC_fraction": 0.4
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.2118215709924698,
+          "online_MAC_fraction": 0.55
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.21117492020130157,
+          "online_MAC_fraction": 0.7
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.21047376096248627,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.20974315702915192,
+          "online_MAC_fraction": 1.0
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.20931020379066467,
+          "online_MAC_fraction": 1.25
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.20897427201271057,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.20867741107940674,
+          "online_MAC_fraction": 1.75
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.20851434767246246,
+          "online_MAC_fraction": 1.975
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.2085500806570053,
+          "online_MAC_fraction": 2.225
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.20824414491653442,
+          "online_MAC_fraction": 2.45
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.20815575122833252,
+          "online_MAC_fraction": 2.7
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.2081160545349121,
+          "online_MAC_fraction": 2.95
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.20786502957344055,
+          "online_MAC_fraction": 3.2
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2110,
+      "accepted_row_updates": 118,
+      "acceptance_backtracks": 75,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.08909178525209427,
+        "worst_row_relative_rms": 0.09455529600381851,
+        "bias": 1.800711288524326e-05,
+        "max_abs": 0.040232520550489426
+      },
+      "surrogate": {
+        "selection_before": 3.257458209991455,
+        "selection_after": 3.11708927154541,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.4060305058956146,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.041627269238233566,
+        "acceptance_before": 3.253358840942383,
+        "acceptance_after": 3.11238956451416,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.40755224227905273,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.04162319377064705
+      },
+      "online_sketch_products": 131,
+      "online_MAC_fraction": 3.275,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09247635304927826,
+          "online_MAC_fraction": 0.1
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09158824384212494,
+          "online_MAC_fraction": 0.2
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.0909242108464241,
+          "online_MAC_fraction": 0.325
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09054582566022873,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.0902591198682785,
+          "online_MAC_fraction": 0.7
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.08997926861047745,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.0898970514535904,
+          "online_MAC_fraction": 1.075
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.08969342708587646,
+          "online_MAC_fraction": 1.275
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.08949347585439682,
+          "online_MAC_fraction": 1.525
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.08945505321025848,
+          "online_MAC_fraction": 1.775
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.08940964937210083,
+          "online_MAC_fraction": 2.025
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.08930578827857971,
+          "online_MAC_fraction": 2.275
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.08916500955820084,
+          "online_MAC_fraction": 2.525
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.08911961317062378,
+          "online_MAC_fraction": 2.775
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.0891692191362381,
+          "online_MAC_fraction": 3.025
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.08909178525209427,
+          "online_MAC_fraction": 3.275
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2528,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 40,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.5951149463653564,
+        "worst_row_relative_rms": 0.6182724833488464,
+        "bias": -0.00037082243943586946,
+        "max_abs": 0.30545446276664734
+      },
+      "surrogate": {
+        "selection_before": 146.76751708984375,
+        "selection_after": 127.3302001953125,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 1.7408969402313232,
+        "acceptance_before": 146.76751708984375,
+        "acceptance_after": 127.3302001953125,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38116884231567383,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 1.7408969402313232
+      },
+      "online_sketch_products": 72,
+      "online_MAC_fraction": 3.6,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6154060959815979,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6043090224266052,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6022568941116333,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6010027527809143,
+          "online_MAC_fraction": 0.65
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.5997219681739807,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.5991154313087463,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.598433256149292,
+          "online_MAC_fraction": 1.3
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.5976640582084656,
+          "online_MAC_fraction": 1.55
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.5969229340553284,
+          "online_MAC_fraction": 1.8
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.5972351431846619,
+          "online_MAC_fraction": 2.05
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.5966848134994507,
+          "online_MAC_fraction": 2.3
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.5970479249954224,
+          "online_MAC_fraction": 2.55
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.5959210991859436,
+          "online_MAC_fraction": 2.8
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.5957748889923096,
+          "online_MAC_fraction": 3.05
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.5954514145851135,
+          "online_MAC_fraction": 3.3
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.5951149463653564,
+          "online_MAC_fraction": 3.6
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2474,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 38,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.20854555070400238,
+        "worst_row_relative_rms": 0.22113680839538574,
+        "bias": -7.490473944926634e-05,
+        "max_abs": 0.10008611530065536
+      },
+      "surrogate": {
+        "selection_before": 17.631637573242188,
+        "selection_after": 15.56521224975586,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.20831656455993652,
+        "acceptance_before": 17.631637573242188,
+        "acceptance_after": 15.56521224975586,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38116884231567383,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.20831656455993652
+      },
+      "online_sketch_products": 70,
+      "online_MAC_fraction": 3.5,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.21511146426200867,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.21214687824249268,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.21072955429553986,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.21030600368976593,
+          "online_MAC_fraction": 0.65
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.20978869497776031,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.2096583992242813,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.2096254974603653,
+          "online_MAC_fraction": 1.25
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.20955055952072144,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.20924577116966248,
+          "online_MAC_fraction": 1.75
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.20933277904987335,
+          "online_MAC_fraction": 2.0
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.2088773548603058,
+          "online_MAC_fraction": 2.25
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.20898829400539398,
+          "online_MAC_fraction": 2.5
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.20882239937782288,
+          "online_MAC_fraction": 2.75
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.20874325931072235,
+          "online_MAC_fraction": 3.0
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.20859768986701965,
+          "online_MAC_fraction": 3.25
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.20854555070400238,
+          "online_MAC_fraction": 3.5
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2438,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 40,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.08927498012781143,
+        "worst_row_relative_rms": 0.09474886953830719,
+        "bias": -3.1966978895070497e-06,
+        "max_abs": 0.04796741530299187
+      },
+      "surrogate": {
+        "selection_before": 3.210252285003662,
+        "selection_after": 2.858558177947998,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.03832123428583145,
+        "acceptance_before": 3.210252285003662,
+        "acceptance_after": 2.858558177947998,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38116884231567383,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.03832123428583145
+      },
+      "online_sketch_products": 72,
+      "online_MAC_fraction": 3.6,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09167973697185516,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09073149412870407,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09025194495916367,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09011784940958023,
+          "online_MAC_fraction": 0.65
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.09010042250156403,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.0899689719080925,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.08987665176391602,
+          "online_MAC_fraction": 1.3
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.08984844386577606,
+          "online_MAC_fraction": 1.55
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.08981173485517502,
+          "online_MAC_fraction": 1.8
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.08967480808496475,
+          "online_MAC_fraction": 2.05
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.08971934020519257,
+          "online_MAC_fraction": 2.3
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.08960139006376266,
+          "online_MAC_fraction": 2.55
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.08952373266220093,
+          "online_MAC_fraction": 2.85
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.08943507075309753,
+          "online_MAC_fraction": 3.1
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.08939563482999802,
+          "online_MAC_fraction": 3.35
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.08927498012781143,
+          "online_MAC_fraction": 3.6
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 3624,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 16,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.5681473016738892,
+        "worst_row_relative_rms": 0.5847048759460449,
+        "bias": -0.00033620366593822837,
+        "max_abs": 0.30148327350616455
+      },
+      "surrogate": {
+        "selection_before": 146.76751708984375,
+        "selection_after": 134.2147979736328,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 1.8418631553649902,
+        "acceptance_before": 146.76751708984375,
+        "acceptance_after": 134.2147979736328,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38116884231567383,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 1.8418631553649902
+      },
+      "online_sketch_products": 48,
+      "online_MAC_fraction": 2.4,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6154060959815979,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6025477647781372,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.5957981944084167,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.590330958366394,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.5843968987464905,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.5809615254402161,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.5780356526374817,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.5769951343536377,
+          "online_MAC_fraction": 1.2
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.5751146078109741,
+          "online_MAC_fraction": 1.35
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.5730855464935303,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.5725502967834473,
+          "online_MAC_fraction": 1.65
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.5723750591278076,
+          "online_MAC_fraction": 1.8
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.5710290670394897,
+          "online_MAC_fraction": 1.95
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.5703755021095276,
+          "online_MAC_fraction": 2.1
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.5694402456283569,
+          "online_MAC_fraction": 2.25
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.5681473016738892,
+          "online_MAC_fraction": 2.4
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 3800,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 16,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.19861777126789093,
+        "worst_row_relative_rms": 0.21056583523750305,
+        "bias": -4.572015313897282e-05,
+        "max_abs": 0.09396568685770035
+      },
+      "surrogate": {
+        "selection_before": 17.631637573242188,
+        "selection_after": 16.314083099365234,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.21928851306438446,
+        "acceptance_before": 17.631637573242188,
+        "acceptance_after": 16.314083099365234,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38116884231567383,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.21928851306438446
+      },
+      "online_sketch_products": 48,
+      "online_MAC_fraction": 2.4,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.21511146426200867,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.21082158386707306,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.20771795511245728,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.20568859577178955,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.20445114374160767,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.20325393974781036,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.20219334959983826,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.20123906433582306,
+          "online_MAC_fraction": 1.2
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.200672909617424,
+          "online_MAC_fraction": 1.35
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.20017798244953156,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.20041613280773163,
+          "online_MAC_fraction": 1.65
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.19952312111854553,
+          "online_MAC_fraction": 1.8
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.1997361183166504,
+          "online_MAC_fraction": 1.95
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.19944439828395844,
+          "online_MAC_fraction": 2.1
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.19883166253566742,
+          "online_MAC_fraction": 2.25
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.19861777126789093,
+          "online_MAC_fraction": 2.4
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 3730,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 16,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.08444604277610779,
+        "worst_row_relative_rms": 0.08926161378622055,
+        "bias": 6.708729051752016e-05,
+        "max_abs": 0.04021109268069267
+      },
+      "surrogate": {
+        "selection_before": 3.210252285003662,
+        "selection_after": 2.9991066455841064,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.04022051393985748,
+        "acceptance_before": 3.210252285003662,
+        "acceptance_after": 2.9991066455841064,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38116884231567383,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.04022051393985748
+      },
+      "online_sketch_products": 48,
+      "online_MAC_fraction": 2.4,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09167973697185516,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09002391993999481,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.08860898017883301,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.08804576843976974,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.08723101019859314,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.08668967336416245,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.08626385778188705,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.08577877283096313,
+          "online_MAC_fraction": 1.2
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.08568183332681656,
+          "online_MAC_fraction": 1.35
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.08551555871963501,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.08542085438966751,
+          "online_MAC_fraction": 1.65
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.08519425243139267,
+          "online_MAC_fraction": 1.8
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.08498339354991913,
+          "online_MAC_fraction": 1.95
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.08483956009149551,
+          "online_MAC_fraction": 2.1
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.08444172143936157,
+          "online_MAC_fraction": 2.25
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.08444604277610779,
+          "online_MAC_fraction": 2.4
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 2923,
+      "accepted_row_updates": 125,
+      "acceptance_backtracks": 50,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.5703965425491333,
+        "worst_row_relative_rms": 0.5880637764930725,
+        "bias": -0.00025573530001565814,
+        "max_abs": 0.28938940167427063
+      },
+      "surrogate": {
+        "selection_before": 146.76751708984375,
+        "selection_after": 133.17420959472656,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 1.8247016668319702,
+        "acceptance_before": 147.54966735839844,
+        "acceptance_after": 132.69430541992188,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38191866874694824,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 1.8187158107757568
+      },
+      "online_sketch_products": 101,
+      "online_MAC_fraction": 5.05,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6154060959815979,
+          "online_MAC_fraction": 0.2
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6025477647781372,
+          "online_MAC_fraction": 0.4
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.5957981944084167,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.5904944539070129,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.5848814845085144,
+          "online_MAC_fraction": 1.1
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.5822159647941589,
+          "online_MAC_fraction": 1.35
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.5792567133903503,
+          "online_MAC_fraction": 1.6
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.5772495865821838,
+          "online_MAC_fraction": 1.9
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.5754777789115906,
+          "online_MAC_fraction": 2.2
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.5746573209762573,
+          "online_MAC_fraction": 2.6
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.574016809463501,
+          "online_MAC_fraction": 2.9
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.5728771090507507,
+          "online_MAC_fraction": 3.25
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.5717251896858215,
+          "online_MAC_fraction": 3.55
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.5713847875595093,
+          "online_MAC_fraction": 4.05
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.5704547166824341,
+          "online_MAC_fraction": 4.55
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.5703965425491333,
+          "online_MAC_fraction": 5.05
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 3152,
+      "accepted_row_updates": 128,
+      "acceptance_backtracks": 50,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.19903656840324402,
+        "worst_row_relative_rms": 0.21003496646881104,
+        "bias": 7.128835022740532e-06,
+        "max_abs": 0.09323742240667343
+      },
+      "surrogate": {
+        "selection_before": 17.631637573242188,
+        "selection_after": 16.21416664123535,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.21815848350524902,
+        "acceptance_before": 17.67266845703125,
+        "acceptance_after": 16.203771591186523,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38191866874694824,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.21972543001174927
+      },
+      "online_sketch_products": 100,
+      "online_MAC_fraction": 5.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.21511146426200867,
+          "online_MAC_fraction": 0.2
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.21082158386707306,
+          "online_MAC_fraction": 0.4
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.20771795511245728,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.20568859577178955,
+          "online_MAC_fraction": 0.8
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.20438455045223236,
+          "online_MAC_fraction": 1.05
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.20340542495250702,
+          "online_MAC_fraction": 1.3
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.20238810777664185,
+          "online_MAC_fraction": 1.6
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.20163704454898834,
+          "online_MAC_fraction": 1.85
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.20101036131381989,
+          "online_MAC_fraction": 2.15
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.2004675716161728,
+          "online_MAC_fraction": 2.65
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.2001064568758011,
+          "online_MAC_fraction": 3.0
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.19992192089557648,
+          "online_MAC_fraction": 3.4
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.19982661306858063,
+          "online_MAC_fraction": 3.85
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.19930750131607056,
+          "online_MAC_fraction": 4.2
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.19931696355342865,
+          "online_MAC_fraction": 4.7
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.19903656840324402,
+          "online_MAC_fraction": 5.0
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 8,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 16,
+      "changes": 64,
+      "changed_codes": 3170,
+      "accepted_row_updates": 126,
+      "acceptance_backtracks": 49,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.08503080159425735,
+        "worst_row_relative_rms": 0.09047359973192215,
+        "bias": 3.052976535400376e-05,
+        "max_abs": 0.041888732463121414
+      },
+      "surrogate": {
+        "selection_before": 3.210252285003662,
+        "selection_after": 2.9742255210876465,
+        "selection_negative_diagonal_fraction": 0.0,
+        "selection_diagonal_min": 0.38116884231567383,
+        "selection_negative_diagonal_mass": -0.0,
+        "selection_min_row_after": 0.03937310352921486,
+        "acceptance_before": 3.2430527210235596,
+        "acceptance_after": 2.9741106033325195,
+        "acceptance_negative_diagonal_fraction": 0.0,
+        "acceptance_diagonal_min": 0.38191866874694824,
+        "acceptance_negative_diagonal_mass": -0.0,
+        "acceptance_min_row_after": 0.03958668187260628
+      },
+      "online_sketch_products": 99,
+      "online_MAC_fraction": 4.95,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09167973697185516,
+          "online_MAC_fraction": 0.2
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09002391993999481,
+          "online_MAC_fraction": 0.4
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.08860898017883301,
+          "online_MAC_fraction": 0.6
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.08804327994585037,
+          "online_MAC_fraction": 0.9
+        },
+        {
+          "iteration": 5,
+          "true_relative_rms": 0.08735121041536331,
+          "online_MAC_fraction": 1.15
+        },
+        {
+          "iteration": 6,
+          "true_relative_rms": 0.08682844787836075,
+          "online_MAC_fraction": 1.4
+        },
+        {
+          "iteration": 7,
+          "true_relative_rms": 0.08647532016038895,
+          "online_MAC_fraction": 1.75
+        },
+        {
+          "iteration": 8,
+          "true_relative_rms": 0.08608369529247284,
+          "online_MAC_fraction": 2.0
+        },
+        {
+          "iteration": 9,
+          "true_relative_rms": 0.0858626738190651,
+          "online_MAC_fraction": 2.25
+        },
+        {
+          "iteration": 10,
+          "true_relative_rms": 0.08562704920768738,
+          "online_MAC_fraction": 2.5
+        },
+        {
+          "iteration": 11,
+          "true_relative_rms": 0.085556261241436,
+          "online_MAC_fraction": 2.9
+        },
+        {
+          "iteration": 12,
+          "true_relative_rms": 0.08544151484966278,
+          "online_MAC_fraction": 3.25
+        },
+        {
+          "iteration": 13,
+          "true_relative_rms": 0.08537529408931732,
+          "online_MAC_fraction": 3.65
+        },
+        {
+          "iteration": 14,
+          "true_relative_rms": 0.08525684475898743,
+          "online_MAC_fraction": 4.15
+        },
+        {
+          "iteration": 15,
+          "true_relative_rms": 0.0850081518292427,
+          "online_MAC_fraction": 4.65
+        },
+        {
+          "iteration": 16,
+          "true_relative_rms": 0.08503080159425735,
+          "online_MAC_fraction": 4.95
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 8,
+      "diagonal": "exact"
+    }
+  ]
+}

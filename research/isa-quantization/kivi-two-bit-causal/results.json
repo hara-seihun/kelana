@@ -1,0 +1,397 @@
+{
+  "method": "KIVI 2-bit K/V G32 R32 full original Qwen3-0.6B layer0",
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "state": {
+    "key_chunk_bytes": 1536,
+    "value_token_bytes": 48,
+    "recent_vector_bytes": 256,
+    "full_layer_peak_bytes": 304768,
+    "full_layer_final_bytes": 249856,
+    "static_cache_descriptors_bytes": 0,
+    "event_log_not_live_state": true
+  },
+  "panels": {
+    "train": {
+      "kivi2_full_o_rel_sq": 0.003239980805597199,
+      "kivi4_full_o_rel_sq": 4.957371262776078e-05,
+      "turbo_original_full_o_rel_sq": 1.3346292985785828,
+      "turbo_gauged_full_o_rel_sq": 0.4263363096091261,
+      "kivi2_mean_head_kl": 0.07239901569482754,
+      "kivi4_mean_head_kl": 0.0022995717692708695,
+      "reference_sq_sum": 71164.8818359375,
+      "windows": [
+        {
+          "index": 0,
+          "kivi2_full_o_sse": 33.64463806152344,
+          "kivi4_full_o_sse": 0.4717872142791748,
+          "turbo_original_full_o_sse": 11915.056640625,
+          "turbo_gauged_full_o_sse": 3494.1943359375,
+          "reference_sq": 8920.47265625,
+          "kivi2_mean_head_kl": 0.0810863588412758,
+          "kivi4_mean_head_kl": 0.002393752600710286,
+          "kivi2_head_image_sha256": [
+            "e4f42adfe19c5f9f975ea2c106784cede2b33cea87229468b45fe3c2f77c4447",
+            "26ac1737d141f9e4592261cf7b3baf2d9f45b38b4e0ea28132442695671ccc00",
+            "a615d9ece9069de80ac8f4d9bb47c32b0a937655a6d98f516a32f5e488b7d283",
+            "9a4b33679d8b09e56880bd2049f6cb21897c1e87fd0de645603f26f558d746f4",
+            "3ae08be7139124a884a0a61961c73644e622963242ebb316a5810e788d54b8d9",
+            "8773c94ac835a9ec8cf57af4034ba6f218f5a2ae6fd195255441051f697725b7",
+            "cbf70a3934e44d10b9c89f28f7e5b9ecbe400c7d90012724975e7224fc4e6c2c",
+            "d5d119f2bb616dd34aaae9e24ae746c3480c7cb58bc53ca4e843e7ef2b2f519d"
+          ],
+          "kivi2_head_events_sha256": [
+            "3a2b529ced2066127e918678dc5728fcfef9c1d84a4bfb95f6cc61361e858633",
+            "726745ddfefb86588588e8c40e1b4b45d35462aa9230e328b17f1d5689804d8d",
+            "3b2d39f2b93aea3c62900280695d0229a1218b03341a2f50c57d1b2c571dd671",
+            "b045969171c925a1efc2e6034db60ff751b9e2062b2434b2d6aa888de5030004",
+            "55d10658613b214689b45dbb15fcd3aeec940488c22ec772b6f4f13cbd5b8df6",
+            "935625b8e395e12026e70ee4bb36fb7aeb776f0f35ffd1df94c78441305272f0",
+            "bcd1d689d60d56820f99df586c2cfd249af4d133a7f55282de35aaff4a84919c",
+            "e2bcdb9869bbdc82e4e5bc604de26189dffdc08d9bb4733d4060bd381742a9dc"
+          ]
+        },
+        {
+          "index": 1,
+          "kivi2_full_o_sse": 28.065418243408203,
+          "kivi4_full_o_sse": 0.391792356967926,
+          "turbo_original_full_o_sse": 11824.798828125,
+          "turbo_gauged_full_o_sse": 3554.312255859375,
+          "reference_sq": 8846.41796875,
+          "kivi2_mean_head_kl": 0.06835762826085556,
+          "kivi4_mean_head_kl": 0.002133005238192709,
+          "kivi2_head_image_sha256": [
+            "c33bc167d85a83f16737ff93f015ad82fcc36347392394f737df617590f429b4",
+            "4a6a90fd8d74a9299a31d287829f34bd715b311958e250385a3773584468017d",
+            "ac68593a3b8803f5c610e05194b63a4773fbf016c50ecde90d15c50a75c22ea7",
+            "8f6cf94d771bf655edf5382d623094fc0d0a91d02cf8b1089ab40034781a16c2",
+            "adb1845e9c35cc4f57ac32d2e80ef2658f28c6f22e72b6d4574f2adb8c3b9b31",
+            "8c6704128967999e2b43c20d4b096c510782bf6333df090e0a9863205670d39d",
+            "59128256278968e227848bd8770262a6a4cbddc6b25f576c6c4909ba1c21e076",
+            "4d7bc8c7012f06cd63229759723215dd14ab04ad00d3dc2f8efdbd05229fe482"
+          ],
+          "kivi2_head_events_sha256": [
+            "5877837f3396e2f1bf3c1982191be9b36a97272b37e46b05347d0836e7b7a4cd",
+            "001d1684110dec6412e6234898ea5cf5172d39af8cc00fb4fd029c098d829501",
+            "720f31669d5f0785993effed2d1db5526bd9f1967be4954a41c209df84bcf317",
+            "095a9f032e5f90456266f1ac735f2cfbff5d5e7313c8d08770141fd69f9b4de7",
+            "ea2e509a43970e164edfd16961962a2b939be796552fcc943504c1cee6a2d98b",
+            "60bb875297e5965dcbf9a90afa757bcec664cf0aa620e2b37c2d5e6eb15b90c6",
+            "a1ee17396bb820ae88bd7e136304115161f276e40d88755dfae19d6b6acf5718",
+            "adddb1fcf8b3107140fa70a9cf92c741db58b6f40a224e59d85d827a9a8102f3"
+          ]
+        },
+        {
+          "index": 2,
+          "kivi2_full_o_sse": 22.98014259338379,
+          "kivi4_full_o_sse": 0.39990678429603577,
+          "turbo_original_full_o_sse": 11872.73046875,
+          "turbo_gauged_full_o_sse": 4450.1611328125,
+          "reference_sq": 8926.62109375,
+          "kivi2_mean_head_kl": 0.06509098858805373,
+          "kivi4_mean_head_kl": 0.002240758831931089,
+          "kivi2_head_image_sha256": [
+            "4283baa18ea5f2929eb030b7772e235a50054c8449ad3f309035715483d681f7",
+            "02391261382e10fd441c154e648192f881735f6a6ce2d5c12f30fa6e4fb5ada8",
+            "7e62f1f512fb5a33627e96234d4576e760ff746daaff68935bac8b8345d37033",
+            "9a93c85ab67f97afb79ee733d6deb4b492ca27a7e73f0b4fdf19f7ffcb68f7b8",
+            "f1cdc85e67b9f0a9b914ee2b9409aeed828e5d34bed9f3a86afa33f332d3cb83",
+            "0298f67f0d0e925ad54b100d32444024c592c4d3aa367aac08682d93d707998f",
+            "02968a32ebf38b6ab08e78f1793fb850d1e14179c6af40dd50c149afbdea15c6",
+            "2b5d4d12ad869de5bd9a9b1004e4cd44e3e4f3ac3ca773615dd963739ac745d3"
+          ],
+          "kivi2_head_events_sha256": [
+            "da7a1dd426229ece6137804dada33e35912a679aaf88fc9a06827529c087dca0",
+            "a07beaef13d7416fd0faca3aa7c35cd07e2e2aeadd368dc9e9e6aaaa4dc43275",
+            "07401f99a4128eebaf436791983a2309b12cb6245dd1d5581ed1911ba0d3e736",
+            "b6015e4c3a1dfd55c3ac763f6bbcc699e922a4032439f2754dbfc9e3816d2c35",
+            "292086d9c66ad847c7f5b536e004d92beaec4e2018ff30a223e2d6f8ebe726e8",
+            "4a2d8cb9d3248037ebb573d35d3d3ba2c8477ab4beb25291998423b489e9a4c9",
+            "2213b18225399c19b2ddb941ae1b305f6398fa49e2b13869082ccafd0af826b1",
+            "f66a14fcb9a2826f55ff8c6ad5d7c8b2c5eb22d6a022a117f07dfc3fc64983ab"
+          ]
+        },
+        {
+          "index": 3,
+          "kivi2_full_o_sse": 31.412744522094727,
+          "kivi4_full_o_sse": 0.355257123708725,
+          "turbo_original_full_o_sse": 11640.287109375,
+          "turbo_gauged_full_o_sse": 3790.144287109375,
+          "reference_sq": 8846.390625,
+          "kivi2_mean_head_kl": 0.07230795237410348,
+          "kivi4_mean_head_kl": 0.0022989410258560383,
+          "kivi2_head_image_sha256": [
+            "1695fa0dafa1ce537afa9292ee9734ac8bf6069c93a8c5c256d17e70f6c80cb2",
+            "2a0eb8fd4c056cadfa39f4dc769b4b278bafeda13c8265f02e800c81613a3f6b",
+            "fb740e667f592e2da60aae81ef2b5ed7adc2b38f5f2767acb6d44b094ff00ecb",
+            "651f57a8972735bdb541a0143913203aef424d63ac157e3810f4ac1d01bfbacc",
+            "0f3390025965deac95e5aad872c2285e6437e90c46c1cd43a391b8d3f25284d8",
+            "c17393d1aace80e517d4c175c59dbdf8fc552b288c0442795bdc3564e9fdd688",
+            "9fe082f00efd8e67e9faadc54695170121821239eb46cbc2dc8eacedab52b319",
+            "6a7f4bc359c8f69340366bf79e088b954046033c9661848941c4457240e4fbb0"
+          ],
+          "kivi2_head_events_sha256": [
+            "d67b125b3a67290ff63d09afac8f4a874a6d9451298c7458ec05ef1a713b916b",
+            "54496f5818ba8bb2cb54ba6e0c2b2cc69ca103eb7615ad1f28cc826478ef0aed",
+            "7a0a7f55dcd4ec9b87475368ba646a184bdd9f039b09304b0b2c50b8a2d80566",
+            "a08ff38fd22c6a7c838d87830041f8e9aa0e922241dfc83f8b0e228df4a0d0f6",
+            "9a445a769bb18045aedb8331844583059d810fa63a1d7f59cb3ce94b3020e557",
+            "3e5c65f8ec5c8c274475df2cec7338d56aa98fc0393f4077987ea3a9156f8ca3",
+            "0c6c13debbb68b65588be9e3c6ce7b0de6da67d01906da84b413db4e89d7658f",
+            "3855e1f026f2cca38a5b9202c50843ac89ded6fd38e24af4122119b196a0988c"
+          ]
+        },
+        {
+          "index": 4,
+          "kivi2_full_o_sse": 31.117328643798828,
+          "kivi4_full_o_sse": 0.5300132036209106,
+          "turbo_original_full_o_sse": 11622.5712890625,
+          "turbo_gauged_full_o_sse": 3781.09228515625,
+          "reference_sq": 8948.513671875,
+          "kivi2_mean_head_kl": 0.07485600779182278,
+          "kivi4_mean_head_kl": 0.0022274285779531056,
+          "kivi2_head_image_sha256": [
+            "52554ea27ec4d539aa6bbb82c635fc0497db10d789b4cd8cc4b2f45b086d6cfe",
+            "141ff72949e812224ac36604b885e13d1df8b81d8de93b8572b11cfca0d390e0",
+            "6a99ed7ce3957120b65f9fbb678d58d2e34b8ce4532a03a71736e0634ecc5d8f",
+            "308e4afe5db8479039a2b1afcbadfb25b9161022b4a557839cfb9c3c2ee30535",
+            "3314cfbdc5c4bbd464b97da360a1df2385262f327672b30c5434c978d4fb0b36",
+            "825946ae90ca775032b0caf670e16b3e53349c115524f2ba92759957b7dd1058",
+            "9511c72c2c292ac473744b398d0be725149e0cb7d5a227e4b81aa1afac6fc3e7",
+            "1a10945b5cb2cc24fcf412ad9c3cdff088e20b1803ff440d18fa145748918819"
+          ],
+          "kivi2_head_events_sha256": [
+            "9eefabf9c1665e4909b0c7ae316b2dd7950f5e85d3959bc03300a989cea9dd62",
+            "00f2dde665c5733f4fb3d3a1e4ae69d5041225fee1f011959bb7448d3032cb9e",
+            "88f313db02b34a40c07d19d3816b9f4a0a03be91875fa7149af23560815dee18",
+            "556f8ce052dbcbd74a13f83981b5a8a6654788d3a716b0d3cdee8f81bca2503b",
+            "8dcbd6344b7eb7156d0171be817b102adeb45d9575a8640b11c2759d911b7321",
+            "e27a67dc4cc76177c70f0d4563ea3b97c710ef49f33d2418dec1276624bebb10",
+            "00940a894703f83baebec27fcbf0621595372919cc43741debebb6174dfd9f8c",
+            "7effca59b431eeaf3b31d4da37bbfb097862e6dcf1fed510a773eb060ec04f39"
+          ]
+        },
+        {
+          "index": 5,
+          "kivi2_full_o_sse": 27.30354118347168,
+          "kivi4_full_o_sse": 0.5337852835655212,
+          "turbo_original_full_o_sse": 12297.263671875,
+          "turbo_gauged_full_o_sse": 3727.975341796875,
+          "reference_sq": 8933.6357421875,
+          "kivi2_mean_head_kl": 0.0784900524886325,
+          "kivi4_mean_head_kl": 0.002534091280267603,
+          "kivi2_head_image_sha256": [
+            "4a410d0fd8a67ad0b499d5f853c49c4a32ee39c557d94ea58789d6ada6560219",
+            "c322e8c55e5a975400c7a82dbc6bc0e428c7c59fbe9b1246ed31257afd12429e",
+            "71f268c391056ef4590f0c0c130ecffb7836b127c797a9dbe2b1672a5a222b8c",
+            "6f62ed188c388027ad75226f0a5614725f22900c698623532eaf8b82cb69fd01",
+            "0cc97975e83ba7ea199ada744e2d70d468441cfa8a461c7f8fab86bc3b22b479",
+            "ada5c823f6c130c5c80d33e6a81ead03dda38d579e16732a7021c7cbb965cf15",
+            "48988e591f210270cd23d43618d87853237a9952ef418dc26069a0df3f28b8ca",
+            "0443aab2f2b666d65b2b1eef5edeabf94065a8212900b6f7cb2ee22edb17f6d5"
+          ],
+          "kivi2_head_events_sha256": [
+            "08bbf362fad62e3d65855de9b94d117f6dbce35cbcbcbe7d84051c82ed5eb9b4",
+            "3b38624a526b79bcf00122a3a578d8f09babfcb347d210fe26ddb3694088b6a8",
+            "e71db91205435021bf060ed17c57e514e29eb5c5dadc95fdb42d8dff1874174c",
+            "febb9c57d323701866e13b241564136180d1fa0d730432aab39e36bd27490aca",
+            "cc6d96d3945b3e8df4ba429a7516ea7ea6c6d1e034119deffa6d2b47ad359c85",
+            "3f68f1db484a0dc351e02347d81353aa30b7c1d66d8977bff3bee86d7fd98a8b",
+            "4d93df28f90c16b29681eb75b95b81f35f04c89943e806040908257126767b35",
+            "81abc20c870328a1ac46a69a71bd5b9de30f0f1194318e75606b39fb552098ef"
+          ]
+        },
+        {
+          "index": 6,
+          "kivi2_full_o_sse": 28.69866180419922,
+          "kivi4_full_o_sse": 0.40479734539985657,
+          "turbo_original_full_o_sse": 12253.935546875,
+          "turbo_gauged_full_o_sse": 3923.217529296875,
+          "reference_sq": 8953.4501953125,
+          "kivi2_mean_head_kl": 0.07076146104373038,
+          "kivi4_mean_head_kl": 0.0024285197996505303,
+          "kivi2_head_image_sha256": [
+            "1e257ec4b02738d6f2c76ffee4e36b56b6f672c145b048d690aee1ad2fb77932",
+            "09c65d403dcbe4b1db46db81851d2a7d1d2daeb76900bde3c5154e7478c04116",
+            "0a72f04abd8d35c730ebe71001809af4ed714f6eaf59bf9545c81e264d2fc873",
+            "0070729c970125674219312727667da859910674a84070f511dfe41d9d34de56",
+            "2839d3fac3de33d20b8159505df4349c4cf763ad3a974b2820e79a0e915c9669",
+            "0d3ee0341fed8eb8566cce3bb60c40544fb9bd15b5b174724e3577623b87e533",
+            "8f2991dbd1698d0434daaa0bdf93d7c687d4112f50a55cd834d8f6ca21127adb",
+            "664a8ba2fb0cf3813314386cdfb05197dd3f77847b99a5d7dc7a48b6cbe5c3d1"
+          ],
+          "kivi2_head_events_sha256": [
+            "dd3f95cdfa6c6ea05a1d5282b982549ba0394120ea7bf62fe188b8bd4c9a9f46",
+            "67cf4627356450cea99a275ce18d0a9c2c9e666330ea73da6fd1f500ecb34684",
+            "11a1fb55ae23c3b6945c513ca851b2781ac0ebe33ca6844d6567d1106885a5d7",
+            "3f64f2c2007628d78b214edd9a83c2d5672bc0702a83cff2240e4df4a9e9d251",
+            "670fa3357a4c6ff5b9cb4490df96424748efa31ee0a660e06ef9be98e039d599",
+            "fc2981166c9ea0599860a8e5a3ae708ac222cf1c0728c95ea0be70628ba66b7c",
+            "b345c4e048fab94829382719142a4a63c57a4c3545f1c79e1df57743b71509c2",
+            "e25c6261f08d83dcc8a53784efc71ce69d990be89b142e3fb7889a8fa4ae464b"
+          ]
+        },
+        {
+          "index": 7,
+          "kivi2_full_o_sse": 27.35037612915039,
+          "kivi4_full_o_sse": 0.44056808948516846,
+          "turbo_original_full_o_sse": 11552.0927734375,
+          "turbo_gauged_full_o_sse": 3619.075927734375,
+          "reference_sq": 8789.3798828125,
+          "kivi2_mean_head_kl": 0.06824167617014609,
+          "kivi4_mean_head_kl": 0.0021400767996055947,
+          "kivi2_head_image_sha256": [
+            "15f07f3b979a4b171a3a7755a2d0ba925c9ae115ba43afe9a60a646319b40c4c",
+            "fce40478d28890f1a9f35ec45ae81de964718850623b63ab55dc5d887d4f68db",
+            "b58a25f09d1784b6701179238c64f4d7dc21ef746a943dcea765096e8e1076d2",
+            "f23ffe8a3ee050cadfeff36328eedc5d37c23434740198362139de0d0cda9826",
+            "7a4804aafb4220a3b9a74ce78a76d30219a8316c43f852bc1d37b8af93642b48",
+            "2d02195a54acc81eb54726a97f447f9addaf1874698840e84175948147d99668",
+            "3d8d21121a4bc4ff570c9e6f7e3c15cb31089903ae032c66e0d8fc6a31471fa0",
+            "20270ff5bde3b3bc8af9323edc3ae3fe68c43fb68651a186b25289205d57f0bc"
+          ],
+          "kivi2_head_events_sha256": [
+            "ad003dcb81c9e27d763adaae10b12431b5258100cd1af5cb313374c08d7f5610",
+            "dfb20495448fdadacb3590a53ab1db0870df198ec1d368a391c509331d5cf6de",
+            "39a287c31502d61dc3af322bdcd3cd4fde5ee99561c0052166bc487260d19483",
+            "f36b0700a5a6e411e97483b8f572c0f1993f30e9c03345733b1450cd02d74acb",
+            "bfa1f5590fa2072bf48dc3425b6310643104a332a6bb1e7ebf35aa0fda47d11e",
+            "1135b1b01fe1d956f27f019b20a8d0ea7e6986b4fbfbb45d761b7869fa43ccb6",
+            "0bcbac497bd21b29bcfc8f5baceb59884cfa34d6faf2d4f5ba905cd382a11ed2",
+            "9a5c10ef9e3a25a7d26e6f77f096620ba312126e1ac8eefb72b55cf825c11900"
+          ]
+        }
+      ]
+    },
+    "held": {
+      "kivi2_full_o_rel_sq": 0.0031243726938851033,
+      "kivi4_full_o_rel_sq": 6.300174373228165e-05,
+      "turbo_original_full_o_rel_sq": 1.359112395260371,
+      "turbo_gauged_full_o_rel_sq": 0.4375805475738079,
+      "kivi2_mean_head_kl": 0.07610103033221094,
+      "kivi4_mean_head_kl": 0.002536635470960391,
+      "reference_sq_sum": 36467.615234375,
+      "windows": [
+        {
+          "index": 0,
+          "kivi2_full_o_sse": 21.969806671142578,
+          "kivi4_full_o_sse": 0.4420422613620758,
+          "turbo_original_full_o_sse": 12187.0341796875,
+          "turbo_gauged_full_o_sse": 4350.501953125,
+          "reference_sq": 9041.7705078125,
+          "kivi2_mean_head_kl": 0.0687409669480985,
+          "kivi4_mean_head_kl": 0.0024088645955089305,
+          "kivi2_head_image_sha256": [
+            "31d6b133f5752bba6e51eb7716c3c8ca2e130ddbad909b6e99cdd5d5402c4e3d",
+            "d509c5cfd9af37316852046d7c6a5ab470c4957887cff249e94107743c007288",
+            "674da52ea9f870e2f46dd5226e88fa5efaa975ee33d2d504b5d11c2db19a79be",
+            "a33ae04863d7511bb1ff2d5bf772bee467617f4cdc14cd87581f3a991999f90f",
+            "6c8e5f5ab076c0b952e20c86360259f775c1cfb2db768832dda97d77d2e9f998",
+            "9eb33b9c2d7789fca1b5515ecd337b5c75ed2ce67748e027545b45bb03c76538",
+            "8d07b232eb1f691e697cd80bc567eaec196a928b7d33f6ac7454694ca836d377",
+            "f9d90c9230c5cfe58064aa1201ed30c64344f6ccc57b30e666393da010d890c5"
+          ],
+          "kivi2_head_events_sha256": [
+            "4daef1ba9d7d1ec5916ba70719194000af669c463b6b0d4d9d02a8d81320dc61",
+            "27db26491bdc0db1d546293f4de723736f801ad91a97b843fd50be7133d41686",
+            "c2105298b44a7be42459988b044fbc3b3a77499bca45beb3c3d4ac0461ad1856",
+            "ef9740af79335538d793a4c2e759c89b37f230ee4df48fcce316cd00e64ffe0b",
+            "986854e478f706a517c6e1ff042d7ca873feaa12416d59b856dc1de2f46bb8e2",
+            "830e761cb2c1a3eff0af5bf344f33878fca2084bd61781c0e27ac561c7258f00",
+            "cf12e7918ba1e9af4ff3e8c83e1f20660de61d6bf1528cd69625ee90f2b43895",
+            "dc1cfe08bbd2d30569c2c5b71b51f44038aa11393158963d8d2c602513856b70"
+          ]
+        },
+        {
+          "index": 1,
+          "kivi2_full_o_sse": 32.06294250488281,
+          "kivi4_full_o_sse": 0.7851129174232483,
+          "turbo_original_full_o_sse": 12845.904296875,
+          "turbo_gauged_full_o_sse": 4393.77685546875,
+          "reference_sq": 9596.439453125,
+          "kivi2_mean_head_kl": 0.07967236213153228,
+          "kivi4_mean_head_kl": 0.0026515922013459203,
+          "kivi2_head_image_sha256": [
+            "235b5d4865aa6172b9f9527e1d4265bacf8d94e736393377f427ed84d9e3b556",
+            "afb379c4b4de9168aea2cce1670122574b3eadf72a9e16e6e461d52209b2529c",
+            "d136f27b0d5bf1f81dd62e3ea4ed045bc37bde66c0897d6a6079e3e81fafd9f1",
+            "be041925c3075bf7e4663fcfbc5c1ca7afe2db0d15c1e408a5830baf1b9fb127",
+            "4e7ded2d494b89f21b4b72cac819cb57d0f673920943fc95aa28a959ae463018",
+            "2e815984e8e2b4e5038511605c21100e00c91380ec644dee75246e78c88de3fd",
+            "7e5339dc301dc430b75edb91a07dda8225e8bb5b26588663ad53a945e7701c19",
+            "0740bbe05da1f650531eaa33b5022ef59713e21977f666affff011ca5de13911"
+          ],
+          "kivi2_head_events_sha256": [
+            "31aa7a9f376bb7d987a085b2207b13655bfbb5c8b002eeb4e98d2b01ea519e68",
+            "11bf056b92e8187ad80f012b8debf470fbba3881078561fcdf86691b0a6528f9",
+            "0687807d663693dcb469e4eb1264d6ae039f91be4334531da72058064f8150ef",
+            "abc4ce089880998a06465f1f5cc05ff2b266f2c476a9bb8a8311fe9b18c4ebf4",
+            "d6cf1b78f32c35d434dd7c062040a77d660611ad6f7f9b1921854cf7f7ea2835",
+            "1c5bb7adfba0529c69b69d338b9c43a6d452dbe9093c6e3b05ff7264a5138fac",
+            "4558bcd4e6262f6455aacf00af3c09cd6f32a133716c767e64f0c5db30607614",
+            "15a54813990afd11ca85657f4850ab9139bc8e57f45fd74484ea01f7fc7fea66"
+          ]
+        },
+        {
+          "index": 2,
+          "kivi2_full_o_sse": 31.706300735473633,
+          "kivi4_full_o_sse": 0.5711360573768616,
+          "turbo_original_full_o_sse": 12402.046875,
+          "turbo_gauged_full_o_sse": 3604.352294921875,
+          "reference_sq": 9081.904296875,
+          "kivi2_mean_head_kl": 0.08234175975667313,
+          "kivi4_mean_head_kl": 0.0026787179544953688,
+          "kivi2_head_image_sha256": [
+            "533d06d0fb31d029d0230e146a4bed611131d0a0ffa4def9a64e12ab8b64bf23",
+            "f9dda1cb7073291c41d56dadd7db421289f5b21378097152f16ae8cb16625633",
+            "f2ea7400d52e63848ed023df7a9b0b59dc7ccdce68223465e4251c648a09d4e9",
+            "c85237d00876612b7a856e086a4fccf33e87bc168a145aa59636590894e811cd",
+            "cb67b7112f2e19d9173aa0738a62cb7b09f2661b9c7f74aeed61126f01854ed5",
+            "4a1578f672afc31c64eeef893abd8557651c8045412bdd7a28ba21bf1642ee42",
+            "fc101fc05ead8dd5463ad48492b8a93ef63b447bc8e7a525bc5a947d094d83ea",
+            "e6d54ba2f502e166712f2fae6f91166791aae6112c0125f0f377559b881b664d"
+          ],
+          "kivi2_head_events_sha256": [
+            "892c6da7d2e5d0038a1b1623eecc03053c20f860233933498cb3e1576d316cf5",
+            "82bd8b788325f0cba68692d01db3214150c33e2968e31f4c1e2a46fa84bdb10a",
+            "c86c54d824a9d35465ba00c63347b29b2989a5fa8428cb62b27d2fc9cb78487b",
+            "6c8bea10d3815d4bd877ede065d881ad66af4d226c71159376cbe1e8e7f17ec9",
+            "5ef270c7d9e25ac81caecccb1154f8cc674773ff0d50fcf1be0b3c4f3bb62a8d",
+            "be74b88094df2cc6453a85424cc35eed5c062659193c149ee406cc8c7cd0bd54",
+            "89d3437b90a0ba93591475e02a56d63b21afde77461657fda13cc32e066d64f2",
+            "c69e69289884428cd5f70aa3a0bd56b905d4ae503ef3a145ccd51642d3e44b4a"
+          ]
+        },
+        {
+          "index": 3,
+          "kivi2_full_o_sse": 28.199371337890625,
+          "kivi4_full_o_sse": 0.49923211336135864,
+          "turbo_original_full_o_sse": 12128.6025390625,
+          "turbo_gauged_full_o_sse": 3608.887939453125,
+          "reference_sq": 8747.5009765625,
+          "kivi2_mean_head_kl": 0.07364903249253985,
+          "kivi4_mean_head_kl": 0.002407367132491345,
+          "kivi2_head_image_sha256": [
+            "3db8e5f6e9c751928e686cfd0ae2651fe511bb9289f0b6315dae7310606b2385",
+            "a3065d3322f77da887df8c4e15817091e9ae2fd51672903dfd5d5def1aacaaf2",
+            "2b5c1fa7d1a6ea4e347960bfef2d8788927006ed25b96f033782a43974e0e9fb",
+            "32e6197cbc9a8c4d6d42c3ba32796102b96f0435b7653e89a92efd11d98ab318",
+            "dce409cd27f81e203f69e8fe9b284ddf91ec3bb87daa15c36631f2813b5873f7",
+            "2a3c061181a0c259e893c3c23ea9a117744c13521355edcfa83d71d99879c4ba",
+            "a5097a4d5e8881c8b7b8854641b54f30280278a0ed3f6297501451f1fd893a6f",
+            "f80be4a5187df6009644e417ca52a4e2c55f9c0894fbc9051257032c59f50ec6"
+          ],
+          "kivi2_head_events_sha256": [
+            "acaee2dbc1bccb9b56c474662d0527dc407c60aa77ce0f0cafff7eb8412357ba",
+            "9aeeca5a9d2801cfff918f84a9bfb604e133f6136523554875e2f7b52d939a5d",
+            "c1b729a4dd99dff91d09ea3bbd0811b5ffc6b09ebbfd83678c4c97e1222644e6",
+            "61a50e8baa6b38ea8479c5981399a96b98da20ba890e7b56e6a6234be8be0d4a",
+            "54168e6fcf07e5e8fdf91bd9dace77b7748b914b64fb311dff7af05b4ec20a30",
+            "de258d010939b99109aeb4c137211447f8143710db39f6007e9618f4d4c4a5f7",
+            "33134bf8674baea0cc71c5eae03aa9481d221f02ac6b050ee2504d9461fa7bbc",
+            "1cd097245f80aca6209ba97d1ca36a83d04cdf4669a1836d89a7651990d47ae7"
+          ]
+        }
+      ]
+    }
+  }
+}

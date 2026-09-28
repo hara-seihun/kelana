@@ -1,0 +1,308 @@
+{
+  "contract": "x is uniform over {-1,0,1}^5; squared error sums two outputs; tabulated error is numerator/3",
+  "format": "two 5x3-bit code rows compressed into five 3-bit q codes and one placement bit, stored in two bytes",
+  "examples": [
+    {
+      "name": "planted reversal",
+      "teacher": [
+        [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          -1,
+          -2
+        ]
+      ],
+      "collective": {
+        "error_numerator_over_3": 0,
+        "placement": 1,
+        "q": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "rows": [
+          [
+            -2,
+            -1,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            0,
+            -1,
+            -2
+          ]
+        ],
+        "payload_bytes": 2
+      },
+      "scalar3_oracle": {
+        "error_numerator_over_3": 8,
+        "alphabet": [
+          -2,
+          -1,
+          1
+        ],
+        "rows": [
+          [
+            -2,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            -1,
+            -1,
+            -2
+          ]
+        ],
+        "payload_bytes": 2
+      },
+      "scalar4_oracle": {
+        "error_numerator_over_3": 4,
+        "alphabet": [
+          -2,
+          -1,
+          0,
+          1
+        ],
+        "rows": [
+          [
+            -2,
+            -1,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            -1,
+            -2
+          ]
+        ],
+        "payload_bytes": 3
+      }
+    },
+    {
+      "name": "one-coordinate perturbation",
+      "teacher": [
+        [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          1,
+          -1,
+          -2
+        ]
+      ],
+      "collective": {
+        "error_numerator_over_3": 2,
+        "placement": 1,
+        "q": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "rows": [
+          [
+            -2,
+            -1,
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            0,
+            -1,
+            -2
+          ]
+        ],
+        "payload_bytes": 2
+      },
+      "scalar3_oracle": {
+        "error_numerator_over_3": 6,
+        "alphabet": [
+          -2,
+          -1,
+          1
+        ],
+        "rows": [
+          [
+            -2,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            -1,
+            -2
+          ]
+        ],
+        "payload_bytes": 2
+      },
+      "scalar4_oracle": {
+        "error_numerator_over_3": 2,
+        "alphabet": [
+          -2,
+          -1,
+          1,
+          2
+        ],
+        "rows": [
+          [
+            -2,
+            -1,
+            -1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            1,
+            -1,
+            -2
+          ]
+        ],
+        "payload_bytes": 3
+      }
+    },
+    {
+      "name": "seeded unstructured",
+      "teacher": [
+        [
+          -2,
+          2,
+          -1,
+          2,
+          2
+        ],
+        [
+          -2,
+          1,
+          0,
+          0,
+          1
+        ]
+      ],
+      "collective": {
+        "error_numerator_over_3": 10,
+        "placement": 0,
+        "q": [
+          -2,
+          1,
+          -1,
+          1,
+          1
+        ],
+        "rows": [
+          [
+            -2,
+            1,
+            -1,
+            1,
+            1
+          ],
+          [
+            -2,
+            1,
+            -1,
+            1,
+            1
+          ]
+        ],
+        "payload_bytes": 2
+      },
+      "scalar3_oracle": {
+        "error_numerator_over_3": 6,
+        "alphabet": [
+          -2,
+          0,
+          2
+        ],
+        "rows": [
+          [
+            -2,
+            2,
+            -2,
+            2,
+            2
+          ],
+          [
+            -2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "payload_bytes": 2
+      },
+      "scalar4_oracle": {
+        "error_numerator_over_3": 2,
+        "alphabet": [
+          -2,
+          0,
+          1,
+          2
+        ],
+        "rows": [
+          [
+            -2,
+            2,
+            -2,
+            2,
+            2
+          ],
+          [
+            -2,
+            1,
+            0,
+            0,
+            1
+          ]
+        ],
+        "payload_bytes": 3
+      }
+    }
+  ],
+  "family": {
+    "collective_states": 6125,
+    "minimum_fixed_bits": 13,
+    "direct_fixed_bits": 16,
+    "independent_five_level_minimum_bits": 24,
+    "scalar3_fixed_bits": 16,
+    "scalar4_fixed_bits": 20
+  }
+}

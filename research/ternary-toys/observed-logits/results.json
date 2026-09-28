@@ -1,0 +1,245 @@
+{
+  "states_m_c": [
+    [
+      -2.0,
+      -1.5
+    ],
+    [
+      -2.0,
+      1.5
+    ],
+    [
+      2.0,
+      -1.5
+    ],
+    [
+      2.0,
+      1.5
+    ]
+  ],
+  "stage_weights": [
+    0.7,
+    0.3
+  ],
+  "continuation": "A=diag(1,-1); D=(1,-1)",
+  "pointwise_one_trit": {
+    "labels": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "codebook": [
+      [
+        -1.0,
+        1.0
+      ],
+      [
+        1.0,
+        -1.0
+      ]
+    ],
+    "excess_nll": [
+      0.0,
+      0.5022822094535031
+    ],
+    "weighted_excess_nll": 0.15068466283605092,
+    "top1_agreement": [
+      1.0,
+      0.5
+    ],
+    "raw_logit_mse": 4.5
+  },
+  "affine_threshold_one_trit": {
+    "labels": [
+      0,
+      1,
+      2,
+      2
+    ],
+    "codebook": [
+      [
+        -2.5,
+        -0.5
+      ],
+      [
+        0.5,
+        2.5
+      ],
+      [
+        1.0,
+        -1.0
+      ]
+    ],
+    "excess_nll": [
+      0.0,
+      0.25114110472675155
+    ],
+    "weighted_excess_nll": 0.07534233141802546,
+    "top1_agreement": [
+      1.0,
+      0.75
+    ],
+    "raw_logit_mse": 2.25
+  },
+  "best_three_code_observed_nll": {
+    "labels": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "codebook": [
+      [
+        -1.0,
+        1.0
+      ],
+      [
+        -0.5,
+        -2.5
+      ],
+      [
+        2.5,
+        0.5
+      ]
+    ],
+    "excess_nll": [
+      0.0,
+      0.25114110472675155
+    ],
+    "weighted_excess_nll": 0.07534233141802546,
+    "top1_agreement": [
+      1.0,
+      0.75
+    ],
+    "raw_logit_mse": 2.25
+  },
+  "best_three_code_raw_logit_mse": {
+    "labels": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "codebook": [
+      [
+        -1.5,
+        -1.5
+      ],
+      [
+        0.5,
+        2.5
+      ],
+      [
+        2.5,
+        0.5
+      ]
+    ],
+    "excess_nll": [
+      0.16390666273636878,
+      0.0
+    ],
+    "weighted_excess_nll": 0.11473466391545814,
+    "top1_agreement": [
+      0.75,
+      1.0
+    ],
+    "raw_logit_mse": 1.0
+  },
+  "affine_raw_logit_mse": {
+    "labels": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "codebook": [
+      [
+        -1.5,
+        -1.5
+      ],
+      [
+        0.5,
+        2.5
+      ],
+      [
+        2.5,
+        0.5
+      ]
+    ],
+    "excess_nll": [
+      0.16390666273636878,
+      0.0
+    ],
+    "weighted_excess_nll": 0.11473466391545814,
+    "top1_agreement": [
+      0.75,
+      1.0
+    ],
+    "raw_logit_mse": 1.0
+  },
+  "best_two_code_observed_nll": {
+    "labels": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "codebook": [
+      [
+        -1.0,
+        1.0
+      ],
+      [
+        1.0,
+        -1.0
+      ]
+    ],
+    "excess_nll": [
+      0.0,
+      0.5022822094535031
+    ],
+    "weighted_excess_nll": 0.15068466283605092,
+    "top1_agreement": [
+      1.0,
+      0.5
+    ],
+    "raw_logit_mse": 4.5
+  },
+  "exact_four_code": {
+    "labels": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "codebook": [
+      [
+        -2.5,
+        -0.5
+      ],
+      [
+        0.5,
+        2.5
+      ],
+      [
+        -0.5,
+        -2.5
+      ],
+      [
+        2.5,
+        0.5
+      ]
+    ],
+    "excess_nll": [
+      0.0,
+      0.0
+    ],
+    "weighted_excess_nll": 0.0,
+    "top1_agreement": [
+      1.0,
+      1.0
+    ],
+    "raw_logit_mse": 2.828805902315972e-30
+  }
+}

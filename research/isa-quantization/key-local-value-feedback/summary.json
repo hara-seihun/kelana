@@ -1,0 +1,682 @@
+{
+  "rule": "fixed causal key-nearest single residual recipient/head; original V2 for skips, frozen donor arithmetic for visits",
+  "parent_source_commit": "ae0395afff62042fb402c8931917cd965e2a359c",
+  "screen_source_commit": "d16b32399c944aaa827eeadda00611473f9d5610",
+  "state_peak_bytes": {
+    "original": 304768,
+    "feedback": 308864,
+    "delay2": 308096,
+    "k2v4": 361856,
+    "key_local": 308880
+  },
+  "state_final_bytes": {
+    "original": 249856,
+    "feedback": 253952,
+    "delay2": 253184,
+    "k2v4": 307200,
+    "key_local": 253968
+  },
+  "original_o_sha256": {
+    "checkpoint_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+    "tensor": "model.layers.1.self_attn.o_proj.weight",
+    "dtype": "BF16 little-endian",
+    "shape": [
+      1024,
+      2048
+    ],
+    "o_sha256": "677e1de44f3a28a51b2e75e806a8ec68807ed96dfadc169729c1993181418f48",
+    "bytes": 4194304
+  },
+  "control_summary_sha256": "39901aa0efc1392252bb0f12cfb2f51869c1ffbc03f3a5e099dfb17a5088dfdf",
+  "screen_summary_sha256": "76494e6ef3887b7f29f2faaf69e58c81ec7b5cafddd3986a21bd988bf842d011",
+  "panels": {
+    "train": {
+      "windows": 8,
+      "queries": 2048,
+      "teacher_sq": 13465.22462372139,
+      "pooled_sse": {
+        "key_local": 209.96741387563952,
+        "original": 209.0166981624798,
+        "feedback": 239.73925907411055,
+        "delay2": 206.2903972035061,
+        "k2v4": 158.17972713376523
+      },
+      "relative_sq": {
+        "key_local": 0.015593309413178639,
+        "original": 0.015522704151125685,
+        "feedback": 0.017804326758260474,
+        "delay2": 0.0153202343791643,
+        "k2v4": 0.011747277268223472
+      },
+      "query_wins_key_local": {
+        "original": 885,
+        "feedback": 1498,
+        "delay2": 699,
+        "k2v4": 21
+      },
+      "rows": [
+        {
+          "window": 0,
+          "source_sha256": "59530e5db990011026ac08e73e70816e3cdfd95ba6338e96279b1e6638a934fb",
+          "control_result_sha256": "ae4603a9e4c3999db608bb9a03552ee6b8fbce22c06bd568ef065c88d2a6fa63",
+          "control_manifest_sha256": "4e86691347d62b5f97b2bd5328dd40174bfef68408e8a28d2ef25dd86862d510",
+          "screen_sha256": "3d7480e78c827a69afbbab1b1ab617803d0bcf128ecbd6b2db645a338d1eb92b",
+          "manifest_sha256": "1e6f32a238c59e11b5af1e21836f5d8a96ef6cbe0816fb2b94401ee749f487a2",
+          "result_sha256": "175f1ed17304676231a55b9f5ea007b2c636f75104239c12c05e65acb4b12f6d",
+          "teacher_sq": 1595.1157403415398,
+          "sse": {
+            "key_local": 27.760316288149546,
+            "original": 27.749635901629347,
+            "feedback": 32.01276461053196,
+            "delay2": 27.29942864862839,
+            "k2v4": 21.48363982456638
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.08769950015681244,
+              0.04726855966217313
+            ],
+            "original": [
+              0.0693936918992715,
+              0.047821001947980786
+            ],
+            "feedback": [
+              0.1179925099740305,
+              0.06523209243000447
+            ],
+            "delay2": [
+              0.0693131922702554,
+              0.04775383525823011
+            ],
+            "k2v4": [
+              0.03644995225302568,
+              0.03182122732055876
+            ]
+          },
+          "routes": 116,
+          "skipped": 1676,
+          "routing_reads": {
+            "k2_vectors": 2308,
+            "bf16_vectors": 1520
+          },
+          "visited_source_error_sq": 42.13387255690806,
+          "skipped_source_error_sq": 418.19641012906663,
+          "pending_residual_sq": 1.6968399045426958
+        },
+        {
+          "window": 1,
+          "source_sha256": "eda7b3483777ba1912c2695fb8c8edfe2943da2d505dc50c154f030834a978c9",
+          "control_result_sha256": "d452c1d5d15b0cd806d226e7371e1e4cbacbe6d2c1a1002c53cd0cf594a04592",
+          "control_manifest_sha256": "b5b4c8416c562cfa7dcc6fad9562bba6d4d568e2ab825ea6eef2cfcd077e6dbb",
+          "screen_sha256": "21e30c5705aa7cccf1688eaa0b24f0da0a7bc9c42f453a3613f2741faba312f6",
+          "manifest_sha256": "05ecd6ca91a975f5ca8f5a2b8f827839b8dffd8f5caa299811693674a815e04c",
+          "result_sha256": "ae643f1f67194fcc41ed07671a0855523c93a5004fd2340a052b601f25d792e8",
+          "teacher_sq": 1623.7559462698382,
+          "sse": {
+            "key_local": 24.178772318865647,
+            "original": 24.12180068669695,
+            "feedback": 27.784250664409228,
+            "delay2": 23.850595894416422,
+            "k2v4": 18.484670829795828
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.051587857411802183,
+              0.0468314229042182
+            ],
+            "original": [
+              0.04973843251446692,
+              0.04566721956086743
+            ],
+            "feedback": [
+              0.07103986185224376,
+              0.04255348481962332
+            ],
+            "delay2": [
+              0.049709500721208624,
+              0.04560766451225645
+            ],
+            "k2v4": [
+              0.029817743937506015,
+              0.030216726748845714
+            ]
+          },
+          "routes": 126,
+          "skipped": 1666,
+          "routing_reads": {
+            "k2_vectors": 2345,
+            "bf16_vectors": 1813
+          },
+          "visited_source_error_sq": 54.9260880017641,
+          "skipped_source_error_sq": 400.3387271639258,
+          "pending_residual_sq": 1.4885200330377053
+        },
+        {
+          "window": 2,
+          "source_sha256": "621e51d67b65fd8ed9505f054aeb8f9bd3f7da733866600de17fef95f6c48264",
+          "control_result_sha256": "675825dbc9cbf63ef793b20aa0a30080e8aea3b542e72131fe59b138c769f2fa",
+          "control_manifest_sha256": "fb16130a3fdf344676b623b2805f7d279784117848738945ee171244c273a4c8",
+          "screen_sha256": "d1dca21246dc24b5727eae0f9e52ce186675fc5e401287ccc32c6fd8209246dd",
+          "manifest_sha256": "423fbb567431e4fc1c3fb7820c75bf4878491146f68934e9e386257aa656524f",
+          "result_sha256": "8e6a78b12196a3fe761fc9a91dc4dacbd238460ac1f58fac13d26776b1556eec",
+          "teacher_sq": 1614.11698757594,
+          "sse": {
+            "key_local": 25.666630259000538,
+            "original": 25.99741553897311,
+            "feedback": 29.07554057031243,
+            "delay2": 25.722880860001585,
+            "k2v4": 19.444766009133396
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.05714744807799589,
+              0.11012785365097072
+            ],
+            "original": [
+              0.06304591113190137,
+              0.10620536106931902
+            ],
+            "feedback": [
+              0.05809237927462321,
+              0.12073645705637395
+            ],
+            "delay2": [
+              0.06336116560228017,
+              0.10592429715711105
+            ],
+            "k2v4": [
+              0.04410517534599636,
+              0.08894203388518873
+            ]
+          },
+          "routes": 133,
+          "skipped": 1659,
+          "routing_reads": {
+            "k2_vectors": 2667,
+            "bf16_vectors": 1722
+          },
+          "visited_source_error_sq": 50.55065097794544,
+          "skipped_source_error_sq": 397.2579566145509,
+          "pending_residual_sq": 1.2613531991564582
+        },
+        {
+          "window": 3,
+          "source_sha256": "698940c91cbda0d259b9ea7b861cb0e8c440f0a22251ad106782754a8fc33123",
+          "control_result_sha256": "411f5571daba1edd3c386f097b381df159f618c78a9752883167e67d84a8d7e5",
+          "control_manifest_sha256": "21537a55cac4c77b313f747f9849c06ace820a77a061a15b5fc1308946a10088",
+          "screen_sha256": "06bf7a1ec1b617aa0c32837a19e285497a7fff153f222a9762ddcaf74aa376ca",
+          "manifest_sha256": "97ceb39e51d3a4b51454993585c52c9134505575a5b35f02b0c14bdd6bbe10e2",
+          "result_sha256": "711fbf59e40b5b6f1fb6d2b0722b6f153f04d70eb52f3d2697ffe2e63b8df030",
+          "teacher_sq": 1657.047568419394,
+          "sse": {
+            "key_local": 25.278528239550383,
+            "original": 25.092702281071844,
+            "feedback": 28.574545115549284,
+            "delay2": 24.82591206603919,
+            "k2v4": 19.348669652671067
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.06186481608700721,
+              0.01525525449390868
+            ],
+            "original": [
+              0.06245022215389315,
+              0.015304872125430472
+            ],
+            "feedback": [
+              0.07248835693094881,
+              0.016552411830130634
+            ],
+            "delay2": [
+              0.06086998131409629,
+              0.01524271442778501
+            ],
+            "k2v4": [
+              0.0392047256026494,
+              0.010057010594435261
+            ]
+          },
+          "routes": 129,
+          "skipped": 1663,
+          "routing_reads": {
+            "k2_vectors": 2474,
+            "bf16_vectors": 1783
+          },
+          "visited_source_error_sq": 53.66299904627785,
+          "skipped_source_error_sq": 404.59800062511886,
+          "pending_residual_sq": 1.4206812098917858
+        },
+        {
+          "window": 4,
+          "source_sha256": "ba170912c0bc8a582ad95891b29a3f643fb3fa031dafe32b7198b4ce97eb7c01",
+          "control_result_sha256": "ad78433e697833c52b1eaf677a3fc7228300ab8c22903ac9876ec4cb64d6785b",
+          "control_manifest_sha256": "f3433045c3818a429159478725c2167fd8937dbd9daaa480767bc663897bf595",
+          "screen_sha256": "4a3a29d8ca2e8202088d4fb35d96bdebafbdffd22f36e3200a1ffc8ec58060ac",
+          "manifest_sha256": "2081c2e07790b33e2e9665c7d1eef5129ca47b287eefc94976a786939a6c3601",
+          "result_sha256": "7b88e19df43b5ec808522dc6300a61a70b13214330eadfd1675e942b3c622188",
+          "teacher_sq": 1854.577868590294,
+          "sse": {
+            "key_local": 28.878907820772888,
+            "original": 28.709266591873842,
+            "feedback": 32.15033583768831,
+            "delay2": 28.058142753487616,
+            "k2v4": 20.32003589036986
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.05069328622696748,
+              0.10544113825748103
+            ],
+            "original": [
+              0.05077152691816494,
+              0.10634704962324411
+            ],
+            "feedback": [
+              0.07896742637097476,
+              0.10116941883468003
+            ],
+            "delay2": [
+              0.05057722043367638,
+              0.10547390582339569
+            ],
+            "k2v4": [
+              0.010654581619949602,
+              0.08006849164204691
+            ]
+          },
+          "routes": 126,
+          "skipped": 1666,
+          "routing_reads": {
+            "k2_vectors": 2138,
+            "bf16_vectors": 2020
+          },
+          "visited_source_error_sq": 53.98181730556604,
+          "skipped_source_error_sq": 424.1675883059813,
+          "pending_residual_sq": 1.5116830370796501
+        },
+        {
+          "window": 5,
+          "source_sha256": "45484ccf525267bf922c87ff92738fced75833faae7bc3274d116e26350dbd12",
+          "control_result_sha256": "45da231e38ced2d24fbe53d79162ba0723c288f4dcc997309b5032d515948ab2",
+          "control_manifest_sha256": "97b672fc537b0635f723077e98a9bb4bf57b9cbe6e277f40d72e5dcfa4015434",
+          "screen_sha256": "ffd064a4cfaa0bab35589921833cd6faf7c2530e9deb2d2b438d2b9380c92c89",
+          "manifest_sha256": "c486a3322639cbdc27c229d675578fb9485321255cb9da714f21a7c5cfda6595",
+          "result_sha256": "72a9c818811be07fa77a0caace697fb8f326201a8bb70fef40501377e37cc136",
+          "teacher_sq": 1789.1691107708862,
+          "sse": {
+            "key_local": 24.324449491285122,
+            "original": 24.53808702478047,
+            "feedback": 27.82328105365747,
+            "delay2": 24.244558284984254,
+            "k2v4": 18.259706081490584
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.04641658176299325,
+              0.07396751939879997
+            ],
+            "original": [
+              0.04835606187047664,
+              0.07359060522940447
+            ],
+            "feedback": [
+              0.05550510645480295,
+              0.1089249646770866
+            ],
+            "delay2": [
+              0.04837127286483327,
+              0.06970649053275828
+            ],
+            "k2v4": [
+              0.025124038191265196,
+              0.027665564427259617
+            ]
+          },
+          "routes": 129,
+          "skipped": 1663,
+          "routing_reads": {
+            "k2_vectors": 2406,
+            "bf16_vectors": 1851
+          },
+          "visited_source_error_sq": 54.04855827402126,
+          "skipped_source_error_sq": 401.33943374159014,
+          "pending_residual_sq": 2.3407592645172564
+        },
+        {
+          "window": 6,
+          "source_sha256": "27580216202509aa7a622534cf66176137d9e391a689676d04233a0fc7fb85df",
+          "control_result_sha256": "54700116850dd22e820995b16a87c7013b91cfbafb74be6eafa8ca534b5170d9",
+          "control_manifest_sha256": "6a2f38b93a767ce3a51adc8eceb79927447afadd72ee68257a7a97bab3b10fc6",
+          "screen_sha256": "499e0960c87346d286380b5c4e7e32c1467740bbfc7649558f39d24b891fe5a5",
+          "manifest_sha256": "d94895c4318c5cd8d3387c53b2cd04881e8b3689a0b8c150e127e1a84d21380c",
+          "result_sha256": "2bd3b69ab1c955fa46dfd09423716509dfb79a7daffe6b20a6a0857d12c66713",
+          "teacher_sq": 1611.9537456637986,
+          "sse": {
+            "key_local": 27.089747764391532,
+            "original": 26.425413408995965,
+            "feedback": 30.633511898478574,
+            "delay2": 26.149294655998904,
+            "k2v4": 21.609684219022416
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.2525781859008672,
+              0.08300350663741725
+            ],
+            "original": [
+              0.253530002177152,
+              0.08247116075969688
+            ],
+            "feedback": [
+              0.24228488766941808,
+              0.07473625536578021
+            ],
+            "delay2": [
+              0.2536494771383098,
+              0.08054157746345833
+            ],
+            "k2v4": [
+              0.17246508566879443,
+              0.06310189535050151
+            ]
+          },
+          "routes": 141,
+          "skipped": 1651,
+          "routing_reads": {
+            "k2_vectors": 2511,
+            "bf16_vectors": 2142
+          },
+          "visited_source_error_sq": 61.90968472733319,
+          "skipped_source_error_sq": 390.42660018284647,
+          "pending_residual_sq": 1.4201758582097075
+        },
+        {
+          "window": 7,
+          "source_sha256": "f598e9a09ce0934666b31950a60bf99d144fad7730e4249bfe37cf708bad6d2c",
+          "control_result_sha256": "499a2d2db4706e0018a7c5daa3338beef69f59d4277104730e4615e8d61c8652",
+          "control_manifest_sha256": "b819eb99097626897d38d05c55a20e5bb23ce38cc3f7b9102219805dc7417476",
+          "screen_sha256": "a4a21861f0127bacb3cdaa9abe30e8e52fe294bbaabe3e256d82640947be5f01",
+          "manifest_sha256": "9c27acab2b8179c907f75f6210bac5bacc85febba3c272221d2b561e4c4f0ad5",
+          "result_sha256": "47df5efce54048144b231d201ebe1e6fc2dfd25c6e58e402c479ea2a9009ce20",
+          "teacher_sq": 1719.4876560896985,
+          "sse": {
+            "key_local": 26.790061693623866,
+            "original": 26.382376728458272,
+            "feedback": 31.685029323483295,
+            "delay2": 26.139584039949753,
+            "k2v4": 19.228554626715685
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.08307722786521932,
+              0.05803987496033389
+            ],
+            "original": [
+              0.08089810621410382,
+              0.05890796592791314
+            ],
+            "feedback": [
+              0.10284395620484282,
+              0.08855208891757402
+            ],
+            "delay2": [
+              0.08092446317000491,
+              0.05879265363752975
+            ],
+            "k2v4": [
+              0.06548600439695637,
+              0.019556917084491095
+            ]
+          },
+          "routes": 137,
+          "skipped": 1655,
+          "routing_reads": {
+            "k2_vectors": 2600,
+            "bf16_vectors": 1921
+          },
+          "visited_source_error_sq": 62.292731561364185,
+          "skipped_source_error_sq": 420.53898402937835,
+          "pending_residual_sq": 1.700213210147873
+        }
+      ],
+      "routes": 1037,
+      "skipped": 13299,
+      "routing_reads": {
+        "k2_vectors": 19449,
+        "bf16_vectors": 14772
+      },
+      "visited_source_error_sq": 433.5064024511801,
+      "skipped_source_error_sq": 3256.8637007924585,
+      "pending_residual_sq": 12.840225716583133
+    },
+    "validation": {
+      "windows": 4,
+      "queries": 1024,
+      "teacher_sq": 6793.961378496447,
+      "pooled_sse": {
+        "key_local": 106.2360180343563,
+        "original": 107.92358364653873,
+        "feedback": 120.41746630525847,
+        "delay2": 106.48785265294272,
+        "k2v4": 77.84016915562127
+      },
+      "relative_sq": {
+        "key_local": 0.015636829842837156,
+        "original": 0.015885221836574967,
+        "feedback": 0.017724190585832817,
+        "delay2": 0.01567389726264668,
+        "k2v4": 0.011457258117773973
+      },
+      "query_wins_key_local": {
+        "original": 557,
+        "feedback": 733,
+        "delay2": 427,
+        "k2v4": 9
+      },
+      "rows": [
+        {
+          "window": 0,
+          "source_sha256": "e1465c3dd76fae635b821d035c10803efeffd4020fcfa3a3d7300c681d466982",
+          "control_result_sha256": "d02a79649de8de34b0420d6cf800f67ed6957633b93dba990e10962e7580fcd8",
+          "control_manifest_sha256": "b9494f5f40dd3b0ced35a5949d5a3070a9a79d15328f2793fd22f0f5cf9876dc",
+          "screen_sha256": null,
+          "manifest_sha256": "8157992d15f18f1ad56ac5f8923c83d054622088f478e4aaaf8d1ea6373c9217",
+          "result_sha256": "a3c3dd407c905ff41118f9db4ab3e8a8337a8c2d72a04cb2befc57ccdd668151",
+          "teacher_sq": 1745.3204918897522,
+          "sse": {
+            "key_local": 24.852238723177233,
+            "original": 24.752561520129404,
+            "feedback": 27.366377265143807,
+            "delay2": 24.56568337638635,
+            "k2v4": 18.630323517311297
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.03576692825386753,
+              0.035715386694875166
+            ],
+            "original": [
+              0.035698405404365766,
+              0.03601829302976317
+            ],
+            "feedback": [
+              0.03518756060477431,
+              0.03911446745104455
+            ],
+            "delay2": [
+              0.03492533478080283,
+              0.03534398483163946
+            ],
+            "k2v4": [
+              0.024308925956375616,
+              0.02264432343876297
+            ]
+          },
+          "routes": 158,
+          "skipped": 1634,
+          "routing_reads": {
+            "k2_vectors": 3150,
+            "bf16_vectors": 2064
+          },
+          "visited_source_error_sq": 69.79196322536997,
+          "skipped_source_error_sq": 408.1291833661939,
+          "pending_residual_sq": 1.4478222773449672
+        },
+        {
+          "window": 1,
+          "source_sha256": "726ea86faa1ac4b216f713b1af2570932bca6dfd803ed4fcf493ed79c5702c59",
+          "control_result_sha256": "e303b4de4a76fc2d55c851d0c7b7a385ad8fcfbbccb638e46e31c823c66ef5a0",
+          "control_manifest_sha256": "1a467b72766946bcaaba2a56df9b1d828ea134c6a529acfb8d7bf070a00497c1",
+          "screen_sha256": null,
+          "manifest_sha256": "28aec8ab621097006df88588b97191a47631940871dd319f664f26b61b367261",
+          "result_sha256": "ea4dc14b9d940f2a37484d3e042b10a1cb5abcd0f1de32912922562416d93866",
+          "teacher_sq": 1765.9615199861248,
+          "sse": {
+            "key_local": 27.890821515711657,
+            "original": 29.892731691618263,
+            "feedback": 31.66909553416308,
+            "delay2": 29.288398213331785,
+            "k2v4": 20.20212095904353
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.09217795164076367,
+              0.04376656904886006
+            ],
+            "original": [
+              0.10423462046712227,
+              0.04934293287924865
+            ],
+            "feedback": [
+              0.13097320360195203,
+              0.047316019447377955
+            ],
+            "delay2": [
+              0.10408128658859313,
+              0.04927524206251787
+            ],
+            "k2v4": [
+              0.03281860043526208,
+              0.03690911335990839
+            ]
+          },
+          "routes": 142,
+          "skipped": 1650,
+          "routing_reads": {
+            "k2_vectors": 2878,
+            "bf16_vectors": 1808
+          },
+          "visited_source_error_sq": 68.51896455776904,
+          "skipped_source_error_sq": 411.49334597570567,
+          "pending_residual_sq": 1.4592140946191128
+        },
+        {
+          "window": 2,
+          "source_sha256": "754e6c9e517ee5d280e1f3799c2ba88252e13affe28aaf2d7dd5778152255be1",
+          "control_result_sha256": "90e81e584ad52cdb6da32b7a9ef8c6db2058c0e4f0882ecf21aa7ca110e01f9a",
+          "control_manifest_sha256": "783ab77391b12337340e9d3ef1df64c96d6d8aa4f1befa020ff770d9d41b5af4",
+          "screen_sha256": null,
+          "manifest_sha256": "b985219eefd138622cbd9ed57c38fcdf3e68b4a822fecc47625bf7074c4bb0ea",
+          "result_sha256": "a5f9b7ac59a999bdbb170707fb0bdc52d9c4c02662328036a586d97eaaff2996",
+          "teacher_sq": 1694.774756162232,
+          "sse": {
+            "key_local": 30.3600862170164,
+            "original": 30.364216516329062,
+            "feedback": 33.65907234733546,
+            "delay2": 29.9215473102893,
+            "k2v4": 21.51407178847814
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.2045270910367572,
+              0.09380852264215497
+            ],
+            "original": [
+              0.20188679707215335,
+              0.09390563202015151
+            ],
+            "feedback": [
+              0.2080599216813819,
+              0.12539425139903299
+            ],
+            "delay2": [
+              0.20162776149701384,
+              0.09327664579426462
+            ],
+            "k2v4": [
+              0.14818645717059076,
+              0.07059158234090998
+            ]
+          },
+          "routes": 135,
+          "skipped": 1657,
+          "routing_reads": {
+            "k2_vectors": 2726,
+            "bf16_vectors": 1729
+          },
+          "visited_source_error_sq": 59.12782885087049,
+          "skipped_source_error_sq": 401.39334653869366,
+          "pending_residual_sq": 1.428449232072442
+        },
+        {
+          "window": 3,
+          "source_sha256": "5d0991ed17cc708fb1eaeea10a6d514ce883d52a30441d11554c040c574f7300",
+          "control_result_sha256": "0ee2050ca4e35f2fd93b8d1e4ff1939b98e6d8be2e3d52839c6f08cab949d8bc",
+          "control_manifest_sha256": "a9406a297d7bbb351afa81ff5ebf38f07380ce3eb5d34b89992cc81e229eec1d",
+          "screen_sha256": null,
+          "manifest_sha256": "9b5fb4d92241c1388b1de4be94fffcd87c215878ed2b714925a747d0e0ad2055",
+          "result_sha256": "ca4b67df8ce7f7641679fd755d393fdae6c2d800638ebdf17aa701bd0a00b7a9",
+          "teacher_sq": 1587.9046104583376,
+          "sse": {
+            "key_local": 23.132871578451017,
+            "original": 22.914073918461995,
+            "feedback": 27.722921158616124,
+            "delay2": 22.712223752935284,
+            "k2v4": 17.493652890788304
+          },
+          "at_t128_t256": {
+            "key_local": [
+              0.05807315816085458,
+              0.03818550935923208
+            ],
+            "original": [
+              0.0563944195627066,
+              0.04010544170897904
+            ],
+            "feedback": [
+              0.07530866059787605,
+              0.05378123327587041
+            ],
+            "delay2": [
+              0.056384965182395407,
+              0.039807030547992436
+            ],
+            "k2v4": [
+              0.036292140319117164,
+              0.024890243899052103
+            ]
+          },
+          "routes": 119,
+          "skipped": 1673,
+          "routing_reads": {
+            "k2_vectors": 2362,
+            "bf16_vectors": 1565
+          },
+          "visited_source_error_sq": 49.45219319157644,
+          "skipped_source_error_sq": 408.8916140114255,
+          "pending_residual_sq": 1.3103711757566414
+        }
+      ],
+      "routes": 554,
+      "skipped": 6614,
+      "routing_reads": {
+        "k2_vectors": 11116,
+        "bf16_vectors": 7166
+      },
+      "visited_source_error_sq": 246.89094982558595,
+      "skipped_source_error_sq": 1629.9074898920187,
+      "pending_residual_sq": 5.645856779793164
+    }
+  }
+}

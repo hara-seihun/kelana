@@ -1,0 +1,1604 @@
+{
+  "panel": "train",
+  "window": 1,
+  "rule": "K2-cache nearest among 32 younger recent-V, earliest token tie, one pending recipient/head",
+  "source_sha256": "eda7b3483777ba1912c2695fb8c8edfe2943da2d505dc50c154f030834a978c9",
+  "k_sha256": "f1f6a44a3e241c2ac69d259f5b8c8b2752710145b354e75f236d1a0e1b62f0cc",
+  "manifest_sha256": "b5b4c8416c562cfa7dcc6fad9562bba6d4d568e2ab825ea6eef2cfcd077e6dbb",
+  "heads": [
+    {
+      "head": 0,
+      "event_sha256": "84dfc32e71ef837dc346ba822c16cef5b08b547f14bae616526b184779766cfa",
+      "flushes": 224,
+      "skipped": 208,
+      "routes": [
+        {
+          "source": 1,
+          "target": 16,
+          "wait": 15,
+          "chosen_distance": 587.2882901914418,
+          "successor_distance": 659.0643537640572,
+          "chosen_key_sha256": "8f73a0c46e1b15cf2619a22252cf23bba43f1aa05cfed1d5a13b0c2779c1ce23",
+          "distance_at_target_flush": 587.2882901914418,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 16,
+          "target": 46,
+          "wait": 30,
+          "chosen_distance": 310.3806815035641,
+          "successor_distance": 581.608624253422,
+          "chosen_key_sha256": "ce90dde9d06a544432b4e50e9d5ce647038330c0b0e3a7add4dc4df9740bcefd",
+          "distance_at_target_flush": 363.7218451835215,
+          "distance_drift": 53.34116367995739,
+          "key_changed": true
+        },
+        {
+          "source": 46,
+          "target": 61,
+          "wait": 15,
+          "chosen_distance": 259.51826697587967,
+          "successor_distance": 502.51750802993774,
+          "chosen_key_sha256": "c8e80da2b361e6919e6035096e7b6850d0056d0e60d3d76c249ef9503e8f6b96",
+          "distance_at_target_flush": 259.51826697587967,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 61,
+          "target": 81,
+          "wait": 20,
+          "chosen_distance": 265.17312955856323,
+          "successor_distance": 824.0709675550461,
+          "chosen_key_sha256": "5d55f1d94df3e668194b0c0a52d1e2879b1dc21af02c384249873a1ac94ac834",
+          "distance_at_target_flush": 299.11188039183617,
+          "distance_drift": 33.938750833272934,
+          "key_changed": true
+        },
+        {
+          "source": 81,
+          "target": 82,
+          "wait": 1,
+          "chosen_distance": 305.0655570626259,
+          "successor_distance": 305.0655570626259,
+          "chosen_key_sha256": "29f3da807cb6acc603b3f408d88523ce61c339f435e503e6967583477cca2fea",
+          "distance_at_target_flush": 305.0655570626259,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 82,
+          "target": 108,
+          "wait": 26,
+          "chosen_distance": 225.087501257658,
+          "successor_distance": 640.8605954647064,
+          "chosen_key_sha256": "fef41ce7ef3207e6aea4ba01cef248ef868f6d0a5342a40b75e0fa2c0485966f",
+          "distance_at_target_flush": 216.24971687793732,
+          "distance_drift": -8.837784379720688,
+          "key_changed": true
+        },
+        {
+          "source": 108,
+          "target": 131,
+          "wait": 23,
+          "chosen_distance": 347.1908164322376,
+          "successor_distance": 375.9491485953331,
+          "chosen_key_sha256": "ca056bb7f6f06e672d9a423ff97616db8b4543f645098e5a647a34c9f92de770",
+          "distance_at_target_flush": 312.99233724176884,
+          "distance_drift": -34.19847919046879,
+          "key_changed": true
+        },
+        {
+          "source": 131,
+          "target": 152,
+          "wait": 21,
+          "chosen_distance": 308.2139974832535,
+          "successor_distance": 486.4674213528633,
+          "chosen_key_sha256": "ce7584ff0f2901bcde69e4aca5296aff41fed2688ce668f1fc95a15f61cb73ff",
+          "distance_at_target_flush": 308.2139974832535,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 152,
+          "target": 181,
+          "wait": 29,
+          "chosen_distance": 132.12547028064728,
+          "successor_distance": 408.8008368611336,
+          "chosen_key_sha256": "6e2a8a9cdffd796a54d9805e8884a3d5fab5eb0cb37de6491e5c641ff85dd391",
+          "distance_at_target_flush": 191.44040840864182,
+          "distance_drift": 59.31493812799454,
+          "key_changed": true
+        },
+        {
+          "source": 181,
+          "target": 193,
+          "wait": 12,
+          "chosen_distance": 82.96950666606426,
+          "successor_distance": 694.3097913861275,
+          "chosen_key_sha256": "050388842015c07a6ea16416ea2bc2961eded1341895cba4113c377286fbe97b",
+          "distance_at_target_flush": 150.40610729157925,
+          "distance_drift": 67.43660062551498,
+          "key_changed": true
+        },
+        {
+          "source": 193,
+          "target": 196,
+          "wait": 3,
+          "chosen_distance": 98.02443718910217,
+          "successor_distance": 456.91867953538895,
+          "chosen_key_sha256": "c99e2d1cacf9c1f654308099a50c956e3d5ed53c608ad8ad419b394b4a988eeb",
+          "distance_at_target_flush": 98.02443718910217,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 196,
+          "target": 204,
+          "wait": 8,
+          "chosen_distance": 396.4223699569702,
+          "successor_distance": 829.6830356121063,
+          "chosen_key_sha256": "a7f3bce9ac00fd9163a7e1674c02123074a8a4691101672600b05e5f162e2c72",
+          "distance_at_target_flush": 396.4223699569702,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 204,
+          "target": 207,
+          "wait": 3,
+          "chosen_distance": 316.6030013561249,
+          "successor_distance": 710.964507162571,
+          "chosen_key_sha256": "6c9466d2d7e22f85b06f5b7ee644c1a00ae8775e911580c45c78e3a79bc0c253",
+          "distance_at_target_flush": 316.6030013561249,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 207,
+          "target": 208,
+          "wait": 1,
+          "chosen_distance": 360.4699454307556,
+          "successor_distance": 360.4699454307556,
+          "chosen_key_sha256": "d7fd0c6a72015c130be7d2bbd3855ba14d023e8b7fcdd20592d188f0bd9e4692",
+          "distance_at_target_flush": 360.4699454307556,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 208,
+          "target": 210,
+          "wait": 2,
+          "chosen_distance": 479.5553529262543,
+          "successor_distance": 570.0927586555481,
+          "chosen_key_sha256": "ce5e5da763965e59f427e51d8708f735f8b312226ec7eea599324fe1d7309206",
+          "distance_at_target_flush": 479.5553529262543,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 210,
+          "target": 240,
+          "wait": 30,
+          "chosen_distance": 399.7533229328692,
+          "successor_distance": 580.4843618869781,
+          "chosen_key_sha256": "23e2b6023abfdadb4ffc6d9973dc24de35e02420ff36e83c15005cc2370818fa"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 82,
+          "pending_target": 108,
+          "target_flush_now": false,
+          "selected_distance": 225.087501257658,
+          "current_distance": 216.24971687793732,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 210,
+          "pending_target": 240,
+          "target_flush_now": false,
+          "selected_distance": 399.7533229328692,
+          "current_distance": 464.4307680130005,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 240
+    },
+    {
+      "head": 1,
+      "event_sha256": "cebbcbf07a630701687c307320b2d2a20c2f19e209eac04a44f01557d4da3674",
+      "flushes": 224,
+      "skipped": 198,
+      "routes": [
+        {
+          "source": 1,
+          "target": 14,
+          "wait": 13,
+          "chosen_distance": 423.510730185546,
+          "successor_distance": 617.2728405976668,
+          "chosen_key_sha256": "d18fa88d98a24f2886bf110531483e4e835a454581145649d34784b06ccf142c",
+          "distance_at_target_flush": 423.510730185546,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 14,
+          "target": 39,
+          "wait": 25,
+          "chosen_distance": 321.38274667877704,
+          "successor_distance": 352.3295166231692,
+          "chosen_key_sha256": "81eb152472676048f2203c43b9337faa10318aba7fad135e5afb2436ec8d7102",
+          "distance_at_target_flush": 409.12549417093396,
+          "distance_drift": 87.74274749215692,
+          "key_changed": true
+        },
+        {
+          "source": 39,
+          "target": 45,
+          "wait": 6,
+          "chosen_distance": 436.9071930386126,
+          "successor_distance": 491.08639715984464,
+          "chosen_key_sha256": "f7cf67c17ca7786ad6b1fab1512234bc8ad3db80d9c9dfc66e76426514c40add",
+          "distance_at_target_flush": 436.9071930386126,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 45,
+          "target": 57,
+          "wait": 12,
+          "chosen_distance": 391.4993268996477,
+          "successor_distance": 550.6383237466216,
+          "chosen_key_sha256": "9bd6c8ef90af5de3f05b15d380af564102ef671bf5f125a2a1117409227b25dc",
+          "distance_at_target_flush": 391.4993268996477,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 57,
+          "target": 70,
+          "wait": 13,
+          "chosen_distance": 302.2309937849641,
+          "successor_distance": 591.626389015466,
+          "chosen_key_sha256": "1e7fa3485158ed736b3524301440a43a8e9c5a6b764ba87e50180a4b93ca4589",
+          "distance_at_target_flush": 213.5937964245677,
+          "distance_drift": -88.63719736039639,
+          "key_changed": true
+        },
+        {
+          "source": 70,
+          "target": 76,
+          "wait": 6,
+          "chosen_distance": 338.9474945999682,
+          "successor_distance": 517.3352220058441,
+          "chosen_key_sha256": "b4030da5cf684bbd33caee0f32918c004026ebe87e225fdf499ed5468b9922b9",
+          "distance_at_target_flush": 338.9474945999682,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 76,
+          "target": 77,
+          "wait": 1,
+          "chosen_distance": 355.98512974753976,
+          "successor_distance": 355.98512974753976,
+          "chosen_key_sha256": "05b9f5eeb88d78eaf7677b49e6f7f8db5fbde0435e10aff722f1ef1cbc945c45",
+          "distance_at_target_flush": 355.98512974753976,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 77,
+          "target": 90,
+          "wait": 13,
+          "chosen_distance": 407.1557631827891,
+          "successor_distance": 627.0634473897517,
+          "chosen_key_sha256": "9107938a59ce4bc2ada3ffef14e87fde5c0aaec21ee2f482bf3aad77a1bb5674",
+          "distance_at_target_flush": 407.1557631827891,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 90,
+          "target": 102,
+          "wait": 12,
+          "chosen_distance": 344.18544356897473,
+          "successor_distance": 369.2762002684176,
+          "chosen_key_sha256": "c37d5847c0bab6a1a8da2dfa3ca6979de4d2e8ca3943ea03fa8fd9e739bd9bc3",
+          "distance_at_target_flush": 544.2708243504167,
+          "distance_drift": 200.08538078144193,
+          "key_changed": true
+        },
+        {
+          "source": 102,
+          "target": 114,
+          "wait": 12,
+          "chosen_distance": 348.62806445360184,
+          "successor_distance": 647.7570121437311,
+          "chosen_key_sha256": "ddc6b28ebcef3a249baafa547bca217bb417a54fc0def283eee0cd4ba535d4ce",
+          "distance_at_target_flush": 348.62806445360184,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 114,
+          "target": 115,
+          "wait": 1,
+          "chosen_distance": 456.0724975951016,
+          "successor_distance": 456.0724975951016,
+          "chosen_key_sha256": "034672b3c67c90ce3fc4349f9623cc00ec538c9508302dd4f353abdb358204a1",
+          "distance_at_target_flush": 456.0724975951016,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 115,
+          "target": 121,
+          "wait": 6,
+          "chosen_distance": 355.67333421483636,
+          "successor_distance": 595.1448923647404,
+          "chosen_key_sha256": "fa16c7cd3ff9992ae3b58d95d25380b81bbfc14b6171571b7b510379473824d1",
+          "distance_at_target_flush": 355.67333421483636,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 121,
+          "target": 134,
+          "wait": 13,
+          "chosen_distance": 390.0500312335789,
+          "successor_distance": 1301.7454871535301,
+          "chosen_key_sha256": "1a34653e53c1a88c4588c1cc0a80496d5c9ed064b20538ece2548f79d635a0aa",
+          "distance_at_target_flush": 387.90048310533166,
+          "distance_drift": -2.149548128247261,
+          "key_changed": true
+        },
+        {
+          "source": 134,
+          "target": 135,
+          "wait": 1,
+          "chosen_distance": 416.12708035483956,
+          "successor_distance": 416.12708035483956,
+          "chosen_key_sha256": "7f173dede92625fe9a6807b2f06782aa2a092e33fb93b38df20edc0a72a9c60a",
+          "distance_at_target_flush": 416.12708035483956,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 135,
+          "target": 141,
+          "wait": 6,
+          "chosen_distance": 225.68379594758153,
+          "successor_distance": 619.8638831116259,
+          "chosen_key_sha256": "4bd09548e3aecd92228ca48779fb2a3b266cf6fefc561de061c3cdbee9abe496",
+          "distance_at_target_flush": 225.68379594758153,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 141,
+          "target": 142,
+          "wait": 1,
+          "chosen_distance": 265.16295859217644,
+          "successor_distance": 265.16295859217644,
+          "chosen_key_sha256": "382d0d3e0eceddf6695e4d751af0f058f64d0dc9f872c2e2e587651ada15105c",
+          "distance_at_target_flush": 265.16295859217644,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 142,
+          "target": 155,
+          "wait": 13,
+          "chosen_distance": 331.0286226570606,
+          "successor_distance": 345.1071652472019,
+          "chosen_key_sha256": "e617e824ae43a95c5e6d73041dbaf6a6cddc79cbed923558d18e8dd431f3c581",
+          "distance_at_target_flush": 331.0286226570606,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 155,
+          "target": 167,
+          "wait": 12,
+          "chosen_distance": 362.0187653750181,
+          "successor_distance": 657.981038659811,
+          "chosen_key_sha256": "56a8adf2b6ae626ca16c135ccfea13280e41c06960fc714f4eb28a9b9d3e17cb",
+          "distance_at_target_flush": 475.6697773486376,
+          "distance_drift": 113.65101197361946,
+          "key_changed": true
+        },
+        {
+          "source": 167,
+          "target": 168,
+          "wait": 1,
+          "chosen_distance": 341.40622052550316,
+          "successor_distance": 341.40622052550316,
+          "chosen_key_sha256": "862f5d7af5141375f75800df500521de79d3f4707d169f6f5a74f66a57ac12a5",
+          "distance_at_target_flush": 341.40622052550316,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 168,
+          "target": 174,
+          "wait": 6,
+          "chosen_distance": 339.08302314579487,
+          "successor_distance": 392.8521086126566,
+          "chosen_key_sha256": "834d7303c14f4073c7085b5533ebd468258ba351e68cd3371447b78d3e308695",
+          "distance_at_target_flush": 339.08302314579487,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 174,
+          "target": 175,
+          "wait": 1,
+          "chosen_distance": 338.4799031019211,
+          "successor_distance": 338.4799031019211,
+          "chosen_key_sha256": "53944970d6f7037f4daa5ab98de8259b8642a194fe5a0edc9d30800e78f0c1c4",
+          "distance_at_target_flush": 338.4799031019211,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 175,
+          "target": 176,
+          "wait": 1,
+          "chosen_distance": 386.6701499372721,
+          "successor_distance": 386.6701499372721,
+          "chosen_key_sha256": "0dd8b754f981c7d594a26134d6b857da9c80b7fab5029fb15cb486a98acc5110",
+          "distance_at_target_flush": 386.6701499372721,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 176,
+          "target": 188,
+          "wait": 12,
+          "chosen_distance": 301.92941607534885,
+          "successor_distance": 732.2435120642185,
+          "chosen_key_sha256": "dc14c93d6d50045b0fcbad965996268cc2c2c48e65559afaff8150d1466140df",
+          "distance_at_target_flush": 301.92941607534885,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 188,
+          "target": 201,
+          "wait": 13,
+          "chosen_distance": 287.88967499136925,
+          "successor_distance": 619.8884376883507,
+          "chosen_key_sha256": "cd59f4de94b304afdc5f52b069324b006a9584596267aab7bfd5e7c024c973de",
+          "distance_at_target_flush": 294.67348177731037,
+          "distance_drift": 6.783806785941124,
+          "key_changed": true
+        },
+        {
+          "source": 201,
+          "target": 213,
+          "wait": 12,
+          "chosen_distance": 362.6531647592783,
+          "successor_distance": 647.9360504448414,
+          "chosen_key_sha256": "6d6f4d1091a108bc599b999f1d1b678ff50658ae7f0972b2e9be97176527762e",
+          "distance_at_target_flush": 362.6531647592783,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 213,
+          "target": 225,
+          "wait": 12,
+          "chosen_distance": 481.6165847405791,
+          "successor_distance": 492.5442752838135,
+          "chosen_key_sha256": "a61afae4d85b853e2dfbefe5ac070a8ff491f9e0ff953a96de726852000dcffc"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 90,
+          "pending_target": 102,
+          "target_flush_now": false,
+          "selected_distance": 344.18544356897473,
+          "current_distance": 544.2708243504167,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 213,
+          "pending_target": 225,
+          "target_flush_now": false,
+          "selected_distance": 481.6165847405791,
+          "current_distance": 517.4554851837456,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 225
+    },
+    {
+      "head": 2,
+      "event_sha256": "ced7eae8530adb5e8479ff78e6ab000b70eac1499b53d0a16b70598f4ebde7c0",
+      "flushes": 224,
+      "skipped": 206,
+      "routes": [
+        {
+          "source": 1,
+          "target": 8,
+          "wait": 7,
+          "chosen_distance": 417.33511489629745,
+          "successor_distance": 462.72185468673706,
+          "chosen_key_sha256": "ee18cdbdffc01352ade86c48966fff3ddaaf426b77b2120c4422baf963cae059",
+          "distance_at_target_flush": 417.33511489629745,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 8,
+          "target": 13,
+          "wait": 5,
+          "chosen_distance": 534.8942319750786,
+          "successor_distance": 1509.1641915477812,
+          "chosen_key_sha256": "e61d0d52b872aaa7cf7804d3eb1c43def89fce49e83c1eac081b9f85070d7315",
+          "distance_at_target_flush": 534.8942319750786,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 13,
+          "target": 14,
+          "wait": 1,
+          "chosen_distance": 121.23053920269012,
+          "successor_distance": 121.23053920269012,
+          "chosen_key_sha256": "7e9997613b1a712edaa5b37ea45edf8ee52d320d277536520c230e6138f37633",
+          "distance_at_target_flush": 121.23053920269012,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 14,
+          "target": 39,
+          "wait": 25,
+          "chosen_distance": 244.94083000719547,
+          "successor_distance": 770.7247277498245,
+          "chosen_key_sha256": "1a24d3fcbaa0e5b8052c10c4528076290a9456c68d3fc81efd54cf01495efc72",
+          "distance_at_target_flush": 328.4033598676324,
+          "distance_drift": 83.46252986043692,
+          "key_changed": true
+        },
+        {
+          "source": 39,
+          "target": 40,
+          "wait": 1,
+          "chosen_distance": 125.7301477342844,
+          "successor_distance": 125.7301477342844,
+          "chosen_key_sha256": "245ab4aab7cfea7679a1a93c011509a4ca5df26d08855f6b48034f1dd0569327",
+          "distance_at_target_flush": 125.7301477342844,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 40,
+          "target": 57,
+          "wait": 17,
+          "chosen_distance": 165.34730662498623,
+          "successor_distance": 414.2421717233956,
+          "chosen_key_sha256": "a1c30652226f53ced662b16a633f2c3d10ebd6ac1b07431e8471af437a135de7",
+          "distance_at_target_flush": 165.34730662498623,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 57,
+          "target": 70,
+          "wait": 13,
+          "chosen_distance": 151.05529930163175,
+          "successor_distance": 451.9247403331101,
+          "chosen_key_sha256": "88604ca8d0d8dcc2bd2006cafb6957b4296933ae70ebd8463ec303413965f928",
+          "distance_at_target_flush": 232.85185979516245,
+          "distance_drift": 81.7965604935307,
+          "key_changed": true
+        },
+        {
+          "source": 70,
+          "target": 102,
+          "wait": 32,
+          "chosen_distance": 248.87332856096327,
+          "successor_distance": 696.166718670167,
+          "chosen_key_sha256": "31dd8dfb17c3e23c261fca1be719cd330e88bd6bf77ba1484c7d36c6deab1613",
+          "distance_at_target_flush": 389.67580213211477,
+          "distance_drift": 140.8024735711515,
+          "key_changed": true
+        },
+        {
+          "source": 102,
+          "target": 132,
+          "wait": 30,
+          "chosen_distance": 208.5677001606673,
+          "successor_distance": 686.800491809845,
+          "chosen_key_sha256": "80bb1fb534e3081d010be262d4540a207d5cbed09346b83d0d7eb8dc2b45516e",
+          "distance_at_target_flush": 251.71683510765433,
+          "distance_drift": 43.14913494698703,
+          "key_changed": true
+        },
+        {
+          "source": 132,
+          "target": 136,
+          "wait": 4,
+          "chosen_distance": 185.39274721220136,
+          "successor_distance": 413.8382252790034,
+          "chosen_key_sha256": "0597b44e59942bc24f2833ddf13689a118a9ae2e39a4861e55393a3bb7de7843",
+          "distance_at_target_flush": 185.39274721220136,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 136,
+          "target": 141,
+          "wait": 5,
+          "chosen_distance": 145.14563599601388,
+          "successor_distance": 202.9392062164843,
+          "chosen_key_sha256": "c551356bfbc65cb703c4c2f5f6378dc3ed5a54affa6b6710012c75104f9fc947",
+          "distance_at_target_flush": 145.14563599601388,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 141,
+          "target": 145,
+          "wait": 4,
+          "chosen_distance": 147.86183897033334,
+          "successor_distance": 571.0518529415131,
+          "chosen_key_sha256": "3268fa6b4355c3a086394f6d8a7bdc0da0dc4d8e6933b69128e30e1d1ac419d0",
+          "distance_at_target_flush": 147.86183897033334,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 145,
+          "target": 157,
+          "wait": 12,
+          "chosen_distance": 170.20605075359344,
+          "successor_distance": 595.5315778590739,
+          "chosen_key_sha256": "1a0d7080dd6f622c436a958408c8a43d874ef1026a5b7dc1faf8ec6d02df86e2",
+          "distance_at_target_flush": 170.20605075359344,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 157,
+          "target": 170,
+          "wait": 13,
+          "chosen_distance": 141.1199839869514,
+          "successor_distance": 243.21046751737595,
+          "chosen_key_sha256": "dc0d7462ed6410ee7f53dabed46cefb06bf92a5993932fbc39696d3e0b4d8c64",
+          "distance_at_target_flush": 146.65217742696404,
+          "distance_drift": 5.532193440012634,
+          "key_changed": true
+        },
+        {
+          "source": 170,
+          "target": 171,
+          "wait": 1,
+          "chosen_distance": 133.5516168475151,
+          "successor_distance": 133.5516168475151,
+          "chosen_key_sha256": "c03c54acf51495dc4f13dc3920db026243e13e4306ed861a86c1e7629b525be1",
+          "distance_at_target_flush": 133.5516168475151,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 171,
+          "target": 197,
+          "wait": 26,
+          "chosen_distance": 202.53753227367997,
+          "successor_distance": 1510.5749342776835,
+          "chosen_key_sha256": "0b8923d736a918759ea582b480ba835be12c1a6976ae2429c6ac3f93396b90c7",
+          "distance_at_target_flush": 254.09464912489057,
+          "distance_drift": 51.557116851210594,
+          "key_changed": true
+        },
+        {
+          "source": 197,
+          "target": 205,
+          "wait": 8,
+          "chosen_distance": 237.64638328552246,
+          "successor_distance": 253.64853888750076,
+          "chosen_key_sha256": "515171a86fc5d0c8cb83db16bc8efe80288504f4fb3abb0fe92a068cd9c6cef3",
+          "distance_at_target_flush": 237.64638328552246,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 205,
+          "target": 230,
+          "wait": 25,
+          "chosen_distance": 221.5872141122818,
+          "successor_distance": 292.1296806335449,
+          "chosen_key_sha256": "432201ed8be3cbcfd94b016b9ca50f51fe7efab8bb061e2f098554a16fe16604"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 70,
+          "pending_target": 102,
+          "target_flush_now": false,
+          "selected_distance": 248.87332856096327,
+          "current_distance": 389.67580213211477,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 205,
+          "pending_target": 230,
+          "target_flush_now": false,
+          "selected_distance": 221.5872141122818,
+          "current_distance": 237.58250522613525,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 230
+    },
+    {
+      "head": 3,
+      "event_sha256": "908e00fc6eafa80f6a6d0cfddd6e4fee34b4f058ce1e7ea964d979269e5a389b",
+      "flushes": 224,
+      "skipped": 212,
+      "routes": [
+        {
+          "source": 1,
+          "target": 14,
+          "wait": 13,
+          "chosen_distance": 807.3063988024369,
+          "successor_distance": 1499.548927783966,
+          "chosen_key_sha256": "898b0cdd340dec69380d95073d18a09ceccc2676d9f6991d79adf7dfd332c7f9",
+          "distance_at_target_flush": 807.3063988024369,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 14,
+          "target": 46,
+          "wait": 32,
+          "chosen_distance": 456.33970660716295,
+          "successor_distance": 1815.653250434436,
+          "chosen_key_sha256": "f048ec3fa2521d63b7bc9152c83f041ad6f8afb1e9ad0b4ec3fda62603b12f39",
+          "distance_at_target_flush": 497.55174741894007,
+          "distance_drift": 41.212040811777115,
+          "key_changed": true
+        },
+        {
+          "source": 46,
+          "target": 77,
+          "wait": 31,
+          "chosen_distance": 460.1809153854847,
+          "successor_distance": 632.8995743393898,
+          "chosen_key_sha256": "be126bd74212dafcdaf39abbdf2af32711fc6ee3dc9bc9e2dac577e05d9d9e57",
+          "distance_at_target_flush": 584.1728476770222,
+          "distance_drift": 123.99193229153752,
+          "key_changed": true
+        },
+        {
+          "source": 77,
+          "target": 91,
+          "wait": 14,
+          "chosen_distance": 378.04325752332807,
+          "successor_distance": 400.2180467993021,
+          "chosen_key_sha256": "20e38314bcdb73129529958ffeeab8b4ca15640dc947d7f2bc3638e3584aae74",
+          "distance_at_target_flush": 378.04325752332807,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 91,
+          "target": 109,
+          "wait": 18,
+          "chosen_distance": 378.47360536828637,
+          "successor_distance": 790.2237124443054,
+          "chosen_key_sha256": "3b0261b225ba82f96143b682a34a6be023e99044e9d43c6091e447d6f85d4ce7",
+          "distance_at_target_flush": 563.0331286378205,
+          "distance_drift": 184.5595232695341,
+          "key_changed": true
+        },
+        {
+          "source": 109,
+          "target": 110,
+          "wait": 1,
+          "chosen_distance": 459.89254343509674,
+          "successor_distance": 459.89254343509674,
+          "chosen_key_sha256": "04c74295cce6ac000c9ae0df8f666908f0ec4d233825d614986f703455bdd896",
+          "distance_at_target_flush": 459.89254343509674,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 110,
+          "target": 141,
+          "wait": 31,
+          "chosen_distance": 485.7634371742606,
+          "successor_distance": 953.9783390164375,
+          "chosen_key_sha256": "eb054682c0044bb7e129820b030c19b25e2cd1966d8d40f47dea97b787b2d701",
+          "distance_at_target_flush": 512.3401971198618,
+          "distance_drift": 26.576759945601225,
+          "key_changed": true
+        },
+        {
+          "source": 141,
+          "target": 148,
+          "wait": 7,
+          "chosen_distance": 440.62187629938126,
+          "successor_distance": 1148.8031057715416,
+          "chosen_key_sha256": "36b1831819712303ce9d2bec91b7b162fe9d09f55ab63b5064e1a2a9db5ef33b",
+          "distance_at_target_flush": 440.62187629938126,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 148,
+          "target": 159,
+          "wait": 11,
+          "chosen_distance": 457.752416908741,
+          "successor_distance": 622.3814940452576,
+          "chosen_key_sha256": "a5b1ef209d296801b85464298ed79744cb9cd79b0c4b4eecaca484d7d8be33a1",
+          "distance_at_target_flush": 457.752416908741,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 159,
+          "target": 184,
+          "wait": 25,
+          "chosen_distance": 341.3574241437018,
+          "successor_distance": 835.617572799325,
+          "chosen_key_sha256": "16e0d70f99e4bf765f0ee717afd790798753ddff404a1f4166365f1b708375df",
+          "distance_at_target_flush": 435.2906440794468,
+          "distance_drift": 93.933219935745,
+          "key_changed": true
+        },
+        {
+          "source": 184,
+          "target": 215,
+          "wait": 31,
+          "chosen_distance": 418.1049727855716,
+          "successor_distance": 1585.7483909130096,
+          "chosen_key_sha256": "6bdadaad8d5bea1338517f2f231e48b0c768c81468925302d886452998d4b608",
+          "distance_at_target_flush": 497.9711772799492,
+          "distance_drift": 79.8662044943776,
+          "key_changed": true
+        },
+        {
+          "source": 215,
+          "target": 234,
+          "wait": 19,
+          "chosen_distance": 177.0203049480915,
+          "successor_distance": 537.0783050060272,
+          "chosen_key_sha256": "55de8a042ee5533ba76d3d3b4f53b3398bf0ddb6670e652ed8d9f5da75912fbf"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 91,
+          "pending_target": 109,
+          "target_flush_now": false,
+          "selected_distance": 378.47360536828637,
+          "current_distance": 563.0331286378205,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 215,
+          "pending_target": 234,
+          "target_flush_now": false,
+          "selected_distance": 177.0203049480915,
+          "current_distance": 199.41063511371613,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 234
+    },
+    {
+      "head": 4,
+      "event_sha256": "a266d17cb52a91e66d161cfc8c862fc2b66cfb9b6b60e794607b8c2f4891d767",
+      "flushes": 224,
+      "skipped": 212,
+      "routes": [
+        {
+          "source": 1,
+          "target": 20,
+          "wait": 19,
+          "chosen_distance": 595.2448855042458,
+          "successor_distance": 757.8197985226288,
+          "chosen_key_sha256": "d4e2dde746bbf10e36f311b9f124dcc0831e474d853ec0e9ae66ef23aedbd2b8",
+          "distance_at_target_flush": 595.2448855042458,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 20,
+          "target": 37,
+          "wait": 17,
+          "chosen_distance": 278.80417470354587,
+          "successor_distance": 630.6781140454113,
+          "chosen_key_sha256": "e060a569250368c286c9706374e440c490eaa65be8336055ae9cf97c67f5c788",
+          "distance_at_target_flush": 317.2572143264115,
+          "distance_drift": 38.45303962286562,
+          "key_changed": true
+        },
+        {
+          "source": 37,
+          "target": 54,
+          "wait": 17,
+          "chosen_distance": 156.31429351866245,
+          "successor_distance": 1342.2250021845102,
+          "chosen_key_sha256": "0448c755ec4c7fc48f4e06d44fc008239e52b9b2c326bddeacf582d40bba09aa",
+          "distance_at_target_flush": 156.31429351866245,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 54,
+          "target": 77,
+          "wait": 23,
+          "chosen_distance": 277.6823745602742,
+          "successor_distance": 595.7237243885174,
+          "chosen_key_sha256": "c15180eceac262dc0cdbd18b9e4ddafd40bfce62c037bfce75ab69ec1555d2e3",
+          "distance_at_target_flush": 336.7823110977188,
+          "distance_drift": 59.09993653744459,
+          "key_changed": true
+        },
+        {
+          "source": 77,
+          "target": 108,
+          "wait": 31,
+          "chosen_distance": 274.14841156080365,
+          "successor_distance": 439.3005501180887,
+          "chosen_key_sha256": "8615e88241f797d83d9c052ff80ee099848a45115bc12aaf32e67a0c2a3caf44",
+          "distance_at_target_flush": 276.9864123351872,
+          "distance_drift": 2.838000774383545,
+          "key_changed": true
+        },
+        {
+          "source": 108,
+          "target": 117,
+          "wait": 9,
+          "chosen_distance": 105.50630331039429,
+          "successor_distance": 523.6571645736694,
+          "chosen_key_sha256": "a28e7da039862b520f76fe636e26393d175507dd0dc8e1406bd930fd7ab5a202",
+          "distance_at_target_flush": 105.50630331039429,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 117,
+          "target": 149,
+          "wait": 32,
+          "chosen_distance": 127.78463461995125,
+          "successor_distance": 544.2015600204468,
+          "chosen_key_sha256": "13fc6e3fe4e857583f6bcc726e4dd5da64f151905464f288dbf18362c45943d1",
+          "distance_at_target_flush": 207.32982510328293,
+          "distance_drift": 79.54519048333168,
+          "key_changed": true
+        },
+        {
+          "source": 149,
+          "target": 181,
+          "wait": 32,
+          "chosen_distance": 159.53035160526633,
+          "successor_distance": 638.7432417869568,
+          "chosen_key_sha256": "bcdbfd70928c7f2c4ba831c83c30ea3173d28a994b919db45ce04eb39c7ffd20",
+          "distance_at_target_flush": 266.14090628921986,
+          "distance_drift": 106.61055468395352,
+          "key_changed": true
+        },
+        {
+          "source": 181,
+          "target": 196,
+          "wait": 15,
+          "chosen_distance": 89.26757957041264,
+          "successor_distance": 995.8001552820206,
+          "chosen_key_sha256": "e11a6a52858dc8c2e362599b0ce9ee8ab6310698f7139c2817ecae7ed2115eb0",
+          "distance_at_target_flush": 199.29146941006184,
+          "distance_drift": 110.0238898396492,
+          "key_changed": true
+        },
+        {
+          "source": 196,
+          "target": 204,
+          "wait": 8,
+          "chosen_distance": 243.7081708908081,
+          "successor_distance": 595.9425927549601,
+          "chosen_key_sha256": "6ea617dfd91120f1621e21512db40e549aab53df604907fa4e2cb25923a8f8af",
+          "distance_at_target_flush": 243.7081708908081,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 204,
+          "target": 223,
+          "wait": 19,
+          "chosen_distance": 152.27043056488037,
+          "successor_distance": 695.1256081014872,
+          "chosen_key_sha256": "28a0c3b2db1b3f66cec22aefec08baf430999350a1c72029f58954d459ae9de1",
+          "distance_at_target_flush": 152.27043056488037,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 223,
+          "target": 254,
+          "wait": 31,
+          "chosen_distance": 150.623704880476,
+          "successor_distance": 383.6835068613291,
+          "chosen_key_sha256": "5bd2056a5688f86a387a27f3e01fb556a30aa1d61d00cc970753963a3c04d91c"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 77,
+          "pending_target": 108,
+          "target_flush_now": false,
+          "selected_distance": 274.14841156080365,
+          "current_distance": 276.9864123351872,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 223,
+          "pending_target": 254,
+          "target_flush_now": false,
+          "selected_distance": 150.623704880476,
+          "current_distance": 212.4332999587059,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 254
+    },
+    {
+      "head": 5,
+      "event_sha256": "7fe45ca4722d66af0ea843c3f5338d691ab83bd463b2b2c26d3817617b2f01c2",
+      "flushes": 224,
+      "skipped": 209,
+      "routes": [
+        {
+          "source": 1,
+          "target": 25,
+          "wait": 24,
+          "chosen_distance": 326.4616773510352,
+          "successor_distance": 517.4271557331085,
+          "chosen_key_sha256": "a57f4aa4eb342639e1a4e0bdc440d65f7d87c92882981524eacf2124f280f0b6",
+          "distance_at_target_flush": 326.4616773510352,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 25,
+          "target": 45,
+          "wait": 20,
+          "chosen_distance": 274.6779275275767,
+          "successor_distance": 675.4310289407149,
+          "chosen_key_sha256": "8991199791ce62a881c41e14c3d9e29229f1ce21a4fb565fa8958448e2c30ae8",
+          "distance_at_target_flush": 322.57273710519075,
+          "distance_drift": 47.89480957761407,
+          "key_changed": true
+        },
+        {
+          "source": 45,
+          "target": 73,
+          "wait": 28,
+          "chosen_distance": 470.1914357729256,
+          "successor_distance": 769.7280679345131,
+          "chosen_key_sha256": "ed5cff8f71598e90f4cef045d660a1b80f220b7823a4d0d8d084aa28f8981a50",
+          "distance_at_target_flush": 573.9813765324652,
+          "distance_drift": 103.7899407595396,
+          "key_changed": true
+        },
+        {
+          "source": 73,
+          "target": 91,
+          "wait": 18,
+          "chosen_distance": 289.884330958128,
+          "successor_distance": 1030.9367272555828,
+          "chosen_key_sha256": "0574a625c585c15dca23123644faf8e738c1288962ceb4ff4ad6f5fe34e87fd3",
+          "distance_at_target_flush": 289.884330958128,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 91,
+          "target": 92,
+          "wait": 1,
+          "chosen_distance": 338.878313139081,
+          "successor_distance": 338.878313139081,
+          "chosen_key_sha256": "53aecb9289d093c6cca58e3e569bae900a5a608d03d678ed102b02ff1506b5ed",
+          "distance_at_target_flush": 338.878313139081,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 92,
+          "target": 112,
+          "wait": 20,
+          "chosen_distance": 331.90496095456183,
+          "successor_distance": 412.4913522452116,
+          "chosen_key_sha256": "beb81bd3231a1e6c6cfe8ce2b4c9ceab796d928434e94854b7f8341d5551a03a",
+          "distance_at_target_flush": 484.4318843334913,
+          "distance_drift": 152.5269233789295,
+          "key_changed": true
+        },
+        {
+          "source": 112,
+          "target": 135,
+          "wait": 23,
+          "chosen_distance": 444.51839174330235,
+          "successor_distance": 2588.737321406603,
+          "chosen_key_sha256": "62b8173dc9dc83ac33cd3d5404f5d66f26d77864f17d38dd0a143dc7197ce690",
+          "distance_at_target_flush": 481.30557207763195,
+          "distance_drift": 36.787180334329605,
+          "key_changed": true
+        },
+        {
+          "source": 135,
+          "target": 165,
+          "wait": 30,
+          "chosen_distance": 315.90199503302574,
+          "successor_distance": 768.3952406197786,
+          "chosen_key_sha256": "63f566ba8255e8dc21110f5a45d273c7951962a100336aa56289486d2e27177a",
+          "distance_at_target_flush": 333.52144412789494,
+          "distance_drift": 17.619449094869196,
+          "key_changed": true
+        },
+        {
+          "source": 165,
+          "target": 167,
+          "wait": 2,
+          "chosen_distance": 490.66722398996353,
+          "successor_distance": 540.6714457273483,
+          "chosen_key_sha256": "80a9620f52000e31e85dd6be01e3a1ed9427df8b1cb54dcccd39b68d755b4961",
+          "distance_at_target_flush": 490.66722398996353,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 167,
+          "target": 171,
+          "wait": 4,
+          "chosen_distance": 396.9164106398821,
+          "successor_distance": 661.5324329137802,
+          "chosen_key_sha256": "e580c071b6f0410b7eda3d80b0aa5ab8354f2a8d8b994411339a2e656990c127",
+          "distance_at_target_flush": 396.9164106398821,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 171,
+          "target": 193,
+          "wait": 22,
+          "chosen_distance": 323.3326287502423,
+          "successor_distance": 513.369556620717,
+          "chosen_key_sha256": "cff3295e1116b4cee04fdf250442f29483f200b48eea4df33c05fe1e4d6b372a",
+          "distance_at_target_flush": 370.92403361946344,
+          "distance_drift": 47.59140486922115,
+          "key_changed": true
+        },
+        {
+          "source": 193,
+          "target": 204,
+          "wait": 11,
+          "chosen_distance": 182.52800303697586,
+          "successor_distance": 458.6778786331415,
+          "chosen_key_sha256": "4d3ffa2feccb8d449af4d6c468f1a762d9ea49bd1f971248d02395fcfed62de9",
+          "distance_at_target_flush": 182.52800303697586,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 204,
+          "target": 206,
+          "wait": 2,
+          "chosen_distance": 300.3564365506172,
+          "successor_distance": 523.1095183640718,
+          "chosen_key_sha256": "48ee58eaa7013ef2d7b9041150e211a7d87bd3c2dc056973a78a58088a1dec7b",
+          "distance_at_target_flush": 300.3564365506172,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 206,
+          "target": 221,
+          "wait": 15,
+          "chosen_distance": 396.0555544644594,
+          "successor_distance": 723.1253204345703,
+          "chosen_key_sha256": "6bcc925706a45c72e037aacbacf808cce0a35a404d1a86cb79bde2b2c3c1bcba",
+          "distance_at_target_flush": 396.0555544644594,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 221,
+          "target": 234,
+          "wait": 13,
+          "chosen_distance": 200.00399746000767,
+          "successor_distance": 410.97395046055317,
+          "chosen_key_sha256": "8f54670fe43d855bc0b3c0e4a01b17e7d377fecb624e1949d6e45ee9283c5cb6"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 92,
+          "pending_target": 112,
+          "target_flush_now": false,
+          "selected_distance": 331.90496095456183,
+          "current_distance": 484.4318843334913,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 221,
+          "pending_target": 234,
+          "target_flush_now": false,
+          "selected_distance": 200.00399746000767,
+          "current_distance": 149.97803414566442,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 234
+    },
+    {
+      "head": 6,
+      "event_sha256": "942c5df614349ed828bcc597dd3c39ccb943e0119d51bdb246801994ea842ff6",
+      "flushes": 224,
+      "skipped": 208,
+      "routes": [
+        {
+          "source": 1,
+          "target": 16,
+          "wait": 15,
+          "chosen_distance": 277.9485404426232,
+          "successor_distance": 1588.3993006283417,
+          "chosen_key_sha256": "fc3d8451a79b85718ac008ed8b949a777419ec76db37c14dc7588cda85939978",
+          "distance_at_target_flush": 277.9485404426232,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 16,
+          "target": 41,
+          "wait": 25,
+          "chosen_distance": 297.34316399041563,
+          "successor_distance": 564.9305738210678,
+          "chosen_key_sha256": "8b3d81474c2531b1830a966594062ea254d60bda2c26ff800b593e1673144b16",
+          "distance_at_target_flush": 424.4213844658807,
+          "distance_drift": 127.07822047546506,
+          "key_changed": true
+        },
+        {
+          "source": 41,
+          "target": 42,
+          "wait": 1,
+          "chosen_distance": 228.67485910654068,
+          "successor_distance": 228.67485910654068,
+          "chosen_key_sha256": "ee3b78f6e79d050393f0da85c625491974112962eab4a4bc37b245caf3687f6d",
+          "distance_at_target_flush": 228.67485910654068,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 42,
+          "target": 55,
+          "wait": 13,
+          "chosen_distance": 445.9920399785042,
+          "successor_distance": 674.3007932687178,
+          "chosen_key_sha256": "8cf9ea33d839745bb6d0da55834b9eb1a2017c73e4d551281fc0581356ab16ff",
+          "distance_at_target_flush": 445.9920399785042,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 55,
+          "target": 56,
+          "wait": 1,
+          "chosen_distance": 237.96399821341038,
+          "successor_distance": 237.96399821341038,
+          "chosen_key_sha256": "a421c47b8be2b78692bbad85df7268ae7c628f73ff8025ef0308fe26613bc6cb",
+          "distance_at_target_flush": 237.96399821341038,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 56,
+          "target": 70,
+          "wait": 14,
+          "chosen_distance": 429.62729926779866,
+          "successor_distance": 817.8573183054104,
+          "chosen_key_sha256": "8769881ac412bde82f1847b6f71e95be9a0f3f57b741294f826153e16bb8e3f7",
+          "distance_at_target_flush": 538.1024405099452,
+          "distance_drift": 108.47514124214649,
+          "key_changed": true
+        },
+        {
+          "source": 70,
+          "target": 72,
+          "wait": 2,
+          "chosen_distance": 394.92020501196384,
+          "successor_distance": 1008.4559155851603,
+          "chosen_key_sha256": "66810069cb85cfbb53f4a7114d1a08447134b63ae4826357427be6bc85915d8e",
+          "distance_at_target_flush": 394.92020501196384,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 72,
+          "target": 92,
+          "wait": 20,
+          "chosen_distance": 416.56660353019834,
+          "successor_distance": 761.4565334059298,
+          "chosen_key_sha256": "794b302e4535f7e682e4a925ae860e5e6815e8aba6c1d40d9b86029439433bf4",
+          "distance_at_target_flush": 416.56660353019834,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 92,
+          "target": 110,
+          "wait": 18,
+          "chosen_distance": 352.9978232914582,
+          "successor_distance": 1168.6805319339037,
+          "chosen_key_sha256": "f2ee1690cf493550267d9d99f03f27e01aa08dcb86ed84d8f02d6f38e01a7bcb",
+          "distance_at_target_flush": 611.3720204122365,
+          "distance_drift": 258.37419712077826,
+          "key_changed": true
+        },
+        {
+          "source": 110,
+          "target": 115,
+          "wait": 5,
+          "chosen_distance": 319.95458471775055,
+          "successor_distance": 1859.6394964456558,
+          "chosen_key_sha256": "620aa8f4a20cef65b6cc183cce453a135c4c68de301f06fad7a0d83ce31c3c2e",
+          "distance_at_target_flush": 319.95458471775055,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 115,
+          "target": 132,
+          "wait": 17,
+          "chosen_distance": 339.0658587105572,
+          "successor_distance": 1204.7954918146133,
+          "chosen_key_sha256": "113afee73d00378f80364ae960c9cf7d1f2fe68d501e0fde04eb5399306c5ed1",
+          "distance_at_target_flush": 426.6265614628792,
+          "distance_drift": 87.56070275232196,
+          "key_changed": true
+        },
+        {
+          "source": 132,
+          "target": 161,
+          "wait": 29,
+          "chosen_distance": 447.3352724313736,
+          "successor_distance": 918.2648180127144,
+          "chosen_key_sha256": "8a4330f59566cec5bbec3d300977491a3f97c2d5323df72581cba4292e2ee2fd",
+          "distance_at_target_flush": 460.5567207336426,
+          "distance_drift": 13.221448302268982,
+          "key_changed": true
+        },
+        {
+          "source": 161,
+          "target": 191,
+          "wait": 30,
+          "chosen_distance": 452.4636189341545,
+          "successor_distance": 2388.0407508015633,
+          "chosen_key_sha256": "75e4a74a3041c6cb3f684542509982440d92840b8a170bdc08bda1afba53ee34",
+          "distance_at_target_flush": 452.4636189341545,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 191,
+          "target": 202,
+          "wait": 11,
+          "chosen_distance": 385.0334240964148,
+          "successor_distance": 1293.2520222067833,
+          "chosen_key_sha256": "ed72d1ab36bc2f463587d043eeceea1cd20498266799353dd57def7be84fbde5",
+          "distance_at_target_flush": 341.71496899425983,
+          "distance_drift": -43.318455102154985,
+          "key_changed": true
+        },
+        {
+          "source": 202,
+          "target": 207,
+          "wait": 5,
+          "chosen_distance": 405.8592755794525,
+          "successor_distance": 502.62675154209137,
+          "chosen_key_sha256": "acbce3d44ba18b973e06dad50fbe0e54377685f50b20230b45c5668daf5df403",
+          "distance_at_target_flush": 405.8592755794525,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 207,
+          "target": 229,
+          "wait": 22,
+          "chosen_distance": 482.2298476845026,
+          "successor_distance": 799.4344701319933,
+          "chosen_key_sha256": "d5b7a1333e26a6f9fa931d88aa67dbcc1dea640d9c2bf1f7020841de9f4238cb"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 92,
+          "pending_target": 110,
+          "target_flush_now": false,
+          "selected_distance": 352.9978232914582,
+          "current_distance": 611.3720204122365,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 207,
+          "pending_target": 229,
+          "target_flush_now": false,
+          "selected_distance": 482.2298476845026,
+          "current_distance": 522.8882253915071,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 229
+    },
+    {
+      "head": 7,
+      "event_sha256": "af284e6a0e8cc44f42677ac69d403634993340a1c189059d926fa15e625bec71",
+      "flushes": 224,
+      "skipped": 213,
+      "routes": [
+        {
+          "source": 1,
+          "target": 26,
+          "wait": 25,
+          "chosen_distance": 996.5150826843455,
+          "successor_distance": 1160.9180733086541,
+          "chosen_key_sha256": "180f2e4a3f49c6e846609bab2f1f557f2fb928cd7a0176d5a91bca00a195b5e2",
+          "distance_at_target_flush": 996.5150826843455,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 26,
+          "target": 34,
+          "wait": 8,
+          "chosen_distance": 640.0042335921898,
+          "successor_distance": 1017.4955667043105,
+          "chosen_key_sha256": "d6f6f0af2906b346dc1ad1a957c70181b5281018c169cbb62f9f7f223b2c124a",
+          "distance_at_target_flush": 635.0963156158105,
+          "distance_drift": -4.9079179763793945,
+          "key_changed": true
+        },
+        {
+          "source": 34,
+          "target": 60,
+          "wait": 26,
+          "chosen_distance": 626.7345477491617,
+          "successor_distance": 933.415390253067,
+          "chosen_key_sha256": "c44a73462ee70c47d505d4e974c98e9843ae7d981c513d326591a66713f4c63b",
+          "distance_at_target_flush": 626.7345477491617,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 60,
+          "target": 62,
+          "wait": 2,
+          "chosen_distance": 626.111912727356,
+          "successor_distance": 943.5273901969194,
+          "chosen_key_sha256": "4fc0f061da5269a1c261a244c2066d9ab14d7293aa3b934c405cb1e2e0c80236",
+          "distance_at_target_flush": 626.111912727356,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 62,
+          "target": 94,
+          "wait": 32,
+          "chosen_distance": 628.3613980747759,
+          "successor_distance": 1134.301226630807,
+          "chosen_key_sha256": "ccff07a9a4848d9fc3c582f42184c959fef880890f3475e288cac8b164da3335",
+          "distance_at_target_flush": 718.6084590926766,
+          "distance_drift": 90.2470610179007,
+          "key_changed": true
+        },
+        {
+          "source": 94,
+          "target": 119,
+          "wait": 25,
+          "chosen_distance": 650.4909280799329,
+          "successor_distance": 738.8297803141177,
+          "chosen_key_sha256": "90c02c9b6872a3c5e87ebdfff7bebe9d407a157b21ffe69867c16f0cb56e3837",
+          "distance_at_target_flush": 790.432911042124,
+          "distance_drift": 139.9419829621911,
+          "key_changed": true
+        },
+        {
+          "source": 119,
+          "target": 146,
+          "wait": 27,
+          "chosen_distance": 322.082156509161,
+          "successor_distance": 835.4231266416609,
+          "chosen_key_sha256": "cf305393c6ddc9eb3f409d36cf89df769c96c93ee000585978edf1ef5f2e33b3",
+          "distance_at_target_flush": 402.56843987107277,
+          "distance_drift": 80.48628336191177,
+          "key_changed": true
+        },
+        {
+          "source": 146,
+          "target": 162,
+          "wait": 16,
+          "chosen_distance": 292.6004630327225,
+          "successor_distance": 661.4691070318222,
+          "chosen_key_sha256": "93a3f127600ba8ecd82d347bd924a8706309b0ed168058f14648b2dc46a66092",
+          "distance_at_target_flush": 416.662921205163,
+          "distance_drift": 124.06245817244053,
+          "key_changed": true
+        },
+        {
+          "source": 162,
+          "target": 189,
+          "wait": 27,
+          "chosen_distance": 440.0248537659645,
+          "successor_distance": 1109.638854920864,
+          "chosen_key_sha256": "5fbe63c422f969898e7ebf3927f73f43caac562b0f77a05efea9b2e25db316aa",
+          "distance_at_target_flush": 440.0248537659645,
+          "distance_drift": 0.0,
+          "key_changed": false
+        },
+        {
+          "source": 189,
+          "target": 213,
+          "wait": 24,
+          "chosen_distance": 247.62187714874744,
+          "successor_distance": 680.7047531940043,
+          "chosen_key_sha256": "7da883d63084540d1ffb2273ea5c2e0b88dc54c3ec8872e82db6fae72061ec9c",
+          "distance_at_target_flush": 392.83587941527367,
+          "distance_drift": 145.21400226652622,
+          "key_changed": true
+        },
+        {
+          "source": 213,
+          "target": 233,
+          "wait": 20,
+          "chosen_distance": 434.94607274606824,
+          "successor_distance": 485.5039263665676,
+          "chosen_key_sha256": "5d6f7b3d76d99d7d40d37e7385c841bcd3ffd15235e1e31c1a1728a399677658"
+        }
+      ],
+      "endpoint": {
+        "128": {
+          "oldest_v": 96,
+          "pending_source": 94,
+          "pending_target": 119,
+          "target_flush_now": false,
+          "selected_distance": 650.4909280799329,
+          "current_distance": 790.432911042124,
+          "key_changed": true
+        },
+        "256": {
+          "oldest_v": 224,
+          "pending_source": 213,
+          "pending_target": 233,
+          "target_flush_now": false,
+          "selected_distance": 434.94607274606824,
+          "current_distance": 495.75434132665396,
+          "key_changed": true
+        }
+      },
+      "unresolved_target": 233
+    }
+  ]
+}

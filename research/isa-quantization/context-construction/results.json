@@ -1,0 +1,96 @@
+{
+  "domain": "256 four-input byte-state maps, eight paid-asset subsets, horizon 4",
+  "all_prefixes": 2048,
+  "possible_suffix_words_per_prefix": 81,
+  "brute_suffix_executions": 165888,
+  "memoized_abstract_subproblems": 68,
+  "separator_classes_at_initial_stage": 20,
+  "all_2048_frontiers_match_exhaustive": true,
+  "future_assets": [
+    "a",
+    "b"
+  ],
+  "ignored_in_profile_but_charged_in_base": [
+    "c"
+  ],
+  "sample_paid_a": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      [
+        1,
+        0
+      ]
+    ]
+  ],
+  "sample_paid_b": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      [
+        1,
+        0
+      ]
+    ]
+  ],
+  "sample_paid_c": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        0
+      ]
+    ]
+  ],
+  "probe_failure": {
+    "states": [
+      0,
+      1
+    ],
+    "equal_alpha_1": 0,
+    "probe_outputs": [
+      0,
+      2
+    ]
+  },
+  "suffix_substitution": {
+    "distinct_states": [
+      0,
+      1
+    ],
+    "actions": [
+      "identity",
+      "flip"
+    ],
+    "equal_residual_outcomes": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "same_action_outputs_differ": true
+  }
+}

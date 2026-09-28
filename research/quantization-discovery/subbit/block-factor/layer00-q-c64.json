@@ -1,0 +1,92 @@
+{
+  "fixture": "layer00-self_attn_q_proj.npz",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "rank": 368,
+  "admm_iterations": 400,
+  "rounds": 12,
+  "input_codes_per_block": 64,
+  "input_label_bits": 6,
+  "admm_same_rank_heldout_and_weight_error": [
+    0.09465315192937851,
+    0.48392823338508606
+  ],
+  "compressed_initial_heldout_and_weight_error": [
+    0.14151202142238617,
+    0.6170178651809692
+  ],
+  "refinement_heldout_and_weight_error": [
+    [
+      0.1387702077627182,
+      0.5657851696014404
+    ],
+    [
+      0.13212141394615173,
+      0.5475751757621765
+    ],
+    [
+      0.13012807071208954,
+      0.5414579510688782
+    ],
+    [
+      0.12904471158981323,
+      0.5386946797370911
+    ],
+    [
+      0.1291971206665039,
+      0.5370625257492065
+    ],
+    [
+      0.12902888655662537,
+      0.5359912514686584
+    ],
+    [
+      0.12857185304164886,
+      0.5352720022201538
+    ],
+    [
+      0.1282796859741211,
+      0.5347607135772705
+    ],
+    [
+      0.12806688249111176,
+      0.53437340259552
+    ],
+    [
+      0.12804476916790009,
+      0.5340790748596191
+    ],
+    [
+      0.127869114279747,
+      0.5338224172592163
+    ],
+    [
+      0.1277785450220108,
+      0.5336124300956726
+    ]
+  ],
+  "fit_heldout_response_error": 0.1277785450220108,
+  "fit_weight_error": 0.5336124300956726,
+  "seconds_cpu": 12.485021152999252,
+  "payload_bytes": {
+    "output_signs": 94208,
+    "input_labels": 35328,
+    "input_dictionaries": 8192,
+    "pre_post_scales": 6144
+  },
+  "payload_bpw": 0.548828125,
+  "online": {
+    "input_table_signed_additions_upper": 65536,
+    "input_label_lookups": 47104,
+    "output_table_additions": 11730,
+    "output_table_reads": 94208,
+    "input_table_bf16_bytes": 16384,
+    "output_table_bf16_bytes": 23552,
+    "intermediate_bf16_bytes_unfused_write_read": 1472,
+    "minimum_payload_read_bytes": 143872
+  },
+  "image": "/path/to/workspace/data/kelana-subbit/block-factor/layer00-q-c64.npz",
+  "serialized_zip_bytes": 145374
+}

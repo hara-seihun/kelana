@@ -1,0 +1,3018 @@
+{
+  "format": "kelana-random-sketch-probe/1",
+  "layer": "layer00",
+  "tokens": 8,
+  "clip": 1.0,
+  "seed": 84123,
+  "top_k": [
+    1,
+    8,
+    64
+  ],
+  "weights_sha256": "008cdf76cf98f7a0c19f6ccc573e60681fdd1fa5568a76c122a61116f57c789f",
+  "source_sha256": "c33eb04eb4f7b665c066f6db3e262e1711060704531e67114ade0ead6b4b1991",
+  "scope": "Diagnostic only. The exact gradient is computed for scoring the sketches; no code is kept and no acceptance uses it outside the labelled oracle row.",
+  "elapsed_seconds": 9.847013313905336,
+  "results": [
+    {
+      "sign_agreement": 0.8681066176470589,
+      "gradient_cosine": 0.9423959255218506,
+      "offdiag_cosine": 0.9402905702590942,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.03910408914089203,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.6447324752807617,
+          "coupled_true_energy_change": -0.039104461669921875,
+          "coupled_relative": -0.005500809948787089
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.2970314621925354,
+          "selected_positive_fraction": 0.921875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.6598867177963257,
+          "coupled_true_energy_change": -0.23396587371826172,
+          "coupled_relative": -0.032911891658030566
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 2.2041802406311035,
+          "selected_positive_fraction": 0.943359375,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.7565622925758362,
+          "coupled_true_energy_change": 1.972437858581543,
+          "coupled_relative": 0.27746209339061667
+        }
+      ],
+      "kind": "singular",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.042728450149297714,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.8480655445772058,
+      "gradient_cosine": 0.9268807172775269,
+      "offdiag_cosine": 0.9402905702590942,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.030480409041047096,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.5025486946105957,
+          "coupled_true_energy_change": -0.030480384826660156,
+          "coupled_relative": -0.004287664295512247
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.2150942087173462,
+          "selected_positive_fraction": 0.890625,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.477854460477829,
+          "coupled_true_energy_change": -0.17424726486206055,
+          "coupled_relative": -0.02451129736020418
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.708285927772522,
+          "selected_positive_fraction": 0.921875,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.5863516330718994,
+          "coupled_true_energy_change": 1.101365089416504,
+          "coupled_relative": 0.15492861383050438
+        }
+      ],
+      "kind": "singular",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.042728450149297714,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.8769387637867647,
+      "gradient_cosine": 0.9476649165153503,
+      "offdiag_cosine": 0.9457581043243408,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.05022500082850456,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.8280895948410034,
+          "coupled_true_energy_change": -0.050225257873535156,
+          "coupled_relative": -0.007065168177564921
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.3426594138145447,
+          "selected_positive_fraction": 0.96875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.7612540125846863,
+          "coupled_true_energy_change": -0.2789764404296875,
+          "coupled_relative": -0.039243511186683976
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 2.304086208343506,
+          "selected_positive_fraction": 0.955078125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.7908539772033691,
+          "coupled_true_energy_change": 1.7533340454101562,
+          "coupled_relative": 0.24664084221258556
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.08736714720726013,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.8631017348345589,
+      "gradient_cosine": 0.9336353540420532,
+      "offdiag_cosine": 0.9457581043243408,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.03541575372219086,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.5839206576347351,
+          "coupled_true_energy_change": -0.0354156494140625,
+          "coupled_relative": -0.004981906113017202
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.23726241290569305,
+          "selected_positive_fraction": 0.9375,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.5271034240722656,
+          "coupled_true_energy_change": -0.1920151710510254,
+          "coupled_relative": -0.027010702056230233
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.8666367530822754,
+          "selected_positive_fraction": 0.9453125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.6407039165496826,
+          "coupled_true_energy_change": 0.9015979766845703,
+          "coupled_relative": 0.12682744904701057
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.08736714720726013,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.8864961511948529,
+      "gradient_cosine": 0.9535068273544312,
+      "offdiag_cosine": 0.9518174529075623,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.05198574811220169,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.8571200370788574,
+          "coupled_true_energy_change": -0.051985740661621094,
+          "coupled_relative": -0.0073128146307270755
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.34149569272994995,
+          "selected_positive_fraction": 0.953125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.7586686611175537,
+          "coupled_true_energy_change": -0.2796306610107422,
+          "coupled_relative": -0.03933554015031845
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 2.4114458560943604,
+          "selected_positive_fraction": 0.970703125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.8277040719985962,
+          "coupled_true_energy_change": 1.678114891052246,
+          "coupled_relative": 0.23605979199576077
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.14061032235622406,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.8755529067095589,
+      "gradient_cosine": 0.9413140416145325,
+      "offdiag_cosine": 0.9518175721168518,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.04006893187761307,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.6606404185295105,
+          "coupled_true_energy_change": -0.040069580078125,
+          "coupled_relative": -0.005636572793099169
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.2840161919593811,
+          "selected_positive_fraction": 0.96875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.6309719085693359,
+          "coupled_true_energy_change": -0.23449039459228516,
+          "coupled_relative": -0.032985675812548
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 2.0561683177948,
+          "selected_positive_fraction": 0.974609375,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.7057586908340454,
+          "coupled_true_energy_change": 0.7617177963256836,
+          "coupled_relative": 0.10715055656729283
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.14061032235622406,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6555103975183824,
+      "gradient_cosine": 0.25511693954467773,
+      "offdiag_cosine": 0.25173822045326233,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.01146726030856371,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.18906757235527039,
+          "coupled_true_energy_change": -0.011467933654785156,
+          "coupled_relative": -0.001613189923767553
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.03996910899877548,
+          "selected_positive_fraction": 0.53125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.08879558742046356,
+          "coupled_true_energy_change": -0.03441047668457031,
+          "coupled_relative": -0.004840508842360154
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.1889457106590271,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.06485368311405182,
+          "coupled_true_energy_change": 0.37624692916870117,
+          "coupled_relative": 0.052926514335925844
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 1.0029042959213257,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.6555893841911765,
+      "gradient_cosine": 0.2550528347492218,
+      "offdiag_cosine": 0.25173822045326233,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.01146726030856371,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.18906757235527039,
+          "coupled_true_energy_change": -0.011467933654785156,
+          "coupled_relative": -0.001613189923767553
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.04480709880590439,
+          "selected_positive_fraction": 0.5625,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.09954369068145752,
+          "coupled_true_energy_change": -0.03941774368286133,
+          "coupled_relative": -0.00554487921198523
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.1854778677225113,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.06366337835788727,
+          "coupled_true_energy_change": 0.3717184066772461,
+          "coupled_relative": 0.05228948877642395
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 1.0029042959213257,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.7229793772977942,
+      "gradient_cosine": 0.47737425565719604,
+      "offdiag_cosine": 0.4725659191608429,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.020874373614788055,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.3441682457923889,
+          "coupled_true_energy_change": -0.0208740234375,
+          "coupled_relative": -0.00293634104377748
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.14745835959911346,
+          "selected_positive_fraction": 0.703125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.3275942802429199,
+          "coupled_true_energy_change": -0.12362146377563477,
+          "coupled_relative": -0.01738978491918958
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.107508897781372,
+          "selected_positive_fraction": 0.6953125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.38014107942581177,
+          "coupled_true_energy_change": 0.44332408905029297,
+          "coupled_relative": 0.062362233245127734
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 1.0049844980239868,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.7229506548713235,
+      "gradient_cosine": 0.4774084985256195,
+      "offdiag_cosine": 0.4725658893585205,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.02064020372927189,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.340307354927063,
+          "coupled_true_energy_change": -0.020639896392822266,
+          "coupled_relative": -0.0029034064802610617
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.14968189597129822,
+          "selected_positive_fraction": 0.703125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.3325341045856476,
+          "coupled_true_energy_change": -0.12635517120361328,
+          "coupled_relative": -0.01777433451723363
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.1080621480941772,
+          "selected_positive_fraction": 0.693359375,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.38033097982406616,
+          "coupled_true_energy_change": 0.43424463272094727,
+          "coupled_relative": 0.061085029530430934
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 1.0049844980239868,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.7458926930147058,
+      "gradient_cosine": 0.5603846907615662,
+      "offdiag_cosine": 0.5540117025375366,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.03917016088962555,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.6458218097686768,
+          "coupled_true_energy_change": -0.039170265197753906,
+          "coupled_relative": -0.005510066506353822
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.21577668190002441,
+          "selected_positive_fraction": 0.8125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.4793706238269806,
+          "coupled_true_energy_change": -0.17886829376220703,
+          "coupled_relative": -0.02516133576150278
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.407685399055481,
+          "selected_positive_fraction": 0.7734375,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.48317357897758484,
+          "coupled_true_energy_change": 0.5577430725097656,
+          "coupled_relative": 0.07845750871156097
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 1.0025553703308105,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.7459285960477942,
+      "gradient_cosine": 0.5603974461555481,
+      "offdiag_cosine": 0.5540117025375366,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.03623249754309654,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.5973868370056152,
+          "coupled_true_energy_change": -0.03623247146606445,
+          "coupled_relative": -0.00509680816455208
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.20784658193588257,
+          "selected_positive_fraction": 0.796875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.46175307035446167,
+          "coupled_true_energy_change": -0.17134475708007812,
+          "coupled_relative": -0.024103002679706338
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.4214370250701904,
+          "selected_positive_fraction": 0.779296875,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.4878937005996704,
+          "coupled_true_energy_change": 0.5642786026000977,
+          "coupled_relative": 0.0793768592768482
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 1.0025553703308105,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6815472771139706,
+      "gradient_cosine": 0.32341939210891724,
+      "offdiag_cosine": 0.32134318351745605,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.017940808087587357,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.2958008050918579,
+          "coupled_true_energy_change": -0.017940998077392578,
+          "coupled_relative": -0.002523753467016806
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.1231296956539154,
+          "selected_positive_fraction": 0.71875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.27354559302330017,
+          "coupled_true_energy_change": -0.09644222259521484,
+          "coupled_relative": -0.013566491261608428
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.5119506120681763,
+          "selected_positive_fraction": 0.607421875,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.17572180926799774,
+          "coupled_true_energy_change": 0.49560070037841797,
+          "coupled_relative": 0.06971596454335993
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 1.0010550022125244,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.6815257352941176,
+      "gradient_cosine": 0.32346251606941223,
+      "offdiag_cosine": 0.32134318351745605,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.024057572707533836,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.39665156602859497,
+          "coupled_true_energy_change": -0.024057388305664062,
+          "coupled_relative": -0.003384143785194203
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.12918776273727417,
+          "selected_positive_fraction": 0.71875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.2870042324066162,
+          "coupled_true_energy_change": -0.10283756256103516,
+          "coupled_relative": -0.014466121334688279
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.530224621295929,
+          "selected_positive_fraction": 0.607421875,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.18199416995048523,
+          "coupled_true_energy_change": 0.476412296295166,
+          "coupled_relative": 0.06701673894159985
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 1.0010550022125244,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.7193675321691176,
+      "gradient_cosine": 0.46621784567832947,
+      "offdiag_cosine": 0.4609925448894501,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.031027939170598984,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.5115761756896973,
+          "coupled_true_energy_change": -0.031028270721435547,
+          "coupled_relative": -0.004364735198730913
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.18608318269252777,
+          "selected_positive_fraction": 0.6875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.41340339183807373,
+          "coupled_true_energy_change": -0.14847421646118164,
+          "coupled_relative": -0.02088581231323386
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.110714316368103,
+          "selected_positive_fraction": 0.703125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.3812413215637207,
+          "coupled_true_energy_change": 0.7281332015991211,
+          "coupled_relative": 0.10242622423004558
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.9996251463890076,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.7193962545955882,
+      "gradient_cosine": 0.46624231338500977,
+      "offdiag_cosine": 0.4609925448894501,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.031027939170598984,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.5115761756896973,
+          "coupled_true_energy_change": -0.031028270721435547,
+          "coupled_relative": -0.004364735198730913
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.19225476682186127,
+          "selected_positive_fraction": 0.703125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.42711421847343445,
+          "coupled_true_energy_change": -0.15488576889038086,
+          "coupled_relative": -0.02178772298745334
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.0785846710205078,
+          "selected_positive_fraction": 0.701171875,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.3702131509780884,
+          "coupled_true_energy_change": 0.6905088424682617,
+          "coupled_relative": 0.09713361975000587
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.9996251463890076,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.738037109375,
+      "gradient_cosine": 0.5471558570861816,
+      "offdiag_cosine": 0.5398535132408142,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.037031397223472595,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.6105587482452393,
+          "coupled_true_energy_change": -0.03703117370605469,
+          "coupled_relative": -0.005209161308930901
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.2579209804534912,
+          "selected_positive_fraction": 0.859375,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.5729986429214478,
+          "coupled_true_energy_change": -0.2147684097290039,
+          "coupled_relative": -0.030211391602692452
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.4352408647537231,
+          "selected_positive_fraction": 0.7578125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.492631733417511,
+          "coupled_true_energy_change": 0.444976806640625,
+          "coupled_relative": 0.06259472040836175
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.9998430609703064,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.7378791360294118,
+      "gradient_cosine": 0.5471994876861572,
+      "offdiag_cosine": 0.5398535132408142,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.038212649524211884,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.6300347447395325,
+          "coupled_true_energy_change": -0.03821277618408203,
+          "coupled_relative": -0.00537537688610745
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.26070716977119446,
+          "selected_positive_fraction": 0.859375,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.5791884660720825,
+          "coupled_true_energy_change": -0.21877288818359375,
+          "coupled_relative": -0.03077470008418101
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.4493962526321411,
+          "selected_positive_fraction": 0.75390625,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.49749040603637695,
+          "coupled_true_energy_change": 0.46721553802490234,
+          "coupled_relative": 0.06572303440689278
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.9998430609703064,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6533633961397058,
+      "gradient_cosine": 0.17808735370635986,
+      "offdiag_cosine": 0.17518840730190277,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0046128081157803535,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.07605411857366562,
+          "coupled_true_energy_change": -0.004612922668457031,
+          "coupled_relative": -0.0006488981007287862
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.03189384937286377,
+          "selected_positive_fraction": 0.515625,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.07085554301738739,
+          "coupled_true_energy_change": -0.01914358139038086,
+          "coupled_relative": -0.002692920410374052
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.07249519973993301,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.02488323487341404,
+          "coupled_true_energy_change": 0.33791637420654297,
+          "coupled_relative": 0.04753456955330402
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.9931909441947937,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.6532269646139706,
+      "gradient_cosine": 0.1780475229024887,
+      "offdiag_cosine": 0.17518839240074158,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.004674292169511318,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.07706784456968307,
+          "coupled_true_energy_change": -0.004674434661865234,
+          "coupled_relative": -0.0006575509697585581
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.036954447627067566,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.08209820091724396,
+          "coupled_true_energy_change": -0.025930404663085938,
+          "coupled_relative": -0.0036476202933255525
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.07248201966285706,
+          "selected_positive_fraction": 0.5078125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.024878710508346558,
+          "coupled_true_energy_change": 0.3236970901489258,
+          "coupled_relative": 0.04553434820084047
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.9931909441947937,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.6936322380514706,
+      "gradient_cosine": 0.3591059148311615,
+      "offdiag_cosine": 0.35461047291755676,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.029524635523557663,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.4867902994155884,
+          "coupled_true_energy_change": -0.029524803161621094,
+          "coupled_relative": -0.004153242981282302
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.1503358781337738,
+          "selected_positive_fraction": 0.71875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.3339869976043701,
+          "coupled_true_energy_change": -0.12875938415527344,
+          "coupled_relative": -0.01811253425093991
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.8142654895782471,
+          "selected_positive_fraction": 0.65234375,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.27948829531669617,
+          "coupled_true_energy_change": 0.4048128128051758,
+          "coupled_relative": 0.05694486646744945
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.9950024485588074,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.6937255859375,
+      "gradient_cosine": 0.3590766191482544,
+      "offdiag_cosine": 0.35461047291755676,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.029524635523557663,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.4867902994155884,
+          "coupled_true_energy_change": -0.029524803161621094,
+          "coupled_relative": -0.004153242981282302
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.14929263293743134,
+          "selected_positive_fraction": 0.71875,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.33166930079460144,
+          "coupled_true_energy_change": -0.12743663787841797,
+          "coupled_relative": -0.01792646402854776
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.8322950601577759,
+          "selected_positive_fraction": 0.654296875,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.2856767475605011,
+          "coupled_true_energy_change": 0.40987300872802734,
+          "coupled_relative": 0.05765668232903037
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.9950024485588074,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.7243077895220589,
+      "gradient_cosine": 0.4702344834804535,
+      "offdiag_cosine": 0.4638948142528534,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.039878565818071365,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.6575016975402832,
+          "coupled_true_energy_change": -0.03987884521484375,
+          "coupled_relative": -0.005609742191456465
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.195417582988739,
+          "selected_positive_fraction": 0.78125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.43414074182510376,
+          "coupled_true_energy_change": -0.16424560546875,
+          "coupled_relative": -0.023104367686564913
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.2157368659973145,
+          "selected_positive_fraction": 0.708984375,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.41728922724723816,
+          "coupled_true_energy_change": 0.49596261978149414,
+          "coupled_relative": 0.06976687560997696
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 0.9951657056808472,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.7245016659007353,
+      "gradient_cosine": 0.47018107771873474,
+      "offdiag_cosine": 0.4638948142528534,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.039878565818071365,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 0.6575016975402832,
+          "coupled_true_energy_change": -0.03987884521484375,
+          "coupled_relative": -0.005609742191456465
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.1963898241519928,
+          "selected_positive_fraction": 0.78125,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 0.43630069494247437,
+          "coupled_true_energy_change": -0.16254091262817383,
+          "coupled_relative": -0.02286456918438325
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 1.217807412147522,
+          "selected_positive_fraction": 0.70703125,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 0.41799992322921753,
+          "coupled_true_energy_change": 0.49316930770874023,
+          "coupled_relative": 0.06937394144891956
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 1,
+      "captured_frobenius": 0.9951657056808472,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 1.0,
+      "gradient_cosine": 1.0000003576278687,
+      "offdiag_cosine": 1.0,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.06065165251493454,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.06065165251493454,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": -0.06065177917480469,
+          "coupled_relative": -0.008531863016363312
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.45012494921684265,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.45012494921684265,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": -0.3923783302307129,
+          "coupled_relative": -0.055195712469857494
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 2.9134154319763184,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 2.9134154319763184,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": 0.786494255065918,
+          "coupled_relative": 0.11063585172068002
+        }
+      ],
+      "kind": "oracle-full-W",
+      "rank": 5120,
+      "diagonal": "exact",
+      "levels": 1,
+      "captured_frobenius": 1.0,
+      "sketch_MAC_fraction_per_product": 1.0
+    },
+    {
+      "sign_agreement": 0.8112290326286765,
+      "gradient_cosine": 0.7828193306922913,
+      "offdiag_cosine": 0.7525793313980103,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.001694648526608944,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.38043415546417236,
+          "coupled_true_energy_change": -0.0016946792602539062,
+          "coupled_relative": -0.0023726720783929785
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.014308087527751923,
+          "selected_positive_fraction": 0.890625,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.4943660497665405,
+          "coupled_true_energy_change": -0.008679032325744629,
+          "coupled_relative": -0.012151265522467699
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.0866774395108223,
+          "selected_positive_fraction": 0.908203125,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": 0.5254580974578857,
+          "coupled_true_energy_change": 0.21429866552352905,
+          "coupled_relative": 0.3000334470655958
+        }
+      ],
+      "kind": "singular",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.042728450149297714,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.7728558708639706,
+      "gradient_cosine": 0.71623295545578,
+      "offdiag_cosine": 0.7525793313980103,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0005862217512913048,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.13160178065299988,
+          "coupled_true_energy_change": -0.0005862712860107422,
+          "coupled_relative": -0.0008208216996016227
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.005368315614759922,
+          "selected_positive_fraction": 0.828125,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.1854834109544754,
+          "coupled_true_energy_change": -0.00394439697265625,
+          "coupled_relative": -0.00552243765685614
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.03948930650949478,
+          "selected_positive_fraction": 0.841796875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": 0.23939305543899536,
+          "coupled_true_energy_change": 0.04616427421569824,
+          "coupled_relative": 0.06463328313491802
+        }
+      ],
+      "kind": "singular",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.042728450149297714,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.8221076516544118,
+      "gradient_cosine": 0.8056954741477966,
+      "offdiag_cosine": 0.7791469693183899,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.003391687059774995,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.761404812335968,
+          "coupled_true_energy_change": -0.0033916831016540527,
+          "coupled_relative": -0.004748598736522076
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.014803282916545868,
+          "selected_positive_fraction": 0.921875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.5114758014678955,
+          "coupled_true_energy_change": -0.010196685791015625,
+          "coupled_relative": -0.01427608883634087
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.09243784844875336,
+          "selected_positive_fraction": 0.912109375,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": 0.5603790283203125,
+          "coupled_true_energy_change": 0.20937186479568481,
+          "coupled_relative": 0.29313557394179846
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.08736714720726013,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.7924732881433824,
+      "gradient_cosine": 0.7478063106536865,
+      "offdiag_cosine": 0.7791470289230347,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.001503458945080638,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.3375137150287628,
+          "coupled_true_energy_change": -0.0015034675598144531,
+          "coupled_relative": -0.0021049620324066014
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.008395885117352009,
+          "selected_positive_fraction": 0.953125,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.29009050130844116,
+          "coupled_true_energy_change": -0.006902456283569336,
+          "coupled_relative": -0.009663932096448386
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.05481332167983055,
+          "selected_positive_fraction": 0.921875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": 0.3322906792163849,
+          "coupled_true_energy_change": 0.033324599266052246,
+          "coupled_relative": 0.04665682058937268
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.08736714720726013,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.8350758272058824,
+      "gradient_cosine": 0.8283160328865051,
+      "offdiag_cosine": 0.8052783608436584,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0036413553170859814,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.8174532055854797,
+          "coupled_true_energy_change": -0.003641366958618164,
+          "coupled_relative": -0.005098173980486207
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.017868323251605034,
+          "selected_positive_fraction": 0.96875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.6173775792121887,
+          "coupled_true_energy_change": -0.013611912727355957,
+          "coupled_relative": -0.019057650624036457
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.1074865311384201,
+          "selected_positive_fraction": 0.958984375,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": 0.6516075134277344,
+          "coupled_true_energy_change": 0.17927753925323486,
+          "coupled_relative": 0.25100136742419377
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.14061032235622406,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.8103242761948529,
+      "gradient_cosine": 0.7786784172058105,
+      "offdiag_cosine": 0.8052783608436584,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0016159956576302648,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.3627772331237793,
+          "coupled_true_energy_change": -0.0016160011291503906,
+          "coupled_relative": -0.002262517071939731
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.010188285261392593,
+          "selected_positive_fraction": 0.96875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.35202065110206604,
+          "coupled_true_energy_change": -0.008701086044311523,
+          "coupled_relative": -0.012182142304579594
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.0659564733505249,
+          "selected_positive_fraction": 0.94140625,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": 0.3998429775238037,
+          "coupled_true_energy_change": 0.02591681480407715,
+          "coupled_relative": 0.03628539292874957
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.14061032235622406,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.5549890854779411,
+      "gradient_cosine": 0.10306117683649063,
+      "offdiag_cosine": 0.0946950688958168,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.002640190999954939,
+          "selected_positive_fraction": 0.25,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.5927003622055054,
+          "coupled_true_energy_change": 0.0026401281356811523,
+          "coupled_relative": 0.003696368072606169
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.014316987246274948,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.49467355012893677,
+          "coupled_true_energy_change": 0.014978408813476562,
+          "coupled_relative": 0.02097084280429945
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.11718675494194031,
+          "selected_positive_fraction": 0.3359375,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.7104124426841736,
+          "coupled_true_energy_change": 0.14068257808685303,
+          "coupled_relative": 0.19696566351617784
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 1.0029042959213257,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5549029181985294,
+      "gradient_cosine": 0.10314968973398209,
+      "offdiag_cosine": 0.0946950688958168,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.0026631499640643597,
+          "selected_positive_fraction": 0.25,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.5978544354438782,
+          "coupled_true_energy_change": 0.002663135528564453,
+          "coupled_relative": 0.0037285800669174976
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.014112274162471294,
+          "selected_positive_fraction": 0.40625,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.4876003861427307,
+          "coupled_true_energy_change": 0.014929413795471191,
+          "coupled_relative": 0.020902246277553563
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.11519747972488403,
+          "selected_positive_fraction": 0.337890625,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.6983529925346375,
+          "coupled_true_energy_change": 0.1402435302734375,
+          "coupled_relative": 0.19635096519986375
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 1.0029042959213257,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5920912798713235,
+      "gradient_cosine": 0.24674372375011444,
+      "offdiag_cosine": 0.23285263776779175,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.0018262057565152645,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.4099676311016083,
+          "coupled_true_energy_change": 0.001826167106628418,
+          "coupled_relative": 0.002556764460389845
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.007190333213657141,
+          "selected_positive_fraction": 0.578125,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.24843688309192657,
+          "coupled_true_energy_change": 0.008474588394165039,
+          "coupled_relative": 0.011865029407214185
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.05558543652296066,
+          "selected_positive_fraction": 0.4453125,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.3369714021682739,
+          "coupled_true_energy_change": 0.1377660036087036,
+          "coupled_relative": 0.19288225080726096
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 1.0049844980239868,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.592041015625,
+      "gradient_cosine": 0.24685931205749512,
+      "offdiag_cosine": 0.23285262286663055,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.0014407705748453736,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.32344070076942444,
+          "coupled_true_energy_change": 0.0014407634735107422,
+          "coupled_relative": 0.0020171718302938618
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.007653810083866119,
+          "selected_positive_fraction": 0.546875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.26445069909095764,
+          "coupled_true_energy_change": 0.009062051773071289,
+          "coupled_relative": 0.0126875201220651
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.055563099682331085,
+          "selected_positive_fraction": 0.451171875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.3368360102176666,
+          "coupled_true_energy_change": 0.13981503248214722,
+          "coupled_relative": 0.19575103766850588
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 1.0049844980239868,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.6258975758272058,
+      "gradient_cosine": 0.33988523483276367,
+      "offdiag_cosine": 0.3224816918373108,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.00013785605551674962,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.030947508290410042,
+          "coupled_true_energy_change": 0.00013786554336547852,
+          "coupled_relative": 0.0001930216135805768
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.003477233462035656,
+          "selected_positive_fraction": 0.6875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.12014366686344147,
+          "coupled_true_energy_change": -0.0010512471199035645,
+          "coupled_relative": -0.0014718210975878223
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.020679783076047897,
+          "selected_positive_fraction": 0.57421875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.1253654956817627,
+          "coupled_true_energy_change": 0.14387249946594238,
+          "coupled_relative": 0.20143178142175733
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 1.0025553703308105,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6257611443014706,
+      "gradient_cosine": 0.3399563729763031,
+      "offdiag_cosine": 0.3224816918373108,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0008748651016503572,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.1963997632265091,
+          "coupled_true_energy_change": -0.0008748769760131836,
+          "coupled_relative": -0.0012248902914551258
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0028559917118400335,
+          "selected_positive_fraction": 0.6875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.0986788272857666,
+          "coupled_true_energy_change": -0.00028073787689208984,
+          "coupled_relative": -0.00039305309120817847
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.01779712364077568,
+          "selected_positive_fraction": 0.578125,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.10789016634225845,
+          "coupled_true_energy_change": 0.13616085052490234,
+          "coupled_relative": 0.19063492177408978
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 1.0025553703308105,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.5667078354779411,
+      "gradient_cosine": 0.16477957367897034,
+      "offdiag_cosine": 0.16031159460544586,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.002463381038978696,
+          "selected_positive_fraction": 0.25,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.5530080199241638,
+          "coupled_true_energy_change": 0.0024633407592773438,
+          "coupled_relative": 0.0034488531111362204
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.017677320167422295,
+          "selected_positive_fraction": 0.265625,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.6107780933380127,
+          "coupled_true_energy_change": 0.019046306610107422,
+          "coupled_relative": 0.0266661904409822
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.11146721243858337,
+          "selected_positive_fraction": 0.30078125,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.6757392883300781,
+          "coupled_true_energy_change": 0.17549890279769897,
+          "coupled_relative": 0.24571100633775161
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 1.0010550022125244,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.56640625,
+      "gradient_cosine": 0.16480742394924164,
+      "offdiag_cosine": 0.16031159460544586,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.0016777392011135817,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.37663814425468445,
+          "coupled_true_energy_change": 0.00167769193649292,
+          "coupled_relative": 0.002348888611090573
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.015679437667131424,
+          "selected_positive_fraction": 0.265625,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.5417482852935791,
+          "coupled_true_energy_change": 0.01699542999267578,
+          "coupled_relative": 0.023794816606100885
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.11127786338329315,
+          "selected_positive_fraction": 0.3046875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.6745914220809937,
+          "coupled_true_energy_change": 0.17415833473205566,
+          "coupled_relative": 0.2438341152391607
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 1.0010550022125244,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.6134894875919118,
+      "gradient_cosine": 0.28079935908317566,
+      "offdiag_cosine": 0.2693238854408264,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0004800442256964743,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.10776583850383759,
+          "coupled_true_energy_change": -0.0004800558090209961,
+          "coupled_relative": -0.0006721124408897387
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.00622218381613493,
+          "selected_positive_fraction": 0.546875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.21498584747314453,
+          "coupled_true_energy_change": 0.008416056632995605,
+          "coupled_relative": 0.011783080758473966
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.05329456180334091,
+          "selected_positive_fraction": 0.51171875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.3230836093425751,
+          "coupled_true_energy_change": 0.14878922700881958,
+          "coupled_relative": 0.20831555136669816
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.9996251463890076,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.6133386948529411,
+      "gradient_cosine": 0.28083038330078125,
+      "offdiag_cosine": 0.2693238854408264,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0004800442256964743,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.10776583850383759,
+          "coupled_true_energy_change": -0.0004800558090209961,
+          "coupled_relative": -0.0006721124408897387
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.005601409822702408,
+          "selected_positive_fraction": 0.53125,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.193537175655365,
+          "coupled_true_energy_change": 0.007625699043273926,
+          "coupled_relative": 0.010676523648193617
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.052803318947553635,
+          "selected_positive_fraction": 0.51171875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.32010558247566223,
+          "coupled_true_energy_change": 0.14976072311401367,
+          "coupled_relative": 0.2096757153441084
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.9996251463890076,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.6567526424632353,
+      "gradient_cosine": 0.3962874114513397,
+      "offdiag_cosine": 0.38312000036239624,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.0001832627458497882,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.041140925139188766,
+          "coupled_true_energy_change": 0.00018328428268432617,
+          "coupled_relative": 0.0002566110945785878
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.000408957595936954,
+          "selected_positive_fraction": 0.65625,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.014130102470517159,
+          "coupled_true_energy_change": 0.001780390739440918,
+          "coupled_relative": 0.0024926742748170466
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.01843276061117649,
+          "selected_positive_fraction": 0.5859375,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.11174353957176208,
+          "coupled_true_energy_change": 0.14494764804840088,
+          "coupled_relative": 0.20293706627509345
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.9998430609703064,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6569752412683824,
+      "gradient_cosine": 0.3963058888912201,
+      "offdiag_cosine": 0.383120059967041,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.0001832627458497882,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.041140925139188766,
+          "coupled_true_energy_change": 0.00018328428268432617,
+          "coupled_relative": 0.0002566110945785878
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0015308002475649118,
+          "selected_positive_fraction": 0.671875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 0.05289146304130554,
+          "coupled_true_energy_change": 0.0007434487342834473,
+          "coupled_relative": 0.001040881360220724
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.016342950984835625,
+          "selected_positive_fraction": 0.58984375,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.09907463937997818,
+          "coupled_true_energy_change": 0.14750933647155762,
+          "coupled_relative": 0.2065236131442962
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.9998430609703064,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.5499052159926471,
+      "gradient_cosine": 0.09343723952770233,
+      "offdiag_cosine": 0.08709985017776489,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -9.70571709331125e-05,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.02178850769996643,
+          "coupled_true_energy_change": 9.703636169433594e-05,
+          "coupled_relative": 0.00013585784129233853
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.015611828304827213,
+          "selected_positive_fraction": 0.3125,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.539412260055542,
+          "coupled_true_energy_change": 0.01645559072494507,
+          "coupled_relative": 0.02303900305045917
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.12052847445011139,
+          "selected_positive_fraction": 0.26953125,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.730670690536499,
+          "coupled_true_energy_change": 0.13405674695968628,
+          "coupled_relative": 0.18768902640832758
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.9931909441947937,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5497831456801471,
+      "gradient_cosine": 0.0933401882648468,
+      "offdiag_cosine": 0.08709985017776489,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -9.70571709331125e-05,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": -0.02178850769996643,
+          "coupled_true_energy_change": 9.703636169433594e-05,
+          "coupled_relative": 0.00013585784129233853
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.014326713047921658,
+          "selected_positive_fraction": 0.359375,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.49500957131385803,
+          "coupled_true_energy_change": 0.014860928058624268,
+          "coupled_relative": 0.02080636135148176
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.11944393813610077,
+          "selected_positive_fraction": 0.275390625,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.7240960001945496,
+          "coupled_true_energy_change": 0.13253682851791382,
+          "coupled_relative": 0.18556103196548077
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.9931909441947937,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5819953469669118,
+      "gradient_cosine": 0.19169564545154572,
+      "offdiag_cosine": 0.18155421316623688,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0002704592770896852,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.060715802013874054,
+          "coupled_true_energy_change": -0.00027048587799072266,
+          "coupled_relative": -0.00037869956006427043
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.008510718122124672,
+          "selected_positive_fraction": 0.453125,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.2940581738948822,
+          "coupled_true_energy_change": 0.00980985164642334,
+          "coupled_relative": 0.013734493387945738
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.07799533009529114,
+          "selected_positive_fraction": 0.412109375,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.47282522916793823,
+          "coupled_true_energy_change": 0.12464189529418945,
+          "coupled_relative": 0.17450756122323463
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.9950024485588074,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.5819881663602942,
+      "gradient_cosine": 0.19159144163131714,
+      "offdiag_cosine": 0.18155419826507568,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0002704592770896852,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.060715802013874054,
+          "coupled_true_energy_change": -0.00027048587799072266,
+          "coupled_relative": -0.00037869956006427043
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.00647872406989336,
+          "selected_positive_fraction": 0.46875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.22384969890117645,
+          "coupled_true_energy_change": 0.008522510528564453,
+          "coupled_relative": 0.011932123820235709
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.07913602143526077,
+          "selected_positive_fraction": 0.41796875,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.47974035143852234,
+          "coupled_true_energy_change": 0.12656772136688232,
+          "coupled_relative": 0.17720385535846525
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.9950024485588074,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.6111701516544118,
+      "gradient_cosine": 0.2767416834831238,
+      "offdiag_cosine": 0.26245301961898804,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 7.621993427164853e-05,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.017110725864768028,
+          "coupled_true_energy_change": -7.62939453125e-05,
+          "coupled_relative": -0.0001068169759546642
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.004639546386897564,
+          "selected_positive_fraction": 0.546875,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.16030333936214447,
+          "coupled_true_energy_change": 0.0062659382820129395,
+          "coupled_relative": 0.00877276140408912
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.034580715000629425,
+          "selected_positive_fraction": 0.515625,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.20963606238365173,
+          "coupled_true_energy_change": 0.1157723069190979,
+          "coupled_relative": 0.16208950361316765
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 0.9951657056808472,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6110337201286765,
+      "gradient_cosine": 0.2766055464744568,
+      "offdiag_cosine": 0.26245301961898804,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 7.621993427164853e-05,
+          "selected_positive_fraction": 0.75,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 0.017110725864768028,
+          "coupled_true_energy_change": -7.62939453125e-05,
+          "coupled_relative": -0.0001068169759546642
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.0033192543778568506,
+          "selected_positive_fraction": 0.5625,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": -0.11468525230884552,
+          "coupled_true_energy_change": 0.0049588680267333984,
+          "coupled_relative": 0.006942769634003315
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.033539481461048126,
+          "selected_positive_fraction": 0.517578125,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": -0.2033238708972931,
+          "coupled_true_energy_change": 0.115719735622406,
+          "coupled_relative": 0.1620159000406739
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 3,
+      "captured_frobenius": 0.9951657056808472,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 1.0,
+      "gradient_cosine": 1.0000003576278687,
+      "offdiag_cosine": 1.0,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.004454512149095535,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.004454512149095535,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": -0.004454493522644043,
+          "coupled_relative": -0.006236609282028027
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.028942294418811798,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.028942294418811798,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": -0.023923277854919434,
+          "coupled_relative": -0.033494298727359186
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.16495594382286072,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.16495594382286072,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": 0.07307982444763184,
+          "coupled_relative": 0.10231697703952412
+        }
+      ],
+      "kind": "oracle-full-W",
+      "rank": 5120,
+      "diagonal": "exact",
+      "levels": 3,
+      "captured_frobenius": 1.0,
+      "sketch_MAC_fraction_per_product": 1.0
+    },
+    {
+      "sign_agreement": 0.7647848690257353,
+      "gradient_cosine": 0.8211020231246948,
+      "offdiag_cosine": 0.8009881377220154,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0004429689433891326,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.4557487368583679,
+          "coupled_true_energy_change": -0.00044295191764831543,
+          "coupled_relative": -0.0033973961448936995
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.003092380240559578,
+          "selected_positive_fraction": 0.84375,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.49681559205055237,
+          "coupled_true_energy_change": -0.0018418282270431519,
+          "coupled_relative": -0.01412663512404279
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.020412184298038483,
+          "selected_positive_fraction": 0.849609375,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.5861700773239136,
+          "coupled_true_energy_change": 0.054600656032562256,
+          "coupled_relative": 0.4187814770021448
+        }
+      ],
+      "kind": "singular",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.042728450149297714,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.7159926470588235,
+      "gradient_cosine": 0.7673251032829285,
+      "offdiag_cosine": 0.8009880781173706,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.00017225596820935607,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.17722560465335846,
+          "coupled_true_energy_change": -0.0001722574234008789,
+          "coupled_relative": -0.0013211969129708393
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0009469722863286734,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.15213866531848907,
+          "coupled_true_energy_change": -0.0005965232849121094,
+          "coupled_relative": -0.004575272908308706
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.008723583072423935,
+          "selected_positive_fraction": 0.779296875,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.25051233172416687,
+          "coupled_true_energy_change": 0.013165503740310669,
+          "coupled_relative": 0.10097807430292577
+        }
+      ],
+      "kind": "singular",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.042728450149297714,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.7789163028492647,
+      "gradient_cosine": 0.838677704334259,
+      "offdiag_cosine": 0.8207820653915405,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0005491473712027073,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.5649904608726501,
+          "coupled_true_energy_change": -0.0005491524934768677,
+          "coupled_relative": -0.004211943757241725
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0037779826670885086,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.6069630980491638,
+          "coupled_true_energy_change": -0.0026024580001831055,
+          "coupled_relative": -0.01996058810177605
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.022898642346262932,
+          "selected_positive_fraction": 0.904296875,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.6575729250907898,
+          "coupled_true_energy_change": 0.048916757106781006,
+          "coupled_relative": 0.3751865504897229
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.08736714720726013,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.7393439797794118,
+      "gradient_cosine": 0.791266679763794,
+      "offdiag_cosine": 0.8207820653915405,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0002515517408028245,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.25880908966064453,
+          "coupled_true_energy_change": -0.0002515465021133423,
+          "coupled_relative": -0.0019293360802647697
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.001619237009435892,
+          "selected_positive_fraction": 0.921875,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.26014336943626404,
+          "coupled_true_energy_change": -0.0012396126985549927,
+          "coupled_relative": -0.009507703286603041
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.011344300583004951,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.32577061653137207,
+          "coupled_true_energy_change": 0.011672437191009521,
+          "coupled_relative": 0.08952640576608735
+        }
+      ],
+      "kind": "singular",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.08736714720726013,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.7946202895220589,
+      "gradient_cosine": 0.8579893708229065,
+      "offdiag_cosine": 0.84245365858078,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0005367749254219234,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.5522610545158386,
+          "coupled_true_energy_change": -0.0005367696285247803,
+          "coupled_relative": -0.004116968442823147
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.004396460019052029,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.706326425075531,
+          "coupled_true_energy_change": -0.003206983208656311,
+          "coupled_relative": -0.024597234949727088
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.0244473647326231,
+          "selected_positive_fraction": 0.939453125,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.7020470499992371,
+          "coupled_true_energy_change": 0.04482051730155945,
+          "coupled_relative": 0.34376880791236947
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.14061032235622406,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.7619557100183824,
+      "gradient_cosine": 0.8175818920135498,
+      "offdiag_cosine": 0.84245365858078,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.00023284366761799902,
+          "selected_positive_fraction": 0.875,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.2395612746477127,
+          "coupled_true_energy_change": -0.00023284554481506348,
+          "coupled_relative": -0.0017859016403185411
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0022096182219684124,
+          "selected_positive_fraction": 0.90625,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.3549928069114685,
+          "coupled_true_energy_change": -0.0016353428363800049,
+          "coupled_relative": -0.012542913184333713
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.015077617019414902,
+          "selected_positive_fraction": 0.916015625,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.4329790472984314,
+          "coupled_true_energy_change": 0.011330977082252502,
+          "coupled_relative": 0.08690744147017672
+        }
+      ],
+      "kind": "singular",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.14061032235622406,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.5547521254595589,
+      "gradient_cosine": 0.22963488101959229,
+      "offdiag_cosine": 0.227747842669487,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -6.804053555242717e-05,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.07000352442264557,
+          "coupled_true_energy_change": 6.80387020111084e-05,
+          "coupled_relative": 0.0005218499225454024
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.0015518262516707182,
+          "selected_positive_fraction": 0.359375,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.24931327998638153,
+          "coupled_true_energy_change": 0.0019425749778747559,
+          "coupled_relative": 0.014899352453506098
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.01613699458539486,
+          "selected_positive_fraction": 0.2734375,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.46340087056159973,
+          "coupled_true_energy_change": 0.032357826828956604,
+          "coupled_relative": 0.24818123987244278
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 1.0029042959213257,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5545295266544118,
+      "gradient_cosine": 0.22970050573349,
+      "offdiag_cosine": 0.2277478128671646,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.00015598638856317848,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.16048663854599,
+          "coupled_true_energy_change": 0.00015598535537719727,
+          "coupled_relative": 0.001196391806659061
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.001038121641613543,
+          "selected_positive_fraction": 0.359375,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.16678252816200256,
+          "coupled_true_energy_change": 0.0013440251350402832,
+          "coupled_relative": 0.010308536052103617
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.015747424215078354,
+          "selected_positive_fraction": 0.283203125,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.45221370458602905,
+          "coupled_true_energy_change": 0.031937941908836365,
+          "coupled_relative": 0.24496076525188115
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 1.0029042959213257,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5996237362132353,
+      "gradient_cosine": 0.39449450373649597,
+      "offdiag_cosine": 0.3896697163581848,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0002686133375391364,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.27636292576789856,
+          "coupled_true_energy_change": -0.00026860833168029785,
+          "coupled_relative": -0.0020601985772675043
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -9.203769150190055e-05,
+          "selected_positive_fraction": 0.484375,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.01478658989071846,
+          "coupled_true_energy_change": 0.0007267594337463379,
+          "coupled_relative": 0.005574170920364514
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.005562202073633671,
+          "selected_positive_fraction": 0.41015625,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.15972796082496643,
+          "coupled_true_energy_change": 0.03664030134677887,
+          "coupled_relative": 0.28102738374895797
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 1.0049844980239868,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.5997099034926471,
+      "gradient_cosine": 0.39461222290992737,
+      "offdiag_cosine": 0.3896697163581848,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0002686133375391364,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.27636292576789856,
+          "coupled_true_energy_change": -0.00026860833168029785,
+          "coupled_relative": -0.0020601985772675043
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.00016721886640880257,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.026865046471357346,
+          "coupled_true_energy_change": 0.0005120337009429932,
+          "coupled_relative": 0.003927246394766781
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.005414066836237907,
+          "selected_positive_fraction": 0.40625,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.1554740071296692,
+          "coupled_true_energy_change": 0.03689908981323242,
+          "coupled_relative": 0.2830122649589549
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 1.0049844980239868,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.6197653377757353,
+      "gradient_cosine": 0.44090133905410767,
+      "offdiag_cosine": 0.43033885955810547,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.00041174524812959135,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.4236242175102234,
+          "coupled_true_energy_change": -0.00041174888610839844,
+          "coupled_relative": -0.0031580720674057295
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0014200948644429445,
+          "selected_positive_fraction": 0.5625,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.22814957797527313,
+          "coupled_true_energy_change": -0.0007188916206359863,
+          "coupled_relative": -0.005513825594235741
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.000462190480902791,
+          "selected_positive_fraction": 0.4609375,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.013272575102746487,
+          "coupled_true_energy_change": 0.03354912996292114,
+          "coupled_relative": 0.25731841371338393
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 1.0025553703308105,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6202320772058824,
+      "gradient_cosine": 0.4409758448600769,
+      "offdiag_cosine": 0.43033885955810547,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.00041174524812959135,
+          "selected_positive_fraction": 0.625,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.4236242175102234,
+          "coupled_true_energy_change": -0.00041174888610839844,
+          "coupled_relative": -0.0031580720674057295
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0014107038732618093,
+          "selected_positive_fraction": 0.5625,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.22664085030555725,
+          "coupled_true_energy_change": -0.0007028877735137939,
+          "coupled_relative": -0.00539107771495108
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.0006408325862139463,
+          "selected_positive_fraction": 0.46484375,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 0.01840258203446865,
+          "coupled_true_energy_change": 0.03498736023902893,
+          "coupled_relative": 0.2683494936135673
+        }
+      ],
+      "kind": "gaussian",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 1.0025553703308105,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.5357881433823529,
+      "gradient_cosine": 0.10314573347568512,
+      "offdiag_cosine": 0.09596230089664459,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.00022236786026041955,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.2287832498550415,
+          "coupled_true_energy_change": 0.00022237002849578857,
+          "coupled_relative": 0.0017055554958705739
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.0033512497320771217,
+          "selected_positive_fraction": 0.296875,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.5384050607681274,
+          "coupled_true_energy_change": 0.0036572515964508057,
+          "coupled_relative": 0.028050747676304926
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.0223606675863266,
+          "selected_positive_fraction": 0.287109375,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.6421240568161011,
+          "coupled_true_energy_change": 0.027980297803878784,
+          "coupled_relative": 0.21460603759559535
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 1.0010550022125244,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5358743106617647,
+      "gradient_cosine": 0.10324415564537048,
+      "offdiag_cosine": 0.09596230089664459,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.00022236786026041955,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.2287832498550415,
+          "coupled_true_energy_change": 0.00022237002849578857,
+          "coupled_relative": 0.0017055554958705739
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.002787708304822445,
+          "selected_positive_fraction": 0.3125,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.44786760210990906,
+          "coupled_true_energy_change": 0.0030031204223632812,
+          "coupled_relative": 0.0230336281187276
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.022222327068448067,
+          "selected_positive_fraction": 0.291015625,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.6381514072418213,
+          "coupled_true_energy_change": 0.027822524309158325,
+          "coupled_relative": 0.21339593094208884
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 1.0010550022125244,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5888528262867647,
+      "gradient_cosine": 0.29019585251808167,
+      "offdiag_cosine": 0.2794332802295685,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.0002031446638284251,
+          "selected_positive_fraction": 0.25,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.2090054452419281,
+          "coupled_true_energy_change": 0.0002031475305557251,
+          "coupled_relative": 0.0015581208922605062
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.00024505722103640437,
+          "selected_positive_fraction": 0.40625,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.039370398968458176,
+          "coupled_true_energy_change": 0.0006221681833267212,
+          "coupled_relative": 0.0047719666701791915
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.006507725454866886,
+          "selected_positive_fraction": 0.3984375,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.18688024580478668,
+          "coupled_true_energy_change": 0.023274436593055725,
+          "coupled_relative": 0.17851256085677564
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.9996251463890076,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.5890251608455882,
+      "gradient_cosine": 0.29019707441329956,
+      "offdiag_cosine": 0.2794332504272461,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.00011757355241570622,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.12096558511257172,
+          "coupled_true_energy_change": 0.00011758506298065186,
+          "coupled_relative": 0.0009018654706101118
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.00022248522145673633,
+          "selected_positive_fraction": 0.40625,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.03574402630329132,
+          "coupled_true_energy_change": 0.0006205886602401733,
+          "coupled_relative": 0.004759851888797279
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.006375703029334545,
+          "selected_positive_fraction": 0.40234375,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.1830890029668808,
+          "coupled_true_energy_change": 0.02298453450202942,
+          "coupled_relative": 0.1762890413116331
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.9996251463890076,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.6076516544117647,
+      "gradient_cosine": 0.34411555528640747,
+      "offdiag_cosine": 0.32748663425445557,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0003759576065931469,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.38680410385131836,
+          "coupled_true_energy_change": -0.00037595629692077637,
+          "coupled_relative": -0.002883546549675975
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.001051810453645885,
+          "selected_positive_fraction": 0.578125,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.16898174583911896,
+          "coupled_true_energy_change": -0.0004452168941497803,
+          "coupled_relative": -0.0034147682842338004
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.0012868285411968827,
+          "selected_positive_fraction": 0.466796875,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.03695343807339668,
+          "coupled_true_energy_change": 0.023342326283454895,
+          "coupled_relative": 0.17903326787541707
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.9998430609703064,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.6076013901654411,
+      "gradient_cosine": 0.34411150217056274,
+      "offdiag_cosine": 0.32748666405677795,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0003759576065931469,
+          "selected_positive_fraction": 0.5,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.38680410385131836,
+          "coupled_true_energy_change": -0.00037595629692077637,
+          "coupled_relative": -0.002883546549675975
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.0011363530065864325,
+          "selected_positive_fraction": 0.59375,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.18256418406963348,
+          "coupled_true_energy_change": -0.0005229711532592773,
+          "coupled_relative": -0.004011135541317005
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.0013272669166326523,
+          "selected_positive_fraction": 0.470703125,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.038114696741104126,
+          "coupled_true_energy_change": 0.023417294025421143,
+          "coupled_relative": 0.17960826282949635
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.9998430609703064,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.5346895105698529,
+      "gradient_cosine": 0.09856755286455154,
+      "offdiag_cosine": 0.09287534654140472,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.00033399337553419173,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.3436291813850403,
+          "coupled_true_energy_change": 0.00033399462699890137,
+          "coupled_relative": 0.0025617048103225254
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.002519058296456933,
+          "selected_positive_fraction": 0.234375,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.40470683574676514,
+          "coupled_true_energy_change": 0.0027509331703186035,
+          "coupled_relative": 0.02109937755167583
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.01978052221238613,
+          "selected_positive_fraction": 0.236328125,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.5680308938026428,
+          "coupled_true_energy_change": 0.024235501885414124,
+          "coupled_relative": 0.18588383387571744
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 32,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.9931909441947937,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5347541360294118,
+      "gradient_cosine": 0.09853339940309525,
+      "offdiag_cosine": 0.09287534654140472,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.00033399337553419173,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.3436291813850403,
+          "coupled_true_energy_change": 0.00033399462699890137,
+          "coupled_relative": 0.0025617048103225254
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.0022275312803685665,
+          "selected_positive_fraction": 0.265625,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.3578706979751587,
+          "coupled_true_energy_change": 0.002494901418685913,
+          "coupled_relative": 0.019135640063902042
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.018876075744628906,
+          "selected_positive_fraction": 0.25390625,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.5420581698417664,
+          "coupled_true_energy_change": 0.02342084050178528,
+          "coupled_relative": 0.17963546394241045
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 32,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.9931909441947937,
+      "sketch_MAC_fraction_per_product": 0.00625
+    },
+    {
+      "sign_agreement": 0.5634478400735294,
+      "gradient_cosine": 0.2042941451072693,
+      "offdiag_cosine": 0.19506371021270752,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.000290188065264374,
+          "selected_positive_fraction": 0.125,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.29856008291244507,
+          "coupled_true_energy_change": 0.00029018521308898926,
+          "coupled_relative": 0.0022256910625600454
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.0010330660734325647,
+          "selected_positive_fraction": 0.25,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.1659703105688095,
+          "coupled_true_energy_change": 0.0011915266513824463,
+          "coupled_relative": 0.00913888819679708
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.013126222416758537,
+          "selected_positive_fraction": 0.283203125,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.3769415020942688,
+          "coupled_true_energy_change": 0.02383589744567871,
+          "coupled_relative": 0.18281890847648397
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 128,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.9950024485588074,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.5635196461397058,
+      "gradient_cosine": 0.20413750410079956,
+      "offdiag_cosine": 0.19506371021270752,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": -0.000290188065264374,
+          "selected_positive_fraction": 0.125,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": -0.29856008291244507,
+          "coupled_true_energy_change": 0.00029018521308898926,
+          "coupled_relative": 0.0022256910625600454
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": -0.0008890400640666485,
+          "selected_positive_fraction": 0.28125,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": -0.14283138513565063,
+          "coupled_true_energy_change": 0.0010562390089035034,
+          "coupled_relative": 0.008101245742397232
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.012314274907112122,
+          "selected_positive_fraction": 0.29296875,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.3536250591278076,
+          "coupled_true_energy_change": 0.02359287440776825,
+          "coupled_relative": 0.18095494649952534
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 128,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.9950024485588074,
+      "sketch_MAC_fraction_per_product": 0.025
+    },
+    {
+      "sign_agreement": 0.5926298253676471,
+      "gradient_cosine": 0.29617446660995483,
+      "offdiag_cosine": 0.2840659022331238,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 5.3203199058771133e-05,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.0547381266951561,
+          "coupled_true_energy_change": -5.319714546203613e-05,
+          "coupled_relative": -0.00040801669371158273
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.00024261481303256005,
+          "selected_positive_fraction": 0.53125,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.038978006690740585,
+          "coupled_true_energy_change": 0.00018104910850524902,
+          "coupled_relative": 0.001388628243304126
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.0033292435109615326,
+          "selected_positive_fraction": 0.400390625,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.095604807138443,
+          "coupled_true_energy_change": 0.024028688669204712,
+          "coupled_relative": 0.18429759754741964
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 256,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 0.9951657056808472,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 0.5925939223345589,
+      "gradient_cosine": 0.2959972321987152,
+      "offdiag_cosine": 0.2840659022331238,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 5.3203199058771133e-05,
+          "selected_positive_fraction": 0.375,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 0.0547381266951561,
+          "coupled_true_energy_change": -5.319714546203613e-05,
+          "coupled_relative": -0.00040801669371158273
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.00024261479848064482,
+          "selected_positive_fraction": 0.53125,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 0.038978006690740585,
+          "coupled_true_energy_change": 0.00018104910850524902,
+          "coupled_relative": 0.001388628243304126
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": -0.00312615092843771,
+          "selected_positive_fraction": 0.400390625,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": -0.08977266401052475,
+          "coupled_true_energy_change": 0.023664698004722595,
+          "coupled_relative": 0.18150582618123118
+        }
+      ],
+      "kind": "hybrid-gaussian",
+      "rank": 256,
+      "diagonal": "none",
+      "levels": 7,
+      "captured_frobenius": 0.9951657056808472,
+      "sketch_MAC_fraction_per_product": 0.05
+    },
+    {
+      "sign_agreement": 1.0,
+      "gradient_cosine": 1.0000004768371582,
+      "offdiag_cosine": 1.0,
+      "selections": [
+        {
+          "top_k": 1,
+          "selected_true_gain": 0.0009719586814753711,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.0009719586814753711,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": -0.0009719431400299072,
+          "coupled_relative": -0.007454705003930447
+        },
+        {
+          "top_k": 8,
+          "selected_true_gain": 0.006224402692168951,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.006224402692168951,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": -0.005178868770599365,
+          "coupled_relative": -0.039721396601140935
+        },
+        {
+          "top_k": 64,
+          "selected_true_gain": 0.0348229706287384,
+          "selected_positive_fraction": 1.0,
+          "oracle_top_k_gain": 0.0348229706287384,
+          "gain_capture": 1.0,
+          "coupled_true_energy_change": 0.02656954526901245,
+          "coupled_relative": 0.20378570917530112
+        }
+      ],
+      "kind": "oracle-full-W",
+      "rank": 5120,
+      "diagonal": "exact",
+      "levels": 7,
+      "captured_frobenius": 1.0,
+      "sketch_MAC_fraction_per_product": 1.0
+    }
+  ]
+}

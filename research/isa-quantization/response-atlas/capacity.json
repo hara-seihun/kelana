@@ -1,0 +1,25 @@
+{
+  "domain": "union of actual captured 1024 train + 1024 separate validation producer states, all 1024 outputs",
+  "q4_relative_rms": 0.1638359389065305,
+  "global_all_affine_free_fit_rms": 0.33178844562058496,
+  "two_chart_all_affine_free_fit_rms": 0.05608981858991778,
+  "routed_chart_diagnostics": [
+    {
+      "states": 967,
+      "affine_design_dimension": 967,
+      "free_fp64_least_squares_residual": 3.0437185494035526e-26,
+      "design_residual_orthogonality": 1.2023650128250254e-16
+    },
+    {
+      "states": 1081,
+      "affine_design_dimension": 1025,
+      "free_fp64_least_squares_residual": 112.66515904288522,
+      "design_residual_orthogonality": 8.328719352005069e-17
+    }
+  ],
+  "full_output_energy": 35811.42175421542,
+  "one_chart_design_dimension": 1025,
+  "one_chart_design_residual_orthogonality": 7.577218099713335e-17,
+  "validation_targets_used_to_establish_optimistic_floors": true,
+  "exact_status": "numerical QR projection floor on this finite input/output matrix, not a symbolic or whole-model theorem"
+}

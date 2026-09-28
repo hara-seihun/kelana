@@ -1,0 +1,279 @@
+{
+  "programme": "Qwen3-0.6B shared GQA value/output observer",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "objective": "original-Q/K/RoPE causal post-O output squared relative error on original BF16 producer windows",
+  "source_sha256": {
+    "fit_direct.py": "f54beb65e2b9f4b2276c1ef91be78d5a51a1c8f1882f61ef5beed988a62b2146",
+    "refine.py": "a3b34d093979cd07c6585a88f6c96c3723bc83136264d22c9b39d686ae506141",
+    "measure.py": "4dc1a9d6b1539d0f27e2dc0eb2be864a7e7bd6b16347e748ed6a12ffea92d044",
+    "pack.py": "e97b19c0c97209255c5f22fdbbade5e174e4195f8f7a51cc5d60c3c1279ea41d"
+  },
+  "layers": [
+    {
+      "layer": 0,
+      "selected_family": "binary2-r28",
+      "rank": 28,
+      "input_output_bits": [
+        2,
+        2
+      ],
+      "original_V_plus_O_elements": 3145728,
+      "independent_binary_payload_bytes_including_descriptors": 210968,
+      "joint_image": {
+        "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer00-joint-r28.npz",
+        "sha256": "93b969a9dbde2c28a23862f5199c1db7e7a12080a836aafb8eed94f8170f420c",
+        "payload_bytes_including_descriptors": 208640,
+        "serialized_bytes": 210184,
+        "layout": "eight groups in ascending KV-group order; each left factor rows are first then second query head"
+      },
+      "joint_bpw": 0.5305989583333334,
+      "source_capture_sha256": "8ff000994f510ea73afeed635f8f475594458780759cddd985360a1c8f92ae5b",
+      "independent_images": {
+        "v": {
+          "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer00-self_attn_v_proj.npz",
+          "sha256": "f1122becdeb9d065335a6212c10eb09ee61f12b661b283cbbe3ee910aa45392e"
+        },
+        "o": {
+          "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer00-self_attn_o_proj.npz",
+          "sha256": "4f53bf082f64ba5f21943786dc8439ff89aee251ba426191469cb79cf5a51b6f"
+        }
+      },
+      "pre_refit_composed_response_by_group": [
+        {
+          "group": 0,
+          "rank_tail_train": 0.49753955006599426,
+          "train": 0.6195674538612366,
+          "validation": 0.6888130903244019
+        },
+        {
+          "group": 1,
+          "rank_tail_train": 0.2552061676979065,
+          "train": 0.38176602125167847,
+          "validation": 0.3971496522426605
+        },
+        {
+          "group": 2,
+          "rank_tail_train": 0.4575403034687042,
+          "train": 0.5776869058609009,
+          "validation": 0.6471033096313477
+        },
+        {
+          "group": 3,
+          "rank_tail_train": 0.36632561683654785,
+          "train": 0.4711444079875946,
+          "validation": 0.5164812207221985
+        },
+        {
+          "group": 4,
+          "rank_tail_train": 0.457917183637619,
+          "train": 0.5686925053596497,
+          "validation": 0.6216182708740234
+        },
+        {
+          "group": 5,
+          "rank_tail_train": 0.22511954605579376,
+          "train": 0.3708721101284027,
+          "validation": 0.3827328085899353
+        },
+        {
+          "group": 6,
+          "rank_tail_train": 0.39350154995918274,
+          "train": 0.5328302979469299,
+          "validation": 0.5996105074882507
+        },
+        {
+          "group": 7,
+          "rank_tail_train": 0.4502563774585724,
+          "train": 0.7146954536437988,
+          "validation": 0.757214367389679
+        }
+      ],
+      "pre_refit_attention_output_error": {
+        "train": {
+          "independent_binary": 0.33177080750465393,
+          "binary2-r28": 0.4281706213951111,
+          "input4-output2-r20": 0.4354530870914459,
+          "four4-r14": 0.44672590494155884
+        },
+        "validation": {
+          "independent_binary": 0.3957947790622711,
+          "binary2-r28": 0.4719417691230774,
+          "input4-output2-r20": 0.47272390127182007,
+          "four4-r14": 0.4739340543746948
+        }
+      },
+      "post_refit_attention_output_error": {
+        "train": {
+          "independent_binary": 0.33177080750465393,
+          "binary2-r28": 0.22281941771507263
+        },
+        "validation": {
+          "independent_binary": 0.3957947790622711,
+          "binary2-r28": 0.37888696789741516
+        }
+      },
+      "attention_input_replay_error": {
+        "train": 5.820138540002517e-06,
+        "validation": 5.611786036752164e-06
+      },
+      "validation_per_window_error": {
+        "independent_binary": [
+          0.39216485619544983,
+          0.4167150557041168,
+          0.3642922341823578,
+          0.40930601954460144
+        ],
+        "binary2-r28": [
+          0.3660779297351837,
+          0.40541282296180725,
+          0.3486489951610565,
+          0.3944244086742401
+        ]
+      },
+      "changed_left_codes": 242784,
+      "full_receipts": {
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer00-direct/fit.json": "78cfb47dd6ddc1cbac49414a94316514b6a20ac2ee71cdc7a619e17a9755e610",
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer00-refined/refine.json": "3965594371019933944701db7caecd1bacc7dfd8802a943aa6f1e9d19354fe47",
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer00-joint-consumer.json": "8a05fc161778b2960c73bde58739571a2151f4b213ed7c6a3d0a88532ddae55e",
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer00-direct-consumer.json": "7eccbc77a22aa24dbb88e50998e70b7127676fae81650ba2d45701599ae5be5c"
+      },
+      "fixed_output_basis_group0": {
+        "train": 0.5721641182899475,
+        "validation": 0.5845074653625488
+      }
+    },
+    {
+      "layer": 14,
+      "selected_family": "binary2-r28",
+      "rank": 28,
+      "input_output_bits": [
+        2,
+        2
+      ],
+      "original_V_plus_O_elements": 3145728,
+      "independent_binary_payload_bytes_including_descriptors": 210968,
+      "joint_image": {
+        "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer14-joint-r28.npz",
+        "sha256": "6673197d16a29148f64b997a2007a004161bfe7d8277d77e7dcf4e6af273e4e4",
+        "payload_bytes_including_descriptors": 208640,
+        "serialized_bytes": 210184,
+        "layout": "eight groups in ascending KV-group order; each left factor rows are first then second query head"
+      },
+      "joint_bpw": 0.5305989583333334,
+      "source_capture_sha256": "44403792d5a270d6e07f9f158c83e5e2fd29ac02d18f03bb031f14d2b156cb64",
+      "independent_images": {
+        "v": {
+          "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer14-self_attn_v_proj.npz",
+          "sha256": "f42c73fd9f9a97fc5b545c2f66c78c16f34c14c7fc2bbe9b48e683c92ec8ded3"
+        },
+        "o": {
+          "path": "/path/to/workspace/data/kelana-subbit/full-model/image-binary055-refined/layer14-self_attn_o_proj.npz",
+          "sha256": "d340539b9ceda931b5f63cd302ceb074831e2ad71f4688e075b540d2f147e1f3"
+        }
+      },
+      "pre_refit_composed_response_by_group": [
+        {
+          "group": 0,
+          "rank_tail_train": 0.030747951939702034,
+          "train": 0.11527090519666672,
+          "validation": 0.12230567634105682
+        },
+        {
+          "group": 1,
+          "rank_tail_train": 0.06170951947569847,
+          "train": 0.14538230001926422,
+          "validation": 0.1568099856376648
+        },
+        {
+          "group": 2,
+          "rank_tail_train": 0.08714284747838974,
+          "train": 0.1853901445865631,
+          "validation": 0.20408004522323608
+        },
+        {
+          "group": 3,
+          "rank_tail_train": 0.23731210827827454,
+          "train": 0.38864678144454956,
+          "validation": 0.406650185585022
+        },
+        {
+          "group": 4,
+          "rank_tail_train": 0.3145243525505066,
+          "train": 0.458402156829834,
+          "validation": 0.4938240647315979
+        },
+        {
+          "group": 5,
+          "rank_tail_train": 0.04295234754681587,
+          "train": 0.12260083109140396,
+          "validation": 0.13028638064861298
+        },
+        {
+          "group": 6,
+          "rank_tail_train": 0.19524160027503967,
+          "train": 0.2974226176738739,
+          "validation": 0.3394754230976105
+        },
+        {
+          "group": 7,
+          "rank_tail_train": 0.026874464005231857,
+          "train": 0.09610644727945328,
+          "validation": 0.10529715567827225
+        }
+      ],
+      "pre_refit_attention_output_error": {
+        "train": {
+          "independent_binary": 0.2623102366924286,
+          "binary2-r28": 0.43049144744873047,
+          "input4-output2-r20": 0.3766777813434601,
+          "four4-r14": 0.33376479148864746
+        },
+        "validation": {
+          "independent_binary": 0.3524697422981262,
+          "binary2-r28": 0.4601263999938965,
+          "input4-output2-r20": 0.41518524289131165,
+          "four4-r14": 0.37307989597320557
+        }
+      },
+      "post_refit_attention_output_error": {
+        "train": {
+          "independent_binary": 0.2623102366924286,
+          "binary2-r28": 0.16417647898197174
+        },
+        "validation": {
+          "independent_binary": 0.3524697422981262,
+          "binary2-r28": 0.3261949121952057
+        }
+      },
+      "attention_input_replay_error": {
+        "train": 7.373950211331248e-06,
+        "validation": 7.1313070293399505e-06
+      },
+      "validation_per_window_error": {
+        "independent_binary": [
+          0.350808322429657,
+          0.3851221203804016,
+          0.32122159004211426,
+          0.35440126061439514
+        ],
+        "binary2-r28": [
+          0.323258638381958,
+          0.3666006922721863,
+          0.28892093896865845,
+          0.3279568552970886
+        ]
+      },
+      "changed_left_codes": 191560,
+      "full_receipts": {
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer14-direct/fit.json": "3126ae05819d92445aaf079536d82cb4bb2914d3921f3612313119abd2bfa54b",
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer14-refined/refine.json": "10994c744cb267b9ccbfb4449bfce6426e122c28214581a2507e30d8844736f8",
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer14-joint-consumer.json": "47a6e2ea670c9545772767c38dbab5bd5cc943cd159ec4b1886c3390f9321eb0",
+        "/path/to/workspace/data/kelana-subbit/value-observer/layer14-direct-consumer.json": "cebe2ffec38b30764c6154f7a67e2755eeb636305b93d91353434a7fedb0860b"
+      },
+      "fixed_output_basis_group0": {
+        "train": 0.20191827416419983,
+        "validation": 0.20330996811389923
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "panel": "train",
+  "window": 2,
+  "modes": {
+    "q4": {
+      "image_sha256": "627c05910c4c34c98f86f5454853fdfa1b5afa452ffb2a21f06d2c211df64f13",
+      "bytes": 34816,
+      "heads": {
+        "head0": {
+          "attention_kl": 1.7255032062530518,
+          "post_o_rel_sq": 0.5448563694953918,
+          "output_sse": 23.721860885620117,
+          "output_ref_sq": 43.53782653808594
+        },
+        "head1": {
+          "attention_kl": 4.251226425170898,
+          "post_o_rel_sq": 0.9767470359802246,
+          "output_sse": 459.6324768066406,
+          "output_ref_sq": 470.5747375488281
+        }
+      },
+      "gqa_pair": {
+        "post_o_rel_sq": 0.9306332468986511,
+        "output_sse": 491.7301025390625,
+        "output_ref_sq": 528.3822631835938
+      },
+      "key_rel_sq": 0.008295079693198204,
+      "value_rel_sq": 0.010606769472360611
+    },
+    "q6": {
+      "image_sha256": "6c9c2688c971a06ed0f71e9489d0d0f5878ec42dfbdf41ac866d770891a3d226",
+      "bytes": 51200,
+      "heads": {
+        "head0": {
+          "attention_kl": 1.3658843040466309,
+          "post_o_rel_sq": 1.9999828338623047,
+          "output_sse": 87.07490539550781,
+          "output_ref_sq": 43.53782653808594
+        },
+        "head1": {
+          "attention_kl": 1.6946896314620972,
+          "post_o_rel_sq": 0.7271597385406494,
+          "output_sse": 342.1830139160156,
+          "output_ref_sq": 470.5747375488281
+        }
+      },
+      "gqa_pair": {
+        "post_o_rel_sq": 0.8454911708831787,
+        "output_sse": 446.7425231933594,
+        "output_ref_sq": 528.3822631835938
+      },
+      "key_rel_sq": 0.0030066107865422964,
+      "value_rel_sq": 0.000634161988273263
+    }
+  },
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f"
+}

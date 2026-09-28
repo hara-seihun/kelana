@@ -1,0 +1,136 @@
+{
+  "two_exact_blocks": {
+    "block_scales": {
+      "scales": [
+        "1",
+        "2"
+      ],
+      "weights": [
+        "-1",
+        "1",
+        "-2",
+        "2"
+      ],
+      "max_error": "0",
+      "mse": "0",
+      "static_bytes": 5
+    },
+    "one_scale": {
+      "scales": [
+        "3/2"
+      ],
+      "weights": [
+        "-3/2",
+        "3/2",
+        "-3/2",
+        "3/2"
+      ],
+      "max_error": "2",
+      "mse": "2/3",
+      "static_bytes": 3
+    },
+    "signed_2bit": {
+      "scale": "585/512",
+      "codes": [
+        -1,
+        1,
+        -2,
+        1
+      ],
+      "max_error": "731/512",
+      "mse": "224695/393216",
+      "static_bytes": 3
+    },
+    "offset_2bit": {
+      "scale": "585/512",
+      "codes": [
+        -1,
+        1,
+        -1,
+        2
+      ],
+      "max_error": "731/512",
+      "mse": "224695/393216",
+      "static_bytes": 3
+    },
+    "sign_magnitude_2bit": {
+      "scale": "1",
+      "codes": [
+        -1,
+        1,
+        -2,
+        2
+      ],
+      "max_error": "0",
+      "mse": "0",
+      "static_bytes": 3
+    }
+  },
+  "perturbed": {
+    "block_scales": {
+      "scales": [
+        "9/8",
+        "2"
+      ],
+      "weights": [
+        "-9/8",
+        "9/8",
+        "-2",
+        "2"
+      ],
+      "max_error": "3/4",
+      "mse": "5/48",
+      "static_bytes": 5
+    },
+    "one_scale": {
+      "scales": [
+        "25/16"
+      ],
+      "weights": [
+        "-25/16",
+        "25/16",
+        "-25/16",
+        "25/16"
+      ],
+      "max_error": "7/4",
+      "mse": "59/96",
+      "static_bytes": 3
+    },
+    "signed_2bit": {
+      "scale": "25/16",
+      "codes": [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "max_error": "7/4",
+      "mse": "59/96",
+      "static_bytes": 3
+    },
+    "offset_2bit": {
+      "scale": "1243/1024",
+      "codes": [
+        -1,
+        1,
+        -1,
+        2
+      ],
+      "max_error": "987/1024",
+      "mse": "383855/1572864",
+      "static_bytes": 3
+    },
+    "sign_magnitude_2bit": {
+      "scale": "525/512",
+      "codes": [
+        -1,
+        1,
+        -2,
+        2
+      ],
+      "max_error": "3/4",
+      "mse": "7919/65536",
+      "static_bytes": 3
+    }
+  }
+}

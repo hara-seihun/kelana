@@ -1,0 +1,167 @@
+{
+ "format": "kelana-resource-case/2",
+ "id": "packed-2x2-slots",
+ "title": "Two instructions against three for the exact packed 2x2 ternary multiply-add",
+ "question": "What resource statement actually follows from replacing the three-instruction online core with the fused two-instruction one?",
+ "profile": "../profile.json",
+ "facts": "../facts.json",
+ "owning_experiment": "research/toy2/optimality",
+
+ "operation_model": "Free shared wire packing: a wire register holds, at each bit position, a constant or a copy of one bit of the dynamic input word, with fanout allowed and no arithmetic. The online core is what remains. Both programs compute D = AB + C for ternary 2x2 matrices into one packed output word, verified over all 531441 A/B/C cases.",
+
+ "premises": [
+  "FACT:ENC.DOT.SIGNATURES",
+  "FACT:ENC.COMBINER.SIGNATURES",
+  "ASSUME:SLOT.POSITIVE",
+  "ASSUME:SLOT.UNIT_VALU",
+  "ASSUME:SLOT.ENCODING_CLASS_UNIFORM"
+ ],
+
+ "programs": {
+  "incumbent": {
+   "instructions": ["V_DOT8_I32_IU4", "V_DOT8_I32_IU4", "V_LSHL_OR_B32"],
+   "dependency_edges": [["V_DOT8_I32_IU4#0", "V_LSHL_OR_B32"], ["V_DOT8_I32_IU4#1", "V_LSHL_OR_B32"]],
+   "shape": "two independent column dots, then a shift-or that places column 1 above column 0"
+  },
+  "fused": {
+   "instructions": ["V_DOT4_I32_IU8", "V_DOT8_I32_IU4"],
+   "dependency_edges": [["V_DOT4_I32_IU8", "V_DOT8_I32_IU4"]],
+   "shape": "column 1 computed prescaled by 256 through a 16*k weight against a 16*u lane, landing in the high byte; column 0 added on top through the second dot's SRC2 accumulator operand"
+  }
+ },
+
+ "quantities": [
+  {"id": "incumbent_instructions", "expr": "3", "tier": "architectural", "note": "counted from the assembled gfx1151 opcodes"},
+  {"id": "fused_instructions", "expr": "2", "tier": "architectural", "note": "counted from the assembled gfx1151 opcodes"},
+  {"id": "instruction_saving", "expr": "incumbent_instructions - fused_instructions", "tier": "architectural"},
+  {"id": "slot_ratio", "expr": "fused_instructions / incumbent_instructions", "tier": "family-restriction", "note": "a ratio of slots only under SLOT.UNIT_VALU; as instructions it is architectural"},
+
+  {"id": "incumbent_dag_depth", "expr": "2", "tier": "architectural", "note": "graph property: the two dots are independent, the shift-or is one level below"},
+  {"id": "fused_dag_depth", "expr": "2", "tier": "architectural", "note": "graph property: dot4 feeds dot8 through SRC2"},
+  {"id": "dag_depth_change", "expr": "fused_dag_depth - incumbent_dag_depth", "tier": "architectural"},
+
+  {"id": "incumbent_named_temporaries", "expr": "2", "tier": "architectural", "note": "both dot results must be live together for the shift-or, in these two schedules as written"},
+  {"id": "fused_named_temporaries", "expr": "1", "tier": "architectural"},
+  {"id": "named_temporary_saving", "expr": "incumbent_named_temporaries - fused_named_temporaries", "tier": "architectural"},
+
+  {"id": "mac_per_tile", "expr": "8", "tier": "architectural", "note": "2x2x2 products in D = AB + C"},
+  {"id": "incumbent_mac_per_instruction", "expr": "mac_per_tile / incumbent_instructions", "tier": "architectural"},
+  {"id": "fused_mac_per_instruction", "expr": "mac_per_tile / fused_instructions", "tier": "architectural"},
+
+  {"id": "dot8_products_per_lane", "expr": "8", "tier": "architectural", "from": "FACT:ENC.DOT.SIGNATURES.V_DOT8_I32_IU4.products_per_lane"},
+  {"id": "dot4_products_per_lane", "expr": "4", "tier": "architectural", "from": "FACT:ENC.DOT.SIGNATURES.V_DOT4_I32_IU8.products_per_lane"}
+ ],
+
+ "derivation": [
+  {
+   "step": 1,
+   "tier": "architectural",
+   "direction": "exact-count",
+   "uses": [],
+   "depends_on": [],
+   "argument": "Both cores are assembled for gfx1151 and their opcodes counted, not assumed.",
+   "conclusion": "incumbent_instructions == 3 and fused_instructions == 2",
+   "check": "instruction_saving == 1"
+  },
+  {
+   "step": 2,
+   "tier": "architectural",
+   "direction": "exact-count",
+   "uses": ["FACT:ENC.DOT.SIGNATURES"],
+   "depends_on": [],
+   "argument": "V_DOT4_I32_IU8's SRC2 is a full 32-bit signed accumulator and its VDST is a 32-bit VGPR, so the fused chain is a legal operand pairing and needs no separate placement instruction. The prescale splits 256 as 16*16: an int8 weight holds 16*k exactly when k fits signed int4, and the lane wire holds 16*u.",
+   "conclusion": "the shift-or is eliminated rather than moved into the packing pass"
+  },
+  {
+   "step": 3,
+   "tier": "family-restriction",
+   "direction": "upper-bound",
+   "of": "fused",
+   "uses": ["ASSUME:SLOT.UNIT_VALU", "ASSUME:SLOT.ENCODING_CLASS_UNIFORM"],
+   "depends_on": [1],
+   "argument": "All three opcodes are single-destination 32-bit VALU instructions and the two dots share an encoding and operand signature, so under the charging assumptions each costs one slot.",
+   "conclusion": "fused demands 2 slots against the incumbent's 3, a saving of one slot per tile",
+   "check": "slot_ratio == 2/3"
+  },
+  {
+   "step": 4,
+   "tier": "architectural",
+   "direction": "exact-count",
+   "uses": [],
+   "depends_on": [1],
+   "argument": "Both programs have dependency-graph depth 2 and the fused program names one fewer 32-bit temporary.",
+   "conclusion": "dag_depth_change == 0 and named_temporary_saving == 1",
+   "check": "dag_depth_change == 0",
+   "explicitly_not_concluded": "Equal graph depth is not equal latency. The two programs use different opcodes along their critical paths, and a result feeding SRC2 of a VOP3P dot need not forward on the same schedule as a result feeding a VOP3 shift-or. No pinned source gives either latency, so the saving is not shown to be latency-neutral. The temporary count is likewise a property of these two schedules as written, not a register-pressure theorem about the map."
+  },
+  {
+   "step": 5,
+   "tier": "family-restriction",
+   "direction": "weaker-form",
+   "uses": ["ASSUME:SLOT.POSITIVE"],
+   "depends_on": [1],
+   "argument": "Dropping SLOT.ENCODING_CLASS_UNIFORM leaves the symbolic bill 2*D8 + S against D4 + D8, a saving of (D8 - D4) + S. It stays positive whenever the shift-or has positive cost and the narrower dot is not dearer than the wider one. The ordering D4 <= D8 is itself unsupported by any pinned source, which is why this form is no stronger in tier than step 3.",
+   "conclusion": "saving = (D8 - D4) + S > 0 under D4 <= D8 and S >= 1"
+  }
+ ],
+
+ "claim": {
+  "kind": "instruction-count-saving-with-conditional-slot-reading",
+  "tier": "family-restriction",
+  "tier_reason": "The instruction counts, graph depth, temporary counts and operand legality are architectural. Calling the instruction saving a slot saving inherits SLOT.UNIT_VALU, and the step-5 weaker form inherits an opcode ordering no pinned source states.",
+  "native_runtime_claim": "none. Neither core has been timed, no latency is known for either opcode, and no cycle cost is claimed.",
+  "statement": "The fused core computes the same whole map in two instructions where the incumbent uses three, with equal dependency-graph depth and one fewer named 32-bit temporary in these two schedules. Under the charging assumptions that is a saving of one issue slot per tile.",
+  "inequality": "fused_instructions < incumbent_instructions",
+  "unconditional_part": "The instruction counts, the graph depth, the temporary counts and the operand legality of the fused chain.",
+  "conditional_part": "Calling the instruction saving a slot saving, and any reading of it as a time or latency saving. Equal graph depth does not give equal native latency, and no opcode latency is available."
+ },
+
+ "class_of_the_floor": {
+  "proved": "No single V_DOT8_I32_IU4 with shared packing computes this map. The reach argument: weights lie in [-8, 15] across signed int4 and unsigned u4, within-lane fanout puts each input bit's lane coefficient in [-8, 15], so each product moves by at most 345 and eight lanes by at most 2760, while the separating matrices demand a spread of 3072 or 4096. No multiple of 2^32 closes either gap.",
+  "open": "One V_DOT4_I32_IU8 with shared packing. CP-SAT returns UNKNOWN on the general affine weight rule at 40 s. 5036 scanned concrete (p, q) rules with signed int8 weights are all infeasible, with no undecided cells; unsigned u8 weights were not scanned.",
+  "consequence": "The one-DOT8 template is refuted, but the fused program uses DOT4 and does not belong to a DOT8-only grammar. This is not an attained class optimum. Two is not proved optimal over all single instructions.",
+  "lean": "Kelana/Toy2Optimality.lean: fused_correct, dot4_weights_fit, prescaled_lane_fits, dot4_column_bounds, wire_lane_coefficient_range, nibble_product_range, dot8_variable_signedness_spread, no_variable_signedness_dot8, separating_matrices"
+ },
+
+ "geometry": {
+  "per_lane": "slots above are per lane, and every instruction here is a lane-local VALU operation with no cross-lane traffic",
+  "per_simd32": "one slot per SIMD32 covers 32 lanes, so 32 independent 2x2 tiles",
+  "per_device": "80 SIMD32 units; a device-level figure additionally needs an occupancy and residency argument that this case does not make",
+  "why_wmma_is_not_the_comparison": "This workload gives every lane its own A, B and C, while V_WMMA_I32_16X16X16_IU4 computes one wave-collective 16x16x16 product from replicated A and B fragments. The obvious block-diagonal embedding of independent 2x2 products into a 16x16x16 uses a small fraction of its 4096 products, so the two are not measured against each other here and the fused core's 4 lane-MAC per instruction must not be read against WMMA's 128. This is a statement about the comparison we make, not an impossibility result: no claim is made that some cleverer embedding of independent small matrices into WMMA cannot exist."
+ },
+
+ "evidence": [
+  {
+   "id": "EXACT.WHOLE_MAP",
+   "role": "source-derived",
+   "value": {"cases": 531441, "mismatches": 0, "intermediate_range": [32, 12320]},
+   "source": {"path": "research/toy2/optimality/construction-results.json"},
+   "what_it_proves": "The fused pair replays the RDNA 3.5 pseudocode semantics against the decoded reference matrix over every ternary A, B and C, and the chained int32 intermediate never leaves a range where wrapping and clamping are irrelevant.",
+   "what_it_does_not_prove": "Nothing about cost."
+  },
+  {
+   "id": "ASM.OPCODE_COUNTS",
+   "role": "source-derived",
+   "value": {"incumbent": 3, "fused": 2, "single": 1},
+   "source": {"path": "research/toy2/optimality/assembly-results.json"},
+   "what_it_proves": "Both cores assemble for gfx1151 at the stated opcode counts.",
+   "what_it_does_not_prove": "Any execution cost. No timing measurement exists for either core."
+  }
+ ],
+
+ "missing_premises_for_a_native_claim": [
+  {"id": "D8_vs_D4", "needed_for": "the step-5 weaker form", "would_come_from": "any AMD statement distinguishing the issue cost of two ENC_VOP3P instructions with identical operand signatures; none exists"},
+  {"id": "tau_V", "needed_for": "turning one saved slot per tile into saved time", "would_come_from": "a documented VALU issue rate per SIMD32"}
+ ],
+
+ "not_established": [
+  "No cycle or nanosecond statement. Neither core has been timed, no opcode latency is available, and no capacity upper bound exists for the issue path.",
+  "No latency claim. Equal dependency-graph depth is a property of the graphs, not of the machine.",
+  "No register-pressure theorem. The temporary counts describe these two schedules as written.",
+  "No impossibility for WMMA on independent small matrices. Only the comparison class is restricted.",
+  "Two is not proved optimal. One V_DOT4_I32_IU8 under shared packing is open.",
+  "Nothing about the packing pass. With packing charged rather than free, the incumbent's nine-instruction total is not beaten: the fused pair needs one more spread step than the shared expansion network.",
+  "Nothing about instructions outside the affine class. Data-dependent selection, V_PERM_B32 with a data selector, and bilinear use of both dot operands are excluded by hypothesis, not refuted.",
+  "A-dependent packing is a different regime. One V_DOT4_I32_IU8 suffices for at least 5 of the first 32 matrices when the wiring may depend on A, but those wirings are irregular and the remaining matrices were cut off by the search budget, not refuted."
+ ]
+}

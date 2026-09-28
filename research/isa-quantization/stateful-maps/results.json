@@ -1,0 +1,323 @@
+{
+  "contract": {
+    "state": "real 2-vector, initially zero",
+    "input": "real scalar into coordinate 0",
+    "output": "coordinate 0 each step",
+    "score": "sum of 128 squared impulse-output differences, equivalently white-input output error / input variance over 128 lags",
+    "scale_family": "nonnegative real per-row scale fitted by multistart Nelder-Mead across all 81 ternary 2x2 codes, then FP16-rounded",
+    "one_step_family": "all nine ternary row codes with individually least-squares fitted nonnegative real scales",
+    "fp16_rounding": "all-code search only; local LS scale values shown at ideal precision",
+    "stability": "search candidates must have spectral radius < .999"
+  },
+  "rational_certificate": {
+    "source": [
+      [
+        "1/2",
+        "1/8"
+      ],
+      [
+        "-2",
+        "1/2"
+      ]
+    ],
+    "encoded": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "-1/2",
+        "1/2"
+      ]
+    ],
+    "state_encoding_diagonal": [
+      "1",
+      "1/4"
+    ],
+    "certificate": "encoded*E=E*source; E*B=B and C*E=C; exact for every input word and horizon"
+  },
+  "perturbation_seed": 20260924,
+  "perturbation": [
+    [
+      -0.021703434090934677,
+      -0.017184831108084345
+    ],
+    [
+      0.0074181279113502835,
+      0.0009982325097505074
+    ]
+  ],
+  "exact_teacher": {
+    "coefficient_fit": {
+      "matrix": [
+        [
+          0.5,
+          0.0
+        ],
+        [
+          -2.0,
+          0.0
+        ]
+      ],
+      "radius": 0.5,
+      "coefficient_frobenius_error": 0.5153882032022076,
+      "finite_white_input_output_error_over_variance": 0.3333333333333333,
+      "first_four_impulses": [
+        1.0,
+        0.5,
+        0.25,
+        0.125
+      ],
+      "codes": [
+        [
+          1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "scales": [
+        0.5,
+        2.0
+      ]
+    },
+    "all_codes_impulse_fit": {
+      "matrix": [
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "radius": 0.7071067811865476,
+      "coefficient_frobenius_error": 2.576941016011038,
+      "finite_white_input_output_error_over_variance": 0.0,
+      "first_four_impulses": [
+        1.0,
+        0.5,
+        0.0,
+        -0.25
+      ],
+      "codes": [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "scales_fp16": [
+        0.5,
+        0.5
+      ]
+    },
+    "teacher": {
+      "matrix": [
+        [
+          0.5,
+          0.125
+        ],
+        [
+          -2.0,
+          0.5
+        ]
+      ],
+      "radius": 0.7071067811865476,
+      "first_four_impulses": [
+        1.0,
+        0.5,
+        0.0,
+        -0.25
+      ]
+    }
+  },
+  "perturbed_teacher": {
+    "coefficient_fit": {
+      "matrix": [
+        [
+          0.47829656590906533,
+          0.0
+        ],
+        [
+          -1.9925818720886497,
+          0.0
+        ]
+      ],
+      "radius": 0.47829656590906533,
+      "coefficient_frobenius_error": 0.5124678913074323,
+      "finite_white_input_output_error_over_variance": 0.23263673723385178,
+      "first_four_impulses": [
+        1.0,
+        0.47829656590906533,
+        0.22876760496040488,
+        0.10941875984380331
+      ],
+      "codes": [
+        [
+          1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "scales": [
+        0.47829656590906533,
+        1.9925818720886497
+      ]
+    },
+    "all_codes_impulse_fit": {
+      "matrix": [
+        [
+          0.4873046875,
+          -0.4873046875
+        ],
+        [
+          0.4619140625,
+          0.4619140625
+        ]
+      ],
+      "radius": 0.6709588480352845,
+      "coefficient_frobenius_error": 2.5259308492086814,
+      "finite_white_input_output_error_over_variance": 0.00039725598746927974,
+      "first_four_impulses": [
+        1.0,
+        0.4873046875,
+        0.012372970581054688,
+        -0.2076329831033945
+      ],
+      "codes": [
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "scales_fp16": [
+        0.4873046875,
+        0.4619140625
+      ]
+    },
+    "teacher": {
+      "matrix": [
+        [
+          0.47829656590906533,
+          0.10781516889191566
+        ],
+        [
+          -1.9925818720886497,
+          0.5009982325097505
+        ]
+      ],
+      "radius": 0.6741337294677759,
+      "first_four_impulses": [
+        1.0,
+        0.47829656590906533,
+        0.013937053890197643,
+        -0.20371639618993062
+      ]
+    }
+  },
+  "unstructured_teacher": {
+    "coefficient_fit": {
+      "matrix": [
+        [
+          -0.7331808500236857,
+          0.0
+        ],
+        [
+          0.0,
+          0.3459285222156079
+        ]
+      ],
+      "radius": 0.7331808500236857,
+      "coefficient_frobenius_error": 0.20332735259794069,
+      "finite_white_input_output_error_over_variance": 1.4697751517177754e-05,
+      "first_four_impulses": [
+        1.0,
+        -0.7331808500236857,
+        0.5375541588414543,
+        -0.39412441511314483
+      ],
+      "codes": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "scales": [
+        0.7331808500236857,
+        0.3459285222156079
+      ]
+    },
+    "all_codes_impulse_fit": {
+      "matrix": [
+        [
+          -0.7333984375,
+          -0.7333984375
+        ],
+        [
+          -0.0011157989501953125,
+          -0.0011157989501953125
+        ]
+      ],
+      "radius": 0.7345142364501953,
+      "coefficient_frobenius_error": 0.9988819572430039,
+      "finite_white_input_output_error_over_variance": 1.5602492145628516e-07,
+      "first_four_impulses": [
+        1.0,
+        -0.7333984375,
+        0.5386915933340788,
+        -0.39567664435992
+      ],
+      "codes": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "scales_fp16": [
+        0.7333984375,
+        0.0011157989501953125
+      ]
+    },
+    "teacher": {
+      "matrix": [
+        [
+          -0.7331808500236857,
+          0.20322832438092786
+        ],
+        [
+          0.006345114956221365,
+          0.3459285222156079
+        ]
+      ],
+      "radius": 0.7343745031471915,
+      "first_four_impulses": [
+        1.0,
+        -0.7331808500236857,
+        0.5388436659220115,
+        -0.3955692216292501
+      ]
+    }
+  }
+}

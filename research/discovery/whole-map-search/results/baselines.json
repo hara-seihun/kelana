@@ -1,0 +1,196 @@
+{
+ "canonical_form": {
+  "w1i5": {
+   "monomials": 13,
+   "odd_monomials": 8,
+   "even_monomials": 5,
+   "even_degrees": [
+    2
+   ],
+   "integer_coefficients": false,
+   "coefficients_fit_i4": false,
+   "coefficient_range": [
+    "-1/2",
+    "1"
+   ],
+   "reproduces_map": true,
+   "mismatches": []
+  },
+  "w2i8": {
+   "monomials": 16,
+   "odd_monomials": 10,
+   "even_monomials": 6,
+   "even_degrees": [
+    2
+   ],
+   "integer_coefficients": false,
+   "coefficients_fit_i4": false,
+   "coefficient_range": [
+    "-3/2",
+    "1"
+   ],
+   "reproduces_map": true,
+   "mismatches": []
+  },
+  "w4i11": {
+   "monomials": 13,
+   "odd_monomials": 9,
+   "even_monomials": 4,
+   "even_degrees": [
+    2
+   ],
+   "integer_coefficients": false,
+   "coefficients_fit_i4": false,
+   "coefficient_range": [
+    "-1",
+    "2"
+   ],
+   "reproduces_map": true,
+   "mismatches": []
+  },
+  "w8i14": {
+   "monomials": 17,
+   "odd_monomials": 11,
+   "even_monomials": 6,
+   "even_degrees": [
+    2
+   ],
+   "integer_coefficients": false,
+   "coefficients_fit_i4": false,
+   "coefficient_range": [
+    "-5",
+    "7/2"
+   ],
+   "reproduces_map": true,
+   "mismatches": []
+  },
+  "w64i20": {
+   "monomials": 19,
+   "odd_monomials": 13,
+   "even_monomials": 6,
+   "even_degrees": [
+    2
+   ],
+   "integer_coefficients": false,
+   "coefficients_fit_i4": false,
+   "coefficient_range": [
+    "-8",
+    "5"
+   ],
+   "reproduces_map": true,
+   "mismatches": []
+  },
+  "w256i27": {
+   "monomials": 19,
+   "odd_monomials": 13,
+   "even_monomials": 6,
+   "even_degrees": [
+    2
+   ],
+   "integer_coefficients": false,
+   "coefficients_fit_i4": false,
+   "coefficient_range": [
+    "-27/2",
+    "8"
+   ],
+   "reproduces_map": true,
+   "mismatches": []
+  }
+ },
+ "baselines": {
+  "direct-w64": {
+   "steps": {
+    "input is already three signed byte lanes": 0,
+    "gate dot per unit (v_dot4_i32_iu8)": 64,
+    "up dot per unit (v_dot4_i32_iu8)": 64,
+    "ReLU per unit (v_max_i32)": 64,
+    "gate*up per unit (v_mul_lo_u32)": 64,
+    "accumulate per unit (v_add_nc_u32)": 64
+   },
+   "instructions": 320,
+   "prepared_vgprs": 128,
+   "note": "logical arithmetic count for byte-packed input, with one prepared operand for each gate and up and output signs folded into up. Operand loads, waits and register-capacity effects are not counted; this is not an emitted kernel or a speed baseline"
+  },
+  "direct-w256": {
+   "steps": {
+    "input is already three signed byte lanes": 0,
+    "gate dot per unit (v_dot4_i32_iu8)": 256,
+    "up dot per unit (v_dot4_i32_iu8)": 256,
+    "ReLU per unit (v_max_i32)": 256,
+    "gate*up per unit (v_mul_lo_u32)": 256,
+    "accumulate per unit (v_add_nc_u32)": 256
+   },
+   "instructions": 1280,
+   "prepared_vgprs": 512,
+   "note": "logical arithmetic count for byte-packed input, with one prepared operand for each gate and up and output signs folded into up. Operand loads, waits and register-capacity effects are not counted; this is not an emitted kernel or a speed baseline"
+  },
+  "contracted-19-monomial": {
+   "steps": {},
+   "instructions": null,
+   "prepared_vgprs": null,
+   "note": "The exact 19-monomial identity is retained, but its native lowering is unpriced. Trit-valued features do not imply int4 coefficients. The earlier 41-instruction estimate using three nibble dots was invalid for coefficients outside [-8,7] or with nonunit denominators."
+  },
+  "memory-lut": {
+   "steps": {
+    "address (v_dot4_i32_iu8 with the balanced-ternary coefficient word)": 1,
+    "global_load_dword": 1
+   },
+   "instructions": 2,
+   "prepared_vgprs": 1,
+   "note": "27 dwords per weight set resident in L1/L2 rather than in registers; a VMEM load is not a VALU-rate operation and this row is a different cost class, not a cheaper program"
+  },
+  "this-search-A-balanced4": {
+   "instructions": 1,
+   "prepared_vgprs": 1,
+   "steps": {
+    "ds_bpermute_b32": 1
+   }
+  },
+  "this-search-B-bytes": {
+   "instructions": 2,
+   "prepared_vgprs": 1,
+   "steps": {
+    "v_dot4_i32_iu8": 1,
+    "ds_bpermute_b32": 1
+   }
+  }
+ },
+ "multi_consumer": [
+  {
+   "consumers": 1,
+   "address_instructions": 1,
+   "lookup_instructions": 1,
+   "total_instructions": 2,
+   "prepared_vgprs": 1,
+   "prepared_bits": 864,
+   "joint_image": 22,
+   "shared_relabeling": "the 5-bit address is a sufficient statistic for every function of the three trits at once, so no consumer decodes before the next one reads",
+   "exact": true,
+   "mismatches": []
+  },
+  {
+   "consumers": 4,
+   "address_instructions": 1,
+   "lookup_instructions": 4,
+   "total_instructions": 5,
+   "prepared_vgprs": 4,
+   "prepared_bits": 3456,
+   "joint_image": 27,
+   "shared_relabeling": "the 5-bit address is a sufficient statistic for every function of the three trits at once, so no consumer decodes before the next one reads",
+   "exact": true,
+   "mismatches": []
+  },
+  {
+   "consumers": 16,
+   "address_instructions": 1,
+   "lookup_instructions": 16,
+   "total_instructions": 17,
+   "prepared_vgprs": 16,
+   "prepared_bits": 13824,
+   "joint_image": 27,
+   "shared_relabeling": "the 5-bit address is a sufficient statistic for every function of the three trits at once, so no consumer decodes before the next one reads",
+   "exact": true,
+   "mismatches": []
+  }
+ ]
+}

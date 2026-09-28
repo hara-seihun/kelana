@@ -1,0 +1,33 @@
+{
+  "panel": "train",
+  "window": 0,
+  "arithmetic": "Frozen BF16/FP32 source and FP32-decoded paid cache, then FP64 softmax/value/O diagnostic.",
+  "source_sha256": "4f661c62a6045256663e480177a2a83791463ac643ca9e099fecdf6b5dd7b45b",
+  "decoder_sha256": "40b3023ad318f3a07692158cafaf99fdf2946fe04abc4d5cc39ec81b12984a1f",
+  "manifest_sha256": "c7e326e38b01c95f66f26b49bbfddaf31a5d98e848e48e46f09041f20826a257",
+  "original_kivi_result_sha256": "120744a566847bdc609c421a21db2049ce2bd35c01e8d1bf169a146da18043eb",
+  "squared_norms": {
+    "reference": 513.1756918241738,
+    "key": 0.04398796876403363,
+    "value": 0.03097650418485884,
+    "cross": 0.00017659864064031164,
+    "both": 0.07473939064565657,
+    "key_linear": 0.04370533371328833
+  },
+  "twice_inner_products": {
+    "key_value": 0.0008477812372596252,
+    "key_cross": -6.665910438326279e-05,
+    "value_cross": -0.0011828030767525666
+  },
+  "linear_prediction_squared_norm": 0.07559027302920507,
+  "linear_prediction_discrepancy_squared": 0.0006131278978870207,
+  "exact_identity_max_abs": 6.355457609838466e-17,
+  "probability_difference_mass_max_abs": 6.927712010212288e-16,
+  "pair_relative_squared": {
+    "key": 8.571717145773334e-05,
+    "value": 6.0362376235607294e-05,
+    "cross": 3.441290058236401e-07,
+    "both": 0.0001456409409806263,
+    "key_linear": 8.516641456248637e-05
+  }
+}

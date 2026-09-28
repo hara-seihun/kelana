@@ -1,0 +1,89 @@
+{
+  "format": "kelana-capture-run/1",
+  "origin": "retrospective-from-original-results-and-extracted-fixture",
+  "case_evidence": "Array hashes and input.txt recovered from the original results and captures.npz. No build-time or run-time receipt existed.",
+  "build": {
+    "format": "kelana-capture-build/1",
+    "origin": "retrospective-from-original-results",
+    "source_commit_evidence": "The original pack hardcoded this commit; it was not sampled during build.",
+    "object_evidence": "The original pack hashed the object files at packaging, not at link time.",
+    "bonsai_root": "/path/to/workspace/projects/bonsai-halo",
+    "bonsai_source_commit": "7d67de7a41d669df88670e26391621cef49683f3",
+    "capture_source_sha256": "c6e1ea8713c6c748a38560c0fac4e17d8ab6499bc058046c6ded7d0e0e06a5ea",
+    "capture_object_sha256": null,
+    "capture_binary_sha256": "705bb9125ae492d93ead4f2ddd631db0310bd57be02299738b46ca7fc62cd4dc",
+    "linked_object_order": [
+      "src/chat.o",
+      "src/q8.o",
+      "src/tokenizer.o",
+      "src/repack.o",
+      "src/engine.o",
+      "src/batch.o",
+      "src/gguf.o",
+      "src/server.o",
+      "src/serve_batch.o",
+      "kernels/halo_draft.o",
+      "kernels/head_batch.o",
+      "kernels/attn_batch.o",
+      "kernels/halo_rows.o",
+      "kernels/halo_kernels.o",
+      "kernels/prep_batch.o",
+      "kernels/ffn_batch.o",
+      "kernels/sequence_batch.o",
+      "vendor/cpp-httplib/httplib.o"
+    ],
+    "linked_object_sha256": {
+      "src/chat.o": "535802869f992fe50ffe4ad33c5ecdeb60db57950736ac99ea38d07b2e07bf02",
+      "src/q8.o": "446d81f9733d5da841d8cd61801ca81dd323dc6cce4ed7f4e0a058df8f731869",
+      "src/tokenizer.o": "c4d0ae9d5f1bbcaba0f8784df0f718ef1d308ee14d62dc5aeec24311e9cef449",
+      "src/repack.o": "2e738df0d217e15b95bb62908e07629ead104620abda3f0ea25403aadf12c8b5",
+      "src/engine.o": "ba1e8bd526a9d76d196bebcec15d479f90f9eb0c7df22afabd14e0f90c80bbb6",
+      "src/batch.o": "03bc9c4b3aeb6a13c5e8a7c4d4a50d4bd3ded0d0cbdd62ddcefebfcfa5ed31e0",
+      "src/gguf.o": "ab04252921469e03001c57dc86cc4b08ec58e2b61687c835aa95e7d3c313b269",
+      "src/server.o": "f8d26c061bdd121a0e34ce7fc100bd19b3f829a2d1d25267c2cd955caf470576",
+      "src/serve_batch.o": "af76fb39ddeb9bc54063c5a495745a39cb4b1151984b657ac127b9033baeec3b",
+      "kernels/halo_draft.o": "75bd26ac23010bd37ddcbaa5979fd1d28050184942be41ff6055972d7f57ab81",
+      "kernels/head_batch.o": "148a425d2fea94bb197d1ac276b1c892d1e3e913f4ea9c5727260be2945175fc",
+      "kernels/attn_batch.o": "3e36145f5e56ed77d92f76996fd49884abf595e5e5e0f59e15200388206fd307",
+      "kernels/halo_rows.o": "643a00ac4ee4acf6ed995bfd095343453f1b6f5c9bd201ea4bba74c2fba3e31e",
+      "kernels/halo_kernels.o": "2b6f1ead76609954a662534663fae1c9b13cbde87bebbca90c9ee8b714e2e459",
+      "kernels/prep_batch.o": "44d05b0df6b66dae902643962d320e42e9a055dbaf46569742d7f2a3b8b5d126",
+      "kernels/ffn_batch.o": "eaa1f7009ff5b18e4ec4f78ea5a6af357c4530e6729dfe4e50ede2cd9dc1234d",
+      "kernels/sequence_batch.o": "00e74d24b5a476f9285f2a5ae54be421c5b7d59b0a82e13855614c7888df175a",
+      "vendor/cpp-httplib/httplib.o": "7ec38344c4da9cc69cab78dc9b50fd22fe046e6b6163ba3351ddd378414344de"
+    },
+    "halo_decoder_source_sha256": "ae6053ad4ce0ea23eb26774aaf61d21cf12e4e495438d761bbfed4590d52e109"
+  },
+  "inputs": {
+    "model_path": "/path/to/workspace/data/bonsai2/PTQ1_0.gguf",
+    "model_bytes": 5946648928,
+    "model_mtime_seconds": 1789744185,
+    "halo_head_offset": 24576,
+    "halo_head_bytes": 278118400,
+    "halo_head_sha256": "1590e2218ba66c23f8c01e97bb09773516d2cfdcee30a3c2458b2762f1abd4c5",
+    "prompts_sha256": "63762b425fc9ae2118e5fa8e2c576f7710a22a9a67501a63be791bde39f4e8cb"
+  },
+  "cases": [
+    {
+      "query.i8": "e7c969cbbe91bad64a77395b70c64b61cb8540018dffb9187997585abe389968",
+      "scales.f32": "0f8b7b7005c2f2152e287e142047bdd180b70589653da506a1e7fe7bfea83028",
+      "sums.i32": "9224a58a1926c2b4dc5a5f7e31fe0c253a3b40cf305776414bad8c0f032803c3",
+      "logits.f32": "a1ba88f92541063f4c0aa5d79063a331e9f50baea64632a8d2caefc896e5d4e0",
+      "input.txt": "6e460dcbad5a0ba847af13c0bb070cce31ff810b9a859144507666600aca8f3f"
+    },
+    {
+      "query.i8": "59ed6ce6391273fd0b4ca9a137cdd2ba223b6177cef88cd426f76dc5809e3b2a",
+      "scales.f32": "df0868b7fdbf930608ca9bd44a42cef83290aac99b8659f1d319f117a9631c5d",
+      "sums.i32": "fa6a74acfd64f684e23511563aefa88ddeb7e76f647cd30b7056e56521d5014b",
+      "logits.f32": "e0bc03fbcd20c405b8f17f75025acf052a99b2df238a2872f93108eb9af4637d",
+      "input.txt": "4705142e2a43b97a34f86c289e63f705491ebbf55decb7ab69e53957f68e3c4a"
+    },
+    {
+      "query.i8": "a4c11ac40409f531ef89802eb3e4888cac2e8aec2bbae88a0adf19505f9256a7",
+      "scales.f32": "2602566179e2f08665704e526f91b30d7be9f91d61216c70af887758688a2d26",
+      "sums.i32": "b03c647966e64997e4b6376ea4a979f588fd6df6e67295dd2284c2fe60195789",
+      "logits.f32": "4a659116f3e4957a054d77c284f2e0a282ca84aa3f3e3c64e49a20f29384557f",
+      "input.txt": "46d1f9150cb089fa2b181cf5fc48cde36331fd21bbc6046001915eef5235520c"
+    }
+  ]
+}

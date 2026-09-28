@@ -1,0 +1,189 @@
+{
+  "program": {
+    "paper": "https://arxiv.org/html/2504.19874v1#S3",
+    "seed": 20260924,
+    "rng": "NumPy PCG64 default_rng",
+    "matrix_dtype": "little-endian FP32 row-major",
+    "rotation": "independent Gaussian QR with sign-diagonal R correction, realized in FP64 then stored FP32",
+    "S": "independent iid N(0,1), stored FP32",
+    "codebook": "exact d128 spherical-coordinate beta density symmetric 4-centroid Lloyd (data independent), stored FP32",
+    "centroid_solve": {
+      "iterations": 56,
+      "positive_threshold": 0.08651655772355689,
+      "inner": 0.03999159519757697,
+      "outer": 0.13304152024953822
+    },
+    "codebook_values": [
+      -0.13304151594638824,
+      -0.039991594851017,
+      0.039991594851017,
+      0.13304151594638824
+    ],
+    "sha256": "6aa9d5a62e4763b434f8e59ee1d79322dfda8e7146846748d77bc619f171a1cf",
+    "K_rotation_bytes": 65536,
+    "V_rotation_bytes": 65536,
+    "QJL_gaussian_bytes": 65536,
+    "centroids_bytes": 16,
+    "total_program_bytes": 196624
+  },
+  "panels": {
+    "train": {
+      "turbo_full_o_rel_sq": 1.3346292985785828,
+      "kivi_full_o_rel_sq": 4.957371262776078e-05,
+      "bf16_post_rope_k_rounding_full_o_rel_sq": 1.0107932695024392e-06,
+      "turbo_mean_head_kl": 26.92108399006486,
+      "kivi_mean_head_kl": 0.0022995717692708695,
+      "turbo_cache_bytes": 188416,
+      "turbo_shared_program_bytes": 196624,
+      "turbo_total_bytes": 385040,
+      "kivi_cache_peak_bytes": 419200,
+      "windows": [
+        {
+          "index": 0,
+          "turbo_o_sse": 11915.056640625,
+          "kivi_o_sse": 0.4717872142791748,
+          "reference_sq": 8920.47265625,
+          "bf16_k_rounding_o_sse": 0.008977328427135944,
+          "mean_turbo_head_kl": 25.323279187822493,
+          "mean_kivi_head_kl": 0.002393752600710286,
+          "image_sha256": "a9805dc1dd0538f854882ec4362793d186e830adf9eb29c163f3b81d9d89a7e1",
+          "kivi_original_head0_sha256": "2f70b7260466b2f6917698d593cbeab4ba1ca21a5a50e20eb081326b28b2b364"
+        },
+        {
+          "index": 1,
+          "turbo_o_sse": 11824.798828125,
+          "kivi_o_sse": 0.391792356967926,
+          "reference_sq": 8846.41796875,
+          "bf16_k_rounding_o_sse": 0.0086203059181571,
+          "mean_turbo_head_kl": 27.142910954337264,
+          "mean_kivi_head_kl": 0.002133005238192709,
+          "image_sha256": "99ede4313d0f0889e5a4cf3001cacac9fdc11783c65afd6ad7f269dff91aff89",
+          "kivi_original_head0_sha256": "493f81683dbf4b77ffebebedd9c3e323db9a4863acc361ba23d5b7b5ca83d068"
+        },
+        {
+          "index": 2,
+          "turbo_o_sse": 11872.73046875,
+          "kivi_o_sse": 0.39990678429603577,
+          "reference_sq": 8926.62109375,
+          "bf16_k_rounding_o_sse": 0.008048786781728268,
+          "mean_turbo_head_kl": 27.083386478076342,
+          "mean_kivi_head_kl": 0.002240758831931089,
+          "image_sha256": "7cdcb74fe656feef35bbd2618adcae71e87fde154f9f782044d5f249c7373eba",
+          "kivi_original_head0_sha256": "268c6c2eb24f7a7b1ee4a16c390bf6452187fc87ab6316fadb2d6649c82b28a2"
+        },
+        {
+          "index": 3,
+          "turbo_o_sse": 11640.287109375,
+          "kivi_o_sse": 0.355257123708725,
+          "reference_sq": 8846.390625,
+          "bf16_k_rounding_o_sse": 0.007556471042335033,
+          "mean_turbo_head_kl": 26.495414593569635,
+          "mean_kivi_head_kl": 0.0022989410258560383,
+          "image_sha256": "253687a21cfcd0f8acaab864e2ec79fd3acbf5c31d67debb20d1a9b005626cc3",
+          "kivi_original_head0_sha256": "726dd1cc15b4021667e158e188b064d1bf91419018aada22597351dc134eba74"
+        },
+        {
+          "index": 4,
+          "turbo_o_sse": 11622.5712890625,
+          "kivi_o_sse": 0.5300132036209106,
+          "reference_sq": 8948.513671875,
+          "bf16_k_rounding_o_sse": 0.010049335658550262,
+          "mean_turbo_head_kl": 26.10671082358165,
+          "mean_kivi_head_kl": 0.0022274285779531056,
+          "image_sha256": "7a999a3181535dfcedb3cf5669b71ac13787caf59c48495e73354a9c238f52f7",
+          "kivi_original_head0_sha256": "cc6427585c39c46fb94a7f6733664286db3bbd4b426e863e093803c986aac31c"
+        },
+        {
+          "index": 5,
+          "turbo_o_sse": 12297.263671875,
+          "kivi_o_sse": 0.5337852835655212,
+          "reference_sq": 8933.6357421875,
+          "bf16_k_rounding_o_sse": 0.008686386980116367,
+          "mean_turbo_head_kl": 27.650337543138814,
+          "mean_kivi_head_kl": 0.002534091280267603,
+          "image_sha256": "b2858d3e04669bd73a7b01cc916d5d2678e095b482219604366201e124da5278",
+          "kivi_original_head0_sha256": "72a5c2f5f63a86307825fec986607081cbb343ea3f2ad9601b42d9223779dbab"
+        },
+        {
+          "index": 6,
+          "turbo_o_sse": 12253.935546875,
+          "kivi_o_sse": 0.40479734539985657,
+          "reference_sq": 8953.4501953125,
+          "bf16_k_rounding_o_sse": 0.010044094175100327,
+          "mean_turbo_head_kl": 28.852687948724043,
+          "mean_kivi_head_kl": 0.0024285197996505303,
+          "image_sha256": "cd9016b5ee9cb1348f5f19f8565f90ea27b50a026f3cb2d2ae901844be240ffd",
+          "kivi_original_head0_sha256": "d3ff0177632b3c5287d9ff48f477587dc9eb9699bdf306c75bf41d109ed2bd48"
+        },
+        {
+          "index": 7,
+          "turbo_o_sse": 11552.0927734375,
+          "kivi_o_sse": 0.44056808948516846,
+          "reference_sq": 8789.3798828125,
+          "bf16_k_rounding_o_sse": 0.009950274601578712,
+          "mean_turbo_head_kl": 26.713944391268647,
+          "mean_kivi_head_kl": 0.0021400767996055947,
+          "image_sha256": "0183104f914a9335ea8ea708a6ad8d7909cf67d71883930772584c60dbc541f8",
+          "kivi_original_head0_sha256": "e28cc87ed794332993aa5e2294760068bd37299a8c34296291603d80a0206616"
+        }
+      ]
+    },
+    "held": {
+      "turbo_full_o_rel_sq": 1.359112395260371,
+      "kivi_full_o_rel_sq": 6.300174373228165e-05,
+      "bf16_post_rope_k_rounding_full_o_rel_sq": 9.781626022065573e-07,
+      "turbo_mean_head_kl": 27.125660574845035,
+      "kivi_mean_head_kl": 0.002536635470960391,
+      "turbo_cache_bytes": 188416,
+      "turbo_shared_program_bytes": 196624,
+      "turbo_total_bytes": 385040,
+      "kivi_cache_peak_bytes": 419200,
+      "windows": [
+        {
+          "index": 0,
+          "turbo_o_sse": 12187.0341796875,
+          "kivi_o_sse": 0.4420422613620758,
+          "reference_sq": 9041.7705078125,
+          "bf16_k_rounding_o_sse": 0.009592270478606224,
+          "mean_turbo_head_kl": 26.249636478015034,
+          "mean_kivi_head_kl": 0.0024088645955089305,
+          "image_sha256": "e0a796244aac8a8d251fad7a551b649f9ac55446337705f711db8fc685890761",
+          "kivi_original_head0_sha256": "a636a6c97e78117a460a9283b6405918bd493b7f83a94f82a4fee91c6466d08d"
+        },
+        {
+          "index": 1,
+          "turbo_o_sse": 12845.904296875,
+          "kivi_o_sse": 0.7851129174232483,
+          "reference_sq": 9596.439453125,
+          "bf16_k_rounding_o_sse": 0.008997520431876183,
+          "mean_turbo_head_kl": 26.62215684867582,
+          "mean_kivi_head_kl": 0.0026515922013459203,
+          "image_sha256": "dc8496baf532bb45e3bf4195df33bd980694d0ca50b11c4cd03ba6fc915d6127",
+          "kivi_original_head0_sha256": "1920a865eeb78d3476edc1c1510b3b49859be530ba823cb1ebf6c2bead7bfd75"
+        },
+        {
+          "index": 2,
+          "turbo_o_sse": 12402.046875,
+          "kivi_o_sse": 0.5711360573768616,
+          "reference_sq": 9081.904296875,
+          "bf16_k_rounding_o_sse": 0.009098080918192863,
+          "mean_turbo_head_kl": 27.644868417206624,
+          "mean_kivi_head_kl": 0.0026787179544953688,
+          "image_sha256": "345e0daaffdba8fc14ec8f950b400f091a311040398f27a3e1c162ff61bf7133",
+          "kivi_original_head0_sha256": "6cc81b594dd7d08067e62869f359114e14d9fb918a12dc8bfcd518216dc33772"
+        },
+        {
+          "index": 3,
+          "turbo_o_sse": 12128.6025390625,
+          "kivi_o_sse": 0.49923211336135864,
+          "reference_sq": 8747.5009765625,
+          "bf16_k_rounding_o_sse": 0.00798338558524847,
+          "mean_turbo_head_kl": 27.985980555482666,
+          "mean_kivi_head_kl": 0.002407367132491345,
+          "image_sha256": "67930f1a33e60e5cefc1f6531f79aa4b78b34b9e71e8c8d4410ba9a9c5b5041e",
+          "kivi_original_head0_sha256": "f935eab0093b05a86cbf973285c95ddaa35a99f373dfe603a1c79e892b6f1096"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "scope": "layer-0, four held streams, original two retained Q per stream; t128/t256 K32 and V33 flush-boundary steps, one measurement/arm/state control first",
+  "source_hash": "b2724979ebfd738ca42fa2aab1847720e134d5971308bbe51a010ba907e6589d",
+  "binary_sha256": "2510dcc1390754d43cfd7a356ff9e13f51b3d4da182f93abb4bed89aec19e598",
+  "device_acceptance": {
+    "phases": 4096,
+    "original_ordered_record_checks": 4850176,
+    "full_output_guards": 16,
+    "max_abs": 7.15255737e-07,
+    "max_relative_l2": 8.52962566e-07,
+    "max_arm_difference": 0.0,
+    "teacher_sse_by_arm": {
+      "0": 0.8326574748393251,
+      "1": 0.8326574748393251
+    },
+    "snapshot_sha256": {
+      "held-0": "9d12c5d651b0947deab63f5924364aa587140726edf4e27f920a0045ceefcefc",
+      "held-1": "9b0069f8d2fa302ae62237da082b64bf24fc8d7d463b30494a9efe5fb15c1bc2",
+      "held-2": "57fa3a89aa54688eb3dc45c23728e02b5492c3f57d792cd21b4474ae38931c8d",
+      "held-3": "f6a256b4dbc99d41e9bcd5c7654b7162c90a7f693739eb2d7898a32e12c4757d"
+    },
+    "snapshot_zst_sha256": {
+      "held-0": "e348455c7f034e2a5f467d29bf9135e7adea9389238d86a8486b8ac2207f10e4",
+      "held-1": "a8e3ac6fb645030fd33ad027f7241614ecb2ef257322d42ffb8e91f2f7f775a9",
+      "held-2": "5483444225febb3e10960cd8d8231dad51b1c314b5a184fb63f64d5cd494c4d0",
+      "held-3": "19c65aeee21fd5c9d5dfabb7606fd42f3736371a7c1fbe302272e464a7c71350"
+    }
+  },
+  "timing": {
+    "by_step": {
+      "128": {
+        "control_medians_us": {
+          "step_event_us": 80.5170021,
+          "input_span_us": 16.35949995,
+          "compute_span_us": 64.1575012,
+          "step_wall_us": 104.6515
+        },
+        "stable_medians_us": {
+          "step_event_us": 177.3025015,
+          "input_span_us": 18.489000349999998,
+          "compute_span_us": 158.8135035,
+          "step_wall_us": 258.6155
+        },
+        "matched_event_ratios": [
+          1.3870066928623226,
+          2.831949465581703,
+          1.5712119504847515,
+          2.768405681385433
+        ],
+        "median_matched_event_ratio": 2.169808815935092
+      },
+      "256": {
+        "control_medians_us": {
+          "step_event_us": 104.0655024,
+          "input_span_us": 25.5089998,
+          "compute_span_us": 78.5564995,
+          "step_wall_us": 140.16
+        },
+        "stable_medians_us": {
+          "step_event_us": 147.41449749999998,
+          "input_span_us": 19.73950005,
+          "compute_span_us": 127.675003,
+          "step_wall_us": 196.6085
+        },
+        "matched_event_ratios": [
+          1.3870147894339557,
+          1.184565681924613,
+          1.6520344037517776,
+          2.528913910944922
+        ],
+        "median_matched_event_ratio": 1.5195245965928668
+      }
+    },
+    "all_control_medians_us": {
+      "step_event_us": 89.93250275,
+      "input_span_us": 20.65449905,
+      "compute_span_us": 69.2780037,
+      "step_wall_us": 112.17099999999999
+    },
+    "all_stable_medians_us": {
+      "step_event_us": 147.41449749999998,
+      "input_span_us": 19.069499999999998,
+      "compute_span_us": 127.675003,
+      "step_wall_us": 226.022
+    },
+    "all_matched_event_ratios": [
+      1.3870066928623226,
+      1.3870147894339557,
+      2.831949465581703,
+      1.184565681924613,
+      1.5712119504847515,
+      1.6520344037517776,
+      2.768405681385433,
+      2.528913910944922
+    ],
+    "median_matched_event_ratio": 1.6116231771182645
+  },
+  "resources": {
+    "device_global_bytes": {
+      "stable_state": 276428,
+      "control_state": 305156,
+      "value_stage": 384,
+      "arrival": 4096,
+      "q": 8192,
+      "o": 4194304,
+      "partial": 32768,
+      "output": 4096,
+      "stable_total": 4520268,
+      "control_total": 4548996
+    },
+    "module_body_bytes": 50500,
+    "module_descriptor_bytes": 576,
+    "kernels": [
+      {
+        "symbol": "_ZN6stable10append_keyEPNS_5CacheEPNS_7ControlEPKhii",
+        "body_bytes": 468,
+        "descriptor_bytes": 64,
+        "lds": 0,
+        "private_scratch": 0,
+        "vgpr": 7,
+        "sgpr": 13
+      },
+      {
+        "symbol": "_ZN6stable13append_recentEPNS_5CacheEPNS_7ControlEPKhii",
+        "body_bytes": 4108,
+        "descriptor_bytes": 64,
+        "lds": 44,
+        "private_scratch": 0,
+        "vgpr": 19,
+        "sgpr": 37
+      },
+      {
+        "symbol": "_ZN6stable9flush_keyEPNS_5CacheEPNS_7ControlEii",
+        "body_bytes": 8344,
+        "descriptor_bytes": 64,
+        "lds": 4608,
+        "private_scratch": 0,
+        "vgpr": 51,
+        "sgpr": 13
+      },
+      {
+        "symbol": "_ZN6stable11flush_valueEPNS_5CacheEPNS_7ControlEPNS_7ScratchEii",
+        "body_bytes": 7036,
+        "descriptor_bytes": 64,
+        "lds": 144,
+        "private_scratch": 0,
+        "vgpr": 51,
+        "sgpr": 15
+      },
+      {
+        "symbol": "_ZN6stable12finish_valueEPNS_5CacheEPNS_7ScratchEi",
+        "body_bytes": 1648,
+        "descriptor_bytes": 64,
+        "lds": 156,
+        "private_scratch": 0,
+        "vgpr": 9,
+        "sgpr": 21
+      },
+      {
+        "symbol": "_ZN6stable12finish_earlyEPNS_5CacheEi",
+        "body_bytes": 120,
+        "descriptor_bytes": 64,
+        "lds": 0,
+        "private_scratch": 0,
+        "vgpr": 2,
+        "sgpr": 5
+      },
+      {
+        "symbol": "_Z8finish_oPKfPf",
+        "body_bytes": 372,
+        "descriptor_bytes": 64,
+        "lds": 0,
+        "private_scratch": 0,
+        "vgpr": 12,
+        "sgpr": 4
+      },
+      {
+        "symbol": "_Z11query_groupILi1EEvPKN6stable5CacheEPKNS0_7ControlEiPKfPKtPf",
+        "body_bytes": 14436,
+        "descriptor_bytes": 64,
+        "lds": 5632,
+        "private_scratch": 0,
+        "vgpr": 25,
+        "sgpr": 44
+      },
+      {
+        "symbol": "_Z11query_groupILi0EEvPKN6stable5CacheEPKNS0_7ControlEiPKfPKtPf",
+        "body_bytes": 13968,
+        "descriptor_bytes": 64,
+        "lds": 5632,
+        "private_scratch": 0,
+        "vgpr": 24,
+        "sgpr": 44
+      }
+    ],
+    "query_lds_bytes_per_cta": {
+      "stable": 5632,
+      "control": 5632
+    },
+    "host_empty_candidate_staging_and_h2d_bytes": 276428,
+    "immutable_o_preparation_h2d_bytes": 4194304
+  },
+  "stage_receipts": {
+    "accept-held-0": "17a5d15fdb5e3a664567f80f718c080a02b72a893ea9ae1a801196f749c59735",
+    "accept-held-1": "ad6f5f2c20bb5a2d947dab3bcd888f2835039ead620ecd5f1e02bbd1b793e143",
+    "accept-held-2": "181991af4ab2e9e4c69ca0c04c96c44e8490949a0f40ba3c20c0c0b75ad823f2",
+    "accept-held-3": "e5df7f4572286aea8848a952df248887f9dc21fc79e36ef4d352b9ed75a0f7a2",
+    "timing-held-0": "9347595ee3103231af2d7628ddbb6cb71e266fdc8bdf883e4f617fc0cd332a74",
+    "timing-held-1": "9e02bd6cdf18a10cf417c0702c5f888ebca4704b227186df97c42b7ab506b7ae",
+    "timing-held-2": "86e5186166f202bc7402fd4e8e2cda1da666d5db25c373670482f6c431a6190a",
+    "timing-held-3": "4a1e933d6abb60b2a754217265c263667eb194e342c24838bfa1d9b4675f2643"
+  }
+}

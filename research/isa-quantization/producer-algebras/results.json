@@ -1,0 +1,628 @@
+{
+  "domain": "integer 0..31, two branches and live product",
+  "affine_partitions": 797,
+  "square_program": "(x*x)>>7",
+  "payload_bytes_estimate": {
+    "square_two_branch_fp16_table": 32,
+    "square_three_output_fp16_table": 48,
+    "optimal_interval_three_output_fp16_table_plus_cuts": 53,
+    "direct_two_branch_fp16_table": 128,
+    "scalar_q4_codes": 144,
+    "scalar_q4_scales": 12,
+    "scalar_q4_output_gain_origin": 8
+  },
+  "records": [
+    {
+      "kind": "silu",
+      "seed": 0,
+      "square": 0.1171872642749952,
+      "affine": 0.0954978808255895,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 0.0004786641834641429,
+      "derivative_covariance_bound": 0.0015063625612476434,
+      "square_three_table": 0.1167090806387079,
+      "ideal_eight_intervals": 0.06763389208530332,
+      "direct_full": 2.9772610268684854e-07,
+      "scalar_q4": 0.005935187227201121
+    },
+    {
+      "kind": "silu",
+      "seed": 1,
+      "square": 0.046230365383378505,
+      "affine": 0.08178119088040017,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 3.2117142442761204e-05,
+      "derivative_covariance_bound": 9.742188459725951e-05,
+      "square_three_table": 0.04619847923334915,
+      "ideal_eight_intervals": 0.043661024886339446,
+      "direct_full": 1.3995690162156463e-07,
+      "scalar_q4": 0.0043609792477015815
+    },
+    {
+      "kind": "silu",
+      "seed": 2,
+      "square": 0.05990141443636879,
+      "affine": 0.056663678113706095,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 1.1917860582470125e-05,
+      "derivative_covariance_bound": 0.0001675697959121155,
+      "square_three_table": 0.05988874507187258,
+      "ideal_eight_intervals": 0.044882858358166675,
+      "direct_full": 5.167329082352451e-07,
+      "scalar_q4": 0.00059710061597155
+    },
+    {
+      "kind": "silu",
+      "seed": 3,
+      "square": 0.0396886704819307,
+      "affine": 0.09103668017360866,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 2.9586878373314534e-05,
+      "derivative_covariance_bound": 4.000037348479447e-05,
+      "square_three_table": 0.03965945972435786,
+      "ideal_eight_intervals": 0.03226702611572819,
+      "direct_full": 2.113931254328454e-07,
+      "scalar_q4": 9.48099619650688e-05
+    },
+    {
+      "kind": "silu",
+      "seed": 4,
+      "square": 0.03535690117721096,
+      "affine": 0.06914605130562732,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 1.8088305372778842e-05,
+      "derivative_covariance_bound": 6.611585170576112e-05,
+      "square_three_table": 0.03533649570212923,
+      "ideal_eight_intervals": 0.0349585678721543,
+      "direct_full": 2.568643124444922e-07,
+      "scalar_q4": 1.60568785912523e-05
+    },
+    {
+      "kind": "silu",
+      "seed": 5,
+      "square": 0.07782472031919879,
+      "affine": 0.06652898911455232,
+      "affine_program": [
+        31,
+        8,
+        7
+      ],
+      "covariance": 1.8575686345225964e-05,
+      "derivative_covariance_bound": 0.0001345153576746665,
+      "square_three_table": 0.07780591759417496,
+      "ideal_eight_intervals": 0.046780988041207804,
+      "direct_full": 5.841609858345699e-07,
+      "scalar_q4": 0.03114399648748719
+    },
+    {
+      "kind": "silu",
+      "seed": 6,
+      "square": 0.04703779972711521,
+      "affine": 0.06683584975847343,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 1.451629020390494e-05,
+      "derivative_covariance_bound": 0.00011900429873340713,
+      "square_three_table": 0.04702434451963247,
+      "ideal_eight_intervals": 0.04285734699880229,
+      "direct_full": 4.2594387838093163e-07,
+      "scalar_q4": 3.428138277537076e-05
+    },
+    {
+      "kind": "silu",
+      "seed": 7,
+      "square": 0.050812812047341824,
+      "affine": 0.10297650509418593,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 3.960210682650488e-05,
+      "derivative_covariance_bound": 6.475508239853488e-05,
+      "square_three_table": 0.050772156662728024,
+      "ideal_eight_intervals": 0.044275279081314046,
+      "direct_full": 2.478301221466111e-07,
+      "scalar_q4": 0.00032715301807827613
+    },
+    {
+      "kind": "silu",
+      "seed": 8,
+      "square": 0.12583217908606678,
+      "affine": 0.04521703583169984,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 0.0003704256044999284,
+      "derivative_covariance_bound": 0.0019163907472122307,
+      "square_three_table": 0.12546136552189147,
+      "ideal_eight_intervals": 0.043190346890342166,
+      "direct_full": 3.574478314703334e-07,
+      "scalar_q4": 0.0002161038659930797
+    },
+    {
+      "kind": "silu",
+      "seed": 9,
+      "square": 0.04897979555894605,
+      "affine": 0.0633563108297566,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 4.0625553615612376e-05,
+      "derivative_covariance_bound": 0.0001879559549165589,
+      "square_three_table": 0.048938553958021776,
+      "ideal_eight_intervals": 0.04171375057362924,
+      "direct_full": 2.3049998100427888e-07,
+      "scalar_q4": 6.0016210292132045e-05
+    },
+    {
+      "kind": "silu",
+      "seed": 10,
+      "square": 0.04176911747173016,
+      "affine": 0.07244531407165575,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 1.5577449840580306e-05,
+      "derivative_covariance_bound": 7.025573449353905e-05,
+      "square_three_table": 0.04175276698663294,
+      "ideal_eight_intervals": 0.04091643731066475,
+      "direct_full": 2.736894020006e-07,
+      "scalar_q4": 0.00043731585880667884
+    },
+    {
+      "kind": "silu",
+      "seed": 11,
+      "square": 0.04552899111353771,
+      "affine": 0.08365557501378798,
+      "affine_program": [
+        15,
+        0,
+        6
+      ],
+      "covariance": 2.05282419169555e-05,
+      "derivative_covariance_bound": 4.892939180638536e-05,
+      "square_three_table": 0.04550850237320497,
+      "ideal_eight_intervals": 0.04208708766199247,
+      "direct_full": 2.2501993645681436e-07,
+      "scalar_q4": 0.00031988795121284166
+    },
+    {
+      "kind": "linear",
+      "seed": 0,
+      "square": 0.13641230327895115,
+      "affine": 0.04620750913363174,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 0.00039732313756023847,
+      "derivative_covariance_bound": 0.0003973231375602607,
+      "square_three_table": 0.13601479021735186,
+      "ideal_eight_intervals": 0.04619423051424475,
+      "direct_full": 3.419537095059246e-07,
+      "scalar_q4": 1.0876297478168396e-08
+    },
+    {
+      "kind": "linear",
+      "seed": 1,
+      "square": 0.1362093023970135,
+      "affine": 0.04623285893963763,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 0.00040411728402398793,
+      "derivative_covariance_bound": 0.0004041172840239944,
+      "square_three_table": 0.13580657250802664,
+      "ideal_eight_intervals": 0.04621890085680865,
+      "direct_full": 5.716634608758565e-07,
+      "scalar_q4": 5.50599878470944e-09
+    },
+    {
+      "kind": "linear",
+      "seed": 2,
+      "square": 0.16451238567048204,
+      "affine": 0.04410389253756344,
+      "affine_program": [
+        1,
+        0,
+        2
+      ],
+      "covariance": 1.625421718787658e-05,
+      "derivative_covariance_bound": 1.6254217187878685e-05,
+      "square_three_table": 0.1644968080916891,
+      "ideal_eight_intervals": 0.044089899710097545,
+      "direct_full": 1.2197381891577284e-05,
+      "scalar_q4": 6.263878392259562e-08
+    },
+    {
+      "kind": "linear",
+      "seed": 3,
+      "square": 0.1295656401711116,
+      "affine": 0.04778449922370625,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 0.0007656480262199884,
+      "derivative_covariance_bound": 0.0007656480262200062,
+      "square_three_table": 0.12879853277857078,
+      "ideal_eight_intervals": 0.047417424786980786,
+      "direct_full": 4.6144690305308417e-07,
+      "scalar_q4": 7.357929112594441e-09
+    },
+    {
+      "kind": "linear",
+      "seed": 4,
+      "square": 0.14129964340931178,
+      "affine": 0.04565225862185775,
+      "affine_program": [
+        1,
+        0,
+        2
+      ],
+      "covariance": 0.0002645699184750226,
+      "derivative_covariance_bound": 0.00026456991847503966,
+      "square_three_table": 0.14103052464452026,
+      "ideal_eight_intervals": 0.0456425000853037,
+      "direct_full": 9.9253605076813e-07,
+      "scalar_q4": 4.383434920576227e-09
+    },
+    {
+      "kind": "linear",
+      "seed": 5,
+      "square": 0.12873931124948126,
+      "affine": 0.048236950344076907,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 0.000860227699503936,
+      "derivative_covariance_bound": 0.0008602276995039893,
+      "square_three_table": 0.12787844798802206,
+      "ideal_eight_intervals": 0.04773289601021023,
+      "direct_full": 4.5057691254349136e-07,
+      "scalar_q4": 4.9378133733034945e-09
+    },
+    {
+      "kind": "linear",
+      "seed": 6,
+      "square": 0.15286868565121464,
+      "affine": 0.04455944677312717,
+      "affine_program": [
+        1,
+        0,
+        2
+      ],
+      "covariance": 9.036142934363185e-05,
+      "derivative_covariance_bound": 9.036142934364532e-05,
+      "square_three_table": 0.15277061869572947,
+      "ideal_eight_intervals": 0.04455325697990529,
+      "direct_full": 2.3118820888045387e-06,
+      "scalar_q4": 6.964048501119322e-09
+    },
+    {
+      "kind": "linear",
+      "seed": 7,
+      "square": 0.20343295361038333,
+      "affine": 0.04465153478609489,
+      "affine_program": [
+        1,
+        0,
+        2
+      ],
+      "covariance": 0.00010483716371740148,
+      "derivative_covariance_bound": 0.00010483716371741456,
+      "square_three_table": 0.2033379472148881,
+      "ideal_eight_intervals": 0.04464376688528722,
+      "direct_full": 5.5110111273735564e-06,
+      "scalar_q4": 3.259707187132709e-08
+    },
+    {
+      "kind": "linear",
+      "seed": 8,
+      "square": 0.13299025200575648,
+      "affine": 0.0467516509055208,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 0.0005354816710752684,
+      "derivative_covariance_bound": 0.000535481671075294,
+      "square_three_table": 0.13245356846501619,
+      "ideal_eight_intervals": 0.0467326607836198,
+      "direct_full": 8.552774100646647e-07,
+      "scalar_q4": 6.4728051032331754e-09
+    },
+    {
+      "kind": "linear",
+      "seed": 9,
+      "square": 0.1394658560513857,
+      "affine": 0.04590524525186719,
+      "affine_program": [
+        31,
+        0,
+        7
+      ],
+      "covariance": 0.0003081384695752632,
+      "derivative_covariance_bound": 0.0003081384695752794,
+      "square_three_table": 0.13915617018319792,
+      "ideal_eight_intervals": 0.04589298045795233,
+      "direct_full": 8.435157843991326e-07,
+      "scalar_q4": 3.888967731343709e-09
+    },
+    {
+      "kind": "linear",
+      "seed": 10,
+      "square": 0.2830006523887031,
+      "affine": 0.04913859894393127,
+      "affine_program": [
+        31,
+        59,
+        7
+      ],
+      "covariance": 0.0010401483402739465,
+      "derivative_covariance_bound": 0.0010401483402740447,
+      "square_three_table": 0.2820004457071626,
+      "ideal_eight_intervals": 0.04839753143513906,
+      "direct_full": 2.2041210141315772e-06,
+      "scalar_q4": 2.3467776496943745e-08
+    },
+    {
+      "kind": "linear",
+      "seed": 11,
+      "square": 0.142897347269084,
+      "affine": 0.04544036601720377,
+      "affine_program": [
+        1,
+        0,
+        2
+      ],
+      "covariance": 0.00023113174284037578,
+      "derivative_covariance_bound": 0.00023113174284038467,
+      "square_three_table": 0.1426652165501533,
+      "ideal_eight_intervals": 0.04543342702320152,
+      "direct_full": 9.413456963424214e-07,
+      "scalar_q4": 1.2815584133719123e-10
+    },
+    {
+      "kind": "unstructured",
+      "seed": 0,
+      "square": 2.394514877474984,
+      "affine": 1.7255485061360973,
+      "affine_program": [
+        61,
+        12,
+        8
+      ],
+      "covariance": 0.2115465270868254,
+      "derivative_covariance_bound": 1442.3656446013617,
+      "square_three_table": 2.18301539867177,
+      "ideal_eight_intervals": 1.1678770682569157,
+      "direct_full": 1.744649342002346e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 1,
+      "square": 2.632834348938631,
+      "affine": 2.469025845973891,
+      "affine_program": [
+        25,
+        62,
+        7
+      ],
+      "covariance": 0.05449397140637852,
+      "derivative_covariance_bound": 425.79653805540033,
+      "square_three_table": 2.578341765906207,
+      "ideal_eight_intervals": 0.9419648188440897,
+      "direct_full": 1.5820226020870486e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 2,
+      "square": 2.66328940823122,
+      "affine": 2.379450826521861,
+      "affine_program": [
+        7,
+        23,
+        5
+      ],
+      "covariance": 0.22650824660226412,
+      "derivative_covariance_bound": 3199.211448001679,
+      "square_three_table": 2.436793634184906,
+      "ideal_eight_intervals": 1.1658943393250252,
+      "direct_full": 9.301008635087094e-08,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 3,
+      "square": 2.752391994444909,
+      "affine": 1.7230193916363201,
+      "affine_program": [
+        13,
+        63,
+        6
+      ],
+      "covariance": 0.12616182621165414,
+      "derivative_covariance_bound": 1259.6801472347395,
+      "square_three_table": 2.626231686499368,
+      "ideal_eight_intervals": 0.9026828401166904,
+      "direct_full": 2.0507375857826457e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 4,
+      "square": 2.32048585759089,
+      "affine": 2.0434665558934646,
+      "affine_program": [
+        25,
+        31,
+        7
+      ],
+      "covariance": 0.10730937072922314,
+      "derivative_covariance_bound": 2220.7901090077785,
+      "square_three_table": 2.2131864843916023,
+      "ideal_eight_intervals": 1.2627490223198867,
+      "direct_full": 1.7956383945552734e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 5,
+      "square": 2.0311765380589986,
+      "affine": 2.0063180458901844,
+      "affine_program": [
+        7,
+        31,
+        5
+      ],
+      "covariance": 0.06576681505117929,
+      "derivative_covariance_bound": 3759.419351074066,
+      "square_three_table": 1.965404188862086,
+      "ideal_eight_intervals": 1.4116081803157579,
+      "direct_full": 1.9610490063111358e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 6,
+      "square": 2.522679371367877,
+      "affine": 2.323999939714321,
+      "affine_program": [
+        29,
+        106,
+        7
+      ],
+      "covariance": 0.24912736413615824,
+      "derivative_covariance_bound": 3893.5645895662624,
+      "square_three_table": 2.273540481671145,
+      "ideal_eight_intervals": 1.4327999938058715,
+      "direct_full": 1.7795097076173297e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 7,
+      "square": 2.5126479556639363,
+      "affine": 2.043607232642579,
+      "affine_program": [
+        61,
+        73,
+        8
+      ],
+      "covariance": 0.25561166530073687,
+      "derivative_covariance_bound": 862.8645509837617,
+      "square_three_table": 2.2570502366497394,
+      "ideal_eight_intervals": 1.2805992499825825,
+      "direct_full": 2.039567891682085e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 8,
+      "square": 2.7499328013823856,
+      "affine": 2.083852545665274,
+      "affine_program": [
+        31,
+        59,
+        7
+      ],
+      "covariance": 0.17287186989055656,
+      "derivative_covariance_bound": 511.889644035945,
+      "square_three_table": 2.5770550500448084,
+      "ideal_eight_intervals": 1.3769943046734983,
+      "direct_full": 1.4108497632497201e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 9,
+      "square": 2.230994575470727,
+      "affine": 1.9071395453915816,
+      "affine_program": [
+        13,
+        48,
+        6
+      ],
+      "covariance": 0.10662516985824566,
+      "derivative_covariance_bound": 1837.51242371876,
+      "square_three_table": 2.124386457288735,
+      "ideal_eight_intervals": 1.1254271509426417,
+      "direct_full": 1.6441624115281246e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 10,
+      "square": 2.610218887379391,
+      "affine": 2.4894628674876014,
+      "affine_program": [
+        7,
+        31,
+        5
+      ],
+      "covariance": 0.16896179274086903,
+      "derivative_covariance_bound": 1524.811765114765,
+      "square_three_table": 2.441236641731076,
+      "ideal_eight_intervals": 1.8952936483631557,
+      "direct_full": 1.5923565940145335e-07,
+      "scalar_q4": null
+    },
+    {
+      "kind": "unstructured",
+      "seed": 11,
+      "square": 2.4844763434069055,
+      "affine": 1.9137337307907993,
+      "affine_program": [
+        7,
+        27,
+        5
+      ],
+      "covariance": 0.01766566724576917,
+      "derivative_covariance_bound": 1424.326284348405,
+      "square_three_table": 2.4668100634116303,
+      "ideal_eight_intervals": 1.5739288993803557,
+      "direct_full": 1.6915854946173692e-07,
+      "scalar_q4": null
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "source_fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "model_safetensors_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "gamma_first_two": [
+    4.53125,
+    1.2421875
+  ],
+  "train": {
+    "source_positions": 2048,
+    "probe_output_coordinates": [
+      0,
+      1
+    ],
+    "probe_input_directions": "unit vectors parallel to teacher q_proj rows 0 and 1",
+    "probe_teacher_row_cosine": 0.25842077248609574,
+    "epsilon": 1e-06,
+    "amplitude": 0.015625,
+    "jacobian_rankone_quadratic_matrix": [
+      [
+        22.80644172011315,
+        21.330570264129683
+      ],
+      [
+        1.7394698090138148,
+        1.6190825010053778
+      ]
+    ],
+    "jacobian_minor": -0.17837228426723076,
+    "jacobian_rank_two_singular_ratio": 0.00018186886549480366,
+    "finite_normalized_response_matrix": [
+      [
+        0.005564659452383332,
+        0.005205803390554559
+      ],
+      [
+        0.0004246567778488779,
+        0.00039521405178728124
+      ]
+    ],
+    "finite_minor": -1.1448084954852762e-08,
+    "finite_rank_two_singular_ratio": 0.00019602096734632678
+  },
+  "inspected_held": {
+    "source_positions": 1024,
+    "probe_output_coordinates": [
+      0,
+      1
+    ],
+    "probe_input_directions": "unit vectors parallel to teacher q_proj rows 0 and 1",
+    "probe_teacher_row_cosine": 0.25842077248609574,
+    "epsilon": 1e-06,
+    "amplitude": 0.015625,
+    "jacobian_rankone_quadratic_matrix": [
+      [
+        23.666646110035202,
+        20.413080877051534
+      ],
+      [
+        1.8172395174357052,
+        1.5583115791572417
+      ]
+    ],
+    "jacobian_minor": -0.2154485693046055,
+    "jacobian_rank_two_singular_ratio": 0.0002192783409190696,
+    "finite_normalized_response_matrix": [
+      [
+        0.005774148854562985,
+        0.004981518868460494
+      ],
+      [
+        0.00044367972152433333,
+        0.00038041141649903046
+      ]
+    ],
+    "finite_minor": -1.3646759486204997e-08,
+    "finite_rank_two_singular_ratio": 0.00023328636779807336
+  }
+}

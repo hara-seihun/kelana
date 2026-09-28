@@ -1,0 +1,231 @@
+{
+ "format": "kelana-resource-profile/1",
+ "target": "gfx1151",
+ "device": "Radeon 8060S",
+ "scope": "Conditional resource profile for lower-bound certificates on gfx1151. It fixes one cost space, names every assumption that is not derivable from the pinned AMD sources, and records the parameters whose values no pinned source supplies.",
+
+ "bridge": {
+  "purpose": "The deliverable. Every statement that carries weight in a certificate is sorted into one of three tiers, and a conclusion inherits the weakest tier any of its premises sits in. This is what separates a genuine architectural bound from a class restriction and from a measured rate.",
+  "tiers": {
+   "architectural": {
+    "means": "Read out of the pinned AMD RDNA 3.5 sources and true of every program that runs on the part. Operand counts, encoding widths, packed lane counts, matrix shapes, selector semantics, VOPD eligibility, correctness-level hazards.",
+    "gives": "Bounds that hold against an adversary who may write any program.",
+    "limit": "The pinned sources do not supply the throughput and port-capacity bounds needed by these cases. No architectural tier statement here establishes their elapsed time."
+   },
+   "family-restriction": {
+    "means": "True only inside a declared class of programs. The class is a hypothesis about what the schedule is allowed to do, not a property of the hardware.",
+    "gives": "Bounds that an out-of-class program may simply ignore.",
+    "limit": "A family-restricted impossibility is never a hardware impossibility. Escaping the class is a legitimate refutation and costs nothing."
+   },
+   "achieved-rate": {
+    "means": "A number a particular kernel reached on a particular run.",
+    "gives": "Existence. A schedule finishing in time T proves the minimum is at most T.",
+    "limit": "Never a floor. It bounds nothing from below, for the measured schedule or any other."
+   }
+  },
+  "inheritance_rule": "A step's tier is the weakest tier among everything it depends on: the premises it cites, the quantities its conclusion mentions, and transitively the steps it builds on. A claim's tier is the weakest tier over all its steps and its operation model. Absence of a citation is not architecture; a step with no premises inherits from whatever it depends on.",
+  "lower_bound_rule": "A derivation step in the lower-bound direction may cite architectural and family-restriction premises. Citing an achieved rate is rejected by validate.py, which is the mechanism that stops a measured regression from becoming an impossibility.",
+  "absence_of_measurement_is_not_unconditionality": "A step that uses no measured number can still be family-tier, and usually is. Tier tracks what the step depends on, not whether a number in it was measured. The checker computes it transitively so an empty premise list cannot launder a family assumption into architecture.",
+  "honest_summary_for_this_target": "No native dominance result is available here. The pinned sources do not contain the cost parameters a runtime claim needs, and the comparisons below are one-sided service-demand inequalities rather than dominance. What survives is a family-tier service-demand floor for the PERM observer, architectural capacity facts underneath it, and named missing premises."
+ },
+
+ "service_slot_semantics": {
+  "what_a_slot_count_is": "Service demand on one resource: the number of times a program must present work to the SIMD32 issue path. It is additive over instructions and independent of scheduling.",
+  "how_a_demand_becomes_a_time_lower_bound": {
+   "form": "T >= demand / C",
+   "requirement": "C must be a proved UPPER bound on the resource's service capacity, in completions per unit time. That is the only thing needed. Arguing that the resource is the bottleneck is neither necessary nor sufficient: an upper bound on any one resource's capacity already gives a valid time lower bound, and naming a resource the bottleneck establishes nothing about its capacity.",
+   "status_here": "No such C is available. tau_V would supply one and the pinned sources do not contain it, so no slot count in this profile becomes a time lower bound.",
+   "the_other_direction": "A time UPPER bound is not obtained by dividing demand by capacity either. It needs an exhibited feasible schedule: an assignment of instructions to issue opportunities respecting dependencies and hazards, or a measurement of a real one. That is why the WMMA side of the PERM comparison rests on a measured schedule rather than on demand arithmetic."
+  },
+  "what_it_is_not": [
+   "Not elapsed time, in either direction. A lower bound needs a capacity upper bound; an upper bound needs a feasible schedule.",
+   "Not a sum over resources. Work presented to independent resources overlaps, so adding their service demands overstates elapsed time. Nothing in this profile adds slot counts across different resources.",
+   "Not latency times instruction count. Result latency and issue occupancy are different quantities, and the LLVM GFX11 model that names 5 and 8 assigns them to Latency.",
+   "Not a dominance relation. Comparing a lower bound on one program's demand with an upper bound on another's is one-sided: it can confirm a preference and cannot refute one."
+  ],
+  "legitimate_use": "Compare two programs' demand on the same resource, for the same workload and output contract, charging all the work each of them needs. Both cases here compare sub-regions with work excluded on both sides, and say so."
+ },
+
+ "cost_space": {
+  "unit": "issue slot",
+  "definition": "One slot is the issue resource a single full-rate wave32 VALU instruction consumes on one SIMD32. Slots are an abstract counting unit. They are not cycles, not execution-unit occupancy and not nanoseconds.",
+  "why_abstract": "The pinned RDNA 3.5 manual and machine-readable ISA publish operand encodings, semantics and correctness-level scheduling rules. Neither publishes a per-instruction issue cost, reciprocal throughput, port occupancy or cycle table for gfx1151. Any cost stated in cycles would be invented, so this profile counts slots and states the transfer to time as an open parameter.",
+  "normalization": {
+   "lane_basis": "wave32, 32 lanes per SIMD32",
+   "rate_basis": "MAC per nanosecond per SIMD32",
+   "geometry": {"wgps": 20, "cus": 40, "simd32": 80, "source": "research/ffn/batched/GEOMETRY.md"},
+   "geometry_note": "HIP reports multiProcessorCount 20 on this target, which is WGPs. The physical SIMD32 count is 80. Probe records whose waves_per_simd field was printed against an assumed 40 carry twice the physical waves per SIMD; divide accordingly before reading them."
+  }
+ },
+
+ "assumptions": [
+  {
+   "id": "SLOT.POSITIVE",
+   "tier": "family-restriction",
+   "status": "assumed",
+   "statement": "Every issued instruction consumes at least one slot.",
+   "support": "Definitional for a counting resource. It excludes only a hardware that retires instructions for free.",
+   "if_false": "No instruction-count argument transfers to any resource at all."
+  },
+  {
+   "id": "SLOT.UNIT_VALU",
+   "tier": "family-restriction",
+   "tier_note": "Not architectural: no pinned source states per-opcode issue cost. It is a modelling choice about how to charge instructions.",
+   "status": "assumed",
+   "statement": "Every full-rate wave32 VALU instruction outside the VOPD encoding consumes exactly one slot, independently of opcode and operand pattern.",
+   "support": "No pinned source states per-opcode issue costs. Uniformity is one declared charging convention; nonuniform per-opcode bounds could also support comparisons.",
+   "related_observation": "MEAS.CORE_ABOVE_FLOOR records an assembled PERM+ADD3 stream that attains the instruction-count floor and still takes 1.256x the time per useful MAC of a pure PERM stream. Read narrowly: for those two streams the instruction-count model does not predict elapsed time. It is not a falsification of unit service demand, which is a definition of a counting resource rather than a prediction about time, and it does not establish that the extra time is issue cost.",
+   "if_false": "Slot counts remain valid as instruction counts. Which way the bounds move is not determined: a non-uniform charge could make either program dearer, and no claim of global conservatism is made here.",
+   "used_by": ["packed-2x2-slots", "perm-vs-iu4-wmma"]
+  },
+  {
+   "id": "DOMAIN.PERM_SEPARATION",
+   "tier": "family-restriction",
+   "status": "assumed, with a witness for one declared domain",
+   "statement": "The weight family ranges over all 3^g patterns of a g-trit group and needs more than 14 distinct contribution functions on the declared activation domain, even after removing activation-independent additive offsets. Each selector function is observed in common units, with no further weight-dependent relabeling or multiplicative correction.",
+   "why_it_is_needed": "The 14-function selector arity bounds nothing on its own. A group needs one selector code per equivalence class of its weight patterns under 'agree on every activation in the domain'. Only a separation statement over a declared domain turns the arity into a bound on g.",
+   "separation_is_existential": "For exact unshifted contributions, one activation vector can separate patterns. When a prepared additive offset is allowed, compare contributions relative to their value at zero. Two patterns with different normalized functions still need different codes. A minimum over activations would use the wrong quantifier.",
+   "witness": "For A4 activations and three-trit groups, the triple (-7, -6, -4) yields 25 distinct sums. All linear contributions vanish at the zero vector, so the two vectors together distinguish at least 25 normalized contribution functions even when prepared additive offsets are allowed. Also, zero and the three unit vectors distinguish all 27 coefficient patterns.",
+   "if_false": "On a domain or weight family where the 27 patterns collapse into 14 or fewer classes, a group can carry three or more trits and the 3/16 floor does not apply at all. This is a live escape, not a conservative approximation.",
+   "used_by": ["perm-vs-iu4-wmma"]
+  },
+  {
+   "id": "MODEL.WORD_COMBINER_GRAMMAR",
+   "tier": "family-restriction",
+   "status": "declared grammar",
+   "statement": "PERM results reach an accumulator only through the named 32-bit integer word combiners, each of which reads whole 32-bit words and writes one.",
+   "why_it_is_needed": "Counting operand fields does not bound how many values an instruction consumes. One field can name a multi-register fragment: the widest explicit input field in the pinned inventory is 256 bits. Implicit EXEC, MODE and the lane-crossing modifiers are not fields at all. A reduction argument must therefore name its opcodes and read their widths, which is what ENC.WORD_COMBINER_GRAMMAR does.",
+   "if_false": "A combiner outside the grammar that absorbs more than three words per issue lowers the floor proportionally. Nothing here refutes one existing.",
+   "used_by": ["perm-vs-iu4-wmma"]
+  },
+  {
+   "id": "MODEL.PARTIALS_IRREDUNDANT",
+   "tier": "family-restriction",
+   "status": "declared",
+   "statement": "The k PERM results of a reduction are k separately required summands. No two coincide, none is algebraically cancelled, none is shared between groups, and no quotient or rearrangement collapses several of them into one value before combining.",
+   "why_it_is_needed": "The counting argument reduces k live values to one. If partials cancel, repeat or factor, fewer than k values ever need to be live and the count does not apply.",
+   "if_false": "A weight layout that makes partials coincide reduces the combiner count and the floor with it.",
+   "used_by": ["perm-vs-iu4-wmma"]
+  },
+  {
+   "id": "MODEL.ACCUMULATOR_REQUIRED",
+   "tier": "family-restriction",
+   "status": "declared, and separated from the weaker form",
+   "statement": "A running accumulator is live across the reduction and must be included among the values combined, so k partials plus the accumulator reduce to one.",
+   "why_it_is_needed": "With a removable zero accumulator the combiner count is ceil((k-1)/2), not ceil(k/2). The counts differ only at odd k. The ratio (k+ceil((k-1)/2))/(8*k) has infimum 1/8 if k=1 is admitted, and 1/6 if k>=2. With the independent accumulator its infimum is 3/16.",
+   "if_false": "Use the stated k-dependent ratio. Its sufficient WMMA threshold is 16 with k=1 admitted, or 64/3 when k>=2. The case records these separately from the required-accumulator threshold 24.",
+   "used_by": ["perm-vs-iu4-wmma"]
+  },
+  {
+   "id": "SLOT.ENCODING_CLASS_UNIFORM",
+   "tier": "family-restriction",
+   "status": "assumed",
+   "statement": "Two instructions in the same encoding (ENC_VOP3P) with the same explicit operand signature (three 32-bit sources, one 32-bit VGPR destination) consume equal slots.",
+   "support": "ENC.DOT.SIGNATURES shows V_DOT8_I32_IU4 and V_DOT4_I32_IU8 have identical encodings, identical operand widths and identical operand types. Nothing in the pinned sources distinguishes them.",
+   "if_false": "The packed 2x2 comparison degrades to the symbolic ordering D4 <= D8 + S, which is still enough for its conclusion whenever the shift-or has positive cost and the narrower dot is not more expensive than the wider one.",
+   "used_by": ["packed-2x2-slots"]
+  },
+  {
+   "id": "SLOT.VOPD_PAIR_IS_ONE",
+   "tier": "family-restriction",
+   "tier_note": "Manual section 7.6 states a VOPD instruction is one shader instruction performing two operations at the same time. Granting it is the conservative choice here: it is used only to make the PERM floor survive dual issue.",
+   "status": "assumed",
+   "statement": "A VOPD instruction consumes one slot and performs two VALU operations.",
+   "support": "Manual section 7.6: the two packed operations are executed at the same time as a single shader instruction.",
+   "if_false": "Dual issue would be worth less than assumed. Every bound here is computed granting dual issue wherever ENC.VOPD.ELIGIBLE_SET allows it, so a weaker VOPD only makes the bounds more conservative.",
+   "used_by": ["perm-vs-iu4-wmma"]
+  },
+  {
+   "id": "MODEL.PERM_OBSERVER",
+   "tier": "family-restriction",
+   "status": "declared operation model, not a hardware fact",
+   "statement": "In the PERM lookup family, each weight group's contribution is produced by one V_PERM_B32 whose two data operands depend only on activations and whose selector byte is fixed offline from the weights, and PERM results reach an accumulator only through VALU integer adds.",
+   "support": "This is the family registered in research/ffn/batched/register-observer. Bounds proved inside it say nothing about V_PERM_B32 in general.",
+   "escapes_not_refuted": [
+    "several PERMs or planes per group",
+    "selectors computed online from data",
+    "a consumer instruction that eats packed byte state instead of an integer sum",
+    "weight families restricted enough that fewer than fourteen patterns occur per group",
+    "approximate table entries"
+   ],
+   "used_by": ["perm-vs-iu4-wmma"]
+  }
+ ],
+
+ "parameters": [
+  {
+   "id": "sigma_W_iu4",
+   "statement": "Slots charged to one V_WMMA_I32_16X16X16_IU4 on one SIMD32.",
+   "status": "unproved",
+   "no_source_value": "Neither the pinned ISA XML nor the RDNA 3.5 manual states a WMMA issue cost. GCNProcessors.td maps gfx1151 to GFX11SpeedModel and SISchedule.td assigns its integer arguments to Latency, not occupancy; the GFX11 WMMA pseudo uses two Write32Bit scheduling writes, which is not a two-slot WMMA theorem. See research/cost-model.md.",
+   "candidates": [
+    {
+     "value": 16,
+     "label": "sixteen-pass reading",
+     "status": "structural hypothesis, unproved",
+     "argument": "4096 MAC over 32 lanes in 16 passes is 8 MAC per lane per pass, exactly the per-lane product count of V_DOT8_I32_IU4. A 16-pass IU4 WMMA therefore issues at the same per-lane product rate as a full-rate packed nibble dot."
+    },
+    {
+     "value": "16.94",
+     "label": "observed ratio",
+     "status": "achieved rate, not a hardware ceiling",
+     "argument": "In one interleaved run, the IU4 WMMA schedule and the PERM-only schedule ran at 683.6464 and 723.8472 MAC/ns/SIMD32. Dividing their per-instruction times gives 16.94. Both figures are achieved throughputs of particular schedules; either could be below what the hardware permits, so their ratio is not a proved slot cost."
+    }
+   ],
+   "break_even_in_cases": {"perm-vs-iu4-wmma": 24}
+  },
+  {
+   "id": "tau_V",
+   "statement": "An upper bound on the rate at which one SIMD32 can complete non-VOPD full-rate VALU instructions. Equivalently a floor on the time per instruction.",
+   "status": "unproved, and no candidate is defensible",
+   "not_in_pinned_sources": "Searching the pinned manual text for per-cycle issue language returns memory bandwidth, the WMMA hazard rule and the delay-instruction description, and nothing that states a VALU issue rate. This establishes that the parameter is absent from the sources this repository pins. It does not establish that no vendor document, errata, performance guide or careful microbenchmark anywhere supplies one, and finding such a source would be a legitimate way to close this.",
+   "consequence": "Without a capacity upper bound, no slot count here becomes a time lower bound. A measured VALU time is an achieved rate: it shows a schedule reached that rate and bounds nothing from below."
+  }
+ ],
+
+ "evidence_roles": {
+  "achievability-upper-bound": "A measured schedule proves a program exists that finishes in the measured time. Valid on the side of a comparison that needs an upper bound.",
+  "achieved-rate": "A measured schedule's rate. It does not bound what any other schedule, or the same schedule under a different compiler or occupancy, can reach. Never valid as a lower bound.",
+  "source-derived": "Read out of a pinned AMD source. Valid anywhere.",
+  "rule": "validate.py rejects any derivation step marked direction=lower-bound that cites evidence with role=achieved-rate."
+ },
+
+ "no_defensible_hardware_lower_bound": [
+  {
+   "question": "How many cycles does any gfx1151 instruction take?",
+   "answer": "Not determinable from the sources this repository pins. AMD's machine-readable ISA and the RDNA 3.5 manual give semantics, encodings and correctness-level hazards, not a throughput or port model, and the LLVM scheduling model supplies latency estimates rather than occupancy. Other sources may exist; none is pinned here, and adopting one would be a source-acquisition task rather than an impossibility.",
+   "consequence": "No cycle-denominated lower bound appears anywhere in this component."
+  },
+  {
+   "question": "Is the IU4 WMMA instruction rate a hardware ceiling?",
+   "answer": "No. 683.6 MAC/ns/SIMD32 is what one schedule achieved, which is a feasible-schedule witness and bounds that path from above. It says nothing about a ceiling.",
+   "consequence": "This profile never claims WMMA is optimal. The comparison it supports is one-sided and conditional."
+  },
+  {
+   "question": "Does sigma_W <= 24 establish that IU4 WMMA dominates the PERM family?",
+   "answer": "No. It is sufficient for a service-demand comparison and nothing more: the WMMA path's demand then sits at or below a proved floor on the family's demand, for the sub-region compared. It is not necessary, and sigma_W > 24 leaves the question open rather than reversing it, because the family's actual demand may exceed its own floor by any amount.",
+   "consequence": "Both cases state a sufficient condition on service demand. Neither states an iff, and neither states dominance in time."
+  },
+  {
+   "question": "Does the measured 0.27-0.56 ratio of the PERM schedules to IU4 prove PERM cannot compete?",
+   "answer": "No. Those are achieved rates of particular kernels. The restricted-family demand argument is independent of those measurements, but needs the domain-separation, additive-reduction, independent-accumulator and charging premises as well as the source facts.",
+   "consequence": "Deleting measurements leaves the conditional slot inequality intact. The family premises, completeness of the charged region, sigma_W_iu4 and the service-capacity ceiling still need separate justification for a native comparison."
+  },
+  {
+   "question": "Why is the assembled PERM+ADD3 kernel 1.256x above its own instruction-count floor?",
+   "answer": "Not determined, and the static checks narrow the field less than they first appear to. Two specific static explanations are excluded: the declared VGPR count permits far more waves than the run requested, and the inner loop carries 32 independent accumulator chains rather than a serial one. Neither exclusion isolates all occupancy and latency effects. Achieved residency, wave launch and drain, instruction fetch, clock behaviour under different instruction mixes and forwarding on the accumulate path are all untested. Per-opcode issue cost and operand supply remain candidates among others, and PORT.VGPR_BANKS is documented only as a VOPD pairing rule.",
+   "consequence": "Read narrowly: the instruction-count model does not predict elapsed time for these two streams. That is not a falsification of unit service demand, and it does not show the profile's bounds are globally conservative."
+  },
+  {
+   "question": "Is two instructions optimal for the packed 2x2 ternary MAC?",
+   "answer": "Not proved. One V_DOT8_I32_IU4 under shared packing is refuted. One V_DOT4_I32_IU8 under shared packing is open: 5036 scanned affine weight rules came back infeasible and the general question returned UNKNOWN from CP-SAT at 40 s.",
+   "consequence": "packed-2x2-slots claims a strict saving from three slots to two, not optimality at two."
+  }
+ ],
+
+ "reads": [
+  "facts.json",
+  "cases/packed-2x2-slots.json",
+  "cases/perm-vs-iu4-wmma.json"
+ ]
+}

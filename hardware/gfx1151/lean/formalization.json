@@ -1,0 +1,128 @@
+{
+  "namespace": "Kelana.Hardware",
+  "note": "Instruction names are checked against the pinned ISA XML at generation time. Every entry names the Lean declaration that carries the meaning, the manual pseudocode it transcribes, and the modifier settings it covers and declines.",
+  "modeled": [
+    {
+      "instruction": "V_ADD_NC_U32",
+      "decl": "Kelana.Hardware.v_add_nc_u32",
+      "pseudocode": "D0.u32 = S0.u32 + S1.u32",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 37, 16.12 VOP3 opcode 293; note: supports saturation (unsigned 32-bit integer domain)",
+      "modeled": "VOP2 form; VOP3 with CLAMP=0 (wrapping) or CLAMP=1 (saturate to 0xFFFFFFFF per the CLMP field description)",
+      "unmodeled": "ABS, NEG, OMOD, OP_SEL, DPP8/DPP16"
+    },
+    {
+      "instruction": "V_SUB_NC_U32",
+      "decl": "Kelana.Hardware.v_sub_nc_u32",
+      "pseudocode": "D0.u32 = S0.u32 - S1.u32",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 38, 16.12 VOP3 opcode 294; note: supports saturation (unsigned 32-bit integer domain)",
+      "modeled": "VOP2 form; VOP3 with CLAMP=0 (wrapping) or CLAMP=1 (saturate to 0)",
+      "unmodeled": "ABS, NEG, OMOD, OP_SEL, DPP8/DPP16"
+    },
+    {
+      "instruction": "V_MUL_LO_U32",
+      "decl": "Kelana.Hardware.v_mul_lo_u32",
+      "pseudocode": "D0.u32 = S0.u32 * S1.u32",
+      "manual": "RDNA3.5 ISA 16.12 VOP3 opcode 812",
+      "modeled": "VOP3 with every modifier field clear; the low 32 bits of the product",
+      "unmodeled": "CLAMP, which the gfx1151 assembler rejects for this opcode"
+    },
+    {
+      "instruction": "V_LSHLREV_B32",
+      "decl": "Kelana.Hardware.v_lshlrev_b32",
+      "pseudocode": "D0.u32 = (S1.u32 << S0[4 : 0].u32)",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 24, 16.12 VOP3 opcode 280",
+      "modeled": "VOP2/VOP3 with no modifier field set; the shift count is S0[4:0], so a count of 32 shifts by zero",
+      "unmodeled": "CLAMP, ABS, NEG, OMOD, OP_SEL, and the DPP forms, which modify the shift count rather than the data"
+    },
+    {
+      "instruction": "V_LSHRREV_B32",
+      "decl": "Kelana.Hardware.v_lshrrev_b32",
+      "pseudocode": "D0.u32 = (S1.u32 >> S0[4 : 0].u32)",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 25, 16.12 VOP3 opcode 281",
+      "modeled": "VOP2/VOP3 with no modifier field set; shift count S0[4:0]",
+      "unmodeled": "CLAMP, ABS, NEG, OMOD, OP_SEL, DPP forms"
+    },
+    {
+      "instruction": "V_ASHRREV_I32",
+      "decl": "Kelana.Hardware.v_ashrrev_i32",
+      "pseudocode": "D0.i32 = (S1.i32 >> S0[4 : 0].u32)",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 26, 16.12 VOP3 opcode 282",
+      "modeled": "VOP2/VOP3 with no modifier field set; arithmetic shift, count S0[4:0]",
+      "unmodeled": "CLAMP, ABS, NEG, OMOD, OP_SEL, DPP forms"
+    },
+    {
+      "instruction": "V_AND_B32",
+      "decl": "Kelana.Hardware.v_and_b32",
+      "pseudocode": "D0.u32 = (S0.u32 & S1.u32)",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 27, 16.12 VOP3 opcode 283; note: input and output modifiers not supported",
+      "modeled": "VOP2/VOP3 with no modifier field set",
+      "unmodeled": "CLAMP, which the gfx1151 assembler rejects for this opcode; DPP forms"
+    },
+    {
+      "instruction": "V_OR_B32",
+      "decl": "Kelana.Hardware.v_or_b32",
+      "pseudocode": "D0.u32 = (S0.u32 | S1.u32)",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 28, 16.12 VOP3 opcode 284; note: input and output modifiers not supported",
+      "modeled": "VOP2/VOP3 with no modifier field set",
+      "unmodeled": "CLAMP, DPP forms"
+    },
+    {
+      "instruction": "V_XOR_B32",
+      "decl": "Kelana.Hardware.v_xor_b32",
+      "pseudocode": "D0.u32 = (S0.u32 ^ S1.u32)",
+      "manual": "RDNA3.5 ISA 16.11 VOP2 opcode 29, 16.12 VOP3 opcode 285; note: input and output modifiers not supported",
+      "modeled": "VOP2/VOP3 with no modifier field set",
+      "unmodeled": "CLAMP, DPP forms"
+    },
+    {
+      "instruction": "V_LSHL_OR_B32",
+      "decl": "Kelana.Hardware.v_lshl_or_b32",
+      "pseudocode": "D0.u32 = ((S0.u32 << S1.u32[4 : 0].u32) | S2.u32)",
+      "manual": "RDNA3.5 ISA 16.12 VOP3 opcode 598",
+      "modeled": "VOP3 with no modifier field set; the shifted operand is S0 and the count is S1[4:0]",
+      "unmodeled": "CLAMP, ABS, NEG, OMOD, OP_SEL, DPP forms"
+    },
+    {
+      "instruction": "V_BFE_U32",
+      "decl": "Kelana.Hardware.v_bfe_u32",
+      "pseudocode": "D0.u32 = ((S0.u32 >> S1[4 : 0].u32) & ((1U << S2[4 : 0].u32) - 1U))",
+      "manual": "RDNA3.5 ISA 16.12 VOP3 opcode 528",
+      "modeled": "VOP3 with no modifier field set; offset S1[4:0] and width S2[4:0], so width 0 yields 0 and no single extract reaches 32 bits",
+      "unmodeled": "CLAMP, ABS, NEG, OMOD, OP_SEL, DPP forms"
+    },
+    {
+      "instruction": "V_PERM_B32",
+      "decl": "Kelana.Hardware.v_perm_b32",
+      "pseudocode": "D0[b] = BYTE_PERMUTE({S0.u32, S1.u32}, S2.u32[b]); selector >= 13 gives 0xff, 12 gives 0x00, 8..11 replicate the sign bit of input bytes 1,3,5,7, 0..7 select the corresponding byte",
+      "manual": "RDNA3.5 ISA 16.12 VOP3 opcode 580",
+      "modeled": "VOP3 with no modifier field set; all 256 selector byte values, with S0 supplying the most significant half of the permuted 64-bit value",
+      "unmodeled": "CLAMP, ABS, NEG, OMOD, OP_SEL, DPP forms"
+    },
+    {
+      "instruction": "V_DOT4_I32_IU8",
+      "decl": "Kelana.Hardware.v_dot4_i32_iu8",
+      "pseudocode": "A[i] = NEG[0] ? signext(S0[i*8+7:i*8]) : zeroext(...); B[i] likewise under NEG[1]; tmp = S2.i32; tmp += A[i] * B[i] for i in 0..3; D0.i32 = tmp",
+      "manual": "RDNA3.5 ISA 16.10 VOP3P opcode 22",
+      "modeled": "VOP3P with CLAMP=0, NEG[2]=0, NEG_HI=0, OP_SEL=0 and OP_SEL_HI at the assembler default 0b111; NEG[0] and NEG[1] as the per-source signedness controls; the 32-bit accumulator wraps",
+      "unmodeled": "CLAMP, NEG[2], NEG_HI, and any OP_SEL/OP_SEL_HI other than the assembler default"
+    },
+    {
+      "instruction": "V_DOT8_I32_IU4",
+      "decl": "Kelana.Hardware.v_dot8_i32_iu4",
+      "pseudocode": "A[i] = NEG[0] ? signext(S0[i*4+3:i*4]) : zeroext(...); B[i] likewise under NEG[1]; tmp = S2.i32; tmp += A[i] * B[i] for i in 0..7; D0.i32 = tmp",
+      "manual": "RDNA3.5 ISA 16.10 VOP3P opcode 24",
+      "modeled": "VOP3P with CLAMP=0, NEG[2]=0, NEG_HI=0, OP_SEL=0 and OP_SEL_HI at the assembler default 0b111; NEG[0] and NEG[1] as the per-source signedness controls; the 32-bit accumulator wraps",
+      "unmodeled": "CLAMP, NEG[2], NEG_HI, and any OP_SEL/OP_SEL_HI other than the assembler default"
+    }
+  ],
+  "openQuestions": [
+    "V_DOT4_I32_IU8 and V_DOT8_I32_IU4 accept CLAMP on gfx1151, but the section 16.10 pseudocode gives no saturation step, and the section 7.1 CLMP description ('Signed integer arithmetic: clamp result to [min_int, +max_int]') does not say whether the sum is formed exactly before clamping or wraps in the 32-bit accumulator first. Unmodeled.",
+    "Section 7.5 lists OP_SEL and OP_SEL_HI as available 'on src0/1' for DOT4_I32_IU8 and DOT8_I32_IU4, while the instruction pseudocode reads all 32 bits of each source and contains no OP_SEL term. What a non-default setting does to a 32-bit-source dot is unresolved; only the assembler's default encoding is modeled.",
+    "NEG[2] and NEG_HI are encodable on the VOP3P dot opcodes and appear in no dot pseudocode. Unmodeled.",
+    "Without CLAMP the manual writes the dot accumulator as a 32-bit signed 'tmp' with no statement about overflow. Kelana models the wrapping two's-complement result, which is order-independent; whether the hardware instead saturates or holds a wider intermediate is unverified. Kelana.Hardware.Lemmas.dot4_eq_exact_sum bounds the claim to non-overflowing inputs.",
+    "V_PERM_B32's note says selects 12 and 13 return padding of 0 and 1 bits, while its pseudocode returns 0xff for every selector >= 13. Kelana follows the pseudocode; the note is silent about 14..255.",
+    "The manual's V_DOT4_I32_IU8 prose calls both inputs 'unsigned 8-bit' in the same paragraph that defines the NEG signedness control, and the XML description says 'signed or unsigned'. Kelana follows the pseudocode and the NEG control.",
+    "Native V_WMMA_F32_16X16X16_F16 on this gfx1151 part returns -0x1.000002p+0 (-1.000000119...) for A = [-1,-1,0,...], B = [1,0,0,...], C = 0, so it is not exact even on exactly representable small integer operands. The WMMA floating-point semantics and any error bound are unresolved; see research/ffn/packed-wmma/NOTES.md and integer_probe.cpp. No Lean definition in this layer claims a WMMA meaning, and the integer algebra in Kelana/PairedWMMA.lean is not a proof about the native instruction.",
+    "Execution cost is not a function of instruction count and is not represented in this layer. The measured gfx1151 result in research/ffn/packed-wmma/NOTES.md is that the IU8 and F16 WMMA issue at the same rate, which contradicts counting-based cost estimates."
+  ]
+}

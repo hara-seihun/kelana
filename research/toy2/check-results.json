@@ -1,0 +1,24 @@
+{
+  "checked_matrix_inputs": 531441,
+  "checked_bit_expansions": 65536,
+  "orientation_counts": {
+    "(1, 1)": 64,
+    "(1, -1)": 15,
+    "(-1, 1)": 2
+  },
+  "hadamard_column_outputs": 37,
+  "hadamard_matrix_outputs": 1369,
+  "baseline_instructions": {
+    "v_lshl_or_b32": 4,
+    "v_and_b32": 3,
+    "v_dot8_i32_iu4": 4,
+    "v_mad_u32_u24": 2
+  },
+  "candidate_instructions": {
+    "v_lshl_or_b32": 4,
+    "v_and_b32": 3,
+    "v_dot8_i32_iu4": 2
+  },
+  "source_sha256": "0fb5dba7c1fe56eed2b8c414a7fda8130c722eddb9e1df6744876ba6cac97e0e",
+  "scope": "Exact finite checks of all valid 2x2 ternary inputs; not a hardware timing measurement."
+}

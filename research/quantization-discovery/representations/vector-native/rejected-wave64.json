@@ -1,0 +1,17 @@
+{
+  "status": "rejected",
+  "reason": "The first 64-thread row block used width-64 shuffle reductions on gfx1151 wave32. Lane zero wrote only one wave's half projection. Independent NumPy endpoint comparison caught the error; no timing from this run is accepted.",
+  "batch1_relative_rms_to_numpy": {
+    "polar": 1.30725971,
+    "scalar": 1.24291343,
+    "expanded_fp16": 1.28968232,
+    "learned_pair": 1.30812678
+  },
+  "batch8_relative_rms_to_numpy": {
+    "polar": 1.21987104,
+    "scalar": 1.20131064,
+    "expanded_fp16": 1.22435138,
+    "learned_pair": 1.23544607
+  },
+  "source_repair": "reader.hip uses one 32-lane row block, loops k in increments of 32, and reduces with shfl_down widths 16,8,4,2,1. The accepted results.json contains the independent-reference comparison."
+}

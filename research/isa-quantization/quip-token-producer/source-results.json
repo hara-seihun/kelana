@@ -1,0 +1,48 @@
+{
+  "distribution": {
+    "law": "each integer embedding ID in [0,151936) equally weighted once",
+    "not_language_frequency": true,
+    "producer": "BF16 embedding -> RMSNorm with observed capture-equivalent CPU reduction",
+    "source_second_moment_file": "/path/to/workspace/data/kelana-subbit/isa-source-law/qwen3-0.6b-layer00-q-input/uniform-id-second-moment.npy",
+    "source_second_moment_sha256": "48446e3398f37e867e0e79b6538252b3cf1cb155739fb7d737d5ec423393ad7d",
+    "source_rank": 1024,
+    "source_min_eigenvalue": 0.0066788097904871896,
+    "source_max_eigenvalue": 25.271021913146008,
+    "source_energy_in_train_nullspace": 3.121433443018125,
+    "teacher_output_energy": {
+      "train": 7.846065805726798,
+      "held": 7.740172793138704,
+      "uniform_id": 8.574147476365258
+    }
+  },
+  "fixed_images": {
+    "quip_rvq3": {
+      "image_sha256": "7234c67cc269f945b2826ad8686207336208ed531023ede0be7925c1c041ad43",
+      "relative_squared_response_error": {
+        "train": 0.003842229316579718,
+        "held": 0.01310979011694812,
+        "uniform_id": 0.02784776011529126
+      },
+      "error_energy_per_source": {
+        "train": 0.03014638405857717,
+        "held": 0.10147204078696051,
+        "uniform_id": 0.23877080211494964
+      },
+      "uniform_id_error_in_train_null_component": 0.08963657205642406
+    },
+    "scalar_group128": {
+      "image_sha256": "78b66990378f3dcae85458c50f4db04bc4d1e2b40d748b4100b078bfb055aec1",
+      "relative_squared_response_error": {
+        "train": 0.008801289303759077,
+        "held": 0.01042320036746594,
+        "uniform_id": 0.015896924922782142
+      },
+      "error_energy_per_source": {
+        "train": 0.06905549505253311,
+        "held": 0.08067737190169322,
+        "uniform_id": 0.1363025787086405
+      },
+      "uniform_id_error_in_train_null_component": 0.01759430153850533
+    }
+  }
+}

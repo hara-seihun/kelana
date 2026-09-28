@@ -1,0 +1,582 @@
+{
+  "format": "qwen-fresh-narrow-value-summary/1",
+  "panels": {
+    "layer00_test": {
+      "windows": 12,
+      "predictions": 3060,
+      "raw_panels": {
+        "/path/to/workspace/data/kelana-subbit/value-observer/fresh-layer00-test-000-003.json": "d7438ec4383fe66092ffa0d76d41d60c46e4402c14bd47f27ac1260035329719",
+        "/path/to/workspace/data/kelana-subbit/value-observer/fresh-layer00-test-004-011.json": "2d9c9887a00340f23bdbca4817159a3bee997b617c0cda6270b7f4533e0c2cc7"
+      },
+      "fixture_tokens_sha256": "a15ac68d83d34404ae18c929ae56dfd397b482d9a631a85d111791db1662e9d6",
+      "model_weights_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+      "images": {
+        "uniform_24": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer00-causal-refit-uniform_24.npz",
+          "sha256": "64835b6d1cd6ce584a6e7baffe52526a67a1d3a4644873a395f4afa9bef8515c",
+          "payload_bytes": 183552,
+          "ranks": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "train_causal_optimum": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer00-causal-refit-train_causal_optimum.npz",
+          "sha256": "ae9baecdeb801e6fedfe654a258e2991715c3624d3c4e8ea38d72af914d0f48d",
+          "payload_bytes": 183552,
+          "ranks": [
+            28,
+            28,
+            28,
+            28,
+            28,
+            4,
+            28,
+            20
+          ]
+        }
+      },
+      "joint_rank28_image_sha256": "93b969a9dbde2c28a23862f5199c1db7e7a12080a836aafb8eed94f8170f420c",
+      "metrics": {
+        "reference": {
+          "nll": 3.6730755964914956,
+          "teacher_kl": 0.0,
+          "argmax_agreement": 1.0
+        },
+        "uniform_24": {
+          "nll": 5.466970403989156,
+          "teacher_kl": 2.173913578192393,
+          "argmax_agreement": 0.3908496983349323
+        },
+        "train_causal_optimum": {
+          "nll": 5.2112481991449995,
+          "teacher_kl": 1.8901968101660411,
+          "argmax_agreement": 0.4277778056760629
+        },
+        "joint_rank28": {
+          "nll": 5.154246926307678,
+          "teacher_kl": 1.8307754894097645,
+          "argmax_agreement": 0.44117649892965954
+        }
+      },
+      "paired": {
+        "selected_minus_uniform_24_nll": {
+          "mean": -0.2557222048441569,
+          "paired_window_bootstrap_95": [
+            -0.3402284264564514,
+            -0.18743714094161987
+          ],
+          "windows_selected_better": 12
+        },
+        "selected_minus_joint_rank28_nll": {
+          "mean": 0.05700127283732096,
+          "paired_window_bootstrap_95": [
+            -0.0010257025559743233,
+            0.11512367725372315
+          ],
+          "windows_selected_better": 3
+        },
+        "selected_minus_uniform_24_teacher_kl": {
+          "mean": -0.28371676802635193,
+          "paired_window_bootstrap_95": [
+            -0.3957109309732914,
+            -0.2019537093738715
+          ],
+          "windows_selected_better": 12
+        },
+        "selected_minus_joint_rank28_teacher_kl": {
+          "mean": 0.05942132075627645,
+          "paired_window_bootstrap_95": [
+            0.007623765865961711,
+            0.11113511621952052
+          ],
+          "windows_selected_better": 2
+        }
+      },
+      "per_window_nll": {
+        "reference": [
+          4.011525630950928,
+          4.0054931640625,
+          3.3812248706817627,
+          3.2059414386749268,
+          3.257678985595703,
+          4.077834606170654,
+          3.7251152992248535,
+          3.4834253787994385,
+          3.6918041706085205,
+          3.8608429431915283,
+          3.617818832397461,
+          3.758201837539673
+        ],
+        "uniform_24": [
+          5.780981540679932,
+          6.216569423675537,
+          4.561705589294434,
+          4.487904071807861,
+          4.313553333282471,
+          5.384469032287598,
+          5.0851664543151855,
+          5.536673545837402,
+          4.809067726135254,
+          9.095271110534668,
+          5.0294294357299805,
+          5.302853584289551
+        ],
+        "train_causal_optimum": [
+          5.558816432952881,
+          5.9131550788879395,
+          4.399489879608154,
+          4.333745956420898,
+          4.1974287033081055,
+          5.210099220275879,
+          4.800206184387207,
+          5.2273478507995605,
+          4.582824230194092,
+          8.467260360717773,
+          4.668099880218506,
+          5.176504611968994
+        ],
+        "joint_rank28": [
+          5.343116760253906,
+          5.965080738067627,
+          4.455685615539551,
+          4.328774452209473,
+          4.163562774658203,
+          5.134224891662598,
+          4.7605204582214355,
+          5.139430522918701,
+          4.503962993621826,
+          8.231045722961426,
+          4.793084144592285,
+          5.032474040985107
+        ]
+      }
+    },
+    "layer00_validation": {
+      "windows": 8,
+      "predictions": 2040,
+      "raw_panels": {
+        "/path/to/workspace/data/kelana-subbit/value-observer/fresh-layer00-validation-000-007.json": "07f9a083d39004794c3e860baabf4774987ef904db22030b995e79eb4dfb8f7a"
+      },
+      "fixture_tokens_sha256": "a15ac68d83d34404ae18c929ae56dfd397b482d9a631a85d111791db1662e9d6",
+      "model_weights_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+      "images": {
+        "uniform_24": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer00-causal-refit-uniform_24.npz",
+          "sha256": "64835b6d1cd6ce584a6e7baffe52526a67a1d3a4644873a395f4afa9bef8515c",
+          "payload_bytes": 183552,
+          "ranks": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "train_causal_optimum": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer00-causal-refit-train_causal_optimum.npz",
+          "sha256": "ae9baecdeb801e6fedfe654a258e2991715c3624d3c4e8ea38d72af914d0f48d",
+          "payload_bytes": 183552,
+          "ranks": [
+            28,
+            28,
+            28,
+            28,
+            28,
+            4,
+            28,
+            20
+          ]
+        }
+      },
+      "joint_rank28_image_sha256": "93b969a9dbde2c28a23862f5199c1db7e7a12080a836aafb8eed94f8170f420c",
+      "metrics": {
+        "reference": {
+          "nll": 3.537446051836014,
+          "teacher_kl": 0.0,
+          "argmax_agreement": 1.0
+        },
+        "uniform_24": {
+          "nll": 5.792164146900177,
+          "teacher_kl": 2.5009888410568237,
+          "argmax_agreement": 0.3823529686778784
+        },
+        "train_causal_optimum": {
+          "nll": 6.050612807273865,
+          "teacher_kl": 2.7253169417381287,
+          "argmax_agreement": 0.38970590755343437
+        },
+        "joint_rank28": {
+          "nll": 5.034941673278809,
+          "teacher_kl": 1.6653257459402084,
+          "argmax_agreement": 0.4745098352432251
+        }
+      },
+      "paired": {
+        "selected_minus_uniform_24_nll": {
+          "mean": 0.25844866037368774,
+          "paired_window_bootstrap_95": [
+            -0.3327933818101883,
+            1.3901408985257149
+          ],
+          "windows_selected_better": 7
+        },
+        "selected_minus_joint_rank28_nll": {
+          "mean": 1.0156711339950562,
+          "paired_window_bootstrap_95": [
+            0.017116212844848634,
+            2.4568775981664652
+          ],
+          "windows_selected_better": 1
+        },
+        "selected_minus_uniform_24_teacher_kl": {
+          "mean": 0.22432810068130493,
+          "paired_window_bootstrap_95": [
+            -0.392535537481308,
+            1.382472701743245
+          ],
+          "windows_selected_better": 7
+        },
+        "selected_minus_joint_rank28_teacher_kl": {
+          "mean": 1.0599911957979202,
+          "paired_window_bootstrap_95": [
+            0.025435696914792062,
+            2.5974380671977997
+          ],
+          "windows_selected_better": 1
+        }
+      },
+      "per_window_nll": {
+        "reference": [
+          3.515226364135742,
+          3.6740260124206543,
+          3.4778056144714355,
+          3.487201690673828,
+          3.1293838024139404,
+          3.6540708541870117,
+          3.2257533073425293,
+          4.136100769042969
+        ],
+        "uniform_24": [
+          5.322905540466309,
+          5.534584999084473,
+          4.662112712860107,
+          5.214061260223389,
+          5.5538330078125,
+          8.752596855163574,
+          5.3308587074279785,
+          5.966360092163086
+        ],
+        "train_causal_optimum": [
+          9.493082046508789,
+          5.24864387512207,
+          4.447210788726807,
+          4.882651329040527,
+          5.242863178253174,
+          8.42757511138916,
+          4.917670249938965,
+          5.745205879211426
+        ],
+        "joint_rank28": [
+          5.379648685455322,
+          5.193597316741943,
+          4.38863468170166,
+          4.879508972167969,
+          5.23125696182251,
+          4.566394805908203,
+          4.938154220581055,
+          5.702337741851807
+        ]
+      }
+    },
+    "layer14_test": {
+      "windows": 8,
+      "predictions": 2040,
+      "raw_panels": {
+        "/path/to/workspace/data/kelana-subbit/value-observer/fresh-layer14-test-000-007.json": "3bf8dde15bf191d4ea2699f9269944c45e43a28e30e4f6ac14bd78fc158e648a"
+      },
+      "fixture_tokens_sha256": "a15ac68d83d34404ae18c929ae56dfd397b482d9a631a85d111791db1662e9d6",
+      "model_weights_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+      "images": {
+        "uniform_24": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer14-causal-refit-uniform_24.npz",
+          "sha256": "31250c990948858182226366cef979737bfe22b08475072a450ab6e38c79d929",
+          "payload_bytes": 183552,
+          "ranks": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "train_causal_optimum": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer14-causal-refit-train_causal_optimum.npz",
+          "sha256": "08970299931d4daad1e5ace941517e96dceb2eefcb110cae0353b92b898b0abb",
+          "payload_bytes": 183552,
+          "ranks": [
+            28,
+            28,
+            28,
+            8,
+            28,
+            16,
+            28,
+            28
+          ]
+        }
+      },
+      "joint_rank28_image_sha256": "6673197d16a29148f64b997a2007a004161bfe7d8277d77e7dcf4e6af273e4e4",
+      "metrics": {
+        "reference": {
+          "nll": 3.643529921770096,
+          "teacher_kl": 0.0,
+          "argmax_agreement": 1.0
+        },
+        "uniform_24": {
+          "nll": 3.6529699862003326,
+          "teacher_kl": 0.023408580338582397,
+          "argmax_agreement": 0.9196079075336456
+        },
+        "train_causal_optimum": {
+          "nll": 3.6546450555324554,
+          "teacher_kl": 0.023180865217000246,
+          "argmax_agreement": 0.9230392798781395
+        },
+        "joint_rank28": {
+          "nll": 3.6578512489795685,
+          "teacher_kl": 0.022079261485487223,
+          "argmax_agreement": 0.9240196719765663
+        }
+      },
+      "paired": {
+        "selected_minus_uniform_24_nll": {
+          "mean": 0.0016750693321228027,
+          "paired_window_bootstrap_95": [
+            -0.006887348741292953,
+            0.009982854127883911
+          ],
+          "windows_selected_better": 3
+        },
+        "selected_minus_joint_rank28_nll": {
+          "mean": -0.003206193447113037,
+          "paired_window_bootstrap_95": [
+            -0.009779691696166992,
+            0.003083139657974243
+          ],
+          "windows_selected_better": 6
+        },
+        "selected_minus_uniform_24_teacher_kl": {
+          "mean": -0.00022771512158215046,
+          "paired_window_bootstrap_95": [
+            -0.0013943007215857506,
+            0.0009038117597810922
+          ],
+          "windows_selected_better": 4
+        },
+        "selected_minus_joint_rank28_teacher_kl": {
+          "mean": 0.0011016037315130234,
+          "paired_window_bootstrap_95": [
+            0.00041061779484152794,
+            0.0018325642973650246
+          ],
+          "windows_selected_better": 1
+        }
+      },
+      "per_window_nll": {
+        "reference": [
+          4.011525630950928,
+          4.0054931640625,
+          3.3812248706817627,
+          3.2059414386749268,
+          3.257678985595703,
+          4.077834606170654,
+          3.7251152992248535,
+          3.4834253787994385
+        ],
+        "uniform_24": [
+          4.049378395080566,
+          4.007829666137695,
+          3.408154010772705,
+          3.1383700370788574,
+          3.2744693756103516,
+          4.115072250366211,
+          3.749544858932495,
+          3.4809412956237793
+        ],
+        "train_causal_optimum": [
+          4.043898582458496,
+          3.98905611038208,
+          3.411475419998169,
+          3.152921676635742,
+          3.2634289264678955,
+          4.1175689697265625,
+          3.767868995666504,
+          3.4909417629241943
+        ],
+        "joint_rank28": [
+          4.047922611236572,
+          4.01088809967041,
+          3.4016592502593994,
+          3.1559717655181885,
+          3.2722792625427246,
+          4.12312650680542,
+          3.768761157989502,
+          3.482201337814331
+        ]
+      }
+    },
+    "layer14_validation": {
+      "windows": 8,
+      "predictions": 2040,
+      "raw_panels": {
+        "/path/to/workspace/data/kelana-subbit/value-observer/fresh-layer14-validation-000-007.json": "2a7509e222bcd02186486130a777a07efa6ba770cb8cf4e21e4a6f5922db4592"
+      },
+      "fixture_tokens_sha256": "a15ac68d83d34404ae18c929ae56dfd397b482d9a631a85d111791db1662e9d6",
+      "model_weights_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+      "images": {
+        "uniform_24": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer14-causal-refit-uniform_24.npz",
+          "sha256": "31250c990948858182226366cef979737bfe22b08475072a450ab6e38c79d929",
+          "payload_bytes": 183552,
+          "ranks": [
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24,
+            24
+          ]
+        },
+        "train_causal_optimum": {
+          "path": "/path/to/workspace/data/kelana-subbit/value-observer/layer14-causal-refit-train_causal_optimum.npz",
+          "sha256": "08970299931d4daad1e5ace941517e96dceb2eefcb110cae0353b92b898b0abb",
+          "payload_bytes": 183552,
+          "ranks": [
+            28,
+            28,
+            28,
+            8,
+            28,
+            16,
+            28,
+            28
+          ]
+        }
+      },
+      "joint_rank28_image_sha256": "6673197d16a29148f64b997a2007a004161bfe7d8277d77e7dcf4e6af273e4e4",
+      "metrics": {
+        "reference": {
+          "nll": 3.537446051836014,
+          "teacher_kl": 0.0,
+          "argmax_agreement": 1.0
+        },
+        "uniform_24": {
+          "nll": 3.553002744913101,
+          "teacher_kl": 0.019846700131893158,
+          "argmax_agreement": 0.92598045617342
+        },
+        "train_causal_optimum": {
+          "nll": 3.549601137638092,
+          "teacher_kl": 0.01900189253501594,
+          "argmax_agreement": 0.930882416665554
+        },
+        "joint_rank28": {
+          "nll": 3.552700400352478,
+          "teacher_kl": 0.018627085722982883,
+          "argmax_agreement": 0.9250000640749931
+        }
+      },
+      "paired": {
+        "selected_minus_uniform_24_nll": {
+          "mean": -0.0034016072750091553,
+          "paired_window_bootstrap_95": [
+            -0.010050415992736816,
+            0.00342912524938583
+          ],
+          "windows_selected_better": 5
+        },
+        "selected_minus_joint_rank28_nll": {
+          "mean": -0.0030992627143859863,
+          "paired_window_bootstrap_95": [
+            -0.006778895854949951,
+            0.0003983683884143786
+          ],
+          "windows_selected_better": 5
+        },
+        "selected_minus_uniform_24_teacher_kl": {
+          "mean": -0.0008448075968772173,
+          "paired_window_bootstrap_95": [
+            -0.0014920901623554528,
+            -0.00015757372602820396
+          ],
+          "windows_selected_better": 6
+        },
+        "selected_minus_joint_rank28_teacher_kl": {
+          "mean": 0.0003748068120330572,
+          "paired_window_bootstrap_95": [
+            -9.730412857607004e-05,
+            0.0009125929791480303
+          ],
+          "windows_selected_better": 3
+        }
+      },
+      "per_window_nll": {
+        "reference": [
+          3.515226364135742,
+          3.6740260124206543,
+          3.4778056144714355,
+          3.487201690673828,
+          3.1293838024139404,
+          3.6540708541870117,
+          3.2257533073425293,
+          4.136100769042969
+        ],
+        "uniform_24": [
+          3.5386147499084473,
+          3.711622476577759,
+          3.4768142700195312,
+          3.485548257827759,
+          3.141263723373413,
+          3.664616584777832,
+          3.2357826232910156,
+          4.169759273529053
+        ],
+        "train_causal_optimum": [
+          3.5348010063171387,
+          3.696582794189453,
+          3.4825196266174316,
+          3.471489191055298,
+          3.145263433456421,
+          3.677603244781494,
+          3.232260227203369,
+          4.156289577484131
+        ],
+        "joint_rank28": [
+          3.5318586826324463,
+          3.701552629470825,
+          3.479936361312866,
+          3.4762485027313232,
+          3.1434261798858643,
+          3.6786885261535645,
+          3.2425243854522705,
+          4.167367935180664
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "scope": "same original held validation windows 0..3, t128/t256; original/feedback V with same actual K2 probabilities; four chronological encoder streams per layer",
+  "layers": {
+    "0": {
+      "provenance": {
+        "0": {
+          "diagnostic_sha256": "095a3949673a0c01d76a07a7e3fd103d974946f02a68fd75d5fa8adba6faad0c",
+          "owner_result_sha256": "bd2afbfa78fd421d1688feeae152590144322f3431fe58bb5386d81b27f5b193",
+          "source_sha256": "81ab88364b36fd68cee0e29851b6e379ee5194f119ba98c1e451548bd9a8ffea",
+          "o_sha256": "803995a9d5abb24c72d3ddabd50f4e656fc5eff26efaf3b626f175fc706ab499"
+        },
+        "1": {
+          "diagnostic_sha256": "6c9a68c8a4f4bb521e8240fb4824f0e2bacea6ad7f4bf9a2034877aab2220549",
+          "owner_result_sha256": "a93cb19012297a46a2f2079a87e84e2a69819e3ab3dc6c87e87b0fbc137c1838",
+          "source_sha256": "d9215d2908fcb96c61875628012650588dfa173477d0c679015f414fb7c2491b",
+          "o_sha256": "803995a9d5abb24c72d3ddabd50f4e656fc5eff26efaf3b626f175fc706ab499"
+        },
+        "2": {
+          "diagnostic_sha256": "53752ff7b7a15f1987d72b134f1b9694ce4dfd8e8f18d3fa7b88e881f95e07c0",
+          "owner_result_sha256": "04250655c90c21dc2d6cdb82523a253d4e4d0369e1ceba0ce6140b9d2769291a",
+          "source_sha256": "aba0d790f56ec8374edb0a77ddcdcef1929d320bcad66137dfca839b81ebe45f",
+          "o_sha256": "803995a9d5abb24c72d3ddabd50f4e656fc5eff26efaf3b626f175fc706ab499"
+        },
+        "3": {
+          "diagnostic_sha256": "d5187dfab547a36d14f736f5c64f6b82e2c15ddac3536fd41b3325a43487f8dd",
+          "owner_result_sha256": "33aa83eb5e11c70a605a6787f3a33515dee3a4ffe4d8568b6c2dda403994d892",
+          "source_sha256": "6fdc3dd3fe5d763a613f845009c3c2546a3a8cb5b5680650fa566c03d9acc160",
+          "o_sha256": "803995a9d5abb24c72d3ddabd50f4e656fc5eff26efaf3b626f175fc706ab499"
+        }
+      },
+      "teacher_sq": 271.31798257188797,
+      "key_source_offset_sse": 0.17958024275459442,
+      "pooled": {
+        "original": {
+          "isolated_v_sse": 0.6607889696369127,
+          "uniform_v_sse": 0.8095246579811708,
+          "offset_dot_v": -0.0038557294644367677,
+          "full_sse": 0.8326577534626337
+        },
+        "feedback": {
+          "isolated_v_sse": 0.41884906403545114,
+          "uniform_v_sse": 0.0020013069702788243,
+          "offset_dot_v": -0.008966458374964003,
+          "full_sse": 0.5804963900401174
+        }
+      },
+      "uniform_improves_selective_worsens": [
+        [
+          0,
+          128
+        ],
+        [
+          1,
+          256
+        ]
+      ],
+      "uniform_improves_full_worsens": [
+        [
+          0,
+          128
+        ],
+        [
+          0,
+          256
+        ]
+      ],
+      "encoder": {
+        "coordinates": 917504,
+        "clipped": 84931,
+        "clipped_below": 38293,
+        "clipped_above": 46638,
+        "max_abs_residual": 0.43070220947265625,
+        "max_abs_step_defect": 1.4901161193847656e-08,
+        "source_step_min": 0.024007161458333332,
+        "source_step_max": 0.8626302083333334
+      },
+      "max_telescoping_residual_before_o": 3.122502256758253e-17,
+      "max_sse_identity_residual": 2.7755575615628914e-17
+    },
+    "1": {
+      "provenance": {
+        "0": {
+          "diagnostic_sha256": "c66fbb71ef390156ec35fc4d6b4d397b42fa1905e914b09e9761bb50971eda61",
+          "owner_result_sha256": "d02a79649de8de34b0420d6cf800f67ed6957633b93dba990e10962e7580fcd8",
+          "source_sha256": "e1465c3dd76fae635b821d035c10803efeffd4020fcfa3a3d7300c681d466982",
+          "o_sha256": "677e1de44f3a28a51b2e75e806a8ec68807ed96dfadc169729c1993181418f48"
+        },
+        "1": {
+          "diagnostic_sha256": "4a624ab358337cab419e41ea8b82a8763d3c7b91d099719b8cfb7d47d1bc3964",
+          "owner_result_sha256": "e303b4de4a76fc2d55c851d0c7b7a385ad8fcfbbccb638e46e31c823c66ef5a0",
+          "source_sha256": "726ea86faa1ac4b216f713b1af2570932bca6dfd803ed4fcf493ed79c5702c59",
+          "o_sha256": "677e1de44f3a28a51b2e75e806a8ec68807ed96dfadc169729c1993181418f48"
+        },
+        "2": {
+          "diagnostic_sha256": "13171fae157f4b646342425e7fd85d54950d8b4a7bb2a6c97a62359af60db2b3",
+          "owner_result_sha256": "90e81e584ad52cdb6da32b7a9ef8c6db2058c0e4f0882ecf21aa7ca110e01f9a",
+          "source_sha256": "754e6c9e517ee5d280e1f3799c2ba88252e13affe28aaf2d7dd5778152255be1",
+          "o_sha256": "677e1de44f3a28a51b2e75e806a8ec68807ed96dfadc169729c1993181418f48"
+        },
+        "3": {
+          "diagnostic_sha256": "8a85ea4be0a2391d5d6a58640613f3d1dc6d5fb4ef41d36f0655c1ba77a3fb95",
+          "owner_result_sha256": "0ee2050ca4e35f2fd93b8d1e4ff1939b98e6d8be2e3d52839c6f08cab949d8bc",
+          "source_sha256": "5d0991ed17cc708fb1eaeea10a6d514ce883d52a30441d11554c040c574f7300",
+          "o_sha256": "677e1de44f3a28a51b2e75e806a8ec68807ed96dfadc169729c1993181418f48"
+        }
+      },
+      "teacher_sq": 48.638206375694196,
+      "key_source_offset_sse": 0.38731269703053195,
+      "pooled": {
+        "original": {
+          "isolated_v_sse": 0.219657078840968,
+          "uniform_v_sse": 0.1181248703077913,
+          "offset_dot_v": 0.005308305475276511,
+          "full_sse": 0.6175863868220531
+        },
+        "feedback": {
+          "isolated_v_sse": 0.32036615578154526,
+          "uniform_v_sse": 0.0008957798764227901,
+          "offset_dot_v": 0.003728149476435491,
+          "full_sse": 0.7151351517649484
+        }
+      },
+      "uniform_improves_selective_worsens": [
+        [
+          0,
+          256
+        ],
+        [
+          1,
+          128
+        ],
+        [
+          2,
+          128
+        ],
+        [
+          2,
+          256
+        ],
+        [
+          3,
+          128
+        ],
+        [
+          3,
+          256
+        ]
+      ],
+      "uniform_improves_full_worsens": [
+        [
+          0,
+          256
+        ],
+        [
+          1,
+          128
+        ],
+        [
+          2,
+          128
+        ],
+        [
+          2,
+          256
+        ],
+        [
+          3,
+          128
+        ],
+        [
+          3,
+          256
+        ]
+      ],
+      "encoder": {
+        "coordinates": 917504,
+        "clipped": 61381,
+        "clipped_below": 30361,
+        "clipped_above": 31020,
+        "max_abs_residual": 0.19403588771820068,
+        "max_abs_step_defect": 2.9802322387695312e-08,
+        "source_step_min": 0.033121744791666664,
+        "source_step_max": 0.3912760416666667
+      },
+      "max_telescoping_residual_before_o": 4.85722573273506e-17,
+      "max_sse_identity_residual": 2.7755575615628914e-17
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "format": "response-codebooks-lowrank/1",
+  "fixture": "layer14-mlp_down_proj.npz",
+  "fixture_sha256": "cccfef9684a303bc20803f149d0a6a723da6a229efc749126783e46988038d17",
+  "manifest_sha256": "51f0ca43ccbc52097bafe212a2aa10786cfa1579db63cca7811a6a390860dbbd",
+  "source_hashes": {
+    "study.py": "abd3905f267dccedd4be161318acd6ab330be3cf32dc353050f4607ae10423d9",
+    "float_model.py": "2d762210b0dc2825d7ec23450eb20bb0f3b0c6d80f42a5f4ff30879161738720",
+    "kproj.py": "acb51e32db82587ee0abbc6bdf76c8f40823a79c90f623ebe77eca3d4ccb4de8",
+    "wire.py": "fa66d877b50680edfe9bc3bc7deb7c8115f7f0ebdc2f168acaf20f2399397b7c",
+    "lowrank.py": "edd285bf02d1ec0d124c73e21e43b09d2c364c464e808983dee87f70e7272183"
+  },
+  "weight_row_split": "default_rng(78123).permutation(rows); first floor(.75*rows) train codebook; all row residuals fit low-rank correction using train inputs only",
+  "input_split": "2048 WikiText train inputs fit covariance, response rank and bias; 1024 validation inputs held out; test unused",
+  "rank_fit": "six block power iterations on centered train-response residual; two FP16 factor matrices; FP16 per-row mean correction",
+  "numerical_boundary": "FP32 response of packed labels + FP16 factors + FP16 bias; no downstream model quality",
+  "methods": {
+    "rank0-exceptions0": {
+      "total_bits_per_weight": 0.6406351725260416,
+      "dictionary_bytes": 4100,
+      "lowrank_factor_bytes": 0,
+      "affine_bias_bytes": 2048,
+      "sparse_exception_bytes": 0,
+      "table_bytes_per_input": 196608,
+      "row_table_lookups": 192,
+      "input_correction_dot_products": 0,
+      "row_correction_multiply_adds": 0,
+      "train_input_held_rows_relative_rms": 0.692292527298839,
+      "validation_input_held_rows_relative_rms": 0.7006994523369412
+    },
+    "rank2-exceptions0": {
+      "total_bits_per_weight": 0.6823018391927084,
+      "dictionary_bytes": 4100,
+      "lowrank_factor_bytes": 16384,
+      "affine_bias_bytes": 2048,
+      "sparse_exception_bytes": 0,
+      "table_bytes_per_input": 196608,
+      "row_table_lookups": 192,
+      "input_correction_dot_products": 2,
+      "row_correction_multiply_adds": 2,
+      "train_input_held_rows_relative_rms": 0.6813016882855417,
+      "validation_input_held_rows_relative_rms": 0.6914864143225098
+    },
+    "rank2-exceptions1": {
+      "total_bits_per_weight": 0.8698018391927084,
+      "dictionary_bytes": 4100,
+      "lowrank_factor_bytes": 16384,
+      "affine_bias_bytes": 2048,
+      "sparse_exception_bytes": 73728,
+      "table_bytes_per_input": 196608,
+      "row_table_lookups": 192,
+      "input_correction_dot_products": 2,
+      "row_correction_multiply_adds": 2,
+      "train_input_held_rows_relative_rms": 0.6503088635178249,
+      "validation_input_held_rows_relative_rms": 0.6621151863756137
+    },
+    "rank4-exceptions0": {
+      "total_bits_per_weight": 0.723968505859375,
+      "dictionary_bytes": 4100,
+      "lowrank_factor_bytes": 32768,
+      "affine_bias_bytes": 2048,
+      "sparse_exception_bytes": 0,
+      "table_bytes_per_input": 196608,
+      "row_table_lookups": 192,
+      "input_correction_dot_products": 4,
+      "row_correction_multiply_adds": 4,
+      "train_input_held_rows_relative_rms": 0.67163740695754,
+      "validation_input_held_rows_relative_rms": 0.6828703826708443
+    },
+    "rank6-exceptions0": {
+      "total_bits_per_weight": 0.7656351725260416,
+      "dictionary_bytes": 4100,
+      "lowrank_factor_bytes": 49152,
+      "affine_bias_bytes": 2048,
+      "sparse_exception_bytes": 0,
+      "table_bytes_per_input": 196608,
+      "row_table_lookups": 192,
+      "input_correction_dot_products": 6,
+      "row_correction_multiply_adds": 6,
+      "train_input_held_rows_relative_rms": 0.6625727599962212,
+      "validation_input_held_rows_relative_rms": 0.6776836713617281
+    },
+    "rank8-exceptions0": {
+      "total_bits_per_weight": 0.8073018391927084,
+      "dictionary_bytes": 4100,
+      "lowrank_factor_bytes": 65536,
+      "affine_bias_bytes": 2048,
+      "sparse_exception_bytes": 0,
+      "table_bytes_per_input": 196608,
+      "row_table_lookups": 192,
+      "input_correction_dot_products": 8,
+      "row_correction_multiply_adds": 8,
+      "train_input_held_rows_relative_rms": 0.6543538979414787,
+      "validation_input_held_rows_relative_rms": 0.6720519112118455
+    }
+  }
+}

@@ -1,0 +1,1539 @@
+{
+  "summary": {
+    "seeds": 40,
+    "held_gain_radius_two_vs_single": {
+      "mean": 0.00267351,
+      "bootstrap_95_percentile": [
+        0.00128631,
+        0.00428129
+      ]
+    },
+    "train_mean": {
+      "start": 0.5800157,
+      "ste": 0.57264789,
+      "single": 0.55049709,
+      "pair": 0.54798133,
+      "single_then_pair": 0.5484434,
+      "radius_two": 0.54779102,
+      "oracle": 0.54592211
+    },
+    "held_mean": {
+      "start": 0.58302891,
+      "ste": 0.5771787,
+      "single": 0.553739,
+      "pair": 0.55134073,
+      "single_then_pair": 0.55160861,
+      "radius_two": 0.55106549,
+      "oracle": 0.54902618
+    },
+    "oracle_reached": {
+      "start": 1,
+      "ste": 1,
+      "single": 6,
+      "pair": 11,
+      "single_then_pair": 13,
+      "radius_two": 16,
+      "oracle": 40
+    },
+    "held_beats_single": {
+      "ste": 0,
+      "pair": 21,
+      "single_then_pair": 17,
+      "radius_two": 21,
+      "oracle": 34
+    },
+    "single_pair_escape": 18,
+    "strict_barrier_and_pair_escape": 14,
+    "ste_rejected_despite_predicted_gain": 40,
+    "mean_evaluations": {
+      "ste": 1.32,
+      "single": 40.0,
+      "pair": 285.6,
+      "single_then_pair_extra": 179.2,
+      "radius_two": 329.6,
+      "oracle": 6561.0
+    }
+  },
+  "cases": [
+    {
+      "seed": 0,
+      "train": {
+        "start": 0.59443374,
+        "ste": 0.59443374,
+        "single": 0.56822445,
+        "pair": 0.56822445,
+        "single_then_pair": 0.56822445,
+        "radius_two": 0.56822445,
+        "oracle": 0.56822445
+      },
+      "held": {
+        "start": 0.61627651,
+        "ste": 0.61627651,
+        "single": 0.59057579,
+        "pair": 0.59057579,
+        "single_then_pair": 0.59057579,
+        "radius_two": 0.59057579,
+        "oracle": 0.59057579
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00039189,
+      "single_best_pair_gain": -0.00506199
+    },
+    {
+      "seed": 1,
+      "train": {
+        "start": 0.63230811,
+        "ste": 0.55724552,
+        "single": 0.55486173,
+        "pair": 0.55687786,
+        "single_then_pair": 0.55425467,
+        "radius_two": 0.55425467,
+        "oracle": 0.55425467
+      },
+      "held": {
+        "start": 0.56637771,
+        "ste": 0.50374024,
+        "single": 0.50186182,
+        "pair": 0.50437595,
+        "single_then_pair": 0.501416,
+        "radius_two": 0.501416,
+        "oracle": 0.501416
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 224,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00255671,
+      "single_best_pair_gain": 0.00060706
+    },
+    {
+      "seed": 2,
+      "train": {
+        "start": 0.5605274,
+        "ste": 0.5605274,
+        "single": 0.52760142,
+        "pair": 0.52790359,
+        "single_then_pair": 0.52760142,
+        "radius_two": 0.52790359,
+        "oracle": 0.52606824
+      },
+      "held": {
+        "start": 0.59935851,
+        "ste": 0.59935851,
+        "single": 0.55255904,
+        "pair": 0.5524043,
+        "single_then_pair": 0.55255904,
+        "radius_two": 0.5524043,
+        "oracle": 0.55133801
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 80,
+        "pair": 448,
+        "single_then_pair_extra": 112,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 5.309e-05,
+      "single_best_pair_gain": -0.00278705
+    },
+    {
+      "seed": 3,
+      "train": {
+        "start": 0.62561694,
+        "ste": 0.62561694,
+        "single": 0.58245684,
+        "pair": 0.58245684,
+        "single_then_pair": 0.58245684,
+        "radius_two": 0.58245684,
+        "oracle": 0.58245684
+      },
+      "held": {
+        "start": 0.64979542,
+        "ste": 0.64979542,
+        "single": 0.58635525,
+        "pair": 0.58635525,
+        "single_then_pair": 0.58635525,
+        "radius_two": 0.58635525,
+        "oracle": 0.58635525
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00115241,
+      "single_best_pair_gain": -0.00025028
+    },
+    {
+      "seed": 4,
+      "train": {
+        "start": 0.66254775,
+        "ste": 0.66254775,
+        "single": 0.65360459,
+        "pair": 0.65360459,
+        "single_then_pair": 0.65360459,
+        "radius_two": 0.65360459,
+        "oracle": 0.65330737
+      },
+      "held": {
+        "start": 0.66207971,
+        "ste": 0.66207971,
+        "single": 0.65173158,
+        "pair": 0.65173158,
+        "single_then_pair": 0.65173158,
+        "radius_two": 0.65173158,
+        "oracle": 0.65040516
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 336,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00580628,
+      "single_best_pair_gain": -0.00149133
+    },
+    {
+      "seed": 5,
+      "train": {
+        "start": 0.44874009,
+        "ste": 0.44874009,
+        "single": 0.44352143,
+        "pair": 0.44028903,
+        "single_then_pair": 0.4400068,
+        "radius_two": 0.44028903,
+        "oracle": 0.4400068
+      },
+      "held": {
+        "start": 0.42883534,
+        "ste": 0.42883534,
+        "single": 0.4267952,
+        "pair": 0.424119,
+        "single_then_pair": 0.42346807,
+        "radius_two": 0.424119,
+        "oracle": 0.42346807
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 336,
+        "single_then_pair_extra": 224,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00016273,
+      "single_best_pair_gain": 0.00351463
+    },
+    {
+      "seed": 6,
+      "train": {
+        "start": 0.515797,
+        "ste": 0.515797,
+        "single": 0.51504037,
+        "pair": 0.51329848,
+        "single_then_pair": 0.51504037,
+        "radius_two": 0.51329848,
+        "oracle": 0.51329848
+      },
+      "held": {
+        "start": 0.4903603,
+        "ste": 0.4903603,
+        "single": 0.48942234,
+        "pair": 0.48815715,
+        "single_then_pair": 0.48942234,
+        "radius_two": 0.48815715,
+        "oracle": 0.48815715
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 448,
+        "single_then_pair_extra": 112,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": -0.0
+    },
+    {
+      "seed": 7,
+      "train": {
+        "start": 0.69878333,
+        "ste": 0.68025616,
+        "single": 0.64847752,
+        "pair": 0.64534324,
+        "single_then_pair": 0.64847752,
+        "radius_two": 0.64534324,
+        "oracle": 0.64246998
+      },
+      "held": {
+        "start": 0.71603831,
+        "ste": 0.69059254,
+        "single": 0.64958877,
+        "pair": 0.64615023,
+        "single_then_pair": 0.64958877,
+        "radius_two": 0.64615023,
+        "oracle": 0.642103
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 32,
+        "pair": 448,
+        "single_then_pair_extra": 112,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": -0.0
+    },
+    {
+      "seed": 8,
+      "train": {
+        "start": 0.54689646,
+        "ste": 0.54500882,
+        "single": 0.54321248,
+        "pair": 0.54321248,
+        "single_then_pair": 0.54321248,
+        "radius_two": 0.54321248,
+        "oracle": 0.54269446
+      },
+      "held": {
+        "start": 0.57365459,
+        "ste": 0.57200349,
+        "single": 0.56977654,
+        "pair": 0.56977654,
+        "single_then_pair": 0.56977654,
+        "radius_two": 0.56977654,
+        "oracle": 0.56929634
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00179635,
+      "single_best_pair_gain": -0.00306761
+    },
+    {
+      "seed": 9,
+      "train": {
+        "start": 0.53788865,
+        "ste": 0.5300282,
+        "single": 0.5203259,
+        "pair": 0.5203259,
+        "single_then_pair": 0.5203259,
+        "radius_two": 0.5203259,
+        "oracle": 0.5203259
+      },
+      "held": {
+        "start": 0.51094676,
+        "ste": 0.51219624,
+        "single": 0.49441064,
+        "pair": 0.49441064,
+        "single_then_pair": 0.49441064,
+        "radius_two": 0.49441064,
+        "oracle": 0.49441064
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00163688,
+      "single_best_pair_gain": -0.00180146
+    },
+    {
+      "seed": 10,
+      "train": {
+        "start": 0.39130489,
+        "ste": 0.38526432,
+        "single": 0.38036713,
+        "pair": 0.38036713,
+        "single_then_pair": 0.38036713,
+        "radius_two": 0.38036713,
+        "oracle": 0.38036713
+      },
+      "held": {
+        "start": 0.34417204,
+        "ste": 0.33796105,
+        "single": 0.33402292,
+        "pair": 0.33402292,
+        "single_then_pair": 0.33402292,
+        "radius_two": 0.33402292,
+        "oracle": 0.33402292
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0017137,
+      "single_best_pair_gain": -0.00050731
+    },
+    {
+      "seed": 11,
+      "train": {
+        "start": 0.69688991,
+        "ste": 0.69688991,
+        "single": 0.64064146,
+        "pair": 0.63898838,
+        "single_then_pair": 0.63898838,
+        "radius_two": 0.63898838,
+        "oracle": 0.63810493
+      },
+      "held": {
+        "start": 0.6900402,
+        "ste": 0.6900402,
+        "single": 0.61341533,
+        "pair": 0.61173086,
+        "single_then_pair": 0.61173086,
+        "radius_two": 0.61173086,
+        "oracle": 0.61053466
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 336,
+        "single_then_pair_extra": 224,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00114406,
+      "single_best_pair_gain": 0.00165307
+    },
+    {
+      "seed": 12,
+      "train": {
+        "start": 0.62075118,
+        "ste": 0.62075118,
+        "single": 0.59701384,
+        "pair": 0.58225694,
+        "single_then_pair": 0.58711447,
+        "radius_two": 0.58225694,
+        "oracle": 0.58181441
+      },
+      "held": {
+        "start": 0.62243588,
+        "ste": 0.62243588,
+        "single": 0.58818936,
+        "pair": 0.57158548,
+        "single_then_pair": 0.57466887,
+        "radius_two": 0.57158548,
+        "oracle": 0.56940393
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 336,
+        "single_then_pair_extra": 224,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00893122,
+      "single_best_pair_gain": 0.00989937
+    },
+    {
+      "seed": 13,
+      "train": {
+        "start": 0.54611283,
+        "ste": 0.54611283,
+        "single": 0.54611283,
+        "pair": 0.54611283,
+        "single_then_pair": 0.54611283,
+        "radius_two": 0.54611283,
+        "oracle": 0.54611283
+      },
+      "held": {
+        "start": 0.57808433,
+        "ste": 0.57808433,
+        "single": 0.57808433,
+        "pair": 0.57808433,
+        "single_then_pair": 0.57808433,
+        "radius_two": 0.57808433,
+        "oracle": 0.57808433
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 16,
+        "pair": 112,
+        "single_then_pair_extra": 112,
+        "radius_two": 128,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00240629,
+      "single_best_pair_gain": -0.00680544
+    },
+    {
+      "seed": 14,
+      "train": {
+        "start": 0.62948434,
+        "ste": 0.62948434,
+        "single": 0.58574456,
+        "pair": 0.58574456,
+        "single_then_pair": 0.58574456,
+        "radius_two": 0.58574456,
+        "oracle": 0.58444479
+      },
+      "held": {
+        "start": 0.62555639,
+        "ste": 0.62555639,
+        "single": 0.57666096,
+        "pair": 0.57666096,
+        "single_then_pair": 0.57666096,
+        "radius_two": 0.57666096,
+        "oracle": 0.57523061
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00237722,
+      "single_best_pair_gain": -0.00170644
+    },
+    {
+      "seed": 15,
+      "train": {
+        "start": 0.8309034,
+        "ste": 0.8309034,
+        "single": 0.67961611,
+        "pair": 0.67961611,
+        "single_then_pair": 0.67961611,
+        "radius_two": 0.67961611,
+        "oracle": 0.67819471
+      },
+      "held": {
+        "start": 0.81299577,
+        "ste": 0.81299577,
+        "single": 0.68289669,
+        "pair": 0.68289669,
+        "single_then_pair": 0.68289669,
+        "radius_two": 0.68289669,
+        "oracle": 0.67999326
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": -0.0
+    },
+    {
+      "seed": 16,
+      "train": {
+        "start": 0.68257855,
+        "ste": 0.68257855,
+        "single": 0.68257855,
+        "pair": 0.67266787,
+        "single_then_pair": 0.67266787,
+        "radius_two": 0.67180934,
+        "oracle": 0.67180934
+      },
+      "held": {
+        "start": 0.68247289,
+        "ste": 0.68247289,
+        "single": 0.68247289,
+        "pair": 0.67202788,
+        "single_then_pair": 0.67202788,
+        "radius_two": 0.67181104,
+        "oracle": 0.67181104
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 16,
+        "pair": 336,
+        "single_then_pair_extra": 336,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": 0.00735296
+    },
+    {
+      "seed": 17,
+      "train": {
+        "start": 0.68993398,
+        "ste": 0.68993398,
+        "single": 0.68993398,
+        "pair": 0.68993398,
+        "single_then_pair": 0.68993398,
+        "radius_two": 0.68993398,
+        "oracle": 0.68129321
+      },
+      "held": {
+        "start": 0.69099777,
+        "ste": 0.69099777,
+        "single": 0.69099777,
+        "pair": 0.69099777,
+        "single_then_pair": 0.69099777,
+        "radius_two": 0.69099777,
+        "oracle": 0.6838599
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 16,
+        "pair": 112,
+        "single_then_pair_extra": 112,
+        "radius_two": 128,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": -0.0
+    },
+    {
+      "seed": 18,
+      "train": {
+        "start": 0.47340464,
+        "ste": 0.4344888,
+        "single": 0.4301816,
+        "pair": 0.42977045,
+        "single_then_pair": 0.42724489,
+        "radius_two": 0.42724489,
+        "oracle": 0.42724489
+      },
+      "held": {
+        "start": 0.42689961,
+        "ste": 0.39093119,
+        "single": 0.38472,
+        "pair": 0.38418471,
+        "single_then_pair": 0.38002422,
+        "radius_two": 0.38002422,
+        "oracle": 0.38002422
+      },
+      "evaluations": {
+        "ste": 4,
+        "single": 64,
+        "pair": 448,
+        "single_then_pair_extra": 224,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00210027,
+      "single_best_pair_gain": 0.00293671
+    },
+    {
+      "seed": 19,
+      "train": {
+        "start": 0.7606456,
+        "ste": 0.7606456,
+        "single": 0.70884657,
+        "pair": 0.6932965,
+        "single_then_pair": 0.69917962,
+        "radius_two": 0.6932965,
+        "oracle": 0.68869236
+      },
+      "held": {
+        "start": 0.74787873,
+        "ste": 0.74787873,
+        "single": 0.7017996,
+        "pair": 0.69373417,
+        "single_then_pair": 0.69880006,
+        "radius_two": 0.69373417,
+        "oracle": 0.68791867
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 336,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": 0.00685552
+    },
+    {
+      "seed": 20,
+      "train": {
+        "start": 0.52273299,
+        "ste": 0.51150957,
+        "single": 0.46888082,
+        "pair": 0.46490998,
+        "single_then_pair": 0.46795454,
+        "radius_two": 0.46490998,
+        "oracle": 0.46490998
+      },
+      "held": {
+        "start": 0.58533029,
+        "ste": 0.56589877,
+        "single": 0.52535926,
+        "pair": 0.5219854,
+        "single_then_pair": 0.52514785,
+        "radius_two": 0.5219854,
+        "oracle": 0.5219854
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 32,
+        "pair": 336,
+        "single_then_pair_extra": 224,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": 0.00092627
+    },
+    {
+      "seed": 21,
+      "train": {
+        "start": 0.538763,
+        "ste": 0.538763,
+        "single": 0.538763,
+        "pair": 0.53841785,
+        "single_then_pair": 0.53841785,
+        "radius_two": 0.53841785,
+        "oracle": 0.53769652
+      },
+      "held": {
+        "start": 0.54958586,
+        "ste": 0.54958586,
+        "single": 0.54958586,
+        "pair": 0.54943126,
+        "single_then_pair": 0.54943126,
+        "radius_two": 0.54943126,
+        "oracle": 0.54879493
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 16,
+        "pair": 224,
+        "single_then_pair_extra": 224,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 3.644e-05,
+      "single_best_pair_gain": 0.00034515
+    },
+    {
+      "seed": 22,
+      "train": {
+        "start": 0.59422292,
+        "ste": 0.59422292,
+        "single": 0.57641182,
+        "pair": 0.57641182,
+        "single_then_pair": 0.57641182,
+        "radius_two": 0.57641182,
+        "oracle": 0.57314518
+      },
+      "held": {
+        "start": 0.60960227,
+        "ste": 0.60960227,
+        "single": 0.6034126,
+        "pair": 0.6034126,
+        "single_then_pair": 0.6034126,
+        "radius_two": 0.6034126,
+        "oracle": 0.60216021
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": -0.0
+    },
+    {
+      "seed": 23,
+      "train": {
+        "start": 0.62832985,
+        "ste": 0.62832985,
+        "single": 0.60424298,
+        "pair": 0.59270375,
+        "single_then_pair": 0.59855506,
+        "radius_two": 0.59270375,
+        "oracle": 0.59162413
+      },
+      "held": {
+        "start": 0.6289382,
+        "ste": 0.6289382,
+        "single": 0.60501127,
+        "pair": 0.59515375,
+        "single_then_pair": 0.60038852,
+        "radius_two": 0.59515375,
+        "oracle": 0.59501988
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 224,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.01227825,
+      "single_best_pair_gain": 0.00568792
+    },
+    {
+      "seed": 24,
+      "train": {
+        "start": 0.36767331,
+        "ste": 0.36767331,
+        "single": 0.35920325,
+        "pair": 0.35913756,
+        "single_then_pair": 0.35920325,
+        "radius_two": 0.35913756,
+        "oracle": 0.35570718
+      },
+      "held": {
+        "start": 0.41869757,
+        "ste": 0.41869757,
+        "single": 0.4176997,
+        "pair": 0.41752546,
+        "single_then_pair": 0.4176997,
+        "radius_two": 0.41752546,
+        "oracle": 0.41672239
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 80,
+        "pair": 336,
+        "single_then_pair_extra": 112,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00021687,
+      "single_best_pair_gain": -6.813e-05
+    },
+    {
+      "seed": 25,
+      "train": {
+        "start": 0.63859536,
+        "ste": 0.63859536,
+        "single": 0.63859536,
+        "pair": 0.63859536,
+        "single_then_pair": 0.63859536,
+        "radius_two": 0.63859536,
+        "oracle": 0.62964691
+      },
+      "held": {
+        "start": 0.62914508,
+        "ste": 0.62914508,
+        "single": 0.62914508,
+        "pair": 0.62914508,
+        "single_then_pair": 0.62914508,
+        "radius_two": 0.62914508,
+        "oracle": 0.62064692
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 16,
+        "pair": 112,
+        "single_then_pair_extra": 112,
+        "radius_two": 128,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": -0.0
+    },
+    {
+      "seed": 26,
+      "train": {
+        "start": 0.57363067,
+        "ste": 0.57363067,
+        "single": 0.56798551,
+        "pair": 0.56798551,
+        "single_then_pair": 0.56798551,
+        "radius_two": 0.56798551,
+        "oracle": 0.56379426
+      },
+      "held": {
+        "start": 0.5914395,
+        "ste": 0.5914395,
+        "single": 0.58750691,
+        "pair": 0.58750691,
+        "single_then_pair": 0.58750691,
+        "radius_two": 0.58750691,
+        "oracle": 0.5823923
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 2.734e-05,
+      "single_best_pair_gain": -0.00252279
+    },
+    {
+      "seed": 27,
+      "train": {
+        "start": 0.56847884,
+        "ste": 0.56847884,
+        "single": 0.55782819,
+        "pair": 0.54754055,
+        "single_then_pair": 0.5423773,
+        "radius_two": 0.5423773,
+        "oracle": 0.5423773
+      },
+      "held": {
+        "start": 0.56306056,
+        "ste": 0.56306056,
+        "single": 0.55503027,
+        "pair": 0.53936064,
+        "single_then_pair": 0.53672363,
+        "radius_two": 0.53672363,
+        "oracle": 0.53672363
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 224,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00285087,
+      "single_best_pair_gain": 0.01545089
+    },
+    {
+      "seed": 28,
+      "train": {
+        "start": 0.53778565,
+        "ste": 0.52958214,
+        "single": 0.48567838,
+        "pair": 0.48136208,
+        "single_then_pair": 0.48136208,
+        "radius_two": 0.48104291,
+        "oracle": 0.48104291
+      },
+      "held": {
+        "start": 0.56750237,
+        "ste": 0.60934364,
+        "single": 0.53215926,
+        "pair": 0.52698496,
+        "single_then_pair": 0.52698496,
+        "radius_two": 0.52390562,
+        "oracle": 0.52390562
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 32,
+        "pair": 336,
+        "single_then_pair_extra": 224,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 1.594e-05,
+      "single_best_pair_gain": 0.00431631
+    },
+    {
+      "seed": 29,
+      "train": {
+        "start": 0.69925282,
+        "ste": 0.69925282,
+        "single": 0.64015482,
+        "pair": 0.63589433,
+        "single_then_pair": 0.64015482,
+        "radius_two": 0.64015482,
+        "oracle": 0.63589433
+      },
+      "held": {
+        "start": 0.68699302,
+        "ste": 0.68699302,
+        "single": 0.65821438,
+        "pair": 0.65521077,
+        "single_then_pair": 0.65821438,
+        "radius_two": 0.65821438,
+        "oracle": 0.65521077
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 64,
+        "pair": 560,
+        "single_then_pair_extra": 112,
+        "radius_two": 384,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00121944,
+      "single_best_pair_gain": -0.00131596
+    },
+    {
+      "seed": 30,
+      "train": {
+        "start": 0.69541253,
+        "ste": 0.69541253,
+        "single": 0.69541253,
+        "pair": 0.68633094,
+        "single_then_pair": 0.68633094,
+        "radius_two": 0.68633094,
+        "oracle": 0.68293492
+      },
+      "held": {
+        "start": 0.70459357,
+        "ste": 0.70459357,
+        "single": 0.70459357,
+        "pair": 0.69608019,
+        "single_then_pair": 0.69608019,
+        "radius_two": 0.69608019,
+        "oracle": 0.68802793
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 16,
+        "pair": 224,
+        "single_then_pair_extra": 224,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0,
+      "single_best_pair_gain": 0.00908159
+    },
+    {
+      "seed": 31,
+      "train": {
+        "start": 0.63865108,
+        "ste": 0.63865108,
+        "single": 0.63596254,
+        "pair": 0.63518082,
+        "single_then_pair": 0.63518082,
+        "radius_two": 0.63518082,
+        "oracle": 0.62870925
+      },
+      "held": {
+        "start": 0.56643097,
+        "ste": 0.56643097,
+        "single": 0.55723306,
+        "pair": 0.56063858,
+        "single_then_pair": 0.56063858,
+        "radius_two": 0.56063858,
+        "oracle": 0.55165122
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 224,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00103082,
+      "single_best_pair_gain": 0.00078172
+    },
+    {
+      "seed": 32,
+      "train": {
+        "start": 0.55269807,
+        "ste": 0.45455929,
+        "single": 0.44889892,
+        "pair": 0.44889892,
+        "single_then_pair": 0.44889892,
+        "radius_two": 0.44889892,
+        "oracle": 0.44320216
+      },
+      "held": {
+        "start": 0.56719734,
+        "ste": 0.46789555,
+        "single": 0.45951688,
+        "pair": 0.45951688,
+        "single_then_pair": 0.45951688,
+        "radius_two": 0.45951688,
+        "oracle": 0.45502403
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0007069,
+      "single_best_pair_gain": -0.00071781
+    },
+    {
+      "seed": 33,
+      "train": {
+        "start": 0.22818297,
+        "ste": 0.22818297,
+        "single": 0.22812502,
+        "pair": 0.22703492,
+        "single_then_pair": 0.22703492,
+        "radius_two": 0.22703492,
+        "oracle": 0.22703492
+      },
+      "held": {
+        "start": 0.24126599,
+        "ste": 0.24126599,
+        "single": 0.2406727,
+        "pair": 0.24053862,
+        "single_then_pair": 0.24053862,
+        "radius_two": 0.24053862,
+        "oracle": 0.24053862
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 448,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 5.795e-05,
+      "single_best_pair_gain": 0.00044098
+    },
+    {
+      "seed": 34,
+      "train": {
+        "start": 0.56238823,
+        "ste": 0.56238823,
+        "single": 0.55222601,
+        "pair": 0.55228608,
+        "single_then_pair": 0.55222601,
+        "radius_two": 0.55222601,
+        "oracle": 0.55222601
+      },
+      "held": {
+        "start": 0.55477521,
+        "ste": 0.55477521,
+        "single": 0.54321859,
+        "pair": 0.54364499,
+        "single_then_pair": 0.54321859,
+        "radius_two": 0.54321859,
+        "oracle": 0.54321859
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 6.007e-05,
+      "single_best_pair_gain": -0.00168852
+    },
+    {
+      "seed": 35,
+      "train": {
+        "start": 0.23892227,
+        "ste": 0.23569878,
+        "single": 0.23569878,
+        "pair": 0.23541698,
+        "single_then_pair": 0.23541698,
+        "radius_two": 0.23541698,
+        "oracle": 0.23541698
+      },
+      "held": {
+        "start": 0.31901747,
+        "ste": 0.31662008,
+        "single": 0.31662008,
+        "pair": 0.31650834,
+        "single_then_pair": 0.31650834,
+        "radius_two": 0.31650834,
+        "oracle": 0.31650834
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 32,
+        "pair": 448,
+        "single_then_pair_extra": 336,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0015545,
+      "single_best_pair_gain": 0.00021309
+    },
+    {
+      "seed": 36,
+      "train": {
+        "start": 0.73076061,
+        "ste": 0.70513182,
+        "single": 0.64820515,
+        "pair": 0.64602036,
+        "single_then_pair": 0.64602036,
+        "radius_two": 0.64602036,
+        "oracle": 0.64602036
+      },
+      "held": {
+        "start": 0.72873124,
+        "ste": 0.70467639,
+        "single": 0.65210313,
+        "pair": 0.6484631,
+        "single_then_pair": 0.6484631,
+        "radius_two": 0.6484631,
+        "oracle": 0.6484631
+      },
+      "evaluations": {
+        "ste": 2,
+        "single": 48,
+        "pair": 448,
+        "single_then_pair_extra": 336,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00084167,
+      "single_best_pair_gain": 0.00095614
+    },
+    {
+      "seed": 37,
+      "train": {
+        "start": 0.5388675,
+        "ste": 0.5388675,
+        "single": 0.52659636,
+        "pair": 0.52278368,
+        "single_then_pair": 0.52278368,
+        "radius_two": 0.52278368,
+        "oracle": 0.51974659
+      },
+      "held": {
+        "start": 0.53995018,
+        "ste": 0.53995018,
+        "single": 0.5387331,
+        "pair": 0.52809932,
+        "single_then_pair": 0.52809932,
+        "radius_two": 0.52809932,
+        "oracle": 0.52335693
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 64,
+        "pair": 448,
+        "single_then_pair_extra": 224,
+        "radius_two": 512,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00090505,
+      "single_best_pair_gain": 0.00381268
+    },
+    {
+      "seed": 38,
+      "train": {
+        "start": 0.76066704,
+        "ste": 0.76066704,
+        "single": 0.67511601,
+        "pair": 0.67419248,
+        "single_then_pair": 0.67511601,
+        "radius_two": 0.67419248,
+        "oracle": 0.66716399
+      },
+      "held": {
+        "start": 0.78317017,
+        "ste": 0.78317017,
+        "single": 0.67783543,
+        "pair": 0.68033506,
+        "single_then_pair": 0.67783543,
+        "radius_two": 0.68033506,
+        "oracle": 0.67293149
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 48,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.00059438,
+      "single_best_pair_gain": -2.318e-05
+    },
+    {
+      "seed": 39,
+      "train": {
+        "start": 0.43906333,
+        "ste": 0.43906333,
+        "single": 0.43753488,
+        "pair": 0.43785799,
+        "single_then_pair": 0.43753488,
+        "radius_two": 0.43753488,
+        "oracle": 0.43740476
+      },
+      "held": {
+        "start": 0.45047278,
+        "ste": 0.45047278,
+        "single": 0.44957205,
+        "pair": 0.45010504,
+        "single_then_pair": 0.44957205,
+        "radius_two": 0.44957205,
+        "oracle": 0.44935589
+      },
+      "evaluations": {
+        "ste": 1,
+        "single": 32,
+        "pair": 224,
+        "single_then_pair_extra": 112,
+        "radius_two": 256,
+        "oracle": 6561
+      },
+      "single_pair_barrier": 0.0003231,
+      "single_best_pair_gain": -0.00028072
+    }
+  ],
+  "example_seed_27": {
+    "seed": 27,
+    "real_weights": [
+      -0.54915,
+      0.91256,
+      -1.09862,
+      -0.41731,
+      0.77287,
+      -1.66542,
+      -0.24414,
+      -1.62235
+    ],
+    "start": [
+      -1,
+      1,
+      -1,
+      0,
+      1,
+      -1,
+      0,
+      -1
+    ],
+    "train": {
+      "start": 0.56847884,
+      "ste": 0.56847884,
+      "single": 0.55782819,
+      "pair": 0.54754055,
+      "single_then_pair": 0.5423773,
+      "radius_two": 0.5423773,
+      "oracle": 0.5423773
+    },
+    "held": {
+      "start": 0.56306056,
+      "ste": 0.56306056,
+      "single": 0.55503027,
+      "pair": 0.53936064,
+      "single_then_pair": 0.53672363,
+      "radius_two": 0.53672363,
+      "oracle": 0.53672363
+    },
+    "codes": {
+      "ste": [
+        -1,
+        1,
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        -1
+      ],
+      "single": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        0,
+        -1
+      ],
+      "pair": [
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "single_then_pair": [
+        -1,
+        1,
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "radius_two": [
+        -1,
+        1,
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "oracle": [
+        -1,
+        1,
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        -1
+      ]
+    },
+    "evaluations": {
+      "ste": 1,
+      "single": 32,
+      "pair": 224,
+      "single_then_pair_extra": 224,
+      "radius_two": 384,
+      "oracle": 6561
+    },
+    "moves": {
+      "ste": [],
+      "single": [
+        [
+          [
+            -1,
+            1,
+            -1,
+            0,
+            1,
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            0,
+            -1
+          ]
+        ]
+      ],
+      "single_then_pair": [
+        [
+          [
+            -1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            -1,
+            0,
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      ],
+      "radius_two": [
+        [
+          [
+            -1,
+            1,
+            -1,
+            0,
+            1,
+            -1,
+            0,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1
+          ]
+        ],
+        [
+          [
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1,
+            -1,
+            0,
+            -1,
+            -1,
+            -1
+          ]
+        ]
+      ]
+    },
+    "ste_first_rejection": {
+      "code": [
+        -1,
+        1,
+        -1,
+        0,
+        -1,
+        -1,
+        0,
+        -1
+      ],
+      "predicted_delta": -0.06227911,
+      "actual_delta": 0.34617862
+    },
+    "single_pair_barrier": 0.00285087,
+    "single_best_pair_gain": 0.01545089,
+    "best_pair_witness": {
+      "positions": [
+        4,
+        6
+      ],
+      "new_values": [
+        0,
+        -1
+      ],
+      "single_deltas": [
+        0.03673492,
+        0.01574183
+      ],
+      "joint_delta": -0.01545089,
+      "interaction": -0.06792764
+    }
+  }
+}

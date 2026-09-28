@@ -1,0 +1,140 @@
+{
+  "checkpoint_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "capture_sha256": "dc57232964e80d225f2212d85f89d43e5248ade92b7cfee17632a7502c195f1a",
+  "capture_manifest_sha256": "84f3f2e632bf1a44a9365d97a08959186a79d63b99ce7c0207bc1cfe982f9a4b",
+  "tokens_sha256": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+  "source_boundary": "pinned BF16 source-model head-hook output before tied head; no changed upstream producer",
+  "candidate_boundary": "BF16-round (h - Delta*(h/final_gamma)), then CPU torch BF16 matmul with original tied BF16 head",
+  "rank": 128,
+  "minimum_source_singular_value": 0.021501563171422187,
+  "gain_delta_frobenius_squared": 213.1940984756476,
+  "gain_delta_spectral": 5.534133224375967,
+  "splits": {
+    "train": {
+      "windows": [
+        {
+          "positions": 255,
+          "teacher_gold_nll": 3.7046330697997916,
+          "candidate_gold_nll": 4.931440978650587,
+          "gold_nll_change": 1.2268079088507946,
+          "teacher_to_candidate_kl": 1.5977755812481251,
+          "max_teacher_to_candidate_kl": 5.1918903707626605,
+          "p95_teacher_to_candidate_kl": 3.592025001335796,
+          "top1_changes": 170,
+          "changed_gold_nll_positions": 197,
+          "window": 0,
+          "relative_pre_head_shift": 0.47080288873847775
+        },
+        {
+          "positions": 255,
+          "teacher_gold_nll": 4.320254813086189,
+          "candidate_gold_nll": 5.748823637652294,
+          "gold_nll_change": 1.428568824566106,
+          "teacher_to_candidate_kl": 1.6098919944998589,
+          "max_teacher_to_candidate_kl": 4.568946486237191,
+          "p95_teacher_to_candidate_kl": 2.91799930610454,
+          "top1_changes": 188,
+          "changed_gold_nll_positions": 198,
+          "window": 1,
+          "relative_pre_head_shift": 0.4804114653765156
+        },
+        {
+          "positions": 255,
+          "teacher_gold_nll": 4.009226840506472,
+          "candidate_gold_nll": 5.750677440792592,
+          "gold_nll_change": 1.74145060028612,
+          "teacher_to_candidate_kl": 1.8980108843029597,
+          "max_teacher_to_candidate_kl": 6.061997996556762,
+          "p95_teacher_to_candidate_kl": 3.843425705751498,
+          "top1_changes": 183,
+          "changed_gold_nll_positions": 207,
+          "window": 2,
+          "relative_pre_head_shift": 0.4487422680561396
+        },
+        {
+          "positions": 255,
+          "teacher_gold_nll": 4.242363032907705,
+          "candidate_gold_nll": 6.03326473862876,
+          "gold_nll_change": 1.7909017057210554,
+          "teacher_to_candidate_kl": 1.928145135330717,
+          "max_teacher_to_candidate_kl": 4.647533719623869,
+          "p95_teacher_to_candidate_kl": 3.797581109529584,
+          "top1_changes": 193,
+          "changed_gold_nll_positions": 216,
+          "window": 3,
+          "relative_pre_head_shift": 0.43632073702842766
+        }
+      ],
+      "positions": 1020,
+      "mean_teacher_gold_nll": 4.069119439075039,
+      "mean_candidate_gold_nll": 5.6160516989310585,
+      "mean_gold_nll_change": 1.5469322598560191,
+      "mean_teacher_to_candidate_kl": 1.7584558988454153,
+      "top1_changes": 734
+    },
+    "validation": {
+      "windows": [
+        {
+          "positions": 255,
+          "teacher_gold_nll": 3.941490190450419,
+          "candidate_gold_nll": 5.359294407209161,
+          "gold_nll_change": 1.4178042167587408,
+          "teacher_to_candidate_kl": 1.5825882863324972,
+          "max_teacher_to_candidate_kl": 5.861104968444554,
+          "p95_teacher_to_candidate_kl": 3.7914195792318837,
+          "top1_changes": 164,
+          "changed_gold_nll_positions": 205,
+          "window": 0,
+          "relative_pre_head_shift": 0.4247286839086933
+        },
+        {
+          "positions": 255,
+          "teacher_gold_nll": 4.137977764460128,
+          "candidate_gold_nll": 5.175023661328063,
+          "gold_nll_change": 1.0370458968679346,
+          "teacher_to_candidate_kl": 1.5784047519928524,
+          "max_teacher_to_candidate_kl": 4.787551573636847,
+          "p95_teacher_to_candidate_kl": 3.8441954503074363,
+          "top1_changes": 155,
+          "changed_gold_nll_positions": 181,
+          "window": 1,
+          "relative_pre_head_shift": 0.3954978314156426
+        }
+      ],
+      "positions": 510,
+      "mean_teacher_gold_nll": 4.039733977455274,
+      "mean_candidate_gold_nll": 5.267159034268612,
+      "mean_gold_nll_change": 1.2274250568133378,
+      "mean_teacher_to_candidate_kl": 1.5804965191626748,
+      "top1_changes": 319
+    }
+  },
+  "selected_captured_gpu_teacher": {
+    "source_cpu_bf16_vs_captured_gpu_relative_logit_rms": 9.729601151775569e-05,
+    "source_cpu_bf16_vs_captured_gpu_max_absolute_logit": 0.125,
+    "captured_gpu_reference_nll": 3.6102590560913086,
+    "score": {
+      "positions": 64,
+      "teacher_gold_nll": 3.6102592969090814,
+      "candidate_gold_nll": 4.520794630794087,
+      "gold_nll_change": 0.9105353338850058,
+      "teacher_to_candidate_kl": 1.6502581866389634,
+      "max_teacher_to_candidate_kl": 4.633692010950551,
+      "p95_teacher_to_candidate_kl": 3.444223030693811,
+      "top1_changes": 42,
+      "changed_gold_nll_positions": 49
+    },
+    "ideal_fp32_head_score": {
+      "positions": 64,
+      "teacher_gold_nll": 3.6102592969090814,
+      "candidate_gold_nll": 4.520353113865449,
+      "gold_nll_change": 0.9100938169563669,
+      "teacher_to_candidate_kl": 1.649323972090438,
+      "max_teacher_to_candidate_kl": 4.6208736234633285,
+      "p95_teacher_to_candidate_kl": 3.4563727554982617,
+      "top1_changes": 44,
+      "changed_gold_nll_positions": 49
+    },
+    "bf16_vs_ideal_candidate_relative_logit_rms": 0.002664550207555294
+  }
+}

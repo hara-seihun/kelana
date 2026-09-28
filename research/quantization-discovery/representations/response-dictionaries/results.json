@@ -1,0 +1,265 @@
+{
+  "seed": 230923,
+  "source": "instances/bonsai-layer00-down-block0.npz",
+  "source_sha256": "70c7180bd822f2a05e2a76e74df657f575caead2da7d526728fbc92831c4bdee",
+  "dimensions": [
+    5120,
+    128
+  ],
+  "train_rows": 4096,
+  "held_rows": 1024,
+  "captured_held_queries": 8,
+  "physical_byte_contract": "IDs bit-packed across all rows; FP16 dictionary per column position; unchanged FP16 source scale per row. No file header or padding.",
+  "real": [
+    {
+      "name": "one_bit_sign_folded_fp16_scale",
+      "physical_bytes": 92160,
+      "online": "128 sign-controlled input terms and one combined FP16 row scale",
+      "held_row_relative_rms": 0.5287312865257263,
+      "all_row_relative_rms": 0.5149345397949219,
+      "fp16_zero_scale_rows": 0,
+      "fp16_infinite_scale_rows": 0
+    },
+    {
+      "name": "one_bit_sign_row_gain",
+      "physical_bytes": 102400,
+      "online": "128 sign-controlled products plus one FP16 gain and source scale per row",
+      "held_row_relative_rms": 0.528731107711792,
+      "all_row_relative_rms": 0.5149325728416443
+    },
+    {
+      "name": "one_spike_per_8",
+      "physical_bytes": 51200,
+      "online": "16 input gathers and signed additions per row; table-free",
+      "held_row_relative_rms": 0.9042478203773499,
+      "all_row_relative_rms": 0.8919966220855713
+    },
+    {
+      "name": "exact_base3_halo",
+      "physical_bytes": 143360,
+      "online": "128 ternary input terms per row, or the separately measured sign-orbit SIMD consumer",
+      "held_row_relative_rms": 0.0,
+      "all_row_relative_rms": 0.0
+    },
+    {
+      "name": "learned_k4",
+      "physical_bytes": 31744,
+      "native_single_core": null,
+      "ids_bytes": 20480,
+      "dictionary_bytes": 1024,
+      "source_scale_bytes": 10240,
+      "id_bits": 2,
+      "online": "512 float16 coefficient-input products for fresh table preparation, 81920 packed-ID lookups and FP32 response additions, 5120 row scales; no reconstructed weights at inference",
+      "held_row_relative_rms": 0.891698956489563,
+      "all_row_relative_rms": 0.877319872379303,
+      "held_row_weight_mse": 0.5380859375,
+      "occupied_codes": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "learned_k16",
+      "physical_bytes": 55296,
+      "native_single_core": {
+        "median_fresh_microseconds": 37.029,
+        "minimum_fresh_microseconds": 36.919,
+        "max_absolute_output_error": 1.52588e-05,
+        "checksum": -17.1535
+      },
+      "ids_bytes": 40960,
+      "dictionary_bytes": 4096,
+      "source_scale_bytes": 10240,
+      "id_bits": 4,
+      "online": "2048 float16 coefficient-input products for fresh table preparation, 81920 packed-ID lookups and FP32 response additions, 5120 row scales; no reconstructed weights at inference",
+      "held_row_relative_rms": 0.7543622851371765,
+      "all_row_relative_rms": 0.7359475493431091,
+      "held_row_weight_mse": 0.38623046875,
+      "occupied_codes": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    },
+    {
+      "name": "learned_k64",
+      "physical_bytes": 88064,
+      "native_single_core": {
+        "median_fresh_microseconds": 64.408,
+        "minimum_fresh_microseconds": 62.438,
+        "max_absolute_output_error": 1.90735e-06,
+        "checksum": 68.727
+      },
+      "ids_bytes": 61440,
+      "dictionary_bytes": 16384,
+      "source_scale_bytes": 10240,
+      "id_bits": 6,
+      "online": "8192 float16 coefficient-input products for fresh table preparation, 81920 packed-ID lookups and FP32 response additions, 5120 row scales; no reconstructed weights at inference",
+      "held_row_relative_rms": 0.6113402247428894,
+      "all_row_relative_rms": 0.5759414434432983,
+      "held_row_weight_mse": 0.252197265625,
+      "occupied_codes": [
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64
+      ]
+    }
+  ],
+  "independent_trits": [
+    {
+      "name": "one_bit_sign_folded_fp16_scale",
+      "physical_bytes": 92160,
+      "online": "128 sign-controlled input terms and one combined FP16 row scale",
+      "held_row_relative_rms": 0.5225372314453125,
+      "all_row_relative_rms": 0.5125537514686584,
+      "fp16_zero_scale_rows": 0,
+      "fp16_infinite_scale_rows": 0
+    },
+    {
+      "name": "one_bit_sign_row_gain",
+      "physical_bytes": 102400,
+      "online": "128 sign-controlled products plus one FP16 gain and source scale per row",
+      "held_row_relative_rms": 0.5225378274917603,
+      "all_row_relative_rms": 0.5125529170036316
+    },
+    {
+      "name": "one_spike_per_8",
+      "physical_bytes": 51200,
+      "online": "16 input gathers and signed additions per row; table-free",
+      "held_row_relative_rms": 0.9083797335624695,
+      "all_row_relative_rms": 0.898722767829895
+    },
+    {
+      "name": "exact_base3_halo",
+      "physical_bytes": 143360,
+      "online": "128 ternary input terms per row, or the separately measured sign-orbit SIMD consumer",
+      "held_row_relative_rms": 0.0,
+      "all_row_relative_rms": 0.0
+    },
+    {
+      "name": "learned_k16",
+      "physical_bytes": 55296,
+      "native_single_core": null,
+      "ids_bytes": 40960,
+      "dictionary_bytes": 4096,
+      "source_scale_bytes": 10240,
+      "id_bits": 4,
+      "online": "2048 float16 coefficient-input products for fresh table preparation, 81920 packed-ID lookups and FP32 response additions, 5120 row scales; no reconstructed weights at inference",
+      "held_row_relative_rms": 0.7575812935829163,
+      "all_row_relative_rms": 0.7432993650436401,
+      "held_row_weight_mse": 0.38623046875,
+      "occupied_codes": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ]
+    }
+  ],
+  "exact_motifs": {
+    "real": {
+      "4": {
+        "mean_unique": 81.0,
+        "mean_top16_fraction": 0.233978271484375,
+        "min_unique": 81,
+        "max_unique": 81
+      },
+      "8": {
+        "mean_unique": 3550.0,
+        "mean_top16_fraction": 0.0142333984375,
+        "min_unique": 3518,
+        "max_unique": 3599
+      },
+      "16": {
+        "mean_unique": 5119.75,
+        "mean_top16_fraction": 0.003173828125,
+        "min_unique": 5119,
+        "max_unique": 5120
+      }
+    },
+    "independent": {
+      "4": {
+        "mean_unique": 81.0,
+        "mean_top16_fraction": 0.23484497070312502,
+        "min_unique": 81,
+        "max_unique": 81
+      },
+      "8": {
+        "mean_unique": 3544.5625,
+        "mean_top16_fraction": 0.01417236328125,
+        "min_unique": 3511,
+        "max_unique": 3590
+      },
+      "16": {
+        "mean_unique": 5119.625,
+        "mean_top16_fraction": 0.0031982421875000003,
+        "min_unique": 5118,
+        "max_unique": 5120
+      }
+    }
+  },
+  "fitting_seconds": {
+    "real": {
+      "scalar_controls_seconds": 0.007183107998571359,
+      "learned_k4_seconds": 0.09786614500626456,
+      "learned_k16_seconds": 0.08587508600612637,
+      "learned_k64_seconds": 0.3011273240117589
+    },
+    "independent": {
+      "scalar_controls_seconds": 0.006549361001816578,
+      "learned_k16_seconds": 0.08630215199082159
+    }
+  }
+}

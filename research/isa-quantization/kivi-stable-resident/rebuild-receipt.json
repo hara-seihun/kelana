@@ -1,0 +1,95 @@
+{
+  "target": "gfx1151",
+  "compiler": "HIP version: 7.2.53211-9999",
+  "source_sha256": {
+    "state.hip": "fcc1dd42a003d14dc5769aa9ef11db4f2915fb8fbb467e30457738254f8e45e1",
+    "reader.hip": "d98aa5c10ea307d4c8ff2ccd6f017f586a5a32c06ffa334c807c220a75595815",
+    "native.hip": "1f97985caea20a343a7b5248522b075fe6da835b8c04c48a5371abaf5c907faa",
+    "../kivi-resident-cache/step_bits.hpp": "f1002c9d6d63bc0c2885d80cd196d5b723bc78a56339fdd64641e448f14204b9"
+  },
+  "device_kernels": [
+    {
+      "symbol": "_ZN6stable10append_keyEPNS_5CacheEPNS_7ControlEPKhii",
+      "body_bytes": 468,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 7,
+      "sgpr": 13
+    },
+    {
+      "symbol": "_ZN6stable13append_recentEPNS_5CacheEPNS_7ControlEPKhii",
+      "body_bytes": 4108,
+      "descriptor_bytes": 64,
+      "lds": 44,
+      "private_scratch": 0,
+      "vgpr": 19,
+      "sgpr": 37
+    },
+    {
+      "symbol": "_ZN6stable9flush_keyEPNS_5CacheEPNS_7ControlEii",
+      "body_bytes": 8344,
+      "descriptor_bytes": 64,
+      "lds": 4608,
+      "private_scratch": 0,
+      "vgpr": 51,
+      "sgpr": 13
+    },
+    {
+      "symbol": "_ZN6stable11flush_valueEPNS_5CacheEPNS_7ControlEPNS_7ScratchEii",
+      "body_bytes": 7036,
+      "descriptor_bytes": 64,
+      "lds": 144,
+      "private_scratch": 0,
+      "vgpr": 51,
+      "sgpr": 15
+    },
+    {
+      "symbol": "_ZN6stable12finish_valueEPNS_5CacheEPNS_7ScratchEi",
+      "body_bytes": 1648,
+      "descriptor_bytes": 64,
+      "lds": 156,
+      "private_scratch": 0,
+      "vgpr": 9,
+      "sgpr": 21
+    },
+    {
+      "symbol": "_ZN6stable12finish_earlyEPNS_5CacheEi",
+      "body_bytes": 120,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 2,
+      "sgpr": 5
+    },
+    {
+      "symbol": "_Z8finish_oPKfPf",
+      "body_bytes": 372,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 12,
+      "sgpr": 4
+    },
+    {
+      "symbol": "_Z11query_groupILi1EEvPKN6stable5CacheEPKNS0_7ControlEiPKfPKtPf",
+      "body_bytes": 14436,
+      "descriptor_bytes": 64,
+      "lds": 5632,
+      "private_scratch": 0,
+      "vgpr": 25,
+      "sgpr": 44
+    },
+    {
+      "symbol": "_Z11query_groupILi0EEvPKN6stable5CacheEPKNS0_7ControlEiPKfPKtPf",
+      "body_bytes": 13968,
+      "descriptor_bytes": 64,
+      "lds": 5632,
+      "private_scratch": 0,
+      "vgpr": 24,
+      "sgpr": 44
+    }
+  ],
+  "assembly_sha256": "b8d7252ec0a7af9cd9e496b0dff7dd260b7a94e6fddfd608a4c8575b7b2da3ca",
+  "binary_sha256": "8b791fc288293c11a1749d72d363e9a1ed48af3d15419f72137ee1938ed701fe"
+}

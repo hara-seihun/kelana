@@ -1,0 +1,42 @@
+{
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "model_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "quantizer_sha256": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a",
+  "source_sha256": "0ec80ec258b54ae3ca750ece359bed390fe5f11be2fd6028f9c0239e249b4d8c",
+  "threads": 8,
+  "range": [
+    0,
+    0
+  ],
+  "embedding": true,
+  "method": "spectral_quant.quantize, symmetric signed odd levels, group128, four clip seeds and five alternating LS scale/code steps per seed",
+  "entries": [
+    {
+      "name": "model.embed_tokens.weight",
+      "bits": 2,
+      "shape": [
+        151936,
+        1024
+      ],
+      "payload_bytes": 41326608,
+      "container_bytes": 41327400,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_embed_tokens_weight-g128-b2.npz",
+      "sha256": "704afd1cb694a00d858dde4172d260ad034fa1d01016f605c56ab3904d251b06",
+      "seconds": 2.3996498719934607
+    },
+    {
+      "name": "model.embed_tokens.weight",
+      "bits": 4,
+      "shape": [
+        151936,
+        1024
+      ],
+      "payload_bytes": 80222224,
+      "container_bytes": 80223016,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_embed_tokens_weight-g128-b4.npz",
+      "sha256": "07386176d04c8620445db9d7f81ceffbd00fc38049d01fe4c3ca8eb018c7555c",
+      "seconds": 2.3918690550053725
+    }
+  ],
+  "seconds": 6.301602594990982
+}

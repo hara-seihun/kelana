@@ -1,0 +1,62 @@
+{
+  "B": "8",
+  "query_values": [
+    "-1/2",
+    "1/2"
+  ],
+  "key_values": [
+    "7",
+    "9"
+  ],
+  "exact_variance_exponents_before": [
+    [
+      "169/4",
+      "289/4"
+    ],
+    [
+      "225/4",
+      "361/4"
+    ]
+  ],
+  "exact_variance_exponents_after": [
+    [
+      "9/4",
+      "1/4"
+    ],
+    [
+      "1/4",
+      "9/4"
+    ]
+  ],
+  "mean_exponent_before": "261/4",
+  "mean_exponent_after": "5/4",
+  "mean_reduction": "64",
+  "center_field": {
+    "path": "center.f16",
+    "bytes": 2,
+    "sha256": "4d2ae2d6e0000b72a5739078e0e83bc029b6232edabff84d012acd1d4803db51"
+  },
+  "finite_reader_rows": [
+    {
+      "query": "-1/2",
+      "teacher_value": 0.26894142136999505,
+      "teacher_shifted_value": 0.2689414213699951,
+      "fixed_two_feature_uncentered_value": 8.315261825673223e-07,
+      "fixed_two_feature_centered_value": 0.3240271368319426,
+      "uncentered_abs_error": 0.26894058984381247,
+      "centered_abs_error": 0.05508571546194757
+    },
+    {
+      "query": "1/2",
+      "teacher_value": 0.731058578630005,
+      "teacher_shifted_value": 0.7310585786300049,
+      "fixed_two_feature_uncentered_value": 8.315277779569441e-07,
+      "fixed_two_feature_centered_value": 0.6759728631680573,
+      "uncentered_abs_error": 0.731057747102227,
+      "centered_abs_error": 0.05508571546194774
+    }
+  ],
+  "strong_control": "direct sigmoid(2q), no prefix feature program required on this fixed family",
+  "proof_scope": "rational score differences and geometry exact; exp/output evaluated in float64",
+  "no_random_draw_seed_sweep_or_native_claim": true
+}

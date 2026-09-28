@@ -1,0 +1,101 @@
+{
+  "rows": 248320,
+  "blocks": 40,
+  "decoded_trits": 1271398400,
+  "cpu_seconds": 1.27263,
+  "head_offset": 24576,
+  "head_bytes": 278118400,
+  "oracle": {
+    "index": 161956,
+    "score": 202.305
+  },
+  "real_oracle": {
+    "index": 161956,
+    "units": 3394106880
+  },
+  "candidate": {
+    "index": 1862,
+    "score": 148.094,
+    "real_units": 2484598272,
+    "window": 4096
+  },
+  "cuts": [
+    {
+      "prefix_blocks": 0,
+      "survivors": 248320,
+      "plain_l1_survivors": 248320,
+      "oracle_survives": 1,
+      "candidate_survives": 1,
+      "certified_real_winner": 161956,
+      "weight_bytes_read_at_least": 0,
+      "bound_bytes_per_query": 29798400
+    },
+    {
+      "prefix_blocks": 8,
+      "survivors": 248320,
+      "plain_l1_survivors": 248320,
+      "oracle_survives": 1,
+      "candidate_survives": 1,
+      "certified_real_winner": 161956,
+      "weight_bytes_read_at_least": 55623680,
+      "bound_bytes_per_query": 23838720
+    },
+    {
+      "prefix_blocks": 24,
+      "survivors": 248320,
+      "plain_l1_survivors": 248320,
+      "oracle_survives": 1,
+      "candidate_survives": 1,
+      "certified_real_winner": 161956,
+      "weight_bytes_read_at_least": 166871040,
+      "bound_bytes_per_query": 11919360
+    },
+    {
+      "prefix_blocks": 36,
+      "survivors": 247660,
+      "plain_l1_survivors": 247660,
+      "oracle_survives": 1,
+      "candidate_survives": 1,
+      "certified_real_winner": 161956,
+      "weight_bytes_read_at_least": 250306560,
+      "bound_bytes_per_query": 2979840
+    },
+    {
+      "prefix_blocks": 39,
+      "survivors": 3426,
+      "plain_l1_survivors": 3426,
+      "oracle_survives": 1,
+      "candidate_survives": 1,
+      "certified_real_winner": 161956,
+      "weight_bytes_read_at_least": 271165440,
+      "bound_bytes_per_query": 744960
+    },
+    {
+      "prefix_blocks": 40,
+      "survivors": 33,
+      "plain_l1_survivors": 33,
+      "oracle_survives": 1,
+      "candidate_survives": 1,
+      "certified_real_winner": 161956,
+      "weight_bytes_read_at_least": 278118400,
+      "bound_bytes_per_query": 0
+    }
+  ],
+  "provenance": {
+    "gguf_path": "/path/to/workspace/data/bonsai2/PTQ1_0.gguf",
+    "gguf_bytes": 5946648928,
+    "gguf_mtime_seconds": 1789744185,
+    "head_cache_path": "/path/to/workspace/data/bonsai2/PTQ1_0.gguf.halo",
+    "head_sha256": "1590e2218ba66c23f8c01e97bb09773516d2cfdcee30a3c2458b2762f1abd4c5",
+    "head_offset": 24576,
+    "head_bytes": 278118400,
+    "query_source": "/path/to/workspace/data/kelana-ffn/ptq1_0/layer10/r8/xq_ff.i8",
+    "query_source_sha256": "286c50eccacf9dee3b4c94c96b9e20659aa174ce89bf51dace65fd928e467d13",
+    "query_scope": "first 5120 coordinates of the first and second 17408-coordinate rows in layer10 FFN input xq_ff.i8; head-input proxies, not final-head captures",
+    "probe_source_sha256": "1f2497913590734e52a77c81a508b7631a14a841477f1e200bfc7c6d00bc65ac",
+    "halo_decoder_source_sha256": "ae6053ad4ce0ea23eb26774aaf61d21cf12e4e495438d761bbfed4590d52e109",
+    "probe_binary_sha256": "6d70a666e625512478bd771d533ed3e868ac634b64b939282b8bd19395172627",
+    "compiler": "c++ -O3 -std=c++20 -ffp-contract=off -I/path/to/workspace/projects/bonsai-halo/src",
+    "query_sha256": "4f4e09781b1a9ebe85c3ecbd1adbe31ebd962d7da14f9c77f5a06e76a3dfce68"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "panel": "train",
+  "window": 4,
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "final_image_sha256": "cc6427585c39c46fb94a7f6733664286db3bbd4b426e863e093803c986aac31c",
+  "flush_log_sha256": "bb85367f131659ef6df3e185a027167686b8406a39d142e3f4cf1dc05b294ed4",
+  "preflush_peak_bytes": 52400,
+  "postflush_final_bytes": 46592,
+  "event_count": {
+    "K": 8,
+    "V": 224
+  },
+  "recent_bf16_vs_source_fp32_k_max_abs": 0.923858642578125,
+  "uncompressed_online_vs_teacher_max_score_abs": 9.5367431640625e-06,
+  "uncompressed_online_vs_teacher_max_output_abs": 4.917383193969727e-07,
+  "heads": {
+    "head0": {
+      "attention_kl": 0.003400947665795684,
+      "post_o_sse": 0.062268517911434174,
+      "post_o_ref_sq": 52.529029846191406,
+      "recent_fp32_k_sensitivity_post_o_sse": 0.06231188774108887,
+      "recent_fp32_k_sensitivity_attention_kl": 0.0034006794448941946
+    },
+    "head1": {
+      "attention_kl": 0.0009184422087855637,
+      "post_o_sse": 0.012422304600477219,
+      "post_o_ref_sq": 449.93255615234375,
+      "recent_fp32_k_sensitivity_post_o_sse": 0.011865993961691856,
+      "recent_fp32_k_sensitivity_attention_kl": 0.0009142340859398246
+    }
+  },
+  "gqa_pair": {
+    "post_o_sse": 0.07611848413944244,
+    "post_o_ref_sq": 524.4569702148438,
+    "recent_fp32_k_sensitivity_post_o_sse": 0.075614333152771
+  }
+}

@@ -1,0 +1,17 @@
+# Occurrence weight in the tied rank-eight factor
+
+The earlier joint tied-head fit changed two things at once: it added token-occurrence weights to the residual fit and doubled the number of train head positions. I held the 128 head positions, K256 base image, 1,280 frequent exact rows, rank-eight FP16 factor budget, 16-column sketch, seed and calibration inputs fixed. Removing only the occurrence term raises held head NLL from 4.74903 to 4.91173. It also raises validation-frequency-weighted embedding RMS from .45853 to .46160. The occurrence term earns its place in this small CPU panel, although it loses five held teacher top-1 matches.
+
+| Fit on the same 128 train head positions | Paid tied BPW | Held NLL | Teacher KL | Top-1 / 64 | Weighted embedding RMS |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Head curvature only | .886111 | 4.91173 | 1.12147 | 50 | .46160 |
+| Head curvature plus occurrence | .886111 | **4.74903** | **1.10344** | 45 | **.45853** |
+| Frequent 2,560 exact rows, no factor | .895325 | 4.62868 | 1.06488 | 52 | .41641 |
+
+Both factor arms use `d_i = 0.1 + 100000 mean_train[p_i(1-p_i)] + c train_count_i/mean_rare_train_count`, with `c=0` or `4`, and zero weight on the same 1,280 exact rows. The 128 train positions are `4,12,...,252` in four 256-token windows. The fit uses one power iteration and a randomized 16-column sketch, then stores eight FP16 factors. This is a controlled comparison of the *implemented fit*, not a guarantee about the exact rank-constrained optimum. Both arms use separate two-scalar rare-logit calibration on the same 32 disjoint train positions. The 64 held head positions come from two validation windows. The occurrence arm lowers gold NLL at 36 of 64 positions and in both windows, by .22477 and .10062 nats/token. Removing its single largest improvement still leaves a mean gain of .12669. Its largest individual improvement and loss are 2.4314 and 2.5445 nats.
+
+The identical 17,232,908-byte paid payload and direct head/embedding program are described in [the joint fit](../joint-spectrum/README.md). A head query prepares the codebook response, computes eight factor input dots, adds eight contributions per vocabulary row, then replaces the same exact rows; an embedding query decodes one row and its factor contribution. Neither fit expands its codes to int4 online. The factor objective is a row-diagonal surrogate. Its modest embedding gain and severe top-1 reversal leave the 2,560-exact-row control ahead in head NLL and embedding RMS. This experiment uses fixed original-model final hidden states; it does not feed quantized embeddings through the 28 layers, time a native consumer or establish whole-model quality.
+
+The next experiment should replace the row-diagonal head surrogate with input-covariance or a gold-loss response objective, using independent head inputs for selection and measuring quality after quantized-embedding propagation. More coefficient tuning on these 64 held positions would not settle that question.
+
+`study.py fit` and `study.py assess` run as separate bounded CPU steps. Their source hashes, trained FP16 image, matching prior-image hash, calibration and per-window receipts are in `/path/to/workspace/data/kelana-subbit/occurrence-ablation/`. The read-only Python environment is `/path/to/workspace/data/fish-s2-pro/venv/bin/python`; set `OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4` for each command. The GPU and resident service were untouched.

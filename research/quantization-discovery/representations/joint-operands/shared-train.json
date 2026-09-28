@@ -1,0 +1,141 @@
+{
+  "split": "train",
+  "source_sha256": "d5975536610e8841cdfb9300cb4d8f46c8bcf3f62704c0e9ec7dbf80e333c914",
+  "study_source_sha256": "4ada25b3364a4b72d5fa75b23d44e1cb7395ec65e6a9217578b8a61bb24f28e5",
+  "provenance": {
+    "gguf": "ac0e2c1189e055faa36eff361580e79c5bd6f8e76bffb4ce547f167d53e31a61",
+    "inventory": "dd71329a767b41042e1c130e6da40dd088828854e64be26483e1527b694841b5",
+    "decoder_library": "cd8001f3ed55e4b2a3255c9ae9391096020eb87a7247f187fccc4ff18b8a7a29"
+  },
+  "expert_selection": "top 16 by train routed slot count, ties by ascending ID",
+  "experts": [
+    151,
+    155,
+    234,
+    55,
+    92,
+    124,
+    134,
+    144,
+    76,
+    186,
+    175,
+    62,
+    109,
+    136,
+    192,
+    199
+  ],
+  "train_slot_counts": [
+    24,
+    18,
+    17,
+    16,
+    15,
+    15,
+    15,
+    15,
+    14,
+    14,
+    13,
+    12,
+    12,
+    12,
+    12,
+    12
+  ],
+  "tokens": 113,
+  "tokens_with_selected_expert": 63,
+  "selected_slots": 236,
+  "total_slots": 904,
+  "tokens_with_two_or_more_selected_experts": 49,
+  "reference_sum_norm": 2.451748234747761,
+  "input_coordinate": "common across all 16 experts, trained on all train inputs and selected gate/up bank; same Q4 code per token for every selected gate/up projection",
+  "unchanged_other_experts": "captured down outputs and actual route scores; decoded GGUF offline reference replaces selected slots",
+  "exponents": {
+    "0.5": {
+      "nonzero": 12,
+      "minimum": -1,
+      "maximum": 0
+    },
+    "1.0": {
+      "nonzero": 50,
+      "minimum": -2,
+      "maximum": 1
+    },
+    "1.5": {
+      "nonzero": 159,
+      "minimum": -3,
+      "maximum": 1
+    },
+    "2.0": {
+      "nonzero": 299,
+      "minimum": -3,
+      "maximum": 1
+    }
+  },
+  "arms": {
+    "gguf-q4": {
+      "complete_routed_sum_delta_rms": 0.05848890098497332,
+      "input_encode_ms_per_covered_token": 0.013004142803967826,
+      "decoded_consumer_ms_per_selected_slot": 0.06252345350330253,
+      "offline_weight_encode_ms_for_16_experts": 0.0
+    },
+    "gguf-q8": {
+      "complete_routed_sum_delta_rms": 0.003256314443387056,
+      "input_encode_ms_per_covered_token": 0.005542190462749984,
+      "decoded_consumer_ms_per_selected_slot": 0.055552868878417566,
+      "offline_weight_encode_ms_for_16_experts": 0.0
+    },
+    "q4w-q8x": {
+      "complete_routed_sum_delta_rms": 0.03664517845422002,
+      "input_encode_ms_per_covered_token": 0.005033317378663,
+      "decoded_consumer_ms_per_selected_slot": 0.08943190686434302,
+      "offline_weight_encode_ms_for_16_experts": 181.04897601006087
+    },
+    "0.0": {
+      "complete_routed_sum_delta_rms": 0.06893837232628892,
+      "input_encode_ms_per_covered_token": 0.007750365064508977,
+      "decoded_consumer_ms_per_selected_slot": 0.09255576681471982,
+      "offline_weight_encode_ms_for_16_experts": 176.240286018583
+    },
+    "0.5": {
+      "complete_routed_sum_delta_rms": 0.05534225034767119,
+      "input_encode_ms_per_covered_token": 0.0076657618462507215,
+      "decoded_consumer_ms_per_selected_slot": 0.08969709739114663,
+      "offline_weight_encode_ms_for_16_experts": 172.4061230197549
+    },
+    "1.0": {
+      "complete_routed_sum_delta_rms": 0.051356877883548514,
+      "input_encode_ms_per_covered_token": 0.006456444333750932,
+      "decoded_consumer_ms_per_selected_slot": 0.09194197461464822,
+      "offline_weight_encode_ms_for_16_experts": 176.54280098213349
+    },
+    "1.5": {
+      "complete_routed_sum_delta_rms": 0.0503796300401057,
+      "input_encode_ms_per_covered_token": 0.009770603297973081,
+      "decoded_consumer_ms_per_selected_slot": 0.08923331780213137,
+      "offline_weight_encode_ms_for_16_experts": 172.69823898095638
+    },
+    "2.0": {
+      "complete_routed_sum_delta_rms": 0.05550098500689956,
+      "input_encode_ms_per_covered_token": 0.00640533338781328,
+      "decoded_consumer_ms_per_selected_slot": 0.08850256347351991,
+      "offline_weight_encode_ms_for_16_experts": 172.08011999900918
+    }
+  },
+  "bytes": {
+    "original_gguf_gate_up_16_experts": 18874368,
+    "repacked_gate_up_16_experts": 18874368,
+    "common_diagonal_fp16": 4096,
+    "q4_common_input_per_covered_token": 1152,
+    "q8_common_input_per_covered_token": 2176,
+    "unchanged_gguf_down_16_experts": 11534336
+  },
+  "operations": {
+    "common_diagonal_products_per_covered_token": 2048,
+    "common_input_group_reductions_per_covered_token": 64,
+    "gate_up_terms_per_selected_slot": 2097152,
+    "down_terms_per_selected_slot": 1048576
+  }
+}

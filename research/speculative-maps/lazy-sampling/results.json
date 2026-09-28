@@ -1,0 +1,208 @@
+{
+  "contract": "integer weight w_i, 0<=w_i<=static U_i; independent exact uniform proposal coordinate in [0,sum U); repeat until accepted; output P(i)=w_i/sum w",
+  "static_bounds": [
+    1024,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64,
+    64
+  ],
+  "static_preparation_once": {
+    "bound_source_read_bytes": 16,
+    "cumulative_write_bytes": 16,
+    "integer_additions": 8,
+    "bound_checks": 8
+  },
+  "dynamic_full_cdf_per_output": {
+    "source_read_bytes": 16,
+    "integer_additions": 8,
+    "random_coordinates": 1,
+    "cdf_comparisons_max": 8,
+    "prepared_dynamic_cdf_write_bytes_if_reused": 16
+  },
+  "cases": {
+    "concentrated_high": {
+      "weights": [
+        1000,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "exact_accepted_counts_per_envelope_cycle": [
+        1000,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "target_probabilities": [
+        "125/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132"
+      ],
+      "envelope_size": 1472,
+      "accepted_cells": 1056,
+      "acceptance_probability": "33/46",
+      "expected_per_output": {
+        "metadata_bytes": 6.181818,
+        "proposal_comparisons": 3.090909,
+        "source_bytes": 2.060606,
+        "weight_comparisons": 2.727273,
+        "random_coordinates": 1.393939,
+        "total_read_bytes": 8.242424
+      },
+      "full_cdf_dynamic_source_read_bytes_per_output": 16,
+      "total_read_bytes_vs_full": 0.515151
+    },
+    "concentrated_low": {
+      "weights": [
+        125,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_accepted_counts_per_envelope_cycle": [
+        125,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "target_probabilities": [
+        "125/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132",
+        "1/132"
+      ],
+      "envelope_size": 1472,
+      "accepted_cells": 132,
+      "acceptance_probability": "33/368",
+      "expected_per_output": {
+        "metadata_bytes": 49.454545,
+        "proposal_comparisons": 24.727273,
+        "source_bytes": 16.484848,
+        "weight_comparisons": 27.636364,
+        "random_coordinates": 11.151515,
+        "total_read_bytes": 65.939394
+      },
+      "full_cdf_dynamic_source_read_bytes_per_output": 16,
+      "total_read_bytes_vs_full": 4.121212
+    },
+    "spread": {
+      "weights": [
+        128,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "exact_accepted_counts_per_envelope_cycle": [
+        128,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "target_probabilities": [
+        "16/65",
+        "7/65",
+        "7/65",
+        "7/65",
+        "7/65",
+        "7/65",
+        "7/65",
+        "7/65"
+      ],
+      "envelope_size": 1472,
+      "accepted_cells": 520,
+      "acceptance_probability": "65/184",
+      "expected_per_output": {
+        "metadata_bytes": 12.553846,
+        "proposal_comparisons": 6.276923,
+        "source_bytes": 4.184615,
+        "weight_comparisons": 7.015385,
+        "random_coordinates": 2.830769,
+        "total_read_bytes": 16.738462
+      },
+      "full_cdf_dynamic_source_read_bytes_per_output": 16,
+      "total_read_bytes_vs_full": 1.046154
+    },
+    "near_envelope": {
+      "weights": [
+        1000,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "exact_accepted_counts_per_envelope_cycle": [
+        1000,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "target_probabilities": [
+        "125/174",
+        "7/174",
+        "7/174",
+        "7/174",
+        "7/174",
+        "7/174",
+        "7/174",
+        "7/174"
+      ],
+      "envelope_size": 1472,
+      "accepted_cells": 1392,
+      "acceptance_probability": "87/92",
+      "expected_per_output": {
+        "metadata_bytes": 4.689655,
+        "proposal_comparisons": 2.344828,
+        "source_bytes": 1.563218,
+        "weight_comparisons": 2.068966,
+        "random_coordinates": 1.057471,
+        "total_read_bytes": 6.252874
+      },
+      "full_cdf_dynamic_source_read_bytes_per_output": 16,
+      "total_read_bytes_vs_full": 0.390805
+    }
+  }
+}

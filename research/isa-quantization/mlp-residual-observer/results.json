@@ -1,0 +1,72 @@
+{
+  "source_checkpoint_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "capture_sha256": "aa1e671af9283656efd7a95f2732a27662ce8c658766af5ee88f5e7d27b9e69c",
+  "q4_images": {
+    "gate": {
+      "sha256": "783fae43fe8dcde98b251207925dcf958a5f8b999949912c7c9a80635415521a",
+      "payload_bytes": 1622032
+    },
+    "up": {
+      "sha256": "ba094ad632d88ca5befda13d1f24d023e8036dc244119c2fa75986d3d2cc703a",
+      "payload_bytes": 1622032
+    },
+    "down": {
+      "sha256": "003a3e761af89ff25a10f00e5907a7a73a0d93b5c31ebe0899a11847a3eb4921",
+      "payload_bytes": 1622032
+    }
+  },
+  "q4_payload_bytes": 4866096,
+  "epsilon": 1e-06,
+  "gamma_dimension": 1024,
+  "next_qkv_rows": 4096,
+  "splits": {
+    "train": {
+      "positions": 2048,
+      "pre_plus_source_vs_captured_post": 0.0026195464108870713,
+      "branch": 0.15544069113123996,
+      "residual": 0.08226637313146043,
+      "next_norm": 0.09100474468616747,
+      "next_qkv": 0.07038961734616206,
+      "half": {
+        "branch": 0.9588017012099183,
+        "residual": 0.5074420213694415,
+        "next_norm": 0.09100396932587355,
+        "next_qkv": 0.07038875933763286,
+        "norm_drift_from_q4": 2.641129751444218e-05
+      },
+      "twice": {
+        "branch": 1.8710886167807133,
+        "residual": 0.9902662755426145,
+        "next_norm": 0.09100493972986745,
+        "next_qkv": 0.07038983339579435,
+        "norm_drift_from_q4": 6.603180573462801e-06
+      },
+      "branch_error_radial_energy_fraction": 0.01063082376517208,
+      "radial_oracle_next_norm": 0.09100474690089559
+    },
+    "validation": {
+      "positions": 1024,
+      "pre_plus_source_vs_captured_post": 0.0025770171028490474,
+      "branch": 0.15432979085128443,
+      "residual": 0.08061269344508701,
+      "next_norm": 0.09024845930582452,
+      "next_qkv": 0.06931131356116285,
+      "half": {
+        "branch": 0.9710616694330813,
+        "residual": 0.5072247964848322,
+        "next_norm": 0.0902477877134999,
+        "next_qkv": 0.06931056652548186,
+        "norm_drift_from_q4": 2.639138115448975e-05
+      },
+      "twice": {
+        "branch": 1.8959676147292415,
+        "residual": 0.9903405902587756,
+        "next_norm": 0.09024862841391286,
+        "next_qkv": 0.0693115018851834,
+        "norm_drift_from_q4": 6.598204285803869e-06
+      },
+      "branch_error_radial_energy_fraction": 0.01044258101800913,
+      "radial_oracle_next_norm": 0.09024846093156523
+    }
+  }
+}

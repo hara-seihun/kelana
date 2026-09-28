@@ -1,0 +1,50 @@
+{
+  "gate": {
+    "path": "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer10/gate.halo",
+    "sha256": "388fd2a300f7ad919fb9519a7ba331946d21a6cd5fc72fe110852333f513fbae",
+    "shape": [
+      17408,
+      40
+    ],
+    "normalization": "each row divided by its mean scale",
+    "row_mean_relative_frobenius_error": 0.06529350569713015,
+    "best_rank_relative_frobenius_error": {
+      "1": 0.06492224584312745,
+      "2": 0.0635663931327086,
+      "4": 0.061696185385232555,
+      "8": 0.05793461255453659
+    }
+  },
+  "up": {
+    "path": "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer10/up.halo",
+    "sha256": "b4da3af934d06aa7c2d55c5bee8a40f319e5a12f85b901028474186f8a022302",
+    "shape": [
+      17408,
+      40
+    ],
+    "normalization": "each row divided by its mean scale",
+    "row_mean_relative_frobenius_error": 0.06514989854050773,
+    "best_rank_relative_frobenius_error": {
+      "1": 0.06504362872168983,
+      "2": 0.06363524673218661,
+      "4": 0.06178953533901741,
+      "8": 0.05800075553540848
+    }
+  },
+  "down": {
+    "path": "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer10/down.halo",
+    "sha256": "734b5c1e77681fa72e94395537123eee1f7c5c9cb472024cfd362b614d822ce5",
+    "shape": [
+      5120,
+      136
+    ],
+    "normalization": "each row divided by its mean scale",
+    "row_mean_relative_frobenius_error": 0.0674934058612384,
+    "best_rank_relative_frobenius_error": {
+      "1": 0.06585156121044619,
+      "2": 0.064935657315267,
+      "4": 0.06425668689964646,
+      "8": 0.06295327179676401
+    }
+  }
+}

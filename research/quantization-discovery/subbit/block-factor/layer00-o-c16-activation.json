@@ -1,0 +1,87 @@
+{
+  "fixture": "layer00-self_attn_o_proj.npz",
+  "dimensions": [
+    1024,
+    2048
+  ],
+  "rank": 520,
+  "admm_iterations": 400,
+  "rounds": 8,
+  "input_codes_per_block": 16,
+  "input_label_bits": 4,
+  "admm_same_rank_heldout_and_weight_error": [
+    0.21503901481628418,
+    0.4790741801261902
+  ],
+  "compressed_initial_heldout_and_weight_error": [
+    0.546455979347229,
+    0.8675873279571533
+  ],
+  "refinement_heldout_and_weight_error": [
+    [
+      0.494022011756897,
+      0.7098722457885742
+    ],
+    [
+      0.4632987082004547,
+      0.6764434576034546
+    ],
+    [
+      0.4544495642185211,
+      0.6629932522773743
+    ],
+    [
+      0.44978761672973633,
+      0.6560689806938171
+    ],
+    [
+      0.4453675448894501,
+      0.6517298817634583
+    ],
+    [
+      0.44404035806655884,
+      0.6486642956733704
+    ],
+    [
+      0.4423110783100128,
+      0.6464699506759644
+    ],
+    [
+      0.44078531861305237,
+      0.6448068618774414
+    ]
+  ],
+  "fit_heldout_response_error": 0.3053628206253052,
+  "fit_weight_error": 0.912767767906189,
+  "activation_sweeps": 4,
+  "before_activation_heldout_and_weight_error": [
+    0.44078531861305237,
+    0.6448068618774414
+  ],
+  "before_activation_label_heldout_and_weight_error": [
+    0.3053628206253052,
+    0.912767767906189
+  ],
+  "activation_label_rounds": 0,
+  "activation_label_history": [],
+  "seconds_cpu": 10.490972682004212,
+  "payload_bytes": {
+    "output_signs": 66560,
+    "input_labels": 66560,
+    "input_dictionaries": 4096,
+    "pre_post_scales": 6144
+  },
+  "payload_bpw": 0.546875,
+  "online": {
+    "input_table_signed_additions_upper": 32768,
+    "input_label_lookups": 133120,
+    "output_table_additions": 16575,
+    "output_table_reads": 66560,
+    "input_table_bf16_bytes": 8192,
+    "output_table_bf16_bytes": 33280,
+    "intermediate_bf16_bytes_unfused_write_read": 2080,
+    "minimum_payload_read_bytes": 143360
+  },
+  "image": "/path/to/workspace/data/kelana-subbit/block-factor/layer00-o-c16-activation.npz",
+  "serialized_zip_bytes": 144862
+}

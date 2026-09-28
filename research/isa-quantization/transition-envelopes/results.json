@@ -1,0 +1,566 @@
+{
+  "teacher": {
+    "p0": [
+      [
+        "1/4",
+        "3/4"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "3/4",
+        "1/4"
+      ]
+    ],
+    "transition_s_a": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "initial_state": 0
+  },
+  "candidate": {
+    "initial_state": 0,
+    "horizon": 7,
+    "transition_order_c_a": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "emission_code_probability_one": [
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "cost_model": "two independently framed fields: each has one mode bit, zero=hardwired default, one=four-bit payload. Transition default U(c,a)=c, otherwise four table bits. Emission default q_c(1)=1/2 for both c, otherwise two two-bit entries encoding {1/4,1/2,3/4}. Thus each field is exactly 1 or 5 bits (total 2,6,10).",
+    "log_certificate": "24 atanh-series terms per log with rational geometric tail; lower Bellman and upper feasible score compared as fractions"
+  },
+  "experiments": [
+    {
+      "lambda_nats_per_bit": 0.0,
+      "budget_bits": 10,
+      "method": "forced",
+      "optimum": {
+        "certified_global_lower": 0.34257611802975463,
+        "feasible_upper": 0.3425761180297547,
+        "smallest_competitor_lower": 0.3851545784790312,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "emission_probability_one": [
+          "3/4",
+          "1/2"
+        ],
+        "transition_bits": 5,
+        "emission_bits": 5,
+        "sequence_KL_interval": [
+          0.34257611802975463,
+          0.3425761180297547
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.5595599808898097,
+        "transition": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "root_lower": 0.0,
+      "counts": {
+        "nodes": 29,
+        "pruned_internal": 1,
+        "leaves_scored": 7,
+        "excluded_transition_tables": 9,
+        "strict_oracle_only_prunes": 0
+      },
+      "first_strict_oracle_prune": null,
+      "search_seconds_excluding_exhaustive_validation": 0.06615874999260996
+    },
+    {
+      "lambda_nats_per_bit": 0.0,
+      "budget_bits": 10,
+      "method": "oracle",
+      "optimum": {
+        "certified_global_lower": 0.34257611802975463,
+        "feasible_upper": 0.3425761180297547,
+        "smallest_competitor_lower": 0.3851545784790312,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "emission_probability_one": [
+          "3/4",
+          "1/2"
+        ],
+        "transition_bits": 5,
+        "emission_bits": 5,
+        "sequence_KL_interval": [
+          0.34257611802975463,
+          0.3425761180297547
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.5595599808898097,
+        "transition": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "root_lower": 0.1925772892395156,
+      "counts": {
+        "nodes": 23,
+        "pruned_internal": 2,
+        "leaves_scored": 7,
+        "excluded_transition_tables": 9,
+        "strict_oracle_only_prunes": 2
+      },
+      "first_strict_oracle_prune": {
+        "fixed_prefix": [
+          1,
+          0
+        ],
+        "oracle_lower": 0.47479635622943483,
+        "forced_prefix_lower": 0.2874205478807025,
+        "feasible_incumbent_upper": 0.3425761180297547
+      },
+      "search_seconds_excluding_exhaustive_validation": 0.06480849201034289
+    },
+    {
+      "lambda_nats_per_bit": 0.015,
+      "budget_bits": 10,
+      "method": "forced",
+      "optimum": {
+        "certified_global_lower": 0.49257611802975465,
+        "feasible_upper": 0.4925761180297547,
+        "smallest_competitor_lower": 0.5351545784790311,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "emission_probability_one": [
+          "3/4",
+          "1/2"
+        ],
+        "transition_bits": 5,
+        "emission_bits": 5,
+        "sequence_KL_interval": [
+          0.34257611802975463,
+          0.3425761180297547
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.5895599808898098,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.09,
+      "counts": {
+        "nodes": 27,
+        "pruned_internal": 2,
+        "leaves_scored": 2,
+        "excluded_transition_tables": 14,
+        "strict_oracle_only_prunes": 0
+      },
+      "first_strict_oracle_prune": null,
+      "search_seconds_excluding_exhaustive_validation": 0.05378449500130955
+    },
+    {
+      "lambda_nats_per_bit": 0.015,
+      "budget_bits": 10,
+      "method": "oracle",
+      "optimum": {
+        "certified_global_lower": 0.49257611802975465,
+        "feasible_upper": 0.4925761180297547,
+        "smallest_competitor_lower": 0.5351545784790311,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "emission_probability_one": [
+          "3/4",
+          "1/2"
+        ],
+        "transition_bits": 5,
+        "emission_bits": 5,
+        "sequence_KL_interval": [
+          0.34257611802975463,
+          0.3425761180297547
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.5895599808898098,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.2825772892395156,
+      "counts": {
+        "nodes": 19,
+        "pruned_internal": 4,
+        "leaves_scored": 2,
+        "excluded_transition_tables": 14,
+        "strict_oracle_only_prunes": 3
+      },
+      "first_strict_oracle_prune": {
+        "fixed_prefix": [
+          0,
+          1,
+          0
+        ],
+        "oracle_lower": 0.6495599808898097,
+        "forced_prefix_lower": 0.4345632460373356,
+        "feasible_incumbent_upper": 0.5895599808898098
+      },
+      "search_seconds_excluding_exhaustive_validation": 0.03966632699302863
+    },
+    {
+      "lambda_nats_per_bit": 0.04,
+      "budget_bits": 10,
+      "method": "forced",
+      "optimum": {
+        "certified_global_lower": 0.6395599808898097,
+        "feasible_upper": 0.6395599808898097,
+        "smallest_competitor_lower": 0.7425761180297547,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "emission_probability_one": [
+          "1/2",
+          "1/2"
+        ],
+        "transition_bits": 1,
+        "emission_bits": 1,
+        "sequence_KL_interval": [
+          0.5595599808898097,
+          0.5595599808898097
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.6395599808898097,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.21081203594113695,
+      "counts": {
+        "nodes": 27,
+        "pruned_internal": 2,
+        "leaves_scored": 1,
+        "excluded_transition_tables": 15,
+        "strict_oracle_only_prunes": 0
+      },
+      "first_strict_oracle_prune": null,
+      "search_seconds_excluding_exhaustive_validation": 0.034541183995315805
+    },
+    {
+      "lambda_nats_per_bit": 0.04,
+      "budget_bits": 10,
+      "method": "oracle",
+      "optimum": {
+        "certified_global_lower": 0.6395599808898097,
+        "feasible_upper": 0.6395599808898097,
+        "smallest_competitor_lower": 0.7425761180297547,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "emission_probability_one": [
+          "1/2",
+          "1/2"
+        ],
+        "transition_bits": 1,
+        "emission_bits": 1,
+        "sequence_KL_interval": [
+          0.5595599808898097,
+          0.5595599808898097
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.6395599808898097,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.4325772892395156,
+      "counts": {
+        "nodes": 13,
+        "pruned_internal": 3,
+        "leaves_scored": 1,
+        "excluded_transition_tables": 15,
+        "strict_oracle_only_prunes": 2
+      },
+      "first_strict_oracle_prune": {
+        "fixed_prefix": [
+          0,
+          1,
+          0
+        ],
+        "oracle_lower": 0.7995599808898097,
+        "forced_prefix_lower": 0.5845632460373356,
+        "feasible_incumbent_upper": 0.6395599808898097
+      },
+      "search_seconds_excluding_exhaustive_validation": 0.02406395599246025
+    },
+    {
+      "lambda_nats_per_bit": 0.015,
+      "budget_bits": 6,
+      "method": "forced",
+      "optimum": {
+        "certified_global_lower": 0.5895599808898098,
+        "feasible_upper": 0.5895599808898098,
+        "smallest_competitor_lower": 0.6495599808898097,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "emission_probability_one": [
+          "1/2",
+          "1/2"
+        ],
+        "transition_bits": 1,
+        "emission_bits": 1,
+        "sequence_KL_interval": [
+          0.5595599808898097,
+          0.5595599808898097
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.5895599808898098,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.09,
+      "counts": {
+        "nodes": 29,
+        "pruned_internal": 1,
+        "leaves_scored": 1,
+        "excluded_transition_tables": 15,
+        "strict_oracle_only_prunes": 0
+      },
+      "first_strict_oracle_prune": null,
+      "search_seconds_excluding_exhaustive_validation": 0.010560275011812337
+    },
+    {
+      "lambda_nats_per_bit": 0.015,
+      "budget_bits": 6,
+      "method": "oracle",
+      "optimum": {
+        "certified_global_lower": 0.5895599808898098,
+        "feasible_upper": 0.5895599808898098,
+        "smallest_competitor_lower": 0.6495599808898097,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "emission_probability_one": [
+          "1/2",
+          "1/2"
+        ],
+        "transition_bits": 1,
+        "emission_bits": 1,
+        "sequence_KL_interval": [
+          0.5595599808898097,
+          0.5595599808898097
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.5895599808898098,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.2825772892395156,
+      "counts": {
+        "nodes": 9,
+        "pruned_internal": 3,
+        "leaves_scored": 1,
+        "excluded_transition_tables": 15,
+        "strict_oracle_only_prunes": 2
+      },
+      "first_strict_oracle_prune": {
+        "fixed_prefix": [
+          0,
+          1
+        ],
+        "oracle_lower": 0.6495599808898097,
+        "forced_prefix_lower": 0.26440540241077853,
+        "feasible_incumbent_upper": 0.5895599808898098
+      },
+      "search_seconds_excluding_exhaustive_validation": 0.010221817996352911
+    },
+    {
+      "lambda_nats_per_bit": 0.04,
+      "budget_bits": 6,
+      "method": "forced",
+      "optimum": {
+        "certified_global_lower": 0.6395599808898097,
+        "feasible_upper": 0.6395599808898097,
+        "smallest_competitor_lower": 0.7995599808898097,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "emission_probability_one": [
+          "1/2",
+          "1/2"
+        ],
+        "transition_bits": 1,
+        "emission_bits": 1,
+        "sequence_KL_interval": [
+          0.5595599808898097,
+          0.5595599808898097
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.6395599808898097,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.21081203594113695,
+      "counts": {
+        "nodes": 27,
+        "pruned_internal": 2,
+        "leaves_scored": 1,
+        "excluded_transition_tables": 15,
+        "strict_oracle_only_prunes": 0
+      },
+      "first_strict_oracle_prune": null,
+      "search_seconds_excluding_exhaustive_validation": 0.010445678999531083
+    },
+    {
+      "lambda_nats_per_bit": 0.04,
+      "budget_bits": 6,
+      "method": "oracle",
+      "optimum": {
+        "certified_global_lower": 0.6395599808898097,
+        "feasible_upper": 0.6395599808898097,
+        "smallest_competitor_lower": 0.7995599808898097,
+        "uniquely_optimal_by_rational_intervals": true,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "emission_probability_one": [
+          "1/2",
+          "1/2"
+        ],
+        "transition_bits": 1,
+        "emission_bits": 1,
+        "sequence_KL_interval": [
+          0.5595599808898097,
+          0.5595599808898097
+        ]
+      },
+      "seed": {
+        "feasible_upper": 0.6395599808898097,
+        "transition": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "root_lower": 0.4325772892395156,
+      "counts": {
+        "nodes": 9,
+        "pruned_internal": 3,
+        "leaves_scored": 1,
+        "excluded_transition_tables": 15,
+        "strict_oracle_only_prunes": 2
+      },
+      "first_strict_oracle_prune": {
+        "fixed_prefix": [
+          0,
+          1
+        ],
+        "oracle_lower": 0.7995599808898097,
+        "forced_prefix_lower": 0.41440540241077856,
+        "feasible_incumbent_upper": 0.6395599808898097
+      },
+      "search_seconds_excluding_exhaustive_validation": 0.010324173010303639
+    }
+  ]
+}

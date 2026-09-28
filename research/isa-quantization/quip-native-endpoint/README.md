@@ -1,0 +1,26 @@
+# gfx1151 stored-image local response endpoint
+
+This is a **complete native local projection endpoint**, not a model-throughput or deployment result. The two images are the [QuIP# E8P12RVQ3B rank-zero image and matched scalar Q2/Q3 image](../quip-e8p-local/README.md), respectively **6,178 B** and **6,176 B** of model-specific state. Their full 1,024-held-state ideal FP64 relative squared errors are **.006671714** and **.010877023**. QuIP also needs **5,120 B of immutable generic FP16/codebook tables shared by arbitrary layers** (1,024 B E8P absolute table and 4,096 B residual table); an isolated one-layer reader costs **11,298 B** including those tables, against scalar 6,176 B. Neither reader uses a predecoded matrix, hidden offset array, offline input transform, or auxiliary low-rank arm. The input and output arrays each occupy 4,096 B for eight rows. Code, common framing, and HIP runtime allocations are not counted as model bytes.
+
+`native.hip` directly reads each stored image on the Radeon 8060S / ROCm 7.2.3 `gfx1151`. QuIP performs dynamic input sign and 128-point Hadamard, 2,048 E8P index/table reconstructions and 2,048 residual table lookups, 16,384 coefficient contributions, global FP16 scaling, dynamic output Hadamard and output signs **per row of input**. Each Hadamard has 448 two-output butterflies (896 scalar adds/subtracts). One 128-thread block independently produces one full 128-output response; each lane decodes one image row, and its 128 decoded coefficients live only in registers/accumulator while consumed. The scalar lane reads its four 32-bit mode-mask words to find that row's byte offset, then extracts all 128 packed Q2/Q3 digits and applies FP16 row scale/origin, including the origin times live input sum. No row offsets are precomputed. The compiled [`assembly.s`](assembly.s) contains both complete actual device bodies, global loads, half conversions, LDS barriers and metadata: QuIP **91 VGPR / 32 SGPR**, scalar **21 VGPR / 16 SGPR**, zero scratch each. This is one simple lowering, not a claim that either format has reached optimal AMD tiling.
+
+`prepare.py` pins SHA256 of the fixture, both images and both generic tables, takes the **first eight distinct actual held producer states**, and independently reconstructs the two exact stored-image targets through the CPU decoder (plus original BF16-derived teacher outputs). It exports **no weight matrix**. The native program checks every produced output against its stored-image target; greatest absolute discrepancies are below **1.2e-7**. The eight-row subset's FP32 native relative squared errors against the teacher are **.004123412 QuIP** and **.004731563 scalar**; the one-row values are **.003805418** and **.004106001**. These tiny-subset errors are numerical endpoint checks, *not* replacements for the full held-panel quality scores above.
+
+[`timing.txt`](timing.txt) retains all 60 individual adjacent single-dispatch event and wall-clock readings for each mode/shape after 20 warmup dispatches. Each launch receives a full real batch (one or eight captured states), writes all 128 outputs per state, and consumes the actual packed image; none repeats elements to fabricate a larger problem. Device inputs and images are resident and warm. H2D image/input transfer, compilation, preparation and D2H output copy are **excluded** from event/wall timing; validation copies happen before the timing samples. Wall times include event-record and synchronize overhead as well as the HIP launch. Both numbers are microseconds per complete projection invocation, not per-element throughput:
+
+| Captured held states | QuIP event / wall median µs | Scalar event / wall median µs |
+| --- | ---: | ---: |
+| batch 1 | 9.879 / 14.570 | 11.840 / 16.780 |
+| batch 8 | 9.720 / 14.709 | 11.879 / 16.889 |
+
+This narrow implementation and warm-device measurement found QuIP ~1.2× faster by event time at both small shapes, despite its larger *isolated-layer* total asset cost; both routes are launch-scale in the wall measurement. The scalar row's bit extraction and prefix popcount are paid, and QuIP's signs/transforms/tables are paid. The result is **not** a full-model speedup, a storage win for an isolated layer, or evidence that these errors generalize to other layers. Resident Bonsai serving remained active at PID 203054 before and after the admitted measurement, without teardown; concurrent requests to that already-running service are not excluded by its admission lease. Device timings thus represent this live host, not guaranteed isolation.
+
+Reproduction from this directory (all GPU work uses the exclusive engine-start reservation and bounded host/GTT admission):
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /path/to/workspace/data/fish-s2-pro/venv/bin/python prepare.py
+hipcc --offload-arch=gfx1151 -O3 -save-temps native.hip -o native
+(exec 9>/tmp/kelana-gpu-measure.lock; flock -w 10 -E 75 9 || exit $?; gpu-run --host-mib 1024 --gtt-mib 512 ./native ../quip-e8p-local . > timing.txt)
+```
+
+`prepare.py` uses the existing independent `../quip-e8p-local/replay.py` decoder, not the kernel's decode routine. `timing.txt` is the complete final raw receipt; `assembly.s` is the corresponding `-save-temps` gfx1151 assembly. The chosen first eight held states are replayable from the pinned fixture, not invented benchmark tokens.

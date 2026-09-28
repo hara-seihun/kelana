@@ -1,0 +1,110 @@
+{
+  "model": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+  "model_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "tensor": "model.layers.0.self_attn.q_proj.weight",
+  "slice": "[0:128,0:128]",
+  "source_sha256": "b4200e036cfe8f1ab67d9fcbffb619381b40b6df8f07257dce8b359521d5e918",
+  "native_sha256": "97808b910d9a352d81f93adb940d871a6b708c4a242f3e247a09f3d173a9acb5",
+  "fixture": "original BF16 tensor converted exactly to FP64; planted common Gaussian template and independent Gaussian perturbations, NumPy seed 334",
+  "probes": "256 independent signed int8 vectors per fixture, uniform [-127,127], seeds 240923 and 240924",
+  "real": {
+    "scalar4": {
+      "bytes": 8448,
+      "bits_per_weight": 4.125,
+      "weight_relative_rms": 0.11428515634197378,
+      "probe_relative_rms": 0.11600221409933702,
+      "max_row_box_error_at_abs_x_le_127": 154.53126525878906,
+      "max_abs_int32_accumulator_observed": 10375,
+      "full_box_int32_bound": 130048,
+      "online": "Per row: one signed int4 dot, one FP scale multiply; unpack 4-bit codes. No scale-free FP boundary."
+    },
+    "scalar5": {
+      "bytes": 10496,
+      "bits_per_weight": 5.125,
+      "weight_relative_rms": 0.05851427886141397,
+      "probe_relative_rms": 0.059447639627294574,
+      "max_row_box_error_at_abs_x_le_127": 86.41914367675781,
+      "max_abs_int32_accumulator_observed": 19649,
+      "full_box_int32_bound": 260096,
+      "online": "Per row: one signed int5 dot, one FP scale multiply; unpack 5-bit codes. No scale-free FP boundary."
+    },
+    "scalar6": {
+      "bytes": 12544,
+      "bits_per_weight": 6.125,
+      "weight_relative_rms": 0.02881710364881976,
+      "probe_relative_rms": 0.029248369342126962,
+      "max_row_box_error_at_abs_x_le_127": 46.23554992675781,
+      "max_abs_int32_accumulator_observed": 39266,
+      "full_box_int32_bound": 520192,
+      "online": "Per row: one signed int6 dot, one FP scale multiply; unpack 6-bit codes. No scale-free FP boundary."
+    },
+    "template8_residual4": {
+      "bytes": 10272,
+      "bits_per_weight": 5.015625,
+      "weight_relative_rms": 0.11206815857400179,
+      "probe_relative_rms": 0.11347470044484566,
+      "max_row_box_error_at_abs_x_le_127": 79.96217346191406,
+      "max_abs_int32_accumulator_observed": 16496,
+      "full_box_int32_bound": 2210816,
+      "online": "Per 8 rows: one signed int8 template dot, eight signed int4 residual dots, eight int32 adds, eight FP scale multiplies; packed int4 extraction and one shared int8 load. Integer labels can stay live only if the next consumer accepts the common group scale.",
+      "max_abs_template": 8,
+      "max_abs_residual": 8
+    },
+    "native": {
+      "scalar5_us_per_query": 14.565329,
+      "additive_us_per_query": 13.594778,
+      "scalar5_checksum": -735663.123,
+      "additive_checksum": -823155.302
+    }
+  },
+  "planted": {
+    "scalar4": {
+      "bytes": 8448,
+      "bits_per_weight": 4.125,
+      "weight_relative_rms": 0.10074074910930096,
+      "probe_relative_rms": 0.09917564144082269,
+      "max_row_box_error_at_abs_x_le_127": 32.959839622382724,
+      "max_abs_int32_accumulator_observed": 10370,
+      "full_box_int32_bound": 130048,
+      "online": "Per row: one signed int4 dot, one FP scale multiply; unpack 4-bit codes. No scale-free FP boundary."
+    },
+    "scalar5": {
+      "bytes": 10496,
+      "bits_per_weight": 5.125,
+      "weight_relative_rms": 0.05015162388495155,
+      "probe_relative_rms": 0.04958583805202739,
+      "max_row_box_error_at_abs_x_le_127": 16.914322006238788,
+      "max_abs_int32_accumulator_observed": 20859,
+      "full_box_int32_bound": 260096,
+      "online": "Per row: one signed int5 dot, one FP scale multiply; unpack 5-bit codes. No scale-free FP boundary."
+    },
+    "scalar6": {
+      "bytes": 12544,
+      "bits_per_weight": 6.125,
+      "weight_relative_rms": 0.024580337272948182,
+      "probe_relative_rms": 0.024203040095678762,
+      "max_row_box_error_at_abs_x_le_127": 8.142939705994797,
+      "max_abs_int32_accumulator_observed": 39634,
+      "full_box_int32_bound": 520192,
+      "online": "Per row: one signed int6 dot, one FP scale multiply; unpack 6-bit codes. No scale-free FP boundary."
+    },
+    "template8_residual4": {
+      "bytes": 10272,
+      "bits_per_weight": 5.015625,
+      "weight_relative_rms": 0.0060963509708836265,
+      "probe_relative_rms": 0.006090756094242245,
+      "max_row_box_error_at_abs_x_le_127": 2.052818192047237,
+      "max_abs_int32_accumulator_observed": 163639,
+      "full_box_int32_bound": 2210816,
+      "online": "Per 8 rows: one signed int8 template dot, eight signed int4 residual dots, eight int32 adds, eight FP scale multiplies; packed int4 extraction and one shared int8 load. Integer labels can stay live only if the next consumer accepts the common group scale.",
+      "max_abs_template": 128,
+      "max_abs_residual": 8
+    },
+    "native": {
+      "scalar5_us_per_query": 14.673281,
+      "additive_us_per_query": 14.594472,
+      "scalar5_checksum": -212119.451,
+      "additive_checksum": -230695.606
+    }
+  }
+}

@@ -1,0 +1,4 @@
+g++ 15.3 -std=c++20 -O2 -Wall -Wextra -fstack-usage -o stable stable.cpp
+GNU size -A stable (bytes): .text 4826; .rodata 424; .bss 286880; .data 16; .dynamic 560; .got 40; .got.plt 112; .init_array 8; .fini_array 8.
+Largest measured stack frame in stable.su: flush_value 784 B; other frames main 96 B, snapshot 80 B, quant 80 B, intern_* 80 B, output 32 B. Bounded stack allowance 4096 B.
+readelf -lW stable LOAD segments: R file/mem 0x0a10; RX 0x13e9; R 0x04e0; RW file 0x02e8 mem 0x463a0. Read-only/executable segments occupy 4 pages at 4096 B granularity. Writable bill separately rounds BSS 290816 B, initialized data/support 4096 B, bounded stack 4096 B = 299008 B. Executable/read-only pages bring this to 315392 B, excluding dynamic loader and shared libc. Fixed array sizes independently totaled in README (286648 B); remaining native scalars/alignment inhabit BSS.

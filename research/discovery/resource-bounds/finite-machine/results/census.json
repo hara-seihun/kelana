@@ -1,0 +1,246 @@
+{
+ "machines": {
+  "M1": {
+   "grammars": {
+    "affine": {
+     "instructions": 32,
+     "named_costs": {
+      "and": null,
+      "and-scaled": null,
+      "b0": null,
+      "b0-scaled": 1,
+      "b1": null,
+      "complement": 3,
+      "eq": null,
+      "nand": null,
+      "negate": 2,
+      "or": null,
+      "sum": null,
+      "xor": null
+     },
+     "note": "no bitwise op and no register-by-register multiply",
+     "observable_functions": 16,
+     "possible_functions": 256,
+     "reachable_semantic_states": 256,
+     "semantic_states": 65536,
+     "worst_optimal_cost": 3
+    },
+    "full": {
+     "instructions": 68,
+     "named_costs": {
+      "and": 3,
+      "and-scaled": 3,
+      "b0": 1,
+      "b0-scaled": 1,
+      "b1": 1,
+      "complement": 1,
+      "eq": 2,
+      "nand": 4,
+      "negate": 2,
+      "or": 3,
+      "sum": 3,
+      "xor": 2
+     },
+     "note": "every declared op",
+     "observable_functions": 256,
+     "possible_functions": 256,
+     "reachable_semantic_states": 65536,
+     "semantic_states": 65536,
+     "worst_optimal_cost": 5
+    },
+    "monotone": {
+     "instructions": 34,
+     "named_costs": {
+      "and": 3,
+      "and-scaled": 3,
+      "b0": 1,
+      "b0-scaled": 1,
+      "b1": 1,
+      "complement": null,
+      "eq": null,
+      "nand": null,
+      "negate": null,
+      "or": 4,
+      "sum": null,
+      "xor": null
+     },
+     "note": "no complement, xor, or carry arithmetic",
+     "observable_functions": 36,
+     "possible_functions": 256,
+     "reachable_semantic_states": 1120,
+     "semantic_states": 65536,
+     "worst_optimal_cost": 6
+    },
+    "nomul": {
+     "instructions": 58,
+     "named_costs": {
+      "and": 3,
+      "and-scaled": 3,
+      "b0": 1,
+      "b0-scaled": 1,
+      "b1": 1,
+      "complement": 1,
+      "eq": 2,
+      "nand": 4,
+      "negate": 2,
+      "or": 3,
+      "sum": 3,
+      "xor": 2
+     },
+     "note": "no multiply, by register or by immediate",
+     "observable_functions": 256,
+     "possible_functions": 256,
+     "reachable_semantic_states": 65536,
+     "semantic_states": 65536,
+     "worst_optimal_cost": 5
+    },
+    "noshr": {
+     "instructions": 66,
+     "named_costs": {
+      "and": null,
+      "and-scaled": 3,
+      "b0": 1,
+      "b0-scaled": 1,
+      "b1": null,
+      "complement": 1,
+      "eq": null,
+      "nand": null,
+      "negate": 2,
+      "or": null,
+      "sum": null,
+      "xor": null
+     },
+     "note": "no right shift; nothing moves a bit toward a lower position",
+     "observable_functions": 64,
+     "possible_functions": 256,
+     "reachable_semantic_states": 4096,
+     "semantic_states": 65536,
+     "worst_optimal_cost": 4
+    }
+   },
+   "machine": {
+    "domain": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "registers": 2,
+    "scratch": [
+     0
+    ],
+    "width": 2
+   }
+  },
+  "M2-trit": {
+   "grammars": {
+    "affine": {
+     "instructions": 32,
+     "named_costs": {
+      "abs": null,
+      "double": 1,
+      "is-negative": null,
+      "negate": 2,
+      "nonzero-as-minus-one": null,
+      "relu": null
+     },
+     "note": "no bitwise op and no register-by-register multiply",
+     "observable_functions": 16,
+     "possible_functions": 64,
+     "reachable_semantic_states": 256,
+     "semantic_states": 4096,
+     "worst_optimal_cost": 3
+    },
+    "full": {
+     "instructions": 68,
+     "named_costs": {
+      "abs": 1,
+      "double": 1,
+      "is-negative": 1,
+      "negate": 2,
+      "nonzero-as-minus-one": 2,
+      "relu": 2
+     },
+     "note": "every declared op",
+     "observable_functions": 64,
+     "possible_functions": 64,
+     "reachable_semantic_states": 4096,
+     "semantic_states": 4096,
+     "worst_optimal_cost": 4
+    },
+    "monotone": {
+     "instructions": 34,
+     "named_costs": {
+      "abs": 1,
+      "double": 1,
+      "is-negative": 1,
+      "negate": null,
+      "nonzero-as-minus-one": 3,
+      "relu": null
+     },
+     "note": "no complement, xor, or carry arithmetic",
+     "observable_functions": 16,
+     "possible_functions": 64,
+     "reachable_semantic_states": 252,
+     "semantic_states": 4096,
+     "worst_optimal_cost": 4
+    },
+    "nomul": {
+     "instructions": 58,
+     "named_costs": {
+      "abs": 1,
+      "double": 1,
+      "is-negative": 1,
+      "negate": 2,
+      "nonzero-as-minus-one": 2,
+      "relu": 2
+     },
+     "note": "no multiply, by register or by immediate",
+     "observable_functions": 64,
+     "possible_functions": 64,
+     "reachable_semantic_states": 4096,
+     "semantic_states": 4096,
+     "worst_optimal_cost": 4
+    },
+    "noshr": {
+     "instructions": 66,
+     "named_costs": {
+      "abs": 1,
+      "double": 1,
+      "is-negative": null,
+      "negate": 2,
+      "nonzero-as-minus-one": 2,
+      "relu": null
+     },
+     "note": "no right shift; nothing moves a bit toward a lower position",
+     "observable_functions": 32,
+     "possible_functions": 64,
+     "reachable_semantic_states": 1024,
+     "semantic_states": 4096,
+     "worst_optimal_cost": 3
+    }
+   },
+   "machine": {
+    "domain": [
+     0,
+     1,
+     3
+    ],
+    "registers": 2,
+    "scratch": [
+     0
+    ],
+    "width": 2
+   }
+  }
+ },
+ "note": "Costs and reachability under the declared grammars. Every number is relative to the register width, the instruction set and the abstract charges in machine.py.",
+ "third_register": {
+  "functions_cheaper_with_three_registers": [],
+  "functions_only_with_three_registers": [],
+  "instructions": 123,
+  "note": "Same trit domain, three registers instead of two, observed in r0.",
+  "reachable_semantic_states": 262144,
+  "semantic_states": 262144
+ }
+}

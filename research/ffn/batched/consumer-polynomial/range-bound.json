@@ -1,0 +1,104 @@
+{
+  "scope": "Real arithmetic RMSnorm, diagonal norm, normalized Hadamard, nearest A4 per128 quantizer. All rows ofgate/up inlayers0/10. Not an IEEE rounding/overflow proof.",
+  "formula": "||W_row||2 * max|norm_diagonal| * sqrt(D) * (1+sqrt128/(2*7))",
+  "records": [
+    {
+      "layer": 0,
+      "kind": "gate",
+      "rows": 17408,
+      "norm_diagonal_max": 1.006683349609375,
+      "norm_file_sha256": "b3eb5bd2c7831b704484c7638bd6bfb2617136c9effe5ff52259eb2e1b471616",
+      "quantized_activation_l2_bound": 130.2433640234928,
+      "row_norm_min_median_max": [
+        0.526217924378658,
+        0.650840764951508,
+        1.471932458781079
+      ],
+      "projection_bound_min_median_max": [
+        68.53639268053637,
+        84.76769067090777,
+        191.70943504701887
+      ],
+      "gauge_exponent_histogram": {
+        "-8": 17332,
+        "-7": 76
+      },
+      "gauged_bound_max": 29935.67558270466,
+      "bound_array_sha256": "cb695397039618e0992dd8d43cf1634f52d79d981793af35abb6c4c6ade832a3"
+    },
+    {
+      "layer": 0,
+      "kind": "up",
+      "rows": 17408,
+      "norm_diagonal_max": 1.006683349609375,
+      "norm_file_sha256": "b3eb5bd2c7831b704484c7638bd6bfb2617136c9effe5ff52259eb2e1b471616",
+      "quantized_activation_l2_bound": 130.2433640234928,
+      "row_norm_min_median_max": [
+        0.51047516655923,
+        0.6331743269297272,
+        1.0370225605127146
+      ],
+      "projection_bound_min_median_max": [
+        66.4860029431269,
+        82.46675435263849,
+        135.0653068494321
+      ],
+      "gauge_exponent_histogram": {
+        "-8": 17403,
+        "-7": 5
+      },
+      "gauged_bound_max": 29530.257778796757,
+      "bound_array_sha256": "7485f2bd7a2f3cb0de83bd9c6400e7d33193ec3e69fa93fd9f6d5da501842ff3"
+    },
+    {
+      "layer": 10,
+      "kind": "gate",
+      "rows": 17408,
+      "norm_diagonal_max": 1.41015625,
+      "norm_file_sha256": "485fb8a762957970b4230533158fdf230d51edc7fe4bc34436c36f0cb47de005",
+      "quantized_activation_l2_bound": 182.44415572187694,
+      "row_norm_min_median_max": [
+        0.600442523425739,
+        0.713930546178799,
+        1.7080461096736814
+      ],
+      "projection_bound_min_median_max": [
+        109.54722924592227,
+        130.25245574164944,
+        311.6230304134512
+      ],
+      "gauge_exponent_histogram": {
+        "-8": 1027,
+        "-7": 16378,
+        "-6": 3
+      },
+      "gauged_bound_max": 29999.722862626146,
+      "bound_array_sha256": "af04a849f61e4db5100180513c0eefea0d938a737f67f249bcfdfce727e0a5e3"
+    },
+    {
+      "layer": 10,
+      "kind": "up",
+      "rows": 17408,
+      "norm_diagonal_max": 1.41015625,
+      "norm_file_sha256": "485fb8a762957970b4230533158fdf230d51edc7fe4bc34436c36f0cb47de005",
+      "quantized_activation_l2_bound": 182.44415572187694,
+      "row_norm_min_median_max": [
+        0.5985376493780475,
+        0.7003548863320508,
+        1.0166995203903355
+      ],
+      "projection_bound_min_median_max": [
+        109.19969610853468,
+        127.7756559425421,
+        185.49088562045196
+      ],
+      "gauge_exponent_histogram": {
+        "-8": 1210,
+        "-7": 16198
+      },
+      "gauged_bound_max": 29997.94128867033,
+      "bound_array_sha256": "9bdb15fd9390f717795f1695b296225b9aca8ab55ec77b1dc65b05f8ff594119"
+    }
+  ],
+  "source_sha256": "bb1213164d534c8e86dae725aad7bf7fdbfcf7f9636f8299763822f3cb3e1c88"
+}

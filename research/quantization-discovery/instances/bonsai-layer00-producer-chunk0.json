@@ -1,0 +1,156 @@
+{
+  "scope": "Eight fixed upstream code vectors; first 1024 hidden coordinates; all 40 input blocks.",
+  "source_manifest": {
+    "format": "kelana-ffn-dataset/1",
+    "built_at": "2026-09-20T02:27:00Z",
+    "model": "/path/to/workspace/data/bonsai2/PTQ1_0.gguf",
+    "model_bytes": 5946648928,
+    "halo_cache": "/path/to/workspace/data/bonsai2/PTQ1_0.gguf.halo",
+    "bonsai_commit": "6fcff4c0a881e1fa2f448db630e76a57cb1bf268",
+    "bonsai_dirty": false,
+    "layer": 0,
+    "D": 5120,
+    "FF": 17408,
+    "rmax": 8,
+    "block": 128,
+    "tile_rows": 32,
+    "tile_block_bytes": 896,
+    "halo_bytes": {
+      "gate": 19496960,
+      "up": 19496960,
+      "down": 19496960
+    },
+    "barriers": {
+      "ffn_in": 8,
+      "gate_up": 10,
+      "post_norm_quant": 9,
+      "ffn_out": 12
+    },
+    "prompt": "The quick brown fox jumps over the lazy dog, and the ternary weights stay exactly where they were.",
+    "weights": {
+      "gate": "gate.halo",
+      "up": "up.halo",
+      "down": "down.halo",
+      "post_norm": "post_norm.f32",
+      "post_norm_s": "post_norm_s.f32",
+      "signs_d": "signs_d.f32",
+      "signs_ff": "signs_ff.f32"
+    },
+    "cases": [
+      {
+        "nrows": 1,
+        "input_kind": "native-prefill",
+        "tokens": [
+          760
+        ],
+        "x_in": "r1/x_in.f32",
+        "x_out": "r1/x_out.f32",
+        "gate": "r1/gate.f32",
+        "up": "r1/up.f32",
+        "xq_d": "r1/xq_d.i8",
+        "xs_d": "r1/xs_d.f32",
+        "xsum_d": "r1/xsum_d.i32",
+        "xq_ff": "r1/xq_ff.i8",
+        "xs_ff": "r1/xs_ff.f32",
+        "xsum_ff": "r1/xsum_ff.i32"
+      },
+      {
+        "nrows": 8,
+        "input_kind": "native-prefill",
+        "tokens": [
+          760,
+          3841,
+          13477,
+          37550,
+          33075,
+          888,
+          279,
+          15217
+        ],
+        "x_in": "r8/x_in.f32",
+        "x_out": "r8/x_out.f32",
+        "gate": "r8/gate.f32",
+        "up": "r8/up.f32",
+        "xq_d": "r8/xq_d.i8",
+        "xs_d": "r8/xs_d.f32",
+        "xsum_d": "r8/xsum_d.i32",
+        "xq_ff": "r8/xq_ff.i8",
+        "xs_ff": "r8/xs_ff.f32",
+        "xsum_ff": "r8/xsum_ff.i32"
+      }
+    ]
+  },
+  "source_sha256": {
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/manifest.json": "aa3535123f0b13071c2704e7eba5b96018f7d2abe0de316fc2fec2c428a3a95a",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xq_d.i8": "9f0253a8ebb5bafad7cace694666a084c47e68ee275291a00151d7c744740796",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xs_d.f32": "5ca04616fc1c69f2fea84073057c1882853b95bdd809154212ac0ced538dd5f4",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xsum_d.i32": "5a033f6e1ad85d97030ea5ee14683f0b1b124c8144f8bb9022a6a1c451f0b53a",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/gate.halo": "8590c3d735e84f314fb8f3a7d836e0ea18b4b010d7cd9152b929ccf527168b5e",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/gate.f32": "959334717c0b09684c3d76939da6b4d3e9ec7d00dfa8a2ef5060717b4d999d88",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/up.halo": "24b77969d5f4e972695cbc7b07f47417c3073010c560c794dfe03df8e975a225",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/up.f32": "281b1e2135de6a77545efd1cad062e9d336a6bfecc0ad9e6196fc60c28639a45",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/signs_ff.f32": "b6430548fe575c3e861fbce0fa0eeb3c9b2914cb0655f4096fa900832ed3e3cf",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xq_ff.i8": "6e086bf782806e32b0934733534cdb4c7156e42258da668ffab4668cbd930517",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xs_ff.f32": "1f9a0bda15fc960ddd596bbad20001586c42a07c2442fc6673e994786d91081b",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xsum_ff.i32": "1fb0f68249a0c7b19e8de4670ea471be4ccefb80672d076f0abceb2aff534c5d"
+  },
+  "decoder": "research/ffn/batched/deferred-carrier/carrier_scan.py",
+  "decoder_sha256": "1f61c789c14327ca74bd1df3a7dece9d107d558c16a0568a9354d53bbf062bc5",
+  "fixture_sha256": "90f89843566d9230226c88c2ad01908cf371fd6a9cbbb0826bf77787fdbca83c",
+  "shapes": {
+    "q": [
+      8,
+      40,
+      128
+    ],
+    "input_scales": [
+      8,
+      40
+    ],
+    "input_sums": [
+      8,
+      40
+    ],
+    "gate_dot": [
+      8,
+      1024,
+      40
+    ],
+    "gate_scales": [
+      1024,
+      40
+    ],
+    "gate_observed": [
+      8,
+      1024
+    ],
+    "up_dot": [
+      8,
+      1024,
+      40
+    ],
+    "up_scales": [
+      1024,
+      40
+    ],
+    "up_observed": [
+      8,
+      1024
+    ],
+    "signs": [
+      1024
+    ],
+    "hidden_codes": [
+      8,
+      1024
+    ],
+    "hidden_scales": [
+      8,
+      8
+    ],
+    "hidden_sums": [
+      8,
+      8
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "format": "kelana-half-carrier-paired-error/1",
+  "purpose": "candidate minus reference candidate, alongside candidate minus engine",
+  "dataset": "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer10", "layer": 10,
+  "reference_candidate": "hc-control-iu4-a4",
+  "points": [
+    { "candidate": "hc-control-iu4-a4", "rows": 256,
+      "vs_reference_candidate": { "rel_rms": 0, "rms": 0, "reference_rms": 0.50716664269081091, "bias": 0, "max_abs": 0, "worst_row_rel_rms": 0, "differing_elements": 0 },
+      "vs_engine": { "rel_rms": 0.016780651049500574, "rms": 0.0085088920553937249, "reference_rms": 0.5070656692814649, "bias": 9.7428068995708543e-06, "max_abs": 0.10578392446041107, "worst_row_rel_rms": 0.03086320001597076, "differing_elements": 1310720 } },
+    { "candidate": "hc-rowpair-a4-tt8-down1", "rows": 256,
+      "vs_reference_candidate": { "rel_rms": 0.0019690505723860361, "rms": 0.00099863676808544552, "reference_rms": 0.50716664269081091, "bias": -6.2434266298039274e-07, "max_abs": 0.013555258512496948, "worst_row_rel_rms": 0.0036524477978980229, "differing_elements": 1310710 },
+      "vs_engine": { "rel_rms": 0.016765469124785007, "rms": 0.0085011938225768458, "reference_rms": 0.5070656692814649, "bias": 9.1184642365904619e-06, "max_abs": 0.10699255764484406, "worst_row_rel_rms": 0.030892315499493842, "differing_elements": 1310718 } },
+    { "candidate": "hc-rowpair-a4-tt8-down1-rne", "rows": 256,
+      "vs_reference_candidate": { "rel_rms": 0.0019697667792774993, "rms": 0.00099900000433006094, "reference_rms": 0.50716664269081091, "bias": 5.8532690810908505e-07, "max_abs": 0.014367341995239258, "worst_row_rel_rms": 0.003642540953102557, "differing_elements": 1310710 },
+      "vs_engine": { "rel_rms": 0.016784634330796525, "rms": 0.0085109118405899929, "reference_rms": 0.5070656692814649, "bias": 1.0328133807679939e-05, "max_abs": 0.11358435451984406, "worst_row_rel_rms": 0.030908690893831504, "differing_elements": 1310720 } }
+  ]
+}

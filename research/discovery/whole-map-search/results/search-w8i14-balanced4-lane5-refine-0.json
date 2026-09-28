@@ -1,0 +1,245 @@
+{
+ "job": "w8i14-balanced4-lane5-refine-0",
+ "network": "w8i14",
+ "contract": "balanced4",
+ "projection": "lane5",
+ "mode": "refine",
+ "valu": 0,
+ "library": "full",
+ "n_consts": 2,
+ "timeout_ms": 40000,
+ "library_components": [
+  "v_add_nc_u32",
+  "v_sub_nc_u32",
+  "v_mul_lo_u32",
+  "v_and_b32",
+  "v_or_b32",
+  "v_xor_b32",
+  "v_lshlrev_b32",
+  "v_lshrrev_b32",
+  "v_ashrrev_i32",
+  "v_bfe_u32",
+  "v_perm_b32",
+  "v_lshl_or_b32",
+  "v_dot4_i32_i8",
+  "v_dot8_i32_i4",
+  "v_dot4_u32_u8",
+  "v_lshl_add_u32",
+  "v_add3_u32",
+  "v_and_or_b32",
+  "v_alignbit_b32",
+  "v_med3_i32",
+  "v_sad_u8",
+  "v_mad_u32_u24"
+ ],
+ "done": {
+  "[]": {
+   "outcome": "sat",
+   "seconds": 0.049
+  }
+ },
+ "solutions": [
+  {
+   "components": [
+    "ds_bpermute_b32"
+   ],
+   "program": [
+    {
+     "dst": "out",
+     "op": "ds_bpermute_b32",
+     "args": [
+      "b4"
+     ],
+     "offset0": 52
+    }
+   ],
+   "constants": [
+    "0x00800000",
+    "0x40000000"
+   ],
+   "table": [
+    11,
+    30,
+    4,
+    4,
+    16,
+    9,
+    3,
+    5,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6,
+    0,
+    0,
+    2,
+    1,
+    4294967294,
+    4294967294,
+    0,
+    3,
+    13,
+    2,
+    0,
+    5,
+    6,
+    4294967295,
+    4294967295,
+    3
+   ],
+   "observed": [
+    13,
+    22,
+    31,
+    16,
+    25,
+    2,
+    19,
+    28,
+    5,
+    14,
+    23,
+    0,
+    17,
+    26,
+    3,
+    20,
+    29,
+    6,
+    15,
+    24,
+    1,
+    18,
+    27,
+    4,
+    21,
+    30,
+    7
+   ],
+   "relabel_observed_to_map": [
+    [
+     0,
+     11
+    ],
+    [
+     1,
+     30
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     16
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     7,
+     5
+    ],
+    [
+     13,
+     0
+    ],
+    [
+     14,
+     0
+    ],
+    [
+     15,
+     6
+    ],
+    [
+     16,
+     0
+    ],
+    [
+     17,
+     0
+    ],
+    [
+     18,
+     2
+    ],
+    [
+     19,
+     1
+    ],
+    [
+     20,
+     -2
+    ],
+    [
+     21,
+     -2
+    ],
+    [
+     22,
+     0
+    ],
+    [
+     23,
+     3
+    ],
+    [
+     24,
+     13
+    ],
+    [
+     25,
+     2
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     27,
+     5
+    ],
+    [
+     28,
+     6
+    ],
+    [
+     29,
+     -1
+    ],
+    [
+     30,
+     -1
+    ],
+    [
+     31,
+     3
+    ]
+   ],
+   "relabel_is_bijective": false
+  }
+ ],
+ "per_query_timeout_ms": 20000,
+ "counts": {
+  "sat": 1,
+  "unsat": 0,
+  "timeout": 0
+ },
+ "queue_total": 1,
+ "queue_done": 1,
+ "timeout_multisets": []
+}

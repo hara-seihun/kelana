@@ -1,0 +1,233 @@
+{
+  "law": "LAW.md",
+  "panels": {
+    "train": {
+      "queries": 2048,
+      "sums": {
+        "teacher_sq": 13465.224623721371,
+        "deterministic_fp64_sse": 209.01669641802118,
+        "mean_bias_sse": 156.1524062339113,
+        "variance_trace": 93.6127502943429,
+        "expected_sse": 249.76515652825464,
+        "original_cpu_sse": 209.0166981624801,
+        "fp64_minus_cpu": -1.7444582174912485e-06
+      },
+      "relative_sq": {
+        "deterministic_fp64_sse": 0.015522704021572827,
+        "mean_bias_sse": 0.011596717514746934,
+        "expected_sse": 0.018548903825061278,
+        "original_cpu_sse": 0.015522704151125728
+      },
+      "winning_queries": 57,
+      "max_direct_covariance_delta": 1.3877787807814457e-17,
+      "level_counts": {
+        "interior": 1737275,
+        "clipped": 19218,
+        "exact": 78515,
+        "duplicate_groups": 0
+      },
+      "cases": [
+        {
+          "window": 0,
+          "source_sha256": "59530e5db990011026ac08e73e70816e3cdfd95ba6338e96279b1e6638a934fb",
+          "receipt": "train-0-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 27.749635766209174,
+          "expected_sse": 33.39000523981888,
+          "variance_trace": 12.080612035279476
+        },
+        {
+          "window": 1,
+          "source_sha256": "eda7b3483777ba1912c2695fb8c8edfe2943da2d505dc50c154f030834a978c9",
+          "receipt": "train-1-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 24.12180046265765,
+          "expected_sse": 28.72740182091464,
+          "variance_trace": 10.51466039782569
+        },
+        {
+          "window": 2,
+          "source_sha256": "621e51d67b65fd8ed9505f054aeb8f9bd3f7da733866600de17fef95f6c48264",
+          "receipt": "train-2-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 25.997414536235425,
+          "expected_sse": 30.155936460982712,
+          "variance_trace": 10.900243703947137
+        },
+        {
+          "window": 3,
+          "source_sha256": "698940c91cbda0d259b9ea7b861cb0e8c440f0a22251ad106782754a8fc33123",
+          "receipt": "train-3-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 25.092701814849136,
+          "expected_sse": 29.958131180597018,
+          "variance_trace": 10.822696793869037
+        },
+        {
+          "window": 4,
+          "source_sha256": "ba170912c0bc8a582ad95891b29a3f643fb3fa031dafe32b7198b4ce97eb7c01",
+          "receipt": "train-4-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 28.70926623714823,
+          "expected_sse": 34.046314838504266,
+          "variance_trace": 13.998578649288822
+        },
+        {
+          "window": 5,
+          "source_sha256": "45484ccf525267bf922c87ff92738fced75833faae7bc3274d116e26350dbd12",
+          "receipt": "train-5-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 24.538087247841762,
+          "expected_sse": 28.930189268906595,
+          "variance_trace": 10.941254435865813
+        },
+        {
+          "window": 6,
+          "source_sha256": "27580216202509aa7a622534cf66176137d9e391a689676d04233a0fc7fb85df",
+          "receipt": "train-6-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 26.425413922051796,
+          "expected_sse": 31.525148332592867,
+          "variance_trace": 10.223491094710331
+        },
+        {
+          "window": 7,
+          "source_sha256": "f598e9a09ce0934666b31950a60bf99d144fad7730e4249bfe37cf708bad6d2c",
+          "receipt": "train-7-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 26.382376431028412,
+          "expected_sse": 33.03202938593739,
+          "variance_trace": 14.13121318355662
+        }
+      ]
+    },
+    "validation": {
+      "queries": 1024,
+      "sums": {
+        "teacher_sq": 6793.961378496441,
+        "deterministic_fp64_sse": 107.92358228134809,
+        "mean_bias_sse": 76.9510850188965,
+        "variance_trace": 50.809169393841024,
+        "expected_sse": 127.76025441273738,
+        "original_cpu_sse": 107.9235836465387,
+        "fp64_minus_cpu": -1.3651906495756734e-06
+      },
+      "relative_sq": {
+        "deterministic_fp64_sse": 0.015885221635633207,
+        "mean_bias_sse": 0.011326394239221655,
+        "expected_sse": 0.018804972135566034,
+        "original_cpu_sse": 0.015885221836574977
+      },
+      "winning_queries": 43,
+      "max_direct_covariance_delta": 3.469446951953614e-18,
+      "level_counts": {
+        "interior": 868688,
+        "clipped": 9454,
+        "exact": 39362,
+        "duplicate_groups": 0
+      },
+      "cases": [
+        {
+          "window": 0,
+          "source_sha256": "e1465c3dd76fae635b821d035c10803efeffd4020fcfa3a3d7300c681d466982",
+          "receipt": "validation-0-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 24.75256153709579,
+          "expected_sse": 29.491432861208718,
+          "variance_trace": 11.117056596732372
+        },
+        {
+          "window": 1,
+          "source_sha256": "726ea86faa1ac4b216f713b1af2570932bca6dfd803ed4fcf493ed79c5702c59",
+          "receipt": "validation-1-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 29.892731318808544,
+          "expected_sse": 33.86145896379133,
+          "variance_trace": 13.837278821456477
+        },
+        {
+          "window": 2,
+          "source_sha256": "754e6c9e517ee5d280e1f3799c2ba88252e13affe28aaf2d7dd5778152255be1",
+          "receipt": "validation-2-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 30.36421563569276,
+          "expected_sse": 36.396372350830326,
+          "variance_trace": 15.11696461254052
+        },
+        {
+          "window": 3,
+          "source_sha256": "5d0991ed17cc708fb1eaeea10a6d514ce883d52a30441d11554c040c574f7300",
+          "receipt": "validation-3-result.json",
+          "queries": 256,
+          "deterministic_fp64_sse": 22.914073789750983,
+          "expected_sse": 28.010990236907062,
+          "variance_trace": 10.73786936311169
+        }
+      ]
+    },
+    "held": {
+      "queries": 8,
+      "sums": {
+        "teacher_sq": 271.317982571888,
+        "deterministic_fp64_sse": 0.8326576930329557,
+        "mean_bias_sse": 0.17956802019444199,
+        "variance_trace": 0.33718051255072967,
+        "expected_sse": 0.5167485327451716,
+        "original_cpu_sse": 0.8326579283231521,
+        "fp64_minus_cpu": -2.352901963993681e-07
+      },
+      "relative_sq": {
+        "deterministic_fp64_sse": 0.003068936622408859,
+        "mean_bias_sse": 0.0006618360437899242,
+        "expected_sse": 0.0019045863744333816,
+        "original_cpu_sse": 0.0030689374896208078
+      },
+      "winning_queries": 7,
+      "max_direct_covariance_delta": 2.7755575615628914e-17,
+      "level_counts": {
+        "interior": 868707,
+        "clipped": 9931,
+        "exact": 38866,
+        "duplicate_groups": 0
+      },
+      "cases": [
+        {
+          "window": 0,
+          "source_sha256": "81ab88364b36fd68cee0e29851b6e379ee5194f119ba98c1e451548bd9a8ffea",
+          "receipt": "held-0-result.json",
+          "queries": 2,
+          "deterministic_fp64_sse": 0.057191061448572195,
+          "expected_sse": 0.05923458088938659,
+          "variance_trace": 0.03412467370152637
+        },
+        {
+          "window": 1,
+          "source_sha256": "d9215d2908fcb96c61875628012650588dfa173477d0c679015f414fb7c2491b",
+          "receipt": "held-1-result.json",
+          "queries": 2,
+          "deterministic_fp64_sse": 0.25472294394635187,
+          "expected_sse": 0.2114291636468006,
+          "variance_trace": 0.14344862642428213
+        },
+        {
+          "window": 2,
+          "source_sha256": "aba0d790f56ec8374edb0a77ddcdcef1929d320bcad66137dfca839b81ebe45f",
+          "receipt": "held-2-result.json",
+          "queries": 2,
+          "deterministic_fp64_sse": 0.13173915207886625,
+          "expected_sse": 0.07037513306653638,
+          "variance_trace": 0.0425403838677188
+        },
+        {
+          "window": 3,
+          "source_sha256": "6fdc3dd3fe5d763a613f845009c3c2546a3a8cb5b5680650fa566c03d9acc160",
+          "receipt": "held-3-result.json",
+          "queries": 2,
+          "deterministic_fp64_sse": 0.3890045355591653,
+          "expected_sse": 0.1757096551424481,
+          "variance_trace": 0.11706682855720235
+        }
+      ]
+    }
+  }
+}

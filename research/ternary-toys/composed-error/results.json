@@ -1,0 +1,200 @@
+{
+  "teacher": [
+    [
+      -0.75,
+      1.25
+    ],
+    [
+      -0.25,
+      0.75
+    ]
+  ],
+  "first_local_error": 0.045572916666666664,
+  "controls": {
+    "independent": {
+      "indices": [
+        7,
+        6
+      ],
+      "codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "scales": [
+        1.0,
+        0.5
+      ],
+      "train_mse": 0.7881892522176107,
+      "held_mse": 0.4667421169579029,
+      "first_local_mse": 0.045572916666666664
+    },
+    "sequential": {
+      "indices": [
+        7,
+        6
+      ],
+      "codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "scales": [
+        1.0,
+        0.5
+      ],
+      "train_mse": 0.7881892522176107,
+      "held_mse": 0.4667421169579029,
+      "first_local_mse": 0.045572916666666664
+    },
+    "independent_refit": {
+      "indices": [
+        7,
+        6
+      ],
+      "codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "scales": [
+        1.0,
+        0.5
+      ],
+      "train_mse": 0.7881892522176107,
+      "held_mse": 0.4667421169579029,
+      "first_local_mse": 0.045572916666666664
+    },
+    "sequential_refit": {
+      "indices": [
+        7,
+        6
+      ],
+      "codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "scales": [
+        1.0,
+        0.5
+      ],
+      "train_mse": 0.7881892522176107,
+      "held_mse": 0.4667421169579029,
+      "first_local_mse": 0.045572916666666664
+    },
+    "downstream_code_only": {
+      "indices": [
+        7,
+        15
+      ],
+      "codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "scales": [
+        1.0,
+        0.5
+      ],
+      "train_mse": 0.590058962504069,
+      "held_mse": 0.36586232855916023,
+      "first_local_mse": 0.045572916666666664
+    },
+    "upstream_scale_only": {
+      "indices": [
+        8,
+        6
+      ],
+      "codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "scales": [
+        1.5,
+        0.5
+      ],
+      "train_mse": 1.9279088973999023,
+      "held_mse": 1.0124102719128132,
+      "first_local_mse": 0.22786458333333334
+    },
+    "joint": {
+      "indices": [
+        8,
+        15
+      ],
+      "codes": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "scales": [
+        1.5,
+        0.5
+      ],
+      "train_mse": 0.1419057846069336,
+      "held_mse": 0.09170502051711082,
+      "first_local_mse": 0.22786458333333334
+    }
+  },
+  "teacher_gate_crossings_train": 0,
+  "joint_gate_crossings_train": 3,
+  "continuous_scale_refit": {
+    "independent": {
+      "scales": [
+        0.5698954646633406,
+        1.0000850618760144
+      ],
+      "train_mse": 0.7528020868578392,
+      "held_mse": 0.44660223012411066
+    },
+    "sequential": {
+      "scales": [
+        0.5698954646633406,
+        1.0000850618760144
+      ],
+      "train_mse": 0.7528020868578392,
+      "held_mse": 0.44660223012411066
+    }
+  },
+  "sum_preservation_lower_bound": {
+    "train_mse": 0.7512820561726888,
+    "held_mse": 0.44573861733078957
+  }
+}

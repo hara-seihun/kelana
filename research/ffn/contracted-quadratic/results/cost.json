@@ -1,0 +1,128 @@
+{
+ "D": 5120,
+ "FF": 17408,
+ "deployed_mac_per_token": 267386880,
+ "deployed_mac_per_output": 52224,
+ "breakeven_rank_independent": 10.2,
+ "breakeven_shared_basis": 321,
+ "ranks": {
+  "row0": {
+   "rank_for_90pct_frobenius": 1837,
+   "rank_for_99pct_frobenius": 4655,
+   "rank_for_10pct_activation_err": 2018,
+   "rank_for_1pct_activation_err": 4799
+  },
+  "row137": {
+   "rank_for_90pct_frobenius": 1840,
+   "rank_for_99pct_frobenius": 4658,
+   "rank_for_10pct_activation_err": 1942,
+   "rank_for_1pct_activation_err": 4762
+  },
+  "row2048": {
+   "rank_for_90pct_frobenius": 1828,
+   "rank_for_99pct_frobenius": 4647,
+   "rank_for_10pct_activation_err": 1560,
+   "rank_for_1pct_activation_err": 4583
+  },
+  "rand7": {
+   "rank_for_90pct_frobenius": 1831,
+   "rank_for_99pct_frobenius": 4651,
+   "rank_for_10pct_activation_err": 1790,
+   "rank_for_1pct_activation_err": 4668
+  }
+ },
+ "table": [
+  {
+   "rank": 8,
+   "independent_mac": 209756160,
+   "independent_vs_deployed": 0.7844669117647058,
+   "shared_mac": 225280,
+   "shared_vs_deployed": 0.0008425245098039216,
+   "own_frobenius_energy_row0": 0.023979212650866954,
+   "shared_frobenius_energy_mean": 0.0031852169772284182,
+   "activation_relerr_row0": 1.0194509778379002
+  },
+  {
+   "rank": 16,
+   "independent_mac": 419512320,
+   "independent_vs_deployed": 1.5689338235294117,
+   "shared_mac": 778240,
+   "shared_vs_deployed": 0.0029105392156862746,
+   "own_frobenius_energy_row0": 0.042480595332031856,
+   "shared_frobenius_energy_mean": 0.006835492430792003,
+   "activation_relerr_row0": 1.0036936973931367
+  },
+  {
+   "rank": 32,
+   "independent_mac": 839024640,
+   "independent_vs_deployed": 3.1378676470588234,
+   "shared_mac": 2867200,
+   "shared_vs_deployed": 0.010723039215686275,
+   "own_frobenius_energy_row0": 0.07583898818177097,
+   "shared_frobenius_energy_mean": 0.012950199311505397,
+   "activation_relerr_row0": 0.9750232266703434
+  },
+  {
+   "rank": 64,
+   "independent_mac": 1678049280,
+   "independent_vs_deployed": 6.275735294117647,
+   "shared_mac": 10977280,
+   "shared_vs_deployed": 0.04105392156862745,
+   "own_frobenius_energy_row0": 0.13343144826239184,
+   "shared_frobenius_energy_mean": 0.025882166559004265,
+   "activation_relerr_row0": 0.8758492236335541
+  },
+  {
+   "rank": 128,
+   "independent_mac": 3356098560,
+   "independent_vs_deployed": 12.551470588235293,
+   "shared_mac": 42926080,
+   "shared_vs_deployed": 0.16053921568627452,
+   "own_frobenius_energy_row0": 0.22775574808505583,
+   "shared_frobenius_energy_mean": 0.05484932106677146,
+   "activation_relerr_row0": 0.8220718541686113
+  },
+  {
+   "rank": 256,
+   "independent_mac": 6712197120,
+   "independent_vs_deployed": 25.102941176470587,
+   "shared_mac": 169738240,
+   "shared_vs_deployed": 0.6348039215686274,
+   "own_frobenius_energy_row0": 0.369987249422443,
+   "shared_frobenius_energy_mean": 0.11723594890939701,
+   "activation_relerr_row0": 0.6544798893175425
+  },
+  {
+   "rank": 512,
+   "independent_mac": 13424394240,
+   "independent_vs_deployed": 50.205882352941174,
+   "shared_mac": 675020800,
+   "shared_vs_deployed": 2.5245098039215685,
+   "own_frobenius_energy_row0": 0.5605556275743357,
+   "shared_frobenius_energy_mean": 0.23605916791788606,
+   "activation_relerr_row0": 0.457638929780019
+  },
+  {
+   "rank": 1024,
+   "independent_mac": 26848788480,
+   "independent_vs_deployed": 100.41176470588235,
+   "shared_mac": 2692218880,
+   "shared_vs_deployed": 10.068627450980392,
+   "own_frobenius_energy_row0": 0.7691229579678736,
+   "shared_frobenius_energy_mean": 0.4332576965735278,
+   "activation_relerr_row0": 0.2371253524157506
+  },
+  {
+   "rank": 2048,
+   "independent_mac": 53697576960,
+   "independent_vs_deployed": 200.8235294117647,
+   "shared_mac": 10753146880,
+   "shared_vs_deployed": 40.21568627450981,
+   "own_frobenius_energy_row0": 0.9338942548878387,
+   "shared_frobenius_energy_mean": null,
+   "activation_relerr_row0": 0.09581676763985907
+  }
+ ],
+ "deployed_params_trits": 267386880,
+ "deployed_bytes_halo": 58490880
+}

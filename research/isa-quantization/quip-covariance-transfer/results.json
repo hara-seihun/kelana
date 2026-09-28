@@ -1,0 +1,126 @@
+{
+  "source": {
+    "train_rows": 2048,
+    "held_rows": 1024,
+    "unique_train_input_rows": 896,
+    "unique_held_input_rows": 472,
+    "unique_overlap": 121,
+    "held_tokens_with_input_not_seen_in_train": 438,
+    "held_tokens_with_seen_input": 586
+  },
+  "teacher_output_energy": {
+    "train_per_state": 7.846065805726786,
+    "held_per_state": 7.740172793138706
+  },
+  "train_covariance": {
+    "rank": 896,
+    "nullity": 128,
+    "smallest_positive_eigenvalue": 2.6170186354608528e-05,
+    "largest_eigenvalue": 8.643591324669414,
+    "null_projected_train_input_energy_per_state": 1.6862837246515343e-25,
+    "null_projected_held_input_energy_per_state": 1.185557811190428,
+    "support_restricted_generalized_held_to_train_max": 474.40859329560635,
+    "unrestricted_generalized_held_to_train_bound": "infinite"
+  },
+  "images": {
+    "quip_rvq3": {
+      "image_sha256": "7234c67cc269f945b2826ad8686207336208ed531023ede0be7925c1c041ad43",
+      "coefficient_error_frobenius_squared": 9.604316799817056,
+      "coefficient_nullspace_fraction": 0.38300990532044804,
+      "train_error_per_state": 0.03014638405857718,
+      "held_error_per_state": 0.10147204078696041,
+      "error_energy_held_to_train_factor": 3.365977179544683,
+      "teacher_energy_held_to_train_factor": 0.9865036802889431,
+      "train_relative_squared_error": 0.003842229316579725,
+      "held_relative_squared_error": 0.013109790116948104,
+      "held_error_null_component": 0.03406912546240874,
+      "held_error_supported_component": 0.06790562920967728,
+      "held_error_null_support_cross_term": -0.0005027138851256135,
+      "held_null_fraction": 0.3357488939631809,
+      "held_supported_fraction": 0.6692053168837365,
+      "held_null_error_from_novel_tokens_fraction": 1.0000000000000002,
+      "held_total_error_novel_tokens_fraction": 0.921685562313874,
+      "held_supported_diagonal_in_train_eigenbasis": 0.06857129897534234,
+      "held_supported_cross_mode_interference": -0.0006656697656650529,
+      "generalized_supported_high_variance_modes": [
+        {
+          "top_supported_modes": 1,
+          "smallest_gamma_in_top_set": 474.40859329560635,
+          "train_error_energy_fraction": 5.717112925942052e-05,
+          "held_support_error_fraction": 0.012040894956120275
+        },
+        {
+          "top_supported_modes": 10,
+          "smallest_gamma_in_top_set": 166.5359577183782,
+          "train_error_energy_fraction": 0.000986702171140196,
+          "held_support_error_fraction": 0.10272773144737336
+        },
+        {
+          "top_supported_modes": 100,
+          "smallest_gamma_in_top_set": 14.08292631734868,
+          "train_error_energy_fraction": 0.0304788284175448,
+          "held_support_error_fraction": 0.578609941699869
+        },
+        {
+          "top_supported_modes": 448,
+          "smallest_gamma_in_top_set": 0.32357358608564163,
+          "train_error_energy_fraction": 0.40219392640243545,
+          "held_support_error_fraction": 0.9969459148660886
+        }
+      ]
+    },
+    "scalar_group128": {
+      "image_sha256": "78b66990378f3dcae85458c50f4db04bc4d1e2b40d748b4100b078bfb055aec1",
+      "coefficient_error_frobenius_squared": 4.963881609871252,
+      "coefficient_nullspace_fraction": 0.14450774214022427,
+      "train_error_per_state": 0.06905549505253329,
+      "held_error_per_state": 0.08067737190169326,
+      "error_energy_held_to_train_factor": 1.168297640040358,
+      "teacher_energy_held_to_train_factor": 0.9865036802889431,
+      "train_relative_squared_error": 0.008801289303759114,
+      "held_relative_squared_error": 0.010423200367465944,
+      "held_error_null_component": 0.0066969097127053115,
+      "held_error_supported_component": 0.07426851640183632,
+      "held_error_null_support_cross_term": -0.00028805421284837374,
+      "held_null_fraction": 0.08300852587099154,
+      "held_supported_fraction": 0.920561920290782,
+      "held_null_error_from_novel_tokens_fraction": 1.0000000000000002,
+      "held_total_error_novel_tokens_fraction": 0.7067639934290726,
+      "held_supported_diagonal_in_train_eigenbasis": 0.07359216907159777,
+      "held_supported_cross_mode_interference": 0.0006763473302385525,
+      "generalized_supported_high_variance_modes": [
+        {
+          "top_supported_modes": 1,
+          "smallest_gamma_in_top_set": 474.40859329560635,
+          "train_error_energy_fraction": 1.2026584275088021e-05,
+          "held_support_error_fraction": 0.005305036063430999
+        },
+        {
+          "top_supported_modes": 10,
+          "smallest_gamma_in_top_set": 166.5359577183782,
+          "train_error_energy_fraction": 0.00022867043868024143,
+          "held_support_error_fraction": 0.04977527214338353
+        },
+        {
+          "top_supported_modes": 100,
+          "smallest_gamma_in_top_set": 14.08292631734868,
+          "train_error_energy_fraction": 0.009524844581809884,
+          "held_support_error_fraction": 0.3418499472176362
+        },
+        {
+          "top_supported_modes": 448,
+          "smallest_gamma_in_top_set": 0.32357358608564163,
+          "train_error_energy_fraction": 0.3888586389232733,
+          "held_support_error_fraction": 0.9929805833050719
+        }
+      ]
+    }
+  },
+  "relative_contrast": {
+    "held_numerator_quip_over_scalar": 1.2577509454646814,
+    "train_numerator_quip_over_scalar": 0.4365530076302199,
+    "coefficient_error_quip_over_scalar": 1.9348400213086796,
+    "null_held_error_quip_over_scalar": 5.0872905450364865,
+    "supported_held_error_quip_over_scalar": 0.9143259149310041
+  }
+}

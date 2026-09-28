@@ -1,0 +1,637 @@
+{
+  "model": {
+    "A": [
+      [
+        0.625,
+        1.5
+      ],
+      [
+        -0.5,
+        0.25
+      ]
+    ],
+    "B": [
+      [
+        -0.5,
+        -0.5
+      ],
+      [
+        0.25,
+        -0.5
+      ]
+    ],
+    "input": [
+      [
+        2.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "target": [
+      [
+        1.0625,
+        0.125
+      ],
+      [
+        0.15625,
+        1.0
+      ]
+    ],
+    "scales": [
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "alphabets": {
+      "ternary": [
+        -1,
+        0,
+        1
+      ],
+      "four_neg": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "four_pos": [
+        -1,
+        0,
+        1,
+        2
+      ]
+    },
+    "options_per_matrix": 4621,
+    "mode_header_bytes": 1,
+    "four_bit_scales": [
+      0.25,
+      0.375,
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0
+    ]
+  },
+  "frontier": [
+    {
+      "budget": 7,
+      "joint": {
+        "quality": 0.03515625,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "four_pos",
+          "scale": 0.75,
+          "codes": [
+            0,
+            -1,
+            -1,
+            2
+          ]
+        },
+        "diagnostics": {
+          "a_matrix": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              -0.5
+            ]
+          ],
+          "b_matrix": [
+            [
+              0.0,
+              -0.75
+            ],
+            [
+              -0.75,
+              1.5
+            ]
+          ],
+          "isolated_a": 2.55078125,
+          "isolated_b": 32.26953125,
+          "linear_sum": 19.3984375,
+          "cross_norm": 18.80078125,
+          "exact": 0.03515625
+        }
+      },
+      "independent": {
+        "quality": 0.94140625,
+        "bytes": 7,
+        "a_image": {
+          "kind": "four_pos",
+          "scale": 0.5,
+          "codes": [
+            1,
+            2,
+            -1,
+            0
+          ]
+        },
+        "b_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            -1,
+            -1,
+            0,
+            -1
+          ]
+        },
+        "diagnostics": {
+          "a_matrix": [
+            [
+              0.5,
+              1.0
+            ],
+            [
+              -0.5,
+              0.0
+            ]
+          ],
+          "b_matrix": [
+            [
+              -0.5,
+              -0.5
+            ],
+            [
+              0.0,
+              -0.5
+            ]
+          ],
+          "isolated_a": 0.09765625,
+          "isolated_b": 0.80078125,
+          "linear_sum": 1.1875,
+          "cross_norm": 0.01953125,
+          "exact": 0.94140625
+        }
+      },
+      "ternary_only": {
+        "quality": 0.05078125,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            0,
+            0,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "ternary",
+          "scale": 0.75,
+          "codes": [
+            0,
+            0,
+            -1,
+            1
+          ]
+        },
+        "diagnostics": {
+          "a_matrix": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.5,
+              -0.5
+            ]
+          ],
+          "b_matrix": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              -0.75,
+              0.75
+            ]
+          ],
+          "isolated_a": 3.81640625,
+          "isolated_b": 23.41015625,
+          "linear_sum": 16.2578125,
+          "cross_norm": 15.78515625,
+          "exact": 0.05078125
+        }
+      },
+      "base_alphabets": {
+        "quality": 0.03515625,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "four_pos",
+          "scale": 0.75,
+          "codes": [
+            0,
+            -1,
+            -1,
+            2
+          ]
+        },
+        "diagnostics": {
+          "a_matrix": [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              0.5,
+              -0.5
+            ]
+          ],
+          "b_matrix": [
+            [
+              0.0,
+              -0.75
+            ],
+            [
+              -0.75,
+              1.5
+            ]
+          ],
+          "isolated_a": 2.55078125,
+          "isolated_b": 32.26953125,
+          "linear_sum": 19.3984375,
+          "cross_norm": 18.80078125,
+          "exact": 0.03515625
+        }
+      }
+    },
+    {
+      "budget": 8,
+      "joint": {
+        "quality": 0.03515625,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "four_pos",
+          "scale": 0.75,
+          "codes": [
+            0,
+            -1,
+            -1,
+            2
+          ]
+        }
+      },
+      "independent": {
+        "quality": 0.09765625,
+        "bytes": 8,
+        "a_image": {
+          "kind": "four_pos",
+          "scale": 0.5,
+          "codes": [
+            1,
+            2,
+            -1,
+            0
+          ]
+        },
+        "b_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            -2,
+            -2,
+            1,
+            -2
+          ]
+        }
+      },
+      "ternary_only": {
+        "quality": 0.05078125,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            0,
+            0,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "ternary",
+          "scale": 0.75,
+          "codes": [
+            0,
+            0,
+            -1,
+            1
+          ]
+        }
+      },
+      "base_alphabets": {
+        "quality": 0.03515625,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "four_pos",
+          "scale": 0.75,
+          "codes": [
+            0,
+            -1,
+            -1,
+            2
+          ]
+        }
+      }
+    },
+    {
+      "budget": 9,
+      "joint": {
+        "quality": 0.01953125,
+        "bytes": 9,
+        "a_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            2,
+            6,
+            -2,
+            1
+          ]
+        },
+        "b_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            -2,
+            -2,
+            1,
+            -2
+          ]
+        }
+      },
+      "independent": {
+        "quality": 0.01953125,
+        "bytes": 9,
+        "a_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            2,
+            6,
+            -2,
+            1
+          ]
+        },
+        "b_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            -2,
+            -2,
+            1,
+            -2
+          ]
+        }
+      },
+      "ternary_only": {
+        "quality": 0.05078125,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            0,
+            0,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "ternary",
+          "scale": 0.75,
+          "codes": [
+            0,
+            0,
+            -1,
+            1
+          ]
+        }
+      },
+      "base_alphabets": {
+        "quality": 0.03515625,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "four_pos",
+          "scale": 0.75,
+          "codes": [
+            0,
+            -1,
+            -1,
+            2
+          ]
+        }
+      },
+      "four_bit": {
+        "quality": 0.01953125,
+        "bytes": 9,
+        "a_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            2,
+            6,
+            -2,
+            1
+          ]
+        },
+        "b_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            -2,
+            -2,
+            1,
+            -2
+          ]
+        }
+      }
+    },
+    {
+      "budget": 12,
+      "joint": {
+        "quality": 0.0,
+        "bytes": 12,
+        "a_image": {
+          "kind": "exception_four_bit",
+          "scale": 0.25,
+          "codes": [
+            2,
+            6,
+            -2,
+            1
+          ],
+          "position": 0
+        },
+        "b_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            -2,
+            -2,
+            1,
+            -2
+          ]
+        }
+      },
+      "independent": {
+        "quality": 0.0,
+        "bytes": 12,
+        "a_image": {
+          "kind": "exception_four_bit",
+          "scale": 0.25,
+          "codes": [
+            2,
+            6,
+            -2,
+            1
+          ],
+          "position": 0
+        },
+        "b_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            -2,
+            -2,
+            1,
+            -2
+          ]
+        }
+      },
+      "ternary_only": {
+        "quality": 0.05078125,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            0,
+            0,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "ternary",
+          "scale": 0.75,
+          "codes": [
+            0,
+            0,
+            -1,
+            1
+          ]
+        }
+      },
+      "base_alphabets": {
+        "quality": 0.03515625,
+        "bytes": 7,
+        "a_image": {
+          "kind": "ternary",
+          "scale": 0.5,
+          "codes": [
+            1,
+            1,
+            1,
+            -1
+          ]
+        },
+        "b_image": {
+          "kind": "four_pos",
+          "scale": 0.75,
+          "codes": [
+            0,
+            -1,
+            -1,
+            2
+          ]
+        }
+      },
+      "four_bit": {
+        "quality": 0.01953125,
+        "bytes": 9,
+        "a_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            2,
+            6,
+            -2,
+            1
+          ]
+        },
+        "b_image": {
+          "kind": "four_bit",
+          "scale": 0.25,
+          "codes": [
+            -2,
+            -2,
+            1,
+            -2
+          ]
+        }
+      }
+    }
+  ]
+}

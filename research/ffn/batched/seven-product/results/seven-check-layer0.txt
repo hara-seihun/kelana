@@ -1,0 +1,29 @@
+device gfx1151  D=5120 FF=256  (gate+up = 2.6 M ternary weights)
+problem: deployed layer weights and real contextual rows
+  dataset /path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer00  layer 0  manifest 8c208c14e1756433
+  document /path/to/workspace/projects/bonsai-halo/README.md
+  gate nonzero fraction 0.6723, first block scales 0.0112762 0.0121918
+weight images gate+up: two-bit 0.62 MB, nibble 1.25 MB, seven-i4 2.19 MB, seven-i8 4.38 MB
+
+map                rel RMS vs f32   vs own codes
+eight-i4p/A4              9.0230%     1.089e-07
+eight-i4n/A3             21.0982%     1.090e-07
+eight-i4o/A3             21.0982%     1.090e-07
+seven-i4/A3              21.0982%     1.090e-07
+seven-i4c/A3             21.0982%     1.090e-07
+seven-i4c/A3.w2          21.0982%     1.090e-07
+seven-i4c/A3.w4          21.0982%     1.090e-07
+eight-i4o/A3.w2          21.0982%     1.090e-07
+eight-i4o/A3.w4t4        21.0982%     1.090e-07
+eight-i8/A8               0.5021%     1.107e-07
+seven-i8/A7               1.0039%     1.090e-07
+eight-i8/A7               1.0039%     1.090e-07
+seven-i4/A3        vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i4c/A3       vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i4c/A3.w2    vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i4c/A3.w4    vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+eight-i4o/A3       vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+eight-i4o/A3.w2    vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+eight-i4o/A3.w4t4  vs eight-i4n/A3        differing outputs 0 of 65536, worst |diff| 0.000e+00
+seven-i8/A7        vs eight-i8/A7         differing outputs 0 of 65536, worst |diff| 0.000e+00
+check passed

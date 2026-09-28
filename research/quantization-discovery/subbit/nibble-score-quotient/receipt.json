@@ -1,0 +1,88 @@
+{
+  "alphabet": 15,
+  "coordinates_per_group": 32,
+  "domain": "all 15^32 signed-nibble key vectors per position, all integer basis queries",
+  "class_count": "(15^T-14^T)^32",
+  "rows": [
+    {
+      "keys": 2,
+      "quotient_bits": 155.4553918440823,
+      "gauge_saving_vs_base15_bits": 94.5856062748629,
+      "physical_nibble_bits": 256,
+      "ceil_bytes_ideal_entropy_code": 20
+    },
+    {
+      "keys": 4,
+      "quotient_bits": 434.421037382207,
+      "gauge_saving_vs_base15_bits": 65.6609588556834,
+      "physical_nibble_bits": 512,
+      "ceil_bytes_ideal_entropy_code": 55
+    },
+    {
+      "keys": 8,
+      "quotient_bits": 960.5708669794176,
+      "gauge_saving_vs_base15_bits": 39.59312549636321,
+      "physical_nibble_bits": 1024,
+      "ceil_bytes_ideal_entropy_code": 121
+    },
+    {
+      "keys": 16,
+      "quotient_bits": 1981.7304375515525,
+      "gauge_saving_vs_base15_bits": 18.597547400008928,
+      "physical_nibble_bits": 2048,
+      "ceil_bytes_ideal_entropy_code": 248
+    },
+    {
+      "keys": 32,
+      "quotient_bits": 3995.2788765357286,
+      "gauge_saving_vs_base15_bits": 5.377093367394364,
+      "physical_nibble_bits": 4096,
+      "ceil_bytes_ideal_entropy_code": 500
+    },
+    {
+      "keys": 64,
+      "quotient_bits": 8000.750482923978,
+      "gauge_saving_vs_base15_bits": 0.5614568822680749,
+      "physical_nibble_bits": 8192,
+      "ceil_bytes_ideal_entropy_code": 1001
+    },
+    {
+      "keys": 128,
+      "quotient_bits": 16002.61713334346,
+      "gauge_saving_vs_base15_bits": 0.006746269032223627,
+      "physical_nibble_bits": 16384,
+      "ceil_bytes_ideal_entropy_code": 2001
+    },
+    {
+      "keys": 256,
+      "quotient_bits": 32005.247758239297,
+      "gauge_saving_vs_base15_bits": 9.85687700189085e-07,
+      "physical_nibble_bits": 32768,
+      "ceil_bytes_ideal_entropy_code": 4001
+    },
+    {
+      "keys": 1024,
+      "quotient_bits": 128020.99103689994,
+      "gauge_saving_vs_base15_bits": 9.593647978465754e-30,
+      "physical_nibble_bits": 131072,
+      "ceil_bytes_ideal_entropy_code": 16003
+    }
+  ],
+  "two_key_delta_range": [
+    -14,
+    14
+  ],
+  "two_key_delta_bits_per_coordinate": 5,
+  "tiny_exhaustive_checks": [
+    [
+      3,
+      3,
+      2
+    ],
+    [
+      4,
+      2,
+      2
+    ]
+  ]
+}

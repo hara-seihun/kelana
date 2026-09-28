@@ -1,0 +1,1403 @@
+{
+ "format": "kelana-resource-validation/1",
+ "target": "gfx1151",
+ "scope": "Re-derives every declared quantity in exact rational arithmetic and enforces the profile's evidence-role rule. It does not measure hardware and does not turn any slot bound into a time bound.",
+ "reextracted": true,
+ "facts_sha256": "8ce656020659156fc255f048d2aacf86d69feec5767dd70de7e3e241793de010",
+ "profile_sha256": "8ece70e132fc5927a2f5c780116c4a4f3b4b1287ab470da2331714f5c9c264be",
+ "checks_run": 202,
+ "failures": [],
+ "passed": true,
+ "bridge": {
+  "rule": "A step's tier is the weakest tier among everything it depends on: the premises it cites, the quantities its conclusion mentions, and transitively the steps it builds on. A claim's tier is the weakest tier over all its steps and its operation model. Absence of a citation is not architecture; a step with no premises inherits from whatever it depends on.",
+  "per_case": {
+   "packed-2x2-slots": "family-restriction",
+   "perm-vs-iu4-wmma": "family-restriction"
+  },
+  "native_dominance_proved": false,
+  "why": "No native dominance result is available here. The pinned sources do not contain the cost parameters a runtime claim needs, and the comparisons below are one-sided service-demand inequalities rather than dominance. What survives is a family-tier service-demand floor for the PERM observer, architectural capacity facts underneath it, and named missing premises."
+ },
+ "cases": [
+  {
+   "case": "packed-2x2-slots",
+   "tier": "family-restriction",
+   "inherited_tier": "family-restriction",
+   "architectural_part": [
+    "step 1: incumbent_instructions == 3 and fused_instructions == 2",
+    "step 2: the shift-or is eliminated rather than moved into the packing pass",
+    "step 4: dag_depth_change == 0 and named_temporary_saving == 1"
+   ],
+   "quantities": {
+    "incumbent_instructions": {
+     "exact": "3",
+     "float": 3.0
+    },
+    "fused_instructions": {
+     "exact": "2",
+     "float": 2.0
+    },
+    "instruction_saving": {
+     "exact": "1",
+     "float": 1.0
+    },
+    "slot_ratio": {
+     "exact": "2/3",
+     "float": 0.6666666666666666
+    },
+    "incumbent_dag_depth": {
+     "exact": "2",
+     "float": 2.0
+    },
+    "fused_dag_depth": {
+     "exact": "2",
+     "float": 2.0
+    },
+    "dag_depth_change": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "incumbent_named_temporaries": {
+     "exact": "2",
+     "float": 2.0
+    },
+    "fused_named_temporaries": {
+     "exact": "1",
+     "float": 1.0
+    },
+    "named_temporary_saving": {
+     "exact": "1",
+     "float": 1.0
+    },
+    "mac_per_tile": {
+     "exact": "8",
+     "float": 8.0
+    },
+    "incumbent_mac_per_instruction": {
+     "exact": "8/3",
+     "float": 2.6666666666666665
+    },
+    "fused_mac_per_instruction": {
+     "exact": "4",
+     "float": 4.0
+    },
+    "dot8_products_per_lane": {
+     "exact": "8",
+     "float": 8.0
+    },
+    "dot4_products_per_lane": {
+     "exact": "4",
+     "float": 4.0
+    }
+   },
+   "observations": null,
+   "sensitivity": null,
+   "claim": "The fused core computes the same whole map in two instructions where the incumbent uses three, with equal dependency-graph depth and one fewer named 32-bit temporary in these two schedules. Under the charging assumptions that is a saving of one issue slot per tile.",
+   "native_runtime_claim": "none. Neither core has been timed, no latency is known for either opcode, and no cycle cost is claimed.",
+   "conditional_on": "Calling the instruction saving a slot saving, and any reading of it as a time or latency saving. Equal graph depth does not give equal native latency, and no opcode latency is available.",
+   "missing_premises_for_a_native_claim": [
+    {
+     "id": "D8_vs_D4",
+     "needed_for": "the step-5 weaker form",
+     "would_come_from": "any AMD statement distinguishing the issue cost of two ENC_VOP3P instructions with identical operand signatures; none exists"
+    },
+    {
+     "id": "tau_V",
+     "needed_for": "turning one saved slot per tile into saved time",
+     "would_come_from": "a documented VALU issue rate per SIMD32"
+    }
+   ],
+   "not_established": [
+    "No cycle or nanosecond statement. Neither core has been timed, no opcode latency is available, and no capacity upper bound exists for the issue path.",
+    "No latency claim. Equal dependency-graph depth is a property of the graphs, not of the machine.",
+    "No register-pressure theorem. The temporary counts describe these two schedules as written.",
+    "No impossibility for WMMA on independent small matrices. Only the comparison class is restricted.",
+    "Two is not proved optimal. One V_DOT4_I32_IU8 under shared packing is open.",
+    "Nothing about the packing pass. With packing charged rather than free, the incumbent's nine-instruction total is not beaten: the fused pair needs one more spread step than the shared expansion network.",
+    "Nothing about instructions outside the affine class. Data-dependent selection, V_PERM_B32 with a data selector, and bilinear use of both dot operands are excluded by hypothesis, not refuted.",
+    "A-dependent packing is a different regime. One V_DOT4_I32_IU8 suffices for at least 5 of the first 32 matrices when the wiring may depend on A, but those wirings are irregular and the remaining matrices were cut off by the search budget, not refuted."
+   ]
+  },
+  {
+   "case": "perm-vs-iu4-wmma",
+   "tier": "family-restriction",
+   "inherited_tier": "family-restriction",
+   "architectural_part": [
+    "step 1: a fixed selector byte names at most 14 distinct functions per destination byte",
+    "step 3: words_removed_per_combiner == 2 for the declared grammar",
+    "step 7: One emitted WMMA represents 128 products per wave32 lane. This chain needs no correctness filler for D-to-C use; its resource charge is a separate premise."
+   ],
+   "quantities": {
+    "perm_selector_functions": {
+     "exact": "14",
+     "float": 14.0
+    },
+    "perm_dest_bytes": {
+     "exact": "4",
+     "float": 4.0
+    },
+    "separated_patterns_witness": {
+     "exact": "25",
+     "float": 25.0
+    },
+    "trits_per_group": {
+     "exact": "2",
+     "float": 2.0
+    },
+    "mac_per_perm_per_lane": {
+     "exact": "8",
+     "float": 8.0
+    },
+    "combiner_word_sources": {
+     "exact": "3",
+     "float": 3.0
+    },
+    "words_removed_per_combiner": {
+     "exact": "2",
+     "float": 2.0
+    },
+    "k_assembled": {
+     "exact": "64",
+     "float": 64.0
+    },
+    "req_k1": {
+     "exact": "1/4",
+     "float": 0.25
+    },
+    "req_k2": {
+     "exact": "3/16",
+     "float": 0.1875
+    },
+    "req_k3": {
+     "exact": "5/24",
+     "float": 0.20833333333333334
+    },
+    "req_k64": {
+     "exact": "3/16",
+     "float": 0.1875
+    },
+    "rem_k1": {
+     "exact": "1/8",
+     "float": 0.125
+    },
+    "rem_k2": {
+     "exact": "3/16",
+     "float": 0.1875
+    },
+    "rem_k3": {
+     "exact": "1/6",
+     "float": 0.16666666666666666
+    },
+    "rem_k5": {
+     "exact": "7/40",
+     "float": 0.175
+    },
+    "rem_k64": {
+     "exact": "3/16",
+     "float": 0.1875
+    },
+    "perm_floor_required_accumulator": {
+     "exact": "3/16",
+     "float": 0.1875
+    },
+    "perm_floor_removable_zero_any_k": {
+     "exact": "1/8",
+     "float": 0.125
+    },
+    "perm_floor_removable_zero_k_at_least_2": {
+     "exact": "1/6",
+     "float": 0.16666666666666666
+    },
+    "wmma_mac_per_lane": {
+     "exact": "128",
+     "float": 128.0
+    },
+    "sigma_sufficient_required_accumulator": {
+     "exact": "24",
+     "float": 24.0
+    },
+    "sigma_sufficient_removable_k_at_least_2": {
+     "exact": "64/3",
+     "float": 21.333333333333332
+    },
+    "sigma_sufficient_removable_any_k": {
+     "exact": "16",
+     "float": 16.0
+    },
+    "vopd_perm_eligible": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "vopd_add3_eligible": {
+     "exact": "0",
+     "float": 0.0
+    },
+    "vopd_words_removed_per_slot": {
+     "exact": "2",
+     "float": 2.0
+    },
+    "lanes_per_simd": {
+     "exact": "32",
+     "float": 32.0
+    },
+    "simd32_per_device": {
+     "exact": "80",
+     "float": 80.0
+    }
+   },
+   "observations": {
+    "role": "achieved-rate",
+    "load_bearing": false,
+    "values": {
+     "rate_iu4": 683.6464,
+     "rate_perm_only": 723.8472,
+     "rate_core": 384.1694,
+     "ns_per_wmma_instruction": 5.991401402830469,
+     "ns_per_perm_instruction": 0.3536658012906591,
+     "sigma_W_observed": 16.940855974667606,
+     "margin_vs_required_accumulator": 1.4166934679031706,
+     "margin_vs_removable_k_at_least_2": 1.2592830825805963,
+     "margin_vs_removable_any_k": 0.9444623119354472,
+     "core_slots_per_lane_mac_observed": 0.23552344356421934,
+     "core_over_count_model": 1.256125032342503,
+     "iu4_slots_per_lane_mac_observed": 0.13235043730209067
+    }
+   },
+   "sensitivity": {
+    "parameter": "sigma_W_iu4",
+    "break_even": 24.0,
+    "rows": [
+     {
+      "value": 1.0,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 2.0,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 4.0,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 8.0,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 12.0,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 16.0,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 16.94,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 20.0,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 21.33,
+      "dominates": true,
+      "strictly": true
+     },
+     {
+      "value": 24.0,
+      "dominates": true,
+      "strictly": false
+     },
+     {
+      "value": 28.0,
+      "dominates": false,
+      "strictly": false
+     },
+     {
+      "value": 32.0,
+      "dominates": false,
+      "strictly": false
+     },
+     {
+      "value": 48.0,
+      "dominates": false,
+      "strictly": false
+     }
+    ],
+    "holds_for": "sigma_W_iu4 <= 24"
+   },
+   "claim": "In the register-resident sub-region, under the declared observer model with a required running accumulator, every schedule in the PERM lookup family demands at least 3/16 issue slots per lane-MAC, while an exhibited accumulating IU4 WMMA schedule demands sigma_W_iu4 / 128. If sigma_W_iu4 <= 24 the WMMA demand sits at or below that floor.",
+   "native_runtime_claim": "none. Both sides are service demands on one modelled resource. Turning either into time needs a capacity upper bound the pinned sources do not contain.",
+   "conditional_on": null,
+   "missing_premises_for_a_native_claim": [
+    {
+     "id": "sigma_W_iu4",
+     "needed_for": "instantiating the sufficient condition",
+     "would_come_from": "an AMD statement of WMMA issue occupancy on gfx1151, or a measurement designed to isolate occupancy from latency and co-issue"
+    },
+    {
+     "id": "tau_V",
+     "needed_for": "turning any slot count into a time lower bound",
+     "would_come_from": "a proved upper bound on VALU service capacity per SIMD32; the pinned sources do not contain one, and a vendor performance document or a careful capacity microbenchmark could supply it"
+    },
+    {
+     "id": "CHARGED.COMPLETE",
+     "needed_for": "extending the comparison from this sub-region to whole kernels",
+     "would_come_from": "charging the drain, table construction, selector traffic and fragment layout on both sides, with a common output contract"
+    },
+    {
+     "id": "NECESSITY",
+     "needed_for": "turning the sufficient condition into an iff",
+     "would_come_from": "an upper bound on the PERM family's demand, which would require exhibiting its best schedule rather than bounding it from below"
+    },
+    {
+     "id": "ROUND_SHAPE",
+     "needed_for": "choosing among the 24, 64/3 and 16 thresholds",
+     "would_come_from": "a statement of what the family's rounds actually look like: whether an accumulator is live across rounds, and what values of k the schedule may choose. The assembled kernel uses k=64 with a live accumulator, but the family as declared does not fix either."
+    }
+   ],
+   "not_established": [
+    "No time bound in either direction. No capacity upper bound exists for the issue path, and no cycle figure is claimed.",
+    "No dominance. The comparison is one-sided: a floor on one side against an exhibited schedule on the other.",
+    "No iff. sigma_W_iu4 > 24 leaves the question open.",
+    "No whole-kernel statement. Work is excluded on both sides and the output contracts differ.",
+    "No claim about V_PERM_B32 outside MODEL.PERM_OBSERVER. Several PERMs per group, online selectors, a consumer that eats packed byte state, restricted weight families and approximate tables are all untouched.",
+    "No claim about VALU instructions in general. The combiner bound is scoped to the declared 32-bit word grammar because operand-field count is not word arity.",
+    "No claim that the 14-function arity bounds group size by itself. Without the separation premise it bounds nothing.",
+    "No robustness to the accumulator premise. The floor is 3/16 only when a running accumulator must be included; otherwise it is 1/6 for k >= 2 and 1/8 if a single uncombined PERM counts as a round."
+   ]
+  }
+ ],
+ "unproved_parameters": [
+  {
+   "id": "sigma_W_iu4",
+   "status": "unproved",
+   "statement": "Slots charged to one V_WMMA_I32_16X16X16_IU4 on one SIMD32."
+  },
+  {
+   "id": "tau_V",
+   "status": "unproved, and no candidate is defensible",
+   "statement": "An upper bound on the rate at which one SIMD32 can complete non-VOPD full-rate VALU instructions. Equivalently a floor on the time per instruction."
+  }
+ ],
+ "detail": [
+  {
+   "check": "source isa_xml hash",
+   "ok": true,
+   "detail": "hardware/gfx1151/sources/amdgpu_isa_rdna3_5.xml c36b6d79b1e940d7"
+  },
+  {
+   "check": "source isa_text hash",
+   "ok": true,
+   "detail": "hardware/gfx1151/sources/rdna35-isa.txt af07d5a7b1bbcf27"
+  },
+  {
+   "check": "re-extract fact ids",
+   "ok": true,
+   "detail": "12 facts"
+  },
+  {
+   "check": "re-extract CAP.VGPR_FILE",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract CAP.WMMA.IU4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract CAP.WMMA.IU8_OPERAND_WIDTH",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract ENC.COMBINER.SIGNATURES",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract ENC.DOT.SIGNATURES",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract ENC.PERM.NO_ACCUMULATOR",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract ENC.VALU.MAX_SOURCE_FIELDS",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract ENC.VOPD.ELIGIBLE_SET",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract ENC.WORD_COMBINER_GRAMMAR",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract HAZ.WMMA.SCHEDULING",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract PORT.VGPR_BANKS",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "re-extract SEM.PERM.SELECTOR_ARITY",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "packed-2x2-slots: premise FACT:ENC.DOT.SIGNATURES resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "packed-2x2-slots: premise FACT:ENC.COMBINER.SIGNATURES resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "packed-2x2-slots: premise ASSUME:SLOT.POSITIVE resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "packed-2x2-slots: premise ASSUME:SLOT.UNIT_VALU resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "packed-2x2-slots: premise ASSUME:SLOT.ENCODING_CLASS_UNIFORM resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_instructions declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_instructions tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_instructions declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_instructions tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity instruction_saving declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity instruction_saving tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity slot_ratio declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "packed-2x2-slots: quantity slot_ratio tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_dag_depth declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_dag_depth tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_dag_depth declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_dag_depth tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity dag_depth_change declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity dag_depth_change tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_named_temporaries declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_named_temporaries tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_named_temporaries declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_named_temporaries tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity named_temporary_saving declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity named_temporary_saving tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity mac_per_tile declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity mac_per_tile tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_mac_per_instruction declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity incumbent_mac_per_instruction tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_mac_per_instruction declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity fused_mac_per_instruction tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity dot8_products_per_lane declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity dot8_products_per_lane tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: dot8_products_per_lane matches FACT:ENC.DOT.SIGNATURES.V_DOT8_I32_IU4.products_per_lane",
+   "ok": true,
+   "detail": "8 vs 8"
+  },
+  {
+   "check": "packed-2x2-slots: quantity dot4_products_per_lane declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: quantity dot4_products_per_lane tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: dot4_products_per_lane matches FACT:ENC.DOT.SIGNATURES.V_DOT4_I32_IU8.products_per_lane",
+   "ok": true,
+   "detail": "4 vs 4"
+  },
+  {
+   "check": "packed-2x2-slots: step 1 instruction_saving == 1",
+   "ok": true,
+   "detail": "instruction_saving = 1 == 1"
+  },
+  {
+   "check": "packed-2x2-slots: step 3 slot_ratio == 2/3",
+   "ok": true,
+   "detail": "slot_ratio = 2/3 (0.666667) == 2/3 (0.666667)"
+  },
+  {
+   "check": "packed-2x2-slots: step 4 dag_depth_change == 0",
+   "ok": true,
+   "detail": "dag_depth_change = 0 == 0"
+  },
+  {
+   "check": "packed-2x2-slots: step 1 declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: step 1 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "packed-2x2-slots: step 1 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared architectural, dependencies give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: step 2 declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: step 2 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "packed-2x2-slots: step 2 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared architectural, dependencies give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: step 3 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "packed-2x2-slots: step 3 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "packed-2x2-slots: step 3 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "packed-2x2-slots: step 4 declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "packed-2x2-slots: step 4 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "packed-2x2-slots: step 4 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared architectural, dependencies give architectural"
+  },
+  {
+   "check": "packed-2x2-slots: step 5 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "packed-2x2-slots: step 5 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "packed-2x2-slots: step 5 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "packed-2x2-slots: claim declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "packed-2x2-slots: claim tier matches what its steps inherit",
+   "ok": true,
+   "detail": "declared family-restriction, inherited family-restriction"
+  },
+  {
+   "check": "packed-2x2-slots: claim makes no native runtime statement",
+   "ok": true,
+   "detail": "none. Neither core has been timed, no latency is known for either opcode, and no cycle cost is claimed."
+  },
+  {
+   "check": "packed-2x2-slots: evidence EXACT.WHOLE_MAP declares a role",
+   "ok": true,
+   "detail": "source-derived"
+  },
+  {
+   "check": "packed-2x2-slots: evidence ASM.OPCODE_COUNTS declares a role",
+   "ok": true,
+   "detail": "source-derived"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise FACT:SEM.PERM.SELECTOR_ARITY resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise FACT:ENC.PERM.NO_ACCUMULATOR resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise FACT:ENC.WORD_COMBINER_GRAMMAR resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise FACT:ENC.VOPD.ELIGIBLE_SET resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise FACT:CAP.WMMA.IU4 resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise FACT:HAZ.WMMA.SCHEDULING resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:SLOT.POSITIVE resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:SLOT.UNIT_VALU resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:SLOT.VOPD_PAIR_IS_ONE resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:MODEL.PERM_OBSERVER resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:DOMAIN.PERM_SEPARATION resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:MODEL.WORD_COMBINER_GRAMMAR resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:MODEL.PARTIALS_IRREDUNDANT resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: premise ASSUME:MODEL.ACCUMULATOR_REQUIRED resolves",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_selector_functions declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_selector_functions tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: perm_selector_functions matches FACT:SEM.PERM.SELECTOR_ARITY.distinct_functions_per_destination_byte",
+   "ok": true,
+   "detail": "14 vs 14"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_dest_bytes declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_dest_bytes tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: perm_dest_bytes matches FACT:SEM.PERM.SELECTOR_ARITY.destination_bytes",
+   "ok": true,
+   "detail": "4 vs 4"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity separated_patterns_witness declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity separated_patterns_witness tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity trits_per_group declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity trits_per_group tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity mac_per_perm_per_lane declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity mac_per_perm_per_lane tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity combiner_word_sources declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity combiner_word_sources tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: combiner_word_sources matches FACT:ENC.WORD_COMBINER_GRAMMAR.max_word_sources",
+   "ok": true,
+   "detail": "3 vs 3"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity words_removed_per_combiner declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity words_removed_per_combiner tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity k_assembled declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity k_assembled tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k1 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k1 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k2 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k2 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k3 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k3 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k64 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity req_k64 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k1 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k1 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k2 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k2 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k3 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k3 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k5 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k5 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k64 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity rem_k64 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_floor_required_accumulator declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_floor_required_accumulator tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_floor_removable_zero_any_k declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_floor_removable_zero_any_k tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_floor_removable_zero_k_at_least_2 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity perm_floor_removable_zero_k_at_least_2 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity wmma_mac_per_lane declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity wmma_mac_per_lane tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: wmma_mac_per_lane matches FACT:CAP.WMMA.IU4.mac_per_lane_wave32",
+   "ok": true,
+   "detail": "128 vs 128"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity sigma_sufficient_required_accumulator declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity sigma_sufficient_required_accumulator tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity sigma_sufficient_removable_k_at_least_2 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity sigma_sufficient_removable_k_at_least_2 tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity sigma_sufficient_removable_any_k declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity sigma_sufficient_removable_any_k tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity vopd_perm_eligible declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity vopd_perm_eligible tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: vopd_perm_eligible matches FACT:ENC.VOPD.ELIGIBLE_SET.perm_eligible",
+   "ok": true,
+   "detail": "0 vs False"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity vopd_add3_eligible declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity vopd_add3_eligible tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: vopd_add3_eligible matches FACT:ENC.VOPD.ELIGIBLE_SET.add3_eligible",
+   "ok": true,
+   "detail": "0 vs False"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity vopd_words_removed_per_slot declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity vopd_words_removed_per_slot tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared family-restriction, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity lanes_per_simd declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity lanes_per_simd tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity simd32_per_device declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: quantity simd32_per_device tier is not stronger than what it reads",
+   "ok": true,
+   "detail": "declared architectural, reads give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 1 perm_selector_functions == 14",
+   "ok": true,
+   "detail": "perm_selector_functions = 14 == 14"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 2 mac_per_perm_per_lane == 8",
+   "ok": true,
+   "detail": "mac_per_perm_per_lane = 8 == 8"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 3 words_removed_per_combiner == 2",
+   "ok": true,
+   "detail": "words_removed_per_combiner = 2 == 2"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 4 req_k3 > rem_k3",
+   "ok": true,
+   "detail": "req_k3 = 5/24 (0.208333) > 1/6 (0.166667)"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5 perm_floor_required_accumulator == 3/16",
+   "ok": true,
+   "detail": "perm_floor_required_accumulator = 3/16 (0.1875) == 3/16 (0.1875)"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5.5 perm_floor_removable_zero_any_k == 1/8",
+   "ok": true,
+   "detail": "perm_floor_removable_zero_any_k = 1/8 (0.125) == 1/8 (0.125)"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 6 vopd_words_removed_per_slot == words_removed_per_combiner",
+   "ok": true,
+   "detail": "vopd_words_removed_per_slot = 2 == 2"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 8 sigma_sufficient_required_accumulator == 24",
+   "ok": true,
+   "detail": "sigma_sufficient_required_accumulator = 24 == 24"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 1 declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 1 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 1 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared architectural, dependencies give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 2 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 2 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 2 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 3 declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 3 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 3 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared architectural, dependencies give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 4 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 4 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 4 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5.5 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5.5 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5.5 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 6 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 6 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 6 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 7 declares a tier",
+   "ok": true,
+   "detail": "architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 7 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 7 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared architectural, dependencies give architectural"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 8 declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 8 declares depends_on",
+   "ok": true,
+   "detail": "ok"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 8 tier covers premises, quantities and prior steps",
+   "ok": true,
+   "detail": "declared family-restriction, dependencies give family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: claim declares a tier",
+   "ok": true,
+   "detail": "family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: claim tier matches what its steps inherit",
+   "ok": true,
+   "detail": "declared family-restriction, inherited family-restriction"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: claim makes no native runtime statement",
+   "ok": true,
+   "detail": "none. Both sides are service demands on one modelled resource. Turning either into time needs a capacity upper bound the pinned sources do not contain."
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 2 lower bound cites no achieved rate",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 4 lower bound cites no achieved rate",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5 lower bound cites no achieved rate",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: step 5.5 lower bound cites no achieved rate",
+   "ok": true,
+   "detail": "clean"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: evidence MEAS.IU4_ACHIEVED declares a role",
+   "ok": true,
+   "detail": "achievability-upper-bound"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: evidence MEAS.PERM_ISSUE_CEILING declares a role",
+   "ok": true,
+   "detail": "achieved-rate"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: evidence MEAS.CORE_ABOVE_FLOOR declares a role",
+   "ok": true,
+   "detail": "achieved-rate"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: evidence ENUM.THREE_TRIT_SEPARATION_WITNESS declares a role",
+   "ok": true,
+   "detail": "source-derived"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: evidence DERIVED.SIGMA_OBSERVED declares a role",
+   "ok": true,
+   "detail": "achieved-rate"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: sensitivity break-even agrees with the derivation",
+   "ok": true,
+   "detail": "break_even=24"
+  },
+  {
+   "check": "perm-vs-iu4-wmma: observations stay out of the derivation",
+   "ok": true,
+   "detail": "no derivation step reads an observed rate"
+  }
+ ]
+}

@@ -1,0 +1,290 @@
+{
+  "seed": 210926,
+  "teacher": {
+    "angle_degrees": 29,
+    "hidden_up_gain": 2.5
+  },
+  "arms": {
+    "fixed": {
+      "angle_degrees": 0,
+      "hidden_up_gain": 1.0,
+      "weight_sse": 2.9261637585345817,
+      "train_relative_rmse": 0.5445939213919113,
+      "held_relative_rmse": 0.33677334829597266,
+      "held_three_blocks_relative_rmse": 0.6951448917428167,
+      "codes": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ]
+      ],
+      "scales": [
+        1.1170245172625641,
+        1.3594293273857327,
+        3.398573318464332
+      ],
+      "train_selected": {
+        "angle_degrees": 0,
+        "hidden_up_gain": 1.0,
+        "train_relative_rmse": 0.5445939213919113,
+        "held_relative_rmse": 0.33677334829597266,
+        "held_three_blocks_relative_rmse": 0.6951448917428167
+      }
+    },
+    "hadamard": {
+      "angle_degrees": 45,
+      "hidden_up_gain": 1.0,
+      "weight_sse": 2.549874867153741,
+      "train_relative_rmse": 0.7735262040586991,
+      "held_relative_rmse": 0.3668165327871775,
+      "held_three_blocks_relative_rmse": 0.7374166843706337,
+      "codes": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ]
+      ],
+      "scales": [
+        0.9612616959383188,
+        0.8057610041929216,
+        2.4031542398457972
+      ],
+      "train_selected": {
+        "angle_degrees": 45,
+        "hidden_up_gain": 1.0,
+        "train_relative_rmse": 0.7735262040586991,
+        "held_relative_rmse": 0.3668165327871775,
+        "held_three_blocks_relative_rmse": 0.7374166843706337
+      }
+    },
+    "rotation_only": {
+      "angle_degrees": 29,
+      "hidden_up_gain": 1.0,
+      "weight_sse": 1.3199999999999998,
+      "train_relative_rmse": 0.5445939213919113,
+      "held_relative_rmse": 0.33677334829597266,
+      "held_three_blocks_relative_rmse": 0.6951448917428167,
+      "codes": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            0
+          ]
+        ]
+      ],
+      "scales": [
+        0.9999999999999999,
+        0.9999999999999998,
+        2.5
+      ],
+      "train_selected": {
+        "angle_degrees": 55,
+        "hidden_up_gain": 1.0,
+        "train_relative_rmse": 0.3612025768443502,
+        "held_relative_rmse": 0.41564459420037764,
+        "held_three_blocks_relative_rmse": 0.7717190007938985
+      }
+    },
+    "gain_only": {
+      "angle_degrees": 0,
+      "hidden_up_gain": 3.0,
+      "weight_sse": 1.2306266219059752,
+      "train_relative_rmse": 0.48724742929465165,
+      "held_relative_rmse": 0.2117204175051801,
+      "held_three_blocks_relative_rmse": 0.44655787595743907,
+      "codes": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      ],
+      "scales": [
+        1.1170245172625641,
+        1.495372260124306,
+        0.8307623667357257
+      ],
+      "train_selected": {
+        "angle_degrees": 0,
+        "hidden_up_gain": 1.6,
+        "train_relative_rmse": 0.4714034877529468,
+        "held_relative_rmse": 0.4271028363469357,
+        "held_three_blocks_relative_rmse": 0.8040094026682054
+      }
+    },
+    "joint": {
+      "angle_degrees": 29,
+      "hidden_up_gain": 2.5,
+      "weight_sse": 6.166048553230894e-32,
+      "train_relative_rmse": 2.3755677610525906e-16,
+      "held_relative_rmse": 2.0260924936168244e-16,
+      "held_three_blocks_relative_rmse": 3.366718433632072e-16,
+      "codes": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            1,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      ],
+      "scales": [
+        0.9999999999999999,
+        0.9999999999999998,
+        1.0
+      ]
+    }
+  },
+  "transfer": {
+    "fixed": {
+      "second_gain": 3.5,
+      "second_weight_sse": 1.3611114577933678,
+      "held_two_distinct_blocks_relative_rmse": 0.4721640271282333
+    },
+    "hadamard": {
+      "second_gain": 1.8,
+      "second_weight_sse": 0.6837835672960821,
+      "held_two_distinct_blocks_relative_rmse": 0.5597989360199581
+    },
+    "rotation_only": {
+      "second_gain": 1.8,
+      "second_weight_sse": 4.052024083239433e-32,
+      "held_two_distinct_blocks_relative_rmse": 0.33602936343599416
+    },
+    "gain_only": {
+      "second_gain": 3.5,
+      "second_weight_sse": 1.3611114577933678,
+      "held_two_distinct_blocks_relative_rmse": 0.41525750411228346
+    },
+    "joint": {
+      "second_gain": 1.8,
+      "second_weight_sse": 4.052024083239433e-32,
+      "held_two_distinct_blocks_relative_rmse": 2.887391457263435e-16
+    }
+  },
+  "gate_gain_2_relative_rmse": 0.1399348632380414
+}

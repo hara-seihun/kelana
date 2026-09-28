@@ -1,0 +1,1290 @@
+{
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "model_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "quantizer_sha256": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a",
+  "source_sha256": "0ec80ec258b54ae3ca750ece359bed390fe5f11be2fd6028f9c0239e249b4d8c",
+  "threads": 8,
+  "range": [
+    14,
+    21
+  ],
+  "embedding": false,
+  "method": "spectral_quant.quantize, symmetric signed odd levels, group128, four clip seeds and five alternating LS scale/code steps per seed",
+  "entries": [
+    {
+      "name": "model.layers.14.self_attn.q_proj.weight",
+      "bits": 2,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_q_proj_weight-g128-b2.npz",
+      "sha256": "35f5351e75717eb336638d772152b5a4c78809f0d29abf4e3311723d0fcaf091",
+      "seconds": 0.04065700600040145
+    },
+    {
+      "name": "model.layers.14.self_attn.q_proj.weight",
+      "bits": 4,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_q_proj_weight-g128-b4.npz",
+      "sha256": "b34b9ad2cedb42c17f9a7297041929871f6812e9e1c9eaa35cacf7b0f65f76f4",
+      "seconds": 0.0319745800079545
+    },
+    {
+      "name": "model.layers.14.self_attn.k_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_k_proj_weight-g128-b2.npz",
+      "sha256": "0a1a180beae99ed0742e718dba12b31532a04a4907b31682b52bfd3d22c9de1c",
+      "seconds": 0.017630432004807517
+    },
+    {
+      "name": "model.layers.14.self_attn.k_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_k_proj_weight-g128-b4.npz",
+      "sha256": "8ddbaa67684417a995ed30f9f0ffca631cdd1b1b9112f762f771daf73ef621ab",
+      "seconds": 0.017741438001394272
+    },
+    {
+      "name": "model.layers.14.self_attn.v_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_v_proj_weight-g128-b2.npz",
+      "sha256": "7c2bbb96d23cb7fd2865e43ed7aa4d5791e70a5fbf2f0191f894b7cf47075b37",
+      "seconds": 0.016366145995561965
+    },
+    {
+      "name": "model.layers.14.self_attn.v_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_v_proj_weight-g128-b4.npz",
+      "sha256": "6aae05c4a8cce82dc38624dfbb22fbd28720eaf922aaff066872845a2a8b7c06",
+      "seconds": 0.015476456988835707
+    },
+    {
+      "name": "model.layers.14.self_attn.o_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_o_proj_weight-g128-b2.npz",
+      "sha256": "9709bea4e2b0a5da86d864b2f43e3b6019bb75dac7b0250f29ca56d21186aed8",
+      "seconds": 0.036218540990375914
+    },
+    {
+      "name": "model.layers.14.self_attn.o_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_self_attn_o_proj_weight-g128-b4.npz",
+      "sha256": "be21b0b72c020a13a36679b6eafdcaa3bae0fb4bfd7bcd5128d58cc6314076af",
+      "seconds": 0.04517435800516978
+    },
+    {
+      "name": "model.layers.14.mlp.gate_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_mlp_gate_proj_weight-g128-b2.npz",
+      "sha256": "cbeebb70c01a230bb43520b5f41221db1b36e3248b5409a613d377223d29dd96",
+      "seconds": 0.04669287399156019
+    },
+    {
+      "name": "model.layers.14.mlp.gate_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_mlp_gate_proj_weight-g128-b4.npz",
+      "sha256": "a95bc3e679b05fe6bd79b3824b8471c3f521a307ca23c83315fa3c7f5b4c6ba0",
+      "seconds": 0.0441537329897983
+    },
+    {
+      "name": "model.layers.14.mlp.up_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_mlp_up_proj_weight-g128-b2.npz",
+      "sha256": "1bce7e47ed5d09501de4bcc8fae7655c36415ccaf624c3c1f83ee2c5156eea50",
+      "seconds": 0.04358484300610144
+    },
+    {
+      "name": "model.layers.14.mlp.up_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_mlp_up_proj_weight-g128-b4.npz",
+      "sha256": "a1d0f72336f54297bfcc23b21f48d1e60fbae15703837e933796f4ca1b76b0ca",
+      "seconds": 0.04442608299723361
+    },
+    {
+      "name": "model.layers.14.mlp.down_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_mlp_down_proj_weight-g128-b2.npz",
+      "sha256": "40433162f74b49ecf144620f8823a3f72e7f96578603967ff36d043c9ff63cdf",
+      "seconds": 0.09155293200456072
+    },
+    {
+      "name": "model.layers.14.mlp.down_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_14_mlp_down_proj_weight-g128-b4.npz",
+      "sha256": "f49e37c6aa97d37205d9c9a75a5ae53f0f02b233c6f4ec8c9b7c6b2cbdfa909d",
+      "seconds": 0.09314027699292637
+    },
+    {
+      "name": "model.layers.15.self_attn.q_proj.weight",
+      "bits": 2,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_q_proj_weight-g128-b2.npz",
+      "sha256": "6d40800cc8e4ec631ad5234232e38d7d93e049095c9514235426a8c7c6e21364",
+      "seconds": 0.033162287989398465
+    },
+    {
+      "name": "model.layers.15.self_attn.q_proj.weight",
+      "bits": 4,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_q_proj_weight-g128-b4.npz",
+      "sha256": "a97a4835f5484a085ab974ee8828a397644da3bf176fac980da63b2a3de9c21a",
+      "seconds": 0.031322332986746915
+    },
+    {
+      "name": "model.layers.15.self_attn.k_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_k_proj_weight-g128-b2.npz",
+      "sha256": "5fba7a99d8cf9e56263d3121bc960635ae935d60f9d6d77be1777a1ae6198fe8",
+      "seconds": 0.018232521004392765
+    },
+    {
+      "name": "model.layers.15.self_attn.k_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_k_proj_weight-g128-b4.npz",
+      "sha256": "7393117721c75b7612530a725cd4cc0f2a16602986b0d1b0d585a73ca9e3a971",
+      "seconds": 0.020860748991253786
+    },
+    {
+      "name": "model.layers.15.self_attn.v_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_v_proj_weight-g128-b2.npz",
+      "sha256": "10231d5c0d379748953ce66c20fe889481e6033fb82a0700747e33f67535f9c5",
+      "seconds": 0.015955181006575003
+    },
+    {
+      "name": "model.layers.15.self_attn.v_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_v_proj_weight-g128-b4.npz",
+      "sha256": "d8d66f46d0785f236c4406d414cf36873f4d848a189619780ce8baf37b9fc684",
+      "seconds": 0.016599369002506137
+    },
+    {
+      "name": "model.layers.15.self_attn.o_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_o_proj_weight-g128-b2.npz",
+      "sha256": "392e1b6d655268d0620ae05c2445c0cbbdc49379c4900f1c9aeb4f37a32629b5",
+      "seconds": 0.032808650998049416
+    },
+    {
+      "name": "model.layers.15.self_attn.o_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_self_attn_o_proj_weight-g128-b4.npz",
+      "sha256": "97c87951c6f679981ba5fa27c62490987da58111355bf2fce08cb0a1b9d0316d",
+      "seconds": 0.03594868099025916
+    },
+    {
+      "name": "model.layers.15.mlp.gate_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_mlp_gate_proj_weight-g128-b2.npz",
+      "sha256": "a304ed7b53720860736d3e3fd0b81e9a14a29b8d294e08c15ca540f9bf8413c3",
+      "seconds": 0.04713827899831813
+    },
+    {
+      "name": "model.layers.15.mlp.gate_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_mlp_gate_proj_weight-g128-b4.npz",
+      "sha256": "b1198df1bab7d438f86e81152402553324ecec33415144788bb729637561c8e6",
+      "seconds": 0.04292029699718114
+    },
+    {
+      "name": "model.layers.15.mlp.up_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_mlp_up_proj_weight-g128-b2.npz",
+      "sha256": "95d6c47efa8c1209036cbfe7eec313821adaacbc3e6889785686d50e8001ba2b",
+      "seconds": 0.04012354399310425
+    },
+    {
+      "name": "model.layers.15.mlp.up_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_mlp_up_proj_weight-g128-b4.npz",
+      "sha256": "7c216fbfe5584742feec17865db56ae79884835e4009e4468cc52c00396579d2",
+      "seconds": 0.04414463399734814
+    },
+    {
+      "name": "model.layers.15.mlp.down_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_mlp_down_proj_weight-g128-b2.npz",
+      "sha256": "110abc64b1d0d2dff382f2e4352648d66fd3fd469b9fc773cd8f2f3518ece558",
+      "seconds": 0.09213850199012086
+    },
+    {
+      "name": "model.layers.15.mlp.down_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_15_mlp_down_proj_weight-g128-b4.npz",
+      "sha256": "4fdd6990fc56d9fbb85c3b9a79b93414486b5dde78e59e9fb189ca43efd3ccd4",
+      "seconds": 0.12597759600612335
+    },
+    {
+      "name": "model.layers.16.self_attn.q_proj.weight",
+      "bits": 2,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_q_proj_weight-g128-b2.npz",
+      "sha256": "4d8a7971e215fca648c0f030c12e114508841f025e97dcf8e8c8c6ceb9f60d56",
+      "seconds": 0.05286182800773531
+    },
+    {
+      "name": "model.layers.16.self_attn.q_proj.weight",
+      "bits": 4,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_q_proj_weight-g128-b4.npz",
+      "sha256": "5a3ebe5535491f707c4df51c1b7479ace297805f6b30f807772bd7b069053477",
+      "seconds": 0.030138215006445535
+    },
+    {
+      "name": "model.layers.16.self_attn.k_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_k_proj_weight-g128-b2.npz",
+      "sha256": "e226232d01517b2bd0098d2c6b8fb904a2bf17d95e20b3bccfa2b9c1a9bc476f",
+      "seconds": 0.015151879008044489
+    },
+    {
+      "name": "model.layers.16.self_attn.k_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_k_proj_weight-g128-b4.npz",
+      "sha256": "b17713f82e0c1cf870eed0df2b48362aac5e19ac9d3474dce2702d0bc84d52f6",
+      "seconds": 0.016711104995920323
+    },
+    {
+      "name": "model.layers.16.self_attn.v_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_v_proj_weight-g128-b2.npz",
+      "sha256": "980874ba77d83f2d76f2856926a5a99cd93cf9acc58a093d6e101962a134326e",
+      "seconds": 0.017104340993682854
+    },
+    {
+      "name": "model.layers.16.self_attn.v_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_v_proj_weight-g128-b4.npz",
+      "sha256": "677bf8fe8b2e1a6d4911c2211ad829d49d8e622dabb782464fefece4292353ce",
+      "seconds": 0.01746144800563343
+    },
+    {
+      "name": "model.layers.16.self_attn.o_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_o_proj_weight-g128-b2.npz",
+      "sha256": "d5b8c2cfed22c28e2026002508a8705b26d8c1e10999696bf47e564b6493e891",
+      "seconds": 0.03317100799176842
+    },
+    {
+      "name": "model.layers.16.self_attn.o_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_self_attn_o_proj_weight-g128-b4.npz",
+      "sha256": "099d21c953de836e8de697cfa9b6a1b9f7377a7731daf00dd128ef7df8f18d83",
+      "seconds": 0.036673455993877724
+    },
+    {
+      "name": "model.layers.16.mlp.gate_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_mlp_gate_proj_weight-g128-b2.npz",
+      "sha256": "6c6067ce0a18a7f1d396ca14b593d2f855b6036a604c06a2fe672a02b7699619",
+      "seconds": 0.05416463199071586
+    },
+    {
+      "name": "model.layers.16.mlp.gate_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_mlp_gate_proj_weight-g128-b4.npz",
+      "sha256": "3abea015ee6fd30c0942dcd50da0aaebd869c8edb4853cdfd966c43b0317578b",
+      "seconds": 0.051119829004164785
+    },
+    {
+      "name": "model.layers.16.mlp.up_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_mlp_up_proj_weight-g128-b2.npz",
+      "sha256": "e6378fc070480a1b7a328c6b51feab5af4396499395f1a6517f348f7970358d9",
+      "seconds": 0.04437011599657126
+    },
+    {
+      "name": "model.layers.16.mlp.up_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_mlp_up_proj_weight-g128-b4.npz",
+      "sha256": "8ea89d52d319c1c48e6af651ed02ca5df595dc0024e5b801a13abb5002b9b8f8",
+      "seconds": 0.04691173699393403
+    },
+    {
+      "name": "model.layers.16.mlp.down_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_mlp_down_proj_weight-g128-b2.npz",
+      "sha256": "ce25d81e9e980bceadb4a71607dd392ecbb52f316926f3ac6d7db4c7db89a601",
+      "seconds": 0.0793914279929595
+    },
+    {
+      "name": "model.layers.16.mlp.down_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_16_mlp_down_proj_weight-g128-b4.npz",
+      "sha256": "46d2c0f495c5b4316621bcf9cc260c91d6da752dfdb864c8aaf93a75dd1afad8",
+      "seconds": 0.07769643800565973
+    },
+    {
+      "name": "model.layers.17.self_attn.q_proj.weight",
+      "bits": 2,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_q_proj_weight-g128-b2.npz",
+      "sha256": "c1bf3609cc2b57095c40f5664ceef79ceebc96fdfb0287112fb458d04104539b",
+      "seconds": 0.029958749990328215
+    },
+    {
+      "name": "model.layers.17.self_attn.q_proj.weight",
+      "bits": 4,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_q_proj_weight-g128-b4.npz",
+      "sha256": "166d1973e77b7665eb9554d036a8f0a75e2c5638a2b1a974fa39d9e2dd61e139",
+      "seconds": 0.029557524001575075
+    },
+    {
+      "name": "model.layers.17.self_attn.k_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_k_proj_weight-g128-b2.npz",
+      "sha256": "ab7ebd58fae9797733be50221b14dce4d7bcc5989240f229e020abfa188ca798",
+      "seconds": 0.01706542201281991
+    },
+    {
+      "name": "model.layers.17.self_attn.k_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_k_proj_weight-g128-b4.npz",
+      "sha256": "632a18866b3ccccedabe837568336a305a712435f01e5a61aaa9355aa5d14446",
+      "seconds": 0.014981614993303083
+    },
+    {
+      "name": "model.layers.17.self_attn.v_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_v_proj_weight-g128-b2.npz",
+      "sha256": "5de56359248064f6a446055e73527d60597271ca590def265a0dc16b7057693c",
+      "seconds": 0.015350351997767575
+    },
+    {
+      "name": "model.layers.17.self_attn.v_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_v_proj_weight-g128-b4.npz",
+      "sha256": "f80a090552520dddfdcf296d246aef4e64f745aa31117e816def216fc395c5c0",
+      "seconds": 0.019026583002414554
+    },
+    {
+      "name": "model.layers.17.self_attn.o_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_o_proj_weight-g128-b2.npz",
+      "sha256": "b89e25ddf4498420fc4ed21e2039fd55f63465191aaeee4d28d4e9aee5c99492",
+      "seconds": 0.030664615987916477
+    },
+    {
+      "name": "model.layers.17.self_attn.o_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_self_attn_o_proj_weight-g128-b4.npz",
+      "sha256": "8abfbee8b022ee3f6477a3a08631a09d5e8580816bdaced62f85f36c5c53ac65",
+      "seconds": 0.03358714400383178
+    },
+    {
+      "name": "model.layers.17.mlp.gate_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_mlp_gate_proj_weight-g128-b2.npz",
+      "sha256": "558e18a0faea704d1a2d6c092c24d867ee7dccd9d2ed9379a1c1e7d812b32cdb",
+      "seconds": 0.04454330999578815
+    },
+    {
+      "name": "model.layers.17.mlp.gate_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_mlp_gate_proj_weight-g128-b4.npz",
+      "sha256": "42a55c324079301df19f2378f5926a7cafca0be0aec9fbf6e2bc10ec937034af",
+      "seconds": 0.04536404101236258
+    },
+    {
+      "name": "model.layers.17.mlp.up_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_mlp_up_proj_weight-g128-b2.npz",
+      "sha256": "2623c5a81bf4f0a12a153700bc4c480711ca66bc66ea189d1d5c55e35ec045a5",
+      "seconds": 0.04534026200417429
+    },
+    {
+      "name": "model.layers.17.mlp.up_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_mlp_up_proj_weight-g128-b4.npz",
+      "sha256": "43f261e32d63b84101d47ad1252a7810e82c2a5b7d85c858772cbf7c05991068",
+      "seconds": 0.042158622993156314
+    },
+    {
+      "name": "model.layers.17.mlp.down_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_mlp_down_proj_weight-g128-b2.npz",
+      "sha256": "dbd03895e5ed2a95c20e5c83ae5040448e2673e4bf3dfacf5094279a7ca6880f",
+      "seconds": 0.07314959799987264
+    },
+    {
+      "name": "model.layers.17.mlp.down_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_17_mlp_down_proj_weight-g128-b4.npz",
+      "sha256": "88e09988ae7b99c52a9c6894e206d3ce72a92b1b332fe57b34f726ec82496f36",
+      "seconds": 0.08921249500417616
+    },
+    {
+      "name": "model.layers.18.self_attn.q_proj.weight",
+      "bits": 2,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_q_proj_weight-g128-b2.npz",
+      "sha256": "0bed9414bacf76e0d504f8b894e9ba34cff80f57d304851edb7ba018abc4dadb",
+      "seconds": 0.02885169899673201
+    },
+    {
+      "name": "model.layers.18.self_attn.q_proj.weight",
+      "bits": 4,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_q_proj_weight-g128-b4.npz",
+      "sha256": "f0ed718cdb18911d41fa1c54b6cb8b4bc30884c9228a2260886c39263a69cd6a",
+      "seconds": 0.028624268001294695
+    },
+    {
+      "name": "model.layers.18.self_attn.k_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_k_proj_weight-g128-b2.npz",
+      "sha256": "133ddf84bb79b84a9be82e98e02681b5006b5eb2a19a279f2f8926aeae76d117",
+      "seconds": 0.014283919997978956
+    },
+    {
+      "name": "model.layers.18.self_attn.k_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_k_proj_weight-g128-b4.npz",
+      "sha256": "1a4ee0eb10bd15ce57e8cc8b8afb913366adc3284e7f1e362850d2abaab3e243",
+      "seconds": 0.014739813006599434
+    },
+    {
+      "name": "model.layers.18.self_attn.v_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_v_proj_weight-g128-b2.npz",
+      "sha256": "4d050b8c8f4caf224095ea0fd18ed0c6f1317450347bbc16c72e30dcfba08aaf",
+      "seconds": 0.015344982006354257
+    },
+    {
+      "name": "model.layers.18.self_attn.v_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_v_proj_weight-g128-b4.npz",
+      "sha256": "7a0f8e40356fa0ecf62161af35b83c74cf0126161025c1adb131846ed7e1f3eb",
+      "seconds": 0.014447043999098241
+    },
+    {
+      "name": "model.layers.18.self_attn.o_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_o_proj_weight-g128-b2.npz",
+      "sha256": "2101067ad9ab60bee22cbb398affa204e3b15f32ccd776e56a350eda636e3620",
+      "seconds": 0.031545014993753284
+    },
+    {
+      "name": "model.layers.18.self_attn.o_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_self_attn_o_proj_weight-g128-b4.npz",
+      "sha256": "6bb75629b1af917923bb297ace4b30963c262d27b8b47f3130e979c553abdeaa",
+      "seconds": 0.03779738600132987
+    },
+    {
+      "name": "model.layers.18.mlp.gate_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_mlp_gate_proj_weight-g128-b2.npz",
+      "sha256": "b79cc61bee4acd4186c1d1719248de2035875df58f444cc40b32e4fa1eeeaa7c",
+      "seconds": 0.04408976499689743
+    },
+    {
+      "name": "model.layers.18.mlp.gate_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_mlp_gate_proj_weight-g128-b4.npz",
+      "sha256": "9cc85748dd9362b0728fedfb4c2e65ed7681fc68ef89927218bb490d67b1c215",
+      "seconds": 0.04839352500857785
+    },
+    {
+      "name": "model.layers.18.mlp.up_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_mlp_up_proj_weight-g128-b2.npz",
+      "sha256": "54809d8550596a699ad70f2899fa1292702410cd1403e050d98732e470dd58f0",
+      "seconds": 0.048806271006469615
+    },
+    {
+      "name": "model.layers.18.mlp.up_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_mlp_up_proj_weight-g128-b4.npz",
+      "sha256": "b222a591d3e26b9d662d719d10acc531319093e2c434e139b31a416d867f26b5",
+      "seconds": 0.04719659699185286
+    },
+    {
+      "name": "model.layers.18.mlp.down_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_mlp_down_proj_weight-g128-b2.npz",
+      "sha256": "9b4404675134b8f2f5479b154f6ba880f15adaa3ece25b0a30b4defaf3c572d5",
+      "seconds": 0.0779938579944428
+    },
+    {
+      "name": "model.layers.18.mlp.down_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_18_mlp_down_proj_weight-g128-b4.npz",
+      "sha256": "7f32104934e718b53efd4d82edbf6eff53ff4d55e3f63455afde5036523ff579",
+      "seconds": 0.08700320200296119
+    },
+    {
+      "name": "model.layers.19.self_attn.q_proj.weight",
+      "bits": 2,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_q_proj_weight-g128-b2.npz",
+      "sha256": "8ff31b6cac4f5b3fa95ab38e0b5c801d1a1d451fb33c7384f282a36bbe09c265",
+      "seconds": 0.029598502995213494
+    },
+    {
+      "name": "model.layers.19.self_attn.q_proj.weight",
+      "bits": 4,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_q_proj_weight-g128-b4.npz",
+      "sha256": "357e68d8a9e2624469e3083561f0f7b90258f3793200d1d33a9c66c9fae81841",
+      "seconds": 0.030946066006436013
+    },
+    {
+      "name": "model.layers.19.self_attn.k_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_k_proj_weight-g128-b2.npz",
+      "sha256": "275d3dc37501d1fe4e9aec489f714994156c2a7dfba299e9dc03262d4bc30ccf",
+      "seconds": 0.014745773994945921
+    },
+    {
+      "name": "model.layers.19.self_attn.k_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_k_proj_weight-g128-b4.npz",
+      "sha256": "7289f5577070749cde2625bc7e2a4a6ef61247ef5914f3b1f0233326b90c4445",
+      "seconds": 0.016464822998386808
+    },
+    {
+      "name": "model.layers.19.self_attn.v_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_v_proj_weight-g128-b2.npz",
+      "sha256": "e506434224e32f8de66080af578dd008ea3e32eb33564da0dc4ae3e2c391e7e9",
+      "seconds": 0.015321443002903834
+    },
+    {
+      "name": "model.layers.19.self_attn.v_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_v_proj_weight-g128-b4.npz",
+      "sha256": "73d748cd32bf571e76f5f82f05ac954ddd9444656635030d01bf81e3dcc1f6ba",
+      "seconds": 0.020933047009748407
+    },
+    {
+      "name": "model.layers.19.self_attn.o_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_o_proj_weight-g128-b2.npz",
+      "sha256": "fd27c0631039ccd3b0329d8cc2916d78570b74efda0623fb9dff77843acfdcc0",
+      "seconds": 0.045230275005451404
+    },
+    {
+      "name": "model.layers.19.self_attn.o_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_self_attn_o_proj_weight-g128-b4.npz",
+      "sha256": "4321b22c53c2f8814be7491b0c21916e4fee40f7bea84462e552157790e72c18",
+      "seconds": 0.05469221399107482
+    },
+    {
+      "name": "model.layers.19.mlp.gate_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_mlp_gate_proj_weight-g128-b2.npz",
+      "sha256": "7e0c0b8cd2037c85d62a113d268980847d6ca6a06c9aff3439eca2982e64025d",
+      "seconds": 0.05486238800222054
+    },
+    {
+      "name": "model.layers.19.mlp.gate_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_mlp_gate_proj_weight-g128-b4.npz",
+      "sha256": "357628bbc6be49c56254780686183346156c2ebb790d9b73892d83327621f1b2",
+      "seconds": 0.0543044570076745
+    },
+    {
+      "name": "model.layers.19.mlp.up_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_mlp_up_proj_weight-g128-b2.npz",
+      "sha256": "762598f3f030c7e4de27f2c032a06b3bba442b3b0ebd492520fdcd927c763dc9",
+      "seconds": 0.053313401993364096
+    },
+    {
+      "name": "model.layers.19.mlp.up_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_mlp_up_proj_weight-g128-b4.npz",
+      "sha256": "4245fed59b87690c020aaf65cc54ee52af9c02ad2c4295333ca214a11d32304c",
+      "seconds": 0.05609479401027784
+    },
+    {
+      "name": "model.layers.19.mlp.down_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_mlp_down_proj_weight-g128-b2.npz",
+      "sha256": "b22c3bf2b0fd761870961c8cb07c20aaccd3c35fece39523e0e43f3ef5fa618a",
+      "seconds": 0.09191740999813192
+    },
+    {
+      "name": "model.layers.19.mlp.down_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_19_mlp_down_proj_weight-g128-b4.npz",
+      "sha256": "f4657295275a44819f7a8c1fd8bd985c628095c180b2125aacf3d7aabb6a215a",
+      "seconds": 0.12351962199318223
+    },
+    {
+      "name": "model.layers.20.self_attn.q_proj.weight",
+      "bits": 2,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_q_proj_weight-g128-b2.npz",
+      "sha256": "2c982e69d74c096c751eb495f31b356c36581591fb63906fb148ea824fb6a81f",
+      "seconds": 0.04609010501008015
+    },
+    {
+      "name": "model.layers.20.self_attn.q_proj.weight",
+      "bits": 4,
+      "shape": [
+        2048,
+        1024
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_q_proj_weight-g128-b4.npz",
+      "sha256": "cbfae204d404d4e9c9415337c716517cf8b6f3a8c13f0ddb479e66c4b6f032c9",
+      "seconds": 0.0392932929971721
+    },
+    {
+      "name": "model.layers.20.self_attn.k_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_k_proj_weight-g128-b2.npz",
+      "sha256": "9760f63994cbc7cd99df2e36d1c30e2b3e81c7f6062fe6f0b1640bcbc1a61756",
+      "seconds": 0.018645556992851198
+    },
+    {
+      "name": "model.layers.20.self_attn.k_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_k_proj_weight-g128-b4.npz",
+      "sha256": "58cd720e0db27d8b978098d24750774177dfc352552b094a70ea66917e067309",
+      "seconds": 0.017826195995439775
+    },
+    {
+      "name": "model.layers.20.self_attn.v_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 278544,
+      "container_bytes": 279336,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_v_proj_weight-g128-b2.npz",
+      "sha256": "2d1bf948adebcf07ff11f36255f526f28b0a7a1a76d1145eae54edfd46202363",
+      "seconds": 0.016275019996101037
+    },
+    {
+      "name": "model.layers.20.self_attn.v_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        1024
+      ],
+      "payload_bytes": 540688,
+      "container_bytes": 541480,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_v_proj_weight-g128-b4.npz",
+      "sha256": "32dbbb587570f11dab9348d6b860d4284bf45372ec7ab29b8ba94105d87aada9",
+      "seconds": 0.018423123998218216
+    },
+    {
+      "name": "model.layers.20.self_attn.o_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 557072,
+      "container_bytes": 557864,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_o_proj_weight-g128-b2.npz",
+      "sha256": "444db6cef3682fff311a977d8de051e55735206be90e515ab5775bb0ad73cadb",
+      "seconds": 0.05102684200392105
+    },
+    {
+      "name": "model.layers.20.self_attn.o_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        2048
+      ],
+      "payload_bytes": 1081360,
+      "container_bytes": 1082152,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_self_attn_o_proj_weight-g128-b4.npz",
+      "sha256": "e245abc2bf665f32c0d3cb77185ceeaf6180d7ec843f8b863d03e9e799837682",
+      "seconds": 0.0756128909997642
+    },
+    {
+      "name": "model.layers.20.mlp.gate_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_mlp_gate_proj_weight-g128-b2.npz",
+      "sha256": "cea240f1fa6cd8fde2212966fe11b73195264815423d3e9dc56caeebbce395f1",
+      "seconds": 0.09384800199768506
+    },
+    {
+      "name": "model.layers.20.mlp.gate_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_mlp_gate_proj_weight-g128-b4.npz",
+      "sha256": "8dc9378149cdf4e18a2fbab8db6a38f22988f73c87ee1d2d18cef372bfdd4c81",
+      "seconds": 0.07579283499217127
+    },
+    {
+      "name": "model.layers.20.mlp.up_proj.weight",
+      "bits": 2,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_mlp_up_proj_weight-g128-b2.npz",
+      "sha256": "bef63f0c432ae3f630b25775833ed94ac57856228e0c2153519906696662a3f0",
+      "seconds": 0.059452697008964606
+    },
+    {
+      "name": "model.layers.20.mlp.up_proj.weight",
+      "bits": 4,
+      "shape": [
+        3072,
+        1024
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_mlp_up_proj_weight-g128-b4.npz",
+      "sha256": "5ae9cde64090db808bb228cce003a578312983f910139b1b4e1c93143351aa71",
+      "seconds": 0.05536955999559723
+    },
+    {
+      "name": "model.layers.20.mlp.down_proj.weight",
+      "bits": 2,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 835600,
+      "container_bytes": 836392,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_mlp_down_proj_weight-g128-b2.npz",
+      "sha256": "e38dd4b6892bd50b6bf092e645e11ebc2d4df6edcff668b89918dfff06fb4e5f",
+      "seconds": 0.10826742700010072
+    },
+    {
+      "name": "model.layers.20.mlp.down_proj.weight",
+      "bits": 4,
+      "shape": [
+        1024,
+        3072
+      ],
+      "payload_bytes": 1622032,
+      "container_bytes": 1622824,
+      "image": "/path/to/workspace/data/kelana-subbit/full-scalar/model_layers_20_mlp_down_proj_weight-g128-b4.npz",
+      "sha256": "8f027e013caf9028e091e501ea6b94366bd5b09d1bfbbd0e9b6c7fc3d97a6745",
+      "seconds": 0.16850431700004265
+    }
+  ],
+  "seconds": 5.185984383992036
+}

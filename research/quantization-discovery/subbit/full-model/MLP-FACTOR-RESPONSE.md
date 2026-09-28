@@ -1,0 +1,21 @@
+# A joint MLP response correction saturates on the old producer
+
+This panel truncated the ridge *coefficient* map, which is not the optimal rank-constrained response fit. [Covariance-aware reduced-rank ridge](REDUCED-RANK-RESPONSE.md) on the same data lowers held rank-32 error to .61904 at 2,048 train positions rather than .66098. The saturation and overfit here belong to coefficient truncation, not to all frozen-hidden rank-32 corrections.
+
+The frozen binary gate/up/down image does leave a recoverable joint error, but this down-side correction does not repair the layer-0 MLP. On the four held validation windows, a paid rank-8 correction lowers the original-producer post-MLP relative squared error from .65752 to .65214 with 1,024 training rows. Doubling the training sample to 2,048 rows moves that held error back to .65411. At rank 32 and 2,048 rows, training error falls to .50028 while held error *rises* to .66098, worse than the uncorrected image. Spending more rank in this coefficient-truncation method is not the next route to the composed layer-0 repair.
+
+The response is `D(silu(Gx) * Ux)`. The binary image supplies all three frozen two-factor matrices, so the correction reads **the binary gate/up product**, not the original teacher's hidden vector. With `Hq(x) = silu(Gq x) * Uq x`, it adds `(Hq R) L^T + b` to the binary down output. Fit a ridge map from centered `Hq` to the original MLP output residual on train positions, then take a seeded rank-40 randomized SVD and keep its first 8, 16 or 32 directions. Store `R`, `L` and `b` as FP16 before evaluating. The SVD truncation is a candidate construction, not an optimum for rank-constrained ridge regression. Its residual fit sees the three binary projections together. It still cannot alter their gate/up hidden coordinate or repair the preceding narrow V/O image.
+
+| Train positions | Train, binary | Train, rank 8 / 16 / 32 | Held, binary | Held, rank 8 / 16 / 32 |
+| ---: | ---: | ---: | ---: | ---: |
+| 512 | .56694 | .53376 / .51072 / .47018 | .65752 | .65254 / .65223 / .65260 |
+| 1,024 | .56096 | .53554 / .51979 / .49121 | .65752 | **.65214** / .65264 / .65331 |
+| 2,048 | .55581 | .53438 / .52194 / .50028 | .65752 | .65411 / .65652 / .66098 |
+
+The denominator is each split's original MLP output energy. The held split is the same 1,024 original-producer validation vectors in all three rows. A fitted output gain alone, foldable into the down row scales, scores .65996 held at 1,024 training vectors; a separate FP16 output intercept scores .65664. Neither recovers the joint error. All operations here use FP32 matrices decoded from the paid binary image and BF16 captured inputs promoted to FP32. This is a response experiment, **not** the BF16-expanded model's NLL or native runtime, and the old train/validation capture has been inspected before. These held numbers should guide the next fit, not select a serving image.
+
+The rank-8 increment is 67,584 bytes, .000907 complete-model BPW over 596,049,920 unique parameters, plus 32,768 FP16 factor terms and an output add per token. Rank 16 costs 133,120 bytes and 65,536 terms; rank 32 costs 264,192 bytes and 131,072 terms. The existing down factor has rank 384 and 1,572,864 signed terms per token. These counts do not price native layout, conversion of the hidden vector, BF16 rounding, or full-model continuation. They cannot be called a speedup.
+
+The concrete next fit changes the **producer**: capture the MLP input after narrow V/O and binary Q/K, and optimize gate, up and down codes together on the post-MLP residual while later layers are quantized. This panel says a low-rank down-side patch of the frozen original-producer factors leaves virtually all the held response error. The rank-32 train/held reversal makes a larger version of the same patch especially unattractive.
+
+`mlp_factor_response.py` regenerates the three reports in `/path/to/workspace/data/kelana-subbit/full-model/mlp-factor-response-{512,1024,2048}.json`. Each records the pinned capture/image hashes, source hash, train/held counts, rates and scores. Run with `/path/to/workspace/data/fish-s2-pro/venv/bin/python research/quantization-discovery/subbit/full-model/mlp_factor_response.py --train-rows 1024` from the Kelana root. This CPU panel neither reserved the GPU nor changed Bonsai's runtime.

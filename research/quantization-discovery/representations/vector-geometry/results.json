@@ -1,0 +1,339 @@
+{
+  "source": "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors",
+  "source_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "source_slices": [
+    "model.layers.0.mlp.gate_proj.weight",
+    "model.layers.0.mlp.up_proj.weight"
+  ],
+  "rows_train": [
+    0,
+    8
+  ],
+  "rows_held": [
+    8,
+    16
+  ],
+  "columns": [
+    0,
+    1024
+  ],
+  "train_sigma": 0.0330810546875,
+  "train_rotated_sigmas": [
+    0.033203125,
+    0.032958984375
+  ],
+  "train_max_abs_rotated_sigmas": [
+    7.809370480457311,
+    6.589187635056865
+  ],
+  "held_max_abs_rotated_sigmas": [
+    5.292902229764009,
+    8.55861096636162
+  ],
+  "observations": 8192,
+  "metrics": {
+    "isotropic": {
+      "polar_32x8": {
+        "held_expected_consumer_sse_per_pair": 4.2367668488229096e-05,
+        "held_weight_sse_per_pair": 4.2367668488229096e-05,
+        "used_codes": 243,
+        "rotated_axis_mse": [
+          1.793015232155973e-05,
+          2.4437516166669363e-05
+        ]
+      },
+      "cartesian_16x16": {
+        "held_expected_consumer_sse_per_pair": 0.00014067442983499884,
+        "held_weight_sse_per_pair": 0.00014067442983499884,
+        "used_codes": 256,
+        "rotated_axis_mse": [
+          6.854337023278148e-05,
+          7.213105960221736e-05
+        ]
+      },
+      "scalar_4x4_times_16scales": {
+        "held_expected_consumer_sse_per_pair": 7.214374716827293e-05,
+        "held_weight_sse_per_pair": 7.214374716827293e-05,
+        "used_codes": 236,
+        "rotated_axis_mse": [
+          3.861934250128321e-05,
+          3.352440466698972e-05
+        ]
+      },
+      "rotated_4plus4": {
+        "held_expected_consumer_sse_per_pair": 0.00010530651964801055,
+        "held_weight_sse_per_pair": 0.00010530651964801055,
+        "used_codes": 255,
+        "rotated_axis_mse": [
+          3.500652641861781e-05,
+          7.029999322939279e-05
+        ]
+      },
+      "rotated_6plus2": {
+        "held_expected_consumer_sse_per_pair": 0.0002330824686403738,
+        "held_weight_sse_per_pair": 0.0002330824686403738,
+        "used_codes": 256,
+        "rotated_axis_mse": [
+          1.2012937349773392e-05,
+          0.00022106953129059944
+        ]
+      },
+      "rotated_2plus6": {
+        "held_expected_consumer_sse_per_pair": 0.00018605303209477342,
+        "held_weight_sse_per_pair": 0.00018605303209477342,
+        "used_codes": 256,
+        "rotated_axis_mse": [
+          0.00015287171054157022,
+          3.318132155320291e-05
+        ]
+      },
+      "rotated_6plus2_tails": {
+        "held_expected_consumer_sse_per_pair": 0.00022549866817140994,
+        "held_weight_sse_per_pair": 0.00022549866817140994,
+        "used_codes": 249,
+        "rotated_axis_mse": [
+          4.429136880809759e-06,
+          0.00022106953129059944
+        ]
+      },
+      "rotated_7plus1_tails": {
+        "held_expected_consumer_sse_per_pair": 0.0005005672306953783,
+        "held_weight_sse_per_pair": 0.0005005672306953783,
+        "used_codes": 254,
+        "rotated_axis_mse": [
+          1.5320066817479999e-06,
+          0.0004990352240136299
+        ]
+      },
+      "rotated_sum_only_8bit": {
+        "held_expected_consumer_sse_per_pair": 0.0011585339480655534,
+        "held_weight_sse_per_pair": 0.0011585339480655534,
+        "used_codes": 253,
+        "rotated_axis_mse": [
+          7.702900319867217e-07,
+          0.0011577636580335665
+        ]
+      },
+      "scalar_4x4_times_16learned": {
+        "held_expected_consumer_sse_per_pair": 6.953204380046491e-05,
+        "held_weight_sse_per_pair": 6.953204380046491e-05,
+        "used_codes": 238,
+        "rotated_axis_mse": [
+          3.806945020962352e-05,
+          3.146259359084139e-05
+        ],
+        "fp16_scale_table": [
+          0.0010118484497070312,
+          0.0018224716186523438,
+          0.002490997314453125,
+          0.0032939910888671875,
+          0.004180908203125,
+          0.005279541015625,
+          0.006683349609375,
+          0.0084381103515625,
+          0.01067352294921875,
+          0.013458251953125,
+          0.0170745849609375,
+          0.021484375,
+          0.02685546875,
+          0.0338134765625,
+          0.043060302734375,
+          0.06109619140625
+        ]
+      },
+      "scalar_ternary_fp16": {
+        "held_expected_consumer_sse_per_pair": 0.00010593376586862552,
+        "held_weight_sse_per_pair": 0.00010593376586862552,
+        "zero_scales": 0,
+        "used_patterns": 8
+      },
+      "scalar_four_fp16": {
+        "held_expected_consumer_sse_per_pair": 5.8083184996509166e-05,
+        "held_weight_sse_per_pair": 5.8083184996509166e-05,
+        "zero_scales": 0,
+        "used_patterns": 14
+      }
+    },
+    "sum_dominant": {
+      "polar_32x8": {
+        "held_expected_consumer_sse_per_pair": 2.32937798670213e-06,
+        "held_weight_sse_per_pair": 0.0003364017531642647,
+        "used_codes": 244,
+        "rotated_axis_mse": [
+          1.4921038634501131e-06,
+          0.00033490964930081455
+        ]
+      },
+      "cartesian_16x16": {
+        "held_expected_consumer_sse_per_pair": 8.677517028185158e-06,
+        "held_weight_sse_per_pair": 0.0003297644480391829,
+        "used_codes": 256,
+        "rotated_axis_mse": [
+          7.872787877781673e-06,
+          0.0003218916601614012
+        ]
+      },
+      "scalar_4x4_times_16scales": {
+        "held_expected_consumer_sse_per_pair": 2.2504929641400177e-06,
+        "held_weight_sse_per_pair": 0.0004384465721684095,
+        "used_codes": 233,
+        "rotated_axis_mse": [
+          1.1572697079889908e-06,
+          0.00043728930246042047
+        ]
+      },
+      "rotated_4plus4": {
+        "held_expected_consumer_sse_per_pair": 3.5182276401691224e-05,
+        "held_weight_sse_per_pair": 0.00010530651964801055,
+        "used_codes": 255,
+        "rotated_axis_mse": [
+          3.500652641861781e-05,
+          7.029999322939279e-05
+        ]
+      },
+      "rotated_6plus2": {
+        "held_expected_consumer_sse_per_pair": 1.2565611178000085e-05,
+        "held_weight_sse_per_pair": 0.0002330824686403738,
+        "used_codes": 256,
+        "rotated_axis_mse": [
+          1.2012937349773392e-05,
+          0.00022106953129059944
+        ]
+      },
+      "rotated_2plus6": {
+        "held_expected_consumer_sse_per_pair": 0.0001529546638454537,
+        "held_weight_sse_per_pair": 0.00018605303209477342,
+        "used_codes": 256,
+        "rotated_axis_mse": [
+          0.00015287171054157022,
+          3.318132155320291e-05
+        ]
+      },
+      "rotated_6plus2_tails": {
+        "held_expected_consumer_sse_per_pair": 4.98181070903623e-06,
+        "held_weight_sse_per_pair": 0.00022549866817140994,
+        "used_codes": 249,
+        "rotated_axis_mse": [
+          4.429136880809759e-06,
+          0.00022106953129059944
+        ]
+      },
+      "rotated_7plus1_tails": {
+        "held_expected_consumer_sse_per_pair": 2.7795947417820527e-06,
+        "held_weight_sse_per_pair": 0.0005005672306953783,
+        "used_codes": 254,
+        "rotated_axis_mse": [
+          1.5320066817479999e-06,
+          0.0004990352240136299
+        ]
+      },
+      "rotated_sum_only_8bit": {
+        "held_expected_consumer_sse_per_pair": 3.664699177070579e-06,
+        "held_weight_sse_per_pair": 0.0011585339480655534,
+        "used_codes": 253,
+        "rotated_axis_mse": [
+          7.702900319867217e-07,
+          0.0011577636580335665
+        ]
+      },
+      "scalar_4x4_times_16learned": {
+        "held_expected_consumer_sse_per_pair": 2.098383546012594e-06,
+        "held_weight_sse_per_pair": 0.00044934017309663816,
+        "used_codes": 231,
+        "rotated_axis_mse": [
+          9.774768052842346e-07,
+          0.00044836269629135395
+        ],
+        "fp16_scale_table": [
+          0.0009794235229492188,
+          0.0016622543334960938,
+          0.0021572113037109375,
+          0.0028076171875,
+          0.0035839080810546875,
+          0.004665374755859375,
+          0.0059356689453125,
+          0.007724761962890625,
+          0.009857177734375,
+          0.01282501220703125,
+          0.016387939453125,
+          0.021209716796875,
+          0.0271453857421875,
+          0.03594970703125,
+          0.0457763671875,
+          0.059112548828125
+        ]
+      },
+      "scalar_ternary_fp16": {
+        "held_expected_consumer_sse_per_pair": 8.948152883831147e-07,
+        "held_weight_sse_per_pair": 0.0003471801686035218,
+        "zero_scales": 0,
+        "used_patterns": 8
+      },
+      "scalar_four_fp16": {
+        "held_expected_consumer_sse_per_pair": 5.735507968592551e-07,
+        "held_weight_sse_per_pair": 0.00022000306172684068,
+        "zero_scales": 0,
+        "used_patterns": 14
+      }
+    }
+  },
+  "storage": {
+    "polar_32x8": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 2,
+      "fixed_f16_table_bytes": 1024
+    },
+    "cartesian_16x16": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 2,
+      "fixed_f16_table_bytes": 32
+    },
+    "scalar_4x4_times_16scales": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 2,
+      "fixed_f16_table_bytes": 32
+    },
+    "rotated_sum_only_8bit": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 2,
+      "fixed_f16_table_bytes": 512
+    },
+    "rotated_4plus4": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 4,
+      "fixed_f16_table_bytes": 64
+    },
+    "rotated_6plus2": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 4,
+      "fixed_f16_table_bytes": 136
+    },
+    "rotated_2plus6": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 4,
+      "fixed_f16_table_bytes": 136
+    },
+    "rotated_6plus2_tails": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 4,
+      "fixed_f16_table_bytes": 136
+    },
+    "rotated_7plus1_tails": {
+      "bytes_per_pair": 1,
+      "global_fp16_gain_bytes": 4,
+      "fixed_f16_table_bytes": 260
+    },
+    "scalar_4x4_times_16learned": {
+      "bytes_per_pair": 1,
+      "trained_fp16_scale_table_bytes": 32
+    },
+    "scalar_ternary_fp16": {
+      "bytes_per_pair": 3,
+      "global_fp16_gain_bytes": 0
+    },
+    "scalar_four_fp16": {
+      "bytes_per_pair": 3,
+      "global_fp16_gain_bytes": 0
+    }
+  }
+}

@@ -1,0 +1,9 @@
+dataset /path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer00
+rows 2048 tokens 256
+G     cols        checked       wrap   max|low|  max|high|         max|p|     max|dev|
+1     128        20971520          0        158        153         313168     0.017578   mismatch 0
+2     256        10485760          0        233        227         464746     0.031250   mismatch 0
+4     512         5242880          0        379        337         689583     0.031250   mismatch 0
+8     1024        2621440          0        658        597        1222050     0.031250   mismatch 0
+20    2560        1048576         16       1284       1112        2277442     0.062500   mismatch 16
+40    5120         524288         85       2310       2004        4100655     0.125000   mismatch 85

@@ -1,0 +1,551 @@
+{
+ "job": "w8i14-bytes-lane5-refine-1",
+ "network": "w8i14",
+ "contract": "bytes",
+ "projection": "lane5",
+ "mode": "refine",
+ "valu": 1,
+ "library": "full",
+ "n_consts": 3,
+ "timeout_ms": 40000,
+ "library_components": [
+  "v_add_nc_u32",
+  "v_sub_nc_u32",
+  "v_mul_lo_u32",
+  "v_and_b32",
+  "v_or_b32",
+  "v_xor_b32",
+  "v_lshlrev_b32",
+  "v_lshrrev_b32",
+  "v_ashrrev_i32",
+  "v_bfe_u32",
+  "v_perm_b32",
+  "v_lshl_or_b32",
+  "v_dot4_i32_i8",
+  "v_dot8_i32_i4",
+  "v_dot4_u32_u8",
+  "v_lshl_add_u32",
+  "v_add3_u32",
+  "v_and_or_b32",
+  "v_alignbit_b32",
+  "v_med3_i32",
+  "v_sad_u8",
+  "v_mad_u32_u24"
+ ],
+ "done": {
+  "[\"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.353
+  },
+  "[\"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.409
+  },
+  "[\"v_add_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.038
+  },
+  "[\"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.189
+  },
+  "[\"v_sub_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.263
+  },
+  "[\"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.979
+  },
+  "[\"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.335
+  },
+  "[\"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.699
+  },
+  "[\"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.456
+  },
+  "[\"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.546
+  },
+  "[\"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.777
+  },
+  "[\"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.123
+  },
+  "[\"v_dot4_i32_i8\"]": {
+   "outcome": "sat",
+   "seconds": 2.786
+  },
+  "[\"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.864
+  },
+  "[\"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.153
+  },
+  "[\"v_dot4_u32_u8\"]": {
+   "outcome": "sat",
+   "seconds": 4.344
+  },
+  "[\"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 4.762
+  },
+  "[\"v_mul_lo_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 6.715
+  },
+  "[\"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 14.048
+  },
+  "[\"v_med3_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 16.868
+  },
+  "[\"v_sad_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 40.022
+  },
+  "[\"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 40.051
+  }
+ },
+ "solutions": [
+  {
+   "components": [
+    "v_dot4_i32_i8",
+    "ds_bpermute_b32"
+   ],
+   "program": [
+    {
+     "dst": "r0",
+     "op": "v_dot4_i32_i8",
+     "args": [
+      "const2=0x06be3ad2",
+      "xb",
+      "const0=0x02ff4061"
+     ]
+    },
+    {
+     "dst": "out",
+     "op": "ds_bpermute_b32",
+     "args": [
+      "r0"
+     ],
+     "offset0": 8193
+    }
+   ],
+   "constants": [
+    "0x02ff4061",
+    "0x804080c0",
+    "0x06be3ad2"
+   ],
+   "table": [
+    0,
+    0,
+    9,
+    1,
+    2,
+    3,
+    0,
+    4294967295,
+    4,
+    0,
+    3,
+    5,
+    4294967294,
+    5,
+    30,
+    6,
+    0,
+    0,
+    6,
+    4,
+    0,
+    0,
+    3,
+    4294967294,
+    0,
+    11,
+    0,
+    4294967295,
+    16,
+    2,
+    13,
+    0
+   ],
+   "observed": [
+    6,
+    21,
+    5,
+    20,
+    4,
+    19,
+    3,
+    18,
+    2,
+    26,
+    10,
+    25,
+    9,
+    24,
+    8,
+    23,
+    7,
+    22,
+    15,
+    30,
+    14,
+    29,
+    13,
+    28,
+    12,
+    27,
+    11
+   ],
+   "relabel_observed_to_map": [
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     6,
+     0
+    ],
+    [
+     7,
+     -1
+    ],
+    [
+     8,
+     4
+    ],
+    [
+     9,
+     0
+    ],
+    [
+     10,
+     3
+    ],
+    [
+     11,
+     5
+    ],
+    [
+     12,
+     -2
+    ],
+    [
+     13,
+     5
+    ],
+    [
+     14,
+     30
+    ],
+    [
+     15,
+     6
+    ],
+    [
+     18,
+     6
+    ],
+    [
+     19,
+     4
+    ],
+    [
+     20,
+     0
+    ],
+    [
+     21,
+     0
+    ],
+    [
+     22,
+     3
+    ],
+    [
+     23,
+     -2
+    ],
+    [
+     24,
+     0
+    ],
+    [
+     25,
+     11
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     27,
+     -1
+    ],
+    [
+     28,
+     16
+    ],
+    [
+     29,
+     2
+    ],
+    [
+     30,
+     13
+    ]
+   ],
+   "relabel_is_bijective": false
+  },
+  {
+   "components": [
+    "v_dot4_u32_u8",
+    "ds_bpermute_b32"
+   ],
+   "program": [
+    {
+     "dst": "r0",
+     "op": "v_dot4_u32_u8",
+     "args": [
+      "xb",
+      "const2=0x000456e1",
+      "xb"
+     ]
+    },
+    {
+     "dst": "out",
+     "op": "ds_bpermute_b32",
+     "args": [
+      "r0"
+     ],
+     "offset0": 3760
+    }
+   ],
+   "constants": [
+    "0xe0280318",
+    "0x02084080",
+    "0x000456e1"
+   ],
+   "table": [
+    4294967294,
+    4294967295,
+    3,
+    2,
+    5,
+    16,
+    0,
+    0,
+    1,
+    6,
+    9,
+    0,
+    0,
+    4,
+    6,
+    13,
+    30,
+    0,
+    0,
+    2,
+    4,
+    0,
+    3,
+    11,
+    0,
+    4294967294,
+    4294967295,
+    5,
+    0,
+    0,
+    0,
+    3
+   ],
+   "observed": [
+    29,
+    30,
+    31,
+    18,
+    19,
+    20,
+    8,
+    9,
+    10,
+    21,
+    22,
+    23,
+    11,
+    12,
+    13,
+    0,
+    1,
+    2,
+    14,
+    15,
+    16,
+    3,
+    4,
+    5,
+    25,
+    26,
+    27
+   ],
+   "relabel_observed_to_map": [
+    [
+     0,
+     -2
+    ],
+    [
+     1,
+     -1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     5,
+     16
+    ],
+    [
+     8,
+     1
+    ],
+    [
+     9,
+     6
+    ],
+    [
+     10,
+     9
+    ],
+    [
+     11,
+     0
+    ],
+    [
+     12,
+     0
+    ],
+    [
+     13,
+     4
+    ],
+    [
+     14,
+     6
+    ],
+    [
+     15,
+     13
+    ],
+    [
+     16,
+     30
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     19,
+     2
+    ],
+    [
+     20,
+     4
+    ],
+    [
+     21,
+     0
+    ],
+    [
+     22,
+     3
+    ],
+    [
+     23,
+     11
+    ],
+    [
+     25,
+     -2
+    ],
+    [
+     26,
+     -1
+    ],
+    [
+     27,
+     5
+    ],
+    [
+     29,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     31,
+     3
+    ]
+   ],
+   "relabel_is_bijective": false
+  }
+ ],
+ "per_query_timeout_ms": 20000,
+ "counts": {
+  "sat": 2,
+  "unsat": 18,
+  "timeout": 2
+ },
+ "queue_total": 22,
+ "queue_done": 22,
+ "timeout_multisets": [
+  [
+   "v_sad_u8"
+  ],
+  [
+   "v_dot8_i32_i4"
+  ]
+ ]
+}

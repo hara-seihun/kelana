@@ -1,0 +1,408 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "model_source_sha256": "95c847e23a0a3a06eb45bb3ff92026150b1cc425bba6e4ed13c882da985068e9",
+  "source_weight_bytes": 4063515592,
+  "unique_parameters": 1720574976,
+  "serialized_tensor_elements_including_tied_alias": 2031739904,
+  "token_sha256": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+  "window_starts": {
+    "train": [
+      1033472,
+      465664,
+      700160,
+      521216,
+      2359296,
+      576768,
+      913664,
+      903168
+    ],
+    "validation": [
+      83200,
+      256000,
+      21248,
+      170240
+    ],
+    "test": [
+      232704,
+      76800,
+      208128,
+      146688
+    ]
+  },
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "reference": {
+    "train": {
+      "nll": 3.5832267312442556,
+      "perplexity": 35.989482077154534,
+      "predictions": 2040,
+      "windows": [
+        {
+          "window": 0,
+          "nll": 880.766845703125,
+          "predictions": 255
+        },
+        {
+          "window": 1,
+          "nll": 1035.1651611328125,
+          "predictions": 255
+        },
+        {
+          "window": 2,
+          "nll": 923.8345336914062,
+          "predictions": 255
+        },
+        {
+          "window": 3,
+          "nll": 993.9439086914062,
+          "predictions": 255
+        },
+        {
+          "window": 4,
+          "nll": 667.3985595703125,
+          "predictions": 255
+        },
+        {
+          "window": 5,
+          "nll": 928.813720703125,
+          "predictions": 255
+        },
+        {
+          "window": 6,
+          "nll": 1014.4403686523438,
+          "predictions": 255
+        },
+        {
+          "window": 7,
+          "nll": 865.41943359375,
+          "predictions": 255
+        }
+      ]
+    },
+    "validation": {
+      "nll": 3.5557830810546873,
+      "perplexity": 35.01522899700024,
+      "predictions": 1020,
+      "windows": [
+        {
+          "window": 0,
+          "nll": 899.5217895507812,
+          "predictions": 255
+        },
+        {
+          "window": 1,
+          "nll": 905.14599609375,
+          "predictions": 255
+        },
+        {
+          "window": 2,
+          "nll": 879.9569091796875,
+          "predictions": 255
+        },
+        {
+          "window": 3,
+          "nll": 942.2740478515625,
+          "predictions": 255
+        }
+      ]
+    },
+    "test": {
+      "nll": 2.972707591337316,
+      "perplexity": 19.54476726133164,
+      "predictions": 1020,
+      "windows": [
+        {
+          "window": 0,
+          "nll": 854.564208984375,
+          "predictions": 255
+        },
+        {
+          "window": 1,
+          "nll": 657.9486694335938,
+          "predictions": 255
+        },
+        {
+          "window": 2,
+          "nll": 816.3003540039062,
+          "predictions": 255
+        },
+        {
+          "window": 3,
+          "nll": 703.3485107421875,
+          "predictions": 255
+        }
+      ]
+    }
+  },
+  "fixtures_manifest": "/path/to/workspace/data/kelana-subbit/size-transfer/fixtures/manifest.json",
+  "fixtures_manifest_sha256": "b0ff096e5e3d950e143fec3db612c76b1367a017ee3b790d0d5b17c53ee22021",
+  "entries": [
+    {
+      "fixture": "layer00-self_attn_q_proj.npz",
+      "fixture_sha256": "a053a3d144573fafea24239f1b33e39699ec5a9938e871c16b7b8766de442ca4",
+      "module": "model.layers.0.self_attn.q_proj",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "binary": {
+        "rank": 544,
+        "matrix_payload_bpw": 0.546875,
+        "dimension_descriptor_bytes": 12,
+        "matrix_image_bpw_including_descriptor": 0.5468978881835938,
+        "admm_train_response_error": 0.08064921945333481,
+        "admm_heldout_response_error": 0.07909919321537018,
+        "refined_train_response_error": 0.0445483922958374,
+        "refined_heldout_response_error": 0.05384586378931999,
+        "solver_seconds_cpu": 11.892062258993974,
+        "online_per_vector": {
+          "signed_terms": 2228224,
+          "input_lookup_reads": 139264,
+          "output_lookup_reads": 139264,
+          "table_build_additions": 82620,
+          "table_scratch_bf16_bytes": 165888,
+          "unfused_intermediate_write_read_bf16_bytes": 2176
+        },
+        "image": "/path/to/workspace/data/kelana-subbit/size-transfer/factors/layer00-self_attn_q_proj-binary.npz",
+        "image_sha256": "a34a0e26612be792fd6470d1e8aa6f371fd13c6c751b593f351f0bf9fafa662f"
+      },
+      "spectral": {
+        "left_bits": 4,
+        "right_bits": 4,
+        "rank": 128,
+        "payload_bpw": 0.51568603515625,
+        "train_response_error": 0.05948401242494583,
+        "heldout_response_error": 0.07041898369789124,
+        "online_per_vector": {
+          "factor_terms": 524288,
+          "wmma16_padded_terms": 524288,
+          "scale_values": 4096,
+          "unfused_intermediate_write_read_bf16_bytes": 512
+        },
+        "image": "/path/to/workspace/data/kelana-subbit/size-transfer/factors/layer00-self_attn_q_proj-spectral-l4r4.npz",
+        "image_sha256": "c019c313363bd1ea2b98aa32d05fc39b8ad2eb4d94f427e070d59e7572113796"
+      },
+      "q_norm_consumer": {
+        "binary": {
+          "raw_response_error": 0.05384586751461029,
+          "normalized_response_error": 0.14929702877998352
+        },
+        "spectral": {
+          "raw_response_error": 0.07041898369789124,
+          "normalized_response_error": 0.18684269487857819
+        }
+      },
+      "continuation": {
+        "validation": {
+          "binary": {
+            "nll": 3.5646095425474877,
+            "perplexity": 35.32565754485361,
+            "delta_nll": 0.00882646149280042,
+            "teacher_kl": 0.051610470753090054,
+            "top_token_agreement": 0.9019607843137255
+          },
+          "spectral": {
+            "nll": 3.589978206858915,
+            "perplexity": 36.23328628075219,
+            "delta_nll": 0.0341951258042279,
+            "teacher_kl": 0.09648951829648485,
+            "top_token_agreement": 0.8852941176470588
+          }
+        },
+        "test": {
+          "binary": {
+            "nll": 3.0004381366804536,
+            "perplexity": 20.094339061789405,
+            "delta_nll": 0.027730545343137347,
+            "teacher_kl": 0.05615692115297505,
+            "top_token_agreement": 0.9205882352941176
+          },
+          "spectral": {
+            "nll": 2.9822934618183212,
+            "perplexity": 19.733021718764114,
+            "delta_nll": 0.00958587048100501,
+            "teacher_kl": 0.0654685660904529,
+            "top_token_agreement": 0.9147058823529411
+          }
+        }
+      },
+      "continuation_receipt": "/path/to/workspace/data/kelana-subbit/size-transfer/continuation-layer00-self_attn_q_proj.json",
+      "continuation_sha256": "530195312b08e344c5749b431163b30be2df53fb44147e5a528320896105ed08"
+    },
+    {
+      "fixture": "layer27-self_attn_q_proj.npz",
+      "fixture_sha256": "93c0bc353786708d3df2246fec8b4a87b2d490de30dfb6669bd3714f5521dc01",
+      "module": "model.layers.27.self_attn.q_proj",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "binary": {
+        "rank": 544,
+        "matrix_payload_bpw": 0.546875,
+        "dimension_descriptor_bytes": 12,
+        "matrix_image_bpw_including_descriptor": 0.5468978881835938,
+        "admm_train_response_error": 0.10432200878858566,
+        "admm_heldout_response_error": 0.11425076425075531,
+        "refined_train_response_error": 0.062016282230615616,
+        "refined_heldout_response_error": 0.1198519691824913,
+        "solver_seconds_cpu": 11.209480275007081,
+        "online_per_vector": {
+          "signed_terms": 2228224,
+          "input_lookup_reads": 139264,
+          "output_lookup_reads": 139264,
+          "table_build_additions": 82620,
+          "table_scratch_bf16_bytes": 165888,
+          "unfused_intermediate_write_read_bf16_bytes": 2176
+        },
+        "image": "/path/to/workspace/data/kelana-subbit/size-transfer/factors/layer27-self_attn_q_proj-binary.npz",
+        "image_sha256": "0033e1973d555866d77c1f702540c6e22dd0a8c51f4911567e08cd4b466496c2"
+      },
+      "spectral": {
+        "left_bits": 4,
+        "right_bits": 4,
+        "rank": 128,
+        "payload_bpw": 0.51568603515625,
+        "train_response_error": 0.08137053996324539,
+        "heldout_response_error": 0.14622648060321808,
+        "online_per_vector": {
+          "factor_terms": 524288,
+          "wmma16_padded_terms": 524288,
+          "scale_values": 4096,
+          "unfused_intermediate_write_read_bf16_bytes": 512
+        },
+        "image": "/path/to/workspace/data/kelana-subbit/size-transfer/factors/layer27-self_attn_q_proj-spectral-l4r4.npz",
+        "image_sha256": "f11c7a52fcd0eecb4ffae12c411659a9c596e0c56a240ccb3883fea0b2745bea"
+      },
+      "q_norm_consumer": {
+        "binary": {
+          "raw_response_error": 0.1198519691824913,
+          "normalized_response_error": 0.12411410361528397
+        },
+        "spectral": {
+          "raw_response_error": 0.14622649550437927,
+          "normalized_response_error": 0.1486029177904129
+        }
+      },
+      "continuation": {
+        "validation": {
+          "binary": {
+            "nll": 3.547516826554841,
+            "perplexity": 34.72697722536771,
+            "delta_nll": -0.008266254499846415,
+            "teacher_kl": 0.007292715124055451,
+            "top_token_agreement": 0.9607843137254902
+          },
+          "spectral": {
+            "nll": 3.5524482876646752,
+            "perplexity": 34.89865492604543,
+            "delta_nll": -0.0033347933900120807,
+            "teacher_kl": 0.007569324035270541,
+            "top_token_agreement": 0.9627450980392157
+          }
+        },
+        "test": {
+          "binary": {
+            "nll": 2.964315257352941,
+            "perplexity": 19.381427406818666,
+            "delta_nll": -0.008392333984375,
+            "teacher_kl": 0.005015899094880796,
+            "top_token_agreement": 0.9803921568627451
+          },
+          "spectral": {
+            "nll": 2.962991871553309,
+            "perplexity": 19.355795265358793,
+            "delta_nll": -0.009715719784007426,
+            "teacher_kl": 0.005104694880691229,
+            "top_token_agreement": 0.9725490196078431
+          }
+        }
+      },
+      "continuation_receipt": "/path/to/workspace/data/kelana-subbit/size-transfer/continuation-layer27-self_attn_q_proj.json",
+      "continuation_sha256": "c70ec122a98850319025c83892f00130dede8e6aabbc81b1ea2f698d9fc53633"
+    },
+    {
+      "fixture": "layer14-mlp_down_proj.npz",
+      "fixture_sha256": "71ecfde59171f92bfa34b3f0310771c2f6a23a5a5b97ce185ad43e9ba0c23f4c",
+      "module": "model.layers.14.mlp.down_proj",
+      "dimensions": [
+        2048,
+        6144
+      ],
+      "binary": {
+        "rank": 800,
+        "matrix_payload_bpw": 0.53125,
+        "dimension_descriptor_bytes": 12,
+        "matrix_image_bpw_including_descriptor": 0.5312576293945312,
+        "admm_train_response_error": 0.42790094017982483,
+        "admm_heldout_response_error": 0.43198904395103455,
+        "refined_train_response_error": 0.2916441261768341,
+        "refined_heldout_response_error": 0.4985220432281494,
+        "solver_seconds_cpu": 50.01983896699676,
+        "online_per_vector": {
+          "signed_terms": 6553600,
+          "input_lookup_reads": 614400,
+          "output_lookup_reads": 204800,
+          "table_build_additions": 221340,
+          "table_scratch_bf16_bytes": 444416,
+          "unfused_intermediate_write_read_bf16_bytes": 3200
+        },
+        "image": "/path/to/workspace/data/kelana-subbit/size-transfer/factors/layer14-mlp_down_proj-binary.npz",
+        "image_sha256": "2b5ba46a86bd98d631533b2d0430939e55acf5ef16ef4af2cb51fb758303f63e"
+      },
+      "spectral": {
+        "left_bits": 4,
+        "right_bits": 2,
+        "rank": 320,
+        "payload_bpw": 0.5481974283854166,
+        "train_response_error": 0.32748210430145264,
+        "heldout_response_error": 0.5187796354293823,
+        "online_per_vector": {
+          "factor_terms": 2621440,
+          "wmma16_padded_terms": 2621440,
+          "scale_values": 21504,
+          "unfused_intermediate_write_read_bf16_bytes": 1280
+        },
+        "image": "/path/to/workspace/data/kelana-subbit/size-transfer/factors/layer14-mlp_down_proj-spectral-l4r2.npz",
+        "image_sha256": "5d571fef0a503bf83d3186b281b6d2679e25c32d15493d095c49d7cf6acc8487"
+      },
+      "q_norm_consumer": null,
+      "continuation": {
+        "validation": {
+          "binary": {
+            "nll": 3.557774263269761,
+            "perplexity": 35.08502015863667,
+            "delta_nll": 0.0019911822150735503,
+            "teacher_kl": 0.031236799558003743,
+            "top_token_agreement": 0.9176470588235294
+          },
+          "spectral": {
+            "nll": 3.5642911424823835,
+            "perplexity": 35.31441164363434,
+            "delta_nll": 0.008508061427696223,
+            "teacher_kl": 0.033748448596281164,
+            "top_token_agreement": 0.9068627450980392
+          }
+        },
+        "test": {
+          "binary": {
+            "nll": 2.957574821920956,
+            "perplexity": 19.251227441984046,
+            "delta_nll": -0.015132769416360325,
+            "teacher_kl": 0.02735437411887973,
+            "top_token_agreement": 0.9323529411764706
+          },
+          "spectral": {
+            "nll": 2.958578311695772,
+            "perplexity": 19.27055554803119,
+            "delta_nll": -0.014129279641544201,
+            "teacher_kl": 0.029477374226439233,
+            "top_token_agreement": 0.9333333333333333
+          }
+        }
+      },
+      "continuation_receipt": "/path/to/workspace/data/kelana-subbit/size-transfer/continuation-layer14-mlp_down_proj.json",
+      "continuation_sha256": "ff97f453f77916fbd500ebfb7d0089132c67d5c5ea43e1928e1481cc284fd07a"
+    }
+  ]
+}

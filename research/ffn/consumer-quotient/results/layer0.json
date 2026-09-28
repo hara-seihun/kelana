@@ -1,0 +1,246 @@
+{
+  "format": "kelana-consumer-discrepancy/1",
+  "layer": "layer00",
+  "tokens": 8,
+  "target": "actual captured A8 hidden operand projected through scaled ternary down weights",
+  "scope": "Oracle capacity experiment, not a runtime speedup or full-model quality test. The target and repeated down/transpose projections are computed during search.",
+  "quantizer": "fixed per-token per-128 scales, codes jointly chosen across all 17408 coordinates",
+  "source_sha256": "602a87d342afe9642beec57097268051d02b17801a45aca9de5f184027340ca7",
+  "inputs": {
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xq_ff.i8": "6e086bf782806e32b0934733534cdb4c7156e42258da668ffab4668cbd930517",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00/r8/xs_ff.f32": "1f9a0bda15fc960ddd596bbad20001586c42a07c2442fc6673e994786d91081b",
+    "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer00/down.halo": "008cdf76cf98f7a0c19f6ccc573e60681fdd1fa5568a76c122a61116f57c789f"
+  },
+  "elapsed_seconds": 2.8356354490388185,
+  "results": [
+    {
+      "levels": 1,
+      "clip": 0.6,
+      "iterations": 32,
+      "changed_codes": 2485,
+      "total_codes": 139264,
+      "code_histogram": {
+        "-1": 31699,
+        "0": 76073,
+        "1": 31492
+      },
+      "initial": {
+        "iteration": 0,
+        "relative_rms": 0.192424014210701,
+        "worst_row_relative_rms": 0.26417702436447144,
+        "bias": -1.932565646711737e-05,
+        "max_abs": 0.4960927963256836
+      },
+      "final": {
+        "relative_rms": 0.1516922265291214,
+        "worst_row_relative_rms": 0.18941843509674072,
+        "bias": 6.600399501621723e-05,
+        "max_abs": 0.07931637763977051
+      },
+      "history": [
+        {
+          "iteration": 0,
+          "relative_rms": 0.192424014210701,
+          "worst_row_relative_rms": 0.26417702436447144,
+          "bias": -1.932565646711737e-05,
+          "max_abs": 0.4960927963256836
+        },
+        {
+          "iteration": 8,
+          "changes_per_step": 32,
+          "accepted_rows": 0,
+          "relative_rms": 0.17649772763252258,
+          "worst_row_relative_rms": 0.23471589386463165,
+          "bias": 3.879676296492107e-05,
+          "max_abs": 0.3215970993041992
+        },
+        {
+          "iteration": 16,
+          "changes_per_step": 32,
+          "accepted_rows": 3,
+          "relative_rms": 0.15840256214141846,
+          "worst_row_relative_rms": 0.1968071460723877,
+          "bias": 5.9278660046402365e-05,
+          "max_abs": 0.10827052593231201
+        },
+        {
+          "iteration": 24,
+          "changes_per_step": 32,
+          "accepted_rows": 2,
+          "relative_rms": 0.15431684255599976,
+          "worst_row_relative_rms": 0.18941843509674072,
+          "bias": 5.707301170332357e-05,
+          "max_abs": 0.08205334842205048
+        },
+        {
+          "iteration": 32,
+          "changes_per_step": 32,
+          "accepted_rows": 1,
+          "relative_rms": 0.1516922265291214,
+          "worst_row_relative_rms": 0.18941843509674072,
+          "bias": 6.6003980464302e-05,
+          "max_abs": 0.07931618392467499
+        }
+      ],
+      "source_rms_error": 0.38614460825920105
+    },
+    {
+      "levels": 3,
+      "clip": 0.6,
+      "iterations": 32,
+      "changed_codes": 5704,
+      "total_codes": 139264,
+      "code_histogram": {
+        "-3": 15319,
+        "-2": 16437,
+        "-1": 24684,
+        "0": 26906,
+        "1": 24472,
+        "2": 16364,
+        "3": 15082
+      },
+      "initial": {
+        "iteration": 0,
+        "relative_rms": 0.1578681766986847,
+        "worst_row_relative_rms": 0.21624235808849335,
+        "bias": -4.070885552209802e-05,
+        "max_abs": 0.7486820220947266
+      },
+      "final": {
+        "relative_rms": 0.09037604182958603,
+        "worst_row_relative_rms": 0.1515316516160965,
+        "bias": 1.3252742064651102e-05,
+        "max_abs": 0.0400385856628418
+      },
+      "history": [
+        {
+          "iteration": 0,
+          "relative_rms": 0.1578681766986847,
+          "worst_row_relative_rms": 0.21624235808849335,
+          "bias": -4.070885552209802e-05,
+          "max_abs": 0.7486820220947266
+        },
+        {
+          "iteration": 8,
+          "changes_per_step": 64,
+          "accepted_rows": 2,
+          "relative_rms": 0.10835719108581543,
+          "worst_row_relative_rms": 0.17591753602027893,
+          "bias": 2.1008774638175964e-05,
+          "max_abs": 0.04750321805477142
+        },
+        {
+          "iteration": 16,
+          "changes_per_step": 32,
+          "accepted_rows": 8,
+          "relative_rms": 0.10374832153320312,
+          "worst_row_relative_rms": 0.17165064811706543,
+          "bias": 7.962133167893626e-06,
+          "max_abs": 0.05214378237724304
+        },
+        {
+          "iteration": 24,
+          "changes_per_step": 32,
+          "accepted_rows": 7,
+          "relative_rms": 0.09629952162504196,
+          "worst_row_relative_rms": 0.1607358157634735,
+          "bias": 1.0935348655038979e-05,
+          "max_abs": 0.04003860801458359
+        },
+        {
+          "iteration": 32,
+          "changes_per_step": 32,
+          "accepted_rows": 7,
+          "relative_rms": 0.09037604182958603,
+          "worst_row_relative_rms": 0.1515316516160965,
+          "bias": 1.3252712960820645e-05,
+          "max_abs": 0.04003860801458359
+        }
+      ],
+      "source_rms_error": 0.242069810628891
+    },
+    {
+      "levels": 7,
+      "clip": 0.6,
+      "iterations": 32,
+      "changed_codes": 8204,
+      "total_codes": 139264,
+      "code_histogram": {
+        "-7": 11942,
+        "-6": 5422,
+        "-5": 6719,
+        "-4": 7637,
+        "-3": 9631,
+        "-2": 10855,
+        "-1": 11720,
+        "0": 12053,
+        "1": 11590,
+        "2": 10635,
+        "3": 9630,
+        "4": 7542,
+        "5": 6757,
+        "6": 5327,
+        "7": 11804
+      },
+      "initial": {
+        "iteration": 0,
+        "relative_rms": 0.15603746473789215,
+        "worst_row_relative_rms": 0.21394693851470947,
+        "bias": -5.7434855989413336e-05,
+        "max_abs": 0.8026323318481445
+      },
+      "final": {
+        "relative_rms": 0.08512845635414124,
+        "worst_row_relative_rms": 0.1462356001138687,
+        "bias": 5.468537437991472e-06,
+        "max_abs": 0.027127988636493683
+      },
+      "history": [
+        {
+          "iteration": 0,
+          "relative_rms": 0.15603746473789215,
+          "worst_row_relative_rms": 0.21394693851470947,
+          "bias": -5.7434855989413336e-05,
+          "max_abs": 0.8026323318481445
+        },
+        {
+          "iteration": 8,
+          "changes_per_step": 64,
+          "accepted_rows": 8,
+          "relative_rms": 0.10248331725597382,
+          "worst_row_relative_rms": 0.17309290170669556,
+          "bias": 3.922126325051067e-06,
+          "max_abs": 0.17389076948165894
+        },
+        {
+          "iteration": 16,
+          "changes_per_step": 64,
+          "accepted_rows": 7,
+          "relative_rms": 0.0930536612868309,
+          "worst_row_relative_rms": 0.1624913215637207,
+          "bias": 6.699296591250459e-06,
+          "max_abs": 0.03765791654586792
+        },
+        {
+          "iteration": 24,
+          "changes_per_step": 64,
+          "accepted_rows": 5,
+          "relative_rms": 0.08779086172580719,
+          "worst_row_relative_rms": 0.15381881594657898,
+          "bias": 2.264014710817719e-06,
+          "max_abs": 0.028785500675439835
+        },
+        {
+          "iteration": 32,
+          "changes_per_step": 64,
+          "accepted_rows": 4,
+          "relative_rms": 0.08512845635414124,
+          "worst_row_relative_rms": 0.1462356001138687,
+          "bias": 5.46845967619447e-06,
+          "max_abs": 0.02712797001004219
+        }
+      ],
+      "source_rms_error": 0.22089771926403046
+    }
+  ]
+}

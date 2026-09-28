@@ -1,0 +1,56 @@
+{
+  "panel": "train",
+  "window": 7,
+  "table_sha256": "c79b3d345a0bfc6a1b2e4a6e8f04246e5b7750e885ae17f3eb36ad66d53d86f5",
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "capture_model_q_exact": true,
+  "rows": [
+    1792,
+    2048
+  ],
+  "shared_log_feature_min_max": [
+    -6236.4267578125,
+    -394.45916748046875
+  ],
+  "final_per_feature_log_scale_min_max": [
+    -549.4190673828125,
+    -394.45916748046875
+  ],
+  "heads": {
+    "head0": {
+      "attention_kl": 703.8385009765625,
+      "post_o_rel_sq": 2.3931679725646973,
+      "value_prefix_vs_dense_max_abs": 8.106231689453125e-06,
+      "log_feature_min_max": [
+        -60.10026550292969,
+        9.128682136535645
+      ],
+      "denominator_min_max": [
+        1.0,
+        1.9093732833862305
+      ],
+      "output_sse": 108.08473205566406,
+      "output_ref_sq": 45.16387176513672
+    },
+    "head1": {
+      "attention_kl": 1158.259033203125,
+      "post_o_rel_sq": 1.4625000953674316,
+      "value_prefix_vs_dense_max_abs": 6.884336471557617e-06,
+      "log_feature_min_max": [
+        -105.83876037597656,
+        3.031587600708008
+      ],
+      "denominator_min_max": [
+        1.0,
+        1.992248296737671
+      ],
+      "output_sse": 729.4784545898438,
+      "output_ref_sq": 498.78863525390625
+    }
+  },
+  "gqa_pair": {
+    "post_o_rel_sq": 1.5860340595245361,
+    "output_sse": 885.688720703125,
+    "output_ref_sq": 558.4298095703125
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "unit": "48 logical ternary rows x 16 tokens x 16 K",
+  "device": "gfx1151",
+  "rows": [
+    { "waves_per_simd": 1, "iu4x3": 18.1669, "triple": 32.969, "triple_pow2": 46.5037, "pair_scaled_to_48_rows": 21.0592, "packed_ceiling_no_decode": 15.6144, "f16_wmma": 12.3571, "iu4_wmma": 6.46975, "valu_op": 0.561307 },
+    { "waves_per_simd": 2, "iu4x3": 18.0243, "triple": 33.6836, "triple_pow2": 46.8306, "pair_scaled_to_48_rows": 21.2167, "packed_ceiling_no_decode": 15.4444, "f16_wmma": 12.3945, "iu4_wmma": 6.50725, "valu_op": 0.564744 },
+    { "waves_per_simd": 4, "iu4x3": 36.2536, "triple": 62.3776, "triple_pow2": 64.5825, "pair_scaled_to_48_rows": 39.9772, "packed_ceiling_no_decode": 29.3188, "f16_wmma": 24.1141, "iu4_wmma": 12.377, "valu_op": 0.732393 },
+    { "waves_per_simd": 8, "iu4x3": 71.1698, "triple": 123.23, "triple_pow2": 114.093, "pair_scaled_to_48_rows": 79.8983, "packed_ceiling_no_decode": 58.2529, "f16_wmma": 47.9032, "iu4_wmma": 24.1441, "valu_op": 1.4294 }
+  ]
+}

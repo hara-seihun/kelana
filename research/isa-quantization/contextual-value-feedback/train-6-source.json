@@ -1,0 +1,71 @@
+{
+  "panel": "train",
+  "window": 6,
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "input_sha256": {
+    "/path/to/workspace/data/kelana-subbit/full-model/mlp-quantized-producer-capture.npz": "aa1e671af9283656efd7a95f2732a27662ce8c658766af5ee88f5e7d27b9e69c",
+    "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/tokens.npz": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+    "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+  },
+  "capture_meta_sha256": "fef14293149d9665ab726dcb3ce3565f39278fa26c0a3aebe19878bcf5c208ce",
+  "capture_source_sha256": "42eae1e97b1a5a609022f62df15770c6f9ffb10505e46dcbc7987c74ffa5883d",
+  "source_file_sha256": "27580216202509aa7a622534cf66176137d9e391a689676d04233a0fc7fb85df",
+  "arrays": {
+    "residual": {
+      "shape": [
+        256,
+        1024
+      ],
+      "dtype": "uint16",
+      "sha256": "74e15d028ed657547918a0ce9a572bc69229c131a6be4c8d2177cc1c81f8c99b"
+    },
+    "token_ids": {
+      "shape": [
+        256
+      ],
+      "dtype": "int32",
+      "sha256": "3300487c28d9de35c058fd8f5f66ee12a9232f290900bb03e31a4ae4bed55dc3"
+    },
+    "q": {
+      "shape": [
+        16,
+        256,
+        128
+      ],
+      "dtype": "float32",
+      "sha256": "d46b30203acdd6c04c86096987ac3013d0a10aae7db80154ee7cffe27c237dd6"
+    },
+    "k": {
+      "shape": [
+        256,
+        8,
+        128
+      ],
+      "dtype": "uint16",
+      "sha256": "4a56733d82938cfd92b93be9301e0dd7d27f2adff5280066d245e5a38ba4d679"
+    },
+    "v": {
+      "shape": [
+        256,
+        8,
+        128
+      ],
+      "dtype": "uint16",
+      "sha256": "c2ffe27c73f9b5184ec3dc827fd6b5bf397377aceeb0ab52ca87f06aff710f11"
+    },
+    "teacher": {
+      "shape": [
+        256,
+        1024
+      ],
+      "dtype": "float32",
+      "sha256": "2603c56c0d831f5b328f24937c076b32e644107ea15cb2b597251dcc5e163cc1"
+    }
+  },
+  "teacher_sq": 1611.9537456637986,
+  "torch_vs_numpy_input_norm_bf16_differences": 0,
+  "contract": "layer1 original weights, BF16 residual/norm/projection/rotated K cache, FP32 rotary Q and teacher K, FP32 causal softmax/V/O; CPU rounding not original GPU layer1 capture",
+  "producer_source_sha256": "1f8f577a66b338e60576c8f13b799b85943423793bac22ee9f7f8f95fdc359f7",
+  "producer_snapshot": "sources/1f8f577a66b338e60576c8f13b799b85943423793bac22ee9f7f8f95fdc359f7.py",
+  "original_o_bf16_sha256": "677e1de44f3a28a51b2e75e806a8ec68807ed96dfadc169729c1993181418f48"
+}

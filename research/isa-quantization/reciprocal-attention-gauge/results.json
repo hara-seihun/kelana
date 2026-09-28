@@ -1,0 +1,67 @@
+{
+  "scope": "One fixed exact rational source/gain toy; finite two-feature output in float64.",
+  "images": [
+    {
+      "file": "source-gains.bf16",
+      "bytes": 4,
+      "sha256": "400b65ec635e88cb81d0b82f8fcde5bdec0f96c5120bb00083177327af0d7e98",
+      "decoded": [
+        "1/4",
+        "4"
+      ]
+    },
+    {
+      "file": "balanced-gains.bf16",
+      "bytes": 4,
+      "sha256": "db0405050689e5d3aea1cd7d7f509a19beca2cef76c6a2dddc454951496c9763",
+      "decoded": [
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "gauge": {
+    "lambda": "4",
+    "source_pair_variances": [
+      "1/16",
+      "16"
+    ],
+    "source_scores": [
+      [
+        "1",
+        "-1"
+      ],
+      [
+        "-1",
+        "1"
+      ]
+    ],
+    "exact_score_preservation": true,
+    "mean_exponent_before": "257/16",
+    "mean_exponent_after": "2"
+  },
+  "fixed_feature_table": [
+    -1,
+    1
+  ],
+  "outputs": [
+    {
+      "query": "-1/4",
+      "teacher": 0.11920292202211755,
+      "finite_before": 0.3776228023035362,
+      "finite_after": 0.209987170807013,
+      "absolute_error_before": 0.2584198802814186,
+      "absolute_error_after": 0.09078424878489547
+    },
+    {
+      "query": "1/4",
+      "teacher": 0.8807970779778823,
+      "finite_before": 0.6223771976964638,
+      "finite_after": 0.7900128291929871,
+      "absolute_error_before": 0.2584198802814185,
+      "absolute_error_after": 0.09078424878489522
+    }
+  ],
+  "strong_control": "Direct sigmoid(8u) is exact and cheaper on the declared two-key toy.",
+  "ledger": "Four existing BF16 gain bytes replaced by four; no new scale/index fields. The same two features, exp/sum/normalization work and two-key/value source contract are retained; no native code size or latency claim."
+}

@@ -1,0 +1,27 @@
+{
+  "domain": "x in {-1,0,1}^3, g,u in {-1,0,1}^3 excluding zero; q=sum((x_i+1)*3^i)",
+  "observation": "sign(SiLU(g dot x)*(u dot x)) with real sigmoid strictly positive",
+  "input_coordinate": "r=min(q,26-q), 0..13; 4 bits. BFE offset o=2*r can be supplied by the producer",
+  "output_coordinate": "one signed two-bit field per r, 0/1/3 for zero/positive/negative",
+  "family_pairs": 676,
+  "checked_points": 18252,
+  "three_value_maps": 432,
+  "two_value_maps": 244,
+  "distinct_words": 182,
+  "joint_fibers": 14,
+  "minimum_fixed_state_bits_for_entire_family": 4,
+  "example": {
+    "gate": [
+      1,
+      1,
+      1
+    ],
+    "up": [
+      1,
+      -1,
+      0
+    ],
+    "word": "0x0130107c"
+  },
+  "cost": "one v_bfe_i32 and one 32-bit literal per consumer if offset o=2*r is supplied; two instructions if only r is supplied; from q, sub+min+shift once per shared query plus one BFE per consumer; weight preparation and boundaries excluded"
+}

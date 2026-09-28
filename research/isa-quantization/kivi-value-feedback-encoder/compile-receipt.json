@@ -1,0 +1,19 @@
+{
+  "target": "gfx1151",
+  "compiler": "HIP version: 7.2.53211-9999",
+  "flags": "--offload-arch=gfx1151 -O3 -ffp-contract=off -save-temps -c",
+  "source_sha256": "93dd3953556f099ecc5ee9ebf1ea8b74a604b9c8574fe05cd247f36d196144e1",
+  "step_bits_sha256": "f1002c9d6d63bc0c2885d80cd196d5b723bc78a56339fdd64641e448f14204b9",
+  "device_object_sha256": "09c0695214c05bfd7ccd9707ea91b9cb9d1e2aac21c9adce9b5ae8d040210f80",
+  "assembly_sha256": "622efa22dc63f01ece72941775ffbb021038f2ae3df185c658791051fba24550",
+  "kernel": {
+    "symbol": "_Z7flush_vPKhPhPfii",
+    "body_bytes": 2432,
+    "descriptor_bytes": 64,
+    "lds_bytes_per_cta": 0,
+    "private_scratch_bytes_per_thread": 0,
+    "vgpr": 50,
+    "sgpr": 14,
+    "wave32": 1
+  }
+}

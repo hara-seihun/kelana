@@ -1,0 +1,97 @@
+{
+  "protocol": "Frozen early/middle layer0+14 gate/up replacement; all other selected ternary matrices fixed; expanded BF16 quality execution only.",
+  "panels": {
+    "validation": {
+      "receipt": "/path/to/workspace/data/kelana-subbit/vector-full/model-quality/early-middle-frozen-validation-0-8.json",
+      "sha256": "02c0d520e73fb4fac32c8ef5924a2afc713dbf565c7782b2045f95321f421b01",
+      "arms": {
+        "source": {
+          "payload_bytes": 128678649,
+          "bpw": 1.7270855300173515,
+          "nll": 4.733111931295956,
+          "perplexity": 113.64867950802635,
+          "predictions": 2040,
+          "nll_difference_from_source": 0.0
+        },
+        "polar8": {
+          "payload_bytes": 132258429,
+          "bpw": 1.7751322439570163,
+          "nll": 4.743335678998162,
+          "perplexity": 114.81655479246886,
+          "predictions": 2040,
+          "nll_difference_from_source": 0.010223747702205799
+        },
+        "learned_pair8": {
+          "payload_bytes": 132258429,
+          "bpw": 1.7751322439570163,
+          "nll": 4.740781656901041,
+          "perplexity": 114.52368493166156,
+          "predictions": 2040,
+          "nll_difference_from_source": 0.007669725605085276
+        },
+        "scalar_scale8": {
+          "payload_bytes": 132256445,
+          "bpw": 1.7751056153149052,
+          "nll": 4.779323024375766,
+          "perplexity": 119.02374658945888,
+          "predictions": 2040,
+          "nll_difference_from_source": 0.046211093079810084
+        },
+        "independent_scalar4_g128": {
+          "payload_bytes": 132453025,
+          "bpw": 1.7777440520418155,
+          "nll": 4.737978766946232,
+          "perplexity": 114.20313708560482,
+          "predictions": 2040,
+          "nll_difference_from_source": 0.0048668356502759025
+        }
+      }
+    },
+    "test": {
+      "receipt": "/path/to/workspace/data/kelana-subbit/vector-full/model-quality/early-middle-frozen-test-0-32.json",
+      "sha256": "b1a2352a1708af06cfcb8a60f478056ff77fb952d558c532ef0323871c77977f",
+      "arms": {
+        "source": {
+          "payload_bytes": 128678649,
+          "bpw": 1.7270855300173515,
+          "nll": 4.646431500303979,
+          "perplexity": 104.21243919903202,
+          "predictions": 8160,
+          "nll_difference_from_source": 0.0
+        },
+        "polar8": {
+          "payload_bytes": 132258429,
+          "bpw": 1.7751322439570163,
+          "nll": 4.635783363791073,
+          "perplexity": 103.10865795590833,
+          "predictions": 8160,
+          "nll_difference_from_source": -0.010648136512906525
+        },
+        "learned_pair8": {
+          "payload_bytes": 132258429,
+          "bpw": 1.7751322439570163,
+          "nll": 4.636486412497128,
+          "perplexity": 103.18117385258402,
+          "predictions": 8160,
+          "nll_difference_from_source": -0.00994508780685166
+        },
+        "scalar_scale8": {
+          "payload_bytes": 132256445,
+          "bpw": 1.7751056153149052,
+          "nll": 4.668423798504998,
+          "perplexity": 106.52969776223667,
+          "predictions": 8160,
+          "nll_difference_from_source": 0.021992298201018556
+        },
+        "independent_scalar4_g128": {
+          "payload_bytes": 132453025,
+          "bpw": 1.7777440520418155,
+          "nll": 4.630793492934283,
+          "perplexity": 102.59544057758588,
+          "predictions": 8160,
+          "nll_difference_from_source": -0.015638007369696005
+        }
+      }
+    }
+  }
+}

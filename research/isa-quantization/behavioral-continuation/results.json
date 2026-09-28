@@ -1,0 +1,251 @@
+{
+  "contract": {
+    "teacher_emissions": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/4",
+        "3/4"
+      ]
+    ],
+    "teacher_transition_s_a": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "candidate_initial_state": 0,
+    "candidate_transition_order": "c=0,a=0; c=0,a=1; c=1,a=0; c=1,a=1",
+    "discount": "1/2",
+    "occupancy": "(1-gamma) sum_t gamma^t Pr_P(s_t,c_t), common teacher-drawn tokens, separate state transitions"
+  },
+  "number_transitions_exhausted": 16,
+  "zero_floor_transitions": [
+    [
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "best_nonzero": {
+    "transition": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "occupancy_00_01_10_11": [
+      "2/3",
+      "1/21",
+      "0",
+      "2/7"
+    ],
+    "unrestricted_emissions": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "2/7",
+        "5/7"
+      ]
+    ],
+    "irreducible_floor_nats_per_discounted_step": 0.005749003420190732,
+    "teacher_state_collision": true
+  },
+  "strict_best_nonzero_certificate": {
+    "method": "24 rational atanh-series terms per logarithm; all other 14 positive-floor transition tables have strictly larger certified lower bounds",
+    "winner_upper": 0.005749003420190725,
+    "smallest_rival_lower": 0.009234700738482439
+  },
+  "collapsed_transition": {
+    "transition": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "occupancy_00_01_10_11": [
+      "5/7",
+      "0",
+      "2/7",
+      "0"
+    ],
+    "unrestricted_emissions": [
+      [
+        "3/7",
+        "4/7"
+      ],
+      null
+    ],
+    "irreducible_floor_nats_per_discounted_step": 0.027135791552279784,
+    "teacher_state_collision": true
+  },
+  "collapsed_teacher_forced_emissions": {
+    "q": [
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "1/4",
+        "3/4"
+      ]
+    ],
+    "local_emission_error_at_aligned_teacher_states": 0,
+    "two_token_sequence_KL_nats": 0.06540601797056848,
+    "normalized_discounted_KL_nats": 0.037374867411753415,
+    "state_aliasing_floor": 0.027135791552279784,
+    "emission_quantization_penalty": 0.010239075859473604,
+    "decomposition_residual": 2.7755575615628914e-17
+  },
+  "full_floor_ranking": [
+    [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      0.0
+    ],
+    [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      0.005749003420190732
+    ],
+    [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      0.009234700738482437
+    ],
+    [
+      [
+        1,
+        1,
+        0,
+        1
+      ],
+      0.01310357644098235
+    ],
+    [
+      [
+        0,
+        1,
+        1,
+        0
+      ],
+      0.013895838742720802
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      0.016679557718107346
+    ],
+    [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      0.02298559343359286
+    ],
+    [
+      [
+        1,
+        0,
+        1,
+        0
+      ],
+      0.024315337359546288
+    ],
+    [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      0.024997844181972095
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      0.02522565308973677
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      0.027135791552279784
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      0.027135791552279784
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      0.027135791552279784
+    ],
+    [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      0.027135791552279784
+    ],
+    [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      0.027135791552279787
+    ],
+    [
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      0.02713579155227979
+    ]
+  ]
+}

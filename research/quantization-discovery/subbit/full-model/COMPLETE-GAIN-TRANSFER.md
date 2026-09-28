@@ -1,0 +1,20 @@
+# The first-layer gain does not transfer as a fixed complete-model repair
+
+The train-selected layer-0 down and narrow-O gains made a damaged *prefix* much better. That prefix kept the original tied embedding/head and layers 14–27. I forwarded the same three frozen paid images through the complete quantized model, changing neither codes nor scale slots. On four test windows the complete image scores 9.15036 NLL before either gain, 9.45324 with down gain 2, and 9.16755 with down gain 2 plus O gain 1.75. The prefix improvement is not a portable complete-model improvement.
+
+The comparison uses Qwen3-0.6B and 256-token WikiText windows, 255 gold labels each. The binary body and norms come from `image-binary055-refined`; layer 0 replaces its V/O by the same shared rank-28 image in all arms, and uses the same quantized-producer gate/up/down image. `base` uses its original down and narrow-O scales, `down_gain` changes the down scales, and `joint_gain` also changes narrow-O scales. The complete scope quantizes all 28 body layers and uses one mixed tied embedding/head image including its paid head correction. Every arm in a scope has the same 46,530,084 payload bytes, **.624513 BPW** over 596,049,920 unique parameters, and the same factor terms, scale reads and logical V-cache width. This is BF16 expansion for quality measurement, not a native consumer or latency result.
+
+| Scope | Test indices | Base | Down gain 2 | Joint O gain 1.75 |
+| --- | --- | ---: | ---: | ---: |
+| First 14 layers quantized, later body and tied endpoints original | 62–63 | 11.92397 | 10.22884 | **8.81092** |
+| All body layers quantized, tied endpoints original | 62–63 | 8.92550 | 9.25879 | **8.70101** |
+| First 14 layers quantized, tied endpoints quantized | 62–63 | 12.90639 | 10.48727 | **9.10941** |
+| All body layers and tied endpoints quantized | 62–63 | **9.31078** | 9.90003 | 9.35483 |
+| All body layers and tied endpoints quantized | 60–63 | **9.15036** | 9.45324 | 9.16755 |
+| All body layers and tied endpoints quantized | validation 24–27 | 8.84338 | 8.92466 | **8.70300** |
+
+The two-window ablation is decisive about the *interaction*, not its prevalence. Quantizing later layers alone still favors the joint gain by .22449 NLL, and quantizing the tied image alone still favors it by 3.79699. Changing **both** flips that same paired comparison to a .04405 loss. On test 60–63, two windows favor the joint gain and two do not. The validation four-window mean favors it by .14038. Neither selecting a universal gain from the prefix nor rejecting the gain from four complete windows is justified. This is a measured negative for **fixed prefix-selected gain transfer under the stated complete-body/tied-image composition**. It is not a negative for shared narrow values, paid scales, or training those scales against the complete model.
+
+The complete image remains far from original-model language quality. The next fit should use the actual quantized tied producer and all 28 downstream layers during train selection, then evaluate a frozen per-head or low-dimensional paid-scale image on separate text. In particular, do not spend more time selecting first-layer gains against an original downstream and only afterward substitute the tied image. If the complete model cannot retain a gain at the same .624513 BPW, a native narrow-cache consumer is premature.
+
+`complete_gain_transfer.py` generates the four scopes. `/path/to/workspace/data/kelana-subbit/full-model/{prefix-gain-test-62-2,late-body-gain-test-62-2,tied-only-gain-test-62-2,complete-gain-test-60-4,complete-gain-validation-24-4}.json` retain every paired window, token hashes, all source/model/image hashes and the exact packed-image receipt. The first three scopes and the validation panel ran before the final script added payload reporting; their source hashes bind that prior version, which computes the same maps. The final four-test panel carries exact complete-model payload accounting. All GPU panels ran through Bonsai's exclusive wrapper and restored the active service. No Bonsai executable, serving default or numerical contract changed.

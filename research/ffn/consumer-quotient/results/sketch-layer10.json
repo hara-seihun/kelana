@@ -1,0 +1,443 @@
+{
+  "format": "kelana-consumer-sketch/1",
+  "layer": "layer10",
+  "tokens": 8,
+  "weights_sha256": "734b5c1e77681fa72e94395537123eee1f7c5c9cb472024cfd362b614d822ce5",
+  "source_sha256": "53b3fe7b6ad2e4bbdf25ee95aa7b3f22be0f615cbf18db5e87874e59f4b1099a",
+  "scope": "Output-aware code selection; objective and update use only diagonal plus a weight-only rank-r sketch. Full W is used for reporting and offline preparation. No native speed or model quality claim.",
+  "elapsed_seconds": 6.353107097093016,
+  "results": [
+    {
+      "rank": 8,
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 480,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6318172812461853,
+        "worst_row_relative_rms": 0.6599699854850769,
+        "bias": -0.00047170501784421504,
+        "max_abs": 0.3117274045944214
+      },
+      "surrogate_before": 146.42262268066406,
+      "surrogate_after": 144.82760620117188,
+      "acceptance_backtracks": 2,
+      "dense_projection_MAC_fraction": 0.0078125,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 8,
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 402,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6304442286491394,
+        "worst_row_relative_rms": 0.6568887233734131,
+        "bias": -0.0004609480092767626,
+        "max_abs": 0.3032134175300598
+      },
+      "surrogate_before": 146.42262268066406,
+      "surrogate_after": 143.9872589111328,
+      "acceptance_backtracks": 13,
+      "dense_projection_MAC_fraction": 0.0390625,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 8,
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 320,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22162482142448425,
+        "worst_row_relative_rms": 0.23358488082885742,
+        "bias": -7.406975782942027e-05,
+        "max_abs": 0.1067827120423317
+      },
+      "surrogate_before": 17.745410919189453,
+      "surrogate_after": 17.678977966308594,
+      "acceptance_backtracks": 2,
+      "dense_projection_MAC_fraction": 0.0078125,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 8,
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 288,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22149555385112762,
+        "worst_row_relative_rms": 0.23391640186309814,
+        "bias": -7.57453017286025e-05,
+        "max_abs": 0.11229690164327621
+      },
+      "surrogate_before": 17.745410919189453,
+      "surrogate_after": 17.636688232421875,
+      "acceptance_backtracks": 14,
+      "dense_projection_MAC_fraction": 0.040625,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 8,
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 288,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09413816034793854,
+        "worst_row_relative_rms": 0.10056275129318237,
+        "bias": 4.4701260776491836e-05,
+        "max_abs": 0.04191073402762413
+      },
+      "surrogate_before": 3.256913661956787,
+      "surrogate_after": 3.246263027191162,
+      "acceptance_backtracks": 2,
+      "dense_projection_MAC_fraction": 0.0078125,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 8,
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 252,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09411393105983734,
+        "worst_row_relative_rms": 0.10070991516113281,
+        "bias": 4.7498000640189275e-05,
+        "max_abs": 0.04268360882997513
+      },
+      "surrogate_before": 3.256913661956787,
+      "surrogate_after": 3.2413742542266846,
+      "acceptance_backtracks": 13,
+      "dense_projection_MAC_fraction": 0.0390625,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 32,
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 512,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6264528036117554,
+        "worst_row_relative_rms": 0.6562121510505676,
+        "bias": -0.00040258574881590903,
+        "max_abs": 0.3131380081176758
+      },
+      "surrogate_before": 146.74777221679688,
+      "surrogate_after": 142.9072265625,
+      "acceptance_backtracks": 1,
+      "dense_projection_MAC_fraction": 0.025,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 32,
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 722,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6261192560195923,
+        "worst_row_relative_rms": 0.6505858302116394,
+        "bias": -0.0003070093225687742,
+        "max_abs": 0.3243296146392822
+      },
+      "surrogate_before": 146.74777221679688,
+      "surrogate_after": 141.89736938476562,
+      "acceptance_backtracks": 9,
+      "dense_projection_MAC_fraction": 0.13125,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 32,
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 512,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.21991078555583954,
+        "worst_row_relative_rms": 0.23188164830207825,
+        "bias": -0.00010761030716821551,
+        "max_abs": 0.10932858288288116
+      },
+      "surrogate_before": 17.728832244873047,
+      "surrogate_after": 17.429630279541016,
+      "acceptance_backtracks": 1,
+      "dense_projection_MAC_fraction": 0.025,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 32,
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 676,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.21975493431091309,
+        "worst_row_relative_rms": 0.23116400837898254,
+        "bias": -0.00010934194142464548,
+        "max_abs": 0.1123725175857544
+      },
+      "surrogate_before": 17.728832244873047,
+      "surrogate_after": 17.354585647583008,
+      "acceptance_backtracks": 9,
+      "dense_projection_MAC_fraction": 0.13125,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 32,
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 512,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09342526644468307,
+        "worst_row_relative_rms": 0.09959002584218979,
+        "bias": 1.234791398019297e-05,
+        "max_abs": 0.04526771232485771
+      },
+      "surrogate_before": 3.2532708644866943,
+      "surrogate_after": 3.2033889293670654,
+      "acceptance_backtracks": 1,
+      "dense_projection_MAC_fraction": 0.025,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 32,
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 654,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09337953478097916,
+        "worst_row_relative_rms": 0.10000652074813843,
+        "bias": 2.8418469810276292e-05,
+        "max_abs": 0.047053489834070206
+      },
+      "surrogate_before": 3.2532708644866943,
+      "surrogate_after": 3.190110683441162,
+      "acceptance_backtracks": 9,
+      "dense_projection_MAC_fraction": 0.13125,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 128,
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 512,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6191961765289307,
+        "worst_row_relative_rms": 0.6489383578300476,
+        "bias": -0.00040027452632784843,
+        "max_abs": 0.2978540062904358
+      },
+      "surrogate_before": 147.018310546875,
+      "surrogate_after": 139.44088745117188,
+      "acceptance_backtracks": 1,
+      "dense_projection_MAC_fraction": 0.1,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 128,
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 1274,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6116002202033997,
+        "worst_row_relative_rms": 0.639456570148468,
+        "bias": -0.0003923267940990627,
+        "max_abs": 0.2931021749973297
+      },
+      "surrogate_before": 147.018310546875,
+      "surrogate_after": 135.99075317382812,
+      "acceptance_backtracks": 6,
+      "dense_projection_MAC_fraction": 0.45,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 128,
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 512,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.21738170087337494,
+        "worst_row_relative_rms": 0.22980502247810364,
+        "bias": -8.672184776514769e-05,
+        "max_abs": 0.11344097554683685
+      },
+      "surrogate_before": 17.710453033447266,
+      "surrogate_after": 16.9428653717041,
+      "acceptance_backtracks": 1,
+      "dense_projection_MAC_fraction": 0.1,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 128,
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 1356,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.21545077860355377,
+        "worst_row_relative_rms": 0.22749388217926025,
+        "bias": -6.937842408660799e-05,
+        "max_abs": 0.10901357978582382
+      },
+      "surrogate_before": 17.710453033447266,
+      "surrogate_after": 16.5877685546875,
+      "acceptance_backtracks": 5,
+      "dense_projection_MAC_fraction": 0.425,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 128,
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changed_codes": 512,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09247635304927826,
+        "worst_row_relative_rms": 0.09862641245126724,
+        "bias": 1.3625950487039518e-05,
+        "max_abs": 0.04569319263100624
+      },
+      "surrogate_before": 3.257458209991455,
+      "surrogate_after": 3.119075059890747,
+      "acceptance_backtracks": 1,
+      "dense_projection_MAC_fraction": 0.1,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    },
+    {
+      "rank": 128,
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changed_codes": 1338,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09170180559158325,
+        "worst_row_relative_rms": 0.09724421799182892,
+        "bias": 9.117900845012628e-06,
+        "max_abs": 0.047122493386268616
+      },
+      "surrogate_before": 3.257458209991455,
+      "surrogate_after": 3.054647922515869,
+      "acceptance_backtracks": 6,
+      "dense_projection_MAC_fraction": 0.45,
+      "cost_scope": "Two rank-r projections for gradient plus one per proposed update, including backtracking; ignores sorting, scalar work, launches, and traffic. No speed claim."
+    }
+  ]
+}

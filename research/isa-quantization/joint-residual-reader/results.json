@@ -1,0 +1,26 @@
+{
+  "method": "all-three Q3 group128 calibrated source + source mean-Jacobian residual; per-output signed Q8 correction, FP16 row scales and intercept",
+  "model_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+  "q3_sha256": "6712828b890dc6ea6b9867e5e3f6b7a49ad7135e1a50cf867b9f0bd703bc8510",
+  "correction_sha256": "d48cf56ca6d8bbeb204eefaabb8b203b62086a70df3e5e07838cd09468ea77ea",
+  "q3_payload_bytes": 3686448,
+  "correction_payload_bytes": 1052672,
+  "total_payload_bytes": 4739120,
+  "q4_payload_bytes": 4866096,
+  "scores": {
+    "train": {
+      "q3": 0.31181958592691206,
+      "q3_corrected": 0.24915939393070774,
+      "q4": 0.16516215114333083,
+      "correction_only_rms": 0.7990498517972701
+    },
+    "held": {
+      "q3": 0.308117091250262,
+      "q3_corrected": 0.24942199852128585,
+      "q4": 0.16252627003526118,
+      "correction_only_rms": 0.8095039374217152
+    }
+  },
+  "online_products": 10485760,
+  "provenance": "separate previously inspected validation; trained Jacobian averages and bias use 1024 train states"
+}

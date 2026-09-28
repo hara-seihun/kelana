@@ -1,0 +1,243 @@
+{
+  "format": "response-codebooks-joint/1",
+  "fixture": "layer27-self_attn_q_proj.npz",
+  "fixture_sha256": "330b61bdd93a57a109c84e41103c8e059b3c2c53ee221f547d71b97d0ea9bb0c",
+  "manifest_sha256": "51f0ca43ccbc52097bafe212a2aa10786cfa1579db63cca7811a6a390860dbbd",
+  "source_hashes": {
+    "study.py": "abd3905f267dccedd4be161318acd6ab330be3cf32dc353050f4607ae10423d9",
+    "joint.py": "f16b24b12b95d467ec756e142368c88d8dd74d2ef1acb170166dc63b5c246a00",
+    "wire.py": "fa66d877b50680edfe9bc3bc7deb7c8115f7f0ebdc2f168acaf20f2399397b7c",
+    "float_model.py": "2d762210b0dc2825d7ec23450eb20bb0f3b0c6d80f42a5f4ff30879161738720",
+    "kproj.py": "acb51e32db82587ee0abbc6bdf76c8f40823a79c90f623ebe77eca3d4ccb4de8"
+  },
+  "grouping": "contiguous equal-sized segments; each group has one shared codebook and one paid FP32 unit",
+  "dictionary_training": "Lloyd in average train-input covariance per group; labels minimize their own segment train-input covariance",
+  "selection": "smallest held-row train-input response RMS at <=0.9 paid bits/weight",
+  "selected_on_train": "length8-k64-groups2-exceptions0-affine1",
+  "selected_validation_relative_rms": 0.3615908345196368,
+  "row_split": "numpy default_rng(78123).permutation(rows); first floor(.75*rows) train, rest held",
+  "input_split": "WikiText train 2048 inputs, validation 1024 inputs; test unused",
+  "numerical_boundary": "FP32 output response, optionally affine; no downstream model quality",
+  "methods": {
+    "length16-k256-groups1-exceptions0-affine0": {
+      "total_bits_per_weight": 0.6406402587890625,
+      "dictionary_bytes": 4100,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.4206554196475065,
+      "validation_input_held_rows_relative_rms": 0.45298670304923044
+    },
+    "length16-k256-groups1-exceptions0-affine1": {
+      "total_bits_per_weight": 0.6562652587890625,
+      "dictionary_bytes": 4100,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3933974693327193,
+      "validation_input_held_rows_relative_rms": 0.42287793123710743
+    },
+    "length16-k256-groups1-exceptions1-affine0": {
+      "total_bits_per_weight": 0.8281402587890625,
+      "dictionary_bytes": 4100,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.3864995424764256,
+      "validation_input_held_rows_relative_rms": 0.4192339818987258
+    },
+    "length16-k256-groups1-exceptions1-affine1": {
+      "total_bits_per_weight": 0.8437652587890625,
+      "dictionary_bytes": 4100,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.3737379252484972,
+      "validation_input_held_rows_relative_rms": 0.4050901821266109
+    },
+    "length16-k256-groups2-exceptions0-affine0": {
+      "total_bits_per_weight": 0.656280517578125,
+      "dictionary_bytes": 8200,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.4166375237421686,
+      "validation_input_held_rows_relative_rms": 0.44356036403872645
+    },
+    "length16-k256-groups2-exceptions0-affine1": {
+      "total_bits_per_weight": 0.671905517578125,
+      "dictionary_bytes": 8200,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3882546774813501,
+      "validation_input_held_rows_relative_rms": 0.41465649193680554
+    },
+    "length16-k256-groups2-exceptions1-affine0": {
+      "total_bits_per_weight": 0.843780517578125,
+      "dictionary_bytes": 8200,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.38023110126510534,
+      "validation_input_held_rows_relative_rms": 0.40953499419488404
+    },
+    "length16-k256-groups2-exceptions1-affine1": {
+      "total_bits_per_weight": 0.859405517578125,
+      "dictionary_bytes": 8200,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.3681796841052168,
+      "validation_input_held_rows_relative_rms": 0.39728513569043206
+    },
+    "length16-k256-groups4-exceptions0-affine0": {
+      "total_bits_per_weight": 0.68756103515625,
+      "dictionary_bytes": 16400,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.40534500646766675,
+      "validation_input_held_rows_relative_rms": 0.43221489119243023
+    },
+    "length16-k256-groups4-exceptions0-affine1": {
+      "total_bits_per_weight": 0.70318603515625,
+      "dictionary_bytes": 16400,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.38526160239681,
+      "validation_input_held_rows_relative_rms": 0.41311386307122816
+    },
+    "length16-k256-groups4-exceptions1-affine0": {
+      "total_bits_per_weight": 0.87506103515625,
+      "dictionary_bytes": 16400,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.37559629261115623,
+      "validation_input_held_rows_relative_rms": 0.4070150671358434
+    },
+    "length16-k256-groups4-exceptions1-affine1": {
+      "total_bits_per_weight": 0.89068603515625,
+      "dictionary_bytes": 16400,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.3657241224951685,
+      "validation_input_held_rows_relative_rms": 0.3972535346063922
+    },
+    "length16-k256-groups8-exceptions0-affine0": {
+      "total_bits_per_weight": 0.7501220703125,
+      "dictionary_bytes": 32800,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.4077334479734945,
+      "validation_input_held_rows_relative_rms": 0.4319352365313782
+    },
+    "length16-k256-groups8-exceptions0-affine1": {
+      "total_bits_per_weight": 0.7657470703125,
+      "dictionary_bytes": 32800,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.38661179328658757,
+      "validation_input_held_rows_relative_rms": 0.40936887374712433
+    },
+    "length16-k256-groups8-exceptions1-affine0": {
+      "total_bits_per_weight": 0.9376220703125,
+      "dictionary_bytes": 32800,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.3776389474546024,
+      "validation_input_held_rows_relative_rms": 0.40456531869231854
+    },
+    "length16-k256-groups8-exceptions1-affine1": {
+      "total_bits_per_weight": 0.9532470703125,
+      "dictionary_bytes": 32800,
+      "table_bytes_per_input": 65536,
+      "table_integer_products_if_int8_input": 262144,
+      "row_table_lookups": 64,
+      "exception_gathers_per_row": 8,
+      "train_input_held_rows_relative_rms": 0.36746216160675543,
+      "validation_input_held_rows_relative_rms": 0.3936505536974351
+    },
+    "length8-k64-groups1-exceptions0-affine0": {
+      "total_bits_per_weight": 0.8769683837890625,
+      "dictionary_bytes": 516,
+      "table_bytes_per_input": 32768,
+      "table_integer_products_if_int8_input": 65536,
+      "row_table_lookups": 128,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3907796331570185,
+      "validation_input_held_rows_relative_rms": 0.4119766721424999
+    },
+    "length8-k64-groups1-exceptions0-affine1": {
+      "total_bits_per_weight": 0.8925933837890625,
+      "dictionary_bytes": 516,
+      "table_bytes_per_input": 32768,
+      "table_integer_products_if_int8_input": 65536,
+      "row_table_lookups": 128,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3461956907720214,
+      "validation_input_held_rows_relative_rms": 0.3691592183642817
+    },
+    "length8-k64-groups2-exceptions0-affine0": {
+      "total_bits_per_weight": 0.878936767578125,
+      "dictionary_bytes": 1032,
+      "table_bytes_per_input": 32768,
+      "table_integer_products_if_int8_input": 65536,
+      "row_table_lookups": 128,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3814996660027303,
+      "validation_input_held_rows_relative_rms": 0.3989670834175724
+    },
+    "length8-k64-groups2-exceptions0-affine1": {
+      "total_bits_per_weight": 0.894561767578125,
+      "dictionary_bytes": 1032,
+      "table_bytes_per_input": 32768,
+      "table_integer_products_if_int8_input": 65536,
+      "row_table_lookups": 128,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3424398806816108,
+      "validation_input_held_rows_relative_rms": 0.3615908345196368
+    },
+    "length8-k64-groups4-exceptions0-affine0": {
+      "total_bits_per_weight": 0.88287353515625,
+      "dictionary_bytes": 2064,
+      "table_bytes_per_input": 32768,
+      "table_integer_products_if_int8_input": 65536,
+      "row_table_lookups": 128,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3826328843945392,
+      "validation_input_held_rows_relative_rms": 0.4020442466214414
+    },
+    "length8-k64-groups4-exceptions0-affine1": {
+      "total_bits_per_weight": 0.89849853515625,
+      "dictionary_bytes": 2064,
+      "table_bytes_per_input": 32768,
+      "table_integer_products_if_int8_input": 65536,
+      "row_table_lookups": 128,
+      "exception_gathers_per_row": 0,
+      "train_input_held_rows_relative_rms": 0.3436667014364107,
+      "validation_input_held_rows_relative_rms": 0.3647816443758921
+    }
+  }
+}

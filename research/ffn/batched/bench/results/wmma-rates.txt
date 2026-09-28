@@ -1,0 +1,7 @@
+gfx1151, 20 CUs, 160 blocks x 256 threads (1280 waves), 4000 iters x 8 unroll
+instruction                   best ms       issues/s   TOPS (2*MAC)
+  (WMMA issues are per wave, sudot4 per lane; MACs per issue: WMMA 4096, sudot4 4)
+wmma_i32_16x16x16_iu8          24.115      6.794e+09          55.66
+wmma_i32_16x16x16_iu4          12.089      1.355e+10         111.02
+wmma_f32_16x16x16_f16          24.152      6.784e+09          55.57
+sudot4 (v_dot4_i32_iu8)         2.856      3.671e+12          29.37

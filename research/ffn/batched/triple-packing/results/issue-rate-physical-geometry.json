@@ -1,0 +1,12 @@
+{
+  "unit": "48 logical ternary rows x 16 tokens x 16 K",
+  "device": "gfx1151",
+  "wgps": 20, "cus": 40, "simds": 80,
+  "timing_units": "Stored per-column values are ns elapsed per per-wave work unit. Dividing by physical_waves_per_simd gives the per-SIMD cost of one instruction; the *_ns_per_simd fields are that division already applied. Samples recorded before the geometry fix carry a waves_per_simd label that is twice the physical value -- see normalize_issue_rate.py.",
+  "rows": [
+    { "waves_per_simd": 1, "iu4x3": 18.3942, "triple": 33.6436, "triple_pow2": 46.7455, "pair_scaled_to_48_rows": 21.1717, "packed_no_decode": 15.7019, "f16_wmma": 12.3795, "iu4_wmma": 6.49725, "valu_op": 0.564352, "physical_waves_per_simd": 1, "f16_wmma_ns_per_simd": 12.3795, "iu4_wmma_ns_per_simd": 6.49725, "valu_op_ns_per_simd": 0.564352, "iu4_mac_per_ns_per_simd": 630.421 },
+    { "waves_per_simd": 2, "iu4x3": 36.2161, "triple": 62.3823, "triple_pow2": 64.7122, "pair_scaled_to_48_rows": 39.9996, "packed_no_decode": 29.3362, "f16_wmma": 24.1165, "iu4_wmma": 12.3645, "valu_op": 0.730594, "physical_waves_per_simd": 2, "f16_wmma_ns_per_simd": 12.0582, "iu4_wmma_ns_per_simd": 6.18225, "valu_op_ns_per_simd": 0.365297, "iu4_mac_per_ns_per_simd": 662.542 },
+    { "waves_per_simd": 4, "iu4x3": 71.4645, "triple": 123.46, "triple_pow2": 114.103, "pair_scaled_to_48_rows": 79.9356, "packed_no_decode": 60.2701, "f16_wmma": 47.8831, "iu4_wmma": 24.1216, "valu_op": 1.42932, "physical_waves_per_simd": 4, "f16_wmma_ns_per_simd": 11.9708, "iu4_wmma_ns_per_simd": 6.03039, "valu_op_ns_per_simd": 0.35733, "iu4_mac_per_ns_per_simd": 679.226 },
+    { "waves_per_simd": 8, "iu4x3": 141.474, "triple": 245.574, "triple_pow2": 226.549, "pair_scaled_to_48_rows": 158.912, "packed_no_decode": 115.878, "f16_wmma": 94.8964, "iu4_wmma": 47.9083, "valu_op": 2.88677, "physical_waves_per_simd": 8, "f16_wmma_ns_per_simd": 11.8621, "iu4_wmma_ns_per_simd": 5.98853, "valu_op_ns_per_simd": 0.360846, "iu4_mac_per_ns_per_simd": 683.974 }
+  ]
+}

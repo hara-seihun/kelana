@@ -1,0 +1,17 @@
+# Use the input scales already in the binary MLP image
+
+Layer 0's binary gate and up projections each have a paid 1,024-element `scale_pre` vector. The preceding [output-scale fit](MLP-SCALE-FIT.md) left both frozen. Training these two vectors jointly with the 3,072 gate, 3,072 up and 1,024 down output scales lowers held original-producer post-MLP relative squared error from .63294 to **.62089**. The packed signs, factor dimensions, scale-slot count and online operations do not change. This nearly matches the paid rank-32 reduced-rank correction's .61904, without its 264,192 extra bytes or 131,072 factor terms per token.
+
+| Original-producer positions used for fitting | Steps per arm | Binary held error | Output-only held error | Input plus output held error | Joint train error |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 512 | 8 | .657519 | .646102 | .636477 | .494318 |
+| 1,024 | 16 | .657519 | .636484 | .624124 | .484077 |
+| 2,048 | 16 | .657519 | .632939 | **.620891** | .489482 |
+
+Both arms start from the same binary image, see the same original-producer BF16 layer-0 inputs and original FP32 MLP target, and use the same full-batch Adam settings: 16 steps at .025 and a .002 penalty on the mean squared log gain of each trained scale vector. The 512-row probe uses eight steps. No held position enters an optimizer or selects a checkpoint. The output-only 2,048-row arm reproduces the preceding report's .632939 stored-scale score; the joint arm adds the two input scale vectors. FP16 rounding happens before scoring, and the saved three projection NPZs include the rounded input and output scales. The repeatedly inspected 1,024-position validation capture is held out from these fits, but is not a fresh model-selection corpus.
+
+For a frozen binary factor image `W = diag(s_post) U V diag(s_pre)`, changing `s_pre` to `s_pre * exp(a)` makes the consumer evaluate the same factor path on `x * exp(a)`. Gate and up have different `a`; a changed gate input vector therefore cannot in general be replaced by a shared input redefinition or by an output-row gain. A down input gain would duplicate the up output gain in the SwiGLU product and is not trained here. All scale multiplications were already part of the binary program, so this coordinate adds neither storage nor online work relative to that image. This is an algebraic identity of the intended real-valued factor map, not a claim of bit-identical BF16 model execution.
+
+The result is a response-fit Pareto point, not a language-quality or native-speed result. The quantized prefix and narrow V/O change the input distribution, while the original-producer squared-error target ignores gold-token loss. The decisive next comparison trains these existing input/output scale slots after narrow V/O on a quantized layer-0 producer, then evaluates the paid image through the complete quantized continuation against gold loss. An equal-byte joint sign/code fit is the next more expressive control if scale coordinates saturate there.
+
+`mlp_input_scale_fit.py --train-rows 2048 --steps 16` regenerates `/path/to/workspace/data/kelana-subbit/full-model/mlp-input-scale-2048.json` and `mlp-input-scale-2048-image/`. Receipts for 512 and 1,024 train rows and their packed images live beside it. Each receipt records the source SHA-256, six source image hashes, capture hash, per-step train scores and three output image hashes. This was a CPU experiment; Bonsai's executable and resident service were untouched.

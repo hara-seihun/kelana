@@ -1,0 +1,86 @@
+{
+  "quip_e8p_rank0": {
+    "image_sha256": "d90b8ce2e6f7c9fa8be15ca07e415b613f620baa05291b5297ee25dfdfae9931",
+    "bytes": 4130,
+    "codes": 4096,
+    "su_sv_signs": 32,
+    "global_fp16_scale": 2,
+    "fp16_lowrank": 0,
+    "rank": 0,
+    "generic_e8_abs_table_bytes": 1024,
+    "full_grid_preparation_bytes_fp32": 2097152,
+    "relative_squared_response_error": {
+      "train": 0.019867345655930704,
+      "held": 0.02209644934275664
+    }
+  },
+  "quip_e8p_rank4": {
+    "image_sha256": "d4494145a82eeccb2bae2112a12f0292da3087cc9efb1097d82873ebee38335c",
+    "bytes": 6178,
+    "codes": 4096,
+    "su_sv_signs": 32,
+    "global_fp16_scale": 2,
+    "fp16_lowrank": 2048,
+    "rank": 4,
+    "generic_e8_abs_table_bytes": 1024,
+    "full_grid_preparation_bytes_fp32": 2097152,
+    "relative_squared_response_error": {
+      "train": 0.00897853384918339,
+      "held": 0.009796548797634832
+    }
+  },
+  "quip_e8p_rank5": {
+    "image_sha256": "ae85eaefd3e83a897429305ced08b0b4e66ed966a52ab0e6e644c64b39fd1e08",
+    "bytes": 6690,
+    "codes": 4096,
+    "su_sv_signs": 32,
+    "global_fp16_scale": 2,
+    "fp16_lowrank": 2560,
+    "rank": 5,
+    "generic_e8_abs_table_bytes": 1024,
+    "full_grid_preparation_bytes_fp32": 2097152,
+    "relative_squared_response_error": {
+      "train": 0.00848497093828824,
+      "held": 0.009526805935833048
+    }
+  },
+  "quip_rvq3_rank0": {
+    "image_sha256": "89e2e0b5b07fb749db77a7d94efbbdb9c34b83d7d111633401fdc92d315bc597",
+    "bytes": 6178,
+    "e8p_codes": 4096,
+    "e81b_residual_codes": 2048,
+    "su_sv_signs": 32,
+    "global_fp16_scale": 2,
+    "generic_e8_abs_table_bytes": 1024,
+    "generic_e81b_grid_bytes": 4096,
+    "rank": 0,
+    "relative_squared_response_error": {
+      "train": 0.005977048186103418,
+      "held": 0.00667171383960493
+    }
+  },
+  "refit_scalar_6688": {
+    "image_sha256": "d50b25117f3545aaff2b3e66397e3cfd397f9f299f10adf71ced7b447c0cf881",
+    "bytes": 6688,
+    "codes": 6160,
+    "fp16_row_grids": 512,
+    "row_mask": 16,
+    "upgraded_rows": 1,
+    "relative_squared_response_error": {
+      "train": 0.007746394347965562,
+      "held": 0.008723903710023191
+    }
+  },
+  "refit_scalar_6176": {
+    "image_sha256": "ce94af65a0e7666e64778e23e05dd1325353d474cf7c8a239988ca1f4723bc63",
+    "bytes": 6176,
+    "codes": 5648,
+    "fp16_row_grids": 512,
+    "row_mask": 16,
+    "upgraded_rows": 97,
+    "relative_squared_response_error": {
+      "train": 0.009688397618200851,
+      "held": 0.010877023492461852
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "window": 0,
+  "arms": {
+    "K2V4": {
+      "peak_bytes": 361856,
+      "final_bytes": 307200,
+      "retained": [
+        {
+          "t": 128,
+          "teacher_sse": 0.014293690078394226,
+          "teacher_sq": 39.265113267954014,
+          "relative_sq": 0.0003640302774845154,
+          "output_sha256": "04eb1d8f1a97f074b0f3ee38e6922f49a65e7833e1e36423ba253aa4404a38bd"
+        },
+        {
+          "t": 256,
+          "teacher_sse": 0.01187151515197512,
+          "teacher_sq": 44.37480821076036,
+          "relative_sq": 0.00026752825827642494,
+          "output_sha256": "ed55b42444aaff984637941bb146a4e47cf144695c5fd2d9f810f3f6790b4fb3"
+        }
+      ]
+    },
+    "K4V2": {
+      "peak_bytes": 362112,
+      "final_bytes": 315392,
+      "retained": [
+        {
+          "t": 128,
+          "teacher_sse": 0.005348571946111505,
+          "teacher_sq": 39.265113267954014,
+          "relative_sq": 0.0001362168984363203,
+          "output_sha256": "0ceb5dc7f7f98ca9ed39acf7a0272c6e4859a768c9dc8f0167ee88009c1b904b"
+        },
+        {
+          "t": 256,
+          "teacher_sse": 0.01698158474967353,
+          "teacher_sq": 44.37480821076036,
+          "relative_sq": 0.00038268525396253315,
+          "output_sha256": "f25270584d8d731a59911a2845e07592ced94a3064ac6853337d0ded7e873518"
+        }
+      ]
+    }
+  },
+  "fixed_controls": {
+    "K2V2": [
+      {
+        "t": 128,
+        "candidate_teacher_sse": 0.022286945168834837,
+        "control_teacher_sse": 0.02381541300717438,
+        "candidate_control_sse": 0.004783096589303926,
+        "teacher_sq": 39.26511330322819,
+        "candidate_output_sha256": "dbd129d0c0a7228c4b92c3bbd4b56fb6c3c65af441336a89bd4868155a315eb0",
+        "control_max_abs_vs_paid": 2.980232238769531e-07
+      },
+      {
+        "t": 256,
+        "candidate_teacher_sse": 0.03249115543983118,
+        "control_teacher_sse": 0.033375712894475384,
+        "candidate_control_sse": 0.010338243658760658,
+        "teacher_sq": 44.37480814613907,
+        "candidate_output_sha256": "270cc5c3ef1bf7019dcab8af8fb226b2c45747fea6014e535702bcf940423524",
+        "control_max_abs_vs_paid": 5.066394805908203e-07
+      }
+    ],
+    "K4V4": [
+      {
+        "t": 128,
+        "kivi4_teacher_sse": 0.00035081298411164877,
+        "kivi4_output_sha256": "5614bbeb768fda9b773d56cd0a19c948664ba28ad216eca44a5f2ba7ac807ea0",
+        "teacher_sq": 39.26511330322819,
+        "state_sha256": [
+          "0a0f15420d74d1341efe393f7b4b13f8b4e859e53660138be8fcbf5853d227c9",
+          "801b85c0835327f37b9ecc4133d137b108fc81133607e11343f717bf487179f1",
+          "1a50e57a32f848e735754babba1f6ac479b79fda17dba48ab8cbc0738900de6d",
+          "ab37eb1ffb8606c47e2a28d7b66a98450f2492b854f81af7de824b6a1f212a23",
+          "3adbfa0c656f301d17853aada050ff2ed3656554ba39db593d87bc99f249eca5",
+          "21ef9958ff69e2a8aff7d8ccee16bd1da0cbbe63e0c17a6b570b3e60823580d0",
+          "85be587a702144affea378aacd1d711d59c2f5b7496a2d6af3bbad4b947af6fe",
+          "a87ea7610ba7e900f8773f16069d94af19d1cf831d13287de8052aafafeeaf71"
+        ]
+      },
+      {
+        "t": 256,
+        "kivi4_teacher_sse": 0.0006573149483321411,
+        "kivi4_output_sha256": "826cab933c79d6ab512be9fc2c8b9e5efab71b5d39aea76d6eceef2b66b8c306",
+        "teacher_sq": 44.37480814613907,
+        "state_sha256": [
+          "7a9b34c18f2ce687c9eedc6d1d183d8a391a8c2f354ea88af70cb80a4335a45c",
+          "49eeed24f9c9f2af9fd5083abf9adc941f77b31026d1bdb7ed35bcf745ce93b2",
+          "acf2ad4ed444acac51dd47046b553c4204f8f6bdb06a276827706cd439c2a10b",
+          "944fcd27e3612d352fdbc5c5479011b9a060f3c0a59170a66fb455447d0cb6f2",
+          "57e52c5ee8af9970f58b25f0fa4e918ec199f0a5594a3af52a0b913cd70ed3a4",
+          "199083c8af1d5c7a21b99f328d35b335b5f9c9b0acc4eb9768d823285d8588a9",
+          "401859799b27086696ad7c051514f2e14709f7e597b59919a65c02d7062cdcb1",
+          "e2b80235bcfb998e6652090c209ae9293ad7f133f04fb3a7cd947da4b6d45ec2"
+        ]
+      }
+    ]
+  },
+  "controls_sha256": {
+    "K2V2": "d71405c68664c6b6cf981c3123d1f327120d7f10185d953a084015acb7292b92",
+    "K4V4": "f196c9ca71c2178c1747a69bec6789f155070e1c637d7e67361293d81b9f563b"
+  }
+}

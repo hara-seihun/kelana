@@ -1,0 +1,307 @@
+{
+ "format": "kelana-resource-case/2",
+ "id": "perm-vs-iu4-wmma",
+ "title": "PERM lookup-and-accumulate against V_WMMA_I32_16X16X16_IU4, in service slots",
+ "question": "For the register-resident sub-region only, is there a sufficient condition under which the IU4 WMMA path's issue-slot demand sits at or below a proved floor on the PERM observer family's demand?",
+ "not_the_question": "Whether IU4 WMMA is faster, whether it dominates, or whether the PERM family is impossible. None of those is answered here.",
+ "profile": "../profile.json",
+ "facts": "../facts.json",
+
+ "operation_model": "MODEL.PERM_OBSERVER",
+
+ "comparison_boundary": {
+  "region": "Register-resident inner arithmetic only. Every operand already in registers, no memory traffic, no LDS, no scales, no epilogue.",
+  "excluded_on_the_perm_side": ["byte-lane drain every eight pairs", "online table construction", "the 85.00 MB selector stream", "activation staging"],
+  "excluded_on_the_wmma_side": ["A and B fragment layout and replication", "activation staging", "epilogue"],
+  "consequence": "Neither side is charged for all of its work, so this is a comparison of sub-regions and not of two complete kernels. The excluded amounts are not bounded on either side, so the inequality below does not carry to whole kernels.",
+  "output_contracts_differ": "The PERM family leaves partial sums in packed bytes needing a drain; the WMMA path leaves int32 accumulators. Treating the two as the same workload is part of the family restriction, not a fact."
+ },
+
+ "premises": [
+  "FACT:SEM.PERM.SELECTOR_ARITY",
+  "FACT:ENC.PERM.NO_ACCUMULATOR",
+  "FACT:ENC.WORD_COMBINER_GRAMMAR",
+  "FACT:ENC.VOPD.ELIGIBLE_SET",
+  "FACT:CAP.WMMA.IU4",
+  "FACT:HAZ.WMMA.SCHEDULING",
+  "ASSUME:SLOT.POSITIVE",
+  "ASSUME:SLOT.UNIT_VALU",
+  "ASSUME:SLOT.VOPD_PAIR_IS_ONE",
+  "ASSUME:MODEL.PERM_OBSERVER",
+  "ASSUME:DOMAIN.PERM_SEPARATION",
+  "ASSUME:MODEL.WORD_COMBINER_GRAMMAR",
+  "ASSUME:MODEL.PARTIALS_IRREDUNDANT",
+  "ASSUME:MODEL.ACCUMULATOR_REQUIRED"
+ ],
+
+ "quantities": [
+  {"id": "perm_selector_functions", "expr": "14", "tier": "architectural", "from": "FACT:SEM.PERM.SELECTOR_ARITY.distinct_functions_per_destination_byte"},
+  {"id": "perm_dest_bytes", "expr": "4", "tier": "architectural", "from": "FACT:SEM.PERM.SELECTOR_ARITY.destination_bytes"},
+  {"id": "separated_patterns_witness", "expr": "25", "tier": "family-restriction", "note": "classes separated by the A4 witness triple (-7,-6,-4); see DOMAIN.PERM_SEPARATION"},
+  {"id": "trits_per_group", "expr": "log3_floor(perm_selector_functions)", "tier": "family-restriction", "note": "the arity caps the class count at 14; the separation premise supplies 25 > 14 for three trits, so a group carries at most two"},
+  {"id": "mac_per_perm_per_lane", "expr": "perm_dest_bytes * trits_per_group", "tier": "family-restriction"},
+
+  {"id": "combiner_word_sources", "expr": "3", "tier": "architectural", "from": "FACT:ENC.WORD_COMBINER_GRAMMAR.max_word_sources"},
+  {"id": "words_removed_per_combiner", "expr": "combiner_word_sources - 1", "tier": "architectural"},
+
+  {"id": "k_assembled", "expr": "64", "tier": "family-restriction", "note": "PERM results per accumulation round in the assembled core kernel's inner loop"},
+
+  {"id": "req_k1", "expr": "(1 + ceil(1 / words_removed_per_combiner)) / (1 * mac_per_perm_per_lane)", "tier": "family-restriction"},
+  {"id": "req_k2", "expr": "(2 + ceil(2 / words_removed_per_combiner)) / (2 * mac_per_perm_per_lane)", "tier": "family-restriction"},
+  {"id": "req_k3", "expr": "(3 + ceil(3 / words_removed_per_combiner)) / (3 * mac_per_perm_per_lane)", "tier": "family-restriction"},
+  {"id": "req_k64", "expr": "(k_assembled + ceil(k_assembled / words_removed_per_combiner)) / (k_assembled * mac_per_perm_per_lane)", "tier": "family-restriction"},
+
+  {"id": "rem_k1", "expr": "(1 + ceil(0 / words_removed_per_combiner)) / (1 * mac_per_perm_per_lane)", "tier": "family-restriction"},
+  {"id": "rem_k2", "expr": "(2 + ceil(1 / words_removed_per_combiner)) / (2 * mac_per_perm_per_lane)", "tier": "family-restriction"},
+  {"id": "rem_k3", "expr": "(3 + ceil(2 / words_removed_per_combiner)) / (3 * mac_per_perm_per_lane)", "tier": "family-restriction"},
+  {"id": "rem_k5", "expr": "(5 + ceil(4 / words_removed_per_combiner)) / (5 * mac_per_perm_per_lane)", "tier": "family-restriction"},
+  {"id": "rem_k64", "expr": "(k_assembled + ceil((k_assembled - 1) / words_removed_per_combiner)) / (k_assembled * mac_per_perm_per_lane)", "tier": "family-restriction"},
+
+  {"id": "perm_floor_required_accumulator", "expr": "min(req_k1, req_k2, req_k3, req_k64)", "tier": "family-restriction", "note": "infimum over all k; attained at every even k"},
+  {"id": "perm_floor_removable_zero_any_k", "expr": "min(rem_k1, rem_k2, rem_k3, rem_k5, rem_k64)", "tier": "family-restriction", "note": "infimum over k >= 1, attained at k = 1 where no combining happens at all"},
+  {"id": "perm_floor_removable_zero_k_at_least_2", "expr": "min(rem_k2, rem_k3, rem_k5, rem_k64)", "tier": "family-restriction", "note": "infimum over k >= 2, attained at k = 3"},
+
+  {"id": "wmma_mac_per_lane", "expr": "128", "tier": "architectural", "from": "FACT:CAP.WMMA.IU4.mac_per_lane_wave32"},
+  {"id": "sigma_sufficient_required_accumulator", "expr": "wmma_mac_per_lane * perm_floor_required_accumulator", "tier": "family-restriction"},
+  {"id": "sigma_sufficient_removable_k_at_least_2", "expr": "wmma_mac_per_lane * perm_floor_removable_zero_k_at_least_2", "tier": "family-restriction"},
+  {"id": "sigma_sufficient_removable_any_k", "expr": "wmma_mac_per_lane * perm_floor_removable_zero_any_k", "tier": "family-restriction"},
+
+  {"id": "vopd_perm_eligible", "expr": "0", "tier": "architectural", "from": "FACT:ENC.VOPD.ELIGIBLE_SET.perm_eligible"},
+  {"id": "vopd_add3_eligible", "expr": "0", "tier": "architectural", "from": "FACT:ENC.VOPD.ELIGIBLE_SET.add3_eligible"},
+  {"id": "vopd_words_removed_per_slot", "expr": "2", "tier": "family-restriction", "note": "one VOPD slot packs two V_DUAL_ADD_NC_U32, each removing one word"},
+
+  {"id": "lanes_per_simd", "expr": "32", "tier": "architectural"},
+  {"id": "simd32_per_device", "expr": "80", "tier": "architectural", "note": "profile.cost_space.normalization.geometry.simd32"}
+ ],
+
+ "derivation": [
+  {
+   "step": 1,
+   "tier": "architectural",
+   "direction": "capacity",
+   "of": "V_PERM_B32",
+   "uses": ["FACT:SEM.PERM.SELECTOR_ARITY"],
+   "depends_on": [],
+   "argument": "The BYTE_PERMUTE pseudocode partitions all 256 selector values into 14 functions of the two data operands: eight byte projections, four sign replications, constant 0x00 and constant 0xff. A destination byte whose selector is one fixed code therefore realises one of 14 functions, and four such bytes realise at most 14 each.",
+   "conclusion": "a fixed selector byte names at most 14 distinct functions per destination byte",
+   "check": "perm_selector_functions == 14",
+   "explicitly_not_concluded": "Nothing about how many trits a group may carry. That needs a separation argument over a declared activation domain and weight family, which this step does not have."
+  },
+  {
+   "step": 2,
+   "tier": "family-restriction",
+   "direction": "lower-bound",
+   "of": "perm-family",
+   "uses": ["ASSUME:MODEL.PERM_OBSERVER", "ASSUME:DOMAIN.PERM_SEPARATION"],
+   "depends_on": [1],
+   "argument": "A group of g trits needs one selector code per equivalence class of its 3^g weight patterns under 'agree on every activation in the domain'. With no additional weight-dependent transformation, differing contribution functions require different codes. A prepared additive bias does not evade this: compare the value at an activation with its value at zero. DOMAIN.PERM_SEPARATION supplies such a witness for three-trit groups over A4 activations: the triple (-7, -6, -4) gives 25 distinct sums and every target linear form is zero at zero. Their differences from zero therefore give at least 25 normalized function classes, and 25 > 14. Hence g <= 2, four destination bytes carry two products each, and one PERM carries at most 8 lane-MAC.",
+   "conclusion": "mac_per_perm_per_lane <= 8 on the declared domain and weight family",
+   "check": "mac_per_perm_per_lane == 8",
+   "scope": "Fails outright on a domain or weight family whose patterns collapse into 14 or fewer classes. The all-zero activation vector separates nothing; it neither refutes nor supports the bound, because the premise is existential.",
+   "witness_is_not_a_worst_case": "25 is what one triple achieves, not a minimum over activations. A minimum would be 1 and would be the wrong quantifier."
+  },
+  {
+   "step": 3,
+   "tier": "architectural",
+   "direction": "capacity",
+   "of": "the declared word combiners",
+   "uses": ["FACT:ENC.PERM.NO_ACCUMULATOR", "FACT:ENC.WORD_COMBINER_GRAMMAR"],
+   "depends_on": [],
+   "argument": "V_PERM_B32's three sources are two data words and a selector word, none of them an accumulator, so a PERM result cannot fold itself in. Each opcode in the declared grammar reads at most three whole 32-bit words and writes one, so it removes at most two live words.",
+   "conclusion": "words_removed_per_combiner == 2 for the declared grammar",
+   "check": "words_removed_per_combiner == 2",
+   "explicitly_not_concluded": "Nothing about VALU instructions in general. Operand-field count is not word arity: the widest explicit input field in this inventory is 256 bits, and implicit EXEC, MODE and the lane-crossing modifiers are not fields. A reduction bound over all VALU instructions does not follow and is not claimed."
+  },
+  {
+   "step": 4,
+   "tier": "family-restriction",
+   "direction": "lower-bound",
+   "of": "perm-family",
+   "uses": ["ASSUME:MODEL.WORD_COMBINER_GRAMMAR", "ASSUME:MODEL.PARTIALS_IRREDUNDANT", "ASSUME:SLOT.POSITIVE", "ASSUME:SLOT.UNIT_VALU"],
+   "depends_on": [2, 3],
+   "argument": "The k PERM results are k separately required live words and no rearrangement collapses them. With a live accumulator that must be included, k words have to be removed, at most two per combiner, so at least ceil(k/2) combiners. With a removable zero accumulator only k-1 words must be removed, giving ceil((k-1)/2). The two forms coincide at even k and differ by one combiner at odd k, so the difference is a parity effect rather than a uniform offset.",
+   "conclusion": "slots >= k + ceil(k/2) with a required accumulator, k + ceil((k-1)/2) without",
+   "check": "req_k3 > rem_k3"
+  },
+  {
+   "step": 5,
+   "tier": "family-restriction",
+   "direction": "lower-bound",
+   "of": "perm-family",
+   "uses": ["ASSUME:MODEL.ACCUMULATOR_REQUIRED"],
+   "depends_on": [4],
+   "argument": "Divide by the 8k lane-MAC a round delivers, then take the infimum over k, because a valid floor must hold at whatever k the schedule chooses. With the accumulator required the value is exactly 3/16 at even k and strictly above it at odd k, so the infimum is 3/16. With a removable zero the value is 3/16 at even k and (3k-1)/(16k) at odd k, which rises with k from 1/8 at k=1; the infimum over all k is therefore 1/8, attained at k=1 where a single PERM result is the answer and nothing is combined at all. Restricting to k >= 2 moves the infimum to 1/6 at k=3. The finite minima below suffice because both sequences are monotone in the odd branch and constant on the even branch.",
+   "conclusion": "the floor is 3/16 with a required accumulator, 1/6 with a removable zero and k >= 2, and 1/8 with a removable zero and k = 1 permitted",
+   "check": "perm_floor_required_accumulator == 3/16"
+  },
+  {
+   "step": 5.5,
+   "tier": "family-restriction",
+   "direction": "lower-bound",
+   "of": "perm-family",
+   "uses": [],
+   "depends_on": [5],
+   "argument": "Recording the two weaker floors explicitly, because dropping MODEL.ACCUMULATOR_REQUIRED does not leave the conclusion intact. The k=1 case is degenerate: it is one PERM whose four bytes are the answer, which is the perm-issue-ceiling kernel the owning experiment already excludes from the family because it never accumulates.",
+   "conclusion": "perm_floor_removable_zero_k_at_least_2 == 1/6 and perm_floor_removable_zero_any_k == 1/8",
+   "check": "perm_floor_removable_zero_any_k == 1/8"
+  },
+  {
+   "step": 6,
+   "tier": "family-restriction",
+   "direction": "capacity",
+   "of": "dual issue",
+   "uses": ["FACT:ENC.VOPD.ELIGIBLE_SET", "ASSUME:SLOT.VOPD_PAIR_IS_ONE"],
+   "depends_on": [],
+   "argument": "Seventeen opcodes carry a VOPD encoding and all are named V_DUAL_*. V_PERM_B32 is not among them, so each PERM occupies a slot alone. V_ADD3_U32 is not either, but V_DUAL_ADD_NC_U32 is, and one VOPD slot holding two of them removes two words, exactly what one V_ADD3_U32 removes.",
+   "conclusion": "granting dual issue wherever the eligible set allows it leaves the combiner slot count unchanged",
+   "check": "vopd_words_removed_per_slot == words_removed_per_combiner"
+  },
+  {
+   "step": 7,
+   "tier": "architectural",
+   "direction": "encoding-legality",
+   "of": "wmma-path",
+   "uses": ["FACT:CAP.WMMA.IU4", "FACT:HAZ.WMMA.SCHEDULING"],
+   "depends_on": [],
+   "argument": "One V_WMMA_I32_16X16X16_IU4 delivers 4096 products per wave, 128 per wave32 lane. Section 7.9.1 requires a filler only when a result D overlaps the next instruction's A or B; accumulating D into the next C carries no correctness requirement, so a chain of accumulating WMMA instructions is schedulable with no V_NOP. The assembled kernel exhibits such a schedule, 64 back-to-back WMMA in its loop body with no filler.",
+   "conclusion": "One emitted WMMA represents 128 products per wave32 lane. This chain needs no correctness filler for D-to-C use; its resource charge is a separate premise.",
+   "explicitly_not_concluded": "No lower bound on the WMMA path. Nothing here says a cheaper WMMA schedule cannot exist, and nothing says sigma_W_iu4 has any particular value."
+  },
+  {
+   "step": 8,
+   "tier": "family-restriction",
+   "direction": "sufficient-condition",
+   "uses": [],
+   "depends_on": [5, 5.5, 6, 7],
+   "argument": "If sigma_W_iu4 / 128 is at or below a proved floor on the family's demand, the WMMA path's demand for this region is at or below the family's actual demand. Which threshold applies depends on the accumulator premise: 24 with a required accumulator, 64/3 with a removable zero and k >= 2, and 16 if k = 1 is admitted. The condition is sufficient and not necessary: when it fails, the family's actual demand may still exceed the WMMA path's by any amount, because a floor bounds the family only from below.",
+   "conclusion": "sigma_W_iu4 <= 24 suffices under MODEL.ACCUMULATOR_REQUIRED; the weaker premises give 64/3 and 16",
+   "check": "sigma_sufficient_required_accumulator == 24"
+  }
+ ],
+
+ "claim": {
+  "kind": "sufficient-condition-on-service-demand",
+  "tier": "family-restriction",
+  "tier_reason": "Steps 1, 3, 6 and 7 are architectural. Steps 2, 4, 5 and 8 depend on the operation model, the activation domain, the combiner grammar, the irredundancy of partials and the slot charging, so the claim is about a declared family in a declared cost space.",
+  "statement": "In the register-resident sub-region, under the declared observer model with a required running accumulator, every schedule in the PERM lookup family demands at least 3/16 issue slots per lane-MAC, while an exhibited accumulating IU4 WMMA schedule demands sigma_W_iu4 / 128. If sigma_W_iu4 <= 24 the WMMA demand sits at or below that floor.",
+  "inequality": "sigma_W_iu4 <= 24",
+  "threshold_depends_on_the_accumulator_premise": {
+   "required_accumulator_any_k": {"floor": "3/16", "sufficient_sigma": 24},
+   "removable_zero_k_at_least_2": {"floor": "1/6", "sufficient_sigma": "64/3 = 21.33"},
+   "removable_zero_k_equals_1_admitted": {"floor": "1/8", "sufficient_sigma": 16, "note": "k=1 is a single PERM with no combining, which the owning experiment excludes from the family for exactly that reason. The observed sigma of about 16.94 does not clear this threshold, and the structural candidate of 16 only ties it."},
+   "reading": "The conclusion is not robust to dropping MODEL.ACCUMULATOR_REQUIRED. It survives comfortably at 24, survives at 64/3, and fails at 16 for the observed sigma. That sensitivity is the result, not a footnote."
+  },
+  "sufficiency_only": "This is a sufficient condition, not an iff and not dominance. sigma_W_iu4 > 24 leaves the comparison undetermined rather than reversed. Neither side is charged for its excluded work and their output contracts differ, so the conclusion does not carry to whole kernels.",
+  "native_runtime_claim": "none. Both sides are service demands on one modelled resource. Turning either into time needs a capacity upper bound the pinned sources do not contain.",
+  "architectural_residue": "What survives deleting every family premise: a fixed selector byte names at most 14 functions per destination byte; PERM has no dedicated accumulator operand; the named word combiners have at most three explicit 32-bit source words; V_PERM_B32 and V_ADD3_U32 have no VOPD encoding; one IU4 WMMA delivers 128 lane-MAC and an accumulating chain of them needs no filler. None of these bounds a trits-per-group figure or a slot rate on its own."
+ },
+
+ "sensitivity": {
+  "parameter": "sigma_W_iu4",
+  "break_even": 24,
+  "sweep": [1, 2, 4, 8, 12, 16, 16.94, 20, 21.33, 24, 28, 32, 48],
+  "alternate_thresholds": {"removable_zero_k_at_least_2": 21.33, "removable_zero_any_k": 16},
+  "reading": "At or below 24 the sufficient condition holds under MODEL.ACCUMULATOR_REQUIRED. Above it the comparison is undetermined, not reversed. Dropping that premise lowers the threshold to 64/3, and admitting the degenerate k=1 round lowers it to 16, which the observed sigma of 16.94 does not clear."
+ },
+
+ "evidence": [
+  {
+   "id": "MEAS.IU4_ACHIEVED",
+   "role": "achievability-upper-bound",
+   "value": {"mac_per_ns_per_simd32": 683.6464, "variant": "iu4-wmma-chains8", "mac_per_lane_per_instruction": 128},
+   "source": {"path": "research/ffn/batched/register-observer/results/rates.json", "sha256": "3200b94a38b38a720ad237b6cb2027bccbda836698b163ef6a921ad111f99ec1"},
+   "what_it_proves": "A feasible schedule exists and reached this rate. Feasibility is what the upper-bound side of the comparison needs; demand arithmetic alone would not supply it.",
+   "what_it_does_not_prove": "Nothing about a hardware ceiling for WMMA, and nothing about any other WMMA schedule."
+  },
+  {
+   "id": "MEAS.PERM_ISSUE_CEILING",
+   "role": "achieved-rate",
+   "value": {"mac_per_ns_per_simd32": 723.8472, "variant": "perm-issue-ceiling", "mac_per_lane_per_instruction": 8, "note": "PERM results never accumulated, so this is not a member of the family being bounded"},
+   "source": {"path": "research/ffn/batched/register-observer/results/rates.json", "sha256": "3200b94a38b38a720ad237b6cb2027bccbda836698b163ef6a921ad111f99ec1"},
+   "what_it_proves": "How fast one particular pure-PERM stream ran.",
+   "what_it_does_not_prove": "Any capacity upper bound for the issue path. Without one, no slot floor here becomes a time floor."
+  },
+  {
+   "id": "MEAS.CORE_ABOVE_FLOOR",
+   "role": "achieved-rate",
+   "value": {"mac_per_ns_per_simd32": 384.1694, "variant": "core-rq8-tok4", "mac_per_lane_per_instruction": 5.3333, "inner_loop": {"v_perm_b32": 64, "v_add3_u32": 32, "vector_instructions": 96, "vgpr_count": 67}},
+   "source": {"path": "research/ffn/batched/register-observer/results/rates.json", "sha256": "3200b94a38b38a720ad237b6cb2027bccbda836698b163ef6a921ad111f99ec1"},
+   "instruction_counts": {"path": "research/ffn/batched/register-observer/results/instruction-counts.json", "sha256": "da162d5d408516fc583528579a11dfd02e3b0b9e0a3e45b096edaccb885a7e60"},
+   "what_it_proves": "The assembled kernel meets the instruction-count floor exactly: 64 PERM and 32 ADD3 per loop body is 3 instructions per 16 lane-MAC. In elapsed time it takes 1.256x what the pure-PERM stream's per-instruction rate would suggest.",
+   "what_it_does_not_prove": "That the instruction-count model is falsified, that unit service demand is wrong, or that the profile's bounds are conservative. It shows the count model does not predict elapsed time for these two streams and nothing further. The static exclusions below narrow the candidate explanations without isolating all occupancy and latency effects."
+  },
+  {
+   "id": "ENUM.THREE_TRIT_SEPARATION_WITNESS",
+   "role": "source-derived",
+   "value": {"activation_range": "A4", "witness_triple": [-7, -6, -4], "distinct_sums": 25, "selector_functions_available": 14, "quantifier": "existential over activations"},
+   "source": {"path": "research/ffn/batched/register-observer/README.md", "probe": "./build/probe enumerates this"},
+   "what_it_proves": "One activation triple gives 25 distinct sums. Together with zero, where all target linear forms vanish, it gives at least 25 normalized contribution functions. Under the stated common-unit and additive-offset-only contract, this excludes three-trit groups on the A4 domain.",
+   "what_it_does_not_prove": "It is not a worst case or a minimum over activations; degenerate vectors such as all-zero separate nothing. It says nothing about other activation ranges or about weight families restricted enough to collapse the classes."
+  },
+  {
+   "id": "DERIVED.SIGMA_OBSERVED",
+   "role": "achieved-rate",
+   "expr": "see observations block",
+   "what_it_proves": "The ratio of two achieved per-instruction times in one interleaved run, about 16.94.",
+   "what_it_does_not_prove": "That sigma_W_iu4 equals 16.94. Both times are achieved, so neither is pinned to the hardware, and their ratio inherits both uncertainties."
+  }
+ ],
+
+ "observations": {
+  "role": "achieved-rate",
+  "load_bearing": false,
+  "note": "Computed from the stored interleaved run so the numbers in the writeup are reproducible. No derivation step reads them, and validate.py checks that.",
+  "inputs": [
+   {"id": "rate_iu4", "expr": "683.6464", "unit": "MAC/ns/SIMD32", "variant": "iu4-wmma-chains8"},
+   {"id": "rate_perm_only", "expr": "723.8472", "unit": "MAC/ns/SIMD32", "variant": "perm-issue-ceiling"},
+   {"id": "rate_core", "expr": "384.1694", "unit": "MAC/ns/SIMD32", "variant": "core-rq8-tok4"}
+  ],
+  "derived": [
+   {"id": "ns_per_wmma_instruction", "expr": "wmma_mac_per_lane * lanes_per_simd / rate_iu4"},
+   {"id": "ns_per_perm_instruction", "expr": "mac_per_perm_per_lane * lanes_per_simd / rate_perm_only"},
+   {"id": "sigma_W_observed", "expr": "ns_per_wmma_instruction / ns_per_perm_instruction"},
+   {"id": "margin_vs_required_accumulator", "expr": "sigma_sufficient_required_accumulator / sigma_W_observed"},
+   {"id": "margin_vs_removable_k_at_least_2", "expr": "sigma_sufficient_removable_k_at_least_2 / sigma_W_observed"},
+   {"id": "margin_vs_removable_any_k", "expr": "sigma_sufficient_removable_any_k / sigma_W_observed"},
+   {"id": "core_slots_per_lane_mac_observed", "expr": "(lanes_per_simd / rate_core) / ns_per_perm_instruction"},
+   {"id": "core_over_count_model", "expr": "core_slots_per_lane_mac_observed / perm_floor_required_accumulator"},
+   {"id": "iu4_slots_per_lane_mac_observed", "expr": "(lanes_per_simd / rate_iu4) / ns_per_perm_instruction"}
+  ],
+  "reading": "sigma_W_observed clears the 24 and 64/3 thresholds but not the 16 one, so the conclusion's survival depends on the accumulator premise rather than on the measurement. core_over_count_model shows the count model missing the assembled schedule's elapsed time by a quarter. All of these are achieved rates, none is a capacity bound, and the certificate does not use them."
+ },
+
+ "static_exclusions": {
+  "claim": "Two specific static explanations for MEAS.CORE_ABOVE_FLOOR are ruled out. This narrows the candidates; it does not identify the cause.",
+  "vgpr_allocation": "CAP.VGPR_FILE gives 1536 VGPRs per SIMD in blocks of 24 for wave32. core-rq8-tok4 declares 67, allocating 72, permitting 21 waves; iu4-wmma-chains8 declares 69, allocating 72, permitting 21; perm-issue-ceiling declares 13, allocating 24. The requested 8 waves per SIMD is therefore not blocked by register allocation for any of them.",
+  "accumulator_chains": "The core inner loop carries 32 independent accumulators, one add3 each per 96-instruction body, so a serial accumulate chain is not the limit.",
+  "what_these_do_not_exclude": [
+   "achieved residency as opposed to permitted residency",
+   "wave launch, drain and tail effects",
+   "instruction fetch and loop-body footprint",
+   "clock and power behaviour under different instruction mixes",
+   "result forwarding on the accumulate path",
+   "any per-opcode or operand-supply effect, which remain candidates rather than conclusions"
+  ],
+  "source": "vgpr_count metadata of rate_bench.hip compiled for gfx1151 with --cuda-device-only -S; no GPU execution",
+  "status": "compiler metadata plus a static read of the emitted loop, conditional on the 1536-VGPR block rule applying to this device"
+ },
+
+ "missing_premises_for_a_native_claim": [
+  {"id": "sigma_W_iu4", "needed_for": "instantiating the sufficient condition", "would_come_from": "an AMD statement of WMMA issue occupancy on gfx1151, or a measurement designed to isolate occupancy from latency and co-issue"},
+  {"id": "tau_V", "needed_for": "turning any slot count into a time lower bound", "would_come_from": "a proved upper bound on VALU service capacity per SIMD32; the pinned sources do not contain one, and a vendor performance document or a careful capacity microbenchmark could supply it"},
+  {"id": "CHARGED.COMPLETE", "needed_for": "extending the comparison from this sub-region to whole kernels", "would_come_from": "charging the drain, table construction, selector traffic and fragment layout on both sides, with a common output contract"},
+  {"id": "NECESSITY", "needed_for": "turning the sufficient condition into an iff", "would_come_from": "an upper bound on the PERM family's demand, which would require exhibiting its best schedule rather than bounding it from below"},
+  {"id": "ROUND_SHAPE", "needed_for": "choosing among the 24, 64/3 and 16 thresholds", "would_come_from": "a statement of what the family's rounds actually look like: whether an accumulator is live across rounds, and what values of k the schedule may choose. The assembled kernel uses k=64 with a live accumulator, but the family as declared does not fix either."}
+ ],
+
+ "not_established": [
+  "No time bound in either direction. No capacity upper bound exists for the issue path, and no cycle figure is claimed.",
+  "No dominance. The comparison is one-sided: a floor on one side against an exhibited schedule on the other.",
+  "No iff. sigma_W_iu4 > 24 leaves the question open.",
+  "No whole-kernel statement. Work is excluded on both sides and the output contracts differ.",
+  "No claim about V_PERM_B32 outside MODEL.PERM_OBSERVER. Several PERMs per group, online selectors, a consumer that eats packed byte state, restricted weight families and approximate tables are all untouched.",
+  "No claim about VALU instructions in general. The combiner bound is scoped to the declared 32-bit word grammar because operand-field count is not word arity.",
+  "No claim that the 14-function arity bounds group size by itself. Without the separation premise it bounds nothing.",
+  "No robustness to the accumulator premise. The floor is 3/16 only when a running accumulator must be included; otherwise it is 1/6 for k >= 2 and 1/8 if a single uncombined PERM counts as a round."
+ ]
+}

@@ -1,0 +1,16 @@
+Radeon 8060S, ROCm 7.2.3, gfx1151, hipcc -O3, gpu-run --host-mib 1024 --gtt-mib 512 under /tmp/kelana-gpu-measure.lock. Separate invocations; five rotated rounds of adjacent event-timed replays per mode; each kernel reads an x byte and a dynamic float t, reads its FP16 table and writes one float. Device tables are warm. No host/device transfer or launch/setup cost in event window. Verification compares all n outputs to independent CPU FP16 decoding and FMA.
+
+n=1048576, 128 replays per mode/round:
+mode       table bytes  max_abs  median us  range us
+square8          64         0   15.885336  15.877843..20.256725
+affine8          64         0   15.855968  15.811617..52.495422
+uniform8         64         0   15.854742  15.773470..46.171131
+direct32        256         0   15.780367  15.701914..82.295822
+
+n=8192, 512 replays per mode/round:
+square8          64         0    2.391068   2.188516..2.451789
+affine8          64         0    2.411830   2.110317..2.452492
+uniform8         64         0    2.455791   2.410209..2.578111
+direct32        256         0    2.448215   2.388588..2.598580
+
+Time is kernel event time with cached tiny tables. Ranges show interference/clock noise; no speed ranking at differences of tenths of a microsecond. The large direct table fits cache and does not exhibit a measurable penalty in this experiment.

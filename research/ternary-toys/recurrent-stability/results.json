@@ -1,0 +1,260 @@
+{
+  "setup": {
+    "W": [
+      [
+        1.0436,
+        0.0415
+      ],
+      [
+        -0.7816,
+        0.8131
+      ]
+    ],
+    "gate": 0.5,
+    "input": [
+      0.5,
+      0.0
+    ],
+    "sigma": 0.005,
+    "horizon": 512,
+    "seed": 20260923,
+    "fit": "isotropic Frobenius; exact infinite-horizon white-noise objective, enumerated trits and multi-start continuous scale search, then FP16 rounding",
+    "nonlinear_probe": "tanh recurrence; +.005 input for 32 steps, then zero for 480"
+  },
+  "codes": {
+    "one_step": [
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "whole_codebook_scale_search": [
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ]
+  },
+  "scales": {
+    "one_step": [
+      1.0439453125,
+      0.79736328125
+    ],
+    "same_codes_scale_search": [
+      0.84765625,
+      0.85595703125
+    ],
+    "whole_codebook_scale_search": [
+      0.84765625,
+      0.85595703125
+    ]
+  },
+  "candidates": {
+    "reference": {
+      "matrix": [
+        [
+          1.0436,
+          0.0415
+        ],
+        [
+          -0.7816,
+          0.8131
+        ]
+      ],
+      "spectral_radius": 0.9666550005043165,
+      "relative_one_step_matrix_error": 0.0,
+      "infinite_white_input_error_over_variance": 0.0,
+      "stochastic_rmse_all_steps": 0.0,
+      "stochastic_rmse_last_128": 0.0,
+      "pulse_rmse_last_128": 0.0,
+      "pulse_final": [
+        0.03847648657190669,
+        -0.16090541784476914
+      ],
+      "nonlinear_release_rmse_last_128": 0.0,
+      "nonlinear_constant_rmse_last_128": 0.0,
+      "nonlinear_release_final": [
+        -4.189404876383582e-09,
+        1.0670983354748318e-08
+      ],
+      "constant_input_fixed_point_if_stable": [
+        0.038476487551651964,
+        -0.16090541824703683
+      ]
+    },
+    "dense_fp16": {
+      "matrix": [
+        [
+          1.0439453125,
+          0.04150390625
+        ],
+        [
+          -0.78173828125,
+          0.81298828125
+        ]
+      ],
+      "spectral_radius": 0.966707568426901,
+      "relative_one_step_matrix_error": 0.0002526776835096806,
+      "infinite_white_input_error_over_variance": 0.0005047065411245555,
+      "stochastic_rmse_all_steps": 8.316803370422082e-05,
+      "stochastic_rmse_last_128": 9.381049193096108e-05,
+      "pulse_rmse_last_128": 0.00031650739358453665,
+      "pulse_final": [
+        0.03859587561670621,
+        -0.16133681033148434
+      ],
+      "nonlinear_release_rmse_last_128": 8.725674532425168e-09,
+      "nonlinear_constant_rmse_last_128": 0.00034951818463451465,
+      "nonlinear_release_final": [
+        -4.292242921048177e-09,
+        1.0317607285354212e-08
+      ],
+      "constant_input_fixed_point_if_stable": [
+        0.03859587659302268,
+        -0.1613368105102593
+      ]
+    },
+    "one_step": {
+      "matrix": [
+        [
+          1.0439453125,
+          0.0
+        ],
+        [
+          -0.79736328125,
+          0.79736328125
+        ]
+      ],
+      "spectral_radius": 1.02197265625,
+      "relative_one_step_matrix_error": 0.030641554958649016,
+      "infinite_white_input_error_over_variance": null,
+      "stochastic_rmse_all_steps": 687.5994721247848,
+      "stochastic_rmse_last_128": 1372.5626702504815,
+      "pulse_rmse_last_128": 7927.410508949519,
+      "pulse_final": [
+        7743.911770220337,
+        -25041.124013835022
+      ],
+      "nonlinear_release_rmse_last_128": 0.5355465090456508,
+      "nonlinear_constant_rmse_last_128": 0.45593472013664543,
+      "nonlinear_release_final": [
+        0.3493404204313692,
+        -0.6719983003194595
+      ],
+      "constant_input_fixed_point_if_stable": null
+    },
+    "same_codes_scale_search": {
+      "matrix": [
+        [
+          0.84765625,
+          0.0
+        ],
+        [
+          -0.85595703125,
+          0.85595703125
+        ]
+      ],
+      "spectral_radius": 0.927978515625,
+      "relative_one_step_matrix_error": 0.14175736803387048,
+      "infinite_white_input_error_over_variance": 10.20830394969172,
+      "stochastic_rmse_all_steps": 0.010695724889289783,
+      "stochastic_rmse_last_128": 0.010455777299955284,
+      "pulse_rmse_last_128": 0.024460092845722897,
+      "pulse_final": [
+        0.032820512820512786,
+        -0.19503172533680982
+      ],
+      "nonlinear_release_rmse_last_128": 2.834033832781103e-07,
+      "nonlinear_constant_rmse_last_128": 0.013852338394875496,
+      "nonlinear_release_final": [
+        9.186993908601374e-19,
+        -7.503795216298852e-16
+      ],
+      "constant_input_fixed_point_if_stable": [
+        0.03282051282051283,
+        -0.19503172533681012
+      ]
+    },
+    "whole_codebook_scale_search": {
+      "matrix": [
+        [
+          0.84765625,
+          0.0
+        ],
+        [
+          -0.85595703125,
+          0.85595703125
+        ]
+      ],
+      "spectral_radius": 0.927978515625,
+      "relative_one_step_matrix_error": 0.14175736803387048,
+      "infinite_white_input_error_over_variance": 10.20830394969172,
+      "stochastic_rmse_all_steps": 0.010695724889289783,
+      "stochastic_rmse_last_128": 0.010455777299955284,
+      "pulse_rmse_last_128": 0.024460092845722897,
+      "pulse_final": [
+        0.032820512820512786,
+        -0.19503172533680982
+      ],
+      "nonlinear_release_rmse_last_128": 2.834033832781103e-07,
+      "nonlinear_constant_rmse_last_128": 0.013852338394875496,
+      "nonlinear_release_final": [
+        9.186993908601374e-19,
+        -7.503795216298852e-16
+      ],
+      "constant_input_fixed_point_if_stable": [
+        0.03282051282051283,
+        -0.19503172533681012
+      ]
+    },
+    "one_fp16_exception": {
+      "matrix": [
+        [
+          1.0439453125,
+          0.04150390625
+        ],
+        [
+          -0.79736328125,
+          0.79736328125
+        ]
+      ],
+      "spectral_radius": 0.9626533571907843,
+      "relative_one_step_matrix_error": 0.014492039663864545,
+      "infinite_white_input_error_over_variance": 0.22960062386500635,
+      "stochastic_rmse_all_steps": 0.00151115953181999,
+      "stochastic_rmse_last_128": 0.0014547329797294107,
+      "pulse_rmse_last_128": 0.003671541188848051,
+      "pulse_final": [
+        0.041886550722755996,
+        -0.16482105424513455
+      ],
+      "nonlinear_release_rmse_last_128": 2.4317203575547715e-07,
+      "nonlinear_constant_rmse_last_128": 0.0037321778796982285,
+      "nonlinear_release_final": [
+        -2.2001993628008715e-10,
+        -1.088005463782079e-09
+      ],
+      "constant_input_fixed_point_if_stable": [
+        0.04188655068749692,
+        -0.1648210536691144
+      ]
+    }
+  },
+  "search_values": {
+    "same_codes": 10.208117589310122,
+    "all_codes": 10.208117589310122
+  },
+  "storage_bits": {
+    "dense_fp16": 64,
+    "ternary_two_fp16_scales": 39,
+    "exception_one_fp16_and_two_bit_position": 57
+  }
+}

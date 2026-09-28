@@ -1,0 +1,1859 @@
+{
+  "bitvector_separation": {
+    "brute_force_agrees": true,
+    "connectors_all_identity": false,
+    "each_operation_conjugate": true,
+    "obstruction": "screen: word_profile, pair_refinement",
+    "per_operation_witnesses": {
+      "clear": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "inc": [
+        0,
+        3,
+        6,
+        1,
+        4,
+        7,
+        2,
+        5
+      ]
+    },
+    "screens": {
+      "collision_cardinalities": true,
+      "commutation": true,
+      "orbit_structure": true,
+      "pair_refinement": false,
+      "per_operation_graphs": true,
+      "refinement": true,
+      "word_profile": false
+    },
+    "screens_passed": 5,
+    "screens_total": 7,
+    "shortest_distinguishing_word": [
+      "inc",
+      "clear"
+    ],
+    "simultaneously_conjugate": false,
+    "source": {
+      "clear": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        4,
+        6,
+        6
+      ],
+      "inc": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ]
+    },
+    "states": 8,
+    "target": {
+      "clear": [
+        0,
+        0,
+        2,
+        2,
+        4,
+        4,
+        6,
+        6
+      ],
+      "inc": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2
+      ]
+    },
+    "title": "three-bit words: add 1 versus add 3, both paired with a low-bit clear"
+  },
+  "class_ladder": {
+    "note": "existence of a bijection is constant across this ladder by construction; the implementable answer is not, and that is what the search must score",
+    "rows": {
+      "arbitrary": {
+        "cheapest_class_containing_a_witness": "modular_affine(m=16)",
+        "conjugate_unrestricted": true,
+        "program": {
+          "cost": 3,
+          "note": "",
+          "optimal_within_search": true,
+          "searched_to_cost": 3,
+          "steps": [
+            "add 13",
+            "xor-shl 3",
+            "xor 7"
+          ],
+          "units": "grammar operations"
+        },
+        "relabeling": [
+          2,
+          9,
+          0,
+          7,
+          14,
+          5,
+          12,
+          3,
+          10,
+          1,
+          8,
+          15,
+          6,
+          13,
+          4,
+          11
+        ]
+      },
+      "identity": {
+        "cheapest_class_containing_a_witness": "xor_translation(w=4)",
+        "conjugate_unrestricted": true,
+        "program": {
+          "cost": 0,
+          "note": "the identity needs no operations",
+          "optimal_within_search": true,
+          "searched_to_cost": 6,
+          "steps": [],
+          "units": "grammar operations"
+        },
+        "relabeling": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "swap_bit_pairs": {
+        "cheapest_class_containing_a_witness": "bit_permutation(w=4)",
+        "conjugate_unrestricted": true,
+        "program": {
+          "cost": 1,
+          "note": "",
+          "optimal_within_search": true,
+          "searched_to_cost": 1,
+          "steps": [
+            "rotl 2"
+          ],
+          "units": "grammar operations"
+        },
+        "relabeling": [
+          0,
+          4,
+          8,
+          12,
+          1,
+          5,
+          9,
+          13,
+          2,
+          6,
+          10,
+          14,
+          3,
+          7,
+          11,
+          15
+        ]
+      },
+      "xor_by_5": {
+        "cheapest_class_containing_a_witness": "xor_translation(w=4)",
+        "conjugate_unrestricted": true,
+        "program": {
+          "cost": 1,
+          "note": "",
+          "optimal_within_search": true,
+          "searched_to_cost": 1,
+          "steps": [
+            "xor 5"
+          ],
+          "units": "grammar operations"
+        },
+        "relabeling": [
+          5,
+          4,
+          7,
+          6,
+          1,
+          0,
+          3,
+          2,
+          13,
+          12,
+          15,
+          14,
+          9,
+          8,
+          11,
+          10
+        ]
+      }
+    },
+    "source": {
+      "clear": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        12,
+        12,
+        12,
+        12
+      ],
+      "inc": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        0
+      ]
+    },
+    "states": 16,
+    "title": "cheapest implementable class holding a witness, per relabeling"
+  },
+  "consumer_persistence": {
+    "applied_relabeling": [
+      0,
+      3,
+      2,
+      1,
+      12,
+      15,
+      14,
+      13,
+      8,
+      11,
+      10,
+      9,
+      4,
+      7,
+      6,
+      5
+    ],
+    "consumer_left_in_the_source_labeling": {
+      "first_consumer_with_no_surviving_relabeling": "lane0_equals_one",
+      "label_persists_through_every_consumer": false,
+      "note": "adding operations can only remove witnesses, so this sequence is non-increasing; a relabeling that survives to the end is one output labeling valid for the whole region, producers and consumers together",
+      "producer_witness_count_capped": false,
+      "producer_witnesses": 128,
+      "stages": [
+        {
+          "after": "producers only",
+          "capped": false,
+          "labels": [
+            "bump",
+            "swaplanes"
+          ],
+          "witnesses": 128
+        },
+        {
+          "after": "lane0_equals_one",
+          "capped": false,
+          "labels": [
+            "bump",
+            "swaplanes",
+            "lane0_equals_one"
+          ],
+          "witnesses": 0
+        }
+      ],
+      "surviving_witnesses": [],
+      "why": "the immediate operand is stated in the source labeling; relabeling sends 1 to 3, so the same instruction no longer means the same test"
+    },
+    "consumers_carried_through_the_relabeling": {
+      "first_consumer_with_no_surviving_relabeling": null,
+      "label_persists_through_every_consumer": true,
+      "note": "adding operations can only remove witnesses, so this sequence is non-increasing; a relabeling that survives to the end is one output labeling valid for the whole region, producers and consumers together",
+      "producer_witness_count_capped": false,
+      "producer_witnesses": 128,
+      "stages": [
+        {
+          "after": "producers only",
+          "capped": false,
+          "labels": [
+            "bump",
+            "swaplanes"
+          ],
+          "witnesses": 128
+        },
+        {
+          "after": "lane_add",
+          "capped": false,
+          "labels": [
+            "bump",
+            "swaplanes",
+            "lane_add"
+          ],
+          "witnesses": 1
+        },
+        {
+          "after": "lane_mask",
+          "capped": false,
+          "labels": [
+            "bump",
+            "swaplanes",
+            "lane_add",
+            "lane_mask"
+          ],
+          "witnesses": 1
+        },
+        {
+          "after": "low_bit_of_word",
+          "capped": false,
+          "labels": [
+            "bump",
+            "swaplanes",
+            "lane_add",
+            "lane_mask",
+            "low_bit_of_word"
+          ],
+          "witnesses": 1
+        }
+      ],
+      "surviving_witnesses": [
+        [
+          0,
+          3,
+          2,
+          1,
+          12,
+          15,
+          14,
+          13,
+          8,
+          11,
+          10,
+          9,
+          4,
+          7,
+          6,
+          5
+        ]
+      ]
+    },
+    "note": "a consumer expressed in the relabeled world keeps the region open, so the region can end where the consumer ends rather than at every operation. A consumer that insists on reading the original labeling closes it, and that is where a decode has to be charged.",
+    "producer_target": {
+      "bump": [
+        15,
+        12,
+        13,
+        14,
+        3,
+        0,
+        1,
+        2,
+        7,
+        4,
+        5,
+        6,
+        11,
+        8,
+        9,
+        10
+      ],
+      "swaplanes": [
+        0,
+        4,
+        8,
+        12,
+        1,
+        5,
+        9,
+        13,
+        2,
+        6,
+        10,
+        14,
+        3,
+        7,
+        11,
+        15
+      ]
+    },
+    "producers": {
+      "bump": [
+        5,
+        6,
+        7,
+        4,
+        9,
+        10,
+        11,
+        8,
+        13,
+        14,
+        15,
+        12,
+        1,
+        2,
+        3,
+        0
+      ],
+      "swaplanes": [
+        0,
+        4,
+        8,
+        12,
+        1,
+        5,
+        9,
+        13,
+        2,
+        6,
+        10,
+        14,
+        3,
+        7,
+        11,
+        15
+      ]
+    },
+    "states": 16,
+    "title": "does a producer-side labeling survive its consumers",
+    "witnesses_after_the_first_carried_consumer": 1,
+    "witnesses_before_any_consumer": 128
+  },
+  "deep_word_requirement": {
+    "each_operation_conjugate": true,
+    "note": "found by the exhaustive census, not constructed by hand",
+    "shortest_distinguishing_word": [
+      "a",
+      "a",
+      "a",
+      "b",
+      "a",
+      "b",
+      "b"
+    ],
+    "simultaneously_conjugate": false,
+    "source": {
+      "a": [
+        1,
+        0,
+        3,
+        4,
+        5,
+        2
+      ],
+      "b": [
+        2,
+        3,
+        0,
+        5,
+        1,
+        4
+      ]
+    },
+    "states": 6,
+    "target": {
+      "a": [
+        1,
+        0,
+        3,
+        4,
+        5,
+        2
+      ],
+      "b": [
+        2,
+        4,
+        0,
+        5,
+        3,
+        1
+      ]
+    },
+    "title": "six states, two permutations: the word screen must reach length seven",
+    "word_profile_equal_by_depth": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true,
+      "7": false
+    },
+    "words_of_length_at_most_6": 126
+  },
+  "discrete_log_chain_w3": {
+    "alpha_powers": [
+      1,
+      2,
+      4,
+      3,
+      6,
+      7,
+      5
+    ],
+    "boundary_cost": {
+      "claimed": false,
+      "reason": "the relabeled state set has 7 elements, which is not a power of two, so the declared word grammar in boundary.py does not apply to it. The relabeling is a table on that set. No cost is claimed here."
+    },
+    "chain": [
+      "mul1",
+      "mul3",
+      "mul5",
+      "mul1",
+      "mul3"
+    ],
+    "chain_agrees_with_one_encode_and_one_decode": true,
+    "chain_collapses_to_one_addition": true,
+    "collapsed_shift": 6,
+    "note": "the relabeled state set has 7 elements, not 8: zero is outside the multiplicative group. A machine boundary needs a separate convention for it, which is a real cost this conjugacy does not remove.",
+    "operations": [
+      "multiply by alpha^1",
+      "multiply by alpha^3",
+      "multiply by alpha^5"
+    ],
+    "operations_per_boundary_pair": "unbounded: any region of these multiplications is one addition between two boundary conversions",
+    "simultaneously_conjugate": true,
+    "source": {
+      "mul1": [
+        1,
+        3,
+        5,
+        2,
+        0,
+        6,
+        4
+      ],
+      "mul3": [
+        2,
+        5,
+        4,
+        6,
+        3,
+        0,
+        1
+      ],
+      "mul5": [
+        6,
+        4,
+        1,
+        0,
+        5,
+        3,
+        2
+      ]
+    },
+    "states": 7,
+    "target": {
+      "mul1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0
+      ],
+      "mul3": [
+        3,
+        4,
+        5,
+        6,
+        0,
+        1,
+        2
+      ],
+      "mul5": [
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "title": "GF(2^3) multiplications relabeled to additions modulo 7",
+    "witness": [
+      0,
+      1,
+      3,
+      2,
+      6,
+      4,
+      5
+    ],
+    "witness_count": 7,
+    "witness_count_capped": false,
+    "witness_is_the_discrete_logarithm": true
+  },
+  "discrete_log_chain_w4": {
+    "alpha_powers": [
+      1,
+      2,
+      4,
+      8,
+      3,
+      6,
+      12,
+      11,
+      5,
+      10,
+      7,
+      14,
+      15,
+      13,
+      9
+    ],
+    "boundary_cost": {
+      "claimed": false,
+      "reason": "the relabeled state set has 15 elements, which is not a power of two, so the declared word grammar in boundary.py does not apply to it. The relabeling is a table on that set. No cost is claimed here."
+    },
+    "chain": [
+      "mul1",
+      "mul3",
+      "mul5",
+      "mul1",
+      "mul3"
+    ],
+    "chain_agrees_with_one_encode_and_one_decode": true,
+    "chain_collapses_to_one_addition": true,
+    "collapsed_shift": 13,
+    "note": "the relabeled state set has 15 elements, not 16: zero is outside the multiplicative group. A machine boundary needs a separate convention for it, which is a real cost this conjugacy does not remove.",
+    "operations": [
+      "multiply by alpha^1",
+      "multiply by alpha^3",
+      "multiply by alpha^5"
+    ],
+    "operations_per_boundary_pair": "unbounded: any region of these multiplications is one addition between two boundary conversions",
+    "simultaneously_conjugate": true,
+    "source": {
+      "mul1": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        2,
+        0,
+        6,
+        4,
+        10,
+        8,
+        14,
+        12
+      ],
+      "mul3": [
+        7,
+        2,
+        10,
+        5,
+        13,
+        4,
+        12,
+        11,
+        3,
+        14,
+        6,
+        9,
+        1,
+        8,
+        0
+      ],
+      "mul5": [
+        5,
+        11,
+        9,
+        10,
+        12,
+        6,
+        0,
+        4,
+        2,
+        8,
+        14,
+        13,
+        7,
+        1,
+        3
+      ]
+    },
+    "states": 15,
+    "target": {
+      "mul1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        0
+      ],
+      "mul3": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        0,
+        1,
+        2
+      ],
+      "mul5": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "title": "GF(2^4) multiplications relabeled to additions modulo 15",
+    "witness": [
+      0,
+      1,
+      4,
+      2,
+      8,
+      5,
+      10,
+      3,
+      14,
+      9,
+      7,
+      6,
+      13,
+      11,
+      12
+    ],
+    "witness_count": 15,
+    "witness_count_capped": false,
+    "witness_is_the_discrete_logarithm": true
+  },
+  "gassmann_dual": {
+    "both_transitive": true,
+    "brute_force_over_5040_permutations": null,
+    "distinguishing_word_exists": false,
+    "each_operation_conjugate": true,
+    "generated_group_order": 168,
+    "generating_pairs_sharing_every_behavioural_invariant": 336,
+    "matrix_a_columns": [
+      "0b10",
+      "0b100",
+      "0b11"
+    ],
+    "matrix_b_columns": [
+      "0b11",
+      "0b111",
+      "0b101"
+    ],
+    "no_composite_word_invariant_can_reject_it": true,
+    "note": "the exhaustive word search returns nothing: no composite of any length separates them, so no behavioural invariant rejects this pair. Pair refinement does reject it. Both families are GF(2)-linear, so this is two ordinary bit-matrix operation pairs, not a contrived structure.",
+    "obstruction": "screen: pair_refinement",
+    "screens": {
+      "collision_cardinalities": true,
+      "commutation": true,
+      "orbit_structure": true,
+      "pair_refinement": false,
+      "per_operation_graphs": true,
+      "refinement": true,
+      "word_profile": true
+    },
+    "screens_that_agree": [
+      "collision_cardinalities",
+      "per_operation_graphs",
+      "commutation",
+      "orbit_structure",
+      "word_profile",
+      "refinement"
+    ],
+    "screens_that_reject": [
+      "pair_refinement"
+    ],
+    "simultaneously_conjugate": false,
+    "source": {
+      "a": [
+        1,
+        3,
+        5,
+        2,
+        0,
+        6,
+        4
+      ],
+      "b": [
+        2,
+        6,
+        3,
+        4,
+        5,
+        1,
+        0
+      ]
+    },
+    "states": 7,
+    "target": {
+      "a": [
+        2,
+        3,
+        6,
+        0,
+        1,
+        4,
+        5
+      ],
+      "b": [
+        4,
+        6,
+        1,
+        2,
+        5,
+        3,
+        0
+      ]
+    },
+    "title": "GL(3,2) on points versus on planes: no word invariant rejects it, no relabeling exists",
+    "word_profile_equal_to_depth_8": true
+  },
+  "independent_is_not_enough": {
+    "boundary_crossings_separate": "m + 1, growing with the region",
+    "boundary_crossings_shared": "2, for every region length",
+    "connector_a_to_b": [
+      0,
+      2,
+      1
+    ],
+    "connector_is_identity": false,
+    "connector_required": true,
+    "note": "the shared count is constant in region length and the separate count is not; that difference, not the existence of per-operation witnesses, decides whether many operations run per decode",
+    "reference_chain_ab": [
+      2,
+      0,
+      1
+    ],
+    "states": 3,
+    "title": "separate relabelings need a connector at every operation boundary",
+    "with_connector": [
+      2,
+      0,
+      1
+    ],
+    "without_connector": [
+      0,
+      2,
+      1
+    ],
+    "witness_a": [
+      0,
+      1,
+      2
+    ],
+    "witness_b": [
+      0,
+      2,
+      1
+    ]
+  },
+  "linear_restriction": {
+    "arbitrary_witness": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      2
+    ],
+    "conjugate_under_an_arbitrary_relabeling": true,
+    "minimal_polynomial_source": "1 + x + x^3",
+    "minimal_polynomial_target": "1 + x^2 + x^3",
+    "note": "the polynomial identity is the reason, checked here by evaluation: a linear conjugacy would transport it, so no member of GL(3,2) can work even though 168 matrices were available and a bijection does exist",
+    "restricted": {
+      "bit_permutation(w=3)": {
+        "class_size": 6,
+        "conjugate": false,
+        "method": "witness-coset",
+        "obstruction": "all 7 relabeling(s) exist outside bit_permutation(w=3); the unrestricted answer is yes and the restricted answer is no",
+        "witness": null
+      },
+      "gf2_affine(w=3)": {
+        "class_size": 1344,
+        "conjugate": false,
+        "method": "witness-coset",
+        "obstruction": "all 7 relabeling(s) exist outside gf2_affine(w=3); the unrestricted answer is yes and the restricted answer is no",
+        "witness": null
+      },
+      "gf2_linear(w=3)": {
+        "class_size": 168,
+        "conjugate": false,
+        "method": "witness-coset",
+        "obstruction": "all 7 relabeling(s) exist outside gf2_linear(w=3); the unrestricted answer is yes and the restricted answer is no",
+        "witness": null
+      },
+      "xor_translation(w=3)": {
+        "class_size": 8,
+        "conjugate": false,
+        "method": "witness-coset",
+        "obstruction": "all 7 relabeling(s) exist outside xor_translation(w=3); the unrestricted answer is yes and the restricted answer is no",
+        "witness": null
+      }
+    },
+    "source": {
+      "mul": [
+        0,
+        2,
+        4,
+        6,
+        3,
+        1,
+        7,
+        5
+      ]
+    },
+    "source_satisfies_its_own_polynomial": true,
+    "states": 8,
+    "target": {
+      "mul": [
+        0,
+        3,
+        6,
+        5,
+        7,
+        4,
+        1,
+        2
+      ]
+    },
+    "target_fails_the_source_polynomial": true,
+    "target_satisfies_its_own_polynomial": true,
+    "title": "GF(8) multiply-by-alpha against multiply-by-alpha-cubed",
+    "witness_count": 7,
+    "witness_count_capped": false,
+    "witness_price": {
+      "cost": 6,
+      "note": "",
+      "optimal_within_search": true,
+      "searched_to_cost": 6,
+      "steps": [
+        "rotl 2",
+        "add 1",
+        "rotl 2",
+        "add 7",
+        "rotl 2",
+        "add 3"
+      ],
+      "units": "grammar operations"
+    }
+  },
+  "linear_restriction_family": {
+    "arbitrary_witness": [
+      0,
+      1,
+      11,
+      13,
+      9,
+      14,
+      6,
+      7,
+      12,
+      5,
+      8,
+      3,
+      15,
+      2,
+      4,
+      10
+    ],
+    "conjugate_under_an_arbitrary_relabeling": true,
+    "labels": [
+      "p",
+      "q"
+    ],
+    "obstruction": null,
+    "restricted": {
+      "gf2_affine(w=4)": {
+        "class_size": 322560,
+        "conjugate": false,
+        "method": "witness-coset",
+        "obstruction": "all 15 relabeling(s) exist outside gf2_affine(w=4); the unrestricted answer is yes and the restricted answer is no",
+        "witness": null
+      },
+      "gf2_linear(w=4)": {
+        "class_size": 20160,
+        "conjugate": false,
+        "method": "witness-coset",
+        "obstruction": "all 15 relabeling(s) exist outside gf2_linear(w=4); the unrestricted answer is yes and the restricted answer is no",
+        "witness": null
+      }
+    },
+    "source": {
+      "p": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        3,
+        1,
+        7,
+        5,
+        11,
+        9,
+        15,
+        13
+      ],
+      "q": [
+        0,
+        4,
+        8,
+        12,
+        3,
+        7,
+        11,
+        15,
+        6,
+        2,
+        14,
+        10,
+        5,
+        1,
+        13,
+        9
+      ]
+    },
+    "states": 16,
+    "target": {
+      "p": [
+        0,
+        11,
+        5,
+        14,
+        10,
+        1,
+        15,
+        4,
+        7,
+        12,
+        2,
+        9,
+        13,
+        6,
+        8,
+        3
+      ],
+      "q": [
+        0,
+        9,
+        1,
+        8,
+        2,
+        11,
+        3,
+        10,
+        4,
+        13,
+        5,
+        12,
+        6,
+        15,
+        7,
+        14
+      ]
+    },
+    "title": "GF(16): multiply by (alpha, alpha^2) against (alpha^7, alpha^14)",
+    "witness_price": {
+      "cost": -1,
+      "note": "no program of cost at most 6 in this grammar computes it; the cost is unknown, not infinite",
+      "optimal_within_search": false,
+      "searched_to_cost": 6,
+      "steps": [],
+      "units": "grammar operations"
+    }
+  },
+  "lossy_chain": {
+    "applied_relabeling": [
+      0,
+      3,
+      6,
+      1,
+      4,
+      7,
+      2,
+      5
+    ],
+    "automorphism_count": 1,
+    "automorphism_count_capped": false,
+    "boundary_structure": {
+      "classes_containing_it": {
+        "bit_permutation(w=3)": false,
+        "gf2_affine(w=3)": false,
+        "gf2_linear(w=3)": false,
+        "modular_affine(m=8)": true,
+        "xor_translation(w=3)": false
+      },
+      "program": {
+        "cost": 3,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 3,
+        "steps": [
+          "add 3",
+          "xor-shl 2",
+          "xor 7"
+        ],
+        "units": "grammar operations"
+      }
+    },
+    "chain": [
+      "inc",
+      "clear",
+      "inc",
+      "inc",
+      "clear"
+    ],
+    "chain_agrees": true,
+    "collision_cardinalities": [
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "note": "the witness set is a coset of the automorphism group, so its size equals the automorphism count; that is checked here, not assumed",
+    "simultaneously_conjugate": true,
+    "source": {
+      "clear": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2,
+        3
+      ],
+      "inc": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ]
+    },
+    "states": 8,
+    "target": {
+      "clear": [
+        0,
+        1,
+        6,
+        3,
+        0,
+        1,
+        6,
+        3
+      ],
+      "inc": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2
+      ]
+    },
+    "title": "lossy three-bit family relabeled by x -> 3x mod 8",
+    "witness": [
+      0,
+      3,
+      6,
+      1,
+      4,
+      7,
+      2,
+      5
+    ],
+    "witness_count": 1,
+    "witness_count_capped": false,
+    "witness_count_equals_automorphism_count": true
+  },
+  "minimal_separation": {
+    "brute_force_agrees": true,
+    "connectors_all_identity": false,
+    "each_operation_conjugate": true,
+    "obstruction": "screen: orbit_structure, word_profile, refinement, pair_refinement",
+    "per_operation_witnesses": {
+      "a": [
+        0,
+        1,
+        2
+      ],
+      "b": [
+        0,
+        2,
+        1
+      ]
+    },
+    "simultaneously_conjugate": false,
+    "source": {
+      "a": [
+        1,
+        2,
+        0
+      ],
+      "b": [
+        1,
+        2,
+        0
+      ]
+    },
+    "states": 3,
+    "target": {
+      "a": [
+        1,
+        2,
+        0
+      ],
+      "b": [
+        2,
+        0,
+        1
+      ]
+    },
+    "title": "smallest separately-conjugate, not simultaneously conjugate family"
+  },
+  "priced_chain": {
+    "boundary": {
+      "amortised": {
+        "connector_charge": 2,
+        "native": 1,
+        "note": "with connector 0 the two schemes have the same limit; a shared relabeling guarantees that charge is 0 without needing a compatible consumer, which is the difference between them",
+        "separate_relabelings": 3,
+        "shared_relabeling": 1
+      },
+      "decode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 3"
+        ],
+        "units": "grammar operations"
+      },
+      "decode_verified": true,
+      "encode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 1"
+        ],
+        "units": "grammar operations"
+      },
+      "encode_verified": true,
+      "grammar": {
+        "description": "xor/add by constant, rotate, and the triangular xor-shift mixes",
+        "families": {
+          "add_constant": 15,
+          "rotate": 3,
+          "shift_mix": 6,
+          "xor_constant": 15
+        },
+        "operation_count": 39,
+        "width": 4
+      },
+      "model": {
+        "default_charge": 1,
+        "explicit_charges": {},
+        "uniform": true,
+        "units": "grammar operations",
+        "warning": "these are declared abstract charges, not measured hardware cost; nothing here is an instruction count for any device"
+      },
+      "priced": true,
+      "window": {
+        "connector": 2,
+        "enter": 1,
+        "exit": 1,
+        "samples": {
+          "1": {
+            "native": 1,
+            "separate": 3,
+            "shared": 3
+          },
+          "2": {
+            "native": 2,
+            "separate": 6,
+            "shared": 4
+          },
+          "4": {
+            "native": 4,
+            "separate": 12,
+            "shared": 6
+          },
+          "8": {
+            "native": 8,
+            "separate": 24,
+            "shared": 10
+          },
+          "64": {
+            "native": 64,
+            "separate": 192,
+            "shared": 66
+          }
+        },
+        "separate_profitable_lengths": {
+          "contiguous": true,
+          "first": null,
+          "horizon": 4096,
+          "last": null,
+          "profitable": false,
+          "reaches_horizon": false
+        },
+        "shared_profitable_lengths": {
+          "contiguous": true,
+          "first": null,
+          "horizon": 4096,
+          "last": null,
+          "profitable": false,
+          "reaches_horizon": false
+        },
+        "source_per_operation": 1,
+        "target_per_operation": 1
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    "boundary_of_the_applied_rotation": {
+      "amortised": {
+        "connector_charge": 2,
+        "native": 1,
+        "note": "with connector 0 the two schemes have the same limit; a shared relabeling guarantees that charge is 0 without needing a compatible consumer, which is the difference between them",
+        "separate_relabelings": 3,
+        "shared_relabeling": 1
+      },
+      "decode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 3"
+        ],
+        "units": "grammar operations"
+      },
+      "decode_verified": true,
+      "encode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 1"
+        ],
+        "units": "grammar operations"
+      },
+      "encode_verified": true,
+      "grammar": {
+        "description": "xor/add by constant, rotate, and the triangular xor-shift mixes",
+        "families": {
+          "add_constant": 15,
+          "rotate": 3,
+          "shift_mix": 6,
+          "xor_constant": 15
+        },
+        "operation_count": 39,
+        "width": 4
+      },
+      "model": {
+        "default_charge": 1,
+        "explicit_charges": {},
+        "uniform": true,
+        "units": "grammar operations",
+        "warning": "these are declared abstract charges, not measured hardware cost; nothing here is an instruction count for any device"
+      },
+      "priced": true,
+      "window": {
+        "connector": 2,
+        "enter": 1,
+        "exit": 1,
+        "samples": {
+          "1": {
+            "native": 1,
+            "separate": 3,
+            "shared": 3
+          },
+          "2": {
+            "native": 2,
+            "separate": 6,
+            "shared": 4
+          },
+          "4": {
+            "native": 4,
+            "separate": 12,
+            "shared": 6
+          },
+          "8": {
+            "native": 8,
+            "separate": 24,
+            "shared": 10
+          },
+          "64": {
+            "native": 64,
+            "separate": 192,
+            "shared": 66
+          }
+        },
+        "separate_profitable_lengths": {
+          "contiguous": true,
+          "first": null,
+          "horizon": 4096,
+          "last": null,
+          "profitable": false,
+          "reaches_horizon": false
+        },
+        "shared_profitable_lengths": {
+          "contiguous": true,
+          "first": null,
+          "horizon": 4096,
+          "last": null,
+          "profitable": false,
+          "reaches_horizon": false
+        },
+        "source_per_operation": 1,
+        "target_per_operation": 1
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    "boundary_of_the_cheapest_witness": {
+      "amortised": {
+        "connector_charge": 2,
+        "native": 1,
+        "note": "with connector 0 the two schemes have the same limit; a shared relabeling guarantees that charge is 0 without needing a compatible consumer, which is the difference between them",
+        "separate_relabelings": 3,
+        "shared_relabeling": 1
+      },
+      "decode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 3"
+        ],
+        "units": "grammar operations"
+      },
+      "decode_verified": true,
+      "encode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 1"
+        ],
+        "units": "grammar operations"
+      },
+      "encode_verified": true,
+      "grammar": {
+        "description": "xor/add by constant, rotate, and the triangular xor-shift mixes",
+        "families": {
+          "add_constant": 15,
+          "rotate": 3,
+          "shift_mix": 6,
+          "xor_constant": 15
+        },
+        "operation_count": 39,
+        "width": 4
+      },
+      "model": {
+        "default_charge": 1,
+        "explicit_charges": {},
+        "uniform": true,
+        "units": "grammar operations",
+        "warning": "these are declared abstract charges, not measured hardware cost; nothing here is an instruction count for any device"
+      },
+      "priced": true,
+      "window": {
+        "connector": 2,
+        "enter": 1,
+        "exit": 1,
+        "samples": {
+          "1": {
+            "native": 1,
+            "separate": 3,
+            "shared": 3
+          },
+          "2": {
+            "native": 2,
+            "separate": 6,
+            "shared": 4
+          },
+          "4": {
+            "native": 4,
+            "separate": 12,
+            "shared": 6
+          },
+          "8": {
+            "native": 8,
+            "separate": 24,
+            "shared": 10
+          },
+          "64": {
+            "native": 64,
+            "separate": 192,
+            "shared": 66
+          }
+        },
+        "separate_profitable_lengths": {
+          "contiguous": true,
+          "first": null,
+          "horizon": 4096,
+          "last": null,
+          "profitable": false,
+          "reaches_horizon": false
+        },
+        "shared_profitable_lengths": {
+          "contiguous": true,
+          "first": null,
+          "horizon": 4096,
+          "last": null,
+          "profitable": false,
+          "reaches_horizon": false
+        },
+        "source_per_operation": 1,
+        "target_per_operation": 1
+      },
+      "witness": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    "note": "rotations normalise the XOR family, so the conjugate family costs exactly what the source costs and the break-even length does not exist. A witness is not a saving; the cost model has to be consulted separately.",
+    "relabeling": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15
+    ],
+    "simultaneously_conjugate": true,
+    "source": {
+      "x3": [
+        3,
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4,
+        11,
+        10,
+        9,
+        8,
+        15,
+        14,
+        13,
+        12
+      ],
+      "x5": [
+        5,
+        4,
+        7,
+        6,
+        1,
+        0,
+        3,
+        2,
+        13,
+        12,
+        15,
+        14,
+        9,
+        8,
+        11,
+        10
+      ],
+      "x9": [
+        9,
+        8,
+        11,
+        10,
+        13,
+        12,
+        15,
+        14,
+        1,
+        0,
+        3,
+        2,
+        5,
+        4,
+        7,
+        6
+      ]
+    },
+    "states": 16,
+    "target": {
+      "x3": [
+        6,
+        7,
+        4,
+        5,
+        2,
+        3,
+        0,
+        1,
+        14,
+        15,
+        12,
+        13,
+        10,
+        11,
+        8,
+        9
+      ],
+      "x5": [
+        10,
+        11,
+        8,
+        9,
+        14,
+        15,
+        12,
+        13,
+        2,
+        3,
+        0,
+        1,
+        6,
+        7,
+        4,
+        5
+      ],
+      "x9": [
+        3,
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4,
+        11,
+        10,
+        9,
+        8,
+        15,
+        14,
+        13,
+        12
+      ]
+    },
+    "target_constants": {
+      "x3": 6,
+      "x5": 10,
+      "x9": 3
+    },
+    "target_is_still_an_xor_family": true,
+    "title": "rotation relabeling of an XOR family: a witness that buys nothing",
+    "witness_choice": {
+      "decode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 3"
+        ],
+        "units": "grammar operations"
+      },
+      "encode": {
+        "cost": 1,
+        "note": "",
+        "optimal_within_search": true,
+        "searched_to_cost": 1,
+        "steps": [
+          "rotl 1"
+        ],
+        "units": "grammar operations"
+      },
+      "note": "17 examined relabeling(s) had no program within cost 6, so their cost is unknown rather than higher",
+      "optimal": false,
+      "round_trip_cost": 2,
+      "witness": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "witness_set_complete": true,
+      "witnesses_examined": 128
+    }
+  }
+}

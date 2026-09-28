@@ -1,0 +1,319 @@
+{
+  "scope": "Fixed sampled WikiText-2 raw windows, 256-token contexts, 1020 held-out predictions; expanded BF16 quality only",
+  "runs": [
+    {
+      "mode": "reference",
+      "source_sha256": "de592e5bac8c267e993e29c8f3ef992c82cb45b2644c5dccff50f3664f82c7d3",
+      "raw": "/path/to/workspace/data/kelana-subbit/runs/reference-w4-l256.json",
+      "unique_parameters": 596049920,
+      "representation_bits": 9536798720,
+      "logical_bits_per_unique_parameter": 16.0,
+      "serialized_image": false,
+      "splits": {
+        "train": {
+          "nll": 3.8647460638308058,
+          "perplexity": 47.691160384337785,
+          "predictions": 2040,
+          "windows": [
+            {
+              "window": 0,
+              "nll": 944.6790161132812,
+              "predictions": 255
+            },
+            {
+              "window": 1,
+              "nll": 1101.6634521484375,
+              "predictions": 255
+            },
+            {
+              "window": 2,
+              "nll": 1022.3480224609375,
+              "predictions": 255
+            },
+            {
+              "window": 3,
+              "nll": 1081.800048828125,
+              "predictions": 255
+            },
+            {
+              "window": 4,
+              "nll": 778.983154296875,
+              "predictions": 255
+            },
+            {
+              "window": 5,
+              "nll": 1010.0921630859375,
+              "predictions": 255
+            },
+            {
+              "window": 6,
+              "nll": 1051.062255859375,
+              "predictions": 255
+            },
+            {
+              "window": 7,
+              "nll": 893.453857421875,
+              "predictions": 255
+            }
+          ]
+        },
+        "validation": {
+          "nll": 3.9052214379404107,
+          "perplexity": 49.66107554099389,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "nll": 1005.0753784179688,
+              "predictions": 255
+            },
+            {
+              "window": 1,
+              "nll": 1055.178955078125,
+              "predictions": 255
+            },
+            {
+              "window": 2,
+              "nll": 929.38134765625,
+              "predictions": 255
+            },
+            {
+              "window": 3,
+              "nll": 993.690185546875,
+              "predictions": 255
+            }
+          ]
+        },
+        "test": {
+          "nll": 3.310759839824602,
+          "perplexity": 27.405941688332078,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "nll": 958.3352661132812,
+              "predictions": 255
+            },
+            {
+              "window": 1,
+              "nll": 768.7220458984375,
+              "predictions": 255
+            },
+            {
+              "window": 2,
+              "nll": 864.10498046875,
+              "predictions": 255
+            },
+            {
+              "window": 3,
+              "nll": 785.812744140625,
+              "predictions": 255
+            }
+          ]
+        }
+      },
+      "window_starts": {
+        "train": [
+          1033472,
+          465664,
+          700160,
+          521216,
+          2359296,
+          576768,
+          913664,
+          903168
+        ],
+        "validation": [
+          83200,
+          256000,
+          21248,
+          170240
+        ],
+        "test": [
+          232704,
+          76800,
+          208128,
+          146688
+        ]
+      }
+    },
+    {
+      "mode": "rtn4",
+      "source_sha256": "de592e5bac8c267e993e29c8f3ef992c82cb45b2644c5dccff50f3664f82c7d3",
+      "raw": "/path/to/workspace/data/kelana-subbit/runs/rtn4-w4-l256.json",
+      "unique_parameters": 596049920,
+      "representation_bits": 2459484160,
+      "logical_bits_per_unique_parameter": 4.126305662451896,
+      "serialized_image": false,
+      "splits": {
+        "validation": {
+          "nll": 4.926243441712622,
+          "perplexity": 137.86065680177498,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "nll": 1259.777587890625,
+              "predictions": 255
+            },
+            {
+              "window": 1,
+              "nll": 1412.904052734375,
+              "predictions": 255
+            },
+            {
+              "window": 2,
+              "nll": 1149.1156005859375,
+              "predictions": 255
+            },
+            {
+              "window": 3,
+              "nll": 1202.9710693359375,
+              "predictions": 255
+            }
+          ]
+        },
+        "test": {
+          "nll": 4.2423266242532165,
+          "perplexity": 69.56952583459594,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "nll": 1267.04931640625,
+              "predictions": 255
+            },
+            {
+              "window": 1,
+              "nll": 947.701416015625,
+              "predictions": 255
+            },
+            {
+              "window": 2,
+              "nll": 1189.178466796875,
+              "predictions": 255
+            },
+            {
+              "window": 3,
+              "nll": 923.2439575195312,
+              "predictions": 255
+            }
+          ]
+        }
+      },
+      "window_starts": {
+        "train": [
+          1033472,
+          465664,
+          700160,
+          521216,
+          2359296,
+          576768,
+          913664,
+          903168
+        ],
+        "validation": [
+          83200,
+          256000,
+          21248,
+          170240
+        ],
+        "test": [
+          232704,
+          76800,
+          208128,
+          146688
+        ]
+      }
+    },
+    {
+      "mode": "walsh8",
+      "source_sha256": "de592e5bac8c267e993e29c8f3ef992c82cb45b2644c5dccff50f3664f82c7d3",
+      "raw": "/path/to/workspace/data/kelana-subbit/runs/walsh8-w4-l256.json",
+      "unique_parameters": 596049920,
+      "representation_bits": 373538816,
+      "logical_bits_per_unique_parameter": 0.6266904892798241,
+      "serialized_image": false,
+      "splits": {
+        "validation": {
+          "nll": 14.49309632544424,
+          "perplexity": 1969118.0801839128,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "nll": 3836.900390625,
+              "predictions": 255
+            },
+            {
+              "window": 1,
+              "nll": 3804.91259765625,
+              "predictions": 255
+            },
+            {
+              "window": 2,
+              "nll": 3609.36083984375,
+              "predictions": 255
+            },
+            {
+              "window": 3,
+              "nll": 3531.784423828125,
+              "predictions": 255
+            }
+          ]
+        },
+        "test": {
+          "nll": 14.625692449831496,
+          "perplexity": 2248316.9000453907,
+          "predictions": 1020,
+          "windows": [
+            {
+              "window": 0,
+              "nll": 3653.83984375,
+              "predictions": 255
+            },
+            {
+              "window": 1,
+              "nll": 4119.6611328125,
+              "predictions": 255
+            },
+            {
+              "window": 2,
+              "nll": 3438.24267578125,
+              "predictions": 255
+            },
+            {
+              "window": 3,
+              "nll": 3706.462646484375,
+              "predictions": 255
+            }
+          ]
+        }
+      },
+      "window_starts": {
+        "train": [
+          1033472,
+          465664,
+          700160,
+          521216,
+          2359296,
+          576768,
+          913664,
+          903168
+        ],
+        "validation": [
+          83200,
+          256000,
+          21248,
+          170240
+        ],
+        "test": [
+          232704,
+          76800,
+          208128,
+          146688
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "target": "gfx1151",
+  "compiler": "HIP version: 7.2.53211-9999",
+  "source_sha256": {
+    "native.hip": "bafcc2c50834a9165d3c83c3c28de2f926a1f73294ba1da1d6590062544d174b",
+    "reader.hip": "7a390261eda72a68b8704ce4f0d3b0886682f739b7882b1f9f93caceedde079c",
+    "state.hip": "1995d1e96dc1b3b6073002619dd1bfb81dc70a890e194872d8c668e9056499df",
+    "threshold_core.hpp": "230735b632443ffbb6560d33812f818ed9b95255cbb29d17ed4a73ba439567d3",
+    "../kivi-resident-cache/step_bits.hpp": "f1002c9d6d63bc0c2885d80cd196d5b723bc78a56339fdd64641e448f14204b9"
+  },
+  "device_kernels": [
+    {
+      "symbol": "_ZN8alphabet10append_keyEPNS_5CacheEPKhi",
+      "body_bytes": 360,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 7,
+      "sgpr": 8
+    },
+    {
+      "symbol": "_ZN8alphabet13append_recentEPNS_5CacheEPKhi",
+      "body_bytes": 332,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 6,
+      "sgpr": 10
+    },
+    {
+      "symbol": "_ZN8alphabet9flush_keyEPNS_5CacheEi",
+      "body_bytes": 8280,
+      "descriptor_bytes": 64,
+      "lds": 4608,
+      "private_scratch": 0,
+      "vgpr": 51,
+      "sgpr": 13
+    },
+    {
+      "symbol": "_ZN8alphabet11flush_valueEPNS_5CacheEPKfii",
+      "body_bytes": 9124,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 50,
+      "sgpr": 14
+    },
+    {
+      "symbol": "_Z8finish_oPKfPf",
+      "body_bytes": 372,
+      "descriptor_bytes": 64,
+      "lds": 0,
+      "private_scratch": 0,
+      "vgpr": 12,
+      "sgpr": 4
+    },
+    {
+      "symbol": "_Z11query_groupILi1EEvPKN8alphabet5CacheEPKfiS5_PKtPf",
+      "body_bytes": 14096,
+      "descriptor_bytes": 64,
+      "lds": 5632,
+      "private_scratch": 0,
+      "vgpr": 24,
+      "sgpr": 44
+    },
+    {
+      "symbol": "_Z11query_groupILi0EEvPKN8alphabet5CacheEPKfiS5_PKtPf",
+      "body_bytes": 13968,
+      "descriptor_bytes": 64,
+      "lds": 5632,
+      "private_scratch": 0,
+      "vgpr": 24,
+      "sgpr": 44
+    }
+  ],
+  "assembly_sha256": "9dd307bda17c3005ffdc310fc6ccd13a609959c611b4ae247126b22f7247361e",
+  "binary_sha256": "24043feb8539a2e74951e6131d1baa5a44d721f5eac013a9710763ca5ad16f0f"
+}

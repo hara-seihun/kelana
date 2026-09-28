@@ -1,0 +1,1493 @@
+{
+  "owning_grammar": "../transition-envelopes/README.md",
+  "integer_interval_scale": "30223145490365729367654400",
+  "common_denominator": "123794003928538027489912422400",
+  "experiments": [
+    {
+      "lambda": "0",
+      "budget_bits": 2,
+      "method": "forced",
+      "counts": {
+        "nodes": 9,
+        "pruned": 4,
+        "completed_leaves": 1,
+        "label_bound_calls": 9,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.00016599400078121107,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            0,
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 2,
+      "method": "reach",
+      "counts": {
+        "nodes": 9,
+        "pruned": 4,
+        "completed_leaves": 1,
+        "label_bound_calls": 9,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.00024259100064227823,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            0,
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 2,
+      "method": "bellman",
+      "counts": {
+        "nodes": 9,
+        "pruned": 4,
+        "completed_leaves": 1,
+        "label_bound_calls": 0,
+        "bellman_bound_calls": 9,
+        "screen_prunes": 0
+      },
+      "seconds": 0.00015271500160451978,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            0,
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 2,
+      "method": "screen_then_bellman",
+      "counts": {
+        "nodes": 9,
+        "pruned": 4,
+        "completed_leaves": 1,
+        "label_bound_calls": 9,
+        "bellman_bound_calls": 5,
+        "screen_prunes": 0
+      },
+      "seconds": 0.00028482999914558604,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            0,
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": null,
+          "incumbent_upper_nats": 0.5595599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 6,
+      "method": "forced",
+      "counts": {
+        "nodes": 31,
+        "pruned": 0,
+        "completed_leaves": 16,
+        "label_bound_calls": 31,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0009601749989087693,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": []
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 6,
+      "method": "reach",
+      "counts": {
+        "nodes": 31,
+        "pruned": 0,
+        "completed_leaves": 16,
+        "label_bound_calls": 31,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0017205069998453837,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": []
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 6,
+      "method": "bellman",
+      "counts": {
+        "nodes": 31,
+        "pruned": 0,
+        "completed_leaves": 16,
+        "label_bound_calls": 0,
+        "bellman_bound_calls": 31,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0026666229987313272,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": []
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 6,
+      "method": "screen_then_bellman",
+      "counts": {
+        "nodes": 31,
+        "pruned": 0,
+        "completed_leaves": 16,
+        "label_bound_calls": 31,
+        "bellman_bound_calls": 31,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0032740299993747612,
+      "optimum_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "optimum_decimal": 0.5595599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": []
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 10,
+      "method": "forced",
+      "counts": {
+        "nodes": 29,
+        "pruned": 8,
+        "completed_leaves": 7,
+        "label_bound_calls": 29,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0019061700004385784,
+      "optimum_upper": "5301108662649844721048338689/15474250491067253436239052800",
+      "optimum_decimal": 0.3425761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            1,
+            0,
+            0
+          ],
+          "lower_nats": 0.44223785275866634,
+          "incumbent_upper_nats": 0.3425761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 10,
+      "method": "reach",
+      "counts": {
+        "nodes": 23,
+        "pruned": 5,
+        "completed_leaves": 7,
+        "label_bound_calls": 23,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0017668549990048632,
+      "optimum_upper": "5301108662649844721048338689/15474250491067253436239052800",
+      "optimum_decimal": 0.3425761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            1,
+            0
+          ],
+          "lower_nats": 0.40564959013023594,
+          "incumbent_upper_nats": 0.3425761180297547
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            0
+          ],
+          "lower_nats": 0.5023368518933474,
+          "incumbent_upper_nats": 0.3425761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 10,
+      "method": "bellman",
+      "counts": {
+        "nodes": 23,
+        "pruned": 5,
+        "completed_leaves": 7,
+        "label_bound_calls": 0,
+        "bellman_bound_calls": 23,
+        "screen_prunes": 0
+      },
+      "seconds": 0.004653209998650709,
+      "optimum_upper": "5301108662649844721048338689/15474250491067253436239052800",
+      "optimum_decimal": 0.3425761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            1,
+            0
+          ],
+          "lower_nats": 0.47479635622943483,
+          "incumbent_upper_nats": 0.3425761180297547
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            0
+          ],
+          "lower_nats": 0.5595599808898097,
+          "incumbent_upper_nats": 0.3425761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "0",
+      "budget_bits": 10,
+      "method": "screen_then_bellman",
+      "counts": {
+        "nodes": 23,
+        "pruned": 5,
+        "completed_leaves": 7,
+        "label_bound_calls": 23,
+        "bellman_bound_calls": 18,
+        "screen_prunes": 5
+      },
+      "seconds": 0.005074054999568034,
+      "optimum_upper": "5301108662649844721048338689/15474250491067253436239052800",
+      "optimum_decimal": 0.3425761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "6927017047252576950897107719/12379400392853802748991242240",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            1,
+            0
+          ],
+          "lower_nats": 0.40564959013023594,
+          "incumbent_upper_nats": 0.3425761180297547
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            0
+          ],
+          "lower_nats": 0.5023368518933474,
+          "incumbent_upper_nats": 0.3425761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 10,
+      "method": "forced",
+      "counts": {
+        "nodes": 27,
+        "pruned": 12,
+        "completed_leaves": 2,
+        "label_bound_calls": 27,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0014610260004701559,
+      "optimum_upper": "7622246236309932736484196609/15474250491067253436239052800",
+      "optimum_decimal": 0.4925761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            1,
+            0,
+            0
+          ],
+          "lower_nats": 0.5334387497662809,
+          "incumbent_upper_nats": 0.4925761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 10,
+      "method": "reach",
+      "counts": {
+        "nodes": 19,
+        "pruned": 8,
+        "completed_leaves": 2,
+        "label_bound_calls": 19,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0012605449992406648,
+      "optimum_upper": "7622246236309932736484196609/15474250491067253436239052800",
+      "optimum_decimal": 0.4925761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            0,
+            1,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            1,
+            0
+          ],
+          "lower_nats": 0.555649590130236,
+          "incumbent_upper_nats": 0.4925761180297547
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.4925761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 10,
+      "method": "bellman",
+      "counts": {
+        "nodes": 19,
+        "pruned": 8,
+        "completed_leaves": 2,
+        "label_bound_calls": 0,
+        "bellman_bound_calls": 19,
+        "screen_prunes": 0
+      },
+      "seconds": 0.003641907000201172,
+      "optimum_upper": "7622246236309932736484196609/15474250491067253436239052800",
+      "optimum_decimal": 0.4925761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            0,
+            1,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            1,
+            0
+          ],
+          "lower_nats": 0.6247963562294349,
+          "incumbent_upper_nats": 0.4925761180297547
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.4925761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 10,
+      "method": "screen_then_bellman",
+      "counts": {
+        "nodes": 19,
+        "pruned": 8,
+        "completed_leaves": 2,
+        "label_bound_calls": 19,
+        "bellman_bound_calls": 11,
+        "screen_prunes": 8
+      },
+      "seconds": 0.004118718999961857,
+      "optimum_upper": "7622246236309932736484196609/15474250491067253436239052800",
+      "optimum_decimal": 0.4925761180297547,
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ],
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            0,
+            1,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            1,
+            0
+          ],
+          "lower_nats": 0.555649590130236,
+          "incumbent_upper_nats": 0.4925761180297547
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.4925761180297547
+        }
+      ]
+    },
+    {
+      "lambda": "1/25",
+      "budget_bits": 10,
+      "method": "forced",
+      "counts": {
+        "nodes": 27,
+        "pruned": 13,
+        "completed_leaves": 1,
+        "label_bound_calls": 27,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0013901189995522145,
+      "optimum_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "optimum_decimal": 0.6395599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            1,
+            0,
+            0
+          ],
+          "lower_nats": 0.6834387497662809,
+          "incumbent_upper_nats": 0.6395599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "1/25",
+      "budget_bits": 10,
+      "method": "reach",
+      "counts": {
+        "nodes": 17,
+        "pruned": 8,
+        "completed_leaves": 1,
+        "label_bound_calls": 17,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.001086341000700486,
+      "optimum_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "optimum_decimal": 0.6395599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            0,
+            1,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            1,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            1,
+            1,
+            1
+          ],
+          "lower_nats": 0.6737280175906946,
+          "incumbent_upper_nats": 0.6395599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "1/25",
+      "budget_bits": 10,
+      "method": "bellman",
+      "counts": {
+        "nodes": 13,
+        "pruned": 6,
+        "completed_leaves": 1,
+        "label_bound_calls": 0,
+        "bellman_bound_calls": 13,
+        "screen_prunes": 0
+      },
+      "seconds": 0.002520328000173322,
+      "optimum_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "optimum_decimal": 0.6395599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            0,
+            1,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": 0.6584942917254791,
+          "incumbent_upper_nats": 0.6395599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "1/25",
+      "budget_bits": 10,
+      "method": "screen_then_bellman",
+      "counts": {
+        "nodes": 13,
+        "pruned": 6,
+        "completed_leaves": 1,
+        "label_bound_calls": 13,
+        "bellman_bound_calls": 8,
+        "screen_prunes": 5
+      },
+      "seconds": 0.0023737430001347093,
+      "optimum_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "optimum_decimal": 0.6395599808898097,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "39586845393404405854082035491/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            0,
+            1,
+            0
+          ],
+          "lower_nats": 0.7995599808898097,
+          "incumbent_upper_nats": 0.6395599808898097
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": 0.6584942917254791,
+          "incumbent_upper_nats": 0.6395599808898097
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 6,
+      "method": "forced",
+      "counts": {
+        "nodes": 29,
+        "pruned": 14,
+        "completed_leaves": 1,
+        "label_bound_calls": 29,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0008599779994256096,
+      "optimum_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "optimum_decimal": 0.5895599808898098,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 6,
+      "method": "reach",
+      "counts": {
+        "nodes": 9,
+        "pruned": 4,
+        "completed_leaves": 1,
+        "label_bound_calls": 9,
+        "bellman_bound_calls": 0,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0004218539997964399,
+      "optimum_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "optimum_decimal": 0.5895599808898098,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            0,
+            1
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 6,
+      "method": "bellman",
+      "counts": {
+        "nodes": 9,
+        "pruned": 4,
+        "completed_leaves": 1,
+        "label_bound_calls": 0,
+        "bellman_bound_calls": 9,
+        "screen_prunes": 0
+      },
+      "seconds": 0.0011659070005407557,
+      "optimum_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "optimum_decimal": 0.5895599808898098,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            0,
+            1
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        }
+      ]
+    },
+    {
+      "lambda": "3/200",
+      "budget_bits": 6,
+      "method": "screen_then_bellman",
+      "counts": {
+        "nodes": 9,
+        "pruned": 4,
+        "completed_leaves": 1,
+        "label_bound_calls": 9,
+        "bellman_bound_calls": 5,
+        "screen_prunes": 4
+      },
+      "seconds": 0.0014139779996185098,
+      "optimum_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "optimum_decimal": 0.5895599808898098,
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ],
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "initial_upper": "36491995295190955166834224931/61897001964269013744956211200",
+      "prune_witnesses": [
+        {
+          "prefix": [
+            0,
+            0,
+            0
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            0,
+            1
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        },
+        {
+          "prefix": [
+            1
+          ],
+          "lower_nats": 0.6495599808898097,
+          "incumbent_upper_nats": 0.5895599808898098
+        }
+      ]
+    }
+  ],
+  "acceptance": {
+    "complete_transition_tables_per_budget": 16,
+    "partial_tables_order_checked": 81,
+    "emission_assignments_per_partial": 9,
+    "all_different_observed_maps_strictly_separated": true,
+    "same_observation_ties": {
+      "('0', 2)": 1,
+      "('0', 6)": 18,
+      "('0', 10)": 1,
+      "('3/200', 10)": 1,
+      "('1/25', 10)": 1,
+      "('3/200', 6)": 1
+    },
+    "tie_order": "objective upper, logical bits, transition tuple, emission tuple"
+  },
+  "envelope_witnesses": [
+    {
+      "partial": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "lambda": "0",
+      "budget_bits": 10,
+      "bound_intervals_lower": {
+        "forced": "0",
+        "reach": "1191995685033189858281762379/6189700196426901374495621120",
+        "bellman": "1191995685033189858281762379/6189700196426901374495621120"
+      }
+    },
+    {
+      "partial": [
+        1,
+        0,
+        null,
+        null
+      ],
+      "lambda": "0",
+      "budget_bits": 10,
+      "bound_intervals_lower": {
+        "forced": "1111904388546444885078273501/3868562622766813359059763200",
+        "reach": "12554246738548067252565727251/30948500982134506872478105600",
+        "bellman": "14694235497080548824088715697/30948500982134506872478105600"
+      }
+    },
+    {
+      "partial": [
+        0,
+        null,
+        0,
+        null
+      ],
+      "lambda": "0",
+      "budget_bits": 10,
+      "bound_intervals_lower": {
+        "forced": "0",
+        "reach": "25039816488085266890306938731/61897001964269013744956211200",
+        "bellman": "25039816488085266890306938731/61897001964269013744956211200"
+      }
+    }
+  ],
+  "complete_logical_bit_KL_frontier": [
+    {
+      "image": {
+        "hex": "00",
+        "logical_bits": 2,
+        "physical_bytes": 1
+      },
+      "transition": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "emission_indices": [
+        1,
+        1
+      ],
+      "KL_interval": [
+        "34635085236262884754485503553/61897001964269013744956211200",
+        "6927017047252576950897107719/12379400392853802748991242240"
+      ]
+    },
+    {
+      "image": {
+        "hex": "ad01",
+        "logical_bits": 10,
+        "physical_bytes": 2
+      },
+      "transition": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "emission_indices": [
+        2,
+        1
+      ],
+      "KL_interval": [
+        "10602217325299687811762146119/30948500982134506872478105600",
+        "5301108662649844721048338689/15474250491067253436239052800"
+      ]
+    }
+  ]
+}

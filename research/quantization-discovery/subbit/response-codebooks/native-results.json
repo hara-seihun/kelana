@@ -1,0 +1,67 @@
+{
+  "format": "response-codebooks-cpu/1",
+  "cpu": "",
+  "host_model": "AMD RYZEN AI MAX+ 395 w/ Radeon 8060S",
+  "compiler": "g++ (GCC) 15.3.0",
+  "compile_command": "c++ -O3 -std=c++20 -mavx512vnni -mavx512bw -mavx512f native.cpp -o build/native",
+  "native_source_sha256": "b2c9ed8dd3e0cbca0da974d36c7aa016a39bbb6fcb811f377554aa7841597994",
+  "fixture_export_source_sha256": "be0bf1766bac06539fb99c3782f6da71f7f10e81e73628a4662712f0c100db8d",
+  "native_binary_sha256": "f63d0815fe60ccf34a00d4bfbb9a7097868d93194419e75304e4052b2550f314",
+  "native_archive_sha256": "b022289d131cf11e274cbd506f6bd0ddb2ac6d03f29fc44a748ec736a41a8260",
+  "fixture_sha256": "70c7180bd822f2a05e2a76e74df657f575caead2da7d526728fbc92831c4bdee",
+  "input_file_sha256": {
+    "queries.i8": "a2e2a3c7f781441a52ec69bcadc4216dd9a4a1c16461dd638d7d5fa5c82bd180",
+    "labels.u6": "ff891661fdfe1f11e6895a62f28904e5242a285d2a3aae909e2c68d4fb81a9b3",
+    "decoded.i8": "3ac7c8eac49c08b3d664752395482d9c2ed2e432c5d16c9b06969e7fbb323810",
+    "oracle.i32": "97090b61557896d54ceb8e9ed4057135ccbf5aae236adc6e5ce21cf663d40871",
+    "dictionary.i8": "820a3a06849b989955de6b2c8b5a2e571806d44a566e2ef2053677aaa699ca53"
+  },
+  "repetitions_per_round": 256,
+  "rotated_rounds": 9,
+  "samples_us": {
+    "dense_vnni": [
+      4.64379,
+      4.628,
+      4.64,
+      4.58691,
+      4.66831,
+      4.66523,
+      4.67722,
+      4.68472,
+      4.68515
+    ],
+    "compact_reused_table": [
+      14.3585,
+      14.4663,
+      14.4123,
+      14.4413,
+      14.5591,
+      14.6327,
+      14.6658,
+      14.7127,
+      14.718
+    ],
+    "compact_fresh_table": [
+      14.5247,
+      14.7347,
+      16.1139,
+      14.7727,
+      14.853,
+      14.8692,
+      14.9445,
+      14.9133,
+      14.9752
+    ]
+  },
+  "median_us": {
+    "dense_vnni": 4.66523,
+    "compact_reused_table": 14.5591,
+    "compact_fresh_table": 14.8692
+  },
+  "control_boundary": "exact int32 q dot decoded int8 codeword, 5120x128; unchanged FP16 row scales omitted for both",
+  "control_extra_row_sum_bytes": 20480,
+  "compact_table_bytes": 4096,
+  "compact_dictionary_bytes": 512,
+  "compact_label_bytes": 61440,
+  "dense_decoded_weight_bytes": 655360
+}

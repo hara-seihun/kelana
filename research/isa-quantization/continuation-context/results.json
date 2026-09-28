@@ -1,0 +1,120 @@
+{
+  "domain": "states 0..3; paid subsets of a,b; two-input response maps",
+  "suffixes": {
+    "bit": "response (parity,1-parity), pays/reuses a, work 1",
+    "zero": "response (0,0), no static use, work 2"
+  },
+  "nodes": 16,
+  "mutual_simulation_classes": 8,
+  "classes": [
+    [
+      {
+        "state": 0,
+        "paid": []
+      },
+      {
+        "state": 2,
+        "paid": []
+      }
+    ],
+    [
+      {
+        "state": 0,
+        "paid": [
+          "a"
+        ]
+      },
+      {
+        "state": 2,
+        "paid": [
+          "a"
+        ]
+      }
+    ],
+    [
+      {
+        "state": 0,
+        "paid": [
+          "b"
+        ]
+      },
+      {
+        "state": 2,
+        "paid": [
+          "b"
+        ]
+      }
+    ],
+    [
+      {
+        "state": 0,
+        "paid": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "state": 2,
+        "paid": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    [
+      {
+        "state": 1,
+        "paid": []
+      },
+      {
+        "state": 3,
+        "paid": []
+      }
+    ],
+    [
+      {
+        "state": 1,
+        "paid": [
+          "a"
+        ]
+      },
+      {
+        "state": 3,
+        "paid": [
+          "a"
+        ]
+      }
+    ],
+    [
+      {
+        "state": 1,
+        "paid": [
+          "b"
+        ]
+      },
+      {
+        "state": 3,
+        "paid": [
+          "b"
+        ]
+      }
+    ],
+    [
+      {
+        "state": 1,
+        "paid": [
+          "a",
+          "b"
+        ]
+      },
+      {
+        "state": 3,
+        "paid": [
+          "a",
+          "b"
+        ]
+      }
+    ]
+  ],
+  "checked_teachers": 4
+}

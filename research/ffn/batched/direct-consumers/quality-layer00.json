@@ -1,0 +1,215 @@
+{
+  "layer": 0,
+  "dataset": "/path/to/workspace/data/kelana-ffn/ptq1_0/layer00",
+  "manifest_sha256": "aa3535123f0b13071c2704e7eba5b96018f7d2abe0de316fc2fec2c428a3a95a",
+  "gate_sha256": "959334717c0b09684c3d76939da6b4d3e9ec7d00dfa8a2ef5060717b4d999d88",
+  "up_sha256": "281b1e2135de6a77545efd1cad062e9d336a6bfecc0ad9e6196fc60c28639a45",
+  "gate_quantiles": [
+    -2.142486333847046,
+    -0.3381255215406418,
+    -0.1803826957941055,
+    -0.02192702703177929,
+    0.1342298150062561,
+    0.3035743495821951,
+    2.104341506958008
+  ],
+  "interval_fit_even_coefficients": [
+    0.23950782211969102,
+    -0.013800718337930043,
+    0.00043290110419647206
+  ],
+  "interval_fit": "unweighted least squares on 4097 fixed points in [-3.5,3.5], not a uniform error proof",
+  "scope": "8 captured rows, one FFN, float64 perturbation propagation through Hadamard, int8 quantization and down; not whole-model quality or a native packed candidate",
+  "seconds": 0.9551310860551894,
+  "candidates": [
+    {
+      "name": "relu_product",
+      "hidden_error": {
+        "rms": 0.00982736533439807,
+        "relative_rms": 0.5956895685771554,
+        "mean": -1.092117838385958e-05,
+        "max_abs": 1.2270181752024385,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.021998228199643973,
+        "relative_rms": 0.13259496288382513,
+        "mean": -5.677598724349266e-05,
+        "max_abs": 2.984237082700314,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "bilinear_half",
+      "hidden_error": {
+        "rms": 0.010723306108770524,
+        "relative_rms": 0.6499973667708917,
+        "mean": 1.2962065458909178e-05,
+        "max_abs": 2.763076643475351,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.016411507014356157,
+        "relative_rms": 0.09892083779144581,
+        "mean": 2.9966994695258907e-05,
+        "max_abs": 1.5130113496553916,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "taylor_degree2",
+      "hidden_error": {
+        "rms": 0.0026889890007098906,
+        "relative_rms": 0.1629941131968411,
+        "mean": -1.2723093708167828e-06,
+        "max_abs": 0.6393276081989641,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.003935500722214819,
+        "relative_rms": 0.02372134553089991,
+        "mean": -3.099306623274606e-06,
+        "max_abs": 0.29394408617320883,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "taylor_degree4",
+      "hidden_error": {
+        "rms": 0.0009676987276386519,
+        "relative_rms": 0.05865743441551199,
+        "mean": -1.1664101091773766e-07,
+        "max_abs": 0.19844236646188662,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.0013865532960011646,
+        "relative_rms": 0.008357490482924225,
+        "mean": -2.177475150468315e-06,
+        "max_abs": 0.08489764231312351,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "taylor_degree6",
+      "hidden_error": {
+        "rms": 0.000387922033247117,
+        "relative_rms": 0.02351404478855694,
+        "mean": 2.1463469815734204e-07,
+        "max_abs": 0.08887759992156763,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.0005498880257010693,
+        "relative_rms": 0.003314466133198546,
+        "mean": 1.1555344907989977e-06,
+        "max_abs": 0.026657358350945085,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "interval_fit_degree6",
+      "hidden_error": {
+        "rms": 7.755835349949975e-05,
+        "relative_rms": 0.004701229735904728,
+        "mean": 1.594801871152839e-07,
+        "max_abs": 0.006984965603757942,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.00017527654366722366,
+        "relative_rms": 0.0010564844855249212,
+        "mean": 1.722666710355694e-07,
+        "max_abs": 0.009811331833554374,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "gate_grid_7_levels_exact_silu",
+      "hidden_error": {
+        "rms": 0.010448351489835733,
+        "relative_rms": 0.6333308856990761,
+        "mean": -4.220139921198039e-05,
+        "max_abs": 0.668889298547656,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.03166539921634444,
+        "relative_rms": 0.19086411849571816,
+        "mean": -0.00025121844210437014,
+        "max_abs": 3.7580138177102795,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "gate_grid_15_levels_exact_silu",
+      "hidden_error": {
+        "rms": 0.007840980131376655,
+        "relative_rms": 0.4752840576032065,
+        "mean": 2.6930754720438632e-06,
+        "max_abs": 0.3798551155913992,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.013778302540301691,
+        "relative_rms": 0.08304912092706557,
+        "mean": -1.8706841772899252e-05,
+        "max_abs": 0.9133212311640633,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "gate_grid_31_levels_exact_silu",
+      "hidden_error": {
+        "rms": 0.004207377025568355,
+        "relative_rms": 0.255031793356623,
+        "mean": -1.6647502269445408e-06,
+        "max_abs": 0.16328835729836877,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.005539527701981464,
+        "relative_rms": 0.03338966499356712,
+        "mean": -2.2703119765536446e-05,
+        "max_abs": 0.2924659344661584,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "gate_grid_63_levels_exact_silu",
+      "hidden_error": {
+        "rms": 0.0020300123187939343,
+        "relative_rms": 0.12304998554963532,
+        "mean": -7.170997459374444e-06,
+        "max_abs": 0.07104278747525283,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.002579250733143121,
+        "relative_rms": 0.015546509115435298,
+        "mean": -3.5230351911623926e-06,
+        "max_abs": 0.03300943500475646,
+        "reference_rms": 0.16590545916075272
+      }
+    },
+    {
+      "name": "gate_grid_255_levels_exact_silu",
+      "hidden_error": {
+        "rms": 0.0004968250594075277,
+        "relative_rms": 0.03011524403808247,
+        "mean": -1.5056972596868306e-06,
+        "max_abs": 0.017135737335878254,
+        "reference_rms": 0.01649746084671483
+      },
+      "residual_error": {
+        "rms": 0.0006406990916931922,
+        "relative_rms": 0.0038618324854059936,
+        "mean": 3.499500150854987e-06,
+        "max_abs": 0.010273222032477299,
+        "reference_rms": 0.16590545916075272
+      }
+    }
+  ],
+  "source_sha256": "fee58c5a133f981691a0446ae5be7b8d4876386fd26c5297156deeab1524c14f",
+  "shared_probe_sha256": "d6563124a901a0e82320f86306e24f3bd93bfc458b544c42b5bcff8f4b228950"
+}

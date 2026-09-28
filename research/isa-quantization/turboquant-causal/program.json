@@ -1,0 +1,27 @@
+{
+  "paper": "https://arxiv.org/html/2504.19874v1#S3",
+  "seed": 20260924,
+  "rng": "NumPy PCG64 default_rng",
+  "matrix_dtype": "little-endian FP32 row-major",
+  "rotation": "independent Gaussian QR with sign-diagonal R correction, realized in FP64 then stored FP32",
+  "S": "independent iid N(0,1), stored FP32",
+  "codebook": "exact d128 spherical-coordinate beta density symmetric 4-centroid Lloyd (data independent), stored FP32",
+  "centroid_solve": {
+    "iterations": 56,
+    "positive_threshold": 0.08651655772355689,
+    "inner": 0.03999159519757697,
+    "outer": 0.13304152024953822
+  },
+  "codebook_values": [
+    -0.13304151594638824,
+    -0.039991594851017,
+    0.039991594851017,
+    0.13304151594638824
+  ],
+  "sha256": "6aa9d5a62e4763b434f8e59ee1d79322dfda8e7146846748d77bc619f171a1cf",
+  "K_rotation_bytes": 65536,
+  "V_rotation_bytes": 65536,
+  "QJL_gaussian_bytes": 65536,
+  "centroids_bytes": 16,
+  "total_program_bytes": 196624
+}

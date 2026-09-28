@@ -1,0 +1,24 @@
+Command: clang++ -O3 -std=c++20 encode_cpu.cpp -o encode_cpu
+Command: hipcc -O3 --offload-arch=gfx1151 -save-temps -c encoder.hip -o encoder.o
+clang version 21.1.8
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /nix/store/qclx96azksn97fdyiy319icy2yi9ldc1-clang-21.1.8/bin
+HIP version: 7.2.53211-9999
+nixpkgs-AMD clang version 22.0.0 (https://github.com/ROCm/llvm-project/tree/rocm-7.2.3 rocm-7.2.3)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /nix/store/ly700gf82nzmd5y8cyz14107d0ql3fib-rocm-toolchain/bin
+Configuration file: /nix/store/ly700gf82nzmd5y8cyz14107d0ql3fib-rocm-toolchain/bin/x86_64-unknown-linux-gnu.cfg
+0000000000000000 g     F .text._Z9flush_keyILb0EEvPKtPKDF16_Ph	0000000000001e04 .protected _Z9flush_keyILb0EEvPKtPKDF16_Ph
+0000000000000000 g     O .rodata	0000000000000040 .protected _Z9flush_keyILb0EEvPKtPKDF16_Ph.kd
+0000000000000000 g     F .text._Z9flush_keyILb1EEvPKtPKDF16_Ph	0000000000002414 .protected _Z9flush_keyILb1EEvPKtPKDF16_Ph
+0000000000000040 g     O .rodata	0000000000000040 .protected _Z9flush_keyILb1EEvPKtPKDF16_Ph.kd
+		.amdhsa_group_segment_fixed_size 4608
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_next_free_vgpr 36
+		.amdhsa_next_free_sgpr 9
+		.amdhsa_group_segment_fixed_size 4608
+		.amdhsa_private_segment_fixed_size 0
+		.amdhsa_next_free_vgpr 62
+		.amdhsa_next_free_sgpr 14

@@ -1,0 +1,5 @@
+# Native affine-folded V alphabet
+
+[Programme 12 main, `canon/affine-native/`](https://lemma.ing/dev/programmes/12) owns the complete native result, code, device-state artifact manifest and quantitative receipts (`cb30530635da3f10d22205e0c95e46d0942dc045`). The source owner is programme canon; `/path/to/workspace/data/kelana-affine-native/` holds its hashed physical states/outputs.
+
+On the frozen original KIVI2 cache, the affine-folded reconstruction retains the original code/field transformation, passes 4,096 physical state frames, 4,358,144 logical record checks and 16 full-O numerical guards. The held layer-0 teacher SSE changes .832657475→.779852645 (6.34% lower), while 32 order-balanced boundary pairs measure a 1.07165× slower median. Shared constants shrink from 16 to 8 bytes/layer; active globals differ by eight bytes. This is a quality/static-byte/execution tradeoff, not a native speed win or whole-model claim. The separate full-table implementation had 1.144× slowdown but was not timed in the same matched run. Next: a simultaneous three-arm comparison if the folded-versus-table timing rank matters, then contextual layer-1 native acceptance.

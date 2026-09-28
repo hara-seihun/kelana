@@ -1,0 +1,49 @@
+{
+  "grammar": {
+    "model_V_int8": 6,
+    "model_O_int8": 6,
+    "two_token_cache_codes": 2,
+    "two_token_cache_FP16_fields": 16,
+    "total_bytes_each": 30
+  },
+  "arms": [
+    {
+      "image": "original.bin",
+      "bytes": 30,
+      "sha256": "52a3a11445843a3829454aaa9f0b5f2ca2430de3d2c81fd90010ca7c985f4ac3",
+      "per_token_teacher_output": [
+        "-10",
+        "-20"
+      ],
+      "per_token_quantized_output": [
+        "-12",
+        "-24"
+      ],
+      "cache_value_squared_error": "10",
+      "teacher_mixture": "-35/2",
+      "candidate_mixture": "-21",
+      "mixture_squared_error": "49/4"
+    },
+    {
+      "image": "grouped.bin",
+      "bytes": 30,
+      "sha256": "1321d79c57f2213fc781dcc4f0fd7b0b7c1095901146ea9ce3e7b70e4c9b1dcc",
+      "per_token_teacher_output": [
+        "-10",
+        "-20"
+      ],
+      "per_token_quantized_output": [
+        "-10",
+        "-20"
+      ],
+      "cache_value_squared_error": "10",
+      "teacher_mixture": "-35/2",
+      "candidate_mixture": "-35/2",
+      "mixture_squared_error": "0"
+    }
+  ],
+  "gram_witness_squared_response": "169/36",
+  "incorrect_separate_head_square_sum": "505/36",
+  "scope": "Exact finite rational source and paid group permutation; no real-model or native claim.",
+  "strong_control": "Direct response -10*x, or one-bit token labels followed by that response, is exact and cheaper."
+}

@@ -1,0 +1,51 @@
+{
+ "job": "w64i20-packed2-lane5-match-0",
+ "network": "w64i20",
+ "contract": "packed2",
+ "projection": "lane5",
+ "mode": "match",
+ "valu": 0,
+ "library": "full",
+ "n_consts": 2,
+ "timeout_ms": 40000,
+ "library_components": [
+  "v_add_nc_u32",
+  "v_sub_nc_u32",
+  "v_mul_lo_u32",
+  "v_and_b32",
+  "v_or_b32",
+  "v_xor_b32",
+  "v_lshlrev_b32",
+  "v_lshrrev_b32",
+  "v_ashrrev_i32",
+  "v_bfe_u32",
+  "v_perm_b32",
+  "v_lshl_or_b32",
+  "v_dot4_i32_i8",
+  "v_dot8_i32_i4",
+  "v_dot4_u32_u8",
+  "v_lshl_add_u32",
+  "v_add3_u32",
+  "v_and_or_b32",
+  "v_alignbit_b32",
+  "v_med3_i32",
+  "v_sad_u8",
+  "v_mad_u32_u24"
+ ],
+ "done": {
+  "[]": {
+   "outcome": "unsat",
+   "seconds": 0.056
+  }
+ },
+ "solutions": [],
+ "per_query_timeout_ms": 20000,
+ "counts": {
+  "sat": 0,
+  "unsat": 1,
+  "timeout": 0
+ },
+ "queue_total": 1,
+ "queue_done": 1,
+ "timeout_multisets": []
+}

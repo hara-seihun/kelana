@@ -1,0 +1,77 @@
+{
+  "fixture": "instances/bonsai-layer00-down-block0.npz",
+  "fixture_sha256": "70c7180bd822f2a05e2a76e74df657f575caead2da7d526728fbc92831c4bdee",
+  "rows": 5120,
+  "row_width": 128,
+  "page_rows": 64,
+  "trit_code_bytes": 133120,
+  "baseline_aos_bytes": 143360,
+  "raw_soa_bytes": 143360,
+  "paged_bytes": 139948,
+  "page_offset_bytes": 324,
+  "page_stream_bytes": 6504,
+  "scale_page_size_sweep": {
+    "8": 10103,
+    "16": 8122,
+    "32": 7192,
+    "64": 6828,
+    "128": 6652,
+    "256": 6608,
+    "512": 6602,
+    "1024": 6695,
+    "5120": 7691
+  },
+  "page_width_histogram": {
+    "9": 19,
+    "10": 60,
+    "12": 1
+  },
+  "global_range_scale_bytes": 7683,
+  "global_unique_scale_dictionary_bytes": 7628,
+  "scale_unique": 614,
+  "joint_census": {
+    "train_rows": 2560,
+    "held_pairs": 163840,
+    "unconditional_bits_per_pair": 3.1696908039790093,
+    "scale_high_byte_conditioned_bits_per_pair": 3.169704130636043,
+    "held_bit_difference": -2.1834394884645008
+  },
+  "native": {
+    "dot_sequential": {
+      "checksum": 11054477674920,
+      "aos_ns_per_row": 40.593,
+      "soa_ns_per_row": 40.6587,
+      "page_ns_per_row": 42.8356
+    },
+    "dot_random": {
+      "checksum": 11054477674920,
+      "aos_ns_per_row": 43.1424,
+      "soa_ns_per_row": 41.6524,
+      "page_ns_per_row": 60.2343
+    },
+    "dot_sparse_16_pages": {
+      "checksum": 34306501040,
+      "aos_ns_per_row": 40.7333,
+      "soa_ns_per_row": 41.8547,
+      "page_ns_per_row": 43.4828
+    },
+    "scale_sequential": {
+      "checksum": 44524960,
+      "aos_ns_per_row": 0.318536,
+      "soa_ns_per_row": 0.285024,
+      "page_ns_per_row": 2.42078
+    },
+    "scale_random": {
+      "checksum": 44524960,
+      "aos_ns_per_row": 0.328623,
+      "soa_ns_per_row": 0.286284,
+      "page_ns_per_row": 2.46873
+    },
+    "scale_sparse_16_pages": {
+      "checksum": 139179,
+      "aos_ns_per_row": 0.312987,
+      "soa_ns_per_row": 0.293306,
+      "page_ns_per_row": 3.1502
+    }
+  }
+}

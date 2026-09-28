@@ -1,0 +1,554 @@
+{
+ "job": "w64i20-bytes-lane5-refine-1",
+ "network": "w64i20",
+ "contract": "bytes",
+ "projection": "lane5",
+ "mode": "refine",
+ "valu": 1,
+ "library": "full",
+ "n_consts": 3,
+ "timeout_ms": 40000,
+ "library_components": [
+  "v_add_nc_u32",
+  "v_sub_nc_u32",
+  "v_mul_lo_u32",
+  "v_and_b32",
+  "v_or_b32",
+  "v_xor_b32",
+  "v_lshlrev_b32",
+  "v_lshrrev_b32",
+  "v_ashrrev_i32",
+  "v_bfe_u32",
+  "v_perm_b32",
+  "v_lshl_or_b32",
+  "v_dot4_i32_i8",
+  "v_dot8_i32_i4",
+  "v_dot4_u32_u8",
+  "v_lshl_add_u32",
+  "v_add3_u32",
+  "v_and_or_b32",
+  "v_alignbit_b32",
+  "v_med3_i32",
+  "v_sad_u8",
+  "v_mad_u32_u24"
+ ],
+ "done": {
+  "[\"v_lshlrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.202
+  },
+  "[\"v_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.307
+  },
+  "[\"v_and_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.525
+  },
+  "[\"v_ashrrev_i32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.806
+  },
+  "[\"v_perm_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.411
+  },
+  "[\"v_lshl_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.849
+  },
+  "[\"v_lshrrev_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.419
+  },
+  "[\"v_xor_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.561
+  },
+  "[\"v_add_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.635
+  },
+  "[\"v_sub_nc_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 2.069
+  },
+  "[\"v_bfe_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.777
+  },
+  "[\"v_dot4_i32_i8\"]": {
+   "outcome": "sat",
+   "seconds": 1.491
+  },
+  "[\"v_and_or_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 0.773
+  },
+  "[\"v_lshl_add_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.361
+  },
+  "[\"v_dot4_u32_u8\"]": {
+   "outcome": "sat",
+   "seconds": 2.278
+  },
+  "[\"v_alignbit_b32\"]": {
+   "outcome": "unsat",
+   "seconds": 1.946
+  },
+  "[\"v_mul_lo_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 3.858
+  },
+  "[\"v_add3_u32\"]": {
+   "outcome": "unsat",
+   "seconds": 6.305
+  },
+  "[\"v_mad_u32_u24\"]": {
+   "outcome": "unsat",
+   "seconds": 6.43
+  },
+  "[\"v_med3_i32\"]": {
+   "outcome": "timeout",
+   "seconds": 20.024
+  },
+  "[\"v_sad_u8\"]": {
+   "outcome": "timeout",
+   "seconds": 20.015
+  },
+  "[\"v_dot8_i32_i4\"]": {
+   "outcome": "timeout",
+   "seconds": 20.038
+  }
+ },
+ "solutions": [
+  {
+   "components": [
+    "v_dot4_i32_i8",
+    "ds_bpermute_b32"
+   ],
+   "program": [
+    {
+     "dst": "r0",
+     "op": "v_dot4_i32_i8",
+     "args": [
+      "xb",
+      "const0=0x202b3a3e",
+      "const1=0x80109002"
+     ]
+    },
+    {
+     "dst": "out",
+     "op": "ds_bpermute_b32",
+     "args": [
+      "r0"
+     ],
+     "offset0": 3
+    }
+   ],
+   "constants": [
+    "0x202b3a3e",
+    "0x80109002",
+    "0x20403a88"
+   ],
+   "table": [
+    4294967284,
+    0,
+    4294967291,
+    9,
+    0,
+    5,
+    4294967288,
+    4,
+    4294967287,
+    0,
+    4294967289,
+    4294967282,
+    1,
+    2,
+    27,
+    4294967291,
+    4294967292,
+    4294967295,
+    3,
+    0,
+    4294967291,
+    2,
+    3,
+    4294967280,
+    4294967295,
+    0,
+    4294967291,
+    4294967292,
+    6,
+    13,
+    0,
+    4294967290
+   ],
+   "observed": [
+    24,
+    3,
+    14,
+    7,
+    17,
+    28,
+    21,
+    0,
+    11,
+    8,
+    18,
+    29,
+    22,
+    1,
+    12,
+    5,
+    15,
+    26,
+    23,
+    2,
+    13,
+    6,
+    16,
+    27,
+    20,
+    31,
+    10
+   ],
+   "relabel_observed_to_map": [
+    [
+     0,
+     -12
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     -5
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     6,
+     -8
+    ],
+    [
+     7,
+     4
+    ],
+    [
+     8,
+     -9
+    ],
+    [
+     10,
+     -7
+    ],
+    [
+     11,
+     -14
+    ],
+    [
+     12,
+     1
+    ],
+    [
+     13,
+     2
+    ],
+    [
+     14,
+     27
+    ],
+    [
+     15,
+     -5
+    ],
+    [
+     16,
+     -4
+    ],
+    [
+     17,
+     -1
+    ],
+    [
+     18,
+     3
+    ],
+    [
+     20,
+     -5
+    ],
+    [
+     21,
+     2
+    ],
+    [
+     22,
+     3
+    ],
+    [
+     23,
+     -16
+    ],
+    [
+     24,
+     -1
+    ],
+    [
+     26,
+     -5
+    ],
+    [
+     27,
+     -4
+    ],
+    [
+     28,
+     6
+    ],
+    [
+     29,
+     13
+    ],
+    [
+     31,
+     -6
+    ]
+   ],
+   "relabel_is_bijective": false
+  },
+  {
+   "components": [
+    "v_dot4_u32_u8",
+    "ds_bpermute_b32"
+   ],
+   "program": [
+    {
+     "dst": "r0",
+     "op": "v_dot4_u32_u8",
+     "args": [
+      "const1=0x02090e58",
+      "xb",
+      "const0=0xb30a8060"
+     ]
+    },
+    {
+     "dst": "out",
+     "op": "ds_bpermute_b32",
+     "args": [
+      "r0"
+     ],
+     "offset0": 264
+    }
+   ],
+   "constants": [
+    "0xb30a8060",
+    "0x02090e58",
+    "0x030aa040"
+   ],
+   "table": [
+    9,
+    4,
+    27,
+    0,
+    4294967295,
+    2,
+    6,
+    4294967284,
+    0,
+    4294967282,
+    4294967280,
+    0,
+    4294967291,
+    4294967288,
+    2,
+    0,
+    4294967292,
+    4294967291,
+    4294967292,
+    4294967290,
+    4294967287,
+    4294967289,
+    3,
+    3,
+    13,
+    0,
+    0,
+    5,
+    1,
+    4294967291,
+    4294967295,
+    4294967291
+   ],
+   "observed": [
+    30,
+    0,
+    2,
+    1,
+    4,
+    6,
+    5,
+    7,
+    9,
+    20,
+    22,
+    24,
+    23,
+    26,
+    28,
+    27,
+    29,
+    31,
+    10,
+    12,
+    14,
+    13,
+    16,
+    18,
+    17,
+    19,
+    21
+   ],
+   "relabel_observed_to_map": [
+    [
+     0,
+     9
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     27
+    ],
+    [
+     4,
+     -1
+    ],
+    [
+     5,
+     2
+    ],
+    [
+     6,
+     6
+    ],
+    [
+     7,
+     -12
+    ],
+    [
+     9,
+     -14
+    ],
+    [
+     10,
+     -16
+    ],
+    [
+     12,
+     -5
+    ],
+    [
+     13,
+     -8
+    ],
+    [
+     14,
+     2
+    ],
+    [
+     16,
+     -4
+    ],
+    [
+     17,
+     -5
+    ],
+    [
+     18,
+     -4
+    ],
+    [
+     19,
+     -6
+    ],
+    [
+     20,
+     -9
+    ],
+    [
+     21,
+     -7
+    ],
+    [
+     22,
+     3
+    ],
+    [
+     23,
+     3
+    ],
+    [
+     24,
+     13
+    ],
+    [
+     26,
+     0
+    ],
+    [
+     27,
+     5
+    ],
+    [
+     28,
+     1
+    ],
+    [
+     29,
+     -5
+    ],
+    [
+     30,
+     -1
+    ],
+    [
+     31,
+     -5
+    ]
+   ],
+   "relabel_is_bijective": false
+  }
+ ],
+ "per_query_timeout_ms": 20000,
+ "counts": {
+  "sat": 2,
+  "unsat": 17,
+  "timeout": 3
+ },
+ "queue_total": 22,
+ "queue_done": 22,
+ "timeout_multisets": [
+  [
+   "v_med3_i32"
+  ],
+  [
+   "v_sad_u8"
+  ],
+  [
+   "v_dot8_i32_i4"
+  ]
+ ]
+}

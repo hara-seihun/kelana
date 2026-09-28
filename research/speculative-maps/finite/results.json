@@ -1,0 +1,103 @@
+{
+  "finite_grid": {
+    "grid": 4,
+    "states": 3,
+    "steps": 5,
+    "streams": 1024,
+    "distinct_paths": 102,
+    "law": "exact rational equality"
+  },
+  "larger_paths": {
+    "cases": 200,
+    "max_states": 16,
+    "max_steps": 33,
+    "joint_carrier_bits": 128,
+    "joint_compositions": "componentwise exact"
+  },
+  "coverage": {
+    "sticky_correlated": {
+      "2": {
+        "chain": 1.71,
+        "tree": 1.71,
+        "chain_exact": "171/100",
+        "tree_exact": "171/100"
+      },
+      "4": {
+        "chain": 3.0951,
+        "tree": 3.0951,
+        "chain_exact": "30951/10000",
+        "tree_exact": "30951/10000"
+      },
+      "8": {
+        "chain": 5.12579511,
+        "tree": 5.12579511,
+        "chain_exact": "512579511/100000000",
+        "tree_exact": "512579511/100000000"
+      },
+      "16": {
+        "chain": 7.332281830033343,
+        "tree": 7.332281830033343,
+        "chain_exact": "73322818300333431/10000000000000000",
+        "tree_exact": "73322818300333431/10000000000000000"
+      }
+    },
+    "balanced_branching": {
+      "2": {
+        "chain": 0.75,
+        "tree": 1.0,
+        "chain_exact": "3/4",
+        "tree_exact": "1"
+      },
+      "4": {
+        "chain": 0.9375,
+        "tree": 1.5,
+        "chain_exact": "15/16",
+        "tree_exact": "3/2"
+      },
+      "8": {
+        "chain": 0.99609375,
+        "tree": 2.25,
+        "chain_exact": "255/256",
+        "tree_exact": "9/4"
+      },
+      "16": {
+        "chain": 0.9999847412109375,
+        "tree": 3.125,
+        "chain_exact": "65535/65536",
+        "tree_exact": "25/8"
+      }
+    },
+    "asymmetric_branching": {
+      "2": {
+        "chain": 1.3125,
+        "tree": 1.3125,
+        "chain_exact": "21/16",
+        "tree_exact": "21/16"
+      },
+      "4": {
+        "chain": 2.05078125,
+        "tree": 2.05078125,
+        "chain_exact": "525/256",
+        "tree_exact": "525/256"
+      },
+      "8": {
+        "chain": 2.6996612548828125,
+        "tree": 2.903564453125,
+        "chain_exact": "176925/65536",
+        "tree_exact": "11893/4096"
+      },
+      "16": {
+        "chain": 2.9699322127271444,
+        "tree": 3.8207550048828125,
+        "chain_exact": "12755761725/4294967296",
+        "tree_exact": "250397/65536"
+      }
+    }
+  },
+  "scan_cost": {
+    "serial_compositions": "n",
+    "serial_span": "n",
+    "balanced_compositions": "<3n",
+    "balanced_span": "<2ceil(log2(n))+2"
+  }
+}

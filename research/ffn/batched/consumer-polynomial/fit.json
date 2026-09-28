@@ -1,0 +1,139 @@
+{
+  "scope": "LP on4097points then exhaustive bounded binary16 inputs. Half fma simulated as float64 product+sum rounded once tohalf; reference uses host float64 exp. Not a formal continuous real bound or native GPU check.",
+  "polynomial": "g/2 + g\u00b2*(c2+g\u00b2*(c4+...))",
+  "fits": [
+    {
+      "degree": 4,
+      "radius": 3.5,
+      "coefficients": [
+        0.2142464547668859,
+        -0.006704023573621297
+      ],
+      "half_coefficients": [
+        0.2142333984375,
+        -0.006702423095703125
+      ],
+      "lp_grid_max_error": 0.02891065899244638,
+      "finite_fp16_inputs": 34306,
+      "half_max_abs_error": 0.03021969237025246,
+      "half_error_rms": 0.008450066738268954,
+      "worst_gate": 3.5,
+      "worst_output": 3.3671875,
+      "worst_reference": 3.3974071923702525,
+      "fp32_real_coeff_error_on_half_inputs": 0.028910658992446353
+    },
+    {
+      "degree": 6,
+      "radius": 3.5,
+      "coefficients": [
+        0.23884794853903846,
+        -0.01353385492711517,
+        0.00041225153424525983
+      ],
+      "half_coefficients": [
+        0.2388916015625,
+        -0.0135345458984375,
+        0.00041222572326660156
+      ],
+      "lp_grid_max_error": 0.0053838964893205485,
+      "finite_fp16_inputs": 34306,
+      "half_max_abs_error": 0.00688968262974754,
+      "half_error_rms": 0.0016440084378332685,
+      "worst_gate": 3.5,
+      "worst_output": 3.404296875,
+      "worst_reference": 3.3974071923702525,
+      "fp32_real_coeff_error_on_half_inputs": 0.005383897884301603
+    },
+    {
+      "degree": 8,
+      "radius": 3.5,
+      "coefficients": [
+        0.2467935951279019,
+        -0.017685485075523037,
+        0.001017019846881686,
+        -2.6310034510270944e-05
+      ],
+      "half_coefficients": [
+        0.246826171875,
+        -0.0176849365234375,
+        0.0010166168212890625,
+        -2.6285648345947266e-05
+      ],
+      "lp_grid_max_error": 0.0010303241354998804,
+      "finite_fp16_inputs": 34306,
+      "half_max_abs_error": 0.00302322888887252,
+      "half_error_rms": 0.00036606146168191854,
+      "worst_gate": 3.365234375,
+      "worst_output": 3.255859375,
+      "worst_reference": 3.2528361461111275,
+      "fp32_real_coeff_error_on_half_inputs": 0.0010303265142321827
+    },
+    {
+      "degree": 4,
+      "radius": 5.0,
+      "coefficients": [
+        0.18181935600131105,
+        -0.003473657292636116
+      ],
+      "half_coefficients": [
+        0.181884765625,
+        -0.0034770965576171875
+      ],
+      "lp_grid_max_error": 0.09208765324337209,
+      "finite_fp16_inputs": 35330,
+      "half_max_abs_error": 0.09476742423861317,
+      "half_error_rms": 0.027188932917071165,
+      "worst_gate": 4.01171875,
+      "worst_output": 4.03515625,
+      "worst_reference": 3.940388825761387,
+      "fp32_real_coeff_error_on_half_inputs": 0.09208765324337281
+    },
+    {
+      "degree": 6,
+      "radius": 5.0,
+      "coefficients": [
+        0.21891507168804136,
+        -0.008660315448799727,
+        0.00015567690930720808
+      ],
+      "half_coefficients": [
+        0.2188720703125,
+        -0.00865936279296875,
+        0.0001558065414428711
+      ],
+      "lp_grid_max_error": 0.026095599247754925,
+      "finite_fp16_inputs": 35330,
+      "half_max_abs_error": 0.027538987267659465,
+      "half_error_rms": 0.008132030230146284,
+      "worst_gate": 3.177734375,
+      "worst_output": 3.078125,
+      "worst_reference": 3.0505860127323405,
+      "fp32_real_coeff_error_on_half_inputs": 0.02609560187812232
+    },
+    {
+      "degree": 8,
+      "radius": 5.0,
+      "coefficients": [
+        0.2367182958231676,
+        -0.013363350573062972,
+        0.0004976459607990576,
+        -7.379641587712528e-06
+      ],
+      "half_coefficients": [
+        0.23681640625,
+        -0.01336669921875,
+        0.0004978179931640625,
+        -7.3909759521484375e-06
+      ],
+      "lp_grid_max_error": 0.0076268156786732655,
+      "finite_fp16_inputs": 35330,
+      "half_max_abs_error": 0.011396681092593397,
+      "half_error_rms": 0.0024347921724862977,
+      "worst_gate": 4.69140625,
+      "worst_output": 4.66015625,
+      "worst_reference": 4.648759568907407,
+      "fp32_real_coeff_error_on_half_inputs": 0.007626844761329507
+    }
+  ],
+  "source_sha256": "ddb8ca5509b32d58697d5168739d401e3a0393ac1aa180ae277bf0cf89efdf9c"
+}

@@ -1,0 +1,59 @@
+{
+  "panel": "train",
+  "window": 6,
+  "table_sha256": "c79b3d345a0bfc6a1b2e4a6e8f04246e5b7750e885ae17f3eb36ad66d53d86f5",
+  "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+  "capture_model_q_exact": true,
+  "rows": [
+    1536,
+    1792
+  ],
+  "shared_log_feature_min_max": [
+    -1665.49072265625,
+    -2.2773799896240234
+  ],
+  "final_per_feature_log_scale_min_max": [
+    -29.89326286315918,
+    -2.2773799896240234
+  ],
+  "heads": {
+    "head0": {
+      "attention_kl": 122.87763977050781,
+      "post_o_rel_sq": 2.4217867851257324,
+      "value_prefix_vs_dense_max_abs": 4.917383193969727e-07,
+      "log_feature_min_max": [
+        -56.527198791503906,
+        8.07708740234375
+      ],
+      "denominator_min_max": [
+        1.0010130405426025,
+        8.127910614013672
+      ],
+      "output_sse": 114.48324584960938,
+      "output_ref_sq": 47.27222442626953
+    },
+    "head1": {
+      "attention_kl": 156.76522827148438,
+      "post_o_rel_sq": 1.5364688634872437,
+      "value_prefix_vs_dense_max_abs": 8.344650268554688e-07,
+      "log_feature_min_max": [
+        -111.48336791992188,
+        2.9347305297851562
+      ],
+      "denominator_min_max": [
+        1.000000238418579,
+        5.639023780822754
+      ],
+      "output_sse": 694.3753051757812,
+      "output_ref_sq": 451.9293212890625
+    }
+  },
+  "gqa_pair": {
+    "post_o_rel_sq": 1.63686203956604,
+    "output_sse": 844.67724609375,
+    "output_ref_sq": 516.0344848632812
+  },
+  "shared_key_center_image_sha256": "7f991ba8b77dc6199ad8ffb3ca5c9d13c14a2997efed7ac7277de9c21f3f99ca",
+  "source_reader_sha256": "a9e5ee5de5666759964bc93a619a1c78038eff072f18c81c0f55636c3b953c86",
+  "key_feature_coordinate": "original rotated normalized key /128^(1/4), minus the independently decoded shared FP16 train-causal-pair center"
+}

@@ -1,0 +1,81 @@
+{
+  "fixture": "layer27-self_attn_q_proj.npz",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "rank": 328,
+  "admm_iterations": 400,
+  "rounds": 8,
+  "input_codes_per_block": 128,
+  "input_label_bits": 7,
+  "admm_same_rank_heldout_and_weight_error": [
+    0.12025345861911774,
+    0.5191485285758972
+  ],
+  "compressed_initial_heldout_and_weight_error": [
+    0.13411740958690643,
+    0.5608726739883423
+  ],
+  "refinement_heldout_and_weight_error": [
+    [
+      0.1630077213048935,
+      0.5402857065200806
+    ],
+    [
+      0.16417215764522552,
+      0.5325729846954346
+    ],
+    [
+      0.16499389708042145,
+      0.5300365090370178
+    ],
+    [
+      0.16543924808502197,
+      0.5289034247398376
+    ],
+    [
+      0.1655758023262024,
+      0.5282661318778992
+    ],
+    [
+      0.1650538295507431,
+      0.5278358459472656
+    ],
+    [
+      0.1657509207725525,
+      0.5275419354438782
+    ],
+    [
+      0.16629894077777863,
+      0.5273131132125854
+    ]
+  ],
+  "fit_heldout_response_error": 0.11545249819755554,
+  "fit_weight_error": 0.6892444491386414,
+  "activation_sweeps": 4,
+  "before_activation_heldout_and_weight_error": [
+    0.16629894077777863,
+    0.5273131132125854
+  ],
+  "seconds_cpu": 11.413356562989065,
+  "payload_bytes": {
+    "output_signs": 83968,
+    "input_labels": 36736,
+    "input_dictionaries": 16384,
+    "pre_post_scales": 6144
+  },
+  "payload_bpw": 0.54638671875,
+  "online": {
+    "input_table_signed_additions_upper": 131072,
+    "input_label_lookups": 41984,
+    "output_table_additions": 10455,
+    "output_table_reads": 83968,
+    "input_table_bf16_bytes": 32768,
+    "output_table_bf16_bytes": 20992,
+    "intermediate_bf16_bytes_unfused_write_read": 1312,
+    "minimum_payload_read_bytes": 143232
+  },
+  "image": "/path/to/workspace/data/kelana-subbit/block-factor/layer27-q-c128-activation.npz",
+  "serialized_zip_bytes": 144734
+}

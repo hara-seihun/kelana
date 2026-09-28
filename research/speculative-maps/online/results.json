@@ -1,0 +1,394 @@
+{
+  "first": {
+    "receipt_sha256": "19b9786522d245c2257e84bfbe7b439c8b1e216a19e4d6379adeace89d0f2901",
+    "arguments": {
+      "contexts": 2,
+      "tokens": 24,
+      "methods": "serial,chain6,tree6,tree18",
+      "tag": "first",
+      "repeat": 1
+    },
+    "arms": {
+      "serial": {
+        "tokens_per_second": 39.81261968216711,
+        "paths_matching_serial": 2,
+        "paths": 2,
+        "next_decisions_matching_serial": 2,
+        "total_emitted_tokens": 48,
+        "cycles": 48,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 25.109350228679734,
+        "mean_draft_ms": 0.0033632092405847893,
+        "mean_verify_ms": 25.092589958148892,
+        "mean_adopt_ms": 0.01339706129025823,
+        "speedup_vs_serial": 1.0
+      },
+      "chain6": {
+        "tokens_per_second": 42.00730212909008,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 41,
+        "tokens_per_cycle": 1.170731707317073,
+        "mean_cycle_ms": 27.85899007207396,
+        "mean_draft_ms": 1.5946721694312944,
+        "mean_verify_ms": 25.655203659680854,
+        "mean_adopt_ms": 0.6091142429618119,
+        "speedup_vs_serial": 1.0551252960604853
+      },
+      "tree6": {
+        "tokens_per_second": 46.70899568270618,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 37,
+        "tokens_per_cycle": 1.2972972972972974,
+        "mean_cycle_ms": 27.76150343266341,
+        "mean_draft_ms": 1.7067757010384388,
+        "mean_verify_ms": 25.572939216618654,
+        "mean_adopt_ms": 0.48178851500631786,
+        "speedup_vs_serial": 1.173220854482683
+      },
+      "tree18": {
+        "tokens_per_second": 48.69789681502617,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 33,
+        "tokens_per_cycle": 1.4545454545454546,
+        "mean_cycle_ms": 29.857230454305835,
+        "mean_draft_ms": 2.114262180949674,
+        "mean_verify_ms": 27.26734269879561,
+        "mean_adopt_ms": 0.47562557456055377,
+        "speedup_vs_serial": 1.2231774046468726
+      }
+    }
+  },
+  "head-rows": {
+    "receipt_sha256": "5d3a452621ad1f77f6b6bc8fd03a98a22f1c05c19c26a73318c02e9b924fc8b4",
+    "arguments": {
+      "contexts": 2,
+      "tokens": 24,
+      "methods": "serial,tree1,tree6",
+      "tag": "head-rows",
+      "repeat": 1,
+      "dtype": "bfloat16",
+      "head_rows": true
+    },
+    "arms": {
+      "serial": {
+        "tokens_per_second": 39.74699599521244,
+        "paths_matching_serial": 2,
+        "paths": 2,
+        "next_decisions_matching_serial": 2,
+        "total_emitted_tokens": 48,
+        "cycles": 48,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 25.151790581730893,
+        "mean_draft_ms": 0.0033344570814127414,
+        "mean_verify_ms": 25.136569291741278,
+        "mean_adopt_ms": 0.01188683290820336,
+        "speedup_vs_serial": 1.0
+      },
+      "tree1": {
+        "tokens_per_second": 37.08265577094846,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 48,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 26.95585133218022,
+        "mean_draft_ms": 1.30464702003034,
+        "mean_verify_ms": 25.02111487441046,
+        "mean_adopt_ms": 0.6300894377394192,
+        "speedup_vs_serial": 0.9329675071649466
+      },
+      "tree6": {
+        "tokens_per_second": 35.80936100617934,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 37,
+        "tokens_per_cycle": 1.2972972972972974,
+        "mean_cycle_ms": 36.21740845964932,
+        "mean_draft_ms": 1.7789408373426192,
+        "mean_verify_ms": 33.98742294686255,
+        "mean_adopt_ms": 0.4510446754441521,
+        "speedup_vs_serial": 0.900932513503476
+      }
+    }
+  },
+  "mask-diagnosis": {
+    "receipt_sha256": "9e96bf2219e735fbed4e0c9f4efd3cd0fd715ac76f7cc85d4883dea1de335916",
+    "arguments": {
+      "contexts": 2,
+      "tokens": 24,
+      "methods": "serial,serial-mask,tree1,tree6",
+      "tag": "mask-diagnosis",
+      "repeat": 1,
+      "dtype": "bfloat16",
+      "head_rows": false
+    },
+    "arms": {
+      "serial": {
+        "tokens_per_second": 39.46689489858892,
+        "paths_matching_serial": 2,
+        "paths": 2,
+        "next_decisions_matching_serial": 2,
+        "total_emitted_tokens": 48,
+        "cycles": 48,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 25.32735816597172,
+        "mean_draft_ms": 0.004031062720362873,
+        "mean_verify_ms": 25.30404941717279,
+        "mean_adopt_ms": 0.019277686078567058,
+        "speedup_vs_serial": 1.0
+      },
+      "serial-mask": {
+        "tokens_per_second": 40.28718849846654,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 48,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 24.813017769702128,
+        "mean_draft_ms": 0.0033455413965081484,
+        "mean_verify_ms": 24.794396312851557,
+        "mean_adopt_ms": 0.015275915454064185,
+        "speedup_vs_serial": 1.0207843460192494
+      },
+      "tree1": {
+        "tokens_per_second": 37.33701253533855,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 48,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 26.77206739463145,
+        "mean_draft_ms": 1.259392540002106,
+        "mean_verify_ms": 24.887473437653778,
+        "mean_adopt_ms": 0.6252014169755663,
+        "speedup_vs_serial": 0.9460336981482037
+      },
+      "tree6": {
+        "tokens_per_second": 46.54037587885243,
+        "paths_matching_serial": 1,
+        "paths": 2,
+        "next_decisions_matching_serial": 1,
+        "total_emitted_tokens": 48,
+        "cycles": 37,
+        "tokens_per_cycle": 1.2972972972972974,
+        "mean_cycle_ms": 27.863525406369387,
+        "mean_draft_ms": 1.8831087025417317,
+        "mean_verify_ms": 25.51288989166465,
+        "mean_adopt_ms": 0.4675268121630054,
+        "speedup_vs_serial": 1.1792256775821606
+      }
+    }
+  },
+  "fp32": {
+    "receipt_sha256": "c05a2135416e92fc0d14abef86e33c37fa4c675a8e49930a50a3b7a1e10d0402",
+    "arguments": {
+      "contexts": 4,
+      "tokens": 32,
+      "methods": "serial,chain6,tree6,tree18",
+      "tag": "fp32",
+      "repeat": 2,
+      "dtype": "float32",
+      "head_rows": false
+    },
+    "arms": {
+      "serial": {
+        "tokens_per_second": 30.25084467403182,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 256,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 33.04670153102052,
+        "mean_draft_ms": 0.0035259061519354873,
+        "mean_verify_ms": 33.02530983194174,
+        "mean_adopt_ms": 0.017865792926841095,
+        "speedup_vs_serial": 1.0
+      },
+      "chain6": {
+        "tokens_per_second": 35.310586654003664,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 202,
+        "tokens_per_cycle": 1.2673267326732673,
+        "mean_cycle_ms": 35.87856628255755,
+        "mean_draft_ms": 1.7202593066895584,
+        "mean_verify_ms": 33.61774082678845,
+        "mean_adopt_ms": 0.5405661490795406,
+        "speedup_vs_serial": 1.1672595272790933
+      },
+      "tree6": {
+        "tokens_per_second": 40.124269275744275,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 178,
+        "tokens_per_cycle": 1.4382022471910112,
+        "mean_cycle_ms": 35.831332752831656,
+        "mean_draft_ms": 1.7543465057335625,
+        "mean_verify_ms": 33.57218037608924,
+        "mean_adopt_ms": 0.5048058710088482,
+        "speedup_vs_serial": 1.3263850880232801
+      },
+      "tree18": {
+        "tokens_per_second": 42.09228326176607,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 158,
+        "tokens_per_cycle": 1.620253164556962,
+        "mean_cycle_ms": 38.48007476529036,
+        "mean_draft_ms": 2.275816202119488,
+        "mean_verify_ms": 35.67285732884856,
+        "mean_adopt_ms": 0.53140123432231,
+        "speedup_vs_serial": 1.3914415850311537
+      }
+    }
+  },
+  "fp32-direct": {
+    "receipt_sha256": "ea1d886880ca607e728ea04c49d613fb19d763209cffd7a0fbd10be7f82d9ebf",
+    "arguments": {
+      "contexts": 4,
+      "tokens": 32,
+      "methods": "serial,chain6,tree6,tree18",
+      "tag": "fp32-direct",
+      "repeat": 2,
+      "dtype": "float32",
+      "head_rows": false,
+      "producer": "direct"
+    },
+    "arms": {
+      "serial": {
+        "tokens_per_second": 30.242170187268478,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 256,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 33.05531645298743,
+        "mean_draft_ms": 0.003607906364777591,
+        "mean_verify_ms": 33.032597773058114,
+        "mean_adopt_ms": 0.01911077356453461,
+        "speedup_vs_serial": 1.0
+      },
+      "chain6": {
+        "tokens_per_second": 34.40172047950138,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 214,
+        "tokens_per_cycle": 1.1962616822429906,
+        "mean_cycle_ms": 34.761193696973585,
+        "mean_draft_ms": 0.7745782809634475,
+        "mean_verify_ms": 33.41176807480564,
+        "mean_adopt_ms": 0.5748473412045016,
+        "speedup_vs_serial": 1.137541395557122
+      },
+      "tree6": {
+        "tokens_per_second": 38.718805166842635,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 192,
+        "tokens_per_cycle": 1.3333333333333333,
+        "mean_cycle_ms": 34.4245933649745,
+        "mean_draft_ms": 0.687646958416129,
+        "mean_verify_ms": 33.233016307804064,
+        "mean_adopt_ms": 0.5039300987543053,
+        "speedup_vs_serial": 1.2802918880187606
+      },
+      "tree18": {
+        "tokens_per_second": 41.333432884311016,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 166,
+        "tokens_per_cycle": 1.5421686746987953,
+        "mean_cycle_ms": 37.29783699341772,
+        "mean_draft_ms": 1.2121982464857164,
+        "mean_verify_ms": 35.532011795145216,
+        "mean_adopt_ms": 0.5536269517867904,
+        "speedup_vs_serial": 1.3667482402341549
+      }
+    }
+  },
+  "fp32-frontier": {
+    "receipt_sha256": "3066f517b3082903331d60aef6c3c14e4b6bea78f34b7890891baea575e6030a",
+    "arguments": {
+      "contexts": 4,
+      "tokens": 32,
+      "methods": "serial,tree18,tree64",
+      "tag": "fp32-frontier",
+      "repeat": 2,
+      "dtype": "float32",
+      "head_rows": false,
+      "producer": "residual"
+    },
+    "arms": {
+      "serial": {
+        "tokens_per_second": 29.921612946780584,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 256,
+        "tokens_per_cycle": 1.0,
+        "mean_cycle_ms": 33.40717800784887,
+        "mean_draft_ms": 0.004003124900009425,
+        "mean_verify_ms": 33.37812116018313,
+        "mean_adopt_ms": 0.025053722765733255,
+        "speedup_vs_serial": 1.0
+      },
+      "tree18": {
+        "tokens_per_second": 41.32945414784948,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 158,
+        "tokens_per_cycle": 1.620253164556962,
+        "mean_cycle_ms": 39.18911526576451,
+        "mean_draft_ms": 2.355155974546966,
+        "mean_verify_ms": 36.22645629089859,
+        "mean_adopt_ms": 0.607503000318951,
+        "speedup_vs_serial": 1.3812575619288707
+      },
+      "tree64": {
+        "tokens_per_second": 29.699482096457203,
+        "paths_matching_serial": 8,
+        "paths": 8,
+        "next_decisions_matching_serial": 8,
+        "total_emitted_tokens": 256,
+        "cycles": 144,
+        "tokens_per_cycle": 1.7777777777777777,
+        "mean_cycle_ms": 59.83901731269725,
+        "mean_draft_ms": 3.7285744095546156,
+        "mean_verify_ms": 55.406058993260864,
+        "mean_adopt_ms": 0.7043839098817747,
+        "speedup_vs_serial": 0.9925762407688894
+      }
+    }
+  }
+}

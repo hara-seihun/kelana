@@ -1,0 +1,1282 @@
+{
+  "reports": [
+    {
+      "path": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj.json",
+      "sha256": "c16b54365ca55a86078f9a2b8c921a8d035f84e4e07f72921bcfc9b308dd7f00",
+      "report": {
+        "method": "fixed quantized response factors, complete nested training windows",
+        "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer00-self_attn_q_proj.npz",
+        "fixture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+        "rank": 88,
+        "left_bits": 4,
+        "right_bits": 4,
+        "group": 128,
+        "balance": 0.5,
+        "rank_precision_selected_before_curve": true,
+        "train_windows_available": 8,
+        "validation_rows": 1024,
+        "sources": {
+          "calibration_curve.py": "5a110a018c1f42f0f46ba6daa0f59bfe509be89ffd13725d1140599ba146d0a0",
+          "spectral_quant.py": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a"
+        },
+        "unique_fits": 20,
+        "entries": [
+          {
+            "seed": 101,
+            "window_indices": [
+              5
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.030789373442530632,
+            "validation_relative_squared_error": 0.10169074684381485,
+            "fit_seconds": 0.046131734998198226,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows5-cov0.npz",
+            "artifact_sha256": "33cf6281fccbb49796b27b3488ce75d6ce254a6fe2a5023c222e8d9afae519e9"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              5
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.03572837635874748,
+            "validation_relative_squared_error": 0.09750650823116302,
+            "fit_seconds": 0.24371091600914951,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows5-cov0.4.npz",
+            "artifact_sha256": "6bc9c363e93856cee009521d2fe8c02b4af3c56c7d0d16791449e0e66a8a9c13"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              1,
+              5
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.05297282338142395,
+            "validation_relative_squared_error": 0.09052984416484833,
+            "fit_seconds": 0.0977213779988233,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows1,5-cov0.npz",
+            "artifact_sha256": "9338f6e8b59acc4ac3ed407f3ca2e8a0f56c5a59939889f078afaa74c1fd814f"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              1,
+              5
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.05689812824130058,
+            "validation_relative_squared_error": 0.0887206569314003,
+            "fit_seconds": 0.31820065299689304,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows1,5-cov0.4.npz",
+            "artifact_sha256": "a49498e1eaf148a96e52f912dae27109c929af26131088039b41390e971c2079"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.058639105409383774,
+            "validation_relative_squared_error": 0.08577142655849457,
+            "fit_seconds": 0.2488590549910441,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,4,5-cov0.npz",
+            "artifact_sha256": "5f9b41e8bc6aab203d05ba4edf0474196beb7b9058f2782ebbc94344e10100c5"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.06251320987939835,
+            "validation_relative_squared_error": 0.08461596071720123,
+            "fit_seconds": 0.46813292198930867,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,4,5-cov0.4.npz",
+            "artifact_sha256": "9410eeee88b3e3dd727ca1c68c986c4e20e14aee5e4aafcba530f8ee0e128433"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.06743377447128296,
+            "validation_relative_squared_error": 0.08145302534103394,
+            "fit_seconds": 0.4530485439900076,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "4ed54c00e27951d86c1f62696214346527c67e74adcfa7691e0396ae2a10b35a"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.07098899036645889,
+            "validation_relative_squared_error": 0.08102861791849136,
+            "fit_seconds": 0.6933795090008061,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "3168676c9f89741b448db7989943f35cd4b1b016b53ab85c44054b9cff5d266a"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.026236005127429962,
+            "validation_relative_squared_error": 0.09631519019603729,
+            "fit_seconds": 0.041187719005392864,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0-cov0.npz",
+            "artifact_sha256": "67e6ace8f28022ec19fc39d01e03a8717249c82e98cac0f3c99b6097c5b7f626"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.030732467770576477,
+            "validation_relative_squared_error": 0.09207622706890106,
+            "fit_seconds": 0.2242632209963631,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0-cov0.4.npz",
+            "artifact_sha256": "b3869d1ae7bf9d2c0b56231910bcaa274e74b701fc39a4786088dba99a05ea31"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              3
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.04852320998907089,
+            "validation_relative_squared_error": 0.08707887679338455,
+            "fit_seconds": 0.08849378299782984,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,3-cov0.npz",
+            "artifact_sha256": "935a73cf6528e1a3e7d026dc8ff08dd66d5bca678578ef01d99a6df66b44c5ca"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              3
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.05408557131886482,
+            "validation_relative_squared_error": 0.08619945496320724,
+            "fit_seconds": 0.33300495200091973,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,3-cov0.4.npz",
+            "artifact_sha256": "35f7c3c1659f6f7b089ad96af064864972a188f6d1e967c3cc445c9ace6abc47"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              2,
+              3,
+              6
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.05819325894117355,
+            "validation_relative_squared_error": 0.08439256250858307,
+            "fit_seconds": 0.2665984499908518,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,2,3,6-cov0.npz",
+            "artifact_sha256": "bb160420006afdfd580c16f4108bb0a22bcb1e7e2ef55223796529584b3c2171"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              2,
+              3,
+              6
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.06235361099243164,
+            "validation_relative_squared_error": 0.08314111083745956,
+            "fit_seconds": 0.4798138009937247,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,2,3,6-cov0.4.npz",
+            "artifact_sha256": "7e3b848a5fc34efa31cb4cb40199e4731fab91aeea2a7f2da1f69cbf0182a576"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.06743377447128296,
+            "validation_relative_squared_error": 0.08145302534103394,
+            "fit_seconds": 0.4530485439900076,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "4ed54c00e27951d86c1f62696214346527c67e74adcfa7691e0396ae2a10b35a"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.07098899036645889,
+            "validation_relative_squared_error": 0.08102861791849136,
+            "fit_seconds": 0.6933795090008061,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "3168676c9f89741b448db7989943f35cd4b1b016b53ab85c44054b9cff5d266a"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              7
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.03510241582989693,
+            "validation_relative_squared_error": 0.10610927641391754,
+            "fit_seconds": 0.04486725000606384,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows7-cov0.npz",
+            "artifact_sha256": "bda87aed332c5a8b4cecb6ca28fc9c9ac711e93c588350bfa051c989651d3cd2"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              7
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.03837539628148079,
+            "validation_relative_squared_error": 0.1005580723285675,
+            "fit_seconds": 0.21858098199300002,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows7-cov0.4.npz",
+            "artifact_sha256": "f03d66a2630a001f42d3ded268ce1668afcfd00d48aee9c23018cbd248a0ab97"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              6,
+              7
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.05021205544471741,
+            "validation_relative_squared_error": 0.09440290927886963,
+            "fit_seconds": 0.08681066299322993,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows6,7-cov0.npz",
+            "artifact_sha256": "dfbf22a58714c1234f12dce075df2eecbc1f4d06956e2e55a74598758167d866"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              6,
+              7
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.054837245494127274,
+            "validation_relative_squared_error": 0.0917627215385437,
+            "fit_seconds": 0.34724311099853367,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows6,7-cov0.4.npz",
+            "artifact_sha256": "2cb87cfc7a156992672bd76dca8ff7f1b0109e0173de43aca122e0187dd56b96"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              1,
+              4,
+              6,
+              7
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.06140628084540367,
+            "validation_relative_squared_error": 0.08750908076763153,
+            "fit_seconds": 0.26263308100169525,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows1,4,6,7-cov0.npz",
+            "artifact_sha256": "28b7bee78a1ecfcb1f31427b696c48c08b0200961277a8e3f9912584abf0055e"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              1,
+              4,
+              6,
+              7
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.0646638572216034,
+            "validation_relative_squared_error": 0.08538641780614853,
+            "fit_seconds": 0.4801970580010675,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows1,4,6,7-cov0.4.npz",
+            "artifact_sha256": "5d74c5b7b599fac202bcf4340730402c34f0de85e8aad0398368f7c0cb0d81e7"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.06743377447128296,
+            "validation_relative_squared_error": 0.08145302534103394,
+            "fit_seconds": 0.4530485439900076,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "4ed54c00e27951d86c1f62696214346527c67e74adcfa7691e0396ae2a10b35a"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.07098899036645889,
+            "validation_relative_squared_error": 0.08102861791849136,
+            "fit_seconds": 0.6933795090008061,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer00-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "3168676c9f89741b448db7989943f35cd4b1b016b53ab85c44054b9cff5d266a"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj.json",
+      "sha256": "58d107c2180486ef4f9c443caecc7c8d0c15dd6b2260dcc6099a5d64c2a1e7b4",
+      "report": {
+        "method": "fixed quantized response factors, complete nested training windows",
+        "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer14-mlp_down_proj.npz",
+        "fixture_sha256": "cccfef9684a303bc20803f149d0a6a723da6a229efc749126783e46988038d17",
+        "rank": 144,
+        "left_bits": 4,
+        "right_bits": 2,
+        "group": 128,
+        "balance": 0.5,
+        "rank_precision_selected_before_curve": true,
+        "train_windows_available": 8,
+        "validation_rows": 1024,
+        "sources": {
+          "calibration_curve.py": "5a110a018c1f42f0f46ba6daa0f59bfe509be89ffd13725d1140599ba146d0a0",
+          "spectral_quant.py": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a"
+        },
+        "unique_fits": 20,
+        "entries": [
+          {
+            "seed": 101,
+            "window_indices": [
+              5
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.13073620200157166,
+            "validation_relative_squared_error": 0.6066761612892151,
+            "fit_seconds": 0.04750657799013425,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows5-cov0.npz",
+            "artifact_sha256": "9fd4f973dadcd2ffff10f38a318937cbbf7741dd912b89a48df13fe016be0d49"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              5
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.1631503850221634,
+            "validation_relative_squared_error": 0.5767439603805542,
+            "fit_seconds": 0.1915232589963125,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows5-cov0.4.npz",
+            "artifact_sha256": "39aa01735a63f979a33e39b315bd2a00c21471385cad8632cc26f23e8edb6d0f"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              1,
+              5
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.21739903092384338,
+            "validation_relative_squared_error": 0.5544756054878235,
+            "fit_seconds": 0.0662997970066499,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows1,5-cov0.npz",
+            "artifact_sha256": "049a781545f2c6a167999d9bae39df726c795a424d672b399e7febeea19ec601"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              1,
+              5
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.2440042346715927,
+            "validation_relative_squared_error": 0.5320488214492798,
+            "fit_seconds": 0.19140436299494468,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows1,5-cov0.4.npz",
+            "artifact_sha256": "f7028ce14c55dec6d4a693049bcf522cc622570aa2bb7ae63c7b353eaa43bbaa"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.29179561138153076,
+            "validation_relative_squared_error": 0.5104037523269653,
+            "fit_seconds": 0.1162034100125311,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,4,5-cov0.npz",
+            "artifact_sha256": "444ffb989a8af7deee3d04a9f2bbf745d7cdee50553549a6c80071a3718e83d9"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.31387293338775635,
+            "validation_relative_squared_error": 0.4940134584903717,
+            "fit_seconds": 0.18526735999330413,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,4,5-cov0.4.npz",
+            "artifact_sha256": "43cedd3e14a9305ab1e4687ac40a9a828acd86a736ffeccc7261f4aea87290aa"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.3563983738422394,
+            "validation_relative_squared_error": 0.48335593938827515,
+            "fit_seconds": 0.1733036700024968,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "01deccfd70c5bd78305ae3ddaee9c26c70e877e10719b9d4ae8e6b70673b3e3e"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.3788607716560364,
+            "validation_relative_squared_error": 0.4788176417350769,
+            "fit_seconds": 0.20242725599382538,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "77b47ad7bb9515861117210e7ac413d03b2330238807796e0475f4938224e4eb"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.12865091860294342,
+            "validation_relative_squared_error": 0.5646536350250244,
+            "fit_seconds": 0.04875749399070628,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0-cov0.npz",
+            "artifact_sha256": "e5de8463d9341ccd94aa0a7cdcc5151a6906f1d4a70cf63d3377c99b083b1fe6"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.15681736171245575,
+            "validation_relative_squared_error": 0.5384006500244141,
+            "fit_seconds": 0.16979651400470175,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0-cov0.4.npz",
+            "artifact_sha256": "e053ea984c175dbc3e3d2e4907d440a2d9ff98b8e3cc9dfaa41161ffb71eb3cb"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              3
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.22806233167648315,
+            "validation_relative_squared_error": 0.5312870144844055,
+            "fit_seconds": 0.06069917399145197,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,3-cov0.npz",
+            "artifact_sha256": "bdaf9e4b535938a74069d7631e856d2afa1ec5211870fcaa087a936d6325aa86"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              3
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.2523583173751831,
+            "validation_relative_squared_error": 0.5116045475006104,
+            "fit_seconds": 0.16274800099199638,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,3-cov0.4.npz",
+            "artifact_sha256": "ab27f51c6aed3ddf2312e9aabae3912b7738d68f9e0b66ecfc506bcf0f654f52"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              2,
+              3,
+              6
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.3053056597709656,
+            "validation_relative_squared_error": 0.5031583309173584,
+            "fit_seconds": 0.12278472899924964,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,2,3,6-cov0.npz",
+            "artifact_sha256": "e6edc8a9803135c12a059b8df6aaa566571e1e8ddec488b64b5c29d6980e3f64"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              2,
+              3,
+              6
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.3297516107559204,
+            "validation_relative_squared_error": 0.4918573498725891,
+            "fit_seconds": 0.20150446800107602,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,2,3,6-cov0.4.npz",
+            "artifact_sha256": "d678ccfe993b32703c7bca8bec94e7f1c00fb2a2e025ba5eae201857486228c9"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.3563983738422394,
+            "validation_relative_squared_error": 0.48335593938827515,
+            "fit_seconds": 0.1733036700024968,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "01deccfd70c5bd78305ae3ddaee9c26c70e877e10719b9d4ae8e6b70673b3e3e"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.3788607716560364,
+            "validation_relative_squared_error": 0.4788176417350769,
+            "fit_seconds": 0.20242725599382538,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "77b47ad7bb9515861117210e7ac413d03b2330238807796e0475f4938224e4eb"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              7
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.13675402104854584,
+            "validation_relative_squared_error": 0.6044688820838928,
+            "fit_seconds": 0.04895742700318806,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows7-cov0.npz",
+            "artifact_sha256": "8d09ad01a0ff6666deb05c5c8b796f33c65ee673ce4c859d25ad1bc9ea605328"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              7
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.16835153102874756,
+            "validation_relative_squared_error": 0.5770537853240967,
+            "fit_seconds": 0.18060226399393287,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows7-cov0.4.npz",
+            "artifact_sha256": "97ae3eb9486097303386af604d71bd539505732708c831f84f8f760418dd58ff"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              6,
+              7
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.2315838634967804,
+            "validation_relative_squared_error": 0.5570377111434937,
+            "fit_seconds": 0.06828546599717811,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows6,7-cov0.npz",
+            "artifact_sha256": "57a0663d1159ce4839348769e861f98270c81cce9cbbafa4277427cebbffff33"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              6,
+              7
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.2580196261405945,
+            "validation_relative_squared_error": 0.5370057225227356,
+            "fit_seconds": 0.16989486099919304,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows6,7-cov0.4.npz",
+            "artifact_sha256": "b4148b9f9989fa07ad801ed433146d4e5cbb516e4de79996cb270946062a957c"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              1,
+              4,
+              6,
+              7
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.29859334230422974,
+            "validation_relative_squared_error": 0.5182034969329834,
+            "fit_seconds": 0.11213906299963128,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows1,4,6,7-cov0.npz",
+            "artifact_sha256": "bee8597b9ca3b0cb22976d1275987e39e8cb757ce83c9c94b4747460a406189f"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              1,
+              4,
+              6,
+              7
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.32243332266807556,
+            "validation_relative_squared_error": 0.5045035481452942,
+            "fit_seconds": 0.18786616799479816,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows1,4,6,7-cov0.4.npz",
+            "artifact_sha256": "296ebb8ed37b9759eb0b2c70028a3d954dbb717f10e5b8d3abb6f11a3a5170d6"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.3563983738422394,
+            "validation_relative_squared_error": 0.48335593938827515,
+            "fit_seconds": 0.1733036700024968,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "01deccfd70c5bd78305ae3ddaee9c26c70e877e10719b9d4ae8e6b70673b3e3e"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.3788607716560364,
+            "validation_relative_squared_error": 0.4788176417350769,
+            "fit_seconds": 0.20242725599382538,
+            "payload_bytes": 195360,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer14-mlp_down_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "77b47ad7bb9515861117210e7ac413d03b2330238807796e0475f4938224e4eb"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj.json",
+      "sha256": "d293a356115f112c7dfb715bc8a7dcb7e55c197068149ff3d2358a35f39c31a3",
+      "report": {
+        "method": "fixed quantized response factors, complete nested training windows",
+        "fixture": "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/layer27-self_attn_q_proj.npz",
+        "fixture_sha256": "330b61bdd93a57a109c84e41103c8e059b3c2c53ee221f547d71b97d0ea9bb0c",
+        "rank": 88,
+        "left_bits": 4,
+        "right_bits": 4,
+        "group": 128,
+        "balance": 0.5,
+        "rank_precision_selected_before_curve": true,
+        "train_windows_available": 8,
+        "validation_rows": 1024,
+        "sources": {
+          "calibration_curve.py": "5a110a018c1f42f0f46ba6daa0f59bfe509be89ffd13725d1140599ba146d0a0",
+          "spectral_quant.py": "916023173ad9c675c4a45b46541295aa176e51396093209ff55d02e67acbc75a"
+        },
+        "unique_fits": 20,
+        "entries": [
+          {
+            "seed": 101,
+            "window_indices": [
+              5
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.023704418912529945,
+            "validation_relative_squared_error": 0.17568589746952057,
+            "fit_seconds": 0.04386851500021294,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows5-cov0.npz",
+            "artifact_sha256": "cb7fc169453e0ab40e563e54187e0ebd1f79e386581b7e4c6fa1f2498a057db8"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              5
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.03359481319785118,
+            "validation_relative_squared_error": 0.1570606827735901,
+            "fit_seconds": 0.21728555699519347,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows5-cov0.4.npz",
+            "artifact_sha256": "e24c8dcd6e7d645af387f5f6e73ced6475e69c00afc168ad393418ce5be8ea6f"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              1,
+              5
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.04254649579524994,
+            "validation_relative_squared_error": 0.15660710632801056,
+            "fit_seconds": 0.08810172700032126,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows1,5-cov0.npz",
+            "artifact_sha256": "9b9f42a22961aff26d43a93b0132b2b56fd38195cfb87a9048a48394a8718b99"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              1,
+              5
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.049826715141534805,
+            "validation_relative_squared_error": 0.1459120512008667,
+            "fit_seconds": 0.3036531049874611,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows1,5-cov0.4.npz",
+            "artifact_sha256": "f86652e0083d0029dba9a55e9d82e1163d7e613ae45d91b617b98c0d6e23893a"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.059115249663591385,
+            "validation_relative_squared_error": 0.1348346471786499,
+            "fit_seconds": 0.2534979109914275,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,4,5-cov0.npz",
+            "artifact_sha256": "70c427435a876b904bf83e78d2266bbd3c30b6a01e6ecaf1c139416ee3901586"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              4,
+              5
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.0664280578494072,
+            "validation_relative_squared_error": 0.13005970418453217,
+            "fit_seconds": 0.4630446709925309,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,4,5-cov0.4.npz",
+            "artifact_sha256": "b96ae93cf5f4ed085c0dbf68024eecfdcdd05102995b815d3872d22949c00b83"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.07175017148256302,
+            "validation_relative_squared_error": 0.12612588703632355,
+            "fit_seconds": 0.44570803199894726,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "26ee06e8cbccbb6f89418aed7e377233543073f8d1e02e016e9ce4e42c651286"
+          },
+          {
+            "seed": 101,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.07864829152822495,
+            "validation_relative_squared_error": 0.12391045689582825,
+            "fit_seconds": 0.6433133219979936,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "a91066f5558d2982f99901dbc94a39b7b0296ab511f6d1042e96458bd630b103"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.02728506363928318,
+            "validation_relative_squared_error": 0.14983190596103668,
+            "fit_seconds": 0.05123090499546379,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0-cov0.npz",
+            "artifact_sha256": "b45190981bb023b2042776039b13e418bca2e97dd94e50dce2634133233d8660"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.03763098642230034,
+            "validation_relative_squared_error": 0.1387038677930832,
+            "fit_seconds": 0.21616887699929066,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0-cov0.4.npz",
+            "artifact_sha256": "8779e6db532b7e3effcfc2856bf27cd6996cab4411e6a6a1800fa86b597c4b63"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              3
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.046216677874326706,
+            "validation_relative_squared_error": 0.1371167004108429,
+            "fit_seconds": 0.09371346900297794,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,3-cov0.npz",
+            "artifact_sha256": "5bc37021cd35f9e6d85f74d5c42a1e6938fcb4133b7001f1db6346d7ea4b6dc9"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              3
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.055041659623384476,
+            "validation_relative_squared_error": 0.13158774375915527,
+            "fit_seconds": 0.30121805099770427,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,3-cov0.4.npz",
+            "artifact_sha256": "e092e87a52e00b6c6acdcb5be1b72cd1dbfceadd7016003b84a16e2a455fc73e"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              2,
+              3,
+              6
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.0594002902507782,
+            "validation_relative_squared_error": 0.1300218552350998,
+            "fit_seconds": 0.26987598500272725,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,2,3,6-cov0.npz",
+            "artifact_sha256": "79bb336bdbe3b55c7bdb93afe36ef86f104d1efc06512aeb37480f0ad917bbee"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              2,
+              3,
+              6
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.06873294711112976,
+            "validation_relative_squared_error": 0.12648305296897888,
+            "fit_seconds": 0.4587360239966074,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,2,3,6-cov0.4.npz",
+            "artifact_sha256": "01f061c850f9924f486b0df75a28d30a65f50bc79393195055486a40744cf350"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.07175017148256302,
+            "validation_relative_squared_error": 0.12612588703632355,
+            "fit_seconds": 0.44570803199894726,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "26ee06e8cbccbb6f89418aed7e377233543073f8d1e02e016e9ce4e42c651286"
+          },
+          {
+            "seed": 202,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.07864829152822495,
+            "validation_relative_squared_error": 0.12391045689582825,
+            "fit_seconds": 0.6433133219979936,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "a91066f5558d2982f99901dbc94a39b7b0296ab511f6d1042e96458bd630b103"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              7
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.024703236296772957,
+            "validation_relative_squared_error": 0.17733213305473328,
+            "fit_seconds": 0.04489577800268307,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows7-cov0.npz",
+            "artifact_sha256": "a766dd033c9fd1d46f399a16ef90c3d7677e936801b7e74e05f5fe07f6f30a5b"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              7
+            ],
+            "train_rows": 256,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.03347306326031685,
+            "validation_relative_squared_error": 0.15577101707458496,
+            "fit_seconds": 0.22687021899037063,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows7-cov0.4.npz",
+            "artifact_sha256": "2c307c0cc2b51284932aa300ecea4ccbff3c58d3634d694a1f28b1b6de3e1a57"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              6,
+              7
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.042538996785879135,
+            "validation_relative_squared_error": 0.15950466692447662,
+            "fit_seconds": 0.08794706300250255,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows6,7-cov0.npz",
+            "artifact_sha256": "15bcfce95298b2359cc3bb3541e7244a2d8911913ca443fc6048c075c7b52c7c"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              6,
+              7
+            ],
+            "train_rows": 512,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.05159524455666542,
+            "validation_relative_squared_error": 0.1484028398990631,
+            "fit_seconds": 0.29644151900720317,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows6,7-cov0.4.npz",
+            "artifact_sha256": "1f6afeee3db70304e9976e3fa469ef5ad3d070a2820ed06485f2a256704fb252"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              1,
+              4,
+              6,
+              7
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.05649406090378761,
+            "validation_relative_squared_error": 0.1482117623090744,
+            "fit_seconds": 0.2698151670047082,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows1,4,6,7-cov0.npz",
+            "artifact_sha256": "0d2474d2bbfc71eea24c69f2f319770ba03a286bfbd65828efb1445b7542f8c1"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              1,
+              4,
+              6,
+              7
+            ],
+            "train_rows": 1024,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.06361900269985199,
+            "validation_relative_squared_error": 0.1398487538099289,
+            "fit_seconds": 0.48449128700303845,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows1,4,6,7-cov0.4.npz",
+            "artifact_sha256": "0a1ee0521b2399eb6f699c3ac00a3fdb7d701bd75664b5a8f30237d4345d2967"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.0,
+            "train_relative_squared_error": 0.07175017148256302,
+            "validation_relative_squared_error": 0.12612588703632355,
+            "fit_seconds": 0.44570803199894726,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.npz",
+            "artifact_sha256": "26ee06e8cbccbb6f89418aed7e377233543073f8d1e02e016e9ce4e42c651286"
+          },
+          {
+            "seed": 303,
+            "window_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "train_rows": 2048,
+            "covariance_shrinkage": 0.4,
+            "train_relative_squared_error": 0.07864829152822495,
+            "validation_relative_squared_error": 0.12391045689582825,
+            "fit_seconds": 0.6433133219979936,
+            "payload_bytes": 140704,
+            "artifact": "/path/to/workspace/data/kelana-subbit/calibration-curve/layer27-self_attn_q_proj-windows0,1,2,3,4,5,6,7-cov0.4.npz",
+            "artifact_sha256": "a91066f5558d2982f99901dbc94a39b7b0296ab511f6d1042e96458bd630b103"
+          }
+        ]
+      }
+    }
+  ]
+}

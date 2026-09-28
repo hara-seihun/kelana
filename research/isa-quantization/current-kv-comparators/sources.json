@@ -1,0 +1,49 @@
+{
+  "scope": "2026 source audit; no fit, packed cache image, GPU measurement, or official TurboQuant implementation",
+  "fixture": {
+    "model": "Qwen/Qwen3-0.6B layer 0",
+    "checkpoint_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "checkpoint_sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b",
+    "capture_sha256": "389e5f8c17ac151070b12094849f450130ab9c1684f51b402d59fd4e7ac2008f",
+    "tokens_per_window": 256,
+    "query_heads": 16,
+    "kv_heads": 8,
+    "head_dimension": 128
+  },
+  "routes": [
+    {
+      "name": "TurboQuant",
+      "paper": "https://proceedings.iclr.cc/paper_files/paper/2026/file/5c802ef38ab6e366c2ea06eee554c088-Paper-Conference.pdf",
+      "algorithm": "https://arxiv.org/html/2504.19874v1#S3",
+      "experiments": "https://arxiv.org/html/2504.19874v1#S4",
+      "authors_blog": "https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/",
+      "official_public_source": null,
+      "official_source_commit": null,
+      "community_example_not_official": "https://github.com/scos-lab/turboquant",
+      "recommendation": "paper-defined causal layer-0 port; illustrative uniform K3=(MSE2+QJL1), V2=MSE2; no outlier selection/calibration; no execution claim",
+      "bytes_per_token_per_kv_head": {"key_codes": 48, "value_codes": 32, "proposed_fp32_radii_and_residual_norms": 12},
+      "bytes_at_256_per_kv_head_before_shared_assets": 23552,
+      "bytes_at_256_full_eight_kv_heads_before_shared_assets": 188416,
+      "illustrative_three_fp32_128_square_prepared_matrices_bytes": 196608
+    },
+    {
+      "name": "RotateKV",
+      "paper": "https://arxiv.org/html/2501.16383v1",
+      "official_public_source": "https://github.com/ZunhaiSu/RotateKV",
+      "official_source_commit": "3055e2b6a45d0cdd60e39cff1b8b3b72714a1cd0",
+      "source_readme": "https://github.com/ZunhaiSu/RotateKV/blob/3055e2b6a45d0cdd60e39cff1b8b3b72714a1cd0/README.md",
+      "model_source": "https://github.com/ZunhaiSu/RotateKV/blob/3055e2b6a45d0cdd60e39cff1b8b3b72714a1cd0/RotateKV_fake_quant/modeling_llama_RotateKV.py",
+      "source_boundary": "Llama simulation/fake quant; channel calibration; pre-RoPE grouped rotations; whole-sequence pivot selection needs causal adaptation for prefix replay"
+    },
+    {
+      "name": "AQUA-KV",
+      "paper": "https://arxiv.org/html/2501.19392v4",
+      "official_public_source": "https://github.com/goodevening13/aquakv",
+      "official_source_commit": "e744183f2f3a4a90381f20a6975456871fd1ae29",
+      "source_readme": "https://github.com/goodevening13/aquakv/blob/e744183f2f3a4a90381f20a6975456871fd1ae29/README.md",
+      "trainer": "https://github.com/goodevening13/aquakv/blob/e744183f2f3a4a90381f20a6975456871fd1ae29/train_predictors.py",
+      "cache": "https://github.com/goodevening13/aquakv/blob/e744183f2f3a4a90381f20a6975456871fd1ae29/aquakv/cache_utils.py",
+      "source_boundary": "cross-layer calibrated predictors and residual code, model-specific predictor weights, prefix/recent buffers; layer-0 trace alone incomplete"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "format": "kelana-operand-rounding/1",
+  "layer": "layer00",
+  "tokens": 8,
+  "scope": "CPU FP32-BLAS accumulation on both sides. Exact original ternary FP16 scales; A8 codes and dynamic scales; only changing operands rounded to FP16 in candidate. Does not model native WMMA or prove transfer.",
+  "input_operand": {
+    "relative_rms": 0.00020723264606203884,
+    "max_abs": 0.00024265050888061523,
+    "nonfinite": 0,
+    "underflow_to_zero": 0,
+    "subnormal": 0
+  },
+  "hidden_operand": {
+    "relative_rms": 0.0002027824812103063,
+    "max_abs": 3.0487775802612305e-05,
+    "nonfinite": 0,
+    "underflow_to_zero": 0,
+    "subnormal": 164
+  },
+  "gate": {
+    "relative_rms": 0.00016867076919879764,
+    "worst_row_relative_rms": 0.00019486868404783309,
+    "bias": 2.1009664408211393e-07,
+    "max_abs": 0.00014358758926391602
+  },
+  "up": {
+    "relative_rms": 0.0001729434879962355,
+    "worst_row_relative_rms": 0.00019339616119395941,
+    "bias": 7.21992989838327e-08,
+    "max_abs": 0.00013196095824241638
+  },
+  "hidden_code_changes": 1124,
+  "hidden_codes": 139264,
+  "projection_difference": {
+    "relative_rms": 0.0006210395367816091,
+    "worst_row_relative_rms": 0.0009619931224733591,
+    "bias": -1.6885326914461984e-08,
+    "max_abs": 0.0006439685821533203
+  },
+  "residual_difference": {
+    "relative_rms": 0.0001689510972937569,
+    "worst_row_relative_rms": 0.00022615162015426904,
+    "bias": -1.689200779253497e-08,
+    "max_abs": 0.0006437301635742188
+  },
+  "cpu_reference_vs_engine": {
+    "relative_rms": 5.454812253447017e-06,
+    "worst_row_relative_rms": 1.404328486387385e-05,
+    "bias": -4.794084240700158e-09,
+    "max_abs": 2.956390380859375e-05
+  },
+  "candidate_vs_engine": {
+    "relative_rms": 0.000168815313372761,
+    "worst_row_relative_rms": 0.0002261529880343005,
+    "bias": -2.1686101803197744e-08,
+    "max_abs": 0.000644683837890625
+  },
+  "source_sha256": "518ab16374ff24632520d8c09d6aa9a6281f6e6122a385a54990e06fcd1bb19d",
+  "elapsed_seconds": 3.744517322978936
+}

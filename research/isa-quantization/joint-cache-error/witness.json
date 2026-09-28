@@ -1,0 +1,27 @@
+{
+  "teacher_output": "0",
+  "candidate_output": "0",
+  "key_error": "-1/2",
+  "value_error": "1/2",
+  "interaction": "0",
+  "separate_squared_errors": [
+    "1/4",
+    "1/4"
+  ],
+  "joint_squared_error": "0",
+  "images": [
+    {
+      "path": "teacher.bin",
+      "bytes": 4,
+      "sha256": "6394f8c177ad519183437a538bfd9828062d4e30ba35bac6d94aa3dc9439aa52"
+    },
+    {
+      "path": "joint-candidate.bin",
+      "bytes": 4,
+      "sha256": "50476bc67844d7184af2e1d61f1f3f1825b3e5dd176b3a7d2ec75be4352005a2"
+    }
+  ],
+  "grammar": "Two uint8 probability numerators over4; two signed-int8 value numerators over2.",
+  "scope": "One finite query, not a causal-cache program or free per-query value compensation.",
+  "strong_control": "Direct zero reader has exact output and a smaller description."
+}

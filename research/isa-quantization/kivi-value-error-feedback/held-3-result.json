@@ -1,0 +1,57 @@
+{
+  "window": 3,
+  "arms": {
+    "feedback": {
+      "retained": [
+        {
+          "t": 128,
+          "sse": 0.10105718206279794,
+          "teacher_sq": 27.003684706127828,
+          "output_sha256": "3d3e0b18f4dc18f9cf43ab56f0364161a08faf5b661037e6be335e7b7d8b23a0"
+        },
+        {
+          "t": 256,
+          "sse": 0.11517795175392942,
+          "teacher_sq": 28.48044286026579,
+          "output_sha256": "563631a19e06222246c16507a8e980043b60c36d5b37ab45d6827ce849a45f88"
+        }
+      ],
+      "peak_total_bytes": 308864,
+      "final_total_bytes": 253952,
+      "changed_code_bytes": 37857
+    },
+    "delay2": {
+      "retained": [
+        {
+          "t": 128,
+          "sse": 0.14618845939432665,
+          "teacher_sq": 27.003684706127828,
+          "output_sha256": "23f64fc81c53c0ceb8de09dcfec152d8fb9d764ea0bbc2109e070afbccdcebce"
+        },
+        {
+          "t": 256,
+          "sse": 0.22260002187902314,
+          "teacher_sq": 28.48044286026579,
+          "output_sha256": "141a59019e6a8511d915bc87789426fc60c83a2db7f340b33f17ffbaf8fde794"
+        }
+      ],
+      "peak_total_bytes": 308096,
+      "final_total_bytes": 253184,
+      "changed_code_bytes": 0
+    }
+  },
+  "controls": {
+    "128": {
+      "K2V2_sse": 0.16654961064129414,
+      "K2V4_sse": 0.03697242085842688,
+      "K4V4_sse": 0.0015698030654244539,
+      "teacher_sq": 27.003684307253714
+    },
+    "256": {
+      "K2V2_sse": 0.22245500735184298,
+      "K2V4_sse": 0.028652069223655263,
+      "K4V4_sse": 0.003439130389488943,
+      "teacher_sq": 28.480442648980823
+    }
+  }
+}

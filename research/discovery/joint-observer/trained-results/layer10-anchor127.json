@@ -1,0 +1,2203 @@
+{
+  "format": "kelana-trained-observer/1",
+  "layer": 10,
+  "anchor_position": 127,
+  "input_states": 27,
+  "observed_outputs": 5120,
+  "cases": [
+    {
+      "group": 0,
+      "coordinates": {
+        "coordinates": [
+          2,
+          17,
+          93
+        ],
+        "base_codes": [
+          61,
+          14,
+          -6
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.1780411095830265,
+          0.1780411095830265,
+          0.1780411095830265
+        ]
+      },
+      "hidden_quantizer_levels": 0,
+      "output_sha256": "379f3329a2277d55d3e5d503cdd7681c041f51c22b47aee84f33f8640dfcad83",
+      "variation_rms": 0.000501084971350355,
+      "variation_over_total_rms": 0.012479230329965963,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.6344892094515473,
+        "family_rel_rms_over_full_update": 0.007917936986623877,
+        "arbitrary_decoder_rel_rms": 0.6344762851704899,
+        "additional_family_squared_error_fraction": 1.6400466704617134e-05,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 569,
+          "first_output": -0.030357513809229887,
+          "second_output": -0.035409288183357764,
+          "absolute_gap": 0.0050517743741278764
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1
+        ],
+        "family_rel_rms": 0.6330105708409548,
+        "arbitrary_decoder_rel_rms": 0.632997652680393,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 569,
+          "first_output": -0.030357513809229887,
+          "second_output": -0.035409288183357764,
+          "absolute_gap": 0.0050517743741278764
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 1,
+            "bias": -13,
+            "offset": 4,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8594579315652222
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 7,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8136092015149676
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": -13,
+            "offset": 4,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7645293596211838
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 2,
+            "bias": 13,
+            "offset": 3,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6556201116463358
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.573159200765314
+        },
+        {
+          "capacity": 16,
+          "states": 14,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 13,
+            "offset": 2,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.4493517121330467
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.00709782916961354
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 1.0292254294986993e-05
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 2.8149362105045037e-09
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.22568930966282594,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.491624026893807,
+          "relative_rms_lower_bound": 0.7011590596247096,
+          "dual_lambda": 0.26295556676772813
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.2166617372763129,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.33580276585856283,
+          "relative_rms_lower_bound": 0.5794849142631435,
+          "dual_lambda": 0.06940598690298391
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.20763416488979988,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.2747244367802545,
+          "relative_rms_lower_bound": 0.5241416190117462,
+          "dual_lambda": 0.05597849689296693
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.17152387534374772,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.1724582837632343,
+          "relative_rms_lower_bound": 0.4152809696617873,
+          "dual_lambda": 0.0093000107017912
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.1444411581842086,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.14476717734631914,
+          "relative_rms_lower_bound": 0.3804828213550766,
+          "dual_lambda": 0.009205156085982968
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.09930329625164341,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.09938389786898402,
+          "relative_rms_lower_bound": 0.31525211794527885,
+          "dual_lambda": 0.009041736402671387
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.009027572386513038,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.009027572386513028,
+          "relative_rms_lower_bound": 0.0950135379117788,
+          "dual_lambda": 0.009029166945388302
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0,
+          "relative_rms_lower_bound": 0.0,
+          "dual_lambda": 0.0
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.3486405687036968,
+        "2": 0.6859034500259443,
+        "3": 0.9999497914688232,
+        "6": 0.9999885974161125,
+        "10": 0.999999999938465,
+        "19": 1.0,
+        "26": 1.0
+      }
+    },
+    {
+      "group": 0,
+      "coordinates": {
+        "coordinates": [
+          2,
+          17,
+          93
+        ],
+        "base_codes": [
+          61,
+          14,
+          -6
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.1780411095830265,
+          0.1780411095830265,
+          0.1780411095830265
+        ]
+      },
+      "hidden_quantizer_levels": 127,
+      "output_sha256": "d8920ea6d0893b2ed16deb1d434c0407041644314c3b018c0fa3096b3a853183",
+      "variation_rms": 0.0005459103595728524,
+      "variation_over_total_rms": 0.013594899490222963,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.6759953753463475,
+        "family_rel_rms_over_full_update": 0.009190089183689139,
+        "arbitrary_decoder_rel_rms": 0.6582588802909776,
+        "additional_family_squared_error_fraction": 0.02366499400771767,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 569,
+          "first_output": -0.03050246984354261,
+          "second_output": -0.03605177466914417,
+          "absolute_gap": 0.005549304825601561
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          1,
+          0,
+          2
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1
+        ],
+        "family_rel_rms": 0.6752225613819598,
+        "arbitrary_decoder_rel_rms": 0.6571901742826176,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 569,
+          "first_output": -0.03050246984354261,
+          "second_output": -0.03605177466914417,
+          "absolute_gap": 0.005549304825601561
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 9,
+            "bias": 0,
+            "offset": 7,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8787382457310564
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 7,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8369321445165236
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": 13,
+            "offset": 5,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7931920956393984
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 13,
+            "offset": 2,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6892072157346257
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6203175892018734
+        },
+        {
+          "capacity": 16,
+          "states": 14,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 13,
+            "offset": 2,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.49705277562059197
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.36795879783567187
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 0.3146452497798187
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 0.24132677900362662
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.32195679960151447,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5633770736843495,
+          "relative_rms_lower_bound": 0.7505844880387215,
+          "dual_lambda": 0.2275448206087327
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.3090785276174539,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.4249971772238239,
+          "relative_rms_lower_bound": 0.6519180755461716,
+          "dual_lambda": 0.06531180903534668
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.29620025563339336,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3669372476654069,
+          "relative_rms_lower_bound": 0.605753454522058,
+          "dual_lambda": 0.05407660663062918
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.24468716769715101,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.2554825896962306,
+          "relative_rms_lower_bound": 0.5054528560570517,
+          "dual_lambda": 0.014506926615464145
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.20605235174496928,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.21284622964113212,
+          "relative_rms_lower_bound": 0.4613526087941111,
+          "dual_lambda": 0.01389176309812855
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.14166099182466638,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.14505610177234374,
+          "relative_rms_lower_bound": 0.3808623134051776,
+          "dual_lambda": 0.013363084112252847
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.01287827198406058,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.012878271984060607,
+          "relative_rms_lower_bound": 0.11348247434763047,
+          "dual_lambda": 0.012965518006951922
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0,
+          "relative_rms_lower_bound": 0.0,
+          "dual_lambda": 0.0
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.3027157514067165,
+        "2": 0.5939276075645233,
+        "3": 0.8647520378470458,
+        "6": 0.8851014321931491,
+        "10": 0.9105840414493451,
+        "19": 0.9634832619961112,
+        "26": 0.9999999999999998
+      },
+      "zero_perturbation_vs_captured_update_rel_rms": 6.1074820155136e-07
+    },
+    {
+      "group": 0,
+      "coordinates": {
+        "coordinates": [
+          2,
+          17,
+          93
+        ],
+        "base_codes": [
+          61,
+          14,
+          -6
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.1780411095830265,
+          0.1780411095830265,
+          0.1780411095830265
+        ]
+      },
+      "hidden_quantizer_levels": 7,
+      "output_sha256": "2fb8931b0860a499270ed79c04aea7515118ef7c66752c9c000e54f2ca16e266",
+      "variation_rms": 0.0019440548184839115,
+      "variation_over_total_rms": 0.04818927128809057,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.7607403589874955,
+        "family_rel_rms_over_full_update": 0.03665952353904783,
+        "arbitrary_decoder_rel_rms": 0.6978546805671582,
+        "additional_family_squared_error_fraction": 0.09172473860293315,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 794,
+          "first_output": 0.003281164896325686,
+          "second_output": 0.02044663913033748,
+          "absolute_gap": 0.017165474234011793
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          2,
+          1,
+          0
+        ],
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "family_rel_rms": 0.7472763666829533,
+        "arbitrary_decoder_rel_rms": 0.6808324297321775,
+        "collision": {
+          "first_input": [
+            -1,
+            1,
+            -1
+          ],
+          "second_input": [
+            0,
+            -1,
+            1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 759,
+          "first_output": 0.08710966210628589,
+          "second_output": 0.07252002219849667,
+          "absolute_gap": 0.01458963990778922
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": -13,
+            "offset": 6,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.9148013708808115
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": -13,
+            "offset": 5,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8765535919968827
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": -13,
+            "offset": 4,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8392361484460301
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 13,
+            "offset": 3,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7348007908074117
+        },
+        {
+          "capacity": 11,
+          "states": 11,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6922843988008524
+        },
+        {
+          "capacity": 16,
+          "states": 16,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 0,
+            "offset": 1,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.5391662497404672
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.6444703105972432
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 0.46698058193710457
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 0.3269723932117305
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.4272349037859286,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.7014252438777535,
+          "relative_rms_lower_bound": 0.8375113395517422,
+          "dual_lambda": 0.18238129434429826
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.4101455076344914,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5746216392662672,
+          "relative_rms_lower_bound": 0.7580380196706938,
+          "dual_lambda": 0.07854823629783254
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.3930561114830543,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5076560876681063,
+          "relative_rms_lower_bound": 0.7124998860828725,
+          "dual_lambda": 0.0598822801630364
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.3246985268773057,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3647412756391264,
+          "relative_rms_lower_bound": 0.6039381389174941,
+          "dual_lambda": 0.02169505010335394
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.2734303384229943,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3017739744216531,
+          "relative_rms_lower_bound": 0.5493395802430889,
+          "dual_lambda": 0.020432672992579025
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.1879833576658086,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.20260283647657523,
+          "relative_rms_lower_bound": 0.4501142482487921,
+          "dual_lambda": 0.019571684366521066
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.017089396151437144,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.01708939615143723,
+          "relative_rms_lower_bound": 0.1307264171903951,
+          "dual_lambda": 0.01740747736040663
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0,
+          "relative_rms_lower_bound": 0.0,
+          "dual_lambda": 0.0
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.20859885838014908,
+        "2": 0.4022049773065782,
+        "3": 0.5879808044681305,
+        "6": 0.7089454472682164,
+        "10": 0.8081654413302851,
+        "19": 0.933685276068054,
+        "26": 1.0
+      }
+    },
+    {
+      "group": 1,
+      "coordinates": {
+        "coordinates": [
+          129,
+          167,
+          230
+        ],
+        "base_codes": [
+          -2,
+          -30,
+          -19
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.18319240556789787,
+          0.18319240556789787,
+          0.18319240556789787
+        ]
+      },
+      "hidden_quantizer_levels": 0,
+      "output_sha256": "a4d77abe093df7b02c897a3b1062fb21db3dd07706544b2eda6e05f3b3a4150e",
+      "variation_rms": 0.0005242866729180335,
+      "variation_over_total_rms": 0.013056942689904616,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.6369103948502243,
+        "family_rel_rms_over_full_update": 0.008316102524163899,
+        "arbitrary_decoder_rel_rms": 0.6368975371407577,
+        "additional_family_squared_error_fraction": 1.6378252305792474e-05,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            1
+          ],
+          "second_input": [
+            1,
+            1,
+            0
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 2497,
+          "first_output": -0.07403258316121025,
+          "second_output": -0.07844617225949746,
+          "absolute_gap": 0.004413589098287207
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "family_rel_rms": 0.6358480577677406,
+        "arbitrary_decoder_rel_rms": 0.635835071870578,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            1
+          ],
+          "second_input": [
+            1,
+            0,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 2497,
+          "first_output": -0.07403258316121025,
+          "second_output": -0.07811163818865914,
+          "absolute_gap": 0.0040790550274488885
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 1,
+            "bias": -13,
+            "offset": 4,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8637211078970255
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 7,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8204045334270488
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": -13,
+            "offset": 4,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7679681328473651
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 13,
+            "offset": 3,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6528968342743472
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.5707784978247096
+        },
+        {
+          "capacity": 16,
+          "states": 14,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 13,
+            "offset": 2,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.44159999914928433
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.007079862820989015
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 1.0812790789997904e-05
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 2.778468172138371e-09
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.22604331615902856,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.49205981220931416,
+          "relative_rms_lower_bound": 0.7014697514571203,
+          "dual_lambda": 0.26233228226596145
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.2170015835126674,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3360989526934057,
+          "relative_rms_lower_bound": 0.5797404183713653,
+          "dual_lambda": 0.06788978237947761
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.20795985086630625,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.2753636044753124,
+          "relative_rms_lower_bound": 0.5247509928292774,
+          "dual_lambda": 0.05573606563798607
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.17179292028086168,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.173955590125994,
+          "relative_rms_lower_bound": 0.4170798366332206,
+          "dual_lambda": 0.009760288010220186
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.14466772234177827,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.14525455082712913,
+          "relative_rms_lower_bound": 0.3811227503405289,
+          "dual_lambda": 0.009516577683101128
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.09945905910997256,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.09950593968964741,
+          "relative_rms_lower_bound": 0.3154456208122842,
+          "dual_lambda": 0.009054576193138479
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.009041732646361142,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.009041732646361184,
+          "relative_rms_lower_bound": 0.09508802577801888,
+          "dual_lambda": 0.009041732646361142
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 5.551115123125783e-17,
+          "relative_rms_lower_bound": 7.450580596923828e-09,
+          "dual_lambda": 0.009041732646361142
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.34264471611088837,
+        "2": 0.6790791217772838,
+        "3": 0.999949965010323,
+        "6": 0.9999885695644691,
+        "10": 0.9999999999330548,
+        "19": 1.0000000000000002,
+        "26": 1.0000000000000002
+      }
+    },
+    {
+      "group": 1,
+      "coordinates": {
+        "coordinates": [
+          129,
+          167,
+          230
+        ],
+        "base_codes": [
+          -2,
+          -30,
+          -19
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.18319240556789787,
+          0.18319240556789787,
+          0.18319240556789787
+        ]
+      },
+      "hidden_quantizer_levels": 127,
+      "output_sha256": "86bdaa5d53688b6cf2d8e58784f1a62617af092b3ca5b2f53a1c0240e37853b3",
+      "variation_rms": 0.0005663399073965005,
+      "variation_over_total_rms": 0.0141039477244228,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.6781811662613034,
+        "family_rel_rms_over_full_update": 0.00956503171663751,
+        "arbitrary_decoder_rel_rms": 0.6615741108099444,
+        "additional_family_squared_error_fraction": 0.022249390177573002,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 2497,
+          "first_output": -0.07438342106012559,
+          "second_output": -0.0787847775470097,
+          "absolute_gap": 0.0044013564868841115
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "family_rel_rms": 0.6759486921325858,
+        "arbitrary_decoder_rel_rms": 0.6593484465192223,
+        "collision": {
+          "first_input": [
+            -1,
+            0,
+            1
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 2497,
+          "first_output": -0.07466344497370256,
+          "second_output": -0.0787847775470097,
+          "absolute_gap": 0.004121332573307143
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 1,
+            "bias": -13,
+            "offset": 4,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8823645163348574
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": -13,
+            "offset": 5,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8424057701353187
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": 13,
+            "offset": 5,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7953434196481693
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 13,
+            "offset": 3,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6836301404910335
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6152319536595705
+        },
+        {
+          "capacity": 16,
+          "states": 14,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 0,
+            "offset": 2,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.4863196274530399
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.3567102268789254
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 0.30529378077094266
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 0.23291388183072134
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.319245085473699,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5591921505038866,
+          "relative_rms_lower_bound": 0.7477915153997714,
+          "dual_lambda": 0.22880380885754203
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.30647528205475105,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.4198950191503511,
+          "relative_rms_lower_bound": 0.647993070295008,
+          "dual_lambda": 0.06459617154797215
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.29370547863580304,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3623783277196732,
+          "relative_rms_lower_bound": 0.6019786771304056,
+          "dual_lambda": 0.053118512123719805
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.24262626496001122,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.2515658466756213,
+          "relative_rms_lower_bound": 0.5015634024484057,
+          "dual_lambda": 0.014094084301722588
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.20431685470316735,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.21005793250570368,
+          "relative_rms_lower_bound": 0.4583207746826492,
+          "dual_lambda": 0.013561129162153183
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.14046783760842754,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.14318865392947264,
+          "relative_rms_lower_bound": 0.37840276681001245,
+          "dual_lambda": 0.013268080142086263
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.01276980341894796,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.012769803418948011,
+          "relative_rms_lower_bound": 0.11300355489518023,
+          "dual_lambda": 0.012906456823289714
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0,
+          "relative_rms_lower_bound": 0.0,
+          "dual_lambda": 0.0
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.29985434639618436,
+        "2": 0.5926962494530332,
+        "3": 0.8728593228502599,
+        "6": 0.8918911130361281,
+        "10": 0.9155381120995743,
+        "19": 0.965343899360151,
+        "26": 1.0
+      },
+      "zero_perturbation_vs_captured_update_rel_rms": 6.1074820155136e-07
+    },
+    {
+      "group": 1,
+      "coordinates": {
+        "coordinates": [
+          129,
+          167,
+          230
+        ],
+        "base_codes": [
+          -2,
+          -30,
+          -19
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.18319240556789787,
+          0.18319240556789787,
+          0.18319240556789787
+        ]
+      },
+      "hidden_quantizer_levels": 7,
+      "output_sha256": "a0e00b8563b245710cf540014c79f5835a5a47c4d12233f841a0c551916adad7",
+      "variation_rms": 0.0019731862626417365,
+      "variation_over_total_rms": 0.04890594234580867,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.747545585213405,
+        "family_rel_rms_over_full_update": 0.03655942129131059,
+        "arbitrary_decoder_rel_rms": 0.6852608660828869,
+        "additional_family_squared_error_fraction": 0.08924194738738396,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 3237,
+          "first_output": 0.005132083294599107,
+          "second_output": 0.019450839499532104,
+          "absolute_gap": 0.014318756204932996
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          0,
+          2,
+          1
+        ],
+        "signs": [
+          1,
+          -1,
+          -1
+        ],
+        "family_rel_rms": 0.7431575036935418,
+        "arbitrary_decoder_rel_rms": 0.6795419594174511,
+        "collision": {
+          "first_input": [
+            -1,
+            0,
+            1
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 3291,
+          "first_output": 0.029699265171970787,
+          "second_output": 0.016679924494209946,
+          "absolute_gap": 0.013019340677760841
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 1,
+            "bias": -13,
+            "offset": 4,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.916767001214995
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 7,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8850791324553372
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 21845,
+            "bias": 13,
+            "offset": 5,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8493298213138959
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": 13,
+            "offset": 3,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7343964734543589
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6794152352358052
+        },
+        {
+          "capacity": 16,
+          "states": 16,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 7,
+            "bias": -13,
+            "offset": 1,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.5395350042166664
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.6374435593446961
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 0.4642720940565509
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 0.32706602779087895
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.44153772602992386,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.6980949125350278,
+          "relative_rms_lower_bound": 0.8355207433301867,
+          "dual_lambda": 0.17979877261006685
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.4238762169887269,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5722793275353993,
+          "relative_rms_lower_bound": 0.7564914589969931,
+          "dual_lambda": 0.0772587345562394
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.40621470794752995,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5053515741439629,
+          "relative_rms_lower_bound": 0.7108808438437224,
+          "dual_lambda": 0.06175068710256
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.33556867178274213,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3620742927940127,
+          "relative_rms_lower_bound": 0.6017260944931778,
+          "dual_lambda": 0.02226004256363288
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.28258414465915127,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.2997069026884337,
+          "relative_rms_lower_bound": 0.5474549321071404,
+          "dual_lambda": 0.01998561701054289
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.1942765994531665,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.20222528062653478,
+          "relative_rms_lower_bound": 0.44969465265503744,
+          "dual_lambda": 0.019139680332664645
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.017661509041196954,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.017661509041196954,
+          "relative_rms_lower_bound": 0.1328966103450233,
+          "dual_lambda": 0.017661509041196954
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0,
+          "relative_rms_lower_bound": 0.0,
+          "dual_lambda": 0.0
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.2211370186704526,
+        "2": 0.41244908977526973,
+        "3": 0.5969081029804233,
+        "6": 0.7119651156094242,
+        "10": 0.8096550234824919,
+        "19": 0.9343301201778441,
+        "26": 1.0000000000000004
+      }
+    },
+    {
+      "group": 2,
+      "coordinates": {
+        "coordinates": [
+          37,
+          1729,
+          4091
+        ],
+        "base_codes": [
+          60,
+          -88,
+          -20
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.1780411095830265,
+          0.1944276987974824,
+          0.2529149111293459
+        ]
+      },
+      "hidden_quantizer_levels": 0,
+      "output_sha256": "05697d89101396ce63084d71b2d1d37d259620c1b6e43cfd26f93ea0f7fe3b48",
+      "variation_rms": 0.0006064542781008922,
+      "variation_over_total_rms": 0.015102705159340637,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.5584780021239677,
+        "family_rel_rms_over_full_update": 0.008434528604055897,
+        "arbitrary_decoder_rel_rms": 0.558457065995824,
+        "additional_family_squared_error_fraction": 2.3384295714333583e-05,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            1
+          ],
+          "second_input": [
+            1,
+            1,
+            0
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 3108,
+          "first_output": 0.008070655655203644,
+          "second_output": 0.0029691386331583457,
+          "absolute_gap": 0.005101517022045299
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1
+        ],
+        "family_rel_rms": 0.5584780021239677,
+        "arbitrary_decoder_rel_rms": 0.5584570659958241,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            1
+          ],
+          "second_input": [
+            1,
+            1,
+            0
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 3108,
+          "first_output": 0.008070655655203644,
+          "second_output": 0.0029691386331583457,
+          "absolute_gap": 0.005101517022045299
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 3,
+            "bias": 13,
+            "offset": 6,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8055489929586942
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 7,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7300818303082626
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 1,
+            "bias": 13,
+            "offset": 3,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7220289223892522
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 2,
+            "bias": 13,
+            "offset": 3,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.5755054947013838
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.47371673441755796
+        },
+        {
+          "capacity": 16,
+          "states": 15,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 9,
+            "bias": 0,
+            "offset": 4,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.3948838095596398
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.00833153311828095
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 1.4084697422019266e-05
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 6.21107161011453e-09
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.15573579880739136,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.46614789038301885,
+          "relative_rms_lower_bound": 0.6827502401193418,
+          "dual_lambda": 0.210222225437195
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.14950636685509572,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.33022719395544553,
+          "relative_rms_lower_bound": 0.5746539775860301,
+          "dual_lambda": 0.09105103550697155
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.14327693490280005,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.2569530347534643,
+          "relative_rms_lower_bound": 0.5069053508826518,
+          "dual_lambda": 0.056727699683935005
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.11835920709361743,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.13411553968023088,
+          "relative_rms_lower_bound": 0.36621788552749696,
+          "dual_lambda": 0.011773101780555805
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.09967091123673047,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.1034139744446702,
+          "relative_rms_lower_bound": 0.3215804323099747,
+          "dual_lambda": 0.009915530916133477
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.06852375147525219,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.06855727571789243,
+          "relative_rms_lower_bound": 0.2618344433375648,
+          "dual_lambda": 0.006235589779150621
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.006229431952295654,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.006229431952295694,
+          "relative_rms_lower_bound": 0.07892675054945372,
+          "dual_lambda": 0.006229431952295654
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 5.551115123125783e-17,
+          "relative_rms_lower_bound": 7.450580596923828e-09,
+          "dual_lambda": 0.006229431952295654
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.48477358156831984,
+        "2": 0.7756405243926177,
+        "3": 0.9999307044843286,
+        "6": 0.9999832565372673,
+        "10": 0.9999999998787336,
+        "19": 1.0000000000000002,
+        "26": 1.0000000000000004
+      }
+    },
+    {
+      "group": 2,
+      "coordinates": {
+        "coordinates": [
+          37,
+          1729,
+          4091
+        ],
+        "base_codes": [
+          60,
+          -88,
+          -20
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.1780411095830265,
+          0.1944276987974824,
+          0.2529149111293459
+        ]
+      },
+      "hidden_quantizer_levels": 127,
+      "output_sha256": "1c712465c44b7389277faa7689c67e418fb2704f223d76e8c02b74469a5b1208",
+      "variation_rms": 0.000644424967138203,
+      "variation_over_total_rms": 0.016048110438405996,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.60256830969041,
+        "family_rel_rms_over_full_update": 0.009670082780595324,
+        "arbitrary_decoder_rel_rms": 0.5880100098331013,
+        "additional_family_squared_error_fraction": 0.01733279617923393,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            1
+          ],
+          "second_input": [
+            1,
+            1,
+            0
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 3265,
+          "first_output": 0.005566288439386453,
+          "second_output": 5.965887776039538e-05,
+          "absolute_gap": 0.005506629561626058
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "signs": [
+          -1,
+          -1,
+          1
+        ],
+        "family_rel_rms": 0.6024286426748691,
+        "arbitrary_decoder_rel_rms": 0.5877892728906438,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            1
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 4504,
+          "first_output": -0.01849242048122087,
+          "second_output": -0.013864132034973942,
+          "absolute_gap": 0.0046282884462469295
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 3,
+            "bias": 13,
+            "offset": 6,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8275506364087988
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 7,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7600099145259535
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 1,
+            "bias": 13,
+            "offset": 3,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.7499191826323308
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 2,
+            "bias": 13,
+            "offset": 3,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6120191175748795
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.5258821743605536
+        },
+        {
+          "capacity": 16,
+          "states": 15,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 9,
+            "bias": 0,
+            "offset": 4,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.43540346304398797
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.31513214228133457
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 0.2700079455219503
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 0.20718665556693439
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.23337339967847393,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5216176311991803,
+          "relative_rms_lower_bound": 0.7222310095801622,
+          "dual_lambda": 0.19622284869134796
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.22403846369133495,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.39642251198459144,
+          "relative_rms_lower_bound": 0.6296209272130266,
+          "dual_lambda": 0.0834717995655814
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.21470352770419598,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3273791774651502,
+          "relative_rms_lower_bound": 0.5721705842361614,
+          "dual_lambda": 0.05580669628216073
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.17736378375564016,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.20029407548924966,
+          "relative_rms_lower_bound": 0.4475422611209467,
+          "dual_lambda": 0.015137622525752523
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.1493589757942233,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.1592558311040231,
+          "relative_rms_lower_bound": 0.39906870474145567,
+          "dual_lambda": 0.01273118567444214
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.10268429585852852,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.10624321151741833,
+          "relative_rms_lower_bound": 0.3259497070368653,
+          "dual_lambda": 0.009927693042771295
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.009334935987138956,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.009334935987138998,
+          "relative_rms_lower_bound": 0.09661747247335234,
+          "dual_lambda": 0.009334935987138956
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 5.551115123125783e-17,
+          "relative_rms_lower_bound": 7.450580596923828e-09,
+          "dual_lambda": 0.009334935987138956
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.43418617090427103,
+        "2": 0.697236525180946,
+        "3": 0.9007790774751201,
+        "6": 0.9157967855349923,
+        "10": 0.9343560286871702,
+        "19": 0.9731601692263834,
+        "26": 0.9999999999999998
+      },
+      "zero_perturbation_vs_captured_update_rel_rms": 6.1074820155136e-07
+    },
+    {
+      "group": 2,
+      "coordinates": {
+        "coordinates": [
+          37,
+          1729,
+          4091
+        ],
+        "base_codes": [
+          60,
+          -88,
+          -20
+        ],
+        "code_steps": [
+          32,
+          32,
+          32
+        ],
+        "amplitudes": [
+          0.1780411095830265,
+          0.1944276987974824,
+          0.2529149111293459
+        ]
+      },
+      "hidden_quantizer_levels": 7,
+      "output_sha256": "ffe817d0972771b988c82085783ced05b66549d0e0cbdf3b02f1eb21ed519d97",
+      "variation_rms": 0.002113576278614697,
+      "variation_over_total_rms": 0.052370913002059025,
+      "computed_distinct_output_vectors": 27,
+      "selected_carrier": {
+        "states": 11,
+        "family_rel_rms": 0.7143720653248273,
+        "family_rel_rms_over_full_update": 0.03741231728422776,
+        "arbitrary_decoder_rel_rms": 0.6429709530306807,
+        "additional_family_squared_error_fraction": 0.09691580127527748,
+        "collision": {
+          "first_input": [
+            -1,
+            -1,
+            0
+          ],
+          "second_input": [
+            1,
+            1,
+            -1
+          ],
+          "carrier": -2.0,
+          "output_coordinate": 1719,
+          "first_output": 0.03194039089967934,
+          "second_output": 0.017963110045140913,
+          "absolute_gap": 0.013977280854538424
+        }
+      },
+      "best_orientation": {
+        "permutation": [
+          0,
+          1,
+          2
+        ],
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "family_rel_rms": 0.7116498774024068,
+        "arbitrary_decoder_rel_rms": 0.6382413988871473,
+        "collision": {
+          "first_input": [
+            -1,
+            1,
+            0
+          ],
+          "second_input": [
+            1,
+            -1,
+            1
+          ],
+          "carrier": 2.0,
+          "output_coordinate": 3430,
+          "first_output": -0.035835553534415664,
+          "second_output": -0.05128354159641498,
+          "absolute_gap": 0.015447988061999318
+        }
+      },
+      "grammar_fiber_frontier": [
+        {
+          "capacity": 2,
+          "states": 2,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 9,
+            "bias": 0,
+            "offset": 7,
+            "width": 1
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8931103195260105
+        },
+        {
+          "capacity": 3,
+          "states": 3,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 13,
+            "bias": 13,
+            "offset": 7,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8391110413856457
+        },
+        {
+          "capacity": 4,
+          "states": 4,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 1,
+            "bias": 0,
+            "offset": 3,
+            "width": 2
+          },
+          "best_arbitrary_decoder_rel_rms": 0.8201851187413792
+        },
+        {
+          "capacity": 8,
+          "states": 8,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 9,
+            "bias": 0,
+            "offset": 5,
+            "width": 3
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6933646041160976
+        },
+        {
+          "capacity": 11,
+          "states": 9,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 11,
+            "bias": 0,
+            "offset": 5,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.6245881355958014
+        },
+        {
+          "capacity": 16,
+          "states": 15,
+          "producer": {
+            "form": "u32_affine_bfe",
+            "multiplier": 9,
+            "bias": 0,
+            "offset": 4,
+            "width": 4
+          },
+          "best_arbitrary_decoder_rel_rms": 0.5088310925751447
+        }
+      ],
+      "polynomial_controls": {
+        "1": {
+          "dimension": 3,
+          "rel_rms": 0.646269576292951
+        },
+        "2": {
+          "dimension": 9,
+          "rel_rms": 0.46834125533837534
+        },
+        "3": {
+          "dimension": 16,
+          "rel_rms": 0.328905511140862
+        }
+      },
+      "any_carrier_capacity_lower_bounds": [
+        {
+          "capacity": 2,
+          "closest_pair_squared_error_lower_bound": 0.3710961560843984,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.6899979187588967,
+          "relative_rms_lower_bound": 0.8306611335309343,
+          "dual_lambda": 0.16162312338482246
+        },
+        {
+          "capacity": 3,
+          "closest_pair_squared_error_lower_bound": 0.3562523098410224,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.5736213921959243,
+          "relative_rms_lower_bound": 0.7573779718185131,
+          "dual_lambda": 0.08672255075965064
+        },
+        {
+          "capacity": 4,
+          "closest_pair_squared_error_lower_bound": 0.3414084635976465,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.49989295106159215,
+          "relative_rms_lower_bound": 0.7070310821043104,
+          "dual_lambda": 0.062242946573279945
+        },
+        {
+          "capacity": 8,
+          "closest_pair_squared_error_lower_bound": 0.2820330786241428,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.3340678829270807,
+          "relative_rms_lower_bound": 0.5779860577272437,
+          "dual_lambda": 0.026313333676906386
+        },
+        {
+          "capacity": 11,
+          "closest_pair_squared_error_lower_bound": 0.23750153989401496,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.2640103430897629,
+          "relative_rms_lower_bound": 0.5138193681535982,
+          "dual_lambda": 0.021572805192138545
+        },
+        {
+          "capacity": 16,
+          "closest_pair_squared_error_lower_bound": 0.16328230867713528,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.17336710060893346,
+          "relative_rms_lower_bound": 0.4163737511046217,
+          "dual_lambda": 0.016926059310646644
+        },
+        {
+          "capacity": 26,
+          "closest_pair_squared_error_lower_bound": 0.014843846243375935,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0.014843846243375924,
+          "relative_rms_lower_bound": 0.12183532428395275,
+          "dual_lambda": 0.01489841768559242
+        },
+        {
+          "capacity": 27,
+          "closest_pair_squared_error_lower_bound": 0,
+          "nearest_neighbor_dual_squared_error_lower_bound": 0,
+          "relative_rms_lower_bound": 0.0,
+          "dual_lambda": 0.0
+        }
+      ],
+      "output_variation_energy_at_rank": {
+        "1": 0.268654412444856,
+        "2": 0.44976206097086846,
+        "3": 0.5850292881929771,
+        "6": 0.7156133251561709,
+        "10": 0.8087774111966425,
+        "19": 0.9358123100033908,
+        "26": 1.0000000000000004
+      }
+    }
+  ],
+  "semantics": "CPU float64; fixed-scale A8 input codes with three +/- step perturbations; trained projections, SiLU, signed normalized Hadamard, optional hidden quantization, full down projection. No residual added.",
+  "fit_contract": "All finite states enumerated. Fits include a free intercept. Coefficients and best carrier may differ per case: optimistic information screen, not an online implementation or held-out quality result.",
+  "normalization": "Errors divided by norm of output variation about its mean over 27 states, not by the large unchanged background.",
+  "search": {
+    "orientations": 48,
+    "distinct_fiber_partitions_capacity_at_most_16": 666,
+    "scope": "Grid from inverse_labels.candidates; fiber frontier allows arbitrary unpriced decoders."
+  },
+  "provenance": {
+    "dataset": "/path/to/workspace/data/kelana-ffn/ptq1_0-batch/bench/layer10",
+    "manifest_sha256": "c1866c7265a3379d8e7105f157bfd228ae2e0444675aa9a4ec7fe3401fa28e71",
+    "files_sha256": {
+      "c015/x_in.f32": "0ccdaacccb5253638b10b6be92e5f6d1c8f86f27ab7457329c4a8e03c67175ac",
+      "c015/x_out.f32": "be6c5061d96f40ae583f9db3a5616da661bb60a3dc2bd682d9d0f42cc66dabda",
+      "gate.halo": "388fd2a300f7ad919fb9519a7ba331946d21a6cd5fc72fe110852333f513fbae",
+      "up.halo": "b4da3af934d06aa7c2d55c5bee8a40f319e5a12f85b901028474186f8a022302",
+      "down.halo": "734b5c1e77681fa72e94395537123eee1f7c5c9cb472024cfd362b614d822ce5",
+      "signs_ff.f32": "b6430548fe575c3e861fbce0fa0eeb3c9b2914cb0655f4096fa900832ed3e3cf",
+      "post_norm_s.f32": "485fb8a762957970b4230533158fdf230d51edc7fe4bc34436c36f0cb47de005"
+    },
+    "source_sha256": "4394f77a4caf048cb16041eb26999336ecd67c539546763599e6c0a4958e223c",
+    "capacity_source_sha256": "7a782642beda418d00e78c028be97d30f4079df214541676701d29cb9ae5a629",
+    "dependencies_sha256": {
+      "research/discovery/joint-observer/discover.py": "81e59d38fe4e4227cdc6bbd6327cd071346ac4caa2c7ed27c5b58667674b15d9",
+      "research/discovery/observer-search/inverse_labels.py": "fc2aca0b73cf57c2c9144080c75e2c4896a9849df626944210b3ef5eefdd8b3f",
+      "research/ffn/batched/deferred-carrier/carrier_scan.py": "1f61c789c14327ca74bd1df3a7dece9d107d558c16a0568a9354d53bbf062bc5"
+    },
+    "numpy": "2.4.4",
+    "blas_threads_env": "4"
+  },
+  "elapsed_seconds": 2.41753315506503
+}

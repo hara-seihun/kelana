@@ -1,0 +1,175 @@
+{
+  "repository": "bartowski/Qwen_Qwen3-0.6B-GGUF",
+  "revision": "60b85c0e3d8fe0f6474f406922a26d12aca4550d",
+  "repository_receipt_sha256": "86955194ec4787a5a6f8fa9aec08c95f4be55522734986705222ad4b8292c783",
+  "source_card_sha256": "8aa57e7250d096d75f663c62e7a90a28364a01e05fdff7cd6662c0fc030102cf",
+  "images": {
+    "Q4_K_M": {
+      "file": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/stock-gguf/Qwen_Qwen3-0.6B-Q4_K_M.gguf",
+      "sha256": "9acfc1e001311f34b4252001b626f2e466d592a42065f66571bff3790d4e1b14",
+      "file_bytes": 484220320,
+      "tensor_payload_bytes": 478268416,
+      "container_metadata_alignment_bytes": 5951904,
+      "source_unique_parameters": 596049920,
+      "stored_elements": 751632384,
+      "payload_bpw_per_source_unique": 6.419172622319956,
+      "file_bpw_per_source_unique": 6.4990572601704235,
+      "payload_bpw_per_stored_element": 5.090450344406661,
+      "gguf_source": "/path/to/workspace/work/clones/bonsai-hip/gguf-py",
+      "decoder_sha256": "2c927a1b3d9f0920dcf4007fb686e1b0999333e9f65ce43dcc689900c0beae8b",
+      "by_type": {
+        "Q6_K": 175795200,
+        "F32": 262144,
+        "Q4_K": 302211072
+      },
+      "embedding_and_output": {
+        "output.weight": {
+          "bytes": 127626240,
+          "type": "Q6_K"
+        },
+        "token_embd.weight": {
+          "bytes": 87515136,
+          "type": "Q4_K"
+        }
+      },
+      "imatrix_metadata": {
+        "quantize.imatrix.file": "/models_out/Qwen3-0.6B-GGUF/Qwen_Qwen3-0.6B.imatrix",
+        "quantize.imatrix.dataset": "/training_dir/calibration_datav3.txt",
+        "quantize.imatrix.entries_count": 196,
+        "quantize.imatrix.chunks_count": 137
+      },
+      "panels": {
+        "test": {
+          "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/stock-gguf/Q4_K_M-test-0-32.json",
+          "sha256": "d25d99c7401ff56c8f166841e13bc3ff0101b674313ed7d819f4890b88f4dad9",
+          "nll": 3.7092645009358725,
+          "perplexity": 40.82376963792957,
+          "untied_output": true,
+          "exact_norm_tensors": 113,
+          "matched_token_strings": 151669,
+          "source_weight_audit": [
+            {
+              "key": "model.layers.0.self_attn.k_proj.weight",
+              "weight_relative_rms": 0.0725957527756691
+            },
+            {
+              "key": "model.layers.0.self_attn.q_proj.weight",
+              "weight_relative_rms": 0.07363786548376083
+            },
+            {
+              "key": "model.layers.14.mlp.gate_proj.weight",
+              "weight_relative_rms": 0.07303302735090256
+            }
+          ]
+        },
+        "validation": {
+          "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/stock-gguf/Q4_K_M-validation-0-8.json",
+          "sha256": "3561e47f2b673f42fbcf6df7895ba8f94f572277f3505e220d9b25480d6ab11c",
+          "nll": 3.724223866182215,
+          "perplexity": 41.439058006198756,
+          "untied_output": true,
+          "exact_norm_tensors": 113,
+          "matched_token_strings": 151669,
+          "source_weight_audit": [
+            {
+              "key": "model.layers.0.self_attn.k_proj.weight",
+              "weight_relative_rms": 0.0725957527756691
+            },
+            {
+              "key": "model.layers.0.self_attn.q_proj.weight",
+              "weight_relative_rms": 0.07363786548376083
+            },
+            {
+              "key": "model.layers.14.mlp.gate_proj.weight",
+              "weight_relative_rms": 0.07303302735090256
+            }
+          ]
+        }
+      }
+    },
+    "IQ2_M": {
+      "file": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/stock-gguf/Qwen_Qwen3-0.6B-IQ2_M.gguf",
+      "sha256": "d129244d6f5285594084390f05ca5c3f7d194fd82f9d63f76c47e64725cf3b07",
+      "file_bytes": 331761056,
+      "tensor_payload_bytes": 325809152,
+      "container_metadata_alignment_bytes": 5951904,
+      "source_unique_parameters": 596049920,
+      "stored_elements": 751632384,
+      "payload_bpw_per_source_unique": 4.372910940076966,
+      "file_bpw_per_source_unique": 4.452795577927433,
+      "payload_bpw_per_stored_element": 3.46775002179789,
+      "gguf_source": "/path/to/workspace/work/clones/bonsai-hip/gguf-py",
+      "decoder_sha256": "2c927a1b3d9f0920dcf4007fb686e1b0999333e9f65ce43dcc689900c0beae8b",
+      "by_type": {
+        "Q5_K": 106962944,
+        "F32": 262144,
+        "IQ3_S": 108753920,
+        "IQ2_S": 109830144
+      },
+      "embedding_and_output": {
+        "output.weight": {
+          "bytes": 106962944,
+          "type": "Q5_K"
+        },
+        "token_embd.weight": {
+          "bytes": 66851840,
+          "type": "IQ3_S"
+        }
+      },
+      "imatrix_metadata": {
+        "quantize.imatrix.file": "/models_out/Qwen3-0.6B-GGUF/Qwen_Qwen3-0.6B.imatrix",
+        "quantize.imatrix.dataset": "/training_dir/calibration_datav3.txt",
+        "quantize.imatrix.entries_count": 196,
+        "quantize.imatrix.chunks_count": 137
+      },
+      "panels": {
+        "test": {
+          "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/stock-gguf/IQ2_M-test-0-32.json",
+          "sha256": "1a70677c5cb89d5f34a465788e028544ca9d2ff35a77dc1d0b96c93f16978e02",
+          "nll": 4.823108269186581,
+          "perplexity": 124.35100710691499,
+          "untied_output": true,
+          "exact_norm_tensors": 113,
+          "matched_token_strings": 151669,
+          "source_weight_audit": [
+            {
+              "key": "model.layers.0.self_attn.k_proj.weight",
+              "weight_relative_rms": 0.253926157951355
+            },
+            {
+              "key": "model.layers.0.self_attn.q_proj.weight",
+              "weight_relative_rms": 0.2563866972923279
+            },
+            {
+              "key": "model.layers.14.mlp.gate_proj.weight",
+              "weight_relative_rms": 0.25913381576538086
+            }
+          ]
+        },
+        "validation": {
+          "receipt": "/path/to/workspace/data/kelana-subbit/q4-diagnostic/stock-gguf/IQ2_M-validation-0-8.json",
+          "sha256": "aba66337211ce9e803684bea065924d607f63bf6a1da46ce6516ebaebb4b5bea",
+          "nll": 5.032207892922794,
+          "perplexity": 153.27104544474426,
+          "untied_output": true,
+          "exact_norm_tensors": 113,
+          "matched_token_strings": 151669,
+          "source_weight_audit": [
+            {
+              "key": "model.layers.0.self_attn.k_proj.weight",
+              "weight_relative_rms": 0.253926157951355
+            },
+            {
+              "key": "model.layers.0.self_attn.q_proj.weight",
+              "weight_relative_rms": 0.2563866972923279
+            },
+            {
+              "key": "model.layers.14.mlp.gate_proj.weight",
+              "weight_relative_rms": 0.25913381576538086
+            }
+          ]
+        }
+      }
+    }
+  }
+}

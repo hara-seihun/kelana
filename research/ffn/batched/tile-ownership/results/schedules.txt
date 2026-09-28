@@ -1,0 +1,37 @@
+# Launch shape of each candidate, printed by KELANA_TO_GRID=1. Columns:
+#   own0 = wave owns a row tile (control), own1 = workgroup owns a row tile
+#   tt = token tiles per wave, wv = waves per workgroup, ks = K splits, fuse1 = gate/up, fuse0 = down
+#   tiles = row tiles of the projection, grid = workgroups (x = row tiles or tiles/wv, y = token splits)
+
+== rows 32 ==
+to-iu8-a8-tile: launch C0 own0 tt2 ks1 wv4 fuse0 tiles160 grid 40x1 threads 128 G1|launch C0 own0 tt2 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G1|
+to-iu8-a8-share: launch C0 own1 tt1 ks1 wv4 fuse0 tiles160 grid 160x1 threads 128 G2|launch C0 own1 tt1 ks1 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G2|
+to-iu8-a8-share-auto: launch C0 own1 tt2 ks1 wv1 fuse0 tiles160 grid 160x1 threads 32 G1|launch C0 own1 tt2 ks1 wv1 fuse1 tiles1088 grid 1088x1 threads 32 G1|
+to-iu8-a8-share-w2: launch C0 own1 tt1 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|launch C0 own1 tt1 ks1 wv2 fuse1 tiles1088 grid 1088x1 threads 64 G2|
+to-iu8-a8-share-adapt: launch C0 own0 tt2 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G1|launch C0 own1 tt1 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|
+to-iu8-a8-share-k2: launch C0 own1 tt1 ks2 wv4 fuse0 tiles160 grid 160x1 threads 128 G2|launch C0 own1 tt1 ks2 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G2|
+to-csf16-a8-tile: launch C2 own0 tt2 ks1 wv4 fuse0 tiles160 grid 40x1 threads 128 G1|launch C2 own0 tt2 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G1|
+to-csf16-a8-share-adapt: launch C2 own0 tt2 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G1|launch C2 own1 tt1 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|
+to-iu4-a4-share-adapt: launch C1 own0 tt2 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G1|launch C1 own1 tt1 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|
+
+== rows 128 ==
+to-iu8-a8-tile: launch C0 own0 tt4 ks1 wv4 fuse0 tiles160 grid 40x2 threads 128 G2|launch C0 own0 tt4 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G2|
+to-iu8-a8-share: launch C0 own1 tt2 ks1 wv4 fuse0 tiles160 grid 160x1 threads 128 G4|launch C0 own1 tt2 ks1 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G4|
+to-iu8-a8-share-auto: launch C0 own1 tt4 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|launch C0 own1 tt4 ks1 wv2 fuse1 tiles1088 grid 1088x1 threads 64 G2|
+to-iu8-a8-share-w2: launch C0 own1 tt4 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|launch C0 own1 tt4 ks1 wv2 fuse1 tiles1088 grid 1088x1 threads 64 G2|
+to-iu8-a8-share-adapt: launch C0 own1 tt4 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|launch C0 own1 tt4 ks1 wv2 fuse1 tiles1088 grid 1088x1 threads 64 G2|
+to-iu8-a8-share-k2: launch C0 own1 tt4 ks2 wv4 fuse0 tiles160 grid 160x1 threads 128 G2|launch C0 own1 tt4 ks2 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G2|
+to-csf16-a8-tile: launch C2 own0 tt2 ks1 wv4 fuse0 tiles160 grid 40x4 threads 128 G4|launch C2 own0 tt8 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G1|
+to-csf16-a8-share-adapt: launch C2 own0 tt8 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G1|launch C2 own1 tt4 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|
+to-iu4-a4-share-adapt: launch C1 own1 tt4 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|launch C1 own1 tt4 ks1 wv2 fuse1 tiles1088 grid 1088x1 threads 64 G2|
+
+== rows 256 ==
+to-iu8-a8-tile: launch C0 own0 tt4 ks1 wv4 fuse0 tiles160 grid 40x4 threads 128 G4|launch C0 own0 tt4 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G4|
+to-iu8-a8-share: launch C0 own1 tt4 ks1 wv4 fuse0 tiles160 grid 160x1 threads 128 G4|launch C0 own1 tt4 ks1 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G4|
+to-iu8-a8-share-auto: launch C0 own1 tt4 ks1 wv4 fuse0 tiles160 grid 160x1 threads 128 G4|launch C0 own1 tt4 ks1 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G4|
+to-iu8-a8-share-w2: launch C0 own1 tt4 ks1 wv2 fuse0 tiles160 grid 160x2 threads 64 G4|launch C0 own1 tt4 ks1 wv2 fuse1 tiles1088 grid 1088x1 threads 64 G4|
+to-iu8-a8-share-adapt: launch C0 own1 tt4 ks1 wv4 fuse0 tiles160 grid 160x1 threads 128 G4|launch C0 own1 tt4 ks1 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G4|
+to-iu8-a8-share-k2: launch C0 own1 tt4 ks2 wv4 fuse0 tiles160 grid 160x2 threads 128 G4|launch C0 own1 tt4 ks2 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G4|
+to-csf16-a8-tile: launch C2 own0 tt8 ks1 wv4 fuse0 tiles160 grid 40x2 threads 128 G2|launch C2 own0 tt8 ks1 wv4 fuse1 tiles1088 grid 272x1 threads 128 G2|
+to-csf16-a8-share-adapt: launch C2 own1 tt8 ks1 wv2 fuse0 tiles160 grid 160x1 threads 64 G2|launch C2 own1 tt8 ks1 wv2 fuse1 tiles1088 grid 1088x1 threads 64 G2|
+to-iu4-a4-share-adapt: launch C1 own1 tt4 ks1 wv4 fuse0 tiles160 grid 160x1 threads 128 G4|launch C1 own1 tt4 ks1 wv4 fuse1 tiles1088 grid 1088x1 threads 128 G4|

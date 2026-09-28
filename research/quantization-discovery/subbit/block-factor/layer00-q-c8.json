@@ -1,0 +1,92 @@
+{
+  "fixture": "layer00-self_attn_q_proj.npz",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "rank": 448,
+  "admm_iterations": 400,
+  "rounds": 12,
+  "input_codes_per_block": 8,
+  "input_label_bits": 3,
+  "admm_same_rank_heldout_and_weight_error": [
+    0.08257127553224564,
+    0.4210139214992523
+  ],
+  "compressed_initial_heldout_and_weight_error": [
+    0.30667540431022644,
+    0.9433163404464722
+  ],
+  "refinement_heldout_and_weight_error": [
+    [
+      0.2819364070892334,
+      0.727638840675354
+    ],
+    [
+      0.22976672649383545,
+      0.6800394058227539
+    ],
+    [
+      0.2193741798400879,
+      0.6622986793518066
+    ],
+    [
+      0.21537244319915771,
+      0.6539373993873596
+    ],
+    [
+      0.2132730931043625,
+      0.6491456627845764
+    ],
+    [
+      0.2114599496126175,
+      0.6460374593734741
+    ],
+    [
+      0.21108880639076233,
+      0.6439012885093689
+    ],
+    [
+      0.21114245057106018,
+      0.6423330903053284
+    ],
+    [
+      0.2101455181837082,
+      0.6411250233650208
+    ],
+    [
+      0.2100827693939209,
+      0.6402215957641602
+    ],
+    [
+      0.20931872725486755,
+      0.6395371556282043
+    ],
+    [
+      0.20905928313732147,
+      0.638937771320343
+    ]
+  ],
+  "fit_heldout_response_error": 0.20905928313732147,
+  "fit_weight_error": 0.638937771320343,
+  "seconds_cpu": 10.067463678991771,
+  "payload_bytes": {
+    "output_signs": 114688,
+    "input_labels": 21504,
+    "input_dictionaries": 1024,
+    "pre_post_scales": 6144
+  },
+  "payload_bpw": 0.546875,
+  "online": {
+    "input_table_signed_additions_upper": 8192,
+    "input_label_lookups": 57344,
+    "output_table_additions": 14280,
+    "output_table_reads": 114688,
+    "input_table_bf16_bytes": 2048,
+    "output_table_bf16_bytes": 28672,
+    "intermediate_bf16_bytes_unfused_write_read": 1792,
+    "minimum_payload_read_bytes": 143360
+  },
+  "image": "/path/to/workspace/data/kelana-subbit/block-factor/layer00-q-c8.npz",
+  "serialized_zip_bytes": 144862
+}

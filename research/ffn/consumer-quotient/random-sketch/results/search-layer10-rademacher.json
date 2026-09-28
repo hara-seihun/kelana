@@ -1,0 +1,4443 @@
+{
+  "format": "kelana-random-sketch-search/1",
+  "layer": "layer10",
+  "tokens": 8,
+  "clip": 1.0,
+  "seed": 84123,
+  "changes": 64,
+  "weights_sha256": "734b5c1e77681fa72e94395537123eee1f7c5c9cb472024cfd362b614d822ce5",
+  "source_sha256": "9f92ded56f8aa9c17110282ce679d541b6d271ba0e13aa3c3e094187a0aa8694",
+  "common_sha256": "392c25adccd566e8895a3f582eb02d82026df71d1dc808c3096ceb8d7e40640d",
+  "scope": "Selection and acceptance use only weight-prepared sketches. The full down projection is used to score candidates and to record the trace, never to choose or accept a change.",
+  "elapsed_seconds": 7.698890044004656,
+  "results": [
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6515694260597229,
+        "worst_row_relative_rms": 0.6796197891235352,
+        "bias": -0.0005424105329439044,
+        "max_abs": 0.31689417362213135
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": 14.947166442871094,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.1830586940050125,
+        "acceptance_before": 148.15863037109375,
+        "acceptance_after": 14.947166442871094,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.1830586940050125
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.01875,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6515694260597229,
+          "online_MAC_fraction": 0.01875
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 681,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 13,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6608102917671204,
+        "worst_row_relative_rms": 0.6848592162132263,
+        "bias": -0.0005497214151546359,
+        "max_abs": 0.3152850866317749
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": -1.829453945159912,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": -0.7507671117782593,
+        "acceptance_before": 148.15863037109375,
+        "acceptance_after": -1.829453945159912,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": -0.7507671117782593
+      },
+      "online_sketch_products": 21,
+      "online_MAC_fraction": 0.13125,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6515694260597229,
+          "online_MAC_fraction": 0.01875
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6553575992584229,
+          "online_MAC_fraction": 0.05
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6586678624153137,
+          "online_MAC_fraction": 0.0875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6608102917671204,
+          "online_MAC_fraction": 0.13125
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22768521308898926,
+        "worst_row_relative_rms": 0.2418144941329956,
+        "bias": -0.00012916597188450396,
+        "max_abs": 0.12140689045190811
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": 1.61580228805542,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.0202848669141531,
+        "acceptance_before": 16.793718338012695,
+        "acceptance_after": 1.61580228805542,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.0202848669141531
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.01875,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22768521308898926,
+          "online_MAC_fraction": 0.01875
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 713,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 13,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.23198989033699036,
+        "worst_row_relative_rms": 0.2446061223745346,
+        "bias": -0.00013621486141346395,
+        "max_abs": 0.12058118730783463
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": -0.3034568428993225,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": -0.08253268897533417,
+        "acceptance_before": 16.793718338012695,
+        "acceptance_after": -0.3034568428993225,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": -0.08253268897533417
+      },
+      "online_sketch_products": 21,
+      "online_MAC_fraction": 0.13125,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22768521308898926,
+          "online_MAC_fraction": 0.01875
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.23007985949516296,
+          "online_MAC_fraction": 0.05
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.23081058263778687,
+          "online_MAC_fraction": 0.0875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.23198989033699036,
+          "online_MAC_fraction": 0.13125
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09704257547855377,
+        "worst_row_relative_rms": 0.10313620418310165,
+        "bias": 2.7439285986474715e-05,
+        "max_abs": 0.04392072558403015
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": 0.26405227184295654,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.0026544639840722084,
+        "acceptance_before": 2.6693050861358643,
+        "acceptance_after": 0.26405227184295654,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.0026544639840722084
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.01875,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09704257547855377,
+          "online_MAC_fraction": 0.01875
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 653,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 13,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.098629891872406,
+        "worst_row_relative_rms": 0.10514159500598907,
+        "bias": 2.5791814550757408e-05,
+        "max_abs": 0.04463162273168564
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": -0.056978464126586914,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": -0.013169901445508003,
+        "acceptance_before": 2.6693050861358643,
+        "acceptance_after": -0.056978464126586914,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": -0.013169901445508003
+      },
+      "online_sketch_products": 21,
+      "online_MAC_fraction": 0.13125,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09704257547855377,
+          "online_MAC_fraction": 0.01875
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09755929559469223,
+          "online_MAC_fraction": 0.05
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09811048209667206,
+          "online_MAC_fraction": 0.0875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.098629891872406,
+          "online_MAC_fraction": 0.13125
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 65,
+      "accepted_row_updates": 4,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6373040080070496,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004297360428608954,
+        "max_abs": 0.3188841640949249
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": 98.83606719970703,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 1.806773066520691,
+        "acceptance_before": 157.59872436523438,
+        "acceptance_after": 156.79959106445312,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 2.06017804145813
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.0625,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6373040080070496,
+          "online_MAC_fraction": 0.0625
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 199,
+      "accepted_row_updates": 9,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6427482962608337,
+        "worst_row_relative_rms": 0.6745536923408508,
+        "bias": -0.0004571957397274673,
+        "max_abs": 0.34569960832595825
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": 81.7877197265625,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.19513805210590363,
+        "acceptance_before": 157.59872436523438,
+        "acceptance_after": 152.20350646972656,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 2.052532911300659
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6373040080070496,
+          "online_MAC_fraction": 0.0625
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6421599984169006,
+          "online_MAC_fraction": 0.125
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6427482962608337,
+          "online_MAC_fraction": 0.1875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6427482962608337,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 170,
+      "accepted_row_updates": 7,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22375667095184326,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -9.446470357943326e-05,
+        "max_abs": 0.1141965240240097
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": 5.225154399871826,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.23208145797252655,
+        "acceptance_before": 17.371353149414062,
+        "acceptance_after": 16.856616973876953,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.16968508064746857
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.0625,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22375667095184326,
+          "online_MAC_fraction": 0.0625
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 197,
+      "accepted_row_updates": 12,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22492603957653046,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -0.00010352025128668174,
+        "max_abs": 0.1141965240240097
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": 4.2899651527404785,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": -0.020360063761472702,
+        "acceptance_before": 17.371353149414062,
+        "acceptance_after": 16.793088912963867,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.16968508064746857
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22375667095184326,
+          "online_MAC_fraction": 0.0625
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22454044222831726,
+          "online_MAC_fraction": 0.125
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.2246805876493454,
+          "online_MAC_fraction": 0.1875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.22492603957653046,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 208,
+      "accepted_row_updates": 7,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09532065689563751,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.3869628421380185e-05,
+        "max_abs": 0.0434214249253273
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": 1.162154197692871,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.0026544639840722084,
+        "acceptance_before": 2.8978230953216553,
+        "acceptance_after": 2.815661907196045,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.044979747384786606
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.0625,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09532065689563751,
+          "online_MAC_fraction": 0.0625
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 240,
+      "accepted_row_updates": 17,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09562278538942337,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.4215933080995455e-05,
+        "max_abs": 0.0434214249253273
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": 1.0454256534576416,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": -0.0019527347758412361,
+        "acceptance_before": 2.8978230953216553,
+        "acceptance_after": 2.795511245727539,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.0430280826985836
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09532065689563751,
+          "online_MAC_fraction": 0.0625
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09556505084037781,
+          "online_MAC_fraction": 0.125
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.0956328734755516,
+          "online_MAC_fraction": 0.1875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09562278538942337,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6515694260597229,
+        "worst_row_relative_rms": 0.6796197891235352,
+        "bias": -0.0005424105329439044,
+        "max_abs": 0.31689417362213135
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": 14.947166442871094,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.1830586940050125,
+        "acceptance_before": 148.15863037109375,
+        "acceptance_after": 14.947166442871094,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.1830586940050125
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.01875,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6515694260597229,
+          "online_MAC_fraction": 0.01875
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1989,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6997060775756836,
+        "worst_row_relative_rms": 0.7320539355278015,
+        "bias": -0.00027856696397066116,
+        "max_abs": 0.36875057220458984
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": 47.09950637817383,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.6243224143981934,
+        "acceptance_before": 148.15863037109375,
+        "acceptance_after": 47.09950637817383,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.6243224143981934
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6515694260597229,
+          "online_MAC_fraction": 0.01875
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6688210964202881,
+          "online_MAC_fraction": 0.0375
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6864511370658875,
+          "online_MAC_fraction": 0.05625
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6997060775756836,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22768521308898926,
+        "worst_row_relative_rms": 0.2418144941329956,
+        "bias": -0.00012916597188450396,
+        "max_abs": 0.12140689045190811
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": 1.61580228805542,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.0202848669141531,
+        "acceptance_before": 16.793718338012695,
+        "acceptance_after": 1.61580228805542,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.0202848669141531
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.01875,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22768521308898926,
+          "online_MAC_fraction": 0.01875
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1973,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2428385466337204,
+        "worst_row_relative_rms": 0.2567707300186157,
+        "bias": -0.000139706811751239,
+        "max_abs": 0.1279384046792984
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": 4.781888008117676,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.07651811093091965,
+        "acceptance_before": 16.793718338012695,
+        "acceptance_after": 4.781888008117676,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.07651811093091965
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22768521308898926,
+          "online_MAC_fraction": 0.01875
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.2335173338651657,
+          "online_MAC_fraction": 0.0375
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.23855651915073395,
+          "online_MAC_fraction": 0.05625
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.2428385466337204,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09704257547855377,
+        "worst_row_relative_rms": 0.10313620418310165,
+        "bias": 2.7439285986474715e-05,
+        "max_abs": 0.04392072558403015
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": 0.26405227184295654,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.0026544639840722084,
+        "acceptance_before": 2.6693050861358643,
+        "acceptance_after": 0.26405227184295654,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.0026544639840722084
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.01875,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09704257547855377,
+          "online_MAC_fraction": 0.01875
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1982,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.10383137315511703,
+        "worst_row_relative_rms": 0.11115717142820358,
+        "bias": 6.762491830158979e-05,
+        "max_abs": 0.048923615366220474
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": 1.0077041387557983,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.010594749823212624,
+        "acceptance_before": 2.6693050861358643,
+        "acceptance_after": 1.0077041387557983,
+        "acceptance_negative_diagonal_fraction": 0.4684627757352941,
+        "acceptance_diagonal_min": -0.6161864995956421,
+        "acceptance_negative_diagonal_mass": 0.5009065866470337,
+        "acceptance_min_row_after": 0.010594749823212624
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09704257547855377,
+          "online_MAC_fraction": 0.01875
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09950462728738785,
+          "online_MAC_fraction": 0.0375
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.10210897028446198,
+          "online_MAC_fraction": 0.05625
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.10383137315511703,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 65,
+      "accepted_row_updates": 4,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6373040080070496,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004297360428608954,
+        "max_abs": 0.3188841640949249
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": 98.83606719970703,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 1.806773066520691,
+        "acceptance_before": 157.59872436523438,
+        "acceptance_after": 156.79959106445312,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 2.06017804145813
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.0625,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6373040080070496,
+          "online_MAC_fraction": 0.0625
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 813,
+      "accepted_row_updates": 28,
+      "acceptance_backtracks": 23,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6651075482368469,
+        "worst_row_relative_rms": 0.7012064456939697,
+        "bias": -0.00033850842737592757,
+        "max_abs": 0.37136343121528625
+      },
+      "surrogate": {
+        "selection_before": 148.15863037109375,
+        "selection_after": 113.70550537109375,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 2.1075403690338135,
+        "acceptance_before": 157.59872436523438,
+        "acceptance_after": 89.78434753417969,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.8569676280021667
+      },
+      "online_sketch_products": 38,
+      "online_MAC_fraction": 0.2375,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6373040080070496,
+          "online_MAC_fraction": 0.0625
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6462626457214355,
+          "online_MAC_fraction": 0.1125
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6578720211982727,
+          "online_MAC_fraction": 0.175
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6651075482368469,
+          "online_MAC_fraction": 0.2375
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 170,
+      "accepted_row_updates": 7,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22375667095184326,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -9.446470357943326e-05,
+        "max_abs": 0.1141965240240097
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": 5.225154399871826,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.23208145797252655,
+        "acceptance_before": 17.371353149414062,
+        "acceptance_after": 16.856616973876953,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.16968508064746857
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.0625,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22375667095184326,
+          "online_MAC_fraction": 0.0625
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 964,
+      "accepted_row_updates": 29,
+      "acceptance_backtracks": 22,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2315438687801361,
+        "worst_row_relative_rms": 0.24838294088840485,
+        "bias": -9.727586439112201e-05,
+        "max_abs": 0.10711831599473953
+      },
+      "surrogate": {
+        "selection_before": 16.793718338012695,
+        "selection_after": 7.409319877624512,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.2251223921775818,
+        "acceptance_before": 17.371353149414062,
+        "acceptance_after": 12.684284210205078,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.03980306535959244
+      },
+      "online_sketch_products": 37,
+      "online_MAC_fraction": 0.23125,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22375667095184326,
+          "online_MAC_fraction": 0.0625
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22473038733005524,
+          "online_MAC_fraction": 0.125
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.22825662791728973,
+          "online_MAC_fraction": 0.16875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.2315438687801361,
+          "online_MAC_fraction": 0.23125
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 208,
+      "accepted_row_updates": 7,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09532065689563751,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.3869628421380185e-05,
+        "max_abs": 0.0434214249253273
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": 1.162154197692871,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.0026544639840722084,
+        "acceptance_before": 2.8978230953216553,
+        "acceptance_after": 2.815661907196045,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.044979747384786606
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.0625,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09532065689563751,
+          "online_MAC_fraction": 0.0625
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 843,
+      "accepted_row_updates": 28,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09849827736616135,
+        "worst_row_relative_rms": 0.10469184070825577,
+        "bias": 3.12096526613459e-05,
+        "max_abs": 0.0478421226143837
+      },
+      "surrogate": {
+        "selection_before": 2.6693050861358643,
+        "selection_after": 1.4144577980041504,
+        "selection_negative_diagonal_fraction": 0.4684627757352941,
+        "selection_diagonal_min": -0.6161864995956421,
+        "selection_negative_diagonal_mass": 0.5009065866470337,
+        "selection_min_row_after": 0.011247641406953335,
+        "acceptance_before": 2.8978230953216553,
+        "acceptance_after": 1.7871057987213135,
+        "acceptance_negative_diagonal_fraction": 0.4563419117647059,
+        "acceptance_diagonal_min": -0.6007485389709473,
+        "acceptance_negative_diagonal_mass": 0.4881444275379181,
+        "acceptance_min_row_after": 0.00583580182865262
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09532065689563751,
+          "online_MAC_fraction": 0.0625
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.0964999794960022,
+          "online_MAC_fraction": 0.125
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09736502915620804,
+          "online_MAC_fraction": 0.1875
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09849827736616135,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 32,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.645340085029602,
+        "worst_row_relative_rms": 0.6718888878822327,
+        "bias": -0.00041075595072470605,
+        "max_abs": 0.31592732667922974
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 40.28500747680664,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.6266357898712158,
+        "acceptance_before": 144.07046508789062,
+        "acceptance_after": 40.28500747680664,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.6266357898712158
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.645340085029602,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1316,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 7,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6693984270095825,
+        "worst_row_relative_rms": 0.6966855525970459,
+        "bias": -0.0005430277669802308,
+        "max_abs": 0.32074517011642456
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 2.330127239227295,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.027776923030614853,
+        "acceptance_before": 144.07046508789062,
+        "acceptance_after": 2.330127239227295,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.027776923030614853
+      },
+      "online_sketch_products": 15,
+      "online_MAC_fraction": 0.375,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.645340085029602,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.660923421382904,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.667211651802063,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6693984270095825,
+          "online_MAC_fraction": 0.375
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2248082309961319,
+        "worst_row_relative_rms": 0.23834441602230072,
+        "bias": -8.917834929889068e-05,
+        "max_abs": 0.10138172656297684
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 5.263152122497559,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.07104901969432831,
+        "acceptance_before": 17.78662109375,
+        "acceptance_after": 5.263152122497559,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.07104901969432831
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2248082309961319,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1233,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 7,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.23496480286121368,
+        "worst_row_relative_rms": 0.24950215220451355,
+        "bias": -3.0340635930770077e-05,
+        "max_abs": 0.11583726108074188
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 0.16175919771194458,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.0008225589990615845,
+        "acceptance_before": 17.78662109375,
+        "acceptance_after": 0.16175919771194458,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.0008225589990615845
+      },
+      "online_sketch_products": 15,
+      "online_MAC_fraction": 0.375,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2248082309961319,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.23083719611167908,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.23392155766487122,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.23496480286121368,
+          "online_MAC_fraction": 0.375
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09562475234270096,
+        "worst_row_relative_rms": 0.10200418531894684,
+        "bias": 3.1473937269765884e-05,
+        "max_abs": 0.04510597139596939
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 0.9369432330131531,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.014274761080741882,
+        "acceptance_before": 3.140637159347534,
+        "acceptance_after": 0.9369432330131531,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.014274761080741882
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09562475234270096,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1272,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 7,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09984695166349411,
+        "worst_row_relative_rms": 0.10581547021865845,
+        "bias": 3.347877645865083e-05,
+        "max_abs": 0.04492596164345741
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 0.05104596167802811,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.000481000286526978,
+        "acceptance_before": 3.140637159347534,
+        "acceptance_after": 0.05104596167802811,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.000481000286526978
+      },
+      "online_sketch_products": 15,
+      "online_MAC_fraction": 0.375,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09562475234270096,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09821896255016327,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.0993831679224968,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09984695166349411,
+          "online_MAC_fraction": 0.375
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 236,
+      "accepted_row_updates": 6,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6400249004364014,
+        "worst_row_relative_rms": 0.6672989726066589,
+        "bias": -0.0004152468463871628,
+        "max_abs": 0.31592732667922974
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 81.87216186523438,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 1.1373167037963867,
+        "acceptance_before": 150.05422973632812,
+        "acceptance_after": 147.75233459472656,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 2.6393556594848633
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6400249004364014,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 403,
+      "accepted_row_updates": 14,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6430797576904297,
+        "worst_row_relative_rms": 0.6806995868682861,
+        "bias": -0.0004608657327480614,
+        "max_abs": 0.3113122880458832
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 70.99005889892578,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.09905243664979935,
+        "acceptance_before": 150.05422973632812,
+        "acceptance_after": 146.6162109375,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 2.5715670585632324
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 1.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6400249004364014,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6424171328544617,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6429736614227295,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6430797576904297,
+          "online_MAC_fraction": 1.0
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 156,
+      "accepted_row_updates": 6,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22243903577327728,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.41526746423915e-05,
+        "max_abs": 0.10646353662014008
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 11.874001502990723,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.25431153178215027,
+        "acceptance_before": 17.203670501708984,
+        "acceptance_after": 16.89557456970215,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.2463437169790268
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22243903577327728,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 205,
+      "accepted_row_updates": 10,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2233659029006958,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -8.592975063947961e-05,
+        "max_abs": 0.10646353662014008
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 10.592630386352539,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.25431153178215027,
+        "acceptance_before": 17.203670501708984,
+        "acceptance_after": 16.87591552734375,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.2463437169790268
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 1.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22243903577327728,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22335955500602722,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.2233659029006958,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.2233659029006958,
+          "online_MAC_fraction": 1.0
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 250,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09472886472940445,
+        "worst_row_relative_rms": 0.1005825623869896,
+        "bias": 1.954193794517778e-05,
+        "max_abs": 0.04510597139596939
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 1.9396785497665405,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.014274761080741882,
+        "acceptance_before": 2.8599929809570312,
+        "acceptance_after": 2.809075355529785,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.035638608038425446
+      },
+      "online_sketch_products": 9,
+      "online_MAC_fraction": 0.225,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09472886472940445,
+          "online_MAC_fraction": 0.225
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 322,
+      "accepted_row_updates": 13,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09526980668306351,
+        "worst_row_relative_rms": 0.1005825623869896,
+        "bias": 2.834765473380685e-05,
+        "max_abs": 0.046689290553331375
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 1.5635664463043213,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.014274761080741882,
+        "acceptance_before": 2.8599929809570312,
+        "acceptance_after": 2.7997190952301025,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.035638608038425446
+      },
+      "online_sketch_products": 39,
+      "online_MAC_fraction": 0.975,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09472886472940445,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09525471180677414,
+          "online_MAC_fraction": 0.475
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09526980668306351,
+          "online_MAC_fraction": 0.725
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09526980668306351,
+          "online_MAC_fraction": 0.975
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.645340085029602,
+        "worst_row_relative_rms": 0.6718888878822327,
+        "bias": -0.00041075595072470605,
+        "max_abs": 0.31592732667922974
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 40.28500747680664,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.6266357898712158,
+        "acceptance_before": 144.07046508789062,
+        "acceptance_after": 40.28500747680664,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.6266357898712158
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.645340085029602,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1980,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6707790493965149,
+        "worst_row_relative_rms": 0.697059154510498,
+        "bias": -0.000433656940003857,
+        "max_abs": 0.3390118479728699
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 65.25718688964844,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.9931319355964661,
+        "acceptance_before": 144.07046508789062,
+        "acceptance_after": 65.25718688964844,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.9931319355964661
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.3,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.645340085029602,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6561530232429504,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.663845419883728,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6707790493965149,
+          "online_MAC_fraction": 0.3
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2248082309961319,
+        "worst_row_relative_rms": 0.23834441602230072,
+        "bias": -8.917834929889068e-05,
+        "max_abs": 0.10138172656297684
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 5.263152122497559,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.07104901969432831,
+        "acceptance_before": 17.78662109375,
+        "acceptance_after": 5.263152122497559,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.07104901969432831
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2248082309961319,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1960,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.23442572355270386,
+        "worst_row_relative_rms": 0.247049942612648,
+        "bias": -4.949528147335513e-07,
+        "max_abs": 0.11166399717330933
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 8.376277923583984,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.12569278478622437,
+        "acceptance_before": 17.78662109375,
+        "acceptance_after": 8.376277923583984,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.12569278478622437
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.3,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2248082309961319,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22811339795589447,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.23131002485752106,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.23442572355270386,
+          "online_MAC_fraction": 0.3
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09562475234270096,
+        "worst_row_relative_rms": 0.10200418531894684,
+        "bias": 3.1473937269765884e-05,
+        "max_abs": 0.04510597139596939
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 0.9369432330131531,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.014274761080741882,
+        "acceptance_before": 3.140637159347534,
+        "acceptance_after": 0.9369432330131531,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.014274761080741882
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.075,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09562475234270096,
+          "online_MAC_fraction": 0.075
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1960,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09932398051023483,
+        "worst_row_relative_rms": 0.10551636666059494,
+        "bias": 5.386285556596704e-05,
+        "max_abs": 0.04513704031705856
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 1.5735230445861816,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.022406024858355522,
+        "acceptance_before": 3.140637159347534,
+        "acceptance_after": 1.5735230445861816,
+        "acceptance_negative_diagonal_fraction": 0.4745519301470588,
+        "acceptance_diagonal_min": -0.23925966024398804,
+        "acceptance_negative_diagonal_mass": 0.4842154085636139,
+        "acceptance_min_row_after": 0.022406024858355522
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.3,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09562475234270096,
+          "online_MAC_fraction": 0.075
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.0970882773399353,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09818922728300095,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09932398051023483,
+          "online_MAC_fraction": 0.3
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 236,
+      "accepted_row_updates": 6,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6400249004364014,
+        "worst_row_relative_rms": 0.6672989726066589,
+        "bias": -0.0004152468463871628,
+        "max_abs": 0.31592732667922974
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 81.87216186523438,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 1.1373167037963867,
+        "acceptance_before": 150.05422973632812,
+        "acceptance_after": 147.75233459472656,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 2.6393556594848633
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6400249004364014,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 852,
+      "accepted_row_updates": 25,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6511737704277039,
+        "worst_row_relative_rms": 0.6807252764701843,
+        "bias": -0.0003839866549242288,
+        "max_abs": 0.3162235915660858
+      },
+      "surrogate": {
+        "selection_before": 144.07046508789062,
+        "selection_after": 87.90015411376953,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 1.25922691822052,
+        "acceptance_before": 150.05422973632812,
+        "acceptance_after": 86.05823516845703,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 1.4803522825241089
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 1.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6400249004364014,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6458241939544678,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.649666965007782,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6511737704277039,
+          "online_MAC_fraction": 1.0
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 156,
+      "accepted_row_updates": 6,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22243903577327728,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.41526746423915e-05,
+        "max_abs": 0.10646353662014008
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 11.874001502990723,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.25431153178215027,
+        "acceptance_before": 17.203670501708984,
+        "acceptance_after": 16.89557456970215,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.2463437169790268
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.25,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22243903577327728,
+          "online_MAC_fraction": 0.25
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 647,
+      "accepted_row_updates": 24,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22564949095249176,
+        "worst_row_relative_rms": 0.23537898063659668,
+        "bias": -6.084110282245092e-05,
+        "max_abs": 0.10764764994382858
+      },
+      "surrogate": {
+        "selection_before": 17.78662109375,
+        "selection_after": 12.749649047851562,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.26222631335258484,
+        "acceptance_before": 17.203670501708984,
+        "acceptance_after": 15.40145492553711,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.21517889201641083
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 1.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22243903577327728,
+          "online_MAC_fraction": 0.25
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22283269464969635,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.22431881725788116,
+          "online_MAC_fraction": 0.75
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.22564949095249176,
+          "online_MAC_fraction": 1.0
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 250,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09472886472940445,
+        "worst_row_relative_rms": 0.1005825623869896,
+        "bias": 1.954193794517778e-05,
+        "max_abs": 0.04510597139596939
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 1.9396785497665405,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.014274761080741882,
+        "acceptance_before": 2.8599929809570312,
+        "acceptance_after": 2.809075355529785,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.035638608038425446
+      },
+      "online_sketch_products": 9,
+      "online_MAC_fraction": 0.225,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09472886472940445,
+          "online_MAC_fraction": 0.225
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 814,
+      "accepted_row_updates": 29,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09595297276973724,
+        "worst_row_relative_rms": 0.10083001852035522,
+        "bias": 3.2466691664012615e-06,
+        "max_abs": 0.04707224294543266
+      },
+      "surrogate": {
+        "selection_before": 3.140637159347534,
+        "selection_after": 2.0907697677612305,
+        "selection_negative_diagonal_fraction": 0.4745519301470588,
+        "selection_diagonal_min": -0.23925966024398804,
+        "selection_negative_diagonal_mass": 0.4842154085636139,
+        "selection_min_row_after": 0.014430209062993526,
+        "acceptance_before": 2.8599929809570312,
+        "acceptance_after": 1.9675110578536987,
+        "acceptance_negative_diagonal_fraction": 0.47506893382352944,
+        "acceptance_diagonal_min": -0.26801782846450806,
+        "acceptance_negative_diagonal_mass": 0.48883873224258423,
+        "acceptance_min_row_after": 0.020851003006100655
+      },
+      "online_sketch_products": 39,
+      "online_MAC_fraction": 0.975,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09472886472940445,
+          "online_MAC_fraction": 0.225
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09509643167257309,
+          "online_MAC_fraction": 0.475
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09575555473566055,
+          "online_MAC_fraction": 0.725
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09595297276973724,
+          "online_MAC_fraction": 0.975
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 128,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6397703289985657,
+        "worst_row_relative_rms": 0.6616598963737488,
+        "bias": -0.00039586503407917917,
+        "max_abs": 0.3096543848514557
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 63.3555793762207,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.930508553981781,
+        "acceptance_before": 143.88169860839844,
+        "acceptance_after": 63.3555793762207,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.930508553981781
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.15,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6397703289985657,
+          "online_MAC_fraction": 0.15
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1746,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 5,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6702103614807129,
+        "worst_row_relative_rms": 0.6984583735466003,
+        "bias": -0.00044161928235553205,
+        "max_abs": 0.3349383473396301
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 6.484775066375732,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.0769011378288269,
+        "acceptance_before": 143.88169860839844,
+        "acceptance_after": 6.484775066375732,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.0769011378288269
+      },
+      "online_sketch_products": 13,
+      "online_MAC_fraction": 0.65,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6397703289985657,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6493383646011353,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6642782688140869,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6702103614807129,
+          "online_MAC_fraction": 0.65
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22288084030151367,
+        "worst_row_relative_rms": 0.23656560480594635,
+        "bias": -5.529314512386918e-05,
+        "max_abs": 0.10701442509889603
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 7.9369916915893555,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.10919805616140366,
+        "acceptance_before": 17.54366683959961,
+        "acceptance_after": 7.9369916915893555,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.10919805616140366
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.15,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22288084030151367,
+          "online_MAC_fraction": 0.15
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1778,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 5,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.235828697681427,
+        "worst_row_relative_rms": 0.2516016960144043,
+        "bias": -7.789141818648204e-05,
+        "max_abs": 0.11922154575586319
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 0.849467933177948,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.0182607751339674,
+        "acceptance_before": 17.54366683959961,
+        "acceptance_after": 0.849467933177948,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.0182607751339674
+      },
+      "online_sketch_products": 13,
+      "online_MAC_fraction": 0.65,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22288084030151367,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22698572278022766,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.2319539189338684,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.235828697681427,
+          "online_MAC_fraction": 0.65
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09486184269189835,
+        "worst_row_relative_rms": 0.10154081881046295,
+        "bias": 1.4769333574804477e-05,
+        "max_abs": 0.04485784471035004
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 1.3882758617401123,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.02029632031917572,
+        "acceptance_before": 3.105401039123535,
+        "acceptance_after": 1.3882758617401123,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.02029632031917572
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.15,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09486184269189835,
+          "online_MAC_fraction": 0.15
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1724,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 5,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.10046117752790451,
+        "worst_row_relative_rms": 0.10822255164384842,
+        "bias": 5.959666850685608e-06,
+        "max_abs": 0.04435345530509949
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 0.1509820520877838,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.002324662171304226,
+        "acceptance_before": 3.105401039123535,
+        "acceptance_after": 0.1509820520877838,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.002324662171304226
+      },
+      "online_sketch_products": 13,
+      "online_MAC_fraction": 0.65,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09486184269189835,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09683287143707275,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09906841069459915,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.10046117752790451,
+          "online_MAC_fraction": 0.65
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "fixed",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 256,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6366758346557617,
+        "worst_row_relative_rms": 0.6616598963737488,
+        "bias": -0.0004971399903297424,
+        "max_abs": 0.30656173825263977
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 96.92457580566406,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 1.7293298244476318,
+        "acceptance_before": 146.09475708007812,
+        "acceptance_after": 144.02281188964844,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 2.266662359237671
+      },
+      "online_sketch_products": 7,
+      "online_MAC_fraction": 0.35,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6366758346557617,
+          "online_MAC_fraction": 0.35
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 371,
+      "accepted_row_updates": 12,
+      "acceptance_backtracks": 22,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6375009417533875,
+        "worst_row_relative_rms": 0.6685085296630859,
+        "bias": -0.0004966717096976936,
+        "max_abs": 0.30656173825263977
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 91.01390075683594,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 1.1989487409591675,
+        "acceptance_before": 146.09475708007812,
+        "acceptance_after": 143.7445068359375,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 2.266662359237671
+      },
+      "online_sketch_products": 37,
+      "online_MAC_fraction": 1.85,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6366758346557617,
+          "online_MAC_fraction": 0.35
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6374338269233704,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6375009417533875,
+          "online_MAC_fraction": 1.35
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6375009417533875,
+          "online_MAC_fraction": 1.85
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 274,
+      "accepted_row_updates": 7,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2221139371395111,
+        "worst_row_relative_rms": 0.2349807173013687,
+        "bias": -4.9374928494216874e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 13.154159545898438,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.15985143184661865,
+        "acceptance_before": 16.795495986938477,
+        "acceptance_after": 16.737812042236328,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.24650166928768158
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.5,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2221139371395111,
+          "online_MAC_fraction": 0.5
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 351,
+      "accepted_row_updates": 13,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22235329449176788,
+        "worst_row_relative_rms": 0.2349807173013687,
+        "bias": -5.488163878908381e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 12.295049667358398,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.07769326120615005,
+        "acceptance_before": 16.795495986938477,
+        "acceptance_after": 16.709314346313477,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.24650166928768158
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 2.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2221139371395111,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.2222672700881958,
+          "online_MAC_fraction": 1.0
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.22235329449176788,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.22235329449176788,
+          "online_MAC_fraction": 2.0
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 166,
+      "accepted_row_updates": 6,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09447895735502243,
+        "worst_row_relative_rms": 0.10154081881046295,
+        "bias": 1.8125170754501596e-05,
+        "max_abs": 0.04384559020400047
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 2.6374568939208984,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.044316310435533524,
+        "acceptance_before": 2.967611312866211,
+        "acceptance_after": 2.9588687419891357,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.03559999540448189
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.5,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09447895735502243,
+          "online_MAC_fraction": 0.5
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 196,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09462028741836548,
+        "worst_row_relative_rms": 0.1027204766869545,
+        "bias": 1.742117092362605e-05,
+        "max_abs": 0.04384559020400047
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 2.567599296569824,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.044316310435533524,
+        "acceptance_before": 2.967611312866211,
+        "acceptance_after": 2.9564507007598877,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.03559999540448189
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 2.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09447895735502243,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09462028741836548,
+          "online_MAC_fraction": 1.0
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09462028741836548,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09462028741836548,
+          "online_MAC_fraction": 2.0
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "holdout",
+      "pool": 1,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6397703289985657,
+        "worst_row_relative_rms": 0.6616598963737488,
+        "bias": -0.00039586503407917917,
+        "max_abs": 0.3096543848514557
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 63.3555793762207,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.930508553981781,
+        "acceptance_before": 143.88169860839844,
+        "acceptance_after": 63.3555793762207,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.930508553981781
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.15,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6397703289985657,
+          "online_MAC_fraction": 0.15
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1963,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6551997065544128,
+        "worst_row_relative_rms": 0.6797634363174438,
+        "bias": -0.0005536446115002036,
+        "max_abs": 0.3437899649143219
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 83.83285522460938,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 1.3096928596496582,
+        "acceptance_before": 143.88169860839844,
+        "acceptance_after": 83.83285522460938,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 1.3096928596496582
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.6,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6397703289985657,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.643297016620636,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6499347686767578,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6551997065544128,
+          "online_MAC_fraction": 0.6
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22288084030151367,
+        "worst_row_relative_rms": 0.23656560480594635,
+        "bias": -5.529314512386918e-05,
+        "max_abs": 0.10701442509889603
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 7.9369916915893555,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.10919805616140366,
+        "acceptance_before": 17.54366683959961,
+        "acceptance_after": 7.9369916915893555,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.10919805616140366
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.15,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22288084030151367,
+          "online_MAC_fraction": 0.15
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1971,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2265101820230484,
+        "worst_row_relative_rms": 0.2396315038204193,
+        "bias": -9.788319403014611e-06,
+        "max_abs": 0.10957266390323639
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 10.02023696899414,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.15770645439624786,
+        "acceptance_before": 17.54366683959961,
+        "acceptance_after": 10.02023696899414,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.15770645439624786
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.6,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.22288084030151367,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22414173185825348,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.22527272999286652,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.2265101820230484,
+          "online_MAC_fraction": 0.6
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 512,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 1,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09486184269189835,
+        "worst_row_relative_rms": 0.10154081881046295,
+        "bias": 1.4769333574804477e-05,
+        "max_abs": 0.04485784471035004
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 1.3882758617401123,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.02029632031917572,
+        "acceptance_before": 3.105401039123535,
+        "acceptance_after": 1.3882758617401123,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.02029632031917572
+      },
+      "online_sketch_products": 3,
+      "online_MAC_fraction": 0.15,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09486184269189835,
+          "online_MAC_fraction": 0.15
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1965,
+      "accepted_row_updates": 32,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09700379520654678,
+        "worst_row_relative_rms": 0.10341821610927582,
+        "bias": 1.8111431927536614e-05,
+        "max_abs": 0.04797044023871422
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 1.8477208614349365,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.026251941919326782,
+        "acceptance_before": 3.105401039123535,
+        "acceptance_after": 1.8477208614349365,
+        "acceptance_negative_diagonal_fraction": 0.4768497242647059,
+        "acceptance_diagonal_min": -0.18927133083343506,
+        "acceptance_negative_diagonal_mass": 0.48274919390678406,
+        "acceptance_min_row_after": 0.026251941919326782
+      },
+      "online_sketch_products": 12,
+      "online_MAC_fraction": 0.6,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09486184269189835,
+          "online_MAC_fraction": 0.15
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09538879245519638,
+          "online_MAC_fraction": 0.3
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09610649943351746,
+          "online_MAC_fraction": 0.45
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09700379520654678,
+          "online_MAC_fraction": 0.6
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 256,
+      "accepted_row_updates": 8,
+      "acceptance_backtracks": 4,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6366758346557617,
+        "worst_row_relative_rms": 0.6616598963737488,
+        "bias": -0.0004971399903297424,
+        "max_abs": 0.30656173825263977
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 96.92457580566406,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 1.7293298244476318,
+        "acceptance_before": 146.09475708007812,
+        "acceptance_after": 144.02281188964844,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 2.266662359237671
+      },
+      "online_sketch_products": 7,
+      "online_MAC_fraction": 0.35,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6366758346557617,
+          "online_MAC_fraction": 0.35
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1041,
+      "accepted_row_updates": 29,
+      "acceptance_backtracks": 22,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6420089602470398,
+        "worst_row_relative_rms": 0.6699858903884888,
+        "bias": -0.0005276355659589171,
+        "max_abs": 0.3660888373851776
+      },
+      "surrogate": {
+        "selection_before": 143.88169860839844,
+        "selection_after": 103.38899230957031,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 1.9115320444107056,
+        "acceptance_before": 146.09475708007812,
+        "acceptance_after": 106.46820068359375,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 1.0677915811538696
+      },
+      "online_sketch_products": 37,
+      "online_MAC_fraction": 1.85,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.6358535885810852
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.6366758346557617,
+          "online_MAC_fraction": 0.35
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.6382937431335449,
+          "online_MAC_fraction": 0.85
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.6404807567596436,
+          "online_MAC_fraction": 1.35
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.6420089602470398,
+          "online_MAC_fraction": 1.85
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 274,
+      "accepted_row_updates": 7,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2221139371395111,
+        "worst_row_relative_rms": 0.2349807173013687,
+        "bias": -4.9374928494216874e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 13.154159545898438,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.15985143184661865,
+        "acceptance_before": 16.795495986938477,
+        "acceptance_after": 16.737812042236328,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.24650166928768158
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.5,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2221139371395111,
+          "online_MAC_fraction": 0.5
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 1095,
+      "accepted_row_updates": 28,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.22344958782196045,
+        "worst_row_relative_rms": 0.23537543416023254,
+        "bias": 1.0410469258204103e-05,
+        "max_abs": 0.10943279415369034
+      },
+      "surrogate": {
+        "selection_before": 17.54366683959961,
+        "selection_after": 13.759706497192383,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.1968308985233307,
+        "acceptance_before": 16.795495986938477,
+        "acceptance_after": 10.787540435791016,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.11686455458402634
+      },
+      "online_sketch_products": 39,
+      "online_MAC_fraction": 1.95,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.22172775864601135
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.2221139371395111,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.22280149161815643,
+          "online_MAC_fraction": 1.0
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.22299833595752716,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.22344958782196045,
+          "online_MAC_fraction": 1.95
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 1,
+      "changes": 64,
+      "changed_codes": 166,
+      "accepted_row_updates": 6,
+      "acceptance_backtracks": 6,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09447895735502243,
+        "worst_row_relative_rms": 0.10154081881046295,
+        "bias": 1.8125170754501596e-05,
+        "max_abs": 0.04384559020400047
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 2.6374568939208984,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.044316310435533524,
+        "acceptance_before": 2.967611312866211,
+        "acceptance_after": 2.9588687419891357,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.03559999540448189
+      },
+      "online_sketch_products": 10,
+      "online_MAC_fraction": 0.5,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09447895735502243,
+          "online_MAC_fraction": 0.5
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "steps": 4,
+      "changes": 64,
+      "changed_codes": 952,
+      "accepted_row_updates": 24,
+      "acceptance_backtracks": 24,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.09552264958620071,
+        "worst_row_relative_rms": 0.1021825447678566,
+        "bias": 1.2569706996146124e-05,
+        "max_abs": 0.044688645750284195
+      },
+      "surrogate": {
+        "selection_before": 3.105401039123535,
+        "selection_after": 2.771733283996582,
+        "selection_negative_diagonal_fraction": 0.4768497242647059,
+        "selection_diagonal_min": -0.18927133083343506,
+        "selection_negative_diagonal_mass": 0.48274919390678406,
+        "selection_min_row_after": 0.044316310435533524,
+        "acceptance_before": 2.967611312866211,
+        "acceptance_after": 2.3624277114868164,
+        "acceptance_negative_diagonal_fraction": 0.48046875,
+        "acceptance_diagonal_min": -0.1778448224067688,
+        "acceptance_negative_diagonal_mass": 0.4897727370262146,
+        "acceptance_min_row_after": 0.028415203094482422
+      },
+      "online_sketch_products": 40,
+      "online_MAC_fraction": 2.0,
+      "cost_scope": "Sketch multiplies only (gradient, every proposal, every validation), as a fraction of one dense down projection per token. Sorting, scalar work, launches and traffic excluded. No speed claim.",
+      "trace": [
+        {
+          "iteration": 0,
+          "true_relative_rms": 0.09432508796453476
+        },
+        {
+          "iteration": 1,
+          "true_relative_rms": 0.09447895735502243,
+          "online_MAC_fraction": 0.5
+        },
+        {
+          "iteration": 2,
+          "true_relative_rms": 0.09463454782962799,
+          "online_MAC_fraction": 1.0
+        },
+        {
+          "iteration": 3,
+          "true_relative_rms": 0.09500943124294281,
+          "online_MAC_fraction": 1.5
+        },
+        {
+          "iteration": 4,
+          "true_relative_rms": 0.09552264958620071,
+          "online_MAC_fraction": 2.0
+        }
+      ],
+      "kind": "rademacher",
+      "rank": 256,
+      "protocol": "refresh-holdout",
+      "pool": 4,
+      "diagonal": "exact"
+    }
+  ]
+}

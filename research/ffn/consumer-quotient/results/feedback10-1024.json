@@ -1,0 +1,69 @@
+{
+  "format": "kelana-consumer-feedback/1",
+  "layer": "layer10",
+  "tokens": 8,
+  "block": 1024,
+  "source_sha256": "b552e82e73296732513d553995f2a1fefba68b5ce3512509b61499b663745ecd",
+  "weights_sha256": "734b5c1e77681fa72e94395537123eee1f7c5c9cb472024cfd362b614d822ce5",
+  "feedback_MAC_per_token": 8904192,
+  "feedback_MAC_fraction_of_down": 0.09990234375,
+  "triangular_fp32_bytes": 35616768,
+  "scope": "CPU map and operation model only, no native throughput or full-model quality. Fixed weight-only feedback; no target projection in code selection. Per-128 dynamic scales retained.",
+  "elapsed_seconds": 5.594508771086112,
+  "results": [
+    {
+      "levels": 1,
+      "clip": 1.0,
+      "before": {
+        "relative_rms": 0.6358535885810852,
+        "worst_row_relative_rms": 0.6637123823165894,
+        "bias": -0.0004673670046031475,
+        "max_abs": 0.3106231689453125
+      },
+      "after": {
+        "relative_rms": 0.6011308431625366,
+        "worst_row_relative_rms": 0.6186827421188354,
+        "bias": -0.0002600065781734884,
+        "max_abs": 0.30500879883766174
+      },
+      "changed_codes": 9707,
+      "source_relative_error": 0.8084533214569092
+    },
+    {
+      "levels": 3,
+      "clip": 1.0,
+      "before": {
+        "relative_rms": 0.22172775864601135,
+        "worst_row_relative_rms": 0.23528017103672028,
+        "bias": -7.797908619977534e-05,
+        "max_abs": 0.11093500256538391
+      },
+      "after": {
+        "relative_rms": 0.2070913314819336,
+        "worst_row_relative_rms": 0.2176208198070526,
+        "bias": 1.1939700925722718e-06,
+        "max_abs": 0.11354536563158035
+      },
+      "changed_codes": 11580,
+      "source_relative_error": 0.28436583280563354
+    },
+    {
+      "levels": 7,
+      "clip": 1.0,
+      "before": {
+        "relative_rms": 0.09432508796453476,
+        "worst_row_relative_rms": 0.10055606067180634,
+        "bias": 2.2638150767306797e-05,
+        "max_abs": 0.043423742055892944
+      },
+      "after": {
+        "relative_rms": 0.08854217827320099,
+        "worst_row_relative_rms": 0.09375666081905365,
+        "bias": -1.700026223261375e-05,
+        "max_abs": 0.04578086733818054
+      },
+      "changed_codes": 11470,
+      "source_relative_error": 0.12185869365930557
+    }
+  ]
+}

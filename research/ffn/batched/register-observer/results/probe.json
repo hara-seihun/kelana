@@ -1,0 +1,15 @@
+{"probe":"register-observer/probe","device":"gfx1151","wgps":20,"cus":40,"simds":80,"waves_per_simd":8,"iters":2000,"variants":[
+  {"variant":"iu4 wmma 16x16x16","mac_per_ns_per_simd":689.7,"ms":1.5203,"of_iu4":1.0000,"mac_per_lane_per_instruction":128.000},
+  {"variant":"perm issue ceiling","mac_per_ns_per_simd":699.7,"ms":0.1873,"of_iu4":1.0146,"mac_per_lane_per_instruction":8.000},
+  {"variant":"core rq=4 tok=4","mac_per_ns_per_simd":391.3,"ms":0.3350,"of_iu4":0.5673,"mac_per_lane_per_instruction":5.333},
+  {"variant":"core rq=8 tok=4","mac_per_ns_per_simd":400.7,"ms":0.6541,"of_iu4":0.5811,"mac_per_lane_per_instruction":5.333},
+  {"variant":"core rq=8 tok=8","mac_per_ns_per_simd":401.0,"ms":1.3076,"of_iu4":0.5814,"mac_per_lane_per_instruction":5.333},
+  {"variant":"core rq=16 tok=4","mac_per_ns_per_simd":394.2,"ms":1.3299,"of_iu4":0.5716,"mac_per_lane_per_instruction":5.333},
+  {"variant":"free tables rq=4 tok=4","mac_per_ns_per_simd":388.2,"ms":1.3504,"of_iu4":0.5629,"mac_per_lane_per_instruction":4.000},
+  {"variant":"free tables rq=8 tok=4","mac_per_ns_per_simd":348.9,"ms":3.0055,"of_iu4":0.5058,"mac_per_lane_per_instruction":4.000},
+  {"variant":"free tables rq=16 tok=2","mac_per_ns_per_simd":358.9,"ms":2.9213,"of_iu4":0.5204,"mac_per_lane_per_instruction":4.000},
+  {"variant":"full rq=4 tok=4","mac_per_ns_per_simd":182.9,"ms":2.8666,"of_iu4":0.2652,"mac_per_lane_per_instruction":2.462},
+  {"variant":"full rq=8 tok=4","mac_per_ns_per_simd":194.0,"ms":5.4054,"of_iu4":0.2813,"mac_per_lane_per_instruction":3.048},
+  {"variant":"full rq=8 tok=8","mac_per_ns_per_simd":189.4,"ms":11.0711,"of_iu4":0.2747,"mac_per_lane_per_instruction":3.048},
+  {"variant":"full rq=16 tok=2","mac_per_ns_per_simd":217.9,"ms":4.8118,"of_iu4":0.3160,"mac_per_lane_per_instruction":3.459}
+]}

@@ -1,0 +1,23 @@
+{
+  "target": "gfx1151",
+  "source_sha256": "eb3779c8123dd518173d899b06914b3d69a529150cb4ff67b4145f5e2e89cc71",
+  "instructions": {
+    "toy2_baseline": {
+      "v_lshl_or_b32": 4,
+      "v_and_b32": 3,
+      "v_dot8_i32_iu4": 4,
+      "v_mad_u32_u24": 2
+    },
+    "toy2_packed": {
+      "v_lshl_or_b32": 4,
+      "v_and_b32": 3,
+      "v_dot8_i32_iu4": 2
+    }
+  },
+  "instruction_totals": {
+    "toy2_baseline": 13,
+    "toy2_packed": 9
+  },
+  "common_terminator": "s_endpgm, excluded from both core counts",
+  "scope": "Real instruction encodings accepted and disassembled; not a GPU timing measurement."
+}

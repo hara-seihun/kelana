@@ -1,0 +1,38 @@
+{
+  "gated-pair": {
+    "equal": true,
+    "certificate": "examples/gated-pair.lean",
+    "input_sha256": "8865ff7d3837571dd7b5900629e172c60dad9c452b88900771d73db1616afb06",
+    "certificate_sha256": "52aaaae880bf8f4acfa6262429ea5ac6ee1a2e1c14030576f0c193f58d182bd2",
+    "profile": {
+      "monomials": 6,
+      "support_size": 2,
+      "interaction_degree": 2,
+      "total_degree": 3
+    },
+    "nodes": 68,
+    "proof_status": "exported; run lake env lean on the certificate to check it"
+  },
+  "fourth-power": {
+    "equal": true,
+    "certificate": "examples/fourth-power.lean",
+    "input_sha256": "eaf5308bce7a2b032cd0230b4dd9faeb2b5d11ec74118a3a5e3da3599bc779ec",
+    "certificate_sha256": "2aaaaaa2fca71559c2a2ece3d3169928d1902d3fa1b24f34c18ca8a0f9d31587",
+    "profile": {
+      "monomials": 4,
+      "support_size": 2,
+      "interaction_degree": 2,
+      "total_degree": 4
+    },
+    "nodes": 40,
+    "proof_status": "exported; run lake env lean on the certificate to check it"
+  },
+  "invalid-substitution": {
+    "equal": false,
+    "input": {
+      "x0": 1
+    },
+    "lhs": "6",
+    "rhs": "0"
+  }
+}

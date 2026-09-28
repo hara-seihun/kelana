@@ -1,0 +1,35 @@
+{
+  "fixture": "layer27-self_attn_q_proj.npz",
+  "dimensions": [
+    2048,
+    1024
+  ],
+  "rank": 496,
+  "steps": 240,
+  "elapsed_seconds_cpu": 5.4369266649882775,
+  "walsh_heldout_response_error": 0.301963210105896,
+  "walsh_weight_error": 0.7324305772781372,
+  "fit_heldout_response_error": 0.17552345991134644,
+  "fit_weight_error": 0.6918804049491882,
+  "before_activation_heldout_response_error": 0.20020043849945068,
+  "activation_steps": 64,
+  "payload_bytes": {
+    "coefficient": 126976,
+    "transform": 10240,
+    "pre_scale": 2048,
+    "post_scale": 4096,
+    "indices": 992
+  },
+  "payload_bpw": 0.5506591796875,
+  "online": {
+    "butterfly_pair_rotations": 5120,
+    "signed_output_terms": 1015808,
+    "lookup_8_table_build_additions": 15810,
+    "lookup_8_output_reads": 126976,
+    "lookup_8_table_scratch_bf16_bytes": 31744,
+    "minimum_payload_read_bytes": 144352,
+    "minimum_bf16_vector_io_bytes": 6144
+  },
+  "image": "/path/to/workspace/data/kelana-subbit/fast-transform/layer27-q_proj-activation.npz",
+  "serialized_zip_bytes": 145850
+}

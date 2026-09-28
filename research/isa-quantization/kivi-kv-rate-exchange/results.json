@@ -1,0 +1,188 @@
+{
+  "scope": "frozen K2V4 versus K4V2 event exchange; complete full-O at four held streams \u00d7 t128/t256 only",
+  "source_control_commit": "90357ed",
+  "teacher_sq": 271.3179824670367,
+  "per_state": [
+    {
+      "window": 0,
+      "t": 128,
+      "teacher_sq": 39.26511330322819,
+      "K2V4_sse": 0.014293690078394226,
+      "K4V2_sse": 0.005348571946111505,
+      "K2V2_sse": 0.02381541300717438,
+      "K4V4_sse": 0.00035081298411164877
+    },
+    {
+      "window": 0,
+      "t": 256,
+      "teacher_sq": 44.37480814613907,
+      "K2V4_sse": 0.01187151515197512,
+      "K4V2_sse": 0.01698158474967353,
+      "K2V2_sse": 0.033375712894475384,
+      "K4V4_sse": 0.0006573149483321411
+    },
+    {
+      "window": 1,
+      "t": 128,
+      "teacher_sq": 30.37191131823968,
+      "K2V4_sse": 0.0414872124243262,
+      "K4V2_sse": 0.11395741747216998,
+      "K2V2_sse": 0.21905988181613412,
+      "K4V4_sse": 0.0034031285187433175
+    },
+    {
+      "window": 1,
+      "t": 256,
+      "teacher_sq": 36.302931394270104,
+      "K2V4_sse": 0.030730369098396125,
+      "K4V2_sse": 0.00276232445372113,
+      "K2V2_sse": 0.03566317294384633,
+      "K4V4_sse": 0.00021481191424180344
+    },
+    {
+      "window": 2,
+      "t": 128,
+      "teacher_sq": 37.74864583056265,
+      "K2V4_sse": 0.016614790532765086,
+      "K4V2_sse": 0.008168932970278738,
+      "K2V2_sse": 0.027687014554856063,
+      "K4V4_sse": 0.0005596996051097092
+    },
+    {
+      "window": 2,
+      "t": 256,
+      "teacher_sq": 27.770445518362493,
+      "K2V4_sse": 0.012962947649073023,
+      "K4V2_sse": 0.05524334507374124,
+      "K2V2_sse": 0.10405211511352865,
+      "K4V4_sse": 0.0013703115008144619
+    },
+    {
+      "window": 3,
+      "t": 128,
+      "teacher_sq": 27.003684307253714,
+      "K2V4_sse": 0.03697242085842688,
+      "K4V2_sse": 0.07145687145858612,
+      "K2V2_sse": 0.16654961064129414,
+      "K4V4_sse": 0.0015698030654244539
+    },
+    {
+      "window": 3,
+      "t": 256,
+      "teacher_sq": 28.480442648980823,
+      "K2V4_sse": 0.028652069223655263,
+      "K4V2_sse": 0.14607485315200724,
+      "K2V2_sse": 0.22245500735184298,
+      "K4V4_sse": 0.003439130389488943
+    }
+  ],
+  "pooled": {
+    "K2V4": {
+      "sse": 0.19358501501701192,
+      "relative_sq": 0.0007134986529708962
+    },
+    "K4V2": {
+      "sse": 0.4199939012762895,
+      "relative_sq": 0.0015479766488655647
+    },
+    "K2V2": {
+      "sse": 0.832657928323152,
+      "relative_sq": 0.003068937490806804
+    },
+    "K4V4": {
+      "sse": 0.01156501292626648,
+      "relative_sq": 4.262530931827031e-05
+    }
+  },
+  "ledgers": {
+    "K2V4": {
+      "before_query": {
+        "128": {
+          "key_code": 24576,
+          "key_fields": 12288,
+          "value_code": 48640,
+          "value_fields": 12160,
+          "key_recent_bf16": 65536,
+          "value_recent_bf16": 67584,
+          "total_bytes": 230784
+        },
+        "256": {
+          "key_code": 57344,
+          "key_fields": 28672,
+          "value_code": 114176,
+          "value_fields": 28544,
+          "key_recent_bf16": 65536,
+          "value_recent_bf16": 67584,
+          "total_bytes": 361856
+        }
+      },
+      "after_query_t256": {
+        "key_code": 65536,
+        "key_fields": 32768,
+        "value_code": 114688,
+        "value_fields": 28672,
+        "key_recent_bf16": 0,
+        "value_recent_bf16": 65536,
+        "total_bytes": 307200
+      },
+      "flush_events_per_256_window": {
+        "key_chunks": 64,
+        "value_tokens": 1792
+      }
+    },
+    "K4V2": {
+      "before_query": {
+        "128": {
+          "key_code": 49152,
+          "key_fields": 12288,
+          "value_code": 24320,
+          "value_fields": 12160,
+          "key_recent_bf16": 65536,
+          "value_recent_bf16": 67584,
+          "total_bytes": 231040
+        },
+        "256": {
+          "key_code": 114688,
+          "key_fields": 28672,
+          "value_code": 57088,
+          "value_fields": 28544,
+          "key_recent_bf16": 65536,
+          "value_recent_bf16": 67584,
+          "total_bytes": 362112
+        }
+      },
+      "after_query_t256": {
+        "key_code": 131072,
+        "key_fields": 32768,
+        "value_code": 57344,
+        "value_fields": 28672,
+        "key_recent_bf16": 0,
+        "value_recent_bf16": 65536,
+        "total_bytes": 315392
+      },
+      "flush_events_per_256_window": {
+        "key_chunks": 64,
+        "value_tokens": 1792
+      }
+    }
+  },
+  "peak_difference_K4V2_minus_K2V4_bytes": 256,
+  "source_manifest_sha256": [
+    {
+      "K2V2": "d71405c68664c6b6cf981c3123d1f327120d7f10185d953a084015acb7292b92",
+      "K4V4": "f196c9ca71c2178c1747a69bec6789f155070e1c637d7e67361293d81b9f563b"
+    },
+    {
+      "K2V2": "8dcc86304aa6ead64fe2b672ab8f3009b4dfb70d8742a31811038aa2262b448f",
+      "K4V4": "5ee19d90db727e70383e536fec89e08d1dbc1ade1242563382425c1504ee3705"
+    },
+    {
+      "K2V2": "ef42a265b310f743533295ac64a89a40a1149bda70047e20cd09e164b915bf48",
+      "K4V4": "aa678ebd2e9a0f36a2ba87db2dc0e92ee7114ea4bd8b711bfba0ecc142ebc97b"
+    },
+    {
+      "K2V2": "0555422c336f0d0efe4a39f418a8e1599cf07859bb9a898d897875d78415e9f8",
+      "K4V4": "413600cb6a1874cfdb3b6a971eff9431023097427ebd7364d5abcb605b27f31d"
+    }
+  ]
+}

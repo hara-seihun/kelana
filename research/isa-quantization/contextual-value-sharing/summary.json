@@ -1,0 +1,66 @@
+{
+  "scope": "layer1 CPU projection from original layer0 teacher post-residual; exact full-eight-head record sharing only",
+  "panels": {
+    "train": {
+      "windows": 8,
+      "positions": 2048,
+      "repeated_token_occurrences": 870,
+      "same_token_id_pairs": 3165,
+      "same_id_and_raw_pairs": 0,
+      "same_id_and_v_pairs": 0,
+      "same_id_and_packed_pairs": 0,
+      "duplicate_records": {
+        "captured_residual_bf16": 0,
+        "normalized_input_bf16": 0,
+        "full8_v_bf16": 0,
+        "full8_g32_kivi2_v": 0
+      },
+      "after_query148slot_first_failure": 181,
+      "before_query148slot_first_failure": 182
+    },
+    "validation": {
+      "windows": 4,
+      "positions": 1024,
+      "repeated_token_occurrences": 456,
+      "same_token_id_pairs": 1698,
+      "same_id_and_raw_pairs": 0,
+      "same_id_and_v_pairs": 0,
+      "same_id_and_packed_pairs": 0,
+      "duplicate_records": {
+        "captured_residual_bf16": 0,
+        "normalized_input_bf16": 0,
+        "full8_v_bf16": 0,
+        "full8_g32_kivi2_v": 0
+      },
+      "after_query148slot_first_failure": 181,
+      "before_query148slot_first_failure": 182
+    }
+  },
+  "receipt_sha256": {
+    "train-0.json": "355594d776ad02012010eb4f7e22e380ebce95e70c309c4477e650770f84f783",
+    "train-1.json": "4c093cf8e63bc042ce9b9a8a5d85b8328ba7ccbc3433148cd59441e8c26965b3",
+    "train-2.json": "91f05bdcf4b866c0788564f754afd9c88d7c9f55c0d0c7131d5851e4e7c702ef",
+    "train-3.json": "c1591db3a5a692f9996b621fc17c50f1c86fc20aea2123c9b6e8cd3b6f04f7bc",
+    "train-4.json": "c59401386f72319fd93ea093fb63fc8827348d95caae53fcebfae60009750d1a",
+    "train-5.json": "7afbc7b80e634d3dda927190b2c8c21d1eaf786d899f1fbafdab2f43c4532b5e",
+    "train-6.json": "3b656efc69294f27402f5636a6e080dddb56366a4e965b19a1ee34080a28d3da",
+    "train-7.json": "32e13faa0cd0967781dde318a337c348db69953ca597d01b89d2079648568384",
+    "validation-0.json": "f1604608eeb481fdaa6b0668788711e43041021085e98c37ab105ebe063a89d4",
+    "validation-1.json": "69f58870eb45fcd1012b555fdba8c757d846b30a77c778d7c64e2daf916fec4e",
+    "validation-2.json": "105664c23c755eeb6d83bd6622c683068ea2379b0d20319b39dc23197601a998",
+    "validation-3.json": "bcf5b4237cb1ba89d4e4666de96a7cc82c3a868d224f4239ab79b6206d6ff000"
+  },
+  "source_provenance": {
+    "metadata_path": "/path/to/workspace/data/kelana-subbit/full-model/mlp-quantized-producer-capture.json",
+    "metadata_sha256": "fef14293149d9665ab726dcb3ce3565f39278fa26c0a3aebe19878bcf5c208ce",
+    "pre_snapshot_metadata_sha256": "b5b944ed8604761d2e55a52bbe708e7de375b755f63c15596a863fe37c66e304",
+    "capture_sha256_in_metadata": "aa1e671af9283656efd7a95f2732a27662ce8c658766af5ee88f5e7d27b9e69c",
+    "source_snapshot_path": "/path/to/workspace/data/kelana-subbit/full-model/sources/42eae1e97b1a5a609022f62df15770c6f9ffb10505e46dcbc7987c74ffa5883d.py",
+    "source_snapshot_sha256": "42eae1e97b1a5a609022f62df15770c6f9ffb10505e46dcbc7987c74ffa5883d",
+    "source_snapshot_bytes": 9628,
+    "recovery_provenance": "Recovered exact 9,628 UTF-8 bytes from persisted Pi tool write in e0f4d8ea-fec8-42ec-9c7d-2d46dee607f4.jsonl line 38, entry 16907bc3 at 2026-09-23T05:20:30.845Z (2026-09-22 22:20:30 PDT); capture receipt written before later evaluation edit at 05:21:28Z and commit 8241bb9.",
+    "scope": "Recovered exact original capture producer and additive metadata identity; no capture/projection rerun or new native layer1 claim"
+  },
+  "v_final_plain_payload_bytes": 151552,
+  "v_final_dictionary_with_256_refs_and_5header_bytes": 151813
+}

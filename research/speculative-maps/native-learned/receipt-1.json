@@ -1,0 +1,110 @@
+{
+  "contexts": 32,
+  "active_contexts": 1,
+  "steps": 6,
+  "states": 16,
+  "streams": 8192,
+  "rounds": 4,
+  "cdf_bytes": 3072,
+  "column_bytes": 3072,
+  "inverse_bytes": 24576,
+  "column_prepare_ns": 480,
+  "inverse_prepare_ns": 7620,
+  "maps_prepare_ns_per_stream": 22.68,
+  "prepared_map_bytes": 786432,
+  "runs": [
+    {
+      "trial": 0,
+      "timing": {
+        "direct_linear": 49.09,
+        "direct_binary": 65.52,
+        "direct_vector": 16.45,
+        "direct_inverse_table": 7.26,
+        "scalar_map_walk": 173.41,
+        "vector_map_walk": 23.28,
+        "prepare_then_walk": 23.07,
+        "prepared_walk": 4.62,
+        "prepared_prefix": 3.87,
+        "scalar_map_prefix": 172.39,
+        "vector_map_prefix": 20.72,
+        "inverse_table_prefix": 59.75,
+        "packed_nibble_prefix": 77.68
+      }
+    },
+    {
+      "trial": 1,
+      "timing": {
+        "direct_binary": 55.02,
+        "direct_vector": 14.51,
+        "direct_inverse_table": 6.56,
+        "scalar_map_walk": 159.83,
+        "vector_map_walk": 20.55,
+        "prepare_then_walk": 28.02,
+        "prepared_walk": 4.47,
+        "prepared_prefix": 3.81,
+        "scalar_map_prefix": 175.98,
+        "vector_map_prefix": 20.77,
+        "inverse_table_prefix": 59.62,
+        "packed_nibble_prefix": 77.41,
+        "direct_linear": 41.85
+      }
+    },
+    {
+      "trial": 2,
+      "timing": {
+        "direct_vector": 14.46,
+        "direct_inverse_table": 6.48,
+        "scalar_map_walk": 158.28,
+        "vector_map_walk": 20.51,
+        "prepare_then_walk": 20.29,
+        "prepared_walk": 4.23,
+        "prepared_prefix": 3.56,
+        "scalar_map_prefix": 154.98,
+        "vector_map_prefix": 20.71,
+        "inverse_table_prefix": 59.46,
+        "packed_nibble_prefix": 77.87,
+        "direct_linear": 41.58,
+        "direct_binary": 55.15
+      }
+    },
+    {
+      "trial": 3,
+      "timing": {
+        "direct_inverse_table": 6.44,
+        "scalar_map_walk": 168.26,
+        "vector_map_walk": 20.54,
+        "prepare_then_walk": 20.34,
+        "prepared_walk": 4.39,
+        "prepared_prefix": 3.4,
+        "scalar_map_prefix": 156.62,
+        "vector_map_prefix": 20.59,
+        "inverse_table_prefix": 60.21,
+        "packed_nibble_prefix": 77.47,
+        "direct_linear": 41.36,
+        "direct_binary": 56.39,
+        "direct_vector": 14.41
+      }
+    },
+    {
+      "trial": 4,
+      "timing": {
+        "scalar_map_walk": 156.53,
+        "vector_map_walk": 20.56,
+        "prepare_then_walk": 20.32,
+        "prepared_walk": 4.38,
+        "prepared_prefix": 3.42,
+        "scalar_map_prefix": 160.12,
+        "vector_map_prefix": 20.74,
+        "inverse_table_prefix": 59.92,
+        "packed_nibble_prefix": 77.68,
+        "direct_linear": 41.57,
+        "direct_binary": 57.05,
+        "direct_vector": 14.54,
+        "direct_inverse_table": 6.4
+      }
+    }
+  ],
+  "sink": 523376,
+  "tables_sha256": "4c946d880fd22c669a71b71f284bb489a9b0863e59df291ea524c369ee551a52",
+  "compiler": "g++ (GCC) 15.3.0"
+}

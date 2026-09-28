@@ -1,0 +1,38 @@
+{
+  "active_contexts": 1,
+  "streams": 8192,
+  "rounds": 20,
+  "u16_bytes": 3072,
+  "u8_bytes": 1536,
+  "prepare_ns": 900,
+  "trials": [
+    {
+      "avx2_u16": 14.75,
+      "sse_u8": 14.77,
+      "scalar_u8": 49.26
+    },
+    {
+      "sse_u8": 10.03,
+      "scalar_u8": 46.47,
+      "avx2_u16": 9.99
+    },
+    {
+      "scalar_u8": 44.7,
+      "avx2_u16": 10.16,
+      "sse_u8": 10.4
+    },
+    {
+      "avx2_u16": 10.17,
+      "sse_u8": 10.2,
+      "scalar_u8": 45.05
+    },
+    {
+      "sse_u8": 10.04,
+      "scalar_u8": 44.83,
+      "avx2_u16": 9.98
+    }
+  ],
+  "sink": 2616880,
+  "tables_sha256": "4c946d880fd22c669a71b71f284bb489a9b0863e59df291ea524c369ee551a52",
+  "compiler": "g++ (GCC) 15.3.0"
+}

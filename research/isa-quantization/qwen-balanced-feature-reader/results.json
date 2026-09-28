@@ -1,0 +1,298 @@
+{
+  "paid_image_sha256": {
+    "gamma_replacement": "c8173158c88975e808804bb89a9e59b4cfa485a60f8d854fc4963ad89c830865",
+    "model_specific_center": "3e9fa69a8942b762f0cd041e6a70bfa0c7833957f0d960a6032b0775058cd6a2",
+    "shared_table": "c79b3d345a0bfc6a1b2e4a6e8f04246e5b7750e885ae17f3eb36ad66d53d86f5"
+  },
+  "pinned_control_receipts_sha256": {
+    "primary": "e99a8f2238ae7540d279a5118697d4e4686eb1d2e3004ad5481b4d2a37adb71d",
+    "prior_centered": "17571c2ec9bd9c2821050719d892d9badd328e89b51b1f8876ae6511b16d20d5",
+    "kivi": "77a97c453f40593ab8f1f2f3a0d5c8d06cb424ea28b758fbe7b4ec874e8acebf"
+  },
+  "panels": {
+    "train": {
+      "balanced_centered": {
+        "heads": {
+          "head0": {
+            "attention_kl": 4.663248181343079,
+            "post_o_rel_sq": 1.0276135147897818,
+            "max_abs_prefix_vs_dense": 1.0132789611816406e-06
+          },
+          "head1": {
+            "attention_kl": 9.160709381103516,
+            "post_o_rel_sq": 1.109382989069734,
+            "max_abs_prefix_vs_dense": 1.0728836059570312e-06
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 1.095123849578431
+      },
+      "frozen_uncentered": {
+        "heads": {
+          "head0": {
+            "attention_kl": 754.6386871337891,
+            "post_o_rel_sq": 2.080537490163006
+          },
+          "head1": {
+            "attention_kl": 1265.9553833007812,
+            "post_o_rel_sq": 1.4231729014834105
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 1.5269159845103342,
+        "per_window_head0_kl": [
+          739.7824096679688,
+          771.9764404296875,
+          744.2091674804688,
+          777.1868896484375,
+          784.5284423828125,
+          773.82861328125,
+          741.759033203125,
+          703.8385009765625
+        ],
+        "per_window_pair_post_o": [
+          1.7999000549316406,
+          1.4527627229690552,
+          1.4187405109405518,
+          1.489998459815979,
+          1.356324553489685,
+          1.6692930459976196,
+          1.451250433921814,
+          1.5860340595245361
+        ]
+      },
+      "frozen_old_centered": {
+        "heads": {
+          "head0": {
+            "attention_kl": 117.82096862792969,
+            "post_o_rel_sq": 3.0916020356911336,
+            "max_abs_prefix_vs_dense": 9.834766387939453e-07
+          },
+          "head1": {
+            "attention_kl": 162.8243808746338,
+            "post_o_rel_sq": 1.6927516417788,
+            "max_abs_prefix_vs_dense": 1.1920928955078125e-06
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 1.847906982644604
+      },
+      "frozen_affine_kv_q4": {
+        "heads": {
+          "head0": {
+            "attention_kl": 1.6669314205646515,
+            "post_o_rel_sq": 0.5913145854221021
+          },
+          "head1": {
+            "attention_kl": 3.9778528213500977,
+            "post_o_rel_sq": 0.9707830371851393
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 0.926103645316271,
+        "per_window_head0_kl": [
+          1.7263103723526,
+          1.4932007789611816,
+          1.7255032062530518,
+          1.5009287595748901,
+          1.8936375379562378,
+          1.8708819150924683,
+          1.6605157852172852,
+          1.464473009109497
+        ],
+        "per_window_pair_post_o": [
+          0.9164935350418091,
+          0.9292953610420227,
+          0.9306332468986511,
+          0.9380069375038147,
+          0.912228524684906,
+          0.9353845119476318,
+          0.9212256073951721,
+          0.9240210652351379
+        ]
+      },
+      "frozen_affine_kv_q6": {
+        "heads": {
+          "head0": {
+            "attention_kl": 1.3617768436670303,
+            "post_o_rel_sq": 1.015279127702925
+          },
+          "head1": {
+            "attention_kl": 1.5968137383460999,
+            "post_o_rel_sq": 0.5393961262874721
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 0.5815616572705644,
+        "per_window_head0_kl": [
+          1.236560344696045,
+          1.439069151878357,
+          1.3658843040466309,
+          1.3476407527923584,
+          1.2748781442642212,
+          1.566967487335205,
+          1.337031364440918,
+          1.3261831998825073
+        ],
+        "per_window_pair_post_o": [
+          0.5163411498069763,
+          0.6424235105514526,
+          0.8454911708831787,
+          0.5829386711120605,
+          0.5144732594490051,
+          0.49207308888435364,
+          0.47233352065086365,
+          0.5764635801315308
+        ]
+      },
+      "frozen_kivi_g32_r32_q4": {
+        "head0": {
+          "attention_kl": 0.0036942636652383953,
+          "post_o_rel_sq": 0.0011028323978153414,
+          "recent_fp32_k_sensitivity_attention_kl": 0.003691751102451235,
+          "recent_fp32_k_sensitivity_post_o_rel_sq": 0.0010991103428979482
+        },
+        "head1": {
+          "attention_kl": 0.0010903987786150537,
+          "post_o_rel_sq": 4.09011295681359e-05,
+          "recent_fp32_k_sensitivity_attention_kl": 0.0010859370668185875,
+          "recent_fp32_k_sensitivity_post_o_rel_sq": 3.954717151143095e-05
+        },
+        "gqa_pair": {
+          "post_o_rel_sq": 0.00013661174707746009,
+          "recent_fp32_k_sensitivity_post_o_rel_sq": 0.0001350646585751919
+        }
+      },
+      "kivi_cache_bytes": {
+        "peak_live": 52400,
+        "postflush_final": 46592,
+        "recent_fp32_k_sensitivity_peak_live": 60592
+      }
+    },
+    "inspected_held": {
+      "balanced_centered": {
+        "heads": {
+          "head0": {
+            "attention_kl": 5.520332455635071,
+            "post_o_rel_sq": 1.0708144221980032,
+            "max_abs_prefix_vs_dense": 6.556510925292969e-07
+          },
+          "head1": {
+            "attention_kl": 10.077841758728027,
+            "post_o_rel_sq": 1.0989354120519341,
+            "max_abs_prefix_vs_dense": 1.1920928955078125e-06
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 1.0934502087362625
+      },
+      "frozen_uncentered": {
+        "heads": {
+          "head0": {
+            "attention_kl": 851.1957702636719,
+            "post_o_rel_sq": 1.9592164791936133
+          },
+          "head1": {
+            "attention_kl": 1359.3556823730469,
+            "post_o_rel_sq": 1.4410073308305213
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 1.5350339009304648,
+        "per_window_head0_kl": [
+          716.4190673828125,
+          1040.410400390625,
+          799.1024169921875,
+          848.8511962890625
+        ],
+        "per_window_pair_post_o": [
+          1.5705997943878174,
+          1.5698461532592773,
+          1.3234621286392212,
+          1.6696408987045288
+        ]
+      },
+      "frozen_old_centered": {
+        "heads": {
+          "head0": {
+            "attention_kl": 137.24379920959473,
+            "post_o_rel_sq": 2.4840135752366574,
+            "max_abs_prefix_vs_dense": 1.2814998626708984e-06
+          },
+          "head1": {
+            "attention_kl": 188.4194107055664,
+            "post_o_rel_sq": 1.564109063730851,
+            "max_abs_prefix_vs_dense": 2.7418136596679688e-06
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 1.6904750526038754
+      },
+      "frozen_affine_kv_q4": {
+        "heads": {
+          "head0": {
+            "attention_kl": 1.6707473695278168,
+            "post_o_rel_sq": 0.6229568258119763
+          },
+          "head1": {
+            "attention_kl": 4.066054105758667,
+            "post_o_rel_sq": 0.9693815590963177
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 0.9236747472691457,
+        "per_window_head0_kl": [
+          1.710098147392273,
+          1.5924460887908936,
+          1.6650553941726685,
+          1.7153898477554321
+        ],
+        "per_window_pair_post_o": [
+          0.9632741808891296,
+          0.9353429675102234,
+          0.8949370384216309,
+          0.8957579135894775
+        ]
+      },
+      "frozen_affine_kv_q6": {
+        "heads": {
+          "head0": {
+            "attention_kl": 1.4419804811477661,
+            "post_o_rel_sq": 1.1544712178061023
+          },
+          "head1": {
+            "attention_kl": 1.7031713128089905,
+            "post_o_rel_sq": 0.5977184366631608
+          }
+        },
+        "gqa_pair_post_o_rel_sq": 0.6569460608815193,
+        "per_window_head0_kl": [
+          1.3624274730682373,
+          1.3892362117767334,
+          1.546255350112915,
+          1.4700028896331787
+        ],
+        "per_window_pair_post_o": [
+          0.6268289089202881,
+          0.6988295316696167,
+          0.7221940159797668,
+          0.5795878171920776
+        ]
+      },
+      "frozen_kivi_g32_r32_q4": {
+        "head0": {
+          "attention_kl": 0.004130716668441892,
+          "post_o_rel_sq": 0.0011623408581787926,
+          "recent_fp32_k_sensitivity_attention_kl": 0.004124202474486083,
+          "recent_fp32_k_sensitivity_post_o_rel_sq": 0.001160904036591542
+        },
+        "head1": {
+          "attention_kl": 0.0011965792800765485,
+          "post_o_rel_sq": 3.92438185589224e-05,
+          "recent_fp32_k_sensitivity_attention_kl": 0.0011911595065612346,
+          "recent_fp32_k_sensitivity_post_o_rel_sq": 3.797634427539925e-05
+        },
+        "gqa_pair": {
+          "post_o_rel_sq": 0.00015535487656565683,
+          "recent_fp32_k_sensitivity_post_o_rel_sq": 0.00015418720173402282
+        }
+      },
+      "kivi_cache_bytes": {
+        "peak_live": 52400,
+        "postflush_final": 46592,
+        "recent_fp32_k_sensitivity_peak_live": 60592
+      }
+    }
+  }
+}

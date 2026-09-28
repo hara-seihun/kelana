@@ -1,0 +1,103 @@
+{
+  "arithmetic": "exact rational",
+  "prior_conditional_slope": "4/5",
+  "prior_schur_complement": "9/25",
+  "errors": {
+    "A": [
+      "0",
+      "1/5"
+    ],
+    "B": [
+      "1/10",
+      "-1/5"
+    ]
+  },
+  "metrics": {
+    "calibration": {
+      "matrix": [
+        [
+          "4",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      "energies": {
+        "A": "0",
+        "B": "1/25"
+      },
+      "minimum_choice": "A"
+    },
+    "independent_fill": {
+      "matrix": [
+        [
+          "4",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "energies": {
+        "A": "1/25",
+        "B": "2/25"
+      },
+      "minimum_choice": "A"
+    },
+    "conditional_completion": {
+      "matrix": [
+        [
+          "4",
+          "16/5"
+        ],
+        [
+          "16/5",
+          "73/25"
+        ]
+      ],
+      "energies": {
+        "A": "73/625",
+        "B": "18/625"
+      },
+      "minimum_choice": "B"
+    },
+    "reference": {
+      "matrix": [
+        [
+          "1",
+          "4/5"
+        ],
+        [
+          "4/5",
+          "1"
+        ]
+      ],
+      "energies": {
+        "A": "1/25",
+        "B": "9/500"
+      },
+      "minimum_choice": "B"
+    },
+    "opposite_reference": {
+      "matrix": [
+        [
+          "1",
+          "-4/5"
+        ],
+        [
+          "-4/5",
+          "1"
+        ]
+      ],
+      "energies": {
+        "A": "1/25",
+        "B": "41/500"
+      },
+      "minimum_choice": "A"
+    }
+  },
+  "trained_model_claim": false
+}

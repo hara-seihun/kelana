@@ -1,0 +1,106 @@
+{
+  "source_sha256": {
+    "/path/to/workspace/data/kelana-subbit/full-model/mlp-quantized-producer-capture.npz": "aa1e671af9283656efd7a95f2732a27662ce8c658766af5ee88f5e7d27b9e69c",
+    "/path/to/workspace/data/kelana-subbit/fixtures/qwen3-0.6b-wikitext/tokens.npz": "0479292cbee2cfc6cfc5f89e8f85dac85d2c0c275ed2704a59a7006faa7d66a2",
+    "/path/to/workspace/data/kelana-subbit/models/qwen3-0.6b/model.safetensors": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+  },
+  "capture_meta_sha256": "b5b944ed8604761d2e55a52bbe708e7de375b755f63c15596a863fe37c66e304",
+  "capture_producer_sha256_in_metadata": "42eae1e97b1a5a609022f62df15770c6f9ffb10505e46dcbc7987c74ffa5883d",
+  "panel": "train",
+  "window": 3,
+  "layer": 1,
+  "positions": 256,
+  "token_ids": {
+    "total": 256,
+    "unique": 158,
+    "repeated_occurrences": 98
+  },
+  "captured_residual_bf16": {
+    "total": 256,
+    "unique": 256,
+    "repeated_occurrences": 0
+  },
+  "normalized_input_bf16": {
+    "total": 256,
+    "unique": 256,
+    "repeated_occurrences": 0
+  },
+  "full8_v_bf16": {
+    "total": 256,
+    "unique": 256,
+    "repeated_occurrences": 0
+  },
+  "full8_g32_kivi2_v": {
+    "total": 256,
+    "unique": 256,
+    "repeated_occurrences": 0
+  },
+  "same_token_id_pairs": 382,
+  "same_id_and_raw_pairs": 0,
+  "same_id_and_v_pairs": 0,
+  "same_id_and_packed_pairs": 0,
+  "phases": {
+    "before": {
+      "max_quant_unique": 223,
+      "first_exceeds_148": 182,
+      "max_recent_unique": 33,
+      "t181": {
+        "t": 181,
+        "quant": {
+          "total": 148,
+          "unique": 148,
+          "repeated_occurrences": 0
+        },
+        "recent": {
+          "total": 33,
+          "unique": 33,
+          "repeated_occurrences": 0
+        }
+      },
+      "t256": {
+        "t": 256,
+        "quant": {
+          "total": 223,
+          "unique": 223,
+          "repeated_occurrences": 0
+        },
+        "recent": {
+          "total": 33,
+          "unique": 33,
+          "repeated_occurrences": 0
+        }
+      }
+    },
+    "after": {
+      "max_quant_unique": 224,
+      "first_exceeds_148": 181,
+      "max_recent_unique": 32,
+      "t181": {
+        "t": 181,
+        "quant": {
+          "total": 149,
+          "unique": 149,
+          "repeated_occurrences": 0
+        },
+        "recent": {
+          "total": 32,
+          "unique": 32,
+          "repeated_occurrences": 0
+        }
+      },
+      "t256": {
+        "t": 256,
+        "quant": {
+          "total": 224,
+          "unique": 224,
+          "repeated_occurrences": 0
+        },
+        "recent": {
+          "total": 32,
+          "unique": 32,
+          "repeated_occurrences": 0
+        }
+      }
+    }
+  }
+}

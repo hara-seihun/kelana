@@ -1,0 +1,42 @@
+{
+  "reference_commit": "1db86dcf7cd6c53ed5ca155bf4d5e55ebd20d60f",
+  "reference_source_sha256": "f331d553332d581756e998c24411a7b7f5d37aec01e653457323e663c44f092e",
+  "new_source_sha256": "38a49c70d933ace5a5d89f0529bff29f14b8648ac40768f3c638b46de2007c38",
+  "train_cache_sha256": "9372ef7056cf7fce0e562fd2fece5fcb0ae8de7373878b47d11f1af2c5121c4d",
+  "queries": 64,
+  "matched_calls": 265,
+  "repetitions": 8,
+  "paired_seconds_per_64_queries": {
+    "scalar": [
+      0.34484658399014734,
+      0.513759134002612,
+      0.3341878490027739,
+      0.3576185739948414,
+      0.3605550909996964,
+      0.32035414600977674,
+      0.32760745999985375,
+      0.5130236199911451
+    ],
+    "vectorized": [
+      0.004156392998993397,
+      0.004090734990313649,
+      0.003375921005499549,
+      0.004323236993514001,
+      0.003599643998313695,
+      0.004387494991533458,
+      0.0036003639979753643,
+      0.004453863002709113
+    ]
+  },
+  "mean_ms_per_query": {
+    "scalar": 5.999907144513372,
+    "vectorized": 0.062475882771195757
+  },
+  "peak_tracemalloc_bytes_single_first_query": {
+    "scalar": 20149584,
+    "vectorized": 127902
+  },
+  "resident_index_bytes_each": 20749276,
+  "max_postings": 4096,
+  "max_results": 8
+}
