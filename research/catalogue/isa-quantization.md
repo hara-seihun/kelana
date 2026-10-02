@@ -277,15 +277,15 @@ Sources: [research/isa-quantization/value-pair-risk-envelope/README.md](../isa-q
 <a id="isa-quantization-kivi-value-alphabet"></a>
 ## A16-byte reconstruction alphabet improves complete contextual and retained output
 
-Category: Promising but not yet. Evidence: One train-only weighted scalar four-means fit/layer, physical four-FP32 table and actual original-field images. Independent3072 contextual+8 retained fullO replays. Complete empty-resident gfx1151 execution passes4096 device phase images and16 output guards;32 fresh order-balanced matched timing pairs. Lean centroid/Monge/packed-bit and actual-level threshold identities compile..
+Category: Promising but not yet. Evidence: One train-only weighted scalar four-means fit/layer, physical four-FP32 table and actual original-field images. Independent3072 contextual+8 retained fullO replays. Complete empty-resident gfx1151 execution passes4096 device phase images and16 output guards;32 fresh order-balanced matched timing pairs. Lean centroid/Monge/packed-bit and actual-level threshold identities compile. Programme 12 obligation 1770/main 0f8d6d5 additionally stores an eight-byte FP16 rounding of the train-only complete-O refit and physically re-encodes 21504 V records with event/output-hashed receipts..
 
-Complete SSE209.016698->181.835822 train,107.923584->92.407606 validation,.832658->.753385 layer0; gains13.00%/14.38%/9.52%. Exact emitted source-diagonal gain is separately measured, not substituted for output.
+Original 16B table complete SSE209.016698->181.835822 train,107.923584->92.407606 validation,.832658->.753385 layer0. The separate eight-byte output-refit/re-encoded arm scores181.457998/92.252866 on the same contextual train/validation and beats the existing eight-byte affine fold's181.955041/92.694762; no layer0 transfer is claimed.
 
-Comparison: Same304768B logical dynamic peak plus16B shared table/layer. Beats3328B-larger delay2 all pooled panels and4096B moment contextually; K2/V4 more accurate at57072B more. Actual native layer0 SSE.832657475->.753385921, but median paired event ratio1.144219 slower (0/32 faster). Active globals4548612/4548628B; both-arm module40376B+448descriptors, candidate reader128B larger; LDS separately billed.
+Comparison: Same304768B logical dynamic peak plus16B original or8B half-refit shared table/layer. The eight-byte affine fold is the rate-matched control; a complete 16-byte FP32 table re-encoder scores92.263939 validation versus92.252866 for half. K2/V4 is more accurate at57072B more. Original-table native layer0 SSE.832657475->.753385921, but median paired event ratio1.144219 slower (0/32 faster); these are not new-arm timings.
 
-Boundary: Numerical DP is not exact-rational certified. Native layer0 covers256 updates/window but only8 retained Q positions, at t128/t256 scheduled flushes; no average-token/full-model or contextual-native result. Event timing includes input/append/query/O/flush; host wall includes validation/file I/O. Initial wrong layer1 donor path and feedback/moment labels repaired before final claims. Near-size quality win is not speed dominance.
+Boundary: The new half-table result uses teacher-forced contextual CPU sources and an inspected validation panel, not full-model propagation or native latency. Original native layer0 covers256 updates/window but only8 retained Q positions. Four FP16 constants need FP32 preparation, source comparisons and complete reader work. Near-size quality gain is not speed dominance or current-SOTA proof.
 
-Next decision: Retain the measured quality/state/time tradeoff. The single threshold lowering matched all source bytes but enlarged the producer by6156B and is stopped before GPU. Neither a lower operation count in algebra nor16B static data alone establishes a faster complete program; no table/precision/placement ladder.
+Next decision: Price the complete eight-byte table producer and reader on gfx1151 against ordinary KIVI2, the eight-byte affine fold and original table in one admitted panel; preserve causal source/output equality and report full model quality separately. The original table's threshold lowering is stopped before GPU.
 
 Sources: [research/isa-quantization/kivi-value-alphabet/README.md](../isa-quantization/kivi-value-alphabet/README.md), [research/isa-quantization/value-rounding-risk/ALPHABET.md](../isa-quantization/value-rounding-risk/ALPHABET.md), [research/isa-quantization/kivi-value-alphabet-native/README.md](../isa-quantization/kivi-value-alphabet-native/README.md).
 
@@ -1683,21 +1683,6 @@ Boundary: No compiled native endpoint, model occurrence, measured latency or qua
 Next decision: Locate an actual quantized producer retaining both labels for other consumers and price its full boundary against two direct byte-dot4 instructions and prepared direct-output factors.
 
 Sources: [research/isa-quantization/diagonal-mul/README.md](../isa-quantization/diagonal-mul/README.md).
-
-<a id="isa-quantization-direct-relu-readout"></a>
-## One multiply reads weighted outputs of a carried packed ReLU tile
-
-Category: Promising but not yet. Evidence: Programme 12 main `f2d9ca0`, `canon/relu-multiply/`: Lean exact carry theorem and 729-case finite source/readout proof with standard axioms; C replays the same signed-byte producer, SWAR clamp and unsigned low-word consumer.
-
-On a connected full-rank three-row trit tile, all 27 ternary weighted sums of the three ReLU magnitudes come directly from one carried radix-eight label through one low-word multiply, static bias and three-bit middle-field read. Only 19 ternary consumers fit the same readout grammar on the independent complete ReLU cube; the producer law makes eight three-live combinations fit.
-
-Comparison: Incremental readout assumes the packed ReLU word is live; its dot and SWAR producer are charged. Each consumer needs prepared coefficient/bias/offset and instruction code. For this 27-state tile an independently indexed 3-bit output table is 11 data bytes per consumer; shared-table compression and direct sparse circuits remain live controls.
-
-Boundary: Exact integer finite-map result, not compiled gfx1151 timing, original-model occurrence or quality/rate gain. The three-bit collision does not rule out wider labels or a different observation.
-
-Next decision: Capture a real small-radius producer with several live weighted readouts; price complete native producer/consumers against a shared input table and direct sparse quantized computation.
-
-Sources: [programme 12](https://lemma.ing/dev/programmes/12), `canon/relu-multiply/README.md` (proof and replay on main).
 
 <a id="isa-quantization-qwen-positive-kernel"></a>
 ## One positive-feature prefix loses to paid conventional KV caches at the full value observer
